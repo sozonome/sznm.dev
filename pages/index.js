@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className='container'>
       <Head>
-        <title>Create Next App</title>
+        <title>sznm.dev</title>
         <link rel='icon' href='/favicon.ico' />
         <link rel='stylesheet' href='https://fonts.xz.style/serve/inter.css' />
         <link
