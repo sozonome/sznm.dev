@@ -15,6 +15,10 @@ header{
   flex-basis: 100%;
 }
 
+img.octocat{
+  max-height: 200px;
+}
+
 main{
   flex-basis: 100%;
 }
