@@ -1,0 +1,41 @@
+.homeCardWrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container{
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header{
+  width: 100%;
+  height: 40px;
+  flex-basis: 100%;
+}
+
+main{
+  flex-basis: 100%;
+}
+
+footer{
+  flex-basis: 100%;
+  align-self: flex-end;
+}
+
+.card{
+  flex-basis: 45%;
+  border: white 1px solid;
+  border-radius: 20px;
+  min-height: 50px;
+  padding: 12px;
+}
+
+.card:nth-child(odd){
+  margin-right: 2px;
+}
+
+.card:nth-child(even){
+  margin-left: 2px;
+}
