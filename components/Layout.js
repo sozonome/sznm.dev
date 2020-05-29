@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 export default class Layout extends Component {
   render() {
     return (
-      <div class="container">
+      <div class='container'>
         <Head>
           <title>
             {this.props.title ? this.props.title : 'Hello'} | sznm.dev
@@ -19,6 +19,11 @@ export default class Layout extends Component {
             href='https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css'
           />
         </Head>
+        <header>
+          <Link href={'/'}>
+            <h1>sznm.dev</h1>
+          </Link>
+        </header>
         {this.props.children}
         <footer>
           2020 -{' '}
