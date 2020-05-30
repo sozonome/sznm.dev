@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default class Layout extends Component {
   render() {
     return (
-      <div class='container'>
+      <div className='container'>
         <Head>
           <title>
             {this.props.title ? this.props.title : 'Hello'} | sznm.dev
