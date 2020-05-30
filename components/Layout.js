@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React, { Component } from 'react';
+import Link from 'next/link';
 
 export default class Layout extends Component {
   render() {
