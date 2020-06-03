@@ -1,3 +1,7 @@
+html{
+  filter: grayscale(100%);
+}
+
 .homeCardWrapper{
   display: flex;
   flex-wrap: wrap;
