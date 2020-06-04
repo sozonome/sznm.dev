@@ -1,74 +1,22 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
 html{
-  filter: grayscale(100%);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
 }
 
-.homeCardWrapper{
-  display: flex;
-  flex-wrap: wrap;
+.headerContent, .wrapper, .footerContent{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.container{
-  min-height: 90vh;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.projectCard{
-  align-items: center;
-  text-align: center;
-  -webkit-box-shadow: 10px 7px 78px -39px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 7px 78px -39px rgba(0,0,0,0.75);
-  box-shadow: 10px 7px 78px -39px rgba(0,0,0,0.75);
-  padding: 20px;
-  border-radius: 20px;
-  margin-bottom: 20px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .projectCard{
-    background-color: #242424;
+@media screen and (max-width:639px){
+  .projectCard img{
+    margin: 0 auto;
   }
-}
-
-.projectCard button{
-  width: 100%;
-}
-
-footer{
-  margin-top: 20px;
-}
-
-header{
-  width: 100%;
-  height: 40px;
-  flex-basis: 100%;
-}
-
-img.octocat{
-  max-height: 200px;
-}
-
-main{
-  flex-basis: 100%;
-}
-
-footer{
-  flex-basis: 100%;
-  align-self: flex-end;
-}
-
-.card{
-  flex-basis: 45%;
-  border: white 1px solid;
-  border-radius: 20px;
-  min-height: 50px;
-  padding: 12px;
-}
-
-.card:nth-child(odd){
-  margin-right: 2px;
-}
-
-.card:nth-child(even){
-  margin-left: 2px;
 }
