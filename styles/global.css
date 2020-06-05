@@ -15,6 +15,10 @@ html{
   padding: 0 20px;
 }
 
+.SiteWrapper{
+  min-height: 100vh;
+}
+
 @media screen and (max-width:639px){
   .projectCard img{
     margin: 0 auto;

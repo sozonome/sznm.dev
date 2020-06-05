@@ -3,16 +3,16 @@ import React from 'react';
 export default function ProjectCard({ title, img, link }) {
   return (
     <div className='projectCard flex w-full sm:w-1/2 p-2 text-center sm:text-justify'>
-      <div className='sm:flex shadow-2xl w-full bg-teal-600 rounded-lg p-4'>
+      <div className='sm:flex shadow-2xl w-full rounded-large p-4 border-2 border-teal-800'>
         {
           img ? 
-          <img src={img} width={100} />
+          <img src={img} className="w-20 h-20" />
           :null
         }
         <div className="sm:ml-4 self-center">
           <h2 className='text-2xl text-teal-200 font-semibold'>{title}</h2>
-          <a className="w-full text-teal-200" href={link} target='_blank' rel='noopener noreferrer'>
-            <button className="bg-teal-800 hover:bg-teal-500 rounded-lg py-2 px-16 sm:px-20">
+          <a className="" href={link} target='_blank' rel='noopener noreferrer'>
+            <button className="text-teal-600 border-2 border-teal-800 hover:bg-teal-800 hover:text-teal-300 rounded-large py-2 px-16">
               Visit
             </button>
           </a>

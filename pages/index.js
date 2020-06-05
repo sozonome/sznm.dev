@@ -28,7 +28,7 @@ export default function Home() {
           />
           <ProjectCard
             title='Other Projects'
-            link='https://agustinusnathaniel.com'
+            link='https://agustinusnathaniel.com/projects'
           />
         </div>
         <img className="m-auto sm:m-0 p-2 w-1/2 sm:w-1/4 my-4" src='/octocat_sznm.png' />
