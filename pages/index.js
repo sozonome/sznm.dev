@@ -11,11 +11,11 @@ export default function Home() {
             img='/avataaars.svg'
             link='https://agustinusnathaniel.com'
           />
-          <ProjectCard
+          {/* <ProjectCard
             title='KapturaLumina'
             img='/icon_kapturalumina.png'
-            link='https://agustinusnathaniel.com/kapturalumina'
-          />
+            link='https://kapturalumina.sznm.dev'
+          /> */}
           <ProjectCard
             title='COVID-19 Data'
             img='/icon-covid-19-data.png'
