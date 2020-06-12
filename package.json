@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "tw-css": "npx tailwindcss build styles/global.css -o styles/global-output.css"
   },
   "dependencies": {
     "next": "9.4.2",
