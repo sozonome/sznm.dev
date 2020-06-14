@@ -12,7 +12,7 @@ export default class Layout extends Component {
           </title>
           <link rel='icon' href='/favicon.ico' />
         </Head>
-        <header class="w-full text-center sm:text-justify bg-black text-white h-24 sticky top-0 py-2">
+        <header className="w-full text-center sm:text-justify bg-black text-white h-24 sticky top-0 py-2">
           <div className="headerContent self-center h-24">
             <Link href={'/'} >
               <h1 className="text-2xl font-bold">Hello</h1>
