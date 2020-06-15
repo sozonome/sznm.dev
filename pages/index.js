@@ -1,5 +1,6 @@
 import Layout from '../components/Layout';
 import ProjectCard from '../components/ProjectCard';
+import { links } from '../data/links';
 
 export default function Home() {
   return (
@@ -41,14 +42,39 @@ export default function Home() {
             link='https://agustinusnathaniel.com/projects'
           />
           <ProjectCard
-            title="bookmarks"
+            title='bookmarks'
             link='https://sozonome.github.io/bookmarks'
           />
         </div>
-        <img
-          className='m-auto sm:m-0 p-2 w-1/2 sm:w-1/4 my-4'
-          src='/octocat_sznm.png'
-        />
+        <div className='sm:flex'>
+          <img
+            className='m-auto sm:m-0 p-2 w-1/2 sm:w-1/4 my-4'
+            src='/octocat_sznm.png'
+          />
+          <div id='links' className='w-1/3 m-auto flex items-center'>
+            <a
+              href={`https://www.instagram.com/${links.instagram}`}
+              target='_blank'
+              rel='noreferrer noopener'
+            >
+              <img src='https://img.icons8.com/doodle/48/000000/instagram-new.png' />
+            </a>
+            <a
+              href={`https://github.com/${links.github}`}
+              target='_blank'
+              rel='noreferrer noopener'
+            >
+              <img src='https://img.icons8.com/doodle/48/000000/github--v1.png' />
+            </a>
+            <a
+              href={`https://twitter.com/${links.twitter}`}
+              target='_blank'
+              rel='noreferrer noopener'
+            >
+              <img src='https://img.icons8.com/doodle/48/000000/twitter--v1.png' />
+            </a>
+          </div>
+        </div>
       </main>
     </Layout>
   );
