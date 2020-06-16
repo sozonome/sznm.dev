@@ -3,6 +3,7 @@ const defaultUsername='sozonome';
 export const links = {
   instagram: defaultUsername,
   twitter: defaultUsername,
+  youtube: `UCJnYMGIHtQ8yInuq4Pc2Ttg`,
   github: defaultUsername,
   gitlab: defaultUsername,
 
