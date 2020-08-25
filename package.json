@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "tw-css": "npx tailwindcss build styles/global.css -o styles/global-output.css"
+    "tw-css": "npx tailwindcss build styles/global.css -o styles/global-output.css",
+    "prettify": "prettier --write pages/ components/",
+    "release": "standard-version"
   },
   "dependencies": {
     "next": "9.4.2",
@@ -15,5 +17,7 @@
     "tailwindcss": "^1.4.6",
     "typeface-open-sans": "^0.0.75"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "prettier": "^2.1.0"
+  }
 }
