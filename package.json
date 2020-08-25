@@ -1,7 +1,9 @@
 {
-  "name": "sznm-dev",
-  "version": "0.1.0",
+  "name": "sznm.dev",
   "private": true,
+  "description": "Agustinus Nathaniel's dev site",
+  "version": "0.1.0",
+  "author": "sozonome",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,5 +21,12 @@
   },
   "devDependencies": {
     "prettier": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sozonome/sznm.dev"
+  },
+  "bugs": {
+    "url": "https://github.com/sozonome/sznm.dev/issues"
   }
 }
