@@ -1,6 +1,6 @@
-import Layout from "../components/Layout"
-import ProjectCard from "../components/ProjectCard"
-import { links } from "../data/links"
+import Layout from "../components/Layout";
+import ProjectCard from "../components/ProjectCard";
+import { links } from "../data/links";
 
 export default function Home() {
   const projects = [
@@ -53,62 +53,60 @@ export default function Home() {
       title: "bookmarks",
       link: "https://sozonome.github.io/bookmarks",
     },
-  ]
+  ];
   return (
     <Layout>
-      <main className="wrapper">
-        <div id="links" className="w-1/2 sm:w-full m-auto flex items-center">
-          <a
-            href={`https://www.instagram.com/${links.instagram}`}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" />
-          </a>
-          <a
-            href={`https://github.com/${links.github}`}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img src="https://img.icons8.com/fluent/48/000000/repository.png" />
-          </a>
-          <a
-            href={`https://twitter.com/${links.twitter}`}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img src="https://img.icons8.com/fluent/48/000000/twitter.png" />
-          </a>
-          <a
-            href={`https://youtube.com/channel/${links.youtube}`}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img src="https://img.icons8.com/fluent/48/000000/youtube-play.png" />
-          </a>
-        </div>
-        <div className="flex flex-wrap pt-4">
-          {projects.map((project) => {
-            if (project.img) {
-              return (
-                <ProjectCard
-                  title={project.title}
-                  img={project.img}
-                  link={project.link}
-                />
-              )
-            } else {
-              return <ProjectCard title={project.title} link={project.link} />
-            }
-          })}
-        </div>
-        <div className="sm:flex">
-          <img
-            className="m-auto sm:m-0 p-2 w-1/2 sm:w-1/4 my-4"
-            src="/octocat_sznm.png"
-          />
-        </div>
-      </main>
+      <div id="links" className="w-1/2 sm:w-full m-auto flex items-center">
+        <a
+          href={`https://www.instagram.com/${links.instagram}`}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" />
+        </a>
+        <a
+          href={`https://github.com/${links.github}`}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src="https://img.icons8.com/fluent/48/000000/repository.png" />
+        </a>
+        <a
+          href={`https://twitter.com/${links.twitter}`}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src="https://img.icons8.com/fluent/48/000000/twitter.png" />
+        </a>
+        <a
+          href={`https://youtube.com/channel/${links.youtube}`}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src="https://img.icons8.com/fluent/48/000000/youtube-play.png" />
+        </a>
+      </div>
+      <div className="flex flex-wrap pt-4">
+        {projects.map((project) => {
+          if (project.img) {
+            return (
+              <ProjectCard
+                title={project.title}
+                img={project.img}
+                link={project.link}
+              />
+            );
+          } else {
+            return <ProjectCard title={project.title} link={project.link} />;
+          }
+        })}
+      </div>
+      <div className="sm:flex">
+        <img
+          className="m-auto sm:m-0 p-2 w-1/2 sm:w-1/4 my-4"
+          src="/octocat_sznm.png"
+        />
+      </div>
     </Layout>
-  )
+  );
 }

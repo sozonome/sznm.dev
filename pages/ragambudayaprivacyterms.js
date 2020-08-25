@@ -1,5 +1,5 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React from "react";
+import Layout from "../components/Layout";
 
 export default function ragambudayaprivacyterms() {
   return (
@@ -54,5 +54,5 @@ export default function ragambudayaprivacyterms() {
         </p>
       </article>
     </Layout>
-  )
+  );
 }

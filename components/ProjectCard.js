@@ -1,5 +1,5 @@
-import React from "react"
-import Link from "next/link"
+import React from "react";
+import Link from "next/link";
 
 export default function ProjectCard({ title, img, link }) {
   return (
@@ -29,5 +29,5 @@ export default function ProjectCard({ title, img, link }) {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,5 +1,15 @@
-import "typeface-open-sans"
+import "typeface-open-sans";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import "../styles/global.css";
+import { ThemeProvider, theme, CSSReset } from "@chakra-ui/core";
+
+const MyApp = ({ Component, pageProps }) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <CSSReset />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
+};
+
+export default MyApp;
