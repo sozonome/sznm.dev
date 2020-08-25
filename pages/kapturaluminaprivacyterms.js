@@ -1,5 +1,5 @@
-import React from 'react';
-import Layout from '../components/Layout';
+import React from "react"
+import Layout from "../components/Layout"
 
 export default function kapturaluminaprivacyterms() {
   return (
@@ -48,11 +48,11 @@ export default function kapturaluminaprivacyterms() {
         </p>
         <p className="my-2">This policy is effective as of 29 May 2020.</p>
         <p className="my-2">
-          <a href='https://getterms.io' title='Generate a free privacy policy'>
+          <a href="https://getterms.io" title="Generate a free privacy policy">
             Privacy Policy created with GetTerms.
           </a>
         </p>
       </article>
     </Layout>
-  );
+  )
 }
