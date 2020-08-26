@@ -1,5 +1,6 @@
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import ProjectCard from "../components/ProjectCard";
+
 import { links } from "../data/links";
 
 export default function Home() {
@@ -86,7 +87,7 @@ export default function Home() {
           <img src="https://img.icons8.com/fluent/48/000000/youtube-play.png" />
         </a>
       </div>
-      <div className="flex flex-wrap pt-4">
+      {/* <div className="flex flex-wrap pt-4">
         {projects.map((project) => {
           if (project.img) {
             return (
@@ -100,7 +101,7 @@ export default function Home() {
             return <ProjectCard title={project.title} link={project.link} />;
           }
         })}
-      </div>
+      </div> */}
       <div className="sm:flex">
         <img
           className="m-auto sm:m-0 p-2 w-1/2 sm:w-1/4 my-4"

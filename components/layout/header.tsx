@@ -1,0 +1,16 @@
+import Link from "next/link";
+import { Box, Text } from "@chakra-ui/core";
+
+const Header = () => {
+  return (
+    <Box as="header" paddingTop={14} paddingBottom={22}>
+      <Link href="/">
+        <Text color="blue.900" as="h1" cursor="pointer" fontSize="3xl">
+          sznm.dev
+        </Text>
+      </Link>
+    </Box>
+  );
+};
+
+export default Header;
