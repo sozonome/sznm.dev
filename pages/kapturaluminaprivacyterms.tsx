@@ -1,16 +1,16 @@
 import React from "react";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 
-export default function ragambudayaprivacyterms() {
+export default function kapturaluminaprivacyterms() {
   return (
     <Layout>
       <article>
-        <h1 className="text-3xl font-bold">RagamBudaya App</h1>
-        <h2 className="text-2xl font-bold">Privacy Policy</h2>
+        <h1 className="text-3xl font-bold">KapturaLumina</h1>
+        <h2 className="text-1xl font-bold">Privacy Policy</h2>
         <p className="my-2">
-          Your privacy is important to us. It is Hatchoko's policy to respect
-          your privacy regarding any information we may collect from you through
-          our app, RagamBudaya.
+          Your privacy is important to us. It is sznm's policy to respect your
+          privacy regarding any information we may collect from you through our
+          app, KapturaLumina.
         </p>
         <p className="my-2">
           We only ask for personal information when we truly need it to provide
@@ -46,7 +46,7 @@ export default function ragambudayaprivacyterms() {
           questions about how we handle user data and personal information, feel
           free to contact us.
         </p>
-        <p className="my-2">This policy is effective as of 10 December 2019.</p>
+        <p className="my-2">This policy is effective as of 29 May 2020.</p>
         <p className="my-2">
           <a href="https://getterms.io" title="Generate a free privacy policy">
             Privacy Policy created with GetTerms.
