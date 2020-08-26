@@ -7,8 +7,13 @@
 import Layout from "../components/layout";
 
 export default function Home() {
-  return <Layout>{/* 
+  return (
+    <Layout>
+      Test
+      {/* 
       // Hero Section
       // Projects
-    */}</Layout>;
+    */}
+    </Layout>
+  );
 }
