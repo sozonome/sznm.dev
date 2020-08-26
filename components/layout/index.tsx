@@ -1,4 +1,8 @@
-import Head from "next/head";
+/**
+ * @todo
+ * [ ] add floating tab bar component
+ */
+
 import { Box } from "@chakra-ui/core";
 
 import Header from "./header";
@@ -18,6 +22,7 @@ const Layout = ({ title, children }: LayoutProps) => {
         <Header />
         <Box as="main">{children}</Box>
         <Footer />
+        {/* Floating Tab Bar */}
       </Box>
     </Box>
   );
