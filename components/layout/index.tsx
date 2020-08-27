@@ -5,9 +5,10 @@
 
 import { Box } from "@chakra-ui/core";
 
-import Header from "./header";
-import Footer from "./footer";
+import Header from "./Header";
+import Footer from "./Footer";
 import Meta from "./meta";
+import TabBar from "./TabBar";
 
 type LayoutProps = {
   title?: string;
@@ -16,13 +17,15 @@ type LayoutProps = {
 
 const Layout = ({ title, children }: LayoutProps) => {
   return (
-    <Box backgroundColor="blue.50">
-      <Box width={["100%", "800px"]} margin="0 auto">
+    <Box backgroundColor="blue.50" paddingBottom={160} minHeight="100vh">
+      <Box width={["100vw", "100vw", "800px"]} margin="0 auto">
         <Meta title={title} />
         <Header />
-        <Box as="main">{children}</Box>
+        <Box as="main" padding={22}>
+          {children}
+        </Box>
         <Footer />
-        {/* Floating Tab Bar */}
+        <TabBar />
       </Box>
     </Box>
   );
