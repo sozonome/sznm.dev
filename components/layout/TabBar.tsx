@@ -1,4 +1,3 @@
-import React from "react";
 import { Flex, Box } from "@chakra-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,8 +6,11 @@ import {
   faEnvelope,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { useRouter } from "next/router";
 
 const TabBar = () => {
+  const router = useRouter();
+
   return (
     <Flex
       marginX={["5vw", "5vw", 0]}
@@ -26,16 +28,32 @@ const TabBar = () => {
       fontSize={[35, 50]}
     >
       <Box flexBasis={"25%"}>
-        <FontAwesomeIcon icon={faHome} />
+        <FontAwesomeIcon
+          icon={faHome}
+          style={{ cursor: "pointer" }}
+          onClick={() => router.push("/")}
+        />
       </Box>
       <Box flexBasis={"25%"}>
-        <FontAwesomeIcon icon={faRocket} />
+        <FontAwesomeIcon
+          icon={faRocket}
+          style={{ cursor: "pointer" }}
+          onClick={() => router.push("/")}
+        />
       </Box>
       <Box flexBasis={"25%"}>
-        <FontAwesomeIcon icon={faEnvelope} />
+        <FontAwesomeIcon
+          icon={faEnvelope}
+          style={{ cursor: "pointer" }}
+          onClick={() => router.push("/")}
+        />
       </Box>
       <Box flexBasis={"25%"}>
-        <FontAwesomeIcon icon={faUser} />
+        <FontAwesomeIcon
+          icon={faUser}
+          style={{ cursor: "pointer" }}
+          onClick={() => router.push("/")}
+        />
       </Box>
     </Flex>
   );

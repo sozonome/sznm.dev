@@ -6,6 +6,7 @@
 
 import Layout from "../components/layout";
 import { Box, Flex, Image, Heading, Text } from "@chakra-ui/core";
+import Card from "../components/Card";
 
 const Home = () => {
   return (
@@ -44,12 +45,33 @@ const HeroSection = () => {
 const ProjectsSection = () => {
   return (
     <Box as="section" paddingY={22}>
-      <Box color="orange.800">
-        <Heading>Projects</Heading>
-        <Text>Some notable projects I've worked on previously.</Text>
-        <Box>
-          {"Project"}
+      <Box>
+        <Box color="orange.800">
+          <Heading>Projects</Heading>
+          <Text>Some notable projects I've worked on previously.</Text>
         </Box>
+        <Flex wrap="wrap" marginTop={22}>
+          <Card
+            title="Personal Site"
+            img="/avataaars.svg"
+            link="/kapturalumina"
+          />
+          <Card
+            title="Personal Site"
+            img="/avataaars.svg"
+            link="/kapturalumina"
+          />
+          <Card
+            title="Personal Site"
+            img="/avataaars.svg"
+            link="/kapturalumina"
+          />
+          <Card
+            title="Personal Site"
+            img="/avataaars.svg"
+            link="/kapturalumina"
+          />
+        </Flex>
       </Box>
     </Box>
   );
