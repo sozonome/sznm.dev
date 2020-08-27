@@ -47,6 +47,9 @@ const ProjectsSection = () => {
       <Box color="orange.800">
         <Heading>Projects</Heading>
         <Text>Some notable projects I've worked on previously.</Text>
+        <Box>
+          {"Project"}
+        </Box>
       </Box>
     </Box>
   );
