@@ -1,5 +1,6 @@
-import Layout from "../components/layout";
 import { Box, Heading, Text, Link } from "@chakra-ui/core";
+
+import Layout from "../components/layout";
 
 const kapturaluminaprivacyterms = () => {
   return (

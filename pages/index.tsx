@@ -1,17 +1,12 @@
-/**
- * @todo
- * [x] add hero section
- * [x] add top projects section
- */
+import { useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { Box, Flex, Image, Heading, Text } from "@chakra-ui/core";
 
 import Layout from "../components/layout";
-import { Box, Flex, Image, Heading, Text } from "@chakra-ui/core";
 import Card from "../components/Card";
 
 import { getSortedProjectsData } from "../lib/projects";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
 
 const Home = ({ allProjectsData }) => {
   return (

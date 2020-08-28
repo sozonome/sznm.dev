@@ -6,7 +6,6 @@ import {
   faEnvelope,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { useRouter } from "next/router";
 import Link from "next/link";
 
 const TabBar = () => {

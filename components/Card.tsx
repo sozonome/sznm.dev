@@ -1,6 +1,4 @@
 import { Box, Image, Text, PseudoBox } from "@chakra-ui/core";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
 
 type CardProps = {
   title: string;

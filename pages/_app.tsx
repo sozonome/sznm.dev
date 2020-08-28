@@ -1,12 +1,12 @@
 import { ThemeProvider, CSSReset } from "@chakra-ui/core";
-import "typeface-work-sans";
-import "typeface-markazi-text";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 
+import "typeface-work-sans";
+import "typeface-markazi-text";
+
 import customTheme from "../styles/theme";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-
 import "../styles/global.css";
 
 config.autoAddCss = false;
