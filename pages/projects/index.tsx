@@ -68,7 +68,11 @@ const Projects = ({ allProjectsData }) => {
       </Flex>
       <Modal isOpen={isOpen} onClose={onClose} closeOnEsc isCentered>
         <ModalOverlay />
-        <ModalContent borderRadius={20} marginX={[22, 0]}>
+        <ModalContent
+          backgroundColor="teal.300"
+          borderRadius={20}
+          marginX={[22, 0]}
+        >
           <ModalHeader display="flex" alignItems="center" marginY={22}>
             <Image
               src={selectedProject.thumbnail}
@@ -81,7 +85,9 @@ const Projects = ({ allProjectsData }) => {
           <ModalCloseButton />
           <ModalBody>
             <Link href={selectedProject.projectLink}>
-              <Button width={"100%"}>Visit</Button>
+              <Button width={"100%"} backgroundColor="orange.400" color="white">
+                Visit
+              </Button>
             </Link>
           </ModalBody>
           <ModalFooter>

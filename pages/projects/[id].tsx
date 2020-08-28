@@ -19,9 +19,9 @@ const Project = ({ projectData }) => {
         <Button
           leftIcon="arrow-back"
           size="sm"
-          backgroundColor="orange.300"
+          backgroundColor="teal.300"
           marginBottom={22}
-          onClick={() => router.push("/projects")}
+          onClick={() => router.back()}
         >
           back
         </Button>
@@ -43,7 +43,15 @@ const Project = ({ projectData }) => {
               marginRight={11}
               isExternal
             >
-              <Button width="100%" fontWeight="semibold">
+              <Button
+                width="100%"
+                backgroundColor="orange.400"
+                fontWeight="semibold"
+                _hover={{
+                  backgroundColor: "orange.200",
+                  color: "black",
+                }}
+              >
                 Visit
               </Button>
             </Link>
@@ -55,7 +63,11 @@ const Project = ({ projectData }) => {
               marginRight={11}
               isExternal
             >
-              <Button backgroundColor="orange.300">
+              <Button
+                backgroundColor="teal.300"
+                _hover={{ backgroundColor: "white", color: "black" }}
+                color="black"
+              >
                 <FontAwesomeIcon
                   icon={["fab", "google-play"]}
                   style={{ marginRight: 11 }}
@@ -70,7 +82,12 @@ const Project = ({ projectData }) => {
               _hover={{ textDecoration: "none" }}
               isExternal
             >
-              <Button>Repo</Button>
+              <Button
+                backgroundColor="teal.700"
+                _hover={{ backgroundColor: "teal.300", color: "black" }}
+              >
+                Repo
+              </Button>
             </Link>
           )}
         </Flex>
