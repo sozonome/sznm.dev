@@ -6,7 +6,7 @@ const kapturaluminaprivacyterms = () => {
   return (
     <Layout>
       <Box as="article">
-        <Box color="orange.900">
+        <Box>
           <Heading as="h1" size="2xl">
             KapturaLumina
           </Heading>

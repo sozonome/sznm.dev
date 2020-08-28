@@ -31,7 +31,7 @@ const Projects = ({ allProjectsData }) => {
 
   return (
     <Layout>
-      <Box marginBottom={22} color="orange.800">
+      <Box marginBottom={22}>
         <Heading as="h1" size="2xl">
           Projects
         </Heading>
@@ -70,17 +70,18 @@ const Projects = ({ allProjectsData }) => {
         <ModalOverlay />
         <ModalContent borderRadius={20} marginX={[22, 0]}>
           <ModalHeader display="flex" alignItems="center" marginY={22}>
-            <Image src={selectedProject.thumbnail} size={44} marginRight={11} />
-            <Heading as="h3" color="orange.900">
-              {selectedProject.title}
-            </Heading>
+            <Image
+              src={selectedProject.thumbnail}
+              size={44}
+              marginRight={11}
+              alt={selectedProject.title}
+            />
+            <Heading as="h3">{selectedProject.title}</Heading>
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Link href={selectedProject.projectLink}>
-              <Button width={"100%"} backgroundColor="orange.800">
-                Visit
-              </Button>
+              <Button width={"100%"}>Visit</Button>
             </Link>
           </ModalBody>
           <ModalFooter>

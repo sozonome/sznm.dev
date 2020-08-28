@@ -7,8 +7,12 @@ const KapturaLumina = () => {
   return (
     <Layout>
       <Box as="article">
-        <Image src="/app_icons/icon_kapturalumina.png" width={110} />
-        <Box color="orange.800" marginY={22}>
+        <Image
+          src="/app_icons/icon_kapturalumina.png"
+          width={110}
+          alt="kapturalumina icon"
+        />
+        <Box marginY={22}>
           <Heading as="h1" size="2xl">
             KapturaLumina
           </Heading>

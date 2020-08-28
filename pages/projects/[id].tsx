@@ -15,7 +15,7 @@ const Project = ({ projectData }) => {
       <Head>
         <title>{projectData.title} - sznm.dev</title>
       </Head>
-      <Box as="article" color="orange.900">
+      <Box as="article">
         <Button
           leftIcon="arrow-back"
           size="sm"
@@ -26,7 +26,12 @@ const Project = ({ projectData }) => {
           back
         </Button>
 
-        <Image src={projectData.thumbnail} width={88} marginY={22} />
+        <Image
+          src={projectData.thumbnail}
+          width={88}
+          marginY={22}
+          alt={projectData.title}
+        />
         <Heading>{projectData.title}</Heading>
         <Text>{projectData.description}</Text>
 
@@ -38,11 +43,7 @@ const Project = ({ projectData }) => {
               marginRight={11}
               isExternal
             >
-              <Button
-                width="100%"
-                backgroundColor="orange.800"
-                fontWeight="semibold"
-              >
+              <Button width="100%" fontWeight="semibold">
                 Visit
               </Button>
             </Link>

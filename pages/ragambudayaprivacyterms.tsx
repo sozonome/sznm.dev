@@ -6,7 +6,7 @@ const ragambudayaprivacyterms = () => {
   return (
     <Layout>
       <Box>
-        <Box color="orange.900">
+        <Box>
           <Heading as="h1" size="2xl">
             RagamBudaya App
           </Heading>

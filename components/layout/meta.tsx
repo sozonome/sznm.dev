@@ -9,6 +9,8 @@ const Meta = ({ title }: MetaProps) => {
     <Head>
       <title>{title ? title : "Hello"} | sznm.dev</title>
       <link rel="icon" href="/favicon.ico" />
+      <html lang="en" />
+      <meta name="description" content="Agustinus Nathaniel's Dev Site" />
     </Head>
   );
 };

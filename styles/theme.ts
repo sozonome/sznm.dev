@@ -14,24 +14,19 @@ const customTheme: DefaultTheme = {
   },
   colors: {
     ...theme.colors,
-    blue: {
+    teal: {
       //primary
-      ...theme.colors.blue,
-      900: "#65C9FF",
-      700: "#84D4FF",
-      500: "#A3DFFF",
-      300: "#C1E9FF",
-      100: "#E0F4FF",
-      50: "#F1FAFF",
+      ...theme.colors.teal,
+      700: "#005661",
+      500: "#00838e",
+      300: "#4fb3be"
     },
     orange: {
       ...theme.colors.orange,
       // secondary
-      800: "#EDB98A",
-      600: "#F1C7A1",
-      400: "#F4D5B9",
-      200: "#F8E3D0",
-      50: "#FBF1E8",
+      600: "#ba4c00",
+      400: "#f47b00",
+      200: "#ffac42",
 
       // tertiary
       900: "#5F4A37",

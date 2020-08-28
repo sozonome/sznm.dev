@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Box, Flex, Image, Heading, Text } from "@chakra-ui/core";
+import { Box, Flex, Image, Heading, Text, Button } from "@chakra-ui/core";
 
 import Layout from "../components/layout";
 import Card from "../components/Card";
@@ -21,7 +21,7 @@ const HeroSection = () => {
   return (
     <Flex marginY={44} as="section">
       <Box>
-        <Image size={[100, 160]} src="/avataaars.svg" />
+        <Image size={[100, 160]} src="/avataaars.svg" alt="sozonome" />
       </Box>
       <Box
         verticalAlign="center"
@@ -53,7 +53,7 @@ const ProjectsSection = ({ data }) => {
   return (
     <Box as="section" paddingY={22}>
       <Box>
-        <Box color="orange.800">
+        <Box>
           <Link href="/projects">
             <Heading as="h1" size="2xl" cursor="pointer">
               Projects
@@ -77,6 +77,17 @@ const ProjectsSection = ({ data }) => {
               );
             })}
         </Flex>
+        <Link href="/projects">
+          <Button
+            width="100%"
+            borderRadius={20}
+            height={55}
+            backgroundColor="teal.700"
+            _hover={{ backgroundColor: "teal.300", color: "black" }}
+          >
+            see more
+          </Button>
+        </Link>
       </Box>
     </Box>
   );
