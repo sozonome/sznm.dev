@@ -7,10 +7,9 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const TabBar = () => {
-  const router = useRouter();
-
   return (
     <Flex
       marginX={["5vw", "5vw", 0]}
@@ -22,39 +21,30 @@ const TabBar = () => {
       boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.1);"
       backgroundColor="white"
       padding={22}
-      color="blue.900"
       textAlign="center"
       alignItems="center"
       fontSize={[35, 50]}
     >
-      <Box flexBasis={"25%"}>
-        <FontAwesomeIcon
-          icon={faHome}
-          style={{ cursor: "pointer" }}
-          onClick={() => router.push("/")}
-        />
-      </Box>
-      <Box flexBasis={"25%"}>
-        <FontAwesomeIcon
-          icon={faRocket}
-          style={{ cursor: "pointer" }}
-          onClick={() => router.push("/projects")}
-        />
-      </Box>
-      <Box flexBasis={"25%"}>
-        <FontAwesomeIcon
-          icon={faEnvelope}
-          style={{ cursor: "pointer" }}
-          onClick={() => router.push("mailto:hello@sznm.dev")}
-        />
-      </Box>
-      <Box flexBasis={"25%"}>
-        <FontAwesomeIcon
-          icon={faUser}
-          style={{ cursor: "pointer" }}
-          onClick={() => router.push("/")}
-        />
-      </Box>
+      <Link href="/">
+        <Box flexBasis={"25%"}>
+          <FontAwesomeIcon icon={faHome} style={{ cursor: "pointer" }} />
+        </Box>
+      </Link>
+      <Link href="/projects">
+        <Box flexBasis={"25%"}>
+          <FontAwesomeIcon icon={faRocket} style={{ cursor: "pointer" }} />
+        </Box>
+      </Link>
+      <Link href="mailto:hello@sznm.dev">
+        <Box flexBasis={"25%"}>
+          <FontAwesomeIcon icon={faEnvelope} style={{ cursor: "pointer" }} />
+        </Box>
+      </Link>
+      <Link href="/about">
+        <Box flexBasis={"25%"}>
+          <FontAwesomeIcon icon={faUser} style={{ cursor: "pointer" }} />
+        </Box>
+      </Link>
     </Flex>
   );
 };

@@ -9,6 +9,8 @@ import { Box, Flex, Image, Heading, Text } from "@chakra-ui/core";
 import Card from "../components/Card";
 
 import { getSortedProjectsData } from "../lib/projects";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Home = ({ allProjectsData }) => {
   return (
@@ -21,12 +23,11 @@ const Home = ({ allProjectsData }) => {
 
 const HeroSection = () => {
   return (
-    <Flex as="section">
+    <Flex marginY={44} as="section">
       <Box>
         <Image size={[100, 160]} src="/avataaars.svg" />
       </Box>
       <Box
-        color="blue.900"
         verticalAlign="center"
         width={["100%", "80%", "60%"]}
         paddingX={22}
@@ -45,11 +46,17 @@ const HeroSection = () => {
 };
 
 const ProjectsSection = ({ data }) => {
+  const router = useRouter();
+
   return (
     <Box as="section" paddingY={22}>
       <Box>
         <Box color="orange.800">
-          <Heading>Projects</Heading>
+          <Link href="/projects">
+            <Heading as="h1" size="2xl" cursor="pointer">
+              Projects
+            </Heading>
+          </Link>
           <Text>Some notable projects I've worked on previously.</Text>
         </Box>
         <Flex wrap="wrap" marginTop={22}>
@@ -58,8 +65,9 @@ const ProjectsSection = ({ data }) => {
             .map(({ id, title, thumbnail }, index) => (
               <Card
                 title={title}
-                route="/projects/[id]"
-                link={`/projects/${id}`}
+                handleClick={() =>
+                  router.push("/projects/[id]", `/projects/${id}`)
+                }
                 img={thumbnail}
                 key={index}
               />

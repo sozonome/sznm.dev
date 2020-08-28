@@ -1,27 +1,14 @@
 import { Box, Image, Text, PseudoBox } from "@chakra-ui/core";
-import { useRouter, withRouter } from "next/router";
-import { getStaticProps } from "../pages";
+import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 type CardProps = {
   title: string;
   img?: string;
-  link?: string;
-  route?: string;
+  handleClick?: () => void;
 };
 
-const Card = ({ title, img, link, route }: CardProps) => {
-  const router = useRouter();
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    route ? router.push(route, link) : router.push(link);
-  };
-
-  useEffect(() => {
-    route ? router.prefetch(route, link) : router.push(link);
-  }, []);
-
+const Card = ({ title, img, handleClick }: CardProps) => {
   return (
     <PseudoBox
       display="flex"
@@ -40,7 +27,7 @@ const Card = ({ title, img, link, route }: CardProps) => {
         {img && <Image src={img} width={50} margin="auto" />}
       </Box>
       <Box flexBasis={["65%", "70%"]}>
-        <Text fontWeight={600} fontSize="lg">
+        <Text fontWeight={600} fontSize="lg" color="orange.700">
           {title}
         </Text>
       </Box>
