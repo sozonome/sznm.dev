@@ -15,7 +15,7 @@ const Card = ({ title, img, handleClick }: CardProps) => {
       width={["100%", "47%"]}
       height={120}
       backgroundColor="white"
-      boxShadow="0px 24px 24px -16px rgba(38, 46, 51, 0.1);"
+      boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.1);"
       alignItems="center"
       borderRadius={20}
       cursor={"pointer"}
@@ -27,7 +27,7 @@ const Card = ({ title, img, handleClick }: CardProps) => {
         {img && <Image src={img} width={50} margin="auto" />}
       </Box>
       <Box flexBasis={["65%", "70%"]}>
-        <Text fontWeight={600} fontSize="lg" color="orange.700">
+        <Text fontWeight={600} fontSize="lg" color="blue.900">
           {title}
         </Text>
       </Box>

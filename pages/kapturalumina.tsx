@@ -2,7 +2,7 @@ import Layout from "../components/layout";
 import { Box, Image, Heading, Text, Link, Button } from "@chakra-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function kapturaluminaprivacyterms() {
+const KapturaLumina = () => {
   return (
     <Layout>
       <Box as="article">
@@ -46,4 +46,6 @@ export default function kapturaluminaprivacyterms() {
       </Box>
     </Layout>
   );
-}
+};
+
+export default KapturaLumina;

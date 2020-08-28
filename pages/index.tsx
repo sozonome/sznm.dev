@@ -11,6 +11,7 @@ import Card from "../components/Card";
 import { getSortedProjectsData } from "../lib/projects";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const Home = ({ allProjectsData }) => {
   return (
@@ -47,7 +48,13 @@ const HeroSection = () => {
 
 const ProjectsSection = ({ data }) => {
   const router = useRouter();
-
+  useEffect(() => {
+    data
+      .filter((project) => project.highlight && project)
+      .map(({ id }) => {
+        router.prefetch("/projects/[id]", `/projects/${id}`);
+      });
+  });
   return (
     <Box as="section" paddingY={22}>
       <Box>
@@ -62,16 +69,18 @@ const ProjectsSection = ({ data }) => {
         <Flex wrap="wrap" marginTop={22}>
           {data
             .filter((project) => project.highlight && project)
-            .map(({ id, title, thumbnail }, index) => (
-              <Card
-                title={title}
-                handleClick={() =>
-                  router.push("/projects/[id]", `/projects/${id}`)
-                }
-                img={thumbnail}
-                key={index}
-              />
-            ))}
+            .map(({ id, title, thumbnail }, index) => {
+              return (
+                <Card
+                  title={title}
+                  handleClick={() =>
+                    router.push("/projects/[id]", `/projects/${id}`)
+                  }
+                  img={thumbnail}
+                  key={index}
+                />
+              );
+            })}
         </Flex>
       </Box>
     </Box>
