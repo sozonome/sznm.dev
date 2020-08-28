@@ -1,4 +1,4 @@
-const defaultUsername='sozonome';
+const defaultUsername = "sozonome";
 
 export const links = {
   instagram: defaultUsername,
@@ -12,5 +12,4 @@ export const links = {
   devrant: defaultUsername,
   codesandbox: defaultUsername,
   devto: defaultUsername,
-  
 };

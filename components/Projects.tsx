@@ -50,6 +50,11 @@ const Projects = () => {
       link: "https://sozonome.github.io/bookmarks",
     },
   ];
+
+  //
+  //for highlights : projects.filter.sort.map
+  //
+
   return (
     <div className="flex flex-wrap pt-4">
       {/* {projects.map((project) => {

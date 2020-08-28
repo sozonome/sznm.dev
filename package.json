@@ -8,7 +8,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "prettify": "prettier --write pages/ components/",
+    "prettify": "prettier --write pages/ components/ lib/ data/",
     "release": "standard-version"
   },
   "dependencies": {
@@ -19,9 +19,12 @@
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "emotion-theming": "^10.0.27",
+    "gray-matter": "^4.0.2",
     "next": "^9.5.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "remark": "^12.0.1",
+    "remark-html": "^12.0.0",
     "typeface-markazi-text": "^1.1.4",
     "typeface-work-sans": "^0.0.72"
   },

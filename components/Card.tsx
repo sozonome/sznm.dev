@@ -1,32 +1,42 @@
-import React from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { Box, Flex, Image, Text, PseudoBox } from "@chakra-ui/core";
+import { Box, Image, Text, PseudoBox } from "@chakra-ui/core";
+import { useRouter, withRouter } from "next/router";
+import { getStaticProps } from "../pages";
+import { useEffect } from "react";
 
 type CardProps = {
   title: string;
-  img: string;
+  img?: string;
   link?: string;
 };
 
 const Card = ({ title, img, link }: CardProps) => {
   const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push("/projects/[id]", link);
+  };
+
+  useEffect(() => {
+    router.prefetch("/projects/[id]", link);
+  }, []);
+
   return (
     <PseudoBox
       display="flex"
-      width="47%"
+      width={["100%", "47%"]}
       height={120}
       backgroundColor="white"
       boxShadow="0px 24px 24px -16px rgba(38, 46, 51, 0.1);"
       alignItems="center"
       borderRadius={20}
-      onClick={() => (link ? router.push(link) : null)}
-      cursor={link ? "pointer" : "none"}
-      _even={{ marginLeft: "5%" }}
+      cursor={"pointer"}
+      _even={{ marginLeft: [0, "5%"] }}
       marginBottom={"5%"}
+      onClick={handleClick}
     >
       <Box flexBasis={["45%", "30%"]}>
-        <Image src={img} width={50} margin="auto" />
+        {img ? <Image src={img} width={50} margin="auto" /> : null}
       </Box>
       <Box flexBasis={["55%", "70%"]}>
         <Text fontWeight={600} fontSize="lg">
