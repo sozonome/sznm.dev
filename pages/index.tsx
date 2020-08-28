@@ -1,14 +1,14 @@
 /**
  * @todo
- * [ ] add hero section
- * [ ] add top projects section
+ * [x] add hero section
+ * [x] add top projects section
  */
 
 import Layout from "../components/layout";
 import { Box, Flex, Image, Heading, Text } from "@chakra-ui/core";
 import Card from "../components/Card";
+
 import { getSortedProjectsData } from "../lib/projects";
-import Link from "next/link";
 
 const Home = ({ allProjectsData }) => {
   return (
@@ -55,8 +55,14 @@ const ProjectsSection = ({ data }) => {
         <Flex wrap="wrap" marginTop={22}>
           {data
             .filter((project) => project.highlight && project)
-            .map(({ id, title }, index) => (
-              <Card title={title} link={`/projects/${id}`} key={index} />
+            .map(({ id, title, thumbnail }, index) => (
+              <Card
+                title={title}
+                route="/projects/[id]"
+                link={`/projects/${id}`}
+                img={thumbnail}
+                key={index}
+              />
             ))}
         </Flex>
       </Box>

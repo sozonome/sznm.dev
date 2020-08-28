@@ -38,14 +38,14 @@ const TabBar = () => {
         <FontAwesomeIcon
           icon={faRocket}
           style={{ cursor: "pointer" }}
-          onClick={() => router.push("/")}
+          onClick={() => router.push("/projects")}
         />
       </Box>
       <Box flexBasis={"25%"}>
         <FontAwesomeIcon
           icon={faEnvelope}
           style={{ cursor: "pointer" }}
-          onClick={() => router.push("/")}
+          onClick={() => router.push("mailto:hello@sznm.dev")}
         />
       </Box>
       <Box flexBasis={"25%"}>

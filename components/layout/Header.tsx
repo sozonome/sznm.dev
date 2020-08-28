@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <Box as="header" padding={22}>
       <Link href="/">
-        <Text color="blue.900" as="h1" cursor="pointer" fontSize="3xl">
+        <Text color="blue.900" as="a" cursor="pointer" fontSize="3xl">
           sznm.dev
         </Text>
       </Link>

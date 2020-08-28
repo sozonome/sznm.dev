@@ -1,7 +1,10 @@
-import { getAllProjectIds, getProjectData } from "../../lib/projects";
-import { Box, Heading, Text } from "@chakra-ui/core";
-import Layout from "../../components/layout";
+import { Box, Heading, Text, Flex, Button } from "@chakra-ui/core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
+
+import Layout from "../../components/layout";
+
+import { getAllProjectIds, getProjectData } from "../../lib/projects";
 
 const Project = ({ projectData }) => {
   return (
@@ -12,6 +15,15 @@ const Project = ({ projectData }) => {
       <Box as="article">
         <Heading>{projectData.title}</Heading>
         <Text>{projectData.description}</Text>
+        <Flex>
+          {projectData.projectLink && <Button>Visit</Button>}
+          {projectData.playStoreLink && (
+            <Button>
+              <FontAwesomeIcon icon={["fab", "google-play"]} /> Google Play
+            </Button>
+          )}
+          {projectData.repoLink && <Button>Repo</Button>}
+        </Flex>
       </Box>
     </Layout>
   );

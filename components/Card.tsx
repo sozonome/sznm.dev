@@ -7,18 +7,19 @@ type CardProps = {
   title: string;
   img?: string;
   link?: string;
+  route?: string;
 };
 
-const Card = ({ title, img, link }: CardProps) => {
+const Card = ({ title, img, link, route }: CardProps) => {
   const router = useRouter();
 
   const handleClick = (e) => {
     e.preventDefault();
-    router.push("/projects/[id]", link);
+    route ? router.push(route, link) : router.push(link);
   };
 
   useEffect(() => {
-    router.prefetch("/projects/[id]", link);
+    route ? router.prefetch(route, link) : router.push(link);
   }, []);
 
   return (
@@ -35,10 +36,10 @@ const Card = ({ title, img, link }: CardProps) => {
       marginBottom={"5%"}
       onClick={handleClick}
     >
-      <Box flexBasis={["45%", "30%"]}>
-        {img ? <Image src={img} width={50} margin="auto" /> : null}
+      <Box flexBasis={["35%", "30%"]}>
+        {img && <Image src={img} width={50} margin="auto" />}
       </Box>
-      <Box flexBasis={["55%", "70%"]}>
+      <Box flexBasis={["65%", "70%"]}>
         <Text fontWeight={600} fontSize="lg">
           {title}
         </Text>
