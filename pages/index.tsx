@@ -10,10 +10,10 @@ import { getSortedProjectsData } from "../lib/projects";
 
 const Home = ({ allProjectsData }) => {
   return (
-    <Layout>
+    <>
       <HeroSection />
       <ProjectsSection data={allProjectsData} />
-    </Layout>
+    </>
   );
 };
 

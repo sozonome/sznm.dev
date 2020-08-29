@@ -30,7 +30,7 @@ const Projects = ({ allProjectsData }) => {
   });
 
   return (
-    <Layout>
+    <>
       <Box marginBottom={22}>
         <Heading as="h1" size="2xl">
           Projects
@@ -100,7 +100,7 @@ const Projects = ({ allProjectsData }) => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </Layout>
+    </>
   );
 };
 

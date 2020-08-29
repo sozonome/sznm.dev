@@ -8,6 +8,7 @@ import "typeface-markazi-text";
 import customTheme from "../styles/theme";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "../styles/global.css";
+import Layout from "../components/layout";
 
 config.autoAddCss = false;
 library.add(fab);
@@ -16,7 +17,9 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={customTheme}>
       <CSSReset />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 };

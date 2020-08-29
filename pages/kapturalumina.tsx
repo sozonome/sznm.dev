@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 
 const KapturaLumina = () => {
   return (
-    <Layout>
+    <>
       <Box as="article">
         <Image
           src="/app_icons/icon_kapturalumina.png"
@@ -49,7 +49,7 @@ const KapturaLumina = () => {
           </Link>
         </Box>
       </Box>
-    </Layout>
+    </>
   );
 };
 

@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 
 const kapturaluminaprivacyterms = () => {
   return (
-    <Layout>
+    <>
       <Box as="article">
         <Box>
           <Heading as="h1" size="2xl">
@@ -65,7 +65,7 @@ const kapturaluminaprivacyterms = () => {
           </Link>
         </Text>
       </Box>
-    </Layout>
+    </>
   );
 };
 

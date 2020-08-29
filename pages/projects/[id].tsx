@@ -11,7 +11,7 @@ const Project = ({ projectData }) => {
   const router = useRouter();
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>{projectData.title} - sznm.dev</title>
       </Head>
@@ -92,7 +92,7 @@ const Project = ({ projectData }) => {
           )}
         </Flex>
       </Box>
-    </Layout>
+    </>
   );
 };
 

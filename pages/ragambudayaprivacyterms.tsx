@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 
 const ragambudayaprivacyterms = () => {
   return (
-    <Layout>
+    <>
       <Box>
         <Box>
           <Heading as="h1" size="2xl">
@@ -65,7 +65,7 @@ const ragambudayaprivacyterms = () => {
           </Link>
         </Text>
       </Box>
-    </Layout>
+    </>
   );
 };
 
