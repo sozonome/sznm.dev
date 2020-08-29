@@ -3,8 +3,7 @@
  * [ ] add about content
  */
 
-import Layout from "../components/layout";
-import { Box, Heading, Text, Flex, Link } from "@chakra-ui/core";
+import { Heading, Text, Flex, Link } from "@chakra-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const About = () => {

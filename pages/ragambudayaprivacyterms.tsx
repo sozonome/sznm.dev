@@ -1,7 +1,5 @@
 import { Box, Heading, Text, Link } from "@chakra-ui/core";
 
-import Layout from "../components/layout";
-
 const ragambudayaprivacyterms = () => {
   return (
     <>

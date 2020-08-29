@@ -2,8 +2,6 @@ import { Box, Heading, Text, Flex, Button, Link, Image } from "@chakra-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 
-import Layout from "../../components/layout";
-
 import { getAllProjectIds, getProjectData } from "../../lib/projects";
 import { useRouter } from "next/router";
 
@@ -13,7 +11,7 @@ const Project = ({ projectData }) => {
   return (
     <>
       <Head>
-        <title>{projectData.title} - sznm.dev</title>
+        <title>{projectData.title} | sznm.dev</title>
       </Head>
       <Box as="article">
         <Button

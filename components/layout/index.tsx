@@ -3,12 +3,13 @@
  * [ ] add floating tab bar component
  */
 
-import { Box, Image } from "@chakra-ui/core";
+import { Box } from "@chakra-ui/core";
 
 import Header from "./Header";
 import Footer from "./Footer";
 import Meta from "./meta";
 import TabBar from "./TabBar";
+import PatternBackground from "./PatterBackground";
 
 type LayoutProps = {
   title?: string;
@@ -24,13 +25,13 @@ const Layout = ({ title, children }: LayoutProps) => {
       minHeight="100vh"
     >
       <PatternBackground />
+      <Meta />
       <Box
         width={["100vw", "100vw", "800px"]}
         position="relative"
         zIndex={1}
         margin="0 auto"
       >
-        <Meta title={title} />
         <Header />
         <Box as="main" paddingY={22} paddingX={[22, 22, 0]}>
           {children}
@@ -39,27 +40,6 @@ const Layout = ({ title, children }: LayoutProps) => {
         <TabBar />
       </Box>
     </Box>
-  );
-};
-
-const PatternBackground = () => {
-  return (
-    <>
-      <Image
-        src={"/bg.svg"}
-        position="fixed"
-        right={["-200px", "-200px", "-200px", "0"]}
-        alt="background image pattern top right"
-      />
-      <Image
-        src={"/bg.svg"}
-        position="fixed"
-        left={["-200px", "-200px", "-200px", "0"]}
-        bottom="0"
-        transform="rotate(180deg)"
-        alt="background image pattern bottom left"
-      />{" "}
-    </>
   );
 };
 

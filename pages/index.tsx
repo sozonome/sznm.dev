@@ -3,10 +3,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Box, Flex, Image, Heading, Text, Button } from "@chakra-ui/core";
 
-import Layout from "../components/layout";
 import Card from "../components/Card";
 
 import { getSortedProjectsData } from "../lib/projects";
+import Meta from "../components/layout/meta";
 
 const Home = ({ allProjectsData }) => {
   return (

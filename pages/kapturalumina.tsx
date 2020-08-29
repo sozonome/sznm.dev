@@ -1,8 +1,6 @@
 import { Box, Image, Heading, Text, Link, Button } from "@chakra-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Layout from "../components/layout";
-
 const KapturaLumina = () => {
   return (
     <>

@@ -1,4 +1,3 @@
-import Layout from "../../components/layout";
 import {
   Heading,
   Flex,
@@ -19,6 +18,7 @@ import { getSortedProjectsData } from "../../lib/projects";
 import Card from "../../components/Card";
 import { useState } from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 const Projects = ({ allProjectsData }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -31,6 +31,9 @@ const Projects = ({ allProjectsData }) => {
 
   return (
     <>
+      <Head>
+        <title>Projects | sznm.dev</title>
+      </Head>
       <Box marginBottom={22}>
         <Heading as="h1" size="2xl">
           Projects
