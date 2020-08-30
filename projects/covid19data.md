@@ -6,6 +6,7 @@ description: COVID-19 Data App built with Gatsby and TailwindCSS. Powered by @ma
 date: "2020-05-02"
 thumbnail: "/app_icons/icon-covid-19-data.png"
 highlight: true
+featured: true
 appStoreLink:
 playStoreLink:
 ---

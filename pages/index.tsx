@@ -33,8 +33,7 @@ const HeroSection = () => {
           Hello! I'm Nathan,
         </Heading>
         <Text fontSize="xl">
-          software engineer specializing in <br /> Frontend and Mobile
-          development.
+          software engineer specializing in Frontend and Mobile development.
         </Text>
       </Box>
     </Flex>

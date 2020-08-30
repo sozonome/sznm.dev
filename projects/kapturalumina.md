@@ -6,6 +6,7 @@ description: My Bachelor / Undergraduate Thesis Project. Basic Photography Learn
 date: "2020-06-02"
 thumbnail: "/app_icons/icon_kapturalumina.png"
 highlight: true
+featured: true
 appStoreLink: 
 playStoreLink: https://play.google.com/store/apps/details?id=dev.sznm.kapturalumina
 ---

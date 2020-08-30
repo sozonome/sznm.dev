@@ -11,9 +11,9 @@ import Link from "next/link";
 const TabBar = () => {
   return (
     <Flex
-      marginX={["5vw", "5vw", 0]}
+      marginX={["5vw", "3vw", 0]}
       position="fixed"
-      width={["90vw", "90vw", 800]}
+      width={["90vw", "92vw", 800]}
       height={[96, 128]}
       bottom={22}
       borderRadius={20}
