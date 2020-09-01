@@ -19,7 +19,7 @@ const customTheme: DefaultTheme = {
       ...theme.colors.teal,
       700: "#005661",
       500: "#00838e",
-      300: "#4fb3be"
+      300: "#4fb3be",
     },
     orange: {
       ...theme.colors.orange,

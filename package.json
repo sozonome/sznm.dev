@@ -8,7 +8,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "prettify": "prettier --write pages/ components/ lib/",
+    "prettify": "prettier --write src/",
     "release": "standard-version"
   },
   "dependencies": {
