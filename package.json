@@ -20,6 +20,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "emotion-theming": "^10.0.27",
+    "framer-motion": "^2.6.6",
     "gray-matter": "^4.0.2",
     "next": "^9.5.2",
     "react": "^16.13.1",

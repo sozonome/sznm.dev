@@ -2,11 +2,14 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Box, Flex, Image, Heading, Text, Button } from "@chakra-ui/core";
+import { motion } from "framer-motion";
 
 import Card from "../components/Card";
 
 import { getSortedProjectsData } from "../lib/projects";
-import Meta from "../components/layout/meta";
+import MovingBox from "../components/core/MovingBox";
+
+const MotionProjectWrapper = motion.custom(Box);
 
 const Home = ({ allProjectsData }) => {
   return (
@@ -60,7 +63,17 @@ const ProjectsSection = ({ data }) => {
           </Link>
           <Text>Some notable projects I've worked on previously.</Text>
         </Box>
-        <Flex wrap="wrap" marginTop={22}>
+        <MotionProjectWrapper
+          display="flex"
+          flexWrap="wrap"
+          marginTop={22}
+          variants={{
+            before: {},
+            after: { transition: { staggerChildren: 0.06 } },
+          }}
+          initial="before"
+          animate="after"
+        >
           {data
             .filter((project) => project.highlight && project)
             .map(({ id, title, thumbnail }, index) => {
@@ -75,7 +88,7 @@ const ProjectsSection = ({ data }) => {
                 />
               );
             })}
-        </Flex>
+        </MotionProjectWrapper>
         <Link href="/projects">
           <Button
             width="100%"

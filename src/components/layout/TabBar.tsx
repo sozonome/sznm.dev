@@ -7,10 +7,13 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const MotionFlex = motion.custom(Flex);
 
 const TabBar = () => {
   return (
-    <Flex
+    <MotionFlex
       marginX={["5vw", "3vw", 0]}
       position="fixed"
       width={["90vw", "92vw", 800]}
@@ -23,6 +26,13 @@ const TabBar = () => {
       textAlign="center"
       alignItems="center"
       fontSize={[35, 50]}
+      //motion API
+      variants={{
+        before: { opacity: 0, y: 200, transition: { type: "spring" } },
+        after: { opacity: 1, y: 0, transition: { type: "spring", delay: 0.3 } },
+      }}
+      initial="before"
+      animate="after"
     >
       <Link href="/">
         <Box flexBasis={"25%"}>
@@ -44,7 +54,7 @@ const TabBar = () => {
           <FontAwesomeIcon icon={faUser} style={{ cursor: "pointer" }} />
         </Box>
       </Link>
-    </Flex>
+    </MotionFlex>
   );
 };
 

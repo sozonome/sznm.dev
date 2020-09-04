@@ -1,4 +1,5 @@
 import { Box, Image, Text, PseudoBox } from "@chakra-ui/core";
+import { motion } from "framer-motion";
 
 type CardProps = {
   title: string;
@@ -6,9 +7,12 @@ type CardProps = {
   handleClick?: () => void;
 };
 
+const MotionCard = motion.custom(PseudoBox);
+
 const Card = ({ title, img, handleClick }: CardProps) => {
   return (
-    <PseudoBox
+    <MotionCard
+      //chakra props
       display="flex"
       width={["100%", "47%"]}
       height={120}
@@ -20,6 +24,29 @@ const Card = ({ title, img, handleClick }: CardProps) => {
       _even={{ marginLeft: [0, "5%"] }}
       marginBottom={"5%"}
       onClick={handleClick}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 1.05 }}
+      //motion API
+      variants={{
+        before: {
+          opacity: 0,
+          y: 20,
+          transition: {
+            type: "spring",
+            damping: 16,
+            stiffness: 200,
+          },
+        },
+        after: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            type: "spring",
+            damping: 16,
+            stiffness: 200,
+          },
+        },
+      }}
     >
       <Box flexBasis={["35%", "30%"]}>
         {img && <Image src={img} width={50} margin="auto" alt={title} />}
@@ -29,7 +56,7 @@ const Card = ({ title, img, handleClick }: CardProps) => {
           {title}
         </Text>
       </Box>
-    </PseudoBox>
+    </MotionCard>
   );
 };
 
