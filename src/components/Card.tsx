@@ -25,7 +25,6 @@ const Card = ({ title, img, handleClick }: CardProps) => {
       marginBottom={"5%"}
       onClick={handleClick}
       whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 1.05 }}
       //motion API
       variants={{
         before: {
