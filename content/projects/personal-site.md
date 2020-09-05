@@ -9,4 +9,7 @@ highlight: true
 featured: true
 appStoreLink:
 playStoreLink:
+stacks: 
+  - gatsbyjs
+  - tailwindcss
 ---

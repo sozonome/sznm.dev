@@ -7,4 +7,6 @@ date: "2019-12-10"
 thumbnail: "/app_icons/ragambudaya-logo.png"
 appStoreLink:
 playStoreLink: https://play.google.com/store/apps/details?id=app.hatchoko.ragambudaya
+stacks:
+  - ionic
 ---

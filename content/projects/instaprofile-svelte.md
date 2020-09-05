@@ -7,4 +7,6 @@ date: "2020-06-04"
 thumbnail: "/app_icons/icon_instaprofile.png"
 appStoreLink:
 playStoreLink:
+stacks:
+  - svelte
 ---

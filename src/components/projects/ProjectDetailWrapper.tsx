@@ -1,18 +1,39 @@
 import React from "react";
 import { Box, Image, Heading, Text, Flex, Link, Button } from "@chakra-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import MotionBox from "../motion/MotionBox";
+import { ProjectType } from "../../models/project";
 
 type ProjectDetailWrapperProps = {
-  projectData: any;
-  featured?: boolean;
+  projectData: ProjectType;
 };
 
-const ProjectDetailWrapper = ({
-  projectData,
-  featured,
-}: ProjectDetailWrapperProps) => {
+const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
   return (
-    <Box width="100%" marginY={22}>
+    <MotionBox
+      width="100%"
+      marginY={22}
+      variants={{
+        before: {
+          opacity: 0,
+          y: 20,
+          transition: {
+            type: "spring",
+            damping: 16,
+            stiffness: 200,
+          },
+        },
+        after: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            type: "spring",
+            damping: 16,
+            stiffness: 200,
+          },
+        },
+      }}
+    >
       <Flex flexWrap={"wrap"} alignItems="center" width="100%">
         <Box alignItems="center" flexBasis={["100%", "20%"]}>
           <Image
@@ -23,13 +44,26 @@ const ProjectDetailWrapper = ({
           />
         </Box>
         <Box flexBasis={["auto", "80%"]} paddingLeft={[0, 22]}>
-          {featured && (
+          {projectData.featured && (
             <Text textTransform="uppercase" fontSize="sm" color="orange.200">
               Featured Project
             </Text>
           )}
           <Heading>{projectData.title}</Heading>
           <Text>{projectData.description}</Text>
+          {projectData.stacks && (
+            <Flex marginTop={11}>
+              {projectData.stacks.map((stack, index) => (
+                <Image
+                  marginRight={3}
+                  maxHeight={30}
+                  src={`/stacks_logo/${stack}.svg`}
+                  key={index}
+                  style={{ filter: "drop-shadow(0 0 12px rgb(98, 114, 164))" }}
+                />
+              ))}
+            </Flex>
+          )}
           <Flex marginY={22} flexWrap="wrap">
             {projectData.projectLink && (
               <Link
@@ -91,7 +125,7 @@ const ProjectDetailWrapper = ({
           </Flex>
         </Box>
       </Flex>
-    </Box>
+    </MotionBox>
   );
 };
 

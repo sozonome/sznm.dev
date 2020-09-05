@@ -8,4 +8,6 @@ thumbnail: "/app_icons/icon_lecook.png"
 highlight: true
 appStoreLink:
 playStoreLink:
+stacks:
+  - gatsbyjs
 ---

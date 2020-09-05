@@ -1,15 +1,12 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Box, Flex, Image, Heading, Text, Button } from "@chakra-ui/core";
-import { motion } from "framer-motion";
+import { Box, Image, Heading, Text, Button } from "@chakra-ui/core";
 
 import Card from "../components/Card";
+import MotionFlex from "../components/motion/MotionFlex";
 
 import { getSortedProjectsData } from "../lib/projects";
-import MovingBox from "../components/core/MovingBox";
-
-const MotionProjectWrapper = motion.custom(Box);
 
 const Home = ({ allProjectsData }) => {
   return (
@@ -22,7 +19,16 @@ const Home = ({ allProjectsData }) => {
 
 const HeroSection = () => {
   return (
-    <Flex marginY={44} as="section">
+    <MotionFlex
+      marginY={44}
+      as="section"
+      variants={{
+        before: { opacity: 0, y: 20, transition: { type: "spring" } },
+        after: { opacity: 1, y: 0, transition: { type: "spring" } },
+      }}
+      initial="before"
+      animate="after"
+    >
       <Box>
         <Image size={[100, 160]} src="/avataaars.svg" alt="sozonome" />
       </Box>
@@ -39,7 +45,7 @@ const HeroSection = () => {
           software engineer specializing in Frontend and Mobile development.
         </Text>
       </Box>
-    </Flex>
+    </MotionFlex>
   );
 };
 
@@ -63,9 +69,8 @@ const ProjectsSection = ({ data }) => {
           </Link>
           <Text>Some notable projects I've worked on previously.</Text>
         </Box>
-        <MotionProjectWrapper
-          display="flex"
-          flexWrap="wrap"
+        <MotionFlex
+          wrap="wrap"
           marginTop={22}
           variants={{
             before: {},
@@ -88,7 +93,7 @@ const ProjectsSection = ({ data }) => {
                 />
               );
             })}
-        </MotionProjectWrapper>
+        </MotionFlex>
         <Link href="/projects">
           <Button
             width="100%"
