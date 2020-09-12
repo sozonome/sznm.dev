@@ -13,6 +13,7 @@ const Card = ({ title, img, handleClick }: CardProps) => {
   return (
     <MotionCard
       //chakra props
+      as="button"
       display="flex"
       width={["100%", "47%"]}
       height={120}

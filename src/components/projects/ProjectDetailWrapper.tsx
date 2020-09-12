@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Image, Heading, Text, Flex, Link, Button } from "@chakra-ui/core";
+import { Box, Image, Heading, Text, Flex, Button } from "@chakra-ui/core";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MotionBox from "../motion/MotionBox";
 import { ProjectType } from "../../models/project";
@@ -66,17 +67,12 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
           )}
           <Flex marginY={22} flexWrap="wrap">
             {projectData.projectLink && (
-              <Link
-                href={projectData.projectLink}
-                _hover={{ textDecoration: "none" }}
-                marginRight={11}
-                marginBottom={11}
-                isExternal
-              >
+              <Link href={projectData.projectLink} passHref>
                 <Button
-                  width="100%"
                   backgroundColor="orange.400"
                   fontWeight="semibold"
+                  marginRight={11}
+                  marginBottom={11}
                   _hover={{
                     backgroundColor: "orange.200",
                     color: "black",
@@ -87,15 +83,11 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
               </Link>
             )}
             {projectData.playStoreLink && (
-              <Link
-                href={projectData.playStoreLink}
-                _hover={{ textDecoration: "none" }}
-                marginRight={11}
-                marginBottom={11}
-                isExternal
-              >
+              <Link href={projectData.playStoreLink} passHref>
                 <Button
                   backgroundColor="teal.300"
+                  marginRight={11}
+                  marginBottom={11}
                   _hover={{ backgroundColor: "white", color: "black" }}
                   color="black"
                 >
@@ -108,14 +100,10 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
               </Link>
             )}
             {projectData.repoLink && (
-              <Link
-                href={projectData.repoLink}
-                _hover={{ textDecoration: "none" }}
-                marginBottom={11}
-                isExternal
-              >
+              <Link href={projectData.repoLink} passHref>
                 <Button
                   backgroundColor="teal.700"
+                  marginBottom={11}
                   _hover={{ backgroundColor: "teal.300", color: "black" }}
                 >
                   Repo

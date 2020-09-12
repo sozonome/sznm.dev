@@ -34,23 +34,23 @@ const TabBar = () => {
       initial="before"
       animate="after"
     >
-      <Link href="/">
-        <Box flexBasis={"25%"}>
+      <Link href="/" passHref>
+        <Box as="a" flexBasis={"25%"}>
           <FontAwesomeIcon icon={faHome} style={{ cursor: "pointer" }} />
         </Box>
       </Link>
-      <Link href="/projects">
-        <Box flexBasis={"25%"}>
+      <Link href="/projects" passHref>
+        <Box as="a" flexBasis={"25%"}>
           <FontAwesomeIcon icon={faRocket} style={{ cursor: "pointer" }} />
         </Box>
       </Link>
-      <Link href="mailto:hello@sznm.dev">
-        <Box flexBasis={"25%"}>
+      <Link href="mailto:hello@sznm.dev" passHref>
+        <Box as="a" flexBasis={"25%"}>
           <FontAwesomeIcon icon={faEnvelope} style={{ cursor: "pointer" }} />
         </Box>
       </Link>
-      <Link href="/about">
-        <Box flexBasis={"25%"}>
+      <Link href="/about" passHref>
+        <Box as="a" flexBasis={"25%"}>
           <FontAwesomeIcon icon={faUser} style={{ cursor: "pointer" }} />
         </Box>
       </Link>

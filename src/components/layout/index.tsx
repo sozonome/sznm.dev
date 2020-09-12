@@ -12,11 +12,10 @@ import TabBar from "./TabBar";
 import PatternBackground from "./PatterBackground";
 
 type LayoutProps = {
-  title?: string;
   children: any;
 };
 
-const Layout = ({ title, children }: LayoutProps) => {
+const Layout = ({ children }: LayoutProps) => {
   return (
     <Box
       backgroundColor="teal.500"
