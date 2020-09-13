@@ -5,10 +5,11 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import "typeface-work-sans";
 import "typeface-markazi-text";
 
+import Layout from "../components/layout";
+
 import customTheme from "../styles/theme";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "../styles/global.css";
-import Layout from "../components/layout";
 
 config.autoAddCss = false;
 library.add(fab);
