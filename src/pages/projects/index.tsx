@@ -27,19 +27,20 @@ const Projects = ({ allProjectsData }) => {
         initial="before"
         animate="after"
       >
+        {/* Highlight */}
         {allProjectsData
           .filter((project) => project.featured && project)
           .map((projectData, index) => (
             <ProjectDetailWrapper projectData={projectData} key={index} />
           ))}
-      </MotionBox>
-      <Box>
+
+        {/* Other Projects */}
         {allProjectsData
           .filter((project) => !project.featured && project)
           .map((projectData, index) => (
             <ProjectDetailWrapper projectData={projectData} key={index} />
           ))}
-      </Box>
+      </MotionBox>
     </>
   );
 };

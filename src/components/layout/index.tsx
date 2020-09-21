@@ -1,8 +1,3 @@
-/**
- * @todo
- * [ ] add floating tab bar component
- */
-
 import { Box } from "@chakra-ui/core";
 
 import Header from "./Header";

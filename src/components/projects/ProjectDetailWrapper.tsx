@@ -1,7 +1,7 @@
-import React from "react";
 import { Box, Image, Heading, Text, Flex, Button } from "@chakra-ui/core";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import MotionBox from "../motion/MotionBox";
 import { ProjectType } from "../../models/project";
 

@@ -1,4 +1,6 @@
 import { Flex, Box } from "@chakra-ui/core";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -6,8 +8,6 @@ import {
   faEnvelope,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
-import { motion } from "framer-motion";
 
 const MotionFlex = motion.custom(Flex);
 
