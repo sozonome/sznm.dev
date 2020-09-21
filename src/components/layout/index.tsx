@@ -4,7 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Meta from "./meta";
 import TabBar from "./TabBar";
-import PatternBackground from "./PatterBackground";
+import PatternBackground from "./PatternBackground";
 
 type LayoutProps = {
   children: any;
