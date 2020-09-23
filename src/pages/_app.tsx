@@ -7,7 +7,7 @@ import "typeface-markazi-text";
 
 import Layout from "../components/layout";
 
-import customTheme from "../styles/theme";
+import customTheme from "../styles/customTheme";
 import "../styles/global.css";
 
 config.autoAddCss = false;
