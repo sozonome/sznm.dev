@@ -1,5 +1,4 @@
-import { Box, Heading, Text, Flex, Button, Link, Image } from "@chakra-ui/core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Box, Button } from "@chakra-ui/core";
 import Head from "next/head";
 
 import { getAllProjectIds, getProjectData } from "../../lib/projects";
