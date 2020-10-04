@@ -4,6 +4,7 @@
  */
 
 import { Heading, Text, Flex, Link } from "@chakra-ui/core";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const About = () => {
@@ -27,9 +28,13 @@ const About = () => {
         </Link>
         <Link
           href={`https://youtube.com/channel/UCJnYMGIHtQ8yInuq4Pc2Ttg`}
+          marginRight={11}
           isExternal
         >
           <FontAwesomeIcon icon={["fab", "youtube"]} />
+        </Link>
+        <Link href={`mailto:hello@sznm.dev`} isExternal>
+          <FontAwesomeIcon icon={faEnvelope} />
         </Link>
       </Flex>
     </>

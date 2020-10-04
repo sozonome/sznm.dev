@@ -1,11 +1,18 @@
 import { Heading, Box } from "@chakra-ui/core";
 import Head from "next/head";
 
-import { getSortedProjectsData } from "../../lib/projects";
 import ProjectDetailWrapper from "../../components/projects/ProjectDetailWrapper";
 import MotionBox from "../../components/motion/MotionBox";
 
-const Projects = ({ allProjectsData }) => {
+import { getSortedProjectsData } from "../../helpers/projects";
+
+import { ProjectType } from "../../models/project";
+
+type ProjectsProps = {
+  allProjectsData: Array<ProjectType>;
+};
+
+const Projects = ({ allProjectsData }: ProjectsProps) => {
   return (
     <>
       <Head>

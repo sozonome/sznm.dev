@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
   faRocket,
-  faEnvelope,
   faUser,
+  faFeatherAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 const MotionFlex = motion.custom(Flex);
@@ -14,9 +14,9 @@ const MotionFlex = motion.custom(Flex);
 const TabBar = () => {
   return (
     <MotionFlex
-      marginX={["5vw", "3vw", 0]}
+      marginX={["5vw", "3vw", "2vw", 0]}
       position="fixed"
-      width={["90vw", "92vw", 800]}
+      width={["90vw", "92vw", "82vw", 800]}
       height={[96, 128]}
       bottom={22}
       borderRadius={20}
@@ -44,9 +44,9 @@ const TabBar = () => {
           <FontAwesomeIcon icon={faRocket} style={{ cursor: "pointer" }} />
         </Box>
       </Link>
-      <Link href="mailto:hello@sznm.dev" passHref>
+      <Link href="/blog" passHref>
         <Box as="a" flexBasis={"25%"}>
-          <FontAwesomeIcon icon={faEnvelope} style={{ cursor: "pointer" }} />
+          <FontAwesomeIcon icon={faFeatherAlt} style={{ cursor: "pointer" }} />
         </Box>
       </Link>
       <Link href="/about" passHref>

@@ -1,11 +1,18 @@
 import { Box, Button } from "@chakra-ui/core";
 import Head from "next/head";
-
-import { getAllProjectIds, getProjectData } from "../../lib/projects";
 import { useRouter } from "next/router";
+
 import ProjectDetailWrapper from "../../components/projects/ProjectDetailWrapper";
 
-const Project = ({ projectData }) => {
+import { getAllProjectIds, getProjectData } from "../../helpers/projects";
+
+import { ProjectType } from "../../models/project";
+
+type ProjectProps = {
+  projectData: ProjectType;
+};
+
+const Project = ({ projectData }: ProjectProps) => {
   const router = useRouter();
 
   return (

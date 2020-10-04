@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import MotionBox from "../motion/MotionBox";
+
 import { ProjectType } from "../../models/project";
 
 type ProjectDetailWrapperProps = {

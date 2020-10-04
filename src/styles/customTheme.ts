@@ -45,4 +45,9 @@ const customTheme: DefaultTheme = {
   },
 };
 
+export const responsiveWidthProps = {
+  paddingY: 22,
+  paddingX: [22, 22, 11, 0],
+};
+
 export default customTheme;

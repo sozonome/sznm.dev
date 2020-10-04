@@ -6,7 +6,7 @@ import { Box, Image, Heading, Text, Button } from "@chakra-ui/core";
 import Card from "../components/Card";
 import MotionFlex from "../components/motion/MotionFlex";
 
-import { getSortedProjectsData } from "../lib/projects";
+import { getSortedProjectsData } from "../helpers/projects";
 
 const Home = ({ allProjectsData }) => {
   return (
