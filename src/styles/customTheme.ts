@@ -9,8 +9,8 @@ const customTheme: DefaultTheme = {
   ...theme,
   fonts: {
     ...theme.fonts,
-    body: "Work Sans, sans-serif",
     heading: "Markazi Text, serif",
+    body: "Work Sans, sans-serif",
   },
   colors: {
     ...theme.colors,
@@ -43,6 +43,11 @@ const customTheme: DefaultTheme = {
       100: "#D4D5D6",
     },
   },
+};
+
+export const responsiveWidthProps = {
+  paddingY: 22,
+  paddingX: [22, 22, 11, 0],
 };
 
 export default customTheme;

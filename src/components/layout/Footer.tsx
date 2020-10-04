@@ -1,8 +1,10 @@
 import { Box, Link, Text } from "@chakra-ui/core";
 
+import { responsiveWidthProps } from "../../styles/customTheme";
+
 const Footer = () => {
   return (
-    <Box as="footer" paddingY={22} paddingX={[22, 22, 0]}>
+    <Box as="footer" {...responsiveWidthProps}>
       <Text fontSize="sm">
         2020 -{" "}
         <Link
