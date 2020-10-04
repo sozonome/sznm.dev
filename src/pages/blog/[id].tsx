@@ -1,9 +1,11 @@
-import { Box, Heading, Text } from "@chakra-ui/core";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/core";
 
 import { getAllPostIds, getPostData } from "../../helpers/posts";
 import { dateFormatLong } from "../../helpers/dateFormat";
 
 import { BlogPostType } from "../../models/blog";
+
+import styles from "./[id].module.scss";
 
 type BlogPostProps = {
   postData: BlogPostType;
@@ -12,9 +14,19 @@ type BlogPostProps = {
 const BlogPost = ({ postData }: BlogPostProps) => {
   return (
     <Box>
-      <Heading>{postData.title}</Heading>
-      <Text>{dateFormatLong(postData.date)}</Text>
-      <Box dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <Flex alignItems="center" marginBottom={8}>
+        <Box flexBasis={["80%"]}>
+          <Heading size="2xl">{postData.title}</Heading>
+          <Text>{dateFormatLong(postData.date)}</Text>
+        </Box>
+        <Flex flexBasis={["20%"]}>
+          <Image src={postData.thumbnail} marginLeft="auto" height="100%" />
+        </Flex>
+      </Flex>
+      <Box
+        className={styles.content}
+        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+      />
     </Box>
   );
 };

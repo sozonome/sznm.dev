@@ -39,15 +39,13 @@ const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
     >
       <AccessibleLink href={`/blog/${postData.id}`}>
         <Flex flexWrap={"wrap"} alignItems="center" width="100%">
-          <Box alignItems="center" flexBasis={["15%", "20%"]}>
+          <Box alignItems="center" flexBasis={["10%"]}>
             <Image
               src={postData.thumbnail}
-              width={[55, 88]}
-              marginY={22}
               alt={postData.title}
             />
           </Box>
-          <Box flexBasis={["85%", "80%"]} paddingLeft={[11, 22]}>
+          <Box flexBasis={["90%"]} paddingLeft={[11, 22]}>
             <Heading>{postData.title}</Heading>
             <Text>{dateFormatLong(postData.date)}</Text>
           </Box>

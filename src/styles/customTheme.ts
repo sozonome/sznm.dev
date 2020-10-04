@@ -9,8 +9,8 @@ const customTheme: DefaultTheme = {
   ...theme,
   fonts: {
     ...theme.fonts,
-    body: "Work Sans, sans-serif",
     heading: "Markazi Text, serif",
+    body: "Work Sans, sans-serif",
   },
   colors: {
     ...theme.colors,

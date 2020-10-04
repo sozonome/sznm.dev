@@ -1,4 +1,4 @@
-import { Heading, Box } from "@chakra-ui/core";
+import { Heading, Box, Text } from "@chakra-ui/core";
 import Head from "next/head";
 
 import MotionBox from "../../components/motion/MotionBox";
@@ -22,8 +22,8 @@ const BlogPosts = ({ allPostsData }: BlogPostsProps) => {
         <Heading as="h1" size="2xl">
           Blog Posts
         </Heading>
+        <Text>Just some writings</Text>
       </Box>
-      {console.log({ allPostsData })}
       <MotionBox
         variants={{
           before: {},
