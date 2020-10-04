@@ -14,7 +14,7 @@ type ProjectsProps = {
 
 const Projects = ({ allProjectsData }: ProjectsProps) => {
   return (
-    <>
+    <Box>
       <Head>
         <title>Projects | sznm.dev</title>
       </Head>
@@ -48,7 +48,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
             <ProjectDetailWrapper projectData={projectData} key={index} />
           ))}
       </MotionBox>
-    </>
+    </Box>
   );
 };
 

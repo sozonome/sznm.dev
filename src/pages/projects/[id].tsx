@@ -16,7 +16,7 @@ const Project = ({ projectData }: ProjectProps) => {
   const router = useRouter();
 
   return (
-    <>
+    <Box>
       <Head>
         <title>{projectData.title} | sznm.dev</title>
       </Head>
@@ -32,7 +32,7 @@ const Project = ({ projectData }: ProjectProps) => {
         </Button>
         <ProjectDetailWrapper projectData={projectData} />
       </Box>
-    </>
+    </Box>
   );
 };
 

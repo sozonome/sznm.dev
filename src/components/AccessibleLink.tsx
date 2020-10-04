@@ -11,9 +11,10 @@ const AccessibleLink = ({
   isExternal,
   children,
   isDisabled,
+  as,
 }: AccessibleLinkProps) => {
   return (
-    <Link href={href} passHref>
+    <Link href={href} as={as} passHref>
       <ChakraLink isDisabled={isDisabled} isExternal={isExternal}>
         {children}
       </ChakraLink>

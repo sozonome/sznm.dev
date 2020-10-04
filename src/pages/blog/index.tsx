@@ -14,7 +14,7 @@ type BlogPostsProps = {
 
 const BlogPosts = ({ allPostsData }: BlogPostsProps) => {
   return (
-    <>
+    <Box>
       <Head>
         <title>Blog Posts | sznm.dev</title>
       </Head>
@@ -36,7 +36,7 @@ const BlogPosts = ({ allPostsData }: BlogPostsProps) => {
           <BlogPostPreview postData={postData} key={index} />
         ))}
       </MotionBox>
-    </>
+    </Box>
   );
 };
 

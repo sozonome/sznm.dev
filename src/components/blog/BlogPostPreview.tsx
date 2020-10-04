@@ -1,11 +1,11 @@
 import { Box, Image, Heading, Text, Flex } from "@chakra-ui/core";
 
 import MotionBox from "../motion/MotionBox";
+import AccessibleLink from "../AccessibleLink";
 
 import { dateFormatLong } from "../../helpers/dateFormat";
 
 import { BlogPostType } from "../../models/blog";
-import AccessibleLink from "../AccessibleLink";
 
 type BlogPostPreviewProps = {
   postData: BlogPostType;

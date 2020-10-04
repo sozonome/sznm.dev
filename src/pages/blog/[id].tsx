@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/core";
+import Head from "next/head";
 
 import { getAllPostIds, getPostData } from "../../helpers/posts";
 import { dateFormatLong } from "../../helpers/dateFormat";
@@ -14,6 +15,9 @@ type BlogPostProps = {
 const BlogPost = ({ postData }: BlogPostProps) => {
   return (
     <Box>
+      <Head>
+        <title>{postData.title} | sznm.dev</title>
+      </Head>
       <Flex alignItems="center" marginBottom={8}>
         <Box flexBasis={["80%"]}>
           <Heading size="2xl">{postData.title}</Heading>
