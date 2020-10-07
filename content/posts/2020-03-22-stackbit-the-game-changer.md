@@ -21,7 +21,7 @@ Yes, this is for you if you want to get a taste of what is JAMStack site about, 
 
 You can call Stackbit as your smart-assistant who helps you to start your JAMStack site. It's very easy to use, you just need to prepare your <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> account (<a href="https://gitlab.com/" target="_blank" rel="noopener">GitLab</a> and <a href="https://bitbucket.com/" target="_blank" rel="noopener">BitBucket</a> support coming soon) and a <a href="https://netlify.com/" target="_blank" rel="noopener">Netlify</a> account. The next thing is just register yourself into Stackbit (you can even register using your GitHub account so it's more convenient) and you can start to Build a Project. You gonna choose the site theme, the site generator framework, CMS, then you can deploy it. 
 
-![Stackbit Beta](/images/stackbit-beta.png)
+![Stackbit Beta](https://sznm.dev/images/stackbit-beta.png)
 
 All of it are done just by picking, doing some clicks, and voila. Yeah, all of the process involve no code. But if you want to develop and customize the project further, that's where your hands start getting dirty.
 
