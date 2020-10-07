@@ -8,7 +8,7 @@ import BlogPostPreview from "../../components/blog/BlogPostPreview";
 import { getSortedPostsData } from "../../helpers/posts";
 
 import { BlogPostType } from "../../models/blog";
-import generateRss from "../../helpers/rss";
+import generateRss from "../../helpers/generateRss";
 
 type BlogPostsProps = {
   allPostsData: Array<BlogPostType>;
