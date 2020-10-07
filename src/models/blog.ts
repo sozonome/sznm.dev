@@ -1,6 +1,7 @@
 export type BlogPostType = {
   id: string;
   title: string;
+  description?: string;
   date: string;
   slug: string;
   path: string;
@@ -8,4 +9,5 @@ export type BlogPostType = {
   type: string;
   contentHtml: any;
   thumbnail?: string;
+  tags?: string[];
 };
