@@ -1,6 +1,6 @@
 import { Heading, Text, Link, Box, BoxProps } from "@chakra-ui/core";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { faEnvelope, IconName } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import AccessibleLink from "../components/AccessibleLink";
