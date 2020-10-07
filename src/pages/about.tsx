@@ -1,5 +1,6 @@
 import { Heading, Text, Link, Box, BoxProps } from "@chakra-ui/core";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { faEnvelope, IconName } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import AccessibleLink from "../components/AccessibleLink";
@@ -76,6 +77,15 @@ const Links = () => {
     animate: "after",
   };
 
+  const staggerAnimationProps = {
+    variants: {
+      before: {},
+      after: { transition: { staggerChildren: 0.06 } },
+    },
+    initial: "before",
+    animate: "after",
+  };
+
   const childAnimationProps = {
     variants: {
       before: {
@@ -99,59 +109,38 @@ const Links = () => {
     },
   };
 
+  const MotionLinks = (props: { link: string; icon: IconProp }) => {
+    const { link, icon } = props;
+    return (
+      <MotionBox {...childAnimationProps}>
+        <Link href={link} marginRight={11} isExternal>
+          <FontAwesomeIcon icon={icon} />
+        </Link>
+      </MotionBox>
+    );
+  };
+
   return (
     <MotionBox marginY={4} {...wrapperAnimationProps}>
       <Text fontStyle="italic">1.01 ^365 = 37.7</Text>
-      <MotionFlex
-        fontSize="4xl"
-        variants={{
-          before: {},
-          after: { transition: { staggerChildren: 0.06 } },
-        }}
-        initial="before"
-        animate="after"
-      >
-        <MotionBox {...childAnimationProps}>
-          <Link
-            href={`https://github.com/sozonome`}
-            marginRight={11}
-            isExternal
-          >
-            <FontAwesomeIcon icon={["fab", "github"]} />
-          </Link>
-        </MotionBox>
-        <MotionBox {...childAnimationProps}>
-          <Link
-            href={`https://twitter.com/sozonome`}
-            marginRight={11}
-            isExternal
-          >
-            <FontAwesomeIcon icon={["fab", "twitter"]} />
-          </Link>
-        </MotionBox>
-        <MotionBox {...childAnimationProps}>
-          <Link
-            href={`https://www.instagram.com/sozonome`}
-            marginRight={11}
-            isExternal
-          >
-            <FontAwesomeIcon icon={["fab", "instagram"]} />
-          </Link>
-        </MotionBox>
-        <MotionBox {...childAnimationProps}>
-          <Link
-            href={`https://youtube.com/channel/UCJnYMGIHtQ8yInuq4Pc2Ttg`}
-            marginRight={11}
-            isExternal
-          >
-            <FontAwesomeIcon icon={["fab", "youtube"]} />
-          </Link>
-        </MotionBox>
-        <MotionBox {...childAnimationProps}>
-          <Link href={`mailto:hello@sznm.dev`} isExternal>
-            <FontAwesomeIcon icon={faEnvelope} />
-          </Link>
-        </MotionBox>
+      <MotionFlex fontSize="4xl" {...staggerAnimationProps}>
+        <MotionLinks
+          link={`https://github.com/sozonome`}
+          icon={["fab", "github"]}
+        />
+        <MotionLinks
+          link={`https://twitter.com/sozonome`}
+          icon={["fab", "twitter"]}
+        />
+        <MotionLinks
+          link={`https://www.instagram.com/sozonome`}
+          icon={["fab", "instagram"]}
+        />
+        <MotionLinks
+          link={`https://youtube.com/channel/UCJnYMGIHtQ8yInuq4Pc2Ttg`}
+          icon={["fab", "youtube"]}
+        />
+        <MotionLinks link={`mailto:hello@sznm.dev`} icon={faEnvelope} />
       </MotionFlex>
     </MotionBox>
   );
