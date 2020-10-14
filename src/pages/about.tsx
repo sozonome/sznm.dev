@@ -2,6 +2,7 @@ import { Heading, Text, Link, Box, BoxProps } from "@chakra-ui/core";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Head from "next/head";
 
 import AccessibleLink from "../components/AccessibleLink";
 import MotionBox from "../components/motion/MotionBox";
@@ -10,6 +11,9 @@ import MotionFlex from "../components/motion/MotionFlex";
 const About = () => {
   return (
     <Box>
+      <Head>
+        <title>About | sozonome</title>
+      </Head>
       <HeadSection />
       <AboutContent />
       <Links />
