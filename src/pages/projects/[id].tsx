@@ -18,7 +18,7 @@ const Project = ({ projectData }: ProjectProps) => {
   return (
     <Box>
       <Head>
-        <title>{projectData.title} | sznm.dev</title>
+        <title>{projectData.title} | sozonome</title>
       </Head>
       <Box as="article">
         <Button

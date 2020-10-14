@@ -18,7 +18,7 @@ const BlogPosts = ({ allPostsData }: BlogPostsProps) => {
   return (
     <Box>
       <Head>
-        <title>Blog Posts | sznm.dev</title>
+        <title>Blog Posts | sozonome</title>
       </Head>
       <Box marginBottom={22}>
         <Heading as="h1" size="2xl">

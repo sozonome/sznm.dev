@@ -16,7 +16,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
   return (
     <Box>
       <Head>
-        <title>Projects | sznm.dev</title>
+        <title>Projects | sozonome</title>
       </Head>
       <Box marginBottom={22}>
         <Heading as="h1" size="2xl">
