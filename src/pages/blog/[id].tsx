@@ -24,7 +24,7 @@ const BlogPost = ({ postData }: BlogPostProps) => {
           <Text>{dateFormatLong(postData.date)}</Text>
         </Box>
         <Flex flexBasis={["20%"]}>
-          <Image src={postData.thumbnail} marginLeft="auto" height="100%" />
+          <Image src={postData.thumbnail} marginLeft="auto" width="60%" />
         </Flex>
       </Flex>
       <Box
