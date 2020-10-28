@@ -1,4 +1,5 @@
-import { Box, Image, Heading, Text, Flex } from "@chakra-ui/core";
+import { Box, Heading, Text, Flex } from "@chakra-ui/core";
+import Image from "next/image";
 
 import MotionBox from "../motion/MotionBox";
 import AccessibleLink from "../AccessibleLink";
@@ -39,14 +40,11 @@ const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
     >
       <AccessibleLink href={`/blog/${postData.id}`}>
         <Flex flexWrap={"wrap"} alignItems="center" width="100%">
-          <Box alignItems="center" flexBasis={["10%"]}>
-            <Image
-              width={"60%"}
-              margin="0 auto"
-              src={postData.thumbnail}
-              alt={postData.title}
-            />
-          </Box>
+          <Flex justifyContent="center" alignItems="center" flexBasis={["10%"]}>
+            <Box size="60%">
+              <Image src={postData.thumbnail} alt={postData.title} unsized />
+            </Box>
+          </Flex>
           <Box flexBasis={["90%"]} paddingLeft={[11, 22]}>
             <Heading>{postData.title}</Heading>
             <Text>{dateFormatLong(postData.date)}</Text>

@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Box, Image, Heading, Text, Button } from "@chakra-ui/core";
+import { Box, Heading, Text, Button } from "@chakra-ui/core";
+import Image from "next/image";
 
 import Card from "../components/Card";
 import MotionFlex from "../components/motion/MotionFlex";
@@ -29,8 +30,8 @@ const HeroSection = () => {
       initial="before"
       animate="after"
     >
-      <Box>
-        <Image size={[100, 160]} src="/avataaars.svg" alt="sozonome" />
+      <Box size={[100, 160]}>
+        <Image width={160} height={160} src="/avataaars.svg" alt="sozonome" />
       </Box>
       <Box
         verticalAlign="center"

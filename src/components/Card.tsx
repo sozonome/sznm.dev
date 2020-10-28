@@ -1,5 +1,6 @@
-import { Box, Image, Text, PseudoBox } from "@chakra-ui/core";
+import { Box, Text, PseudoBox, Flex } from "@chakra-ui/core";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type CardProps = {
   title: string;
@@ -48,9 +49,9 @@ const Card = ({ title, img, handleClick }: CardProps) => {
         },
       }}
     >
-      <Box flexBasis={["35%", "30%"]}>
-        {img && <Image src={img} width={50} margin="auto" alt={title} />}
-      </Box>
+      <Flex flexBasis={["35%", "30%"]} justifyContent="center">
+        {img && <Image src={img} width={50} height={50} alt={title} />}
+      </Flex>
       <Box flexBasis={["65%", "70%"]}>
         <Text fontWeight={600} fontSize="lg">
           {title}

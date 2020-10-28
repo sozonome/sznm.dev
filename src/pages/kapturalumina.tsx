@@ -1,4 +1,5 @@
-import { Box, Image, Heading, Text, Link, Button } from "@chakra-ui/core";
+import { Box, Heading, Text, Link, Button } from "@chakra-ui/core";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const KapturaLumina = () => {
@@ -8,6 +9,7 @@ const KapturaLumina = () => {
         <Image
           src="/app_icons/icon_kapturalumina.png"
           width={110}
+          height={110}
           alt="kapturalumina icon"
         />
         <Box marginY={22}>

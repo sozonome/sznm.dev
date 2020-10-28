@@ -3,13 +3,14 @@ import {
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  Image,
   Heading,
   ModalCloseButton,
   ModalBody,
   Button,
   ModalFooter,
+  Box,
 } from "@chakra-ui/core";
+import Image from "next/image";
 import Link from "next/link";
 
 const ModalWrapper = ({ isOpen, onClose, selectedProject }) => {
@@ -22,12 +23,14 @@ const ModalWrapper = ({ isOpen, onClose, selectedProject }) => {
         marginX={[22, 0]}
       >
         <ModalHeader display="flex" alignItems="center" marginY={22}>
-          <Image
-            src={selectedProject.thumbnail}
-            size={44}
-            marginRight={11}
-            alt={selectedProject.title}
-          />
+          <Box marginRight={11}>
+            <Image
+              src={selectedProject.thumbnail}
+              width={44}
+              height={44}
+              alt={selectedProject.title}
+            />
+          </Box>
           <Heading as="h3">{selectedProject.title}</Heading>
         </ModalHeader>
         <ModalCloseButton />
