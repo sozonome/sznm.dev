@@ -1,5 +1,6 @@
-import { Box, Image, Heading, Text, Flex, Button } from "@chakra-ui/core";
+import { Box, Heading, Text, Flex, Button } from "@chakra-ui/core";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import MotionBox from "../motion/MotionBox";
@@ -38,12 +39,14 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
     >
       <Flex flexWrap={"wrap"} alignItems="center" width="100%">
         <Box alignItems="center" flexBasis={["100%", "20%"]}>
-          <Image
-            src={projectData.thumbnail}
-            width={[55, 88]}
-            marginY={22}
-            alt={projectData.title}
-          />
+          <Box marginY={22} width={[55, 88]}>
+            <Image
+              width="100%"
+              height="100%"
+              src={projectData.thumbnail}
+              alt={projectData.title}
+            />
+          </Box>
         </Box>
         <Box flexBasis={["auto", "80%"]} paddingLeft={[0, 22]}>
           {projectData.featured && (
@@ -56,13 +59,17 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
           {projectData.stacks && (
             <Flex marginTop={11}>
               {projectData.stacks.map((stack, index) => (
-                <Image
+                <Box
                   marginRight={3}
-                  maxHeight={30}
-                  src={`/stacks_logo/${stack}.svg`}
                   key={index}
                   style={{ filter: "drop-shadow(0 0 12px rgb(98, 114, 164))" }}
-                />
+                >
+                  <Image
+                    width={30}
+                    height={30}
+                    src={`/stacks_logo/${stack}.svg`}
+                  />
+                </Box>
               ))}
             </Flex>
           )}

@@ -1,4 +1,5 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/core";
+import { Box, Flex, Heading, Text } from "@chakra-ui/core";
+import Image from "next/image";
 import Head from "next/head";
 
 import { getAllPostIds, getPostData } from "../../helpers/posts";
@@ -24,7 +25,9 @@ const BlogPost = ({ postData }: BlogPostProps) => {
           <Text>{dateFormatLong(postData.date)}</Text>
         </Box>
         <Flex flexBasis={["20%"]}>
-          <Image src={postData.thumbnail} marginLeft="auto" width="60%" />
+          <Box marginLeft="auto" width="60%">
+            <Image src={postData.thumbnail} unsized />
+          </Box>
         </Flex>
       </Flex>
       <Box
