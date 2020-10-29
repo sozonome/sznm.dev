@@ -14,13 +14,6 @@ const customTheme: DefaultTheme = {
   },
   colors: {
     ...theme.colors,
-    teal: {
-      //primary
-      ...theme.colors.teal,
-      700: "#005661",
-      500: "#00838e",
-      300: "#4fb3be",
-    },
     orange: {
       ...theme.colors.orange,
       // secondary

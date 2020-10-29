@@ -31,7 +31,13 @@ const HeroSection = () => {
       animate="after"
     >
       <Box size={[100, 160]}>
-        <Image width={160} height={160} src="/avataaars.svg" alt="sozonome" />
+        <Image
+          width={160}
+          height={160}
+          className="glow"
+          src="/avataaars.svg"
+          alt="sozonome"
+        />
       </Box>
       <Box
         verticalAlign="center"

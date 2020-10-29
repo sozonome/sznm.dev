@@ -21,7 +21,7 @@ const TabBar = () => {
       bottom={22}
       borderRadius={20}
       boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.4)"
-      backgroundColor="teal.500"
+      backgroundColor="teal.600"
       padding={22}
       textAlign="center"
       alignItems="center"
