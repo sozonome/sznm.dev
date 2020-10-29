@@ -57,10 +57,7 @@ const AboutContent = () => {
           href="https://instagram.com/agustinusnathaniel"
           isExternal
         >
-          <Text
-            as="span"
-            fontWeight={500}
-          >
+          <Text as="span" fontWeight={500}>
             capture moments.
           </Text>
         </AccessibleLink>
