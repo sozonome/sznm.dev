@@ -59,11 +59,9 @@ const AboutContent = () => {
         >
           <Text
             as="span"
-            fontStyle="italic"
-            textDecoration="underline"
             fontWeight={500}
           >
-            doing some visual arts (graphic design, videography, photography).
+            capture moments.
           </Text>
         </AccessibleLink>
       </Text>
@@ -144,7 +142,15 @@ const Links = () => {
           link={`https://youtube.com/channel/UCJnYMGIHtQ8yInuq4Pc2Ttg`}
           icon={["fab", "youtube"]}
         />
-        <MotionLinks link={`mailto:hello@sznm.dev`} icon={faEnvelope} />
+        <MotionLinks link={`https://dev.to/sozonome`} icon={["fab", "dev"]} />
+        <MotionLinks
+          link={`https://medium.com/@agustinusnathaniel`}
+          icon={["fab", "medium"]}
+        />
+        <MotionLinks
+          link={`mailto:hello@sznm.dev?cc=agustinusnathaniel228@gmail.com`}
+          icon={faEnvelope}
+        />
       </MotionFlex>
     </MotionBox>
   );
