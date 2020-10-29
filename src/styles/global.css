@@ -1,1 +1,4 @@
 /* Global Styling Here */
+.glow {
+  filter: drop-shadow(0 0 12px #454a58);
+}

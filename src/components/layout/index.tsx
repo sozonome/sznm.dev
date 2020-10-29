@@ -15,7 +15,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <Box
-      backgroundColor="teal.500"
+      backgroundColor="teal.900"
       color="white"
       paddingBottom={[160, 220]}
       minHeight="100vh"

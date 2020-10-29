@@ -24,7 +24,7 @@ const Project = ({ projectData }: ProjectProps) => {
         <Button
           leftIcon="arrow-back"
           size="sm"
-          backgroundColor="teal.300"
+          backgroundColor="teal.600"
           marginBottom={22}
           onClick={() => router.push("/projects")}
         >
