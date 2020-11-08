@@ -34,9 +34,11 @@ const BlogPosts = ({ allPostsData }: BlogPostsProps) => {
         initial="before"
         animate="after"
       >
-        {allPostsData.map((postData, index) => (
-          <BlogPostPreview postData={postData} key={index} />
-        ))}
+        {allPostsData
+          .filter((post) => post.published === true)
+          .map((postData, index) => (
+            <BlogPostPreview postData={postData} key={index} />
+          ))}
       </MotionBox>
     </Box>
   );

@@ -24,16 +24,20 @@ const generateRss = async (posts: Array<BlogPostType>): Promise<string> => {
   });
 
   for (let i = 0; i < posts.length; i++) {
-    const item: any = await generateRssItem(posts[i]);
-    feed.item({
-      title: item.title,
-      guid: `https://sznm.dev/blog/${item.id}`,
-      url: `https://sznm.dev/blog/${item.id}`,
-      date: item.date,
-      description: "",
-      author: "sozonome",
-      custom_elements: [{ "content:encoded": item.contentHtml }],
-    });
+    if (posts[i].published !== true) {
+      continue;
+    } else {
+      const item: any = await generateRssItem(posts[i]);
+      feed.item({
+        title: item.title,
+        guid: `https://sznm.dev/blog/${item.id}`,
+        url: `https://sznm.dev/blog/${item.id}`,
+        date: item.date,
+        description: "",
+        author: "sozonome",
+        custom_elements: [{ "content:encoded": item.contentHtml }],
+      });
+    }
   }
 
   return feed.xml({ indent: true });

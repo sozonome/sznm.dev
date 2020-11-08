@@ -78,6 +78,7 @@ export async function getPostData(id) {
   return {
     id,
     contentHtml,
+    rawContent: matterResult.content,
     ...matterResult.data,
   };
 }

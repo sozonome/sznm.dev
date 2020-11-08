@@ -8,6 +8,7 @@ export type BlogPostType = {
   published: boolean;
   type: string;
   contentHtml: any;
+  rawContent: any;
   thumbnail?: string;
   tags?: string[];
 };

@@ -4,7 +4,6 @@ date: "2020-03-22"
 published: true
 thumbnail: "/thumbnails/web.png"
 slug: "stackbit-the-game-changer"
-path: "/dev/stackbit-the-game-changer"
 description: You can launch a powerful and beautiful static site in just under 10 minutes and at super low-cost.
 tags: 
   - Stackbit

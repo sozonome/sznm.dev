@@ -2,9 +2,8 @@
 title: May 2020 Quarantine Self Challenge
 date: "2020-05-02"
 slug: "quarantine-self-challenge-make-apps"
-path: "/dev/quarantine-self-challenge-make-apps"
 thumbnail: "/thumbnails/achievement.png"
-published: false
+published: true
 tags: 
   - Gatsby
   - Vercel

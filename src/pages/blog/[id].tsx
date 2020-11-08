@@ -1,6 +1,9 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/core";
 import Image from "next/image";
 import Head from "next/head";
+import ReactMarkdown from "react-markdown";
+
+import { renderers } from "../../components/blog/renderers";
 
 import { getAllPostIds, getPostData } from "../../helpers/posts";
 import { dateFormatLong } from "../../helpers/dateFormat";
@@ -30,9 +33,11 @@ const BlogPost = ({ postData }: BlogPostProps) => {
           </Box>
         </Flex>
       </Flex>
-      <Box
+      <ReactMarkdown
         className={styles.content}
-        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        children={postData.rawContent}
+        renderers={renderers}
+        allowDangerousHtml
       />
     </Box>
   );
