@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Box, Text } from "@chakra-ui/core";
+import { Box, Text } from "@chakra-ui/react";
 
 import { responsiveWidthProps } from "../../styles/customTheme";
 

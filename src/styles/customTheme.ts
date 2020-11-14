@@ -3,9 +3,9 @@
  * [ ] re-pick colors to support a11y
  */
 
-import { theme, DefaultTheme } from "@chakra-ui/core";
+import { theme, extendTheme } from "@chakra-ui/react";
 
-const customTheme: DefaultTheme = {
+const customTheme = extendTheme({
   ...theme,
   fonts: {
     ...theme.fonts,
@@ -36,7 +36,7 @@ const customTheme: DefaultTheme = {
       100: "#D4D5D6",
     },
   },
-};
+});
 
 export const responsiveWidthProps = {
   paddingY: 22,

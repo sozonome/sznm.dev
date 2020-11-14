@@ -1,4 +1,4 @@
-import { Heading, Text, Link, Box, BoxProps } from "@chakra-ui/core";
+import { Heading, Text, Link, Box, BoxProps } from "@chakra-ui/react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

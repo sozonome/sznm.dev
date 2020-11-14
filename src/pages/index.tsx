@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Box, Heading, Text, Button } from "@chakra-ui/core";
+import { Box, Heading, Text, Button } from "@chakra-ui/react";
 import Image from "next/image";
 
 import Card from "../components/Card";
@@ -21,7 +21,7 @@ const Home = ({ allProjectsData }) => {
 const HeroSection = () => {
   return (
     <MotionFlex
-      marginY={44}
+      marginY={"2.75rem"}
       as="section"
       variants={{
         before: { opacity: 0, y: 20, transition: { type: "spring" } },
@@ -30,7 +30,7 @@ const HeroSection = () => {
       initial="before"
       animate="after"
     >
-      <Box size={[100, 160]}>
+      <Box boxSize={[100, 160]}>
         <Image
           width={160}
           height={160}

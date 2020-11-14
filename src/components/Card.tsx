@@ -1,4 +1,4 @@
-import { Box, Text, PseudoBox, Flex } from "@chakra-ui/core";
+import { Box, Text, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -8,13 +8,12 @@ type CardProps = {
   handleClick?: () => void;
 };
 
-const MotionCard = motion.custom(PseudoBox);
+const MotionCard = motion.custom(Box);
 
 const Card = ({ title, img, handleClick }: CardProps) => {
   return (
     <MotionCard
       //chakra props
-      as="button"
       display="flex"
       width={["100%", "47%"]}
       height={120}
@@ -26,8 +25,8 @@ const Card = ({ title, img, handleClick }: CardProps) => {
       _even={{ marginLeft: [0, "5%"] }}
       marginBottom={"5%"}
       onClick={handleClick}
-      whileHover={{ scale: 1.05 }}
       //motion API
+      whileHover={{ scale: 1.05 }}
       variants={{
         before: {
           opacity: 0,

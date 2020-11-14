@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Flex } from "@chakra-ui/core";
+import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 
 import MotionBox from "../motion/MotionBox";
@@ -41,7 +41,7 @@ const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
       <AccessibleLink href={`/blog/${postData.id}`}>
         <Flex flexWrap={"wrap"} alignItems="center" width="100%">
           <Flex justifyContent="center" alignItems="center" flexBasis={["10%"]}>
-            <Box size="60%">
+            <Box boxSize="60%">
               <Image src={postData.thumbnail} alt={postData.title} unsized />
             </Box>
           </Flex>

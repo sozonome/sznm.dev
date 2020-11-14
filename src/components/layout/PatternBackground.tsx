@@ -1,4 +1,4 @@
-import { Image } from "@chakra-ui/core";
+import { Image } from "@chakra-ui/react";
 
 const PatternBackground = () => {
   return (
