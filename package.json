@@ -21,7 +21,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@types/react-syntax-highlighter": "^13.5.0",
     "@types/rss": "^0.0.28",
-    "framer-motion": "^2.9.5",
+    "framer-motion": "^2.9.4",
     "gray-matter": "^4.0.2",
     "next": "^10.0.0",
     "react": "^17.0.1",
