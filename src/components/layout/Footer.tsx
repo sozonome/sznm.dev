@@ -1,4 +1,4 @@
-import { Box, Link, Text } from "@chakra-ui/core";
+import { Box, Link, Text } from "@chakra-ui/react";
 
 import { responsiveWidthProps } from "../../styles/customTheme";
 

@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/core";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";

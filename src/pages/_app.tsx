@@ -1,4 +1,4 @@
-import { ThemeProvider, CSSReset } from "@chakra-ui/core";
+import { ChakraProvider } from "@chakra-ui/react";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -15,12 +15,11 @@ library.add(fab);
 
 const MyApp = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider theme={customTheme}>
-      <CSSReset />
+    <ChakraProvider theme={customTheme}>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </ThemeProvider>
+    </ChakraProvider>
   );
 };
 

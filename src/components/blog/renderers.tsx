@@ -6,8 +6,7 @@ import {
   Heading,
   HeadingProps,
   Link as ChakraLink,
-  PseudoBox,
-} from "@chakra-ui/core";
+} from "@chakra-ui/react";
 import { ElementType } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -19,10 +18,10 @@ export const renderers = {
     return (
       <Box>
         <Flex alignItems="center">
-          {language && <Code variantColor="gray">{language}</Code>}
+          {language && <Code colorScheme="gray">{language}</Code>}
           <Button
             marginLeft="auto"
-            variantColor="green"
+            colorScheme="green"
             height={6}
             padding={0}
             fontSize={12}
@@ -108,7 +107,7 @@ export const renderers = {
           .toLowerCase()}`}
         passHref
       >
-        <PseudoBox _hover={{ textDecoration: "underline", cursor: "pointer" }}>
+        <Box _hover={{ textDecoration: "underline", cursor: "pointer" }}>
           <Heading
             as={head.as}
             size={head.size}
@@ -118,7 +117,7 @@ export const renderers = {
           >
             {children[0].value}
           </Heading>
-        </PseudoBox>
+        </Box>
       </Link>
     );
   },

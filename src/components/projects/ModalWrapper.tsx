@@ -9,7 +9,7 @@ import {
   Button,
   ModalFooter,
   Box,
-} from "@chakra-ui/core";
+} from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 

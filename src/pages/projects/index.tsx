@@ -1,4 +1,4 @@
-import { Heading, Box } from "@chakra-ui/core";
+import { Heading, Box, Text } from "@chakra-ui/react";
 import Head from "next/head";
 
 import ProjectDetailWrapper from "../../components/projects/ProjectDetailWrapper";
@@ -22,7 +22,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
         <Heading as="h1" size="2xl">
           Projects
         </Heading>
-        <Heading as="p" size="lg" fontWeight="normal">
+        <Heading as="p" size="md" fontWeight="normal">
           Some projects I worked on previously.
         </Heading>
       </Box>

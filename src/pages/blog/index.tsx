@@ -1,4 +1,4 @@
-import { Heading, Box, Text } from "@chakra-ui/core";
+import { Heading, Box, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import fs from "fs";
 

@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Flex, Button } from "@chakra-ui/core";
+import { Box, Heading, Text, Flex, Button } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

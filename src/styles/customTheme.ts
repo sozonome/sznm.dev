@@ -3,7 +3,7 @@
  * [ ] re-pick colors to support a11y
  */
 
-import { theme, DefaultTheme } from "@chakra-ui/core";
+import { theme, DefaultTheme } from "@chakra-ui/react";
 
 const customTheme: DefaultTheme = {
   ...theme,
