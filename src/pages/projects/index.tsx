@@ -1,4 +1,4 @@
-import { Heading, Box, Text } from "@chakra-ui/react";
+import { Heading, Box } from "@chakra-ui/react";
 import Head from "next/head";
 
 import ProjectDetailWrapper from "../../components/projects/ProjectDetailWrapper";
