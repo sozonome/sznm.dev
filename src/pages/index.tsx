@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Box, Heading, Text, Button } from "@chakra-ui/react";
+import { Box, Heading, Text, Button, useColorMode } from "@chakra-ui/react";
 import Image from "next/image";
 
 import Card from "../components/Card";
@@ -58,6 +58,8 @@ const HeroSection = () => {
 
 const ProjectsSection = ({ data }) => {
   const router = useRouter();
+  const { colorMode } = useColorMode();
+
   useEffect(() => {
     data
       .filter((project) => project.highlight && project)
@@ -65,6 +67,7 @@ const ProjectsSection = ({ data }) => {
         router.prefetch("/projects/[id]", `/projects/${id}`);
       });
   });
+
   return (
     <Box as="section" paddingY={22}>
       <Box>
@@ -106,8 +109,11 @@ const ProjectsSection = ({ data }) => {
             width="100%"
             borderRadius={20}
             height={55}
-            backgroundColor="teal.700"
-            _hover={{ backgroundColor: "teal.300", color: "black" }}
+            backgroundColor={colorMode === "light" ? "gray.100" : "teal.700"}
+            _hover={{
+              backgroundColor: colorMode === "light" ? "gray.300" : "teal.300",
+              color: "black",
+            }}
           >
             see more
           </Button>

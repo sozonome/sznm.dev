@@ -1,4 +1,12 @@
-import { Box, Heading, Text, Flex, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Text,
+  Flex,
+  Button,
+  Image as ChakraImage,
+  useColorMode,
+} from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +20,8 @@ type ProjectDetailWrapperProps = {
 };
 
 const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
+  const { colorMode } = useColorMode();
+
   return (
     <MotionBox
       width="100%"
@@ -64,10 +74,10 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
                   key={index}
                   style={{ filter: "drop-shadow(0 0 12px rgb(98, 114, 164))" }}
                 >
-                  <Image
+                  <ChakraImage
                     width={30}
                     height={30}
-                    src={`/stacks_logo/${stack}.svg`}
+                    src={`/stacks_logo/${colorMode}/${stack}.svg`}
                   />
                 </Box>
               ))}
@@ -77,7 +87,9 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
             {projectData.projectLink && (
               <Link href={projectData.projectLink} passHref>
                 <Button
-                  backgroundColor="orange.400"
+                  backgroundColor={
+                    colorMode === "light" ? "orange.200" : "orange.400"
+                  }
                   fontWeight="semibold"
                   marginRight={11}
                   marginBottom={11}
@@ -97,7 +109,7 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
                   marginRight={11}
                   marginBottom={11}
                   _hover={{ backgroundColor: "white", color: "black" }}
-                  color="black"
+                  color={colorMode === "light" ? "inherit" : "gray.600"}
                 >
                   <FontAwesomeIcon
                     icon={["fab", "google-play"]}
@@ -110,7 +122,9 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
             {projectData.repoLink && (
               <Link href={projectData.repoLink} passHref>
                 <Button
-                  backgroundColor="teal.700"
+                  backgroundColor={
+                    colorMode === "light" ? "gray.300" : "teal.700"
+                  }
                   marginBottom={11}
                   _hover={{ backgroundColor: "teal.300", color: "black" }}
                 >

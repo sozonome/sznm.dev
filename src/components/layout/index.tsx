@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, useColorMode } from "@chakra-ui/react";
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -13,10 +13,12 @@ type LayoutProps = {
 };
 
 const Layout = ({ children }: LayoutProps) => {
+  const { colorMode } = useColorMode();
+
   return (
     <Box
-      backgroundColor="teal.900"
-      color="white"
+      backgroundColor={colorMode === "light" ? "gray.50" : "teal.900"}
+      color={colorMode === "light" ? "gray.600" : "white"}
       paddingBottom={[160, 220]}
       minHeight="100vh"
     >
