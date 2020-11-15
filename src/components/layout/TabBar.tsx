@@ -14,10 +14,10 @@ const MotionFlex = motion.custom(Flex);
 const TabBar = () => {
   return (
     <MotionFlex
-      marginX={["5vw", "3vw", "2vw", 0]}
+      marginX={["5%", "3%", "2%", 0]}
       position="fixed"
-      width={["90vw", "92vw", "82vw", 800]}
-      height={[96, 128]}
+      width={["90%", "94%", "82%", 800]}
+      height={["6rem", "8rem"]}
       bottom={22}
       borderRadius={20}
       boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.4)"
