@@ -27,14 +27,6 @@ const customTheme = extendTheme({
       500: "#9F9287",
       300: "#BFB7AF",
     },
-    gray: {
-      ...theme.colors.gray,
-      900: "#262E33",
-      700: "#51585C",
-      500: "#7D8285",
-      300: "#A8ABAD",
-      100: "#D4D5D6",
-    },
   },
 });
 

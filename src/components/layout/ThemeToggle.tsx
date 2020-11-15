@@ -11,6 +11,7 @@ const ThemeToggle = () => {
         aria-label="toggle theme mode"
         icon={colorMode === "light" ? <BsMoon /> : <FiSun />}
         onClick={toggleColorMode}
+        backgroundColor={colorMode === "light" ? "gray.400" : "teal.900"}
       />
     </Box>
   );

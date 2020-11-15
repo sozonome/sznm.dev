@@ -17,8 +17,8 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <Box
-      backgroundColor={colorMode === "light" ? "gray.100" : "teal.900"}
-      color="white"
+      backgroundColor={colorMode === "light" ? "gray.50" : "teal.900"}
+      color={colorMode === "light" ? "gray.600" : "white"}
       paddingBottom={[160, 220]}
       minHeight="100vh"
     >

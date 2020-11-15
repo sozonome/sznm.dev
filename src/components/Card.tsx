@@ -1,4 +1,4 @@
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex, useColorMode } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -11,13 +11,15 @@ type CardProps = {
 const MotionCard = motion.custom(Box);
 
 const Card = ({ title, img, handleClick }: CardProps) => {
+  const { colorMode } = useColorMode();
+
   return (
     <MotionCard
       //chakra props
       display="flex"
       width={["100%", "47%"]}
       height={120}
-      backgroundColor="teal.700"
+      backgroundColor={colorMode === "light" ? "gray.200" : "teal.700"}
       boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.1);"
       alignItems="center"
       borderRadius={20}
