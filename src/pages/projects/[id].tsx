@@ -1,4 +1,4 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { AiOutlineArrowLeft } from "react-icons/ai";
@@ -15,6 +15,7 @@ type ProjectProps = {
 
 const Project = ({ projectData }: ProjectProps) => {
   const router = useRouter();
+  const { colorMode } = useColorMode();
 
   return (
     <Box>
@@ -25,7 +26,7 @@ const Project = ({ projectData }: ProjectProps) => {
         <Button
           leftIcon={<AiOutlineArrowLeft />}
           size="sm"
-          backgroundColor="teal.600"
+          backgroundColor={colorMode === "light" ? "gray.300" : "teal.600"}
           marginBottom={22}
           onClick={() => router.push("/projects")}
         >
