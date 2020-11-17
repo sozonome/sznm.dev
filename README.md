@@ -17,6 +17,4 @@ I create RSS feed feature in this site by combining methods from these three tut
 - [RSS Feed in Next.js site](https://logana.dev/blog/rss-feeds-in-a-nextjs-site)
 
 ### TODO
-- [ ] Image Optimization
 - [ ] SEO Optimization
-- [ ] Improve Overall Performance
