@@ -1,13 +1,26 @@
-export type ProjectType = {
-  title: string;
-  projectLink?: string;
-  repoLink?: string;
-  description: string;
-  date: string;
-  thumbnail?: string;
-  highlight?: boolean;
-  featured?: boolean;
-  appStoreLink?: string;
-  playStoreLink?: string;
-  stacks?: string[];
-};
+enum MandatoryStringFieldKeys {
+  title,
+  description,
+}
+type MandatoryStringFieldsType = keyof typeof MandatoryStringFieldKeys;
+
+enum OptionalStringFieldKeys {
+  projectLink,
+  repoLink,
+  appStoreLink,
+  playStoreLink,
+  thumbnail,
+}
+type OptionalStringFieldsType = keyof typeof OptionalStringFieldKeys;
+
+enum OptionalBooleanFieldKeys {
+  highlight,
+  featured,
+}
+type OptionalBooleanFieldsType = keyof typeof OptionalBooleanFieldKeys;
+
+export type ProjectType = { [key in MandatoryStringFieldsType]: string } &
+  { [key in OptionalStringFieldsType]?: string } &
+  { [key in OptionalBooleanFieldsType]?: boolean } & {
+    stacks?: string[];
+  };
