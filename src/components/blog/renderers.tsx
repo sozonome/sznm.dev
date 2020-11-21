@@ -36,7 +36,6 @@ export const renderers = {
           style={dracula}
           children={value}
           showLineNumbers={false}
-          wrapLongLines
         />
       </Box>
     );
