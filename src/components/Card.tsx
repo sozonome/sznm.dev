@@ -19,7 +19,7 @@ const Card = ({ title, img, handleClick }: CardProps) => {
       display="flex"
       width={["100%", "47%"]}
       height={120}
-      backgroundColor={colorMode === "light" ? "gray.200" : "teal.700"}
+      backgroundColor={colorMode === "light" ? "gray.200" : "gray.700"}
       boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.1);"
       alignItems="center"
       borderRadius={20}
@@ -54,7 +54,7 @@ const Card = ({ title, img, handleClick }: CardProps) => {
         {img && <Image src={img} width={50} height={50} alt={title} />}
       </Flex>
       <Box flexBasis={["65%", "70%"]}>
-        <Text fontWeight={600} fontSize="lg">
+        <Text fontWeight={600} fontSize="lg" fontFamily="Rubik, sans-serif">
           {title}
         </Text>
       </Box>

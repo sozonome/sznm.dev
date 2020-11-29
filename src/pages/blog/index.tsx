@@ -21,7 +21,7 @@ const BlogPosts = ({ allPostsData }: BlogPostsProps) => {
         <title>Blog Posts | sozonome</title>
       </Head>
       <Box marginBottom={22}>
-        <Heading as="h1" size="2xl">
+        <Heading as="h1" size="xl" marginBottom={2}>
           Blog Posts
         </Heading>
         <Text>Just some writings</Text>

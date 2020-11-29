@@ -18,7 +18,7 @@ const ModalWrapper = ({ isOpen, onClose, selectedProject }) => {
     <Modal isOpen={isOpen} onClose={onClose} closeOnEsc isCentered>
       <ModalOverlay />
       <ModalContent
-        backgroundColor="teal.300"
+        backgroundColor="gray.300"
         borderRadius={20}
         marginX={[22, 0]}
       >

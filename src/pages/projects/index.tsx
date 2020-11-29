@@ -19,10 +19,10 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
         <title>Projects | sozonome</title>
       </Head>
       <Box marginBottom={22}>
-        <Heading as="h1" size="2xl">
+        <Heading as="h1" size="xl" marginBottom={2}>
           Projects
         </Heading>
-        <Heading as="p" size="md" fontWeight="normal">
+        <Heading as="p" size="sm" fontWeight="normal">
           Some projects I worked on previously.
         </Heading>
       </Box>
