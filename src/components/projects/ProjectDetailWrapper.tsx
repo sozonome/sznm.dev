@@ -60,11 +60,18 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
         </Box>
         <Box flexBasis={["auto", "80%"]} paddingLeft={[0, 22]}>
           {projectData.featured && (
-            <Text textTransform="uppercase" fontSize="sm" color="orange.200">
+            <Text
+              textTransform="uppercase"
+              fontSize="xs"
+              color="orange.200"
+              fontFamily="Rubik, sans-serif"
+            >
               Featured Project
             </Text>
           )}
-          <Heading>{projectData.title}</Heading>
+          <Heading size="lg" marginBottom={2}>
+            {projectData.title}
+          </Heading>
           <Text>{projectData.description}</Text>
           {projectData.stacks && (
             <Flex marginTop={11}>

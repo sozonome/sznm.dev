@@ -9,8 +9,8 @@ const customTheme = extendTheme({
   ...theme,
   fonts: {
     ...theme.fonts,
-    heading: "Markazi Text, serif",
-    body: "Work Sans, sans-serif",
+    heading: "Rubik, sans-serif",
+    body: "Recursive, sans-serif",
   },
   colors: {
     ...theme.colors,
@@ -26,6 +26,13 @@ const customTheme = extendTheme({
       700: "#7F6E5F",
       500: "#9F9287",
       300: "#BFB7AF",
+    },
+  },
+  components: {
+    Button: {
+      baseStyle: {
+        fontFamily: "Rubik, sans-serif",
+      },
     },
   },
 });

@@ -39,13 +39,14 @@ const HeroSection = () => {
           alt="sozonome"
         />
       </Box>
+
       <Box
         verticalAlign="center"
         width={["100%", "80%", "60%"]}
         paddingX={22}
         alignSelf={["none", "center"]}
       >
-        <Heading as="h1" size="2xl" paddingBottom={11}>
+        <Heading as="h1" size="xl" paddingBottom={11}>
           Hello! I'm Nathan,
         </Heading>
         <Text fontSize="xl">
@@ -73,12 +74,13 @@ const ProjectsSection = ({ data }) => {
       <Box>
         <Box>
           <Link href="/projects">
-            <Heading as="h1" size="2xl" cursor="pointer">
+            <Heading as="h1" size="xl" cursor="pointer" marginBottom={2}>
               Projects
             </Heading>
           </Link>
           <Text>Some notable projects I've worked on previously.</Text>
         </Box>
+
         <MotionFlex
           wrap="wrap"
           marginTop={22}
@@ -104,6 +106,7 @@ const ProjectsSection = ({ data }) => {
               );
             })}
         </MotionFlex>
+
         <Link href="/projects">
           <Button
             width="100%"
@@ -114,6 +117,7 @@ const ProjectsSection = ({ data }) => {
               backgroundColor: colorMode === "light" ? "gray.300" : "teal.300",
               color: "black",
             }}
+            fontFamily="Rubik, sans-serif"
           >
             see more
           </Button>

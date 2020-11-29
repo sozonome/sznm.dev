@@ -3938,6 +3938,16 @@ focus-lock@^0.7.0:
   resolved "https://registry.yarnpkg.com/focus-lock/-/focus-lock-0.7.0.tgz#b2bfb0ca7beacc8710a1ff74275fe0dc60a1d88a"
   integrity sha512-LI7v2mH02R55SekHYdv9pRHR9RajVNyIJ2N5IEkWbg7FT5ZmJ9Hw4mWxHeEUcd+dJo0QmzztHvDvWcc7prVFsw==
 
+fontsource-recursive@^3.0.10:
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/fontsource-recursive/-/fontsource-recursive-3.0.10.tgz#be134b3f31c523e4c5cbc11e672434ccea42fed1"
+  integrity sha512-HenzoBpY8JdwsKjSNAXAY+6zrn6EEu1PH/WqZHiEEWbChyyGr7fCMZhniHIyllgGRN9TQAtqa7hM3Cb3EsNfWw==
+
+fontsource-rubik@^3.0.10:
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/fontsource-rubik/-/fontsource-rubik-3.0.10.tgz#03175eb808e9a6aa5f0e42089ad7224447cc1fe2"
+  integrity sha512-7wfwz0Wf8AWoSzWEmaqSt5yA0TQWpShPT4GL+CeIAuKV3G81eFbJK1jUsZnInFNu5Mt0hVXjXTpP5d6nVvROSg==
+
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -7776,16 +7786,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-
-typeface-markazi-text@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/typeface-markazi-text/-/typeface-markazi-text-1.1.4.tgz#06ad758ebe7e8889ad557e15b012e17e5cbbe0e4"
-  integrity sha512-sLZRRy2jLO4Bqjd3ISxopstGimDcCMS8p3s6yMGtB9Byz8oFoCq2ixdeWGSl9BmokisTPx3TQPZ2Fyk6c8+Fpw==
-
-typeface-work-sans@^0.0.72:
-  version "0.0.72"
-  resolved "https://registry.yarnpkg.com/typeface-work-sans/-/typeface-work-sans-0.0.72.tgz#2b40abbda07e2cf6d9fbd9d334bb8c3014c80e32"
-  integrity sha512-hJa+mh217r4qlEq0zK0Aqn7chyDzJYziObsd9nokEd0lMBKbGNf/10VHS3AqeVKDye3evfTvZ11tmj5WizIJrA==
 
 typescript@^4.0.2:
   version "4.0.2"

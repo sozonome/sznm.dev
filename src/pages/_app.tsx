@@ -2,8 +2,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import "typeface-work-sans";
-import "typeface-markazi-text";
+import "fontsource-recursive";
+import "fontsource-rubik";
 
 import Layout from "../components/layout";
 
