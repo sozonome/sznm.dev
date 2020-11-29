@@ -36,7 +36,7 @@ const Page404 = () => {
         <Box textAlign="center">
           <Link href="/" passHref>
             <Button
-              backgroundColor={colorMode === "light" ? "gray.300" : "teal.500"}
+              backgroundColor={colorMode === "light" ? "gray.300" : "gray.500"}
             >
               Let's Head Back
             </Button>

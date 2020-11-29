@@ -16,7 +16,7 @@ const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
   return (
     <MotionBox
       width="100%"
-      marginY={22}
+      marginY={12}
       variants={{
         before: {
           opacity: 0,
@@ -46,7 +46,9 @@ const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
             </Box>
           </Flex>
           <Box flexBasis={["90%"]} paddingLeft={[11, 22]}>
-            <Heading>{postData.title}</Heading>
+            <Heading size="lg" marginBottom={2}>
+              {postData.title}
+            </Heading>
             <Text>{dateFormatLong(postData.date)}</Text>
           </Box>
         </Flex>

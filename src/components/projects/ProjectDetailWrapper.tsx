@@ -112,7 +112,7 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
             {projectData.playStoreLink && (
               <Link href={projectData.playStoreLink} passHref>
                 <Button
-                  backgroundColor="teal.300"
+                  backgroundColor="gray.300"
                   marginRight={11}
                   marginBottom={11}
                   _hover={{ backgroundColor: "white", color: "black" }}
@@ -130,10 +130,10 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
               <Link href={projectData.repoLink} passHref>
                 <Button
                   backgroundColor={
-                    colorMode === "light" ? "gray.300" : "teal.700"
+                    colorMode === "light" ? "gray.300" : "gray.700"
                   }
                   marginBottom={11}
-                  _hover={{ backgroundColor: "teal.300", color: "black" }}
+                  _hover={{ backgroundColor: "gray.300", color: "black" }}
                 >
                   Repo
                 </Button>

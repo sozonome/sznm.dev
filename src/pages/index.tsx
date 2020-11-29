@@ -112,9 +112,9 @@ const ProjectsSection = ({ data }) => {
             width="100%"
             borderRadius={20}
             height={55}
-            backgroundColor={colorMode === "light" ? "gray.100" : "teal.700"}
+            backgroundColor={colorMode === "light" ? "gray.100" : "gray.700"}
             _hover={{
-              backgroundColor: colorMode === "light" ? "gray.300" : "teal.300",
+              backgroundColor: colorMode === "light" ? "gray.300" : "gray.300",
               color: "black",
             }}
             fontFamily="Rubik, sans-serif"

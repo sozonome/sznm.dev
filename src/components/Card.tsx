@@ -19,7 +19,7 @@ const Card = ({ title, img, handleClick }: CardProps) => {
       display="flex"
       width={["100%", "47%"]}
       height={120}
-      backgroundColor={colorMode === "light" ? "gray.200" : "teal.700"}
+      backgroundColor={colorMode === "light" ? "gray.200" : "gray.700"}
       boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.1);"
       alignItems="center"
       borderRadius={20}

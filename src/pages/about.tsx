@@ -43,7 +43,7 @@ const AboutContent = () => {
       initial="before"
       animate="after"
     >
-      <Heading>👋 Hi, how are you?</Heading>
+      <Heading size="lg">👋 Hi, how are you?</Heading>
       <Text {...textProps}>
         I'm currently working as a Frontend Engineer. Most of the time I work
         with TypeScript and React. I make fun projects in my free time and share

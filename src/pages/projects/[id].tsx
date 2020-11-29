@@ -26,7 +26,7 @@ const Project = ({ projectData }: ProjectProps) => {
         <Button
           leftIcon={<AiOutlineArrowLeft />}
           size="sm"
-          backgroundColor={colorMode === "light" ? "gray.300" : "teal.600"}
+          backgroundColor={colorMode === "light" ? "gray.300" : "gray.600"}
           marginBottom={22}
           onClick={() => router.push("/projects")}
         >
