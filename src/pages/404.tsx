@@ -31,7 +31,9 @@ const Page404 = () => {
       </Text>
 
       <Box marginY={4}>
-        <Heading textAlign="center">Seems like you're lost.</Heading>
+        <Heading textAlign="center" fontSize="3xl" marginBottom={2}>
+          Seems like you're lost.
+        </Heading>
 
         <Box textAlign="center">
           <Link href="/" passHref>
