@@ -30,7 +30,7 @@ Nowadays there are so many ways to measure site performance beside running light
 
 What if we have more than one project / site to be measured from time-to-time without spending extra cost? Well, this is where [Speedlify](https://speedlify.dev) comes in, a template for site performance monitor created by [Zach Leatherman](https://github.com/zachleat). Speedlify built using a static site generator framework called [11ty(eleventy)](https://www.11ty.dev/). 
 
-I've tried to deploy my own speedlify [here](https://audit.agustinusnathaniel.com).
+I've tried to deploy my own speedlify [here](https://audit.sznm.dev).
 
 *fun fact: I found Speedlify when I was just randomly exploring 11ty docs page (not really important, just intermezzo 😄)* 
 
