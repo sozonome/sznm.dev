@@ -26,6 +26,9 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
     <MotionBox
       width="100%"
       marginY={22}
+      padding={4}
+      borderRadius={24}
+      backgroundColor={colorMode === "light" ? "none" : "gray.700"}
       variants={{
         before: {
           opacity: 0,
@@ -49,7 +52,7 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
     >
       <Flex flexWrap={"wrap"} alignItems="center" width="100%">
         <Box alignItems="center" flexBasis={["100%", "20%"]}>
-          <Box marginY={22} width={[55, 88]}>
+          <Box marginBottom={[22, 0]} width={[55, 88]}>
             <Image
               width="100%"
               height="100%"
@@ -90,7 +93,7 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
               ))}
             </Flex>
           )}
-          <Flex marginY={22} flexWrap="wrap">
+          <Flex marginTop={22} flexWrap="wrap">
             {projectData.projectLink && (
               <Link href={projectData.projectLink} passHref>
                 <Button
@@ -99,7 +102,6 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
                   }
                   fontWeight="semibold"
                   marginRight={11}
-                  marginBottom={11}
                   _hover={{
                     backgroundColor: "orange.200",
                     color: "black",
@@ -114,7 +116,6 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
                 <Button
                   backgroundColor="gray.300"
                   marginRight={11}
-                  marginBottom={11}
                   _hover={{ backgroundColor: "white", color: "black" }}
                   color={colorMode === "light" ? "inherit" : "gray.600"}
                 >
@@ -132,7 +133,6 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
                   backgroundColor={
                     colorMode === "light" ? "gray.300" : "gray.700"
                   }
-                  marginBottom={11}
                   _hover={{ backgroundColor: "gray.300", color: "black" }}
                 >
                   Repo

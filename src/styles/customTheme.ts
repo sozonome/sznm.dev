@@ -9,7 +9,7 @@ const customTheme = extendTheme({
   ...theme,
   fonts: {
     ...theme.fonts,
-    heading: "Rubik, sans-serif",
+    heading: "Catamaran, sans-serif",
     body: "Recursive, sans-serif",
   },
   colors: {

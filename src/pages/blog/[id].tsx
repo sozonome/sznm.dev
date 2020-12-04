@@ -11,6 +11,7 @@ import { dateFormatLong } from "../../helpers/dateFormat";
 import { BlogPostType } from "../../models/blog";
 
 import styles from "./[id].module.scss";
+import MotionBox from "../../components/motion/MotionBox";
 
 type BlogPostProps = {
   postData: BlogPostType;
@@ -18,13 +19,22 @@ type BlogPostProps = {
 
 const BlogPost = ({ postData }: BlogPostProps) => {
   return (
-    <Box>
+    <MotionBox
+      variants={{
+        before: { opacity: 0, y: 20, transition: { type: "spring" } },
+        after: { opacity: 1, y: 0, transition: { type: "spring" } },
+      }}
+      initial="before"
+      animate="after"
+    >
       <Head>
         <title>{postData.title} | sozonome</title>
       </Head>
       <Flex alignItems="center" marginBottom={8}>
         <Box flexBasis={["80%"]}>
-          <Heading size="2xl">{postData.title}</Heading>
+          <Heading size="2xl" marginBottom={2}>
+            {postData.title}
+          </Heading>
           <Text>{dateFormatLong(postData.date)}</Text>
         </Box>
         <Flex flexBasis={["20%"]}>
@@ -39,7 +49,7 @@ const BlogPost = ({ postData }: BlogPostProps) => {
         renderers={renderers}
         allowDangerousHtml
       />
-    </Box>
+    </MotionBox>
   );
 };
 

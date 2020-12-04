@@ -19,7 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
     <Box
       backgroundColor={colorMode === "light" ? "gray.50" : "gray.900"}
       color={colorMode === "light" ? "gray.600" : "white"}
-      paddingBottom={[160, 220]}
+      paddingBottom={[160, 20]}
       minHeight="100vh"
     >
       <PatternBackground />

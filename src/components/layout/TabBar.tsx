@@ -35,6 +35,7 @@ const TabBar = () => {
       }}
       initial="before"
       animate="after"
+      display={["flex", "none"]}
     >
       <Link href="/" passHref>
         <Box as="a" flexBasis={"25%"}>
