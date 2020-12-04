@@ -4,6 +4,8 @@ import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 
 import { renderers } from "../../components/blog/renderers";
+import MotionBox from "../../components/motion/MotionBox";
+import AccessibleLink from "../../components/AccessibleLink";
 
 import { getAllPostIds, getPostData } from "../../helpers/posts";
 import { dateFormatLong } from "../../helpers/dateFormat";
@@ -11,7 +13,6 @@ import { dateFormatLong } from "../../helpers/dateFormat";
 import { BlogPostType } from "../../models/blog";
 
 import styles from "./[id].module.scss";
-import MotionBox from "../../components/motion/MotionBox";
 
 type BlogPostProps = {
   postData: BlogPostType;
@@ -30,19 +31,26 @@ const BlogPost = ({ postData }: BlogPostProps) => {
       <Head>
         <title>{postData.title} | sozonome</title>
       </Head>
-      <Flex alignItems="center" marginBottom={8}>
+
+      <Flex alignItems="center" marginBottom={16}>
         <Box flexBasis={["80%"]}>
-          <Heading size="2xl" marginBottom={2}>
+          <Heading size="2xl" marginBottom={8}>
             {postData.title}
           </Heading>
+          <AccessibleLink href="/about">
+            <Text>Agustinus Nathaniel</Text>
+          </AccessibleLink>
+
           <Text>{dateFormatLong(postData.date)}</Text>
         </Box>
+
         <Flex flexBasis={["20%"]}>
           <Box marginLeft="auto" width="60%">
             <Image src={postData.thumbnail} unsized />
           </Box>
         </Flex>
       </Flex>
+
       <ReactMarkdown
         className={styles.content}
         children={postData.rawContent}

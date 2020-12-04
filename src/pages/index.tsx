@@ -7,14 +7,17 @@ import Image from "next/image";
 import Card from "../components/Card";
 import MotionFlex from "../components/motion/MotionFlex";
 import MotionBox from "../components/motion/MotionBox";
+import BlogPostPreview from "../components/blog/BlogPostPreview";
 
 import { getSortedProjectsData } from "../helpers/projects";
+import { getSortedPostsData } from "../helpers/posts";
 
-const Home = ({ allProjectsData }) => {
+const Home = ({ allProjectsData, allPostsData }) => {
   return (
     <>
       <HeroSection />
       <ProjectsSection data={allProjectsData} />
+      <RecentPostSection allPostsData={allPostsData} />
     </>
   );
 };
@@ -73,7 +76,7 @@ const ProjectsSection = ({ data }) => {
   });
 
   return (
-    <Box as="section" paddingY={22}>
+    <Box as="section" marginY={16}>
       <Box>
         <Box>
           <Link href="/projects">
@@ -110,7 +113,7 @@ const ProjectsSection = ({ data }) => {
             })}
         </MotionFlex>
 
-        <Link href="/projects">
+        <Link href="/projects" passHref>
           <Button
             width="100%"
             borderRadius={20}
@@ -130,11 +133,60 @@ const ProjectsSection = ({ data }) => {
   );
 };
 
+const RecentPostSection = ({ allPostsData }) => {
+  const { colorMode } = useColorMode();
+
+  return (
+    <Box as="section" marginY={24}>
+      <Heading size="xl" marginBottom={2}>
+        Recent Posts
+      </Heading>
+
+      <MotionBox
+        marginTop={22}
+        variants={{
+          before: {},
+          after: { transition: { staggerChildren: 0.06 } },
+        }}
+        initial="before"
+        animate="after"
+      >
+        {allPostsData
+          .filter((post) => post.published === true)
+          .slice(0, 2)
+          .map((postData, index) => (
+            <BlogPostPreview postData={postData} key={index} />
+          ))}
+      </MotionBox>
+
+      <Link href="/blog" passHref>
+        <Button
+          isFullWidth
+          width="100%"
+          borderRadius={20}
+          height={55}
+          backgroundColor={colorMode === "light" ? "gray.100" : "gray.700"}
+          _hover={{
+            backgroundColor: "gray.300",
+            color: "black",
+          }}
+          fontFamily="Rubik, sans-serif"
+        >
+          see more
+        </Button>
+      </Link>
+    </Box>
+  );
+};
+
 export const getStaticProps = async () => {
   const allProjectsData = getSortedProjectsData();
+  const allPostsData = getSortedPostsData();
+
   return {
     props: {
       allProjectsData,
+      allPostsData,
     },
   };
 };
