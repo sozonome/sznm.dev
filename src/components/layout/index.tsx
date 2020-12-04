@@ -21,6 +21,7 @@ const Layout = ({ children }: LayoutProps) => {
       color={colorMode === "light" ? "gray.600" : "white"}
       paddingBottom={[160, 20]}
       minHeight="100vh"
+      transition="0.4s ease-out"
     >
       <PatternBackground />
       <Meta />
