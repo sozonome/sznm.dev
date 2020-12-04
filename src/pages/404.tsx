@@ -4,9 +4,9 @@ import {
   Heading,
   Text,
   Link as ChakraLink,
+  Image,
   useColorMode,
 } from "@chakra-ui/react";
-import Image from "next/image";
 import Link from "next/link";
 
 import MotionBox from "../components/motion/MotionBox";
@@ -22,7 +22,7 @@ const Page404 = () => {
         animate={{ y: 20 }}
         transition={{ repeat: Infinity, duration: 2, repeatType: "reverse" }}
       >
-        <Image unsized src="/404 Error-rafiki.svg" />
+        <Image src="/404 Error-rafiki.svg" />
       </MotionBox>
       <Text textAlign="center" fontSize="xs">
         <ChakraLink href="https://stories.freepik.com/web" isExternal>

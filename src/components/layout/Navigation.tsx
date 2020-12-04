@@ -46,8 +46,8 @@ const navigations: NavItemProps[] = [
 const Navigation = () => {
   return (
     <>
-      {navigations.map((navigation) => (
-        <NavItem {...navigation} />
+      {navigations.map((navigation, index) => (
+        <NavItem {...navigation} key={index} />
       ))}
     </>
   );
