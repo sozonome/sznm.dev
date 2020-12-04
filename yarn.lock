@@ -3938,15 +3938,15 @@ focus-lock@^0.7.0:
   resolved "https://registry.yarnpkg.com/focus-lock/-/focus-lock-0.7.0.tgz#b2bfb0ca7beacc8710a1ff74275fe0dc60a1d88a"
   integrity sha512-LI7v2mH02R55SekHYdv9pRHR9RajVNyIJ2N5IEkWbg7FT5ZmJ9Hw4mWxHeEUcd+dJo0QmzztHvDvWcc7prVFsw==
 
+fontsource-catamaran@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/fontsource-catamaran/-/fontsource-catamaran-3.0.5.tgz#9e30e9c6cdefada7a9ddacef710913fddd2779fc"
+  integrity sha512-bwl0z/TQc14Wcb+fqjiH8NQ7pFWR2V57nQEfAH0hv0PTofrEKlT3q78UuaicXJHLB9RlVLbsrvG3uY7T7mcAog==
+
 fontsource-recursive@^3.0.10:
   version "3.0.10"
   resolved "https://registry.yarnpkg.com/fontsource-recursive/-/fontsource-recursive-3.0.10.tgz#be134b3f31c523e4c5cbc11e672434ccea42fed1"
   integrity sha512-HenzoBpY8JdwsKjSNAXAY+6zrn6EEu1PH/WqZHiEEWbChyyGr7fCMZhniHIyllgGRN9TQAtqa7hM3Cb3EsNfWw==
-
-fontsource-rubik@^3.0.10:
-  version "3.0.10"
-  resolved "https://registry.yarnpkg.com/fontsource-rubik/-/fontsource-rubik-3.0.10.tgz#03175eb808e9a6aa5f0e42089ad7224447cc1fe2"
-  integrity sha512-7wfwz0Wf8AWoSzWEmaqSt5yA0TQWpShPT4GL+CeIAuKV3G81eFbJK1jUsZnInFNu5Mt0hVXjXTpP5d6nVvROSg==
 
 for-in@^1.0.2:
   version "1.0.2"

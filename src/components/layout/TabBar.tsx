@@ -1,13 +1,7 @@
-import { Flex, Box, useColorMode } from "@chakra-ui/react";
-import Link from "next/link";
+import { Flex, useColorMode } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHome,
-  faRocket,
-  faUser,
-  faFeatherAlt,
-} from "@fortawesome/free-solid-svg-icons";
+
+import Navigation from "./Navigation";
 
 const MotionFlex = motion.custom(Flex);
 
@@ -35,27 +29,9 @@ const TabBar = () => {
       }}
       initial="before"
       animate="after"
+      display={["flex", "none"]}
     >
-      <Link href="/" passHref>
-        <Box as="a" flexBasis={"25%"}>
-          <FontAwesomeIcon icon={faHome} style={{ cursor: "pointer" }} />
-        </Box>
-      </Link>
-      <Link href="/projects" passHref>
-        <Box as="a" flexBasis={"25%"}>
-          <FontAwesomeIcon icon={faRocket} style={{ cursor: "pointer" }} />
-        </Box>
-      </Link>
-      <Link href="/blog" passHref>
-        <Box as="a" flexBasis={"25%"}>
-          <FontAwesomeIcon icon={faFeatherAlt} style={{ cursor: "pointer" }} />
-        </Box>
-      </Link>
-      <Link href="/about" passHref>
-        <Box as="a" flexBasis={"25%"}>
-          <FontAwesomeIcon icon={faUser} style={{ cursor: "pointer" }} />
-        </Box>
-      </Link>
+      <Navigation />
     </MotionFlex>
   );
 };

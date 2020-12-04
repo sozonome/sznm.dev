@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import Card from "../components/Card";
 import MotionFlex from "../components/motion/MotionFlex";
+import MotionBox from "../components/motion/MotionBox";
 
 import { getSortedProjectsData } from "../helpers/projects";
 
@@ -20,9 +21,10 @@ const Home = ({ allProjectsData }) => {
 
 const HeroSection = () => {
   return (
-    <MotionFlex
-      marginY={"2.75rem"}
-      as="section"
+    <MotionBox
+      marginTop={"1rem"}
+      marginBottom={"1.5rem"}
+      display={["inherit", "flex"]}
       variants={{
         before: { opacity: 0, y: 20, transition: { type: "spring" } },
         after: { opacity: 1, y: 0, transition: { type: "spring" } },
@@ -43,17 +45,18 @@ const HeroSection = () => {
       <Box
         verticalAlign="center"
         width={["100%", "80%", "60%"]}
-        paddingX={22}
+        paddingX={[0, 22]}
+        marginTop={[8, 0]}
         alignSelf={["none", "center"]}
       >
         <Heading as="h1" size="xl" paddingBottom={11}>
-          Hello! I'm Nathan,
+          Hello! I'm Nathan.
         </Heading>
-        <Text fontSize="xl">
+        <Text fontSize={["md", "xl"]}>
           Digital crafter specializing in Frontend and Mobile development.
         </Text>
       </Box>
-    </MotionFlex>
+    </MotionBox>
   );
 };
 

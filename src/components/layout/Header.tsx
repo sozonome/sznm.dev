@@ -1,21 +1,27 @@
 import Link from "next/link";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 
+import Navigation from "./Navigation";
 import ThemeToggle from "./ThemeToggle";
 
 import { responsiveWidthProps } from "../../styles/customTheme";
 
 const Header = () => {
   return (
-    <Flex as="header" {...responsiveWidthProps}>
+    <Flex as="header" {...responsiveWidthProps} alignItems="center">
       <Link href="/" passHref>
-        <Text as="a" cursor="pointer" fontSize="3xl">
+        <Text as="a" cursor="pointer" fontSize={["lg", "2xl"]}>
           sznm.dev
         </Text>
       </Link>
-      <Box marginLeft="auto">
+
+      <Flex marginLeft="auto" alignItems="center">
+        <Flex width="10rem" display={["none", "flex"]}>
+          <Navigation />
+        </Flex>
+
         <ThemeToggle />
-      </Box>
+      </Flex>
     </Flex>
   );
 };
