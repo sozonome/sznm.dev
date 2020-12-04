@@ -68,6 +68,8 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
               fontSize="xs"
               color="orange.200"
               fontFamily="Rubik, sans-serif"
+              fontWeight="500"
+              letterSpacing={1.75}
             >
               Featured Project
             </Text>

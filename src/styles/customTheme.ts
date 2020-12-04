@@ -35,6 +35,9 @@ const customTheme = extendTheme({
       },
     },
   },
+  config: {
+    initialColorMode: "dark",
+  },
 });
 
 export const responsiveWidthProps = {
