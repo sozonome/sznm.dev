@@ -1,7 +1,13 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Box, Heading, Text, Button, useColorMode } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Text,
+  Button,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Image from "next/image";
 
 import Card from "../components/Card";
@@ -65,7 +71,8 @@ const HeroSection = () => {
 
 const ProjectsSection = ({ data }) => {
   const router = useRouter();
-  const { colorMode } = useColorMode();
+
+  const buttonBackgroundColor = useColorModeValue("gray.100", "gray.700");
 
   useEffect(() => {
     data
@@ -118,7 +125,7 @@ const ProjectsSection = ({ data }) => {
             width="100%"
             borderRadius={20}
             height={55}
-            backgroundColor={colorMode === "light" ? "gray.100" : "gray.700"}
+            backgroundColor={buttonBackgroundColor}
             _hover={{
               backgroundColor: "gray.300",
               color: "black",
@@ -134,7 +141,7 @@ const ProjectsSection = ({ data }) => {
 };
 
 const RecentPostSection = ({ allPostsData }) => {
-  const { colorMode } = useColorMode();
+  const buttonBackgroundColor = useColorModeValue("gray.100", "gray.700");
 
   return (
     <Box as="section" marginY={24}>
@@ -165,7 +172,7 @@ const RecentPostSection = ({ allPostsData }) => {
           width="100%"
           borderRadius={20}
           height={55}
-          backgroundColor={colorMode === "light" ? "gray.100" : "gray.700"}
+          backgroundColor={buttonBackgroundColor}
           _hover={{
             backgroundColor: "gray.300",
             color: "black",

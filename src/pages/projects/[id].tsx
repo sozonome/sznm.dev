@@ -1,4 +1,4 @@
-import { Box, Button, useColorMode } from "@chakra-ui/react";
+import { Box, Button, useColorModeValue } from "@chakra-ui/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { AiOutlineArrowLeft } from "react-icons/ai";
@@ -15,18 +15,20 @@ type ProjectProps = {
 
 const Project = ({ projectData }: ProjectProps) => {
   const router = useRouter();
-  const { colorMode } = useColorMode();
+
+  const buttonColor = useColorModeValue("gray.300", "gray.600");
 
   return (
     <Box>
       <Head>
         <title>{projectData.title} | sozonome</title>
       </Head>
+
       <Box as="article">
         <Button
           leftIcon={<AiOutlineArrowLeft />}
           size="sm"
-          backgroundColor={colorMode === "light" ? "gray.300" : "gray.600"}
+          backgroundColor={buttonColor}
           marginBottom={22}
           onClick={() => router.push("/projects")}
         >

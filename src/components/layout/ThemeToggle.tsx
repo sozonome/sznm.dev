@@ -1,17 +1,25 @@
-import { Box, IconButton, useColorMode } from "@chakra-ui/react";
+import {
+  Box,
+  IconButton,
+  useColorMode,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { BsMoon } from "react-icons/bs";
 import { FiSun } from "react-icons/fi";
 
 const ThemeToggle = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { toggleColorMode } = useColorMode();
+
+  const toggleIcon = useColorModeValue(<BsMoon />, <FiSun />);
+  const buttonColor = useColorModeValue("gray.400", "gray.900");
 
   return (
     <Box>
       <IconButton
         aria-label="toggle theme mode"
-        icon={colorMode === "light" ? <BsMoon /> : <FiSun />}
+        icon={toggleIcon}
         onClick={toggleColorMode}
-        backgroundColor={colorMode === "light" ? "gray.400" : "gray.900"}
+        backgroundColor={buttonColor}
       />
     </Box>
   );

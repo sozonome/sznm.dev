@@ -6,6 +6,7 @@ import {
   Button,
   Image as ChakraImage,
   useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
@@ -22,13 +23,15 @@ type ProjectDetailWrapperProps = {
 const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
   const { colorMode } = useColorMode();
 
+  const backgroundColor = useColorModeValue("none", "gray.700");
+
   return (
     <MotionBox
       width="100%"
       marginY={22}
       padding={4}
       borderRadius={24}
-      backgroundColor={colorMode === "light" ? "none" : "gray.700"}
+      backgroundColor={backgroundColor}
       variants={{
         before: {
           opacity: 0,

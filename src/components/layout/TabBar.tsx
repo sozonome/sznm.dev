@@ -1,4 +1,4 @@
-import { Flex, useColorMode } from "@chakra-ui/react";
+import { Flex, useColorModeValue } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 import Navigation from "./Navigation";
@@ -6,7 +6,7 @@ import Navigation from "./Navigation";
 const MotionFlex = motion.custom(Flex);
 
 const TabBar = () => {
-  const { colorMode } = useColorMode();
+  const backgroundColor = useColorModeValue("gray.100", "gray.600");
 
   return (
     <MotionFlex
@@ -17,7 +17,7 @@ const TabBar = () => {
       bottom={22}
       borderRadius={20}
       boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.4)"
-      backgroundColor={colorMode === "light" ? "gray.100" : "gray.600"}
+      backgroundColor={backgroundColor}
       padding={22}
       textAlign="center"
       alignItems="center"

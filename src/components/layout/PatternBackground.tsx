@@ -1,18 +1,18 @@
-import { Image, useColorMode } from "@chakra-ui/react";
+import { Image, useColorModeValue } from "@chakra-ui/react";
 
 const PatternBackground = () => {
-  const { colorMode } = useColorMode();
+  const patternImage = useColorModeValue("/bg-light.svg", "bg.svg");
 
   return (
     <>
       <Image
-        src={colorMode === "light" ? "/bg-light.svg" : "/bg.svg"}
+        src={patternImage}
         position="fixed"
         right={["-200px", "-200px", "-200px", "0"]}
         alt="background image pattern top right"
       />
       <Image
-        src={colorMode === "light" ? "/bg-light.svg" : "/bg.svg"}
+        src={patternImage}
         position="fixed"
         left={["-200px", "-200px", "-200px", "0"]}
         bottom="0"
