@@ -31,7 +31,7 @@ const customTheme = extendTheme({
   components: {
     Button: {
       baseStyle: {
-        fontFamily: "Rubik, sans-serif",
+        fontFamily: "Catamaran, sans-serif",
       },
     },
   },

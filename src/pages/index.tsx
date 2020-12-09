@@ -130,7 +130,7 @@ const ProjectsSection = ({ data }) => {
               backgroundColor: "gray.300",
               color: "black",
             }}
-            fontFamily="Rubik, sans-serif"
+            fontFamily="Catamaran, sans-serif"
           >
             see more
           </Button>
@@ -177,7 +177,7 @@ const RecentPostSection = ({ allPostsData }) => {
             backgroundColor: "gray.300",
             color: "black",
           }}
-          fontFamily="Rubik, sans-serif"
+          fontFamily="Catamaran, sans-serif"
         >
           see more
         </Button>

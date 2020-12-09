@@ -54,7 +54,7 @@ const Card = ({ title, img, handleClick }: CardProps) => {
         {img && <Image src={img} width={50} height={50} alt={title} />}
       </Flex>
       <Box flexBasis={["65%", "70%"]}>
-        <Text fontWeight={600} fontSize="lg" fontFamily="Rubik, sans-serif">
+        <Text fontWeight={600} fontSize="lg" fontFamily="Catamaran, sans-serif">
           {title}
         </Text>
       </Box>

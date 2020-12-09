@@ -70,7 +70,7 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
               textTransform="uppercase"
               fontSize="xs"
               color="orange.200"
-              fontFamily="Rubik, sans-serif"
+              fontFamily="Catamaran, sans-serif"
               fontWeight="500"
               letterSpacing={1.75}
             >
