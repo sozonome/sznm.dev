@@ -16,6 +16,7 @@ type OptionalStringFieldsType = keyof typeof OptionalStringFieldKeys;
 enum OptionalBooleanFieldKeys {
   highlight,
   featured,
+  published
 }
 type OptionalBooleanFieldsType = keyof typeof OptionalBooleanFieldKeys;
 

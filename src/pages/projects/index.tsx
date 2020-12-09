@@ -36,14 +36,20 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
       >
         {/* Highlight */}
         {allProjectsData
-          .filter((project) => project.featured && project)
+          .filter(
+            (project) =>
+              project.featured && project.published !== false && project
+          )
           .map((projectData, index) => (
             <ProjectDetailWrapper projectData={projectData} key={index} />
           ))}
 
         {/* Other Projects */}
         {allProjectsData
-          .filter((project) => !project.featured && project)
+          .filter(
+            (project) =>
+              !project.featured && project.published !== false && project
+          )
           .map((projectData, index) => (
             <ProjectDetailWrapper projectData={projectData} key={index} />
           ))}
