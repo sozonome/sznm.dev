@@ -54,7 +54,7 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
       }}
     >
       <Flex flexWrap={"wrap"} alignItems="center" width="100%">
-        <Box alignItems="center" flexBasis={["100%", "20%"]}>
+        <Box flexBasis={["100%", "20%"]} alignItems="center">
           <Box marginBottom={[22, 0]} width={[55, 88]}>
             <Image
               width="100%"
@@ -64,7 +64,7 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
             />
           </Box>
         </Box>
-        <Box flexBasis={["auto", "80%"]} paddingLeft={[0, 22]}>
+        <Box flexBasis={["100%", "80%"]} paddingLeft={[0, 22]}>
           {projectData.featured && (
             <Text
               textTransform="uppercase"

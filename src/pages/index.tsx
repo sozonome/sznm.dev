@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { GetStaticProps } from "next";
 import {
   Box,
   Heading,
@@ -17,8 +18,15 @@ import BlogPostPreview from "../components/blog/BlogPostPreview";
 
 import { getSortedProjectsData } from "../helpers/projects";
 import { getSortedPostsData } from "../helpers/posts";
+import { ProjectType } from "../models/project";
+import { BlogPostType } from "../models/blog";
 
-const Home = ({ allProjectsData, allPostsData }) => {
+type HomeProps = {
+  allProjectsData: Array<ProjectType>;
+  allPostsData: Array<BlogPostType>;
+};
+
+const Home = ({ allProjectsData, allPostsData }: HomeProps) => {
   return (
     <>
       <HeroSection />
@@ -186,9 +194,9 @@ const RecentPostSection = ({ allPostsData }) => {
   );
 };
 
-export const getStaticProps = async () => {
-  const allProjectsData = getSortedProjectsData();
-  const allPostsData = getSortedPostsData();
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const allProjectsData: Array<ProjectType> = getSortedProjectsData();
+  const allPostsData: Array<BlogPostType> = getSortedPostsData();
 
   return {
     props: {
