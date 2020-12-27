@@ -146,6 +146,10 @@ const Links = () => {
           icon={["fab", "medium"]}
         />
         <MotionLinks
+          link={`https://www.producthunt.com/@sozonome/made`}
+          icon={["fab", "product-hunt"]}
+        />
+        <MotionLinks
           link={`mailto:hello@sznm.dev?cc=agustinusnathaniel228@gmail.com`}
           icon={faEnvelope}
         />

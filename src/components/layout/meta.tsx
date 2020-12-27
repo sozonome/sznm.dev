@@ -4,7 +4,7 @@ const Meta = () => {
   return (
     <Head>
       <title>Hello | sozonome</title>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/avataaars.svg" />
       <meta
         name="description"
         content="Agustinus Nathaniel's Dev Site | sozonome"
