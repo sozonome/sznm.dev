@@ -123,7 +123,7 @@ const Links = () => {
   return (
     <MotionBox marginY={4} {...wrapperAnimationProps}>
       <Text fontStyle="italic">1.01 ^365 = 37.7</Text>
-      <MotionFlex fontSize="4xl" {...staggerAnimationProps}>
+      <MotionFlex wrap="wrap" fontSize="4xl" {...staggerAnimationProps}>
         <MotionLinks
           link={`https://github.com/sozonome`}
           icon={["fab", "github"]}
