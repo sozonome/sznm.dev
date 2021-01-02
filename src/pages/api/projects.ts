@@ -1,8 +1,16 @@
+import Cors from "cors";
 import { NextApiRequest, NextApiResponse } from "next";
 
 import { getSortedProjectsData } from "../../helpers/projects";
+import initMiddleware from "../../lib/init-middleware";
 
 import { ProjectType } from "../../models/project";
+
+const cors = initMiddleware(
+  Cors({
+    methods: ["GET"],
+  })
+);
 
 const projects = async (req: NextApiRequest, res: NextApiResponse) => {
   const allProjectsData: Array<ProjectType> = getSortedProjectsData();
@@ -27,6 +35,8 @@ const projects = async (req: NextApiRequest, res: NextApiResponse) => {
       icon: `https://sznm.dev${thumbnail}`,
     })
   );
+
+  await cors(req, res);
 
   res.statusCode = 200;
   res.json(projectList);
