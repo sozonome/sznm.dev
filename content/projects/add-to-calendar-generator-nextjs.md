@@ -7,6 +7,7 @@ date: "2020-10-24"
 thumbnail: "/app_icons/add-to-calendar.svg"
 featured: true
 highlight: true
+sznmApps: true
 appStoreLink:
 playStoreLink:
 stacks:

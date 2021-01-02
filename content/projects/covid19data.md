@@ -7,6 +7,7 @@ date: "2020-05-02"
 thumbnail: "/app_icons/covid-19-data.svg"
 highlight: true
 featured: true
+sznmApps: true
 appStoreLink:
 playStoreLink:
 stacks:

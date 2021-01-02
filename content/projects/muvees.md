@@ -6,6 +6,7 @@ description: Just another movie DB app
 date: "2020-12-29"
 thumbnail: "/app_icons/popcorn.png"
 featured:
+sznmApps: true
 appStoreLink:
 playStoreLink:
 stacks:

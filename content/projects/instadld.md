@@ -6,6 +6,7 @@ date: "2020-11-22"
 thumbnail: "/app_icons/instadld.svg"
 highlight: true
 featured: true
+sznmApps: true
 appStoreLink:
 playStoreLink:
 stacks:
