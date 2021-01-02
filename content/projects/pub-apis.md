@@ -6,6 +6,7 @@ description: Find public APIs for your next projects.
 date: "2020-12-25"
 thumbnail: "/app_icons/pub-apis.svg"
 featured: true
+sznmApps: true
 appStoreLink:
 playStoreLink:
 stacks: 
