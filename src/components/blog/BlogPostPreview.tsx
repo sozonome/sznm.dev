@@ -42,7 +42,12 @@ const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
         <Flex flexWrap={"wrap"} alignItems="center" width="100%">
           <Flex justifyContent="center" alignItems="center" flexBasis={["10%"]}>
             <Box boxSize="60%">
-              <Image src={postData.thumbnail} alt={postData.title} unsized />
+              <Image
+                src={postData.thumbnail}
+                alt={postData.title}
+                width="100%"
+                height="100%"
+              />
             </Box>
           </Flex>
           <Box flexBasis={["90%"]} paddingLeft={[11, 22]}>

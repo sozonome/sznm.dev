@@ -20,7 +20,19 @@ type ProjectDetailWrapperProps = {
   projectData: ProjectType;
 };
 
-const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
+const ProjectDetailWrapper = ({
+  projectData: {
+    title,
+    thumbnail,
+    description,
+    date,
+    featured,
+    stacks,
+    projectLink,
+    playStoreLink,
+    repoLink,
+  },
+}: ProjectDetailWrapperProps) => {
   const { colorMode } = useColorMode();
 
   const backgroundColor = useColorModeValue("none", "gray.700");
@@ -56,16 +68,11 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
       <Flex flexWrap={"wrap"} alignItems="center" width="100%">
         <Box flexBasis={["100%", "20%"]} alignItems="center">
           <Box marginBottom={[22, 0]} width={[55, 88]}>
-            <Image
-              width="100%"
-              height="100%"
-              src={projectData.thumbnail}
-              alt={projectData.title}
-            />
+            <Image width="100%" height="100%" src={thumbnail} alt={title} />
           </Box>
         </Box>
         <Box flexBasis={["100%", "80%"]} paddingLeft={[0, 22]}>
-          {projectData.featured && (
+          {featured && (
             <Text
               textTransform="uppercase"
               fontSize="xs"
@@ -78,18 +85,23 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
             </Text>
           )}
           <Heading size="lg" marginBottom={2}>
-            {projectData.title}
+            {title}
           </Heading>
-          <Text>{projectData.description}</Text>
-          {projectData.stacks && (
+          <Text>{description}</Text>
+          {date && (
+            <Text marginY={4} fontSize="xs">
+              {new Date(date).getFullYear()}
+            </Text>
+          )}
+          {stacks && (
             <Flex marginTop={11}>
-              {projectData.stacks.map((stack, index) => (
+              {stacks.map((stack, index) => (
                 <Box
                   marginRight={3}
                   key={index}
                   style={{ filter: "drop-shadow(0 0 12px rgb(98, 114, 164))" }}
                 >
-                  <ChakraImage
+                  <Image
                     width={30}
                     height={30}
                     src={`/stacks_logo/${colorMode}/${stack}.svg`}
@@ -99,8 +111,8 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
             </Flex>
           )}
           <Flex marginTop={22} flexWrap="wrap">
-            {projectData.projectLink && (
-              <Link href={projectData.projectLink} passHref>
+            {projectLink && (
+              <Link href={projectLink} passHref>
                 <Button
                   backgroundColor={
                     colorMode === "light" ? "orange.200" : "orange.400"
@@ -116,8 +128,8 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
                 </Button>
               </Link>
             )}
-            {projectData.playStoreLink && (
-              <Link href={projectData.playStoreLink} passHref>
+            {playStoreLink && (
+              <Link href={playStoreLink} passHref>
                 <Button
                   backgroundColor="gray.300"
                   marginRight={11}
@@ -132,8 +144,8 @@ const ProjectDetailWrapper = ({ projectData }: ProjectDetailWrapperProps) => {
                 </Button>
               </Link>
             )}
-            {projectData.repoLink && (
-              <Link href={projectData.repoLink} passHref>
+            {repoLink && (
+              <Link href={repoLink} passHref>
                 <Button
                   backgroundColor={
                     colorMode === "light" ? "gray.300" : "gray.700"

@@ -53,7 +53,7 @@ const HeroSection = () => {
         <Image
           width={160}
           height={160}
-          className="glow"
+          // className="glow"
           src="/avataaars.svg"
           alt="sozonome"
         />

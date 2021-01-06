@@ -46,7 +46,7 @@ const BlogPost = ({ postData }: BlogPostProps) => {
 
         <Flex flexBasis={["20%"]}>
           <Box marginLeft="auto" width="60%">
-            <Image src={postData.thumbnail} unsized />
+            <Image src={postData.thumbnail} width="100%" height="100%" />
           </Box>
         </Flex>
       </Flex>
