@@ -2,7 +2,7 @@ import { Heading, Box } from "@chakra-ui/react";
 import Head from "next/head";
 
 import ProjectDetailWrapper from "../../components/projects/ProjectDetailWrapper";
-import MotionBox from "../../components/motion/MotionBox";
+import MotionGrid from "../../components/motion/MotionGrid";
 
 import { getSortedProjectsData } from "../../helpers/projects";
 
@@ -26,13 +26,15 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
           Some projects I worked on previously.
         </Heading>
       </Box>
-      <MotionBox
+      <MotionGrid
         variants={{
           before: {},
           after: { transition: { staggerChildren: 0.06 } },
         }}
+        templateColumns={["repeat(1)", "repeat(1)", "repeat(2,1fr)"]}
         initial="before"
         animate="after"
+        gap={8}
       >
         {/* Highlight */}
         {allProjectsData
@@ -53,7 +55,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
           .map((projectData, index) => (
             <ProjectDetailWrapper projectData={projectData} key={index} />
           ))}
-      </MotionBox>
+      </MotionGrid>
     </Box>
   );
 };

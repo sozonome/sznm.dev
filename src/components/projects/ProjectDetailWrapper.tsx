@@ -4,7 +4,6 @@ import {
   Text,
   Flex,
   Button,
-  Image as ChakraImage,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -35,12 +34,11 @@ const ProjectDetailWrapper = ({
 }: ProjectDetailWrapperProps) => {
   const { colorMode } = useColorMode();
 
-  const backgroundColor = useColorModeValue("none", "gray.700");
+  const backgroundColor = useColorModeValue("none", "gray.600");
 
   return (
     <MotionBox
       width="100%"
-      marginY={22}
       padding={4}
       borderRadius={24}
       backgroundColor={backgroundColor}
@@ -66,12 +64,16 @@ const ProjectDetailWrapper = ({
       }}
     >
       <Flex flexWrap={"wrap"} alignItems="center" width="100%">
-        <Box flexBasis={["100%", "20%"]} alignItems="center">
-          <Box marginBottom={[22, 0]} width={[55, 88]}>
+        <Box flexBasis={["100%", "20%", "100%"]} alignItems="center">
+          <Box
+            marginX={["inherit", "auto", "inherit"]}
+            marginBottom={[22, 0, 22]}
+            width={[55, 88, 55]}
+          >
             <Image width="100%" height="100%" src={thumbnail} alt={title} />
           </Box>
         </Box>
-        <Box flexBasis={["100%", "80%"]} paddingLeft={[0, 22]}>
+        <Box flexBasis={["100%", "80%", "100%"]}>
           {featured && (
             <Text
               textTransform="uppercase"
@@ -94,7 +96,7 @@ const ProjectDetailWrapper = ({
             </Text>
           )}
           {stacks && (
-            <Flex marginTop={11}>
+            <Flex marginTop={11} alignItems="center">
               {stacks.map((stack, index) => (
                 <Box
                   marginRight={3}
@@ -148,7 +150,7 @@ const ProjectDetailWrapper = ({
               <Link href={repoLink} passHref>
                 <Button
                   backgroundColor={
-                    colorMode === "light" ? "gray.300" : "gray.700"
+                    colorMode === "light" ? "gray.300" : "gray.600"
                   }
                   _hover={{ backgroundColor: "gray.300", color: "black" }}
                 >

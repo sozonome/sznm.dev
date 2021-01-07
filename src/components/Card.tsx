@@ -11,7 +11,7 @@ type CardProps = {
 const MotionCard = motion.custom(Box);
 
 const Card = ({ title, img, handleClick }: CardProps) => {
-  const backgroundColor = useColorModeValue("gray.200", "gray.700");
+  const backgroundColor = useColorModeValue("gray.200", "gray.600");
 
   return (
     <MotionCard

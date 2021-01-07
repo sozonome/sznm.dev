@@ -80,7 +80,7 @@ const HeroSection = () => {
 const ProjectsSection = ({ data }) => {
   const router = useRouter();
 
-  const buttonBackgroundColor = useColorModeValue("gray.100", "gray.700");
+  const buttonBackgroundColor = useColorModeValue("gray.100", "gray.600");
 
   useEffect(() => {
     data
@@ -149,7 +149,7 @@ const ProjectsSection = ({ data }) => {
 };
 
 const RecentPostSection = ({ allPostsData }) => {
-  const buttonBackgroundColor = useColorModeValue("gray.100", "gray.700");
+  const buttonBackgroundColor = useColorModeValue("gray.100", "gray.600");
 
   return (
     <Box as="section" marginY={24}>

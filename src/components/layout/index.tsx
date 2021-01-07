@@ -13,8 +13,8 @@ type LayoutProps = {
 };
 
 const Layout = ({ children }: LayoutProps) => {
-  const backgroundColor = useColorModeValue("gray.50", "gray.900");
-  const textColor = useColorModeValue("gray.900", "white");
+  const backgroundColor = useColorModeValue("gray.50", "gray.800");
+  const textColor = useColorModeValue("gray.900", "gray.200");
 
   return (
     <Box

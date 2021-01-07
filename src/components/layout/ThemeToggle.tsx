@@ -11,7 +11,7 @@ const ThemeToggle = () => {
   const { toggleColorMode } = useColorMode();
 
   const toggleIcon = useColorModeValue(<BsMoon />, <FiSun />);
-  const buttonColor = useColorModeValue("gray.400", "gray.900");
+  const buttonColor = useColorModeValue("gray.400", "gray.800");
 
   return (
     <Box>

@@ -6,7 +6,7 @@ import Navigation from "./Navigation";
 const MotionFlex = motion.custom(Flex);
 
 const TabBar = () => {
-  const backgroundColor = useColorModeValue("gray.100", "gray.600");
+  const backgroundColor = useColorModeValue("gray.100", "gray.500");
 
   return (
     <MotionFlex
