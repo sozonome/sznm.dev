@@ -111,7 +111,6 @@ export const renderers = {
             as={head.as}
             size={head.size}
             marginY={4 + (7 - level) * 0.5}
-            lineHeight={`${(7 - level) * 0.7}rem`}
             id={children[0].value.split(" ").join("-").toLowerCase()}
           >
             {children[0].value}
