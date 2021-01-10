@@ -1,7 +1,7 @@
 import { Image, useColorModeValue } from "@chakra-ui/react";
 
 const PatternBackground = () => {
-  const patternImage = useColorModeValue("/bg-light.svg", "bg.svg");
+  const patternImage = useColorModeValue("/bg-light.svg", "/bg.svg");
 
   return (
     <>
