@@ -112,6 +112,8 @@ export const renderers = {
             size={head.size}
             marginY={4 + (7 - level) * 0.5}
             id={children[0].value.split(" ").join("-").toLowerCase()}
+            paddingTop={24}
+            marginTop={-24}
           >
             {children[0].value}
           </Heading>

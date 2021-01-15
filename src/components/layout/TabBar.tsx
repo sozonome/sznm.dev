@@ -6,7 +6,10 @@ import Navigation from "./Navigation";
 const MotionFlex = motion.custom(Flex);
 
 const TabBar = () => {
-  const backgroundColor = useColorModeValue("gray.100", "gray.500");
+  const backgroundColor = useColorModeValue(
+    "rgba(237, 242, 247, 0.8)",
+    "rgba(45, 55, 72, 0.8)"
+  );
 
   return (
     <MotionFlex
@@ -16,8 +19,9 @@ const TabBar = () => {
       height={["6rem", "8rem"]}
       bottom={22}
       borderRadius={20}
-      boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.4)"
+      // boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.4)"
       backgroundColor={backgroundColor}
+      style={{ backdropFilter: "blur(6px)" }}
       padding={22}
       textAlign="center"
       alignItems="center"

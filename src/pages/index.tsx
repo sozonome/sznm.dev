@@ -28,50 +28,52 @@ type HomeProps = {
 
 const Home = ({ allProjectsData, allPostsData }: HomeProps) => {
   return (
-    <>
+    <Box marginTop={-24}>
       <HeroSection />
       <ProjectsSection data={allProjectsData} />
       <RecentPostSection allPostsData={allPostsData} />
-    </>
+    </Box>
   );
 };
 
 const HeroSection = () => {
   return (
     <MotionBox
-      marginTop={"1rem"}
-      marginBottom={"1.5rem"}
-      display={["inherit", "flex"]}
       variants={{
         before: { opacity: 0, y: 20, transition: { type: "spring" } },
         after: { opacity: 1, y: 0, transition: { type: "spring" } },
       }}
       initial="before"
       animate="after"
+      height="90vh"
+      alignItems="center"
+      display="grid"
     >
-      <Box boxSize={[100, 160]}>
-        <Image
-          width={160}
-          height={160}
-          // className="glow"
-          src="/avataaars.svg"
-          alt="sozonome"
-        />
-      </Box>
+      <Box display={["inherit", "flex"]}>
+        <Box boxSize={[100, 160]}>
+          <Image
+            width={160}
+            height={160}
+            // className="glow"
+            src="/avataaars.svg"
+            alt="sozonome"
+          />
+        </Box>
 
-      <Box
-        verticalAlign="center"
-        width={["100%", "80%", "60%"]}
-        paddingX={[0, 22]}
-        marginTop={[8, 0]}
-        alignSelf={["none", "center"]}
-      >
-        <Heading as="h1" size="xl" paddingBottom={11}>
-          Hello! I'm Nathan.
-        </Heading>
-        <Text fontSize={["md", "xl"]}>
-          Digital crafter specializing in Frontend and Mobile development.
-        </Text>
+        <Box
+          verticalAlign="center"
+          width={["100%", "80%", "60%"]}
+          paddingX={[0, 22]}
+          marginTop={[8, 0]}
+          alignSelf={["none", "center"]}
+        >
+          <Heading as="h1" size="xl" paddingBottom={11}>
+            Hello! I'm Nathan.
+          </Heading>
+          <Text fontSize={["md", "xl"]}>
+            Digital crafter specializing in Frontend and Mobile development.
+          </Text>
+        </Box>
       </Box>
     </MotionBox>
   );
@@ -91,7 +93,7 @@ const ProjectsSection = ({ data }) => {
   });
 
   return (
-    <Box as="section" marginY={16}>
+    <Box as="section" marginBottom={16}>
       <Box>
         <Box>
           <Link href="/projects">
@@ -152,7 +154,7 @@ const RecentPostSection = ({ allPostsData }) => {
   const buttonBackgroundColor = useColorModeValue("gray.100", "gray.600");
 
   return (
-    <Box as="section" marginY={24}>
+    <Box as="section">
       <Heading size="xl" marginBottom={2}>
         Recent Posts
       </Heading>
