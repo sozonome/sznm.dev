@@ -15,7 +15,7 @@ const Page404 = () => {
   const buttonBackgroundColor = useColorModeValue("gray.300", "gray.500");
 
   return (
-    <>
+    <Box>
       <MotionBox
         width={["100%", "70%", "60%", "60%"]}
         margin="0 auto"
@@ -43,7 +43,7 @@ const Page404 = () => {
           </Link>
         </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 

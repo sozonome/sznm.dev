@@ -23,16 +23,17 @@ const Layout = ({ children }: LayoutProps) => {
       paddingBottom={[160, 20]}
       minHeight="100vh"
       transition="0.4s ease-out"
+      paddingY={24}
     >
-      <PatternBackground />
+      {/* <PatternBackground /> */}
       <Meta />
+      <Header />
       <Box
         maxWidth={["100vw", "100vw", "85vw", "800px"]}
         position="relative"
         zIndex={1}
         margin="0 auto"
       >
-        <Header />
         <Box as="main" {...responsiveWidthProps}>
           {children}
         </Box>
