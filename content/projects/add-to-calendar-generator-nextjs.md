@@ -8,7 +8,7 @@ icon: "/app_icons/add-to-calendar.svg"
 thumbnail: "/app_preview/add-to-calendar.png"
 thumbnailDark: "/app_preview/add-to-calendar-dark.png"
 featured: true
-highlight: true
+# highlight: true
 sznmApps: true
 appStoreLink:
 playStoreLink:

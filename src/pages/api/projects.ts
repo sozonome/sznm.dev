@@ -28,11 +28,11 @@ const projects = async (req: NextApiRequest, res: NextApiResponse) => {
     });
 
   const projectList = sznmAppsProjects.map(
-    ({ title, description, projectLink, thumbnail }) => ({
+    ({ title, description, projectLink, icon }) => ({
       name: title,
       description,
       url: projectLink,
-      icon: `https://sznm.dev${thumbnail}`,
+      icon: `https://sznm.dev${icon}`,
     })
   );
 
