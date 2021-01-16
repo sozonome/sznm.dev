@@ -1,34 +1,51 @@
-import { Heading, Box, Text, Button } from "@chakra-ui/react";
+import {
+  Heading,
+  Box,
+  Text,
+  Button,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Head from "next/head";
-import Link from "next/link";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 
-import MotionGrid from "../../components/motion/MotionGrid";
 import ProjectDetailWrapper from "../../components/projects/ProjectDetailWrapper";
+import MotionGrid from "../../components/motion/MotionGrid";
 
 import { getSortedProjectsData } from "../../helpers/projects";
 
 import { ProjectType } from "../../models/project";
+import Link from "next/link";
 
 type ProjectsProps = {
   allProjectsData: Array<ProjectType>;
 };
 
 const Projects = ({ allProjectsData }: ProjectsProps) => {
+  const buttonColor = useColorModeValue("gray.300", "gray.600");
+
   return (
     <Box>
       <Head>
-        <title>Projects | sozonome</title>
+        <title>Projects - Other | sozonome</title>
       </Head>
-
-      <Box marginBottom={8}>
+      <Link href="/projects">
+        <Button
+          leftIcon={<AiOutlineArrowLeft />}
+          size="sm"
+          backgroundColor={buttonColor}
+          marginBottom={22}
+        >
+          projects
+        </Button>
+      </Link>
+      <Box marginBottom={22}>
         <Heading as="h1" size="xl" marginBottom={2}>
-          Projects
+          Other Projects
         </Heading>
         <Text as="p" size="sm" fontWeight="normal">
-          Some projects I worked on previously.
+          Other projects I worked on previously.
         </Text>
       </Box>
-
       <MotionGrid
         variants={{
           before: {},
@@ -38,22 +55,17 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
         initial="before"
         animate="after"
         gap={8}
-        marginBottom={8}
       >
-        {/* Highlight */}
+        {/* Other Projects */}
         {allProjectsData
           .filter(
             (project) =>
-              project.featured && project.published !== false && project
+              !project.featured && project.published !== false && project
           )
           .map((projectData, index) => (
             <ProjectDetailWrapper projectData={projectData} key={index} />
           ))}
       </MotionGrid>
-
-      <Link href="/projects/other">
-        <Button isFullWidth>Other Projects</Button>
-      </Link>
     </Box>
   );
 };

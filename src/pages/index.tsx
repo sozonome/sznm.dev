@@ -11,8 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 
-import Card from "../components/Card";
-import MotionFlex from "../components/motion/MotionFlex";
+import Card from "../components/projects/Card";
 import MotionBox from "../components/motion/MotionBox";
 import BlogPostPreview from "../components/blog/BlogPostPreview";
 
@@ -117,19 +116,13 @@ const ProjectsSection = ({ data }: { data: Array<ProjectType> }) => {
           animate="after"
         >
           {data
-            .filter((project) => project.highlight && project)
-            .map(({ id, title, icon }, index) => {
-              return (
-                <Card
-                  title={title}
-                  handleClick={() =>
-                    router.push("/projects/[id]", `/projects/${id}`)
-                  }
-                  img={icon}
-                  key={index}
-                />
-              );
-            })}
+            .filter(
+              (unfilteredProject) =>
+                unfilteredProject.highlight && unfilteredProject
+            )
+            .map((project, index) => (
+              <Card project={project} key={index} />
+            ))}
         </MotionGrid>
 
         <Link href="/projects" passHref>

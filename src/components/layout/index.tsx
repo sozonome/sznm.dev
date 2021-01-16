@@ -4,7 +4,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Meta from "./meta";
 import TabBar from "./TabBar";
-import PatternBackground from "./PatternBackground";
 
 import { responsiveWidthProps } from "../../styles/customTheme";
 
@@ -25,7 +24,6 @@ const Layout = ({ children }: LayoutProps) => {
       transition="0.4s ease-out"
       paddingY={24}
     >
-      {/* <PatternBackground /> */}
       <Meta />
       <Header />
       <Box
