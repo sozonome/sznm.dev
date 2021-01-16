@@ -4,7 +4,6 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 
-import AccessibleLink from "../components/AccessibleLink";
 import MotionBox from "../components/motion/MotionBox";
 import MotionFlex from "../components/motion/MotionFlex";
 
@@ -54,14 +53,11 @@ const AboutContent = () => {
       <Text {...textProps}>
         I like exploring useful and fun tech products (surfing around
         ProductHunt), traveling, and{" "}
-        <AccessibleLink
-          href="https://instagram.com/agustinusnathaniel"
-          isExternal
-        >
+        <Link href="https://instagram.com/agustinusnathaniel" isExternal>
           <Text as="span" fontWeight={500}>
             capture moments.
           </Text>
-        </AccessibleLink>
+        </Link>
       </Text>
     </MotionBox>
   );

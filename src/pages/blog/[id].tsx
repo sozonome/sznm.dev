@@ -1,11 +1,10 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 
 import { renderers } from "../../components/blog/renderers";
 import MotionBox from "../../components/motion/MotionBox";
-import AccessibleLink from "../../components/AccessibleLink";
 
 import { getAllPostIds, getPostData } from "../../helpers/posts";
 import { dateFormatLong } from "../../helpers/dateFormat";
@@ -37,9 +36,9 @@ const BlogPost = ({ postData }: BlogPostProps) => {
           <Heading size="2xl" marginBottom={8}>
             {postData.title}
           </Heading>
-          <AccessibleLink href="/about">
+          <Link href="/about" isExternal>
             <Text>Agustinus Nathaniel</Text>
-          </AccessibleLink>
+          </Link>
 
           <Text>{dateFormatLong(postData.date)}</Text>
         </Box>
