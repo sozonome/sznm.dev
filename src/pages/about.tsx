@@ -125,6 +125,10 @@ const Links = () => {
           icon={["fab", "github"]}
         />
         <MotionLinks
+          link={`https://linkedin.com/in/agustinusnathaniel`}
+          icon={["fab", "linkedin"]}
+        />
+        <MotionLinks
           link={`https://twitter.com/sozonome`}
           icon={["fab", "twitter"]}
         />
