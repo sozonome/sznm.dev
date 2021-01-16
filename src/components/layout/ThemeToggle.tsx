@@ -11,7 +11,6 @@ const ThemeToggle = () => {
   const { toggleColorMode } = useColorMode();
 
   const toggleIcon = useColorModeValue(<BsMoon />, <FiSun />);
-  const buttonColor = useColorModeValue("gray.400", "gray.800");
 
   return (
     <Box>
@@ -19,7 +18,7 @@ const ThemeToggle = () => {
         aria-label="toggle theme mode"
         icon={toggleIcon}
         onClick={toggleColorMode}
-        backgroundColor={buttonColor}
+        backgroundColor="transparent"
       />
     </Box>
   );

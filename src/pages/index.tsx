@@ -20,6 +20,7 @@ import { getSortedProjectsData } from "../helpers/projects";
 import { getSortedPostsData } from "../helpers/posts";
 import { ProjectType } from "../models/project";
 import { BlogPostType } from "../models/blog";
+import MotionGrid from "../components/motion/MotionGrid";
 
 type HomeProps = {
   allProjectsData: Array<ProjectType>;
@@ -79,7 +80,7 @@ const HeroSection = () => {
   );
 };
 
-const ProjectsSection = ({ data }) => {
+const ProjectsSection = ({ data }: { data: Array<ProjectType> }) => {
   const router = useRouter();
 
   const buttonBackgroundColor = useColorModeValue("gray.100", "gray.600");
@@ -104,9 +105,10 @@ const ProjectsSection = ({ data }) => {
           <Text>Some notable projects I've worked on previously.</Text>
         </Box>
 
-        <MotionFlex
-          wrap="wrap"
-          marginTop={22}
+        <MotionGrid
+          gap={8}
+          templateColumns={["repeat(1)", "repeat(2, 1fr)"]}
+          marginY={8}
           variants={{
             before: {},
             after: { transition: { staggerChildren: 0.06 } },
@@ -116,19 +118,19 @@ const ProjectsSection = ({ data }) => {
         >
           {data
             .filter((project) => project.highlight && project)
-            .map(({ id, title, thumbnail }, index) => {
+            .map(({ id, title, icon }, index) => {
               return (
                 <Card
                   title={title}
                   handleClick={() =>
                     router.push("/projects/[id]", `/projects/${id}`)
                   }
-                  img={thumbnail}
+                  img={icon}
                   key={index}
                 />
               );
             })}
-        </MotionFlex>
+        </MotionGrid>
 
         <Link href="/projects" passHref>
           <Button

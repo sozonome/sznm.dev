@@ -1,6 +1,7 @@
 import { Box, Text, Flex, useColorModeValue } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import Image from "next/image";
+
+import MotionBox from "./motion/MotionBox";
 
 type CardProps = {
   title: string;
@@ -8,27 +9,18 @@ type CardProps = {
   handleClick?: () => void;
 };
 
-const MotionCard = motion.custom(Box);
-
 const Card = ({ title, img, handleClick }: CardProps) => {
   const backgroundColor = useColorModeValue("gray.200", "gray.600");
 
   return (
-    <MotionCard
+    <MotionBox
       //chakra props
-      display="flex"
-      width={["100%", "47%"]}
-      height={120}
       backgroundColor={backgroundColor}
       boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.1);"
-      alignItems="center"
       borderRadius={20}
       cursor={"pointer"}
-      _even={{ marginLeft: [0, "5%"] }}
-      marginBottom={"5%"}
       onClick={handleClick}
       //motion API
-      whileHover={{ scale: 1.05 }}
       variants={{
         before: {
           opacity: 0,
@@ -50,15 +42,23 @@ const Card = ({ title, img, handleClick }: CardProps) => {
         },
       }}
     >
-      <Flex flexBasis={["35%", "30%"]} justifyContent="center">
-        {img && <Image src={img} width={50} height={50} alt={title} />}
+      <Flex alignItems="center" height={120}>
+        <Flex flexBasis={["35%", "30%"]} justifyContent="center">
+          {img && <Image src={img} width={50} height={50} alt={title} />}
+        </Flex>
+        <Box flexBasis={["65%", "70%"]}>
+          <Text
+            fontWeight={600}
+            fontSize="lg"
+            fontFamily="Catamaran, sans-serif"
+          >
+            {title}
+          </Text>
+        </Box>
       </Flex>
-      <Box flexBasis={["65%", "70%"]}>
-        <Text fontWeight={600} fontSize="lg" fontFamily="Catamaran, sans-serif">
-          {title}
-        </Text>
-      </Box>
-    </MotionCard>
+
+      <Box>{/* <Image /> */}</Box>
+    </MotionBox>
   );
 };
 
