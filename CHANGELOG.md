@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/sozonome/sznm.dev/compare/v1.0.0...v1.1.0) (2021-01-16)
+
+
+### Features
+
+* **components:** add project thumbnail in project Card ([bac9f86](https://github.com/sozonome/sznm.dev/commit/bac9f86ca2ccd9848bdefda8af30e17e2ecbe109))
+* enable cors ([ad11cfb](https://github.com/sozonome/sznm.dev/commit/ad11cfb326cbb65d4c0ca62c0116cc3f2c7958ba))
+* **api:** serve featured apps info ([#18](https://github.com/sozonome/sznm.dev/issues/18)) ([584d3ac](https://github.com/sozonome/sznm.dev/commit/584d3acf1bd24c1d1162d5ccd3fe641e4149a737))
+* **pages:** add post section to home page ([4a57b14](https://github.com/sozonome/sznm.dev/commit/4a57b14729379b19847224b5df47bb8c4f85d628))
+
+
+### Bug Fixes
+
+* dark patternbackground src ([b34a373](https://github.com/sozonome/sznm.dev/commit/b34a373b072ccdc9c4a55a2522a728ba9eda4dc0))
+
 ## 1.0.0 (2020-11-17)
 
 
