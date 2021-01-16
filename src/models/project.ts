@@ -1,6 +1,7 @@
 enum MandatoryStringFieldKeys {
   title,
   description,
+  id,
 }
 type MandatoryStringFieldsType = keyof typeof MandatoryStringFieldKeys;
 
@@ -9,7 +10,7 @@ enum OptionalStringFieldKeys {
   repoLink,
   appStoreLink,
   playStoreLink,
-  thumbnail,
+  icon,
   date,
 }
 type OptionalStringFieldsType = keyof typeof OptionalStringFieldKeys;

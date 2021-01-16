@@ -22,7 +22,7 @@ type ProjectDetailWrapperProps = {
 const ProjectDetailWrapper = ({
   projectData: {
     title,
-    thumbnail,
+    icon,
     description,
     date,
     featured,
@@ -70,7 +70,7 @@ const ProjectDetailWrapper = ({
             marginBottom={[22, 0, 22]}
             width={[55, 88, 55]}
           >
-            <Image width="100%" height="100%" src={thumbnail} alt={title} />
+            <Image width="100%" height="100%" src={icon} alt={title} />
           </Box>
         </Box>
         <Box flexBasis={["100%", "80%", "100%"]}>
