@@ -1,8 +1,3 @@
-/**
- * @todo
- * [ ] re-pick colors to support a11y
- */
-
 import { theme, extendTheme } from "@chakra-ui/react";
 
 const customTheme = extendTheme({
@@ -32,6 +27,7 @@ const customTheme = extendTheme({
     Button: {
       baseStyle: {
         fontFamily: "Catamaran, sans-serif",
+        borderRadius: 16,
       },
     },
   },

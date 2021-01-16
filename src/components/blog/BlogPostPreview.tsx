@@ -1,8 +1,8 @@
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 import MotionBox from "../motion/MotionBox";
-import AccessibleLink from "../AccessibleLink";
 
 import { dateFormatLong } from "../../helpers/dateFormat";
 
@@ -38,8 +38,8 @@ const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
         },
       }}
     >
-      <AccessibleLink href={`/blog/${postData.id}`}>
-        <Flex flexWrap={"wrap"} alignItems="center" width="100%">
+      <Link href={`/blog/${postData.id}`} passHref>
+        <Flex as="a" flexWrap={"wrap"} alignItems="center" width="100%">
           <Flex justifyContent="center" alignItems="center" flexBasis={["10%"]}>
             <Box boxSize="60%">
               <Image
@@ -57,7 +57,7 @@ const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
             <Text>{dateFormatLong(postData.date)}</Text>
           </Box>
         </Flex>
-      </AccessibleLink>
+      </Link>
     </MotionBox>
   );
 };

@@ -1,6 +1,6 @@
 import { Box, Button, useColorModeValue } from "@chakra-ui/react";
 import Head from "next/head";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import ProjectDetailWrapper from "../../components/projects/ProjectDetailWrapper";
@@ -14,8 +14,6 @@ type ProjectProps = {
 };
 
 const Project = ({ projectData }: ProjectProps) => {
-  const router = useRouter();
-
   const buttonColor = useColorModeValue("gray.300", "gray.600");
 
   return (
@@ -25,15 +23,16 @@ const Project = ({ projectData }: ProjectProps) => {
       </Head>
 
       <Box as="article">
-        <Button
-          leftIcon={<AiOutlineArrowLeft />}
-          size="sm"
-          backgroundColor={buttonColor}
-          marginBottom={22}
-          onClick={() => router.push("/projects")}
-        >
-          projects
-        </Button>
+        <Link href="/projects">
+          <Button
+            leftIcon={<AiOutlineArrowLeft />}
+            size="sm"
+            backgroundColor={buttonColor}
+            marginBottom={22}
+          >
+            projects
+          </Button>
+        </Link>
         <ProjectDetailWrapper projectData={projectData} />
       </Box>
     </Box>

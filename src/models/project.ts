@@ -11,6 +11,8 @@ enum OptionalStringFieldKeys {
   appStoreLink,
   playStoreLink,
   icon,
+  thumbnail,
+  thumbnailDark,
   date,
 }
 type OptionalStringFieldsType = keyof typeof OptionalStringFieldKeys;

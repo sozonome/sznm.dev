@@ -25,7 +25,6 @@ const ProjectDetailWrapper = ({
     icon,
     description,
     date,
-    featured,
     stacks,
     projectLink,
     playStoreLink,
@@ -34,7 +33,7 @@ const ProjectDetailWrapper = ({
 }: ProjectDetailWrapperProps) => {
   const { colorMode } = useColorMode();
 
-  const backgroundColor = useColorModeValue("none", "gray.600");
+  const backgroundColor = useColorModeValue("gray.200", "gray.600");
 
   return (
     <MotionBox
@@ -63,8 +62,12 @@ const ProjectDetailWrapper = ({
         },
       }}
     >
-      <Flex flexWrap={"wrap"} alignItems="center" width="100%">
-        <Box flexBasis={["100%", "20%", "100%"]} alignItems="center">
+      <Flex wrap="wrap" alignItems="center" width="100%" height="100%">
+        <Box
+          flexBasis={["100%", "20%", "100%"]}
+          alignItems="center"
+          height="20%"
+        >
           <Box
             marginX={["inherit", "auto", "inherit"]}
             marginBottom={[22, 0, 22]}
@@ -73,19 +76,7 @@ const ProjectDetailWrapper = ({
             <Image width="100%" height="100%" src={icon} alt={title} />
           </Box>
         </Box>
-        <Box flexBasis={["100%", "80%", "100%"]}>
-          {featured && (
-            <Text
-              textTransform="uppercase"
-              fontSize="xs"
-              color="orange.200"
-              fontFamily="Catamaran, sans-serif"
-              fontWeight="500"
-              letterSpacing={1.75}
-            >
-              Featured Project
-            </Text>
-          )}
+        <Box flexBasis={["100%", "80%", "100%"]} height="60%">
           <Heading size="lg" marginBottom={2}>
             {title}
           </Heading>
@@ -112,54 +103,54 @@ const ProjectDetailWrapper = ({
               ))}
             </Flex>
           )}
-          <Flex marginTop={22} flexWrap="wrap">
-            {projectLink && (
-              <Link href={projectLink} passHref>
-                <Button
-                  backgroundColor={
-                    colorMode === "light" ? "orange.200" : "orange.400"
-                  }
-                  fontWeight="semibold"
-                  marginRight={11}
-                  _hover={{
-                    backgroundColor: "orange.200",
-                    color: "black",
-                  }}
-                >
-                  Visit
-                </Button>
-              </Link>
-            )}
-            {playStoreLink && (
-              <Link href={playStoreLink} passHref>
-                <Button
-                  backgroundColor="gray.300"
-                  marginRight={11}
-                  _hover={{ backgroundColor: "white", color: "black" }}
-                  color={colorMode === "light" ? "inherit" : "gray.600"}
-                >
-                  <FontAwesomeIcon
-                    icon={["fab", "google-play"]}
-                    style={{ marginRight: 11 }}
-                  />
-                  Play Store
-                </Button>
-              </Link>
-            )}
-            {repoLink && (
-              <Link href={repoLink} passHref>
-                <Button
-                  backgroundColor={
-                    colorMode === "light" ? "gray.300" : "gray.600"
-                  }
-                  _hover={{ backgroundColor: "gray.300", color: "black" }}
-                >
-                  Repo
-                </Button>
-              </Link>
-            )}
-          </Flex>
         </Box>
+        <Flex marginTop={22} flexWrap="wrap" alignSelf="flex-end">
+          {projectLink && (
+            <Link href={projectLink} passHref>
+              <Button
+                backgroundColor={
+                  colorMode === "light" ? "orange.200" : "orange.400"
+                }
+                fontWeight="semibold"
+                marginRight={11}
+                _hover={{
+                  backgroundColor: "orange.200",
+                  color: "black",
+                }}
+              >
+                Visit
+              </Button>
+            </Link>
+          )}
+          {playStoreLink && (
+            <Link href={playStoreLink} passHref>
+              <Button
+                backgroundColor="gray.300"
+                marginRight={11}
+                _hover={{ backgroundColor: "white", color: "black" }}
+                color={colorMode === "light" ? "inherit" : "gray.600"}
+              >
+                <FontAwesomeIcon
+                  icon={["fab", "google-play"]}
+                  style={{ marginRight: 11 }}
+                />
+                Play Store
+              </Button>
+            </Link>
+          )}
+          {repoLink && (
+            <Link href={repoLink} passHref>
+              <Button
+                backgroundColor={
+                  colorMode === "light" ? "gray.300" : "gray.600"
+                }
+                _hover={{ backgroundColor: "gray.300", color: "black" }}
+              >
+                Repo
+              </Button>
+            </Link>
+          )}
+        </Flex>
       </Flex>
     </MotionBox>
   );
