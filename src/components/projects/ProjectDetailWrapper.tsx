@@ -76,7 +76,10 @@ const ProjectDetailWrapper = ({
             <Image width="100%" height="100%" src={icon} alt={title} />
           </Box>
         </Box>
-        <Box flexBasis={["100%", "80%", "100%"]} height="60%">
+        <Box
+          flexBasis={["100%", "80%", "100%"]}
+          height={projectLink || playStoreLink || repoLink ? "60%" : "80%"}
+        >
           <Heading size="lg" marginBottom={2}>
             {title}
           </Heading>
