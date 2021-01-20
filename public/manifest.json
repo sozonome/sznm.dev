@@ -1,0 +1,19 @@
+{
+  "short_name": "sznm",
+  "name": "sznm.dev",
+  "lang": "en",
+  "start_url": "/",
+  "background_color": "#444444",
+  "theme_color": "#444444",
+  "dir": "ltr",
+  "display": "standalone",
+  "orientation": "portrait",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/avataaars.svg",
+      "purpose": "maskable any",
+      "sizes": "48x48 72x72 96x96 128x128 256x256"
+    }
+  ]
+}
