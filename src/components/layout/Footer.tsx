@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <Box as="footer" width="full" marginBottom={12} {...responsiveWidthProps}>
       <Text fontSize="sm">
-        2020 - 2021 |{" "}
+        2020 - {new Date().getFullYear()} |{" "}
         <Link
           href="https://agustinusnathaniel.com"
           target="_blank"
