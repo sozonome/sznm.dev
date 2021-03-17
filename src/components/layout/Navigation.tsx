@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import {
   faFeatherAlt,
@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 type NavItemProps = {
   href: string;
@@ -15,12 +16,12 @@ type NavItemProps = {
 };
 
 const NavItem = ({ href, icon }: NavItemProps) => {
+  const router = useRouter();
+
   return (
-    <Link href={href} passHref>
-      <Box as="a" flexBasis={"25%"}>
-        <FontAwesomeIcon icon={icon} style={{ cursor: "pointer" }} />
-      </Box>
-    </Link>
+    <Button variant="ghost" flexBasis={"25%"} fontSize={["3xl", "md"]} onClick={() => router.push(href)}>
+      <FontAwesomeIcon icon={icon} style={{ cursor: "pointer" }} />
+    </Button>
   );
 };
 
