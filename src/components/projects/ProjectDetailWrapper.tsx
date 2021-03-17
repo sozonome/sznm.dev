@@ -101,6 +101,7 @@ const ProjectDetailWrapper = ({
                     width={30}
                     height={30}
                     src={`/stacks_logo/${colorMode}/${stack}.svg`}
+                    alt={stack}
                   />
                 </Box>
               ))}

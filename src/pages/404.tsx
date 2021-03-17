@@ -22,7 +22,7 @@ const Page404 = () => {
         animate={{ y: 20 }}
         transition={{ repeat: Infinity, duration: 2, repeatType: "reverse" }}
       >
-        <Image src="/404 Error-rafiki.svg" />
+        <Image src="/404 Error-rafiki.svg" alt="Error404" />
       </MotionBox>
       <Text textAlign="center" fontSize="xs">
         <ChakraLink href="https://stories.freepik.com/web" isExternal>

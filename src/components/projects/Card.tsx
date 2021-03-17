@@ -72,6 +72,7 @@ const Card = ({
               objectFit="cover"
               objectPosition="50% 0"
               src={thumbnailUrl}
+              alt={`${title}-thumbnail`}
             />
           </Box>
         )}
