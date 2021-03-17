@@ -14,12 +14,8 @@ enum OptionalFieldKeys {
 }
 type OptionalFieldsType = keyof typeof OptionalFieldKeys;
 
-export type BlogPostType = {
-  [key in MandatoryFieldsType]: string;
-} &
-  {
-    [key in OptionalFieldsType]?: string;
-  } & {
+export type BlogPostType = Record<MandatoryFieldsType, string> &
+  Partial<Record<OptionalFieldsType, string>> & {
     published: boolean;
     contentHtml: any;
     rawContent: any;
