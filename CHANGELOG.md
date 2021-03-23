@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/sozonome/sznm.dev/compare/v1.1.0...v1.2.0) (2021-03-23)
+
+
+### Features
+
+* **accessibility:** add image alts, html lang ([1da83aa](https://github.com/sozonome/sznm.dev/commit/1da83aa9f34c5e62a516d6889e4d7b9ab76a44a3))
+* **projects:** :art: remove animations, templateColumns ([e761384](https://github.com/sozonome/sznm.dev/commit/e761384fddf8fa05ed61eb7c4e287a90a5b486cb))
+
 ## [1.1.0](https://github.com/sozonome/sznm.dev/compare/v1.0.0...v1.1.0) (2021-01-16)
 
 
