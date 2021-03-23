@@ -1,7 +1,7 @@
 /* Global Styling Here */
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 .glow {
   filter: drop-shadow(0 0 12px #454a58);

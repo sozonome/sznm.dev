@@ -1,4 +1,4 @@
-import { Heading, Box, Text, Button } from "@chakra-ui/react";
+import { Heading, Box, Text, Button, Grid } from "@chakra-ui/react";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -31,10 +31,10 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
 
       <MotionGrid
         variants={{
-          before: {},
-          after: { transition: { staggerChildren: 0.06 } },
+          before: { opacity: 0, y: 20, transition: { type: "spring" } },
+          after: { opacity: 1, y: 0, transition: { type: "spring" } },
         }}
-        templateColumns={["repeat(1)", "repeat(1)", "repeat(2,1fr)"]}
+        // templateColumns={["repeat(1)", "repeat(1)", "repeat(2,1fr)"]}
         initial="before"
         animate="after"
         gap={8}

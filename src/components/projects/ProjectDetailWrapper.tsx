@@ -6,6 +6,7 @@ import {
   Button,
   useColorMode,
   useColorModeValue,
+  Grid,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
@@ -62,33 +63,23 @@ const ProjectDetailWrapper = ({
         },
       }}
     >
-      <Flex wrap="wrap" alignItems="center" width="100%" height="100%">
-        <Box
-          flexBasis={["100%", "20%", "100%"]}
-          alignItems="center"
-          height="20%"
-        >
-          <Box
-            marginX={["inherit", "auto", "inherit"]}
-            marginBottom={[22, 0, 22]}
-            width={[55, 88, 55]}
-          >
+      <Flex alignItems="center" width="100%" height="100%" gridGap={4}>
+        <Box flexBasis="20%">
+          <Flex maxWidth={16} marginX="auto">
             <Image width="100%" height="100%" src={icon} alt={title} />
-          </Box>
+          </Flex>
         </Box>
-        <Box
-          flexBasis={["100%", "80%", "100%"]}
-          height={projectLink || playStoreLink || repoLink ? "60%" : "80%"}
-        >
+
+        <Grid gap={3} flexBasis="80%">
           <Heading size="lg" marginBottom={2}>
             {title}
           </Heading>
           <Text>{description}</Text>
-          {date && (
+          {/* {date && (
             <Text marginY={4} fontSize="xs">
               {new Date(date).getFullYear()}
             </Text>
-          )}
+          )} */}
           {stacks && (
             <Flex marginTop={11} alignItems="center">
               {stacks.map((stack, index) => (
@@ -107,54 +98,55 @@ const ProjectDetailWrapper = ({
               ))}
             </Flex>
           )}
-        </Box>
-        <Flex marginTop={22} flexWrap="wrap" alignSelf="flex-end">
-          {projectLink && (
-            <Link href={projectLink} passHref>
-              <Button
-                backgroundColor={
-                  colorMode === "light" ? "orange.200" : "orange.400"
-                }
-                fontWeight="semibold"
-                marginRight={11}
-                _hover={{
-                  backgroundColor: "orange.200",
-                  color: "black",
-                }}
-              >
-                Visit
-              </Button>
-            </Link>
-          )}
-          {playStoreLink && (
-            <Link href={playStoreLink} passHref>
-              <Button
-                backgroundColor="gray.300"
-                marginRight={11}
-                _hover={{ backgroundColor: "white", color: "black" }}
-                color={colorMode === "light" ? "inherit" : "gray.600"}
-              >
-                <FontAwesomeIcon
-                  icon={["fab", "google-play"]}
-                  style={{ marginRight: 11 }}
-                />
-                Play Store
-              </Button>
-            </Link>
-          )}
-          {repoLink && (
-            <Link href={repoLink} passHref>
-              <Button
-                backgroundColor={
-                  colorMode === "light" ? "gray.300" : "gray.600"
-                }
-                _hover={{ backgroundColor: "gray.300", color: "black" }}
-              >
-                Repo
-              </Button>
-            </Link>
-          )}
-        </Flex>
+
+          <Flex flexWrap="wrap">
+            {projectLink && (
+              <Link href={projectLink} passHref>
+                <Button
+                  backgroundColor={
+                    colorMode === "light" ? "orange.200" : "orange.400"
+                  }
+                  fontWeight="semibold"
+                  marginRight={11}
+                  _hover={{
+                    backgroundColor: "orange.200",
+                    color: "black",
+                  }}
+                >
+                  Visit
+                </Button>
+              </Link>
+            )}
+            {playStoreLink && (
+              <Link href={playStoreLink} passHref>
+                <Button
+                  backgroundColor="gray.300"
+                  marginRight={11}
+                  _hover={{ backgroundColor: "white", color: "black" }}
+                  color={colorMode === "light" ? "inherit" : "gray.600"}
+                >
+                  <FontAwesomeIcon
+                    icon={["fab", "google-play"]}
+                    style={{ marginRight: 11 }}
+                  />
+                  Play Store
+                </Button>
+              </Link>
+            )}
+            {repoLink && (
+              <Link href={repoLink} passHref>
+                <Button
+                  backgroundColor={
+                    colorMode === "light" ? "gray.300" : "gray.600"
+                  }
+                  _hover={{ backgroundColor: "gray.300", color: "black" }}
+                >
+                  Repo
+                </Button>
+              </Link>
+            )}
+          </Flex>
+        </Grid>
       </Flex>
     </MotionBox>
   );

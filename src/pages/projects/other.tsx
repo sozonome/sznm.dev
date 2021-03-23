@@ -51,7 +51,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
           before: {},
           after: { transition: { staggerChildren: 0.06 } },
         }}
-        templateColumns={["repeat(1)", "repeat(1)", "repeat(2,1fr)"]}
+        // templateColumns={["repeat(1)", "repeat(1)", "repeat(2,1fr)"]}
         initial="before"
         animate="after"
         gap={8}

@@ -19,7 +19,12 @@ const NavItem = ({ href, icon }: NavItemProps) => {
   const router = useRouter();
 
   return (
-    <Button variant="ghost" flexBasis={"25%"} fontSize={["3xl", "md"]} onClick={() => router.push(href)}>
+    <Button
+      variant="ghost"
+      flexBasis={"25%"}
+      fontSize={["3xl", "md"]}
+      onClick={() => router.push(href)}
+    >
       <FontAwesomeIcon icon={icon} style={{ cursor: "pointer" }} />
     </Button>
   );
