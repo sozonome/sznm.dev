@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaGooglePlay } from "react-icons/fa";
 
 import MotionBox from "../motion/MotionBox";
 
@@ -99,7 +99,7 @@ const ProjectDetailWrapper = ({
             </Flex>
           )}
 
-          <Flex flexWrap="wrap">
+          <Flex flexWrap="wrap" gridGap={2}>
             {projectLink && (
               <Link href={projectLink} passHref>
                 <Button
@@ -107,7 +107,6 @@ const ProjectDetailWrapper = ({
                     colorMode === "light" ? "orange.200" : "orange.400"
                   }
                   fontWeight="semibold"
-                  marginRight={11}
                   _hover={{
                     backgroundColor: "orange.200",
                     color: "black",
@@ -121,15 +120,10 @@ const ProjectDetailWrapper = ({
               <Link href={playStoreLink} passHref>
                 <Button
                   backgroundColor="gray.300"
-                  marginRight={11}
                   _hover={{ backgroundColor: "white", color: "black" }}
                   color={colorMode === "light" ? "inherit" : "gray.600"}
                 >
-                  <FontAwesomeIcon
-                    icon={["fab", "google-play"]}
-                    style={{ marginRight: 11 }}
-                  />
-                  Play Store
+                  <FaGooglePlay /> Play Store
                 </Button>
               </Link>
             )}

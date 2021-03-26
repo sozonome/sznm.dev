@@ -1,6 +1,6 @@
 import { Box, Heading, Text, Link, Button } from "@chakra-ui/react";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaGooglePlay } from "react-icons/fa";
 
 const KapturaLumina = () => {
   return (
@@ -39,10 +39,7 @@ const KapturaLumina = () => {
           isExternal
         >
           <Button>
-            <FontAwesomeIcon
-              icon={["fab", "google-play"]}
-              style={{ marginRight: 11 }}
-            />
+            <FaGooglePlay />
             Play Store
           </Button>
         </Link>

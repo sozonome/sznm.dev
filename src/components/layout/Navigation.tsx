@@ -1,18 +1,11 @@
-import { Box, Button } from "@chakra-ui/react";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import {
-  faFeatherAlt,
-  faHome,
-  faRocket,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
+import { Button } from "@chakra-ui/react";
+import { FaFeatherAlt, FaHome, FaRocket, FaUser } from "react-icons/fa";
 import { useRouter } from "next/router";
+import { IconType } from "react-icons";
 
 type NavItemProps = {
   href: string;
-  icon: IconProp;
+  icon: IconType;
 };
 
 const NavItem = ({ href, icon }: NavItemProps) => {
@@ -23,9 +16,10 @@ const NavItem = ({ href, icon }: NavItemProps) => {
       variant="ghost"
       flexBasis={"25%"}
       fontSize={["3xl", "md"]}
+      padding={0}
       onClick={() => router.push(href)}
     >
-      <FontAwesomeIcon icon={icon} style={{ cursor: "pointer" }} />
+      {icon({ style: { cursor: "pointer" } })}
     </Button>
   );
 };
@@ -33,19 +27,19 @@ const NavItem = ({ href, icon }: NavItemProps) => {
 const navigations: NavItemProps[] = [
   {
     href: "/",
-    icon: faHome,
+    icon: FaHome,
   },
   {
     href: "/projects",
-    icon: faRocket,
+    icon: FaRocket,
   },
   {
     href: "/blog",
-    icon: faFeatherAlt,
+    icon: FaFeatherAlt,
   },
   {
     href: "/about",
-    icon: faUser,
+    icon: FaUser,
   },
 ];
 

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import Navigation from "./Navigation";
 
-const MotionFlex = motion.custom(Flex);
+const MotionFlex = motion(Flex);
 
 const TabBar = () => {
   const backgroundColor = useColorModeValue(
