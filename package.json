@@ -27,13 +27,16 @@
     "react-syntax-highlighter": "^15.3.0",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
-    "rss": "^1.2.2"
+    "rss": "^1.2.2",
+    "sass": "^1.32.8",
+    "twemoji": "^13.0.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.9",
     "@types/node": "^14.14.36",
     "@types/react-syntax-highlighter": "^13.5.0",
     "@types/rss": "^0.0.28",
+    "@types/twemoji": "^12.1.1",
     "cors": "^2.8.5",
     "prettier": "^2.1.0",
     "standard-version": "^9.1.1",

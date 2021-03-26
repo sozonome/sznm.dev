@@ -2,7 +2,7 @@
 title: Stackbit, the Game Changer
 date: "2020-03-22"
 published: true
-thumbnail: "/thumbnails/web.png"
+thumbnail: "🌐"
 slug: "stackbit-the-game-changer"
 description: You can launch a powerful and beautiful static site in just under 10 minutes and at super low-cost.
 tags: 

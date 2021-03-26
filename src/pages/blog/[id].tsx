@@ -1,10 +1,10 @@
 import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
-import Image from "next/image";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 
 import { renderers } from "../../components/blog/renderers";
 import MotionBox from "../../components/motion/MotionBox";
+import Twemoji from "../../components/Twemoji";
 
 import { getAllPostIds, getPostData } from "../../helpers/posts";
 import { dateFormatLong } from "../../helpers/dateFormat";
@@ -45,12 +45,7 @@ const BlogPost = ({ postData }: BlogPostProps) => {
 
         <Flex flexBasis={["20%"]}>
           <Box marginLeft="auto" width="60%">
-            <Image
-              alt={postData.title}
-              src={postData.thumbnail}
-              width="100%"
-              height="100%"
-            />
+            <Twemoji emoji={postData.thumbnail} />
           </Box>
         </Flex>
       </Flex>
