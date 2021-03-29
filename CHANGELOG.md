@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/sozonome/sznm.dev/compare/v1.2.0...v1.3.0) (2021-03-29)
+
+
+### Features
+
+* **analytics:** implement google analytics ([842f483](https://github.com/sozonome/sznm.dev/commit/842f483cb3fa120eacee5ec3ec0ce35cd8f83514))
+
 ## [1.2.0](https://github.com/sozonome/sznm.dev/compare/v1.1.0...v1.2.0) (2021-03-23)
 
 
