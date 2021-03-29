@@ -14,6 +14,14 @@ type ProjectsProps = {
 };
 
 const Projects = ({ allProjectsData }: ProjectsProps) => {
+  const projects = allProjectsData
+    .filter(
+      (project) => project.featured && project.published !== false && project
+    )
+    .map((projectData, index) => (
+      <ProjectDetailWrapper projectData={projectData} key={index} />
+    ));
+
   return (
     <Box>
       <Head>
@@ -41,14 +49,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
         marginBottom={8}
       >
         {/* Highlight */}
-        {allProjectsData
-          .filter(
-            (project) =>
-              project.featured && project.published !== false && project
-          )
-          .map((projectData, index) => (
-            <ProjectDetailWrapper projectData={projectData} key={index} />
-          ))}
+        {projects}
       </MotionGrid>
 
       <Link href="/projects/other">
