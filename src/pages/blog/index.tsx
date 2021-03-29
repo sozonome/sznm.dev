@@ -15,6 +15,12 @@ type BlogPostsProps = {
 };
 
 const BlogPosts = ({ allPostsData }: BlogPostsProps) => {
+  const blogPosts = allPostsData
+    .filter((post) => post.published === true)
+    .map((postData, index) => (
+      <BlogPostPreview postData={postData} key={index} />
+    ));
+
   return (
     <Box>
       <Head>
@@ -28,17 +34,13 @@ const BlogPosts = ({ allPostsData }: BlogPostsProps) => {
       </Box>
       <MotionBox
         variants={{
-          before: { opacity: 0, y: 20, transition: { type: "spring" } },
-          after: { opacity: 1, y: 0, transition: { type: "spring" } },
+          before: {},
+          after: { transition: { staggerChildren: 0.06 } },
         }}
         initial="before"
         animate="after"
       >
-        {allPostsData
-          .filter((post) => post.published === true)
-          .map((postData, index) => (
-            <BlogPostPreview postData={postData} key={index} />
-          ))}
+        {blogPosts}
       </MotionBox>
     </Box>
   );
