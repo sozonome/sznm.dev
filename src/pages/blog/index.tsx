@@ -28,8 +28,8 @@ const BlogPosts = ({ allPostsData }: BlogPostsProps) => {
       </Box>
       <MotionBox
         variants={{
-          before: {},
-          after: { transition: { staggerChildren: 0.06 } },
+          before: { opacity: 0, y: 20, transition: { type: "spring" } },
+          after: { opacity: 1, y: 0, transition: { type: "spring" } },
         }}
         initial="before"
         animate="after"
