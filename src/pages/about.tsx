@@ -32,8 +32,8 @@ const About = () => {
 
 const HeadSection = () => {
   return (
-    <Box marginBottom={8}>
-      <Heading>sozonome</Heading>
+    <Box marginBottom={16}>
+      <Heading size="2xl">sozonome</Heading>
     </Box>
   );
 };

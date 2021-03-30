@@ -8,18 +8,16 @@ import {
   Text,
   Button,
   useColorModeValue,
+  Grid,
 } from "@chakra-ui/react";
-import Image from "next/image";
 
 import Card from "../components/projects/Card";
-import MotionBox from "../components/motion/MotionBox";
 import BlogPostPreview from "../components/blog/BlogPostPreview";
 
 import { getSortedProjectsData } from "../helpers/projects";
 import { getSortedPostsData } from "../helpers/posts";
 import { ProjectType } from "../models/project";
 import { BlogPostType } from "../models/blog";
-import MotionGrid from "../components/motion/MotionGrid";
 
 type HomeProps = {
   allProjectsData: Array<ProjectType>;
@@ -38,44 +36,21 @@ const Home = ({ allProjectsData, allPostsData }: HomeProps) => {
 
 const HeroSection = () => {
   return (
-    <MotionBox
-      variants={{
-        before: { opacity: 0, y: 20, transition: { type: "spring" } },
-        after: { opacity: 1, y: 0, transition: { type: "spring" } },
-      }}
-      initial="before"
-      animate="after"
-      height="90vh"
-      alignItems="center"
-      display="grid"
-    >
-      <Box display={["inherit", "flex"]}>
-        <Box boxSize={[100, 160]}>
-          <Image
-            width={160}
-            height={160}
-            // className="glow"
-            src="/avataaars.svg"
-            alt="sozonome"
-          />
-        </Box>
-
-        <Box
-          verticalAlign="center"
-          width={["100%", "80%", "60%"]}
-          paddingX={[0, 22]}
-          marginTop={[8, 0]}
-          alignSelf={["none", "center"]}
-        >
-          <Heading as="h1" size="xl" paddingBottom={11}>
-            Hello! I'm Nathan.
-          </Heading>
-          <Text fontSize={["md", "xl"]}>
-            Digital crafter specializing in Frontend development.
-          </Text>
-        </Box>
+    <Box height="90vh" alignItems="center" display="grid">
+      <Box
+        verticalAlign="center"
+        width={["100%", "80%", "60%"]}
+        marginTop={[8, 0]}
+        alignSelf={["none", "center"]}
+      >
+        <Heading as="h1" size="xl" paddingBottom={11}>
+          Hello! I'm Nathan.
+        </Heading>
+        <Text fontSize={["md", "xl"]}>
+          Digital crafter specializing in Frontend development.
+        </Text>
       </Box>
-    </MotionBox>
+    </Box>
   );
 };
 
@@ -104,16 +79,10 @@ const ProjectsSection = ({ data }: { data: Array<ProjectType> }) => {
           <Text>Some notable projects I've worked on previously.</Text>
         </Box>
 
-        <MotionGrid
+        <Grid
           gap={8}
           templateColumns={["repeat(1)", "repeat(2, 1fr)"]}
           marginY={8}
-          variants={{
-            before: {},
-            after: { transition: { staggerChildren: 0.06 } },
-          }}
-          initial="before"
-          animate="after"
         >
           {data
             .filter(
@@ -123,7 +92,7 @@ const ProjectsSection = ({ data }: { data: Array<ProjectType> }) => {
             .map((project, index) => (
               <Card project={project} key={index} />
             ))}
-        </MotionGrid>
+        </Grid>
 
         <Link href="/projects" passHref>
           <Button
@@ -154,22 +123,14 @@ const RecentPostSection = ({ allPostsData }) => {
         Recent Posts
       </Heading>
 
-      <MotionBox
-        marginTop={22}
-        variants={{
-          before: {},
-          after: { transition: { staggerChildren: 0.06 } },
-        }}
-        initial="before"
-        animate="after"
-      >
+      <Box marginTop={22}>
         {allPostsData
           .filter((post) => post.published === true)
           .slice(0, 2)
           .map((postData, index) => (
             <BlogPostPreview postData={postData} key={index} />
           ))}
-      </MotionBox>
+      </Box>
 
       <Link href="/blog" passHref>
         <Button

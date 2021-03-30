@@ -12,8 +12,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaGooglePlay } from "react-icons/fa";
 
-import MotionBox from "../motion/MotionBox";
-
 import { ProjectType } from "../../models/project";
 
 type ProjectDetailWrapperProps = {
@@ -25,7 +23,6 @@ const ProjectDetailWrapper = ({
     title,
     icon,
     description,
-    date,
     stacks,
     projectLink,
     playStoreLink,
@@ -37,31 +34,11 @@ const ProjectDetailWrapper = ({
   const backgroundColor = useColorModeValue("gray.200", "gray.600");
 
   return (
-    <MotionBox
+    <Box
       width="100%"
       padding={4}
       borderRadius={24}
       backgroundColor={backgroundColor}
-      variants={{
-        before: {
-          opacity: 0,
-          y: 20,
-          transition: {
-            type: "spring",
-            damping: 16,
-            stiffness: 200,
-          },
-        },
-        after: {
-          opacity: 1,
-          y: 0,
-          transition: {
-            type: "spring",
-            damping: 16,
-            stiffness: 200,
-          },
-        },
-      }}
     >
       <Flex alignItems="center" width="100%" height="100%" gridGap={4}>
         <Box flexBasis="20%">
@@ -75,11 +52,7 @@ const ProjectDetailWrapper = ({
             {title}
           </Heading>
           <Text>{description}</Text>
-          {/* {date && (
-            <Text marginY={4} fontSize="xs">
-              {new Date(date).getFullYear()}
-            </Text>
-          )} */}
+
           {stacks && (
             <Flex marginTop={11} alignItems="center">
               {stacks.map((stack, index) => (
@@ -142,7 +115,7 @@ const ProjectDetailWrapper = ({
           </Flex>
         </Grid>
       </Flex>
-    </MotionBox>
+    </Box>
   );
 };
 

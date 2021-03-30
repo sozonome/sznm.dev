@@ -1,8 +1,7 @@
 import { Box, Text, Flex, useColorModeValue, Link } from "@chakra-ui/react";
 import Image from "next/image";
-import { ProjectType } from "../../models/project";
 
-import MotionBox from "../motion/MotionBox";
+import { ProjectType } from "../../models/project";
 
 type CardProps = {
   project: ProjectType;
@@ -18,8 +17,7 @@ const Card = ({
 
   return (
     <Link href={projectLink} isExternal _hover={{ textDecoration: "none" }}>
-      <MotionBox
-        //chakra props
+      <Box
         backgroundColor={backgroundColor}
         boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.1);"
         borderRadius={20}
@@ -27,28 +25,6 @@ const Card = ({
         alignItems="center"
         overflow="hidden"
         justifyContent="center"
-        //motion API
-        whileHover={{ scale: 1.05 }}
-        variants={{
-          before: {
-            opacity: 0,
-            y: 20,
-            transition: {
-              type: "spring",
-              damping: 16,
-              stiffness: 200,
-            },
-          },
-          after: {
-            opacity: 1,
-            y: 0,
-            transition: {
-              type: "spring",
-              damping: 16,
-              stiffness: 200,
-            },
-          },
-        }}
       >
         <Flex alignItems="center" marginX="auto" width="80%" height={24}>
           <Flex flexBasis={["35%", "30%"]}>
@@ -76,7 +52,7 @@ const Card = ({
             />
           </Box>
         )}
-      </MotionBox>
+      </Box>
     </Link>
   );
 };

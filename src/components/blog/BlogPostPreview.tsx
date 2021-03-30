@@ -1,7 +1,6 @@
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import Link from "next/link";
 
-import MotionBox from "../motion/MotionBox";
 import Twemoji from "../Twemoji";
 
 import { dateFormatLong } from "../../helpers/dateFormat";
@@ -14,30 +13,7 @@ type BlogPostPreviewProps = {
 
 const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
   return (
-    <MotionBox
-      width="100%"
-      marginY={12}
-      variants={{
-        before: {
-          opacity: 0,
-          y: 20,
-          transition: {
-            type: "spring",
-            damping: 16,
-            stiffness: 200,
-          },
-        },
-        after: {
-          opacity: 1,
-          y: 0,
-          transition: {
-            type: "spring",
-            damping: 16,
-            stiffness: 200,
-          },
-        },
-      }}
-    >
+    <Box width="100%" marginY={12}>
       <Link href={`/blog/${postData.id}`} passHref>
         <Flex as="a" flexWrap={"wrap"} alignItems="center" width="100%">
           <Flex justifyContent="center" alignItems="center" flexBasis={["10%"]}>
@@ -53,7 +29,7 @@ const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
           </Box>
         </Flex>
       </Link>
-    </MotionBox>
+    </Box>
   );
 };
 

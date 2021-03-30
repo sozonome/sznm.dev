@@ -18,7 +18,7 @@ const PatternBackground = () => {
         bottom="0"
         transform="rotate(180deg)"
         alt="background image pattern bottom left"
-      />{" "}
+      />
     </>
   );
 };

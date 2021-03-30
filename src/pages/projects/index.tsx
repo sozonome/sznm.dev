@@ -2,7 +2,6 @@ import { Heading, Box, Text, Button, Grid } from "@chakra-ui/react";
 import Head from "next/head";
 import Link from "next/link";
 
-import MotionGrid from "../../components/motion/MotionGrid";
 import ProjectDetailWrapper from "../../components/projects/ProjectDetailWrapper";
 
 import { getSortedProjectsData } from "../../helpers/projects";
@@ -37,20 +36,10 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
         </Text>
       </Box>
 
-      <MotionGrid
-        variants={{
-          before: { opacity: 0, y: 20, transition: { type: "spring" } },
-          after: { opacity: 1, y: 0, transition: { type: "spring" } },
-        }}
-        // templateColumns={["repeat(1)", "repeat(1)", "repeat(2,1fr)"]}
-        initial="before"
-        animate="after"
-        gap={8}
-        marginBottom={8}
-      >
+      <Grid gap={8} marginBottom={8}>
         {/* Highlight */}
         {projects}
-      </MotionGrid>
+      </Grid>
 
       <Link href="/projects/other">
         <Button isFullWidth>Other Projects</Button>

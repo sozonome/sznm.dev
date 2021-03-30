@@ -4,17 +4,17 @@ import {
   Text,
   Button,
   useColorModeValue,
+  Grid,
 } from "@chakra-ui/react";
 import Head from "next/head";
+import Link from "next/link";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import ProjectDetailWrapper from "../../components/projects/ProjectDetailWrapper";
-import MotionGrid from "../../components/motion/MotionGrid";
 
 import { getSortedProjectsData } from "../../helpers/projects";
 
 import { ProjectType } from "../../models/project";
-import Link from "next/link";
 
 type ProjectsProps = {
   allProjectsData: Array<ProjectType>;
@@ -46,16 +46,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
           Other projects I worked on previously.
         </Text>
       </Box>
-      <MotionGrid
-        variants={{
-          before: {},
-          after: { transition: { staggerChildren: 0.06 } },
-        }}
-        // templateColumns={["repeat(1)", "repeat(1)", "repeat(2,1fr)"]}
-        initial="before"
-        animate="after"
-        gap={8}
-      >
+      <Grid gap={8}>
         {/* Other Projects */}
         {allProjectsData
           .filter(
@@ -65,7 +56,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
           .map((projectData, index) => (
             <ProjectDetailWrapper projectData={projectData} key={index} />
           ))}
-      </MotionGrid>
+      </Grid>
     </Box>
   );
 };

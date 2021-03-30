@@ -3,7 +3,6 @@ import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 
 import { renderers } from "../../components/blog/renderers";
-import MotionBox from "../../components/motion/MotionBox";
 import Twemoji from "../../components/Twemoji";
 
 import { getAllPostIds, getPostData } from "../../helpers/posts";
@@ -19,14 +18,7 @@ type BlogPostProps = {
 
 const BlogPost = ({ postData }: BlogPostProps) => {
   return (
-    <MotionBox
-      variants={{
-        before: { opacity: 0, y: 20, transition: { type: "spring" } },
-        after: { opacity: 1, y: 0, transition: { type: "spring" } },
-      }}
-      initial="before"
-      animate="after"
-    >
+    <Box>
       <Head>
         <title>{postData.title} | sozonome</title>
       </Head>
@@ -56,7 +48,7 @@ const BlogPost = ({ postData }: BlogPostProps) => {
         renderers={renderers}
         allowDangerousHtml
       />
-    </MotionBox>
+    </Box>
   );
 };
 
