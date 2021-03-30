@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 
-import MotionBox from "../components/motion/MotionBox";
+import MotionBox from "components/motion/MotionBox";
 
 const Page404 = () => {
   const buttonBackgroundColor = useColorModeValue("gray.300", "gray.500");

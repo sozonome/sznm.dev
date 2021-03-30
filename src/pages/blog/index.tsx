@@ -2,12 +2,12 @@ import { Heading, Box, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import fs from "fs";
 
-import BlogPostPreview from "../../components/blog/BlogPostPreview";
+import BlogPostPreview from "components/blog/BlogPostPreview";
 
-import { getSortedPostsData } from "../../helpers/posts";
-import generateRss from "../../helpers/generateRss";
+import { getSortedPostsData } from "helpers/posts";
+import generateRss from "helpers/generateRss";
 
-import { BlogPostType } from "../../models/blog";
+import { BlogPostType } from "models/blog";
 
 type BlogPostsProps = {
   allPostsData: Array<BlogPostType>;

@@ -2,13 +2,13 @@ import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 
-import { renderers } from "../../components/blog/renderers";
-import Twemoji from "../../components/Twemoji";
+import { renderers } from "components/blog/renderers";
+import Twemoji from "components/Twemoji";
 
-import { getAllPostIds, getPostData } from "../../helpers/posts";
-import { dateFormatLong } from "../../helpers/dateFormat";
+import { getAllPostIds, getPostData } from "helpers/posts";
+import { dateFormatLong } from "helpers/dateFormat";
 
-import { BlogPostType } from "../../models/blog";
+import { BlogPostType } from "models/blog";
 
 import styles from "./[id].module.scss";
 

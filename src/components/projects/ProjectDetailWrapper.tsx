@@ -12,7 +12,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaGooglePlay } from "react-icons/fa";
 
-import { ProjectType } from "../../models/project";
+import { ProjectType } from "models/project";
 
 type ProjectDetailWrapperProps = {
   projectData: ProjectType;

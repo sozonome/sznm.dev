@@ -2,11 +2,11 @@ import { Heading, Box, Text, Button, Grid } from "@chakra-ui/react";
 import Head from "next/head";
 import Link from "next/link";
 
-import ProjectDetailWrapper from "../../components/projects/ProjectDetailWrapper";
+import ProjectDetailWrapper from "components/projects/ProjectDetailWrapper";
 
-import { getSortedProjectsData } from "../../helpers/projects";
+import { getSortedProjectsData } from "helpers/projects";
 
-import { ProjectType } from "../../models/project";
+import { ProjectType } from "models/project";
 
 type ProjectsProps = {
   allProjectsData: Array<ProjectType>;

@@ -3,11 +3,11 @@ import Head from "next/head";
 import Link from "next/link";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
-import ProjectDetailWrapper from "../../components/projects/ProjectDetailWrapper";
+import ProjectDetailWrapper from "components/projects/ProjectDetailWrapper";
 
-import { getAllProjectIds, getProjectData } from "../../helpers/projects";
+import { getAllProjectIds, getProjectData } from "helpers/projects";
 
-import { ProjectType } from "../../models/project";
+import { ProjectType } from "models/project";
 
 type ProjectProps = {
   projectData: ProjectType;

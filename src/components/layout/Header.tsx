@@ -4,7 +4,7 @@ import { Box, Flex, Text, useColorMode } from "@chakra-ui/react";
 import Navigation from "./Navigation";
 import ThemeToggle from "./ThemeToggle";
 
-import { responsiveWidthProps } from "../../styles/customTheme";
+import { responsiveWidthProps } from "styles/customTheme";
 
 const Header = () => {
   const { colorMode } = useColorMode();

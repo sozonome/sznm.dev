@@ -11,13 +11,13 @@ import {
   Grid,
 } from "@chakra-ui/react";
 
-import Card from "../components/projects/Card";
-import BlogPostPreview from "../components/blog/BlogPostPreview";
+import Card from "components/projects/Card";
+import BlogPostPreview from "components/blog/BlogPostPreview";
 
-import { getSortedProjectsData } from "../helpers/projects";
-import { getSortedPostsData } from "../helpers/posts";
-import { ProjectType } from "../models/project";
-import { BlogPostType } from "../models/blog";
+import { getSortedProjectsData } from "helpers/projects";
+import { getSortedPostsData } from "helpers/posts";
+import { ProjectType } from "models/project";
+import { BlogPostType } from "models/blog";
 
 type HomeProps = {
   allProjectsData: Array<ProjectType>;

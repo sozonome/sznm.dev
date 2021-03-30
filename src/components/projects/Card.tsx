@@ -1,7 +1,7 @@
 import { Box, Text, Flex, useColorModeValue, Link } from "@chakra-ui/react";
 import Image from "next/image";
 
-import { ProjectType } from "../../models/project";
+import { ProjectType } from "models/project";
 
 type CardProps = {
   project: ProjectType;

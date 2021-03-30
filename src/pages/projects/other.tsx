@@ -10,11 +10,11 @@ import Head from "next/head";
 import Link from "next/link";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
-import ProjectDetailWrapper from "../../components/projects/ProjectDetailWrapper";
+import ProjectDetailWrapper from "components/projects/ProjectDetailWrapper";
 
-import { getSortedProjectsData } from "../../helpers/projects";
+import { getSortedProjectsData } from "helpers/projects";
 
-import { ProjectType } from "../../models/project";
+import { ProjectType } from "models/project";
 
 type ProjectsProps = {
   allProjectsData: Array<ProjectType>;

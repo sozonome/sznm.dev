@@ -2,7 +2,7 @@ import RSS from "rss";
 
 import { getPostData } from "./posts";
 
-import { BlogPostType } from "../models/blog";
+import { BlogPostType } from "models/blog";
 
 const generateRssItem = async (post: BlogPostType) => {
   const postData: any = await getPostData(post.id);

@@ -1,6 +1,6 @@
 import { Box, Link, Text } from "@chakra-ui/react";
 
-import { responsiveWidthProps } from "../../styles/customTheme";
+import { responsiveWidthProps } from "styles/customTheme";
 
 const Footer = () => {
   return (

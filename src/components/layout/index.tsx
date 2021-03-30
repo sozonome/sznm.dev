@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import Meta from "./meta";
 import TabBar from "./TabBar";
 
-import { responsiveWidthProps } from "../../styles/customTheme";
+import { responsiveWidthProps } from "styles/customTheme";
 
 type LayoutProps = {
   children: any;

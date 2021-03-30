@@ -14,8 +14,8 @@ import {
 } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
 
-import MotionBox from "../components/motion/MotionBox";
-import MotionFlex from "../components/motion/MotionFlex";
+import MotionBox from "components/motion/MotionBox";
+import MotionFlex from "components/motion/MotionFlex";
 
 const About = () => {
   return (

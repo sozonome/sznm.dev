@@ -4,12 +4,12 @@ import { useEffect } from "react";
 import "@fontsource/recursive/latin.css";
 import "@fontsource/catamaran/latin.css";
 
-import Layout from "../components/layout";
+import Layout from "components/layout";
 
-import { initGA, logPageView } from "../lib/analytics";
+import { initGA, logPageView } from "lib/analytics";
 
-import customTheme from "../styles/customTheme";
-import "../styles/global.css";
+import customTheme from "styles/customTheme";
+import "styles/global.css";
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
