@@ -1,18 +1,20 @@
-import { Button } from "@chakra-ui/react";
+import { IconButton } from "@chakra-ui/react";
 import { FaFeatherAlt, FaHome, FaRocket, FaUser } from "react-icons/fa";
 import { useRouter } from "next/router";
 import { IconType } from "react-icons";
 
 type NavItemProps = {
   href: string;
+  label: string;
   icon: IconType;
 };
 
-const NavItem = ({ href, icon }: NavItemProps) => {
+const NavItem = ({ href, label, icon }: NavItemProps) => {
   const router = useRouter();
 
   return (
-    <Button
+    <IconButton
+      aria-label={label}
       variant="ghost"
       flexBasis={"25%"}
       fontSize={["3xl", "md"]}
@@ -20,25 +22,29 @@ const NavItem = ({ href, icon }: NavItemProps) => {
       onClick={() => router.push(href)}
     >
       {icon({ style: { cursor: "pointer" } })}
-    </Button>
+    </IconButton>
   );
 };
 
 const navigations: NavItemProps[] = [
   {
     href: "/",
+    label: "Home",
     icon: FaHome,
   },
   {
     href: "/projects",
+    label: "Projects",
     icon: FaRocket,
   },
   {
     href: "/blog",
+    label: "Blog",
     icon: FaFeatherAlt,
   },
   {
     href: "/about",
+    label: "About",
     icon: FaUser,
   },
 ];
