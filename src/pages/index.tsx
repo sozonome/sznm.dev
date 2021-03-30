@@ -81,7 +81,7 @@ const ProjectsSection = ({ data }: { data: Array<ProjectType> }) => {
 
         <Grid
           gap={8}
-          templateColumns={["repeat(1)", "repeat(2, 1fr)"]}
+          templateColumns={["repeat(1)", "repeat(1)", "repeat(2, 1fr)"]}
           marginY={8}
         >
           {data
