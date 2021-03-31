@@ -1,10 +1,11 @@
 import {
-  Heading,
   Box,
-  Text,
   Button,
-  useColorModeValue,
   Grid,
+  Heading,
+  Link as ChakraLink,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import Head from "next/head";
 import Link from "next/link";
@@ -46,16 +47,31 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
           Other projects I worked on previously.
         </Text>
       </Box>
-      <Grid gap={8}>
+      <Grid
+        gap={8}
+        templateColumns={["repeat(1)", "repeat(1)", "repeat(2, 1fr)"]}
+      >
         {/* Other Projects */}
         {allProjectsData
           .filter(
             (project) =>
               !project.featured && project.published !== false && project
           )
-          .map((projectData, index) => (
-            <ProjectDetailWrapper projectData={projectData} key={index} />
-          ))}
+          .map((projectData, index) => {
+            if (projectData.projectLink || projectData.repoLink) {
+              return (
+                <ChakraLink
+                  href={projectData.projectLink || projectData.repoLink}
+                  isExternal
+                >
+                  <ProjectDetailWrapper projectData={projectData} key={index} />
+                </ChakraLink>
+              );
+            }
+            return (
+              <ProjectDetailWrapper projectData={projectData} key={index} />
+            );
+          })}
       </Grid>
     </Box>
   );

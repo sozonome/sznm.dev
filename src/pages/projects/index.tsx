@@ -1,4 +1,11 @@
-import { Heading, Box, Text, Button, Grid } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Grid,
+  Heading,
+  Link as ChakraLink,
+  Text,
+} from "@chakra-ui/react";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -17,9 +24,27 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
     .filter(
       (project) => project.featured && project.published !== false && project
     )
-    .map((projectData, index) => (
-      <ProjectDetailWrapper projectData={projectData} key={index} />
-    ));
+    .map((projectData, index) => {
+      if (
+        projectData.playStoreLink ||
+        projectData.projectLink ||
+        projectData.repoLink
+      ) {
+        return (
+          <ChakraLink
+            href={
+              projectData.playStoreLink ||
+              projectData.projectLink ||
+              projectData.repoLink
+            }
+            isExternal
+          >
+            <ProjectDetailWrapper projectData={projectData} key={index} />
+          </ChakraLink>
+        );
+      }
+      return <ProjectDetailWrapper projectData={projectData} key={index} />;
+    });
 
   return (
     <Box>
@@ -36,7 +61,11 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
         </Text>
       </Box>
 
-      <Grid gap={8} marginBottom={8}>
+      <Grid
+        gap={6}
+        templateColumns={["repeat(1)", "repeat(1)", "repeat(2, 1fr)"]}
+        marginBottom={8}
+      >
         {/* Highlight */}
         {projects}
       </Grid>
