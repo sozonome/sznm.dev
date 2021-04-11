@@ -114,7 +114,11 @@ const ProjectsSection = ({ data }: { data: Array<ProjectType> }) => {
   );
 };
 
-const RecentPostSection = ({ allPostsData }) => {
+const RecentPostSection = ({
+  allPostsData,
+}: {
+  allPostsData: Array<BlogPostType>;
+}) => {
   const buttonBackgroundColor = useColorModeValue("gray.100", "gray.600");
 
   return (
