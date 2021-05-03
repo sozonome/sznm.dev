@@ -9,7 +9,7 @@ thumbnail: "/app_preview/spoker.png"
 # thumbnailDark: "/app_preview/public-apis-dark.png"
 highlight: true
 featured: true
-# sznmApps: true
+sznmApps: true
 appStoreLink:
 playStoreLink:
 stacks: 
