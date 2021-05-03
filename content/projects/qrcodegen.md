@@ -5,9 +5,7 @@ repoLink: https://github.com/sozonome/QRcodeGen
 description: QR Code Generator.
 date: "2021-04-17"
 icon: "/app_icons/qr-code.svg"
-# featured: true
-# highlight: true
-# sznmApps: true
+sznmApps: true
 appStoreLink:
 playStoreLink:
 stacks:
