@@ -5,7 +5,7 @@ import { responsiveWidthProps } from "styles/customTheme";
 const Footer = () => {
   return (
     <Box as="footer" width="full" marginBottom={12} {...responsiveWidthProps}>
-      <Text fontSize="sm">
+      <Text fontSize={["xs", "sm"]}>
         2020 - {new Date().getFullYear()} |{" "}
         <Link
           href="https://agustinusnathaniel.com"

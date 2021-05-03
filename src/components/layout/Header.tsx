@@ -30,7 +30,7 @@ const Header = () => {
         alignItems="center"
       >
         <Link href="/" passHref>
-          <Text as="a" cursor="pointer" fontSize={["lg", "2xl"]}>
+          <Text as="a" cursor="pointer" fontSize={["md", "xl"]}>
             sznm.dev
           </Text>
         </Link>

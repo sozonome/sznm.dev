@@ -38,6 +38,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
               projectData.repoLink
             }
             isExternal
+            key={projectData.id}
           >
             <ProjectDetailWrapper projectData={projectData} key={index} />
           </ChakraLink>
