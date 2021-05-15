@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { GetStaticProps } from "next";
@@ -18,6 +19,7 @@ import { getSortedProjectsData } from "helpers/projects";
 import { getSortedPostsData } from "helpers/posts";
 import { ProjectType } from "models/project";
 import { BlogPostType } from "models/blog";
+import SocialMeta from "components/SocialMeta";
 
 type HomeProps = {
   allProjectsData: Array<ProjectType>;
@@ -27,6 +29,14 @@ type HomeProps = {
 const Home = ({ allProjectsData, allPostsData }: HomeProps) => {
   return (
     <Box marginTop={-24}>
+      <Head>
+        <SocialMeta
+          title="sozonome"
+          url="https://sznm.dev"
+          image="https://og-image.sznm.dev/**sznm**.dev.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fsznm.dev%2Favataaars.svg&widths=250"
+        />
+      </Head>
+
       <HeroSection />
       <ProjectsSection data={allProjectsData} />
       <RecentPostSection allPostsData={allPostsData} />

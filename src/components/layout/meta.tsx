@@ -1,3 +1,4 @@
+import SocialMeta from "components/SocialMeta";
 import Head from "next/head";
 
 const Meta = () => {

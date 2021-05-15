@@ -11,6 +11,7 @@ import { dateFormatLong } from "helpers/dateFormat";
 import { BlogPostType } from "models/blog";
 
 import styles from "./[id].module.scss";
+import SocialMeta from "components/SocialMeta";
 
 type BlogPostProps = {
   postData: BlogPostType;
@@ -23,8 +24,11 @@ const BlogPost = ({ postData }: BlogPostProps) => {
     <Box>
       <Head>
         <title>{postData.title} | sozonome</title>
-        <meta name="twitter:image" content={ogImage} />
-        <meta name="og:image" content={ogImage} />
+        <SocialMeta
+          title={`${postData.title} | sozonome`}
+          url={`${location.protocol}//${location.host}/blog/${postData.id}`}
+          image={ogImage}
+        />
       </Head>
 
       <Flex alignItems="center" marginBottom={16}>
