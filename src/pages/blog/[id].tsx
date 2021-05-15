@@ -26,7 +26,7 @@ const BlogPost = ({ postData }: BlogPostProps) => {
         <title>{postData.title} | sozonome</title>
         <SocialMeta
           title={`${postData.title} | sozonome`}
-          url={`${location.protocol}//${location.host}/blog/${postData.id}`}
+          url={`https://sznm.dev/blog/${postData.id}`}
           image={ogImage}
         />
       </Head>
