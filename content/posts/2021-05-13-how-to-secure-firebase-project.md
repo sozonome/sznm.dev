@@ -22,13 +22,13 @@ Every firebase project is a GCP (Google Cloud Platform) project, so we can go to
 4. Look for `API Keys` section, select the API key which has `...(auto created by Firebase)`,
   ![API Key Restrictions Tab](https://sznm.dev/images/2021-05-13-how-to-secure-firebase-project/GCP-02.png)
 5. You will be directed to a page called `Restrict and rename API key`, go to `Application restrictions` section, select `HTTP referrers (web sites)`, add your production web client domain in `Website restrictions` section. Don't add `localhost` if you intend to use the firebase project for production.
-6. Hit the `save` button apply changes.
+6. Hit the `save` button to apply changes.
 
 Voila! Your API key already restricted!
 
 ## Use Different Firebase Project for Local Development
 
-Now that we already apply restrictions to our API key, how about our local development (`localhost`)? Well, we can just create a new firebase project which will be used for your local development.
+Now that we already apply restrictions to our API key, how about our local development (`localhost`)? Well, we can just create a new firebase project which will be used for our local development.
 
 ### Special Case: Develop Hybrid Mobile App Using Ionic
 
