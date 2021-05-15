@@ -17,10 +17,14 @@ type BlogPostProps = {
 };
 
 const BlogPost = ({ postData }: BlogPostProps) => {
+  const ogImage = `https://og-image.sznm.dev/**${postData.title}**.png?theme=dark&md=1&fontSize=100px&images=https%3A%2F%2Fsznm.dev%2Favataaars.svg`;
+
   return (
     <Box>
       <Head>
         <title>{postData.title} | sozonome</title>
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="og:image" content={ogImage} />
       </Head>
 
       <Flex alignItems="center" marginBottom={16}>

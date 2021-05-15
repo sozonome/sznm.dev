@@ -10,10 +10,17 @@
     border-radius: 1rem;
     margin: 1rem 0;
   }
-  ul {
+  ul,
+  ol {
     margin: 0 1.5rem;
     li {
       margin: 0.6rem 0;
     }
+  }
+  code {
+    background-color: rgb(200, 200, 200);
+    border-radius: 0.25rem;
+    padding: 0 0.25rem;
+    color: black;
   }
 }
