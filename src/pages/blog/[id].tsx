@@ -22,14 +22,15 @@ const BlogPost = ({ postData }: BlogPostProps) => {
 
   return (
     <Box>
+      {console.log({ postData, ogImage })}
       <Head>
         <title>{postData.title} | sozonome</title>
-        <SocialMeta
-          title={`${postData.title} | sozonome`}
-          url={`https://sznm.dev/blog/${postData.id}`}
-          image={ogImage}
-        />
       </Head>
+      <SocialMeta
+        title={`${postData.title} | sozonome`}
+        url={`https://sznm.dev/blog/${postData.id}`}
+        image={ogImage}
+      />
 
       <Flex alignItems="center" marginBottom={16}>
         <Box flexBasis={["80%"]}>
