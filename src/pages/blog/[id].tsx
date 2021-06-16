@@ -53,10 +53,11 @@ const BlogPost = ({ postData }: BlogPostProps) => {
 
       <ReactMarkdown
         className={styles.content}
-        children={postData.rawContent}
         renderers={renderers}
         allowDangerousHtml
-      />
+      >
+        {postData.rawContent}
+      </ReactMarkdown>
     </Box>
   );
 };

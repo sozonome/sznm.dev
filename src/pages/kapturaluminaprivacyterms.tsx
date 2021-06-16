@@ -13,9 +13,9 @@ const kapturaluminaprivacyterms = () => {
       </Box>
       <Box marginY={22}>
         <Text as="p">
-          Your privacy is important to us. It is sznm's policy to respect your
+          {`Your privacy is important to us. It is sznm's policy to respect your
           privacy regarding any information we may collect from you through our
-          app, KapturaLumina.
+          app, KapturaLumina.`}
         </Text>
         <Text as="p">
           We only ask for personal information when we truly need it to provide

@@ -11,9 +11,11 @@ const Card = ({
   project: { title, icon, thumbnail, thumbnailDark, projectLink },
 }: CardProps) => {
   const backgroundColor = useColorModeValue("gray.200", "gray.600");
-  const thumbnailUrl = thumbnail
-    ? useColorModeValue(thumbnail, thumbnailDark ? thumbnailDark : thumbnail)
-    : null;
+  const dynamicThumbnail = useColorModeValue(
+    thumbnail,
+    thumbnailDark ? thumbnailDark : thumbnail
+  );
+  const thumbnailUrl = thumbnail ? dynamicThumbnail : null;
 
   return (
     <Link href={projectLink} isExternal _hover={{ textDecoration: "none" }}>

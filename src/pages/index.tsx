@@ -51,7 +51,7 @@ const HeroSection = () => {
         alignSelf={["none", "center"]}
       >
         <Heading as="h1" size="xl" paddingBottom={11}>
-          Hello! I'm Nathan.
+          {"Hello! I'm Nathan."}
         </Heading>
         <Text fontSize={["md", "xl"]}>
           Digital crafter specializing in Frontend development.
@@ -78,12 +78,12 @@ const ProjectsSection = ({ data }: { data: Array<ProjectType> }) => {
     <Box as="section" marginBottom={16}>
       <Box>
         <Box>
-          <Link href="/projects">
+          <Link href="/projects" passHref>
             <Heading as="h1" size="xl" cursor="pointer" marginBottom={2}>
               Projects
             </Heading>
           </Link>
-          <Text>Some notable projects I've worked on previously.</Text>
+          <Text>{"Some notable projects I've worked on previously."}</Text>
         </Box>
 
         <Grid

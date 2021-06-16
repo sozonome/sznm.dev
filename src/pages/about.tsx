@@ -54,11 +54,11 @@ const AboutContent = () => {
     >
       <Heading size="lg">👋 Hi, how are you?</Heading>
       <Text {...textProps}>
-        I'm Nathan, currently working as a Frontend Engineer. Most of the time I
+        {`I'm Nathan, currently working as a Frontend Engineer. Most of the time I
         work with TypeScript and React. I make fun projects in my free time and
         share it here. Whether to explore more around React and its frameworks
         (Gatsby, Next.js), Ionic, trying out Svelte and Vue, or other
-        technologies.
+        technologies.`}
       </Text>
       <Text {...textProps}>
         I like exploring useful and fun tech products (surfing around

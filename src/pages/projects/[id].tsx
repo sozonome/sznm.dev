@@ -23,7 +23,7 @@ const Project = ({ projectData }: ProjectProps) => {
       </Head>
 
       <Box as="article">
-        <Link href="/projects">
+        <Link href="/projects" passHref>
           <Button
             leftIcon={<AiOutlineArrowLeft />}
             size="sm"

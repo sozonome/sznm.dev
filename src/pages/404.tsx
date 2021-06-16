@@ -32,13 +32,13 @@ const Page404 = () => {
 
       <Box marginY={4}>
         <Heading textAlign="center" fontSize="3xl" marginBottom={2}>
-          Seems like you're lost.
+          {"Seems like you're lost."}
         </Heading>
 
         <Box textAlign="center">
           <Link href="/" passHref>
             <Button backgroundColor={buttonBackgroundColor}>
-              Let's Head Back
+              {"Let's Head Back"}
             </Button>
           </Link>
         </Box>

@@ -35,14 +35,14 @@ const ModalWrapper = ({ isOpen, onClose, selectedProject }) => {
         </ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <Link href={selectedProject.projectLink}>
+          <Link href={selectedProject.projectLink} passHref>
             <Button width={"100%"} backgroundColor="orange.400" color="white">
               Visit
             </Button>
           </Link>
         </ModalBody>
         <ModalFooter>
-          <Link href={"/projects/[id]"} as={`/projects/${selectedProject.id}`}>
+          <Link href={`/projects/${selectedProject.id}`} passHref>
             <Button width={"100%"}>More</Button>
           </Link>
         </ModalFooter>

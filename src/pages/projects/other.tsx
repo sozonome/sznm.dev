@@ -29,7 +29,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
       <Head>
         <title>Projects - Other | sozonome</title>
       </Head>
-      <Link href="/projects">
+      <Link href="/projects" passHref>
         <Button
           leftIcon={<AiOutlineArrowLeft />}
           size="sm"

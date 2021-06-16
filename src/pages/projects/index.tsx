@@ -71,7 +71,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
         {projects}
       </Grid>
 
-      <Link href="/projects/other">
+      <Link href="/projects/other" passHref>
         <Button isFullWidth>Other Projects</Button>
       </Link>
     </Box>

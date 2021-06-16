@@ -34,9 +34,10 @@ export const renderers = {
         <SyntaxHighlighter
           language={language}
           style={dracula}
-          children={value}
           showLineNumbers={false}
-        />
+        >
+          {value}
+        </SyntaxHighlighter>
       </Box>
     );
   },
