@@ -83,7 +83,6 @@ const ProjectsSection = ({ data }: { data: Array<ProjectType> }) => {
               Projects
             </Heading>
           </Link>
-          <Text>{"Some highlighted personal projects I've worked on previously."}</Text>
         </Box>
 
         <Grid

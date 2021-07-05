@@ -19,34 +19,30 @@ const ProjectDetailWrapper = ({
   projectData: { title, icon, description, stacks },
 }: ProjectDetailWrapperProps) => {
   const { colorMode } = useColorMode();
-
   const backgroundColor = useColorModeValue("gray.200", "gray.600");
+  const descriptionTextColor = useColorModeValue("gray.500", "gray.400");
 
   return (
     <Box
       width="100%"
       height="100%"
-      padding={4}
+      padding={8}
       borderRadius={24}
       backgroundColor={backgroundColor}
     >
-      <Flex alignItems="center" width="100%" height="100%" gridGap={4}>
-        <Box flexBasis="15%">
-          <Flex maxWidth={16} marginX="auto">
-            <Image width="100%" height="100%" src={icon} alt={title} />
-          </Flex>
-        </Box>
-
-        <Grid gap={3} flexBasis="85%">
-          <Box>
+      <Flex alignItems="center" width="100%" height="100%" gridGap={8}>
+        <Flex gridGap={6} wrap="wrap" flexBasis="85%" height="full">
+          <Box alignSelf="flex-start" width="full">
             <Heading size="md" marginBottom={2}>
               {title}
             </Heading>
-            <Text fontSize="sm">{description}</Text>
+            <Text fontSize="sm" color={descriptionTextColor}>
+              {description}
+            </Text>
           </Box>
 
           {stacks && (
-            <Flex marginTop={11} alignItems="center">
+            <Flex marginTop={11} alignItems="center" opacity="0.6">
               {stacks.map((stack, index) => (
                 <Box
                   marginRight={3}
@@ -63,7 +59,13 @@ const ProjectDetailWrapper = ({
               ))}
             </Flex>
           )}
-        </Grid>
+        </Flex>
+
+        <Box flexBasis="15%">
+          <Flex maxWidth={16} marginX="auto">
+            <Image width="100%" height="100%" src={icon} alt={title} />
+          </Flex>
+        </Box>
       </Flex>
     </Box>
   );

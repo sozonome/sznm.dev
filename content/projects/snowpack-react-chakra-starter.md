@@ -5,7 +5,6 @@ repoLink: https://github.com/sozonome/snowpack-react-chakra-starter
 description: template to initialize snowpack react-ts app with Chakra UI setup
 date: "2021-03-28"
 icon: "/app_icons/nextchakra-starter.svg"
-featured: true
 appStoreLink:
 playStoreLink:
 stacks:

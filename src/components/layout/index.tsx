@@ -19,10 +19,10 @@ const Layout = ({ children }: LayoutProps) => {
     <Box
       backgroundColor={backgroundColor}
       color={textColor}
-      paddingBottom={[160, 20]}
       minHeight="100vh"
+      paddingBottom={[160, 16]}
+      paddingTop={24}
       transition="0.4s ease-out"
-      paddingY={24}
     >
       <Meta />
       <Header />

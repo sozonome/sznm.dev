@@ -57,14 +57,11 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
         <Heading as="h1" size="xl" marginBottom={2}>
           Projects
         </Heading>
-        <Text as="p" size="sm" fontWeight="normal">
-          Some personal projects I worked on previously.
-        </Text>
       </Box>
 
       <Grid
         gap={6}
-        templateColumns={["repeat(1)", "repeat(1)", "repeat(2, 1fr)"]}
+        // templateColumns={["repeat(1)", "repeat(1)", "repeat(2, 1fr)"]}
         marginBottom={8}
       >
         {/* Highlight */}

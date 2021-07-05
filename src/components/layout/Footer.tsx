@@ -4,7 +4,7 @@ import { responsiveWidthProps } from "styles/customTheme";
 
 const Footer = () => {
   return (
-    <Box as="footer" width="full" marginBottom={12} {...responsiveWidthProps}>
+    <Box as="footer" width="full" {...responsiveWidthProps}>
       <Text fontSize={["xs", "sm"]}>
         2020 - {new Date().getFullYear()} |{" "}
         <Link
