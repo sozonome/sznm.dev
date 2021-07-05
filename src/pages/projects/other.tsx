@@ -44,7 +44,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
           Other Projects
         </Heading>
         <Text as="p" size="sm" fontWeight="normal">
-          Other projects I worked on previously.
+          Other personal projects I worked on previously.
         </Text>
       </Box>
       <Grid

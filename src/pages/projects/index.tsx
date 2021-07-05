@@ -58,7 +58,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
           Projects
         </Heading>
         <Text as="p" size="sm" fontWeight="normal">
-          Some projects I worked on previously.
+          Some personal projects I worked on previously.
         </Text>
       </Box>
 
