@@ -5,6 +5,7 @@ import {
   Heading,
   Link as ChakraLink,
   Text,
+  Tooltip,
 } from "@chakra-ui/react";
 import Head from "next/head";
 import Link from "next/link";
@@ -68,9 +69,25 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
         {projects}
       </Grid>
 
-      <Link href="/projects/other" passHref>
-        <Button isFullWidth>Other Projects</Button>
-      </Link>
+      <Grid gap={2} templateColumns={["1fr", "1fr", "repeat(2, 1fr)"]}>
+        <Link href="/projects/other" passHref>
+          <Button isFullWidth>Other Projects</Button>
+        </Link>
+
+        <Tooltip
+          label="to view the detailed portfolio page, you must ask for the password through contacting me first, as I build the portfolio page for the one who really have interest to work with me"
+          aria-label="portfolio view tooltip"
+        >
+          <Button
+            as="a"
+            href="https://prtfl.sznm.dev"
+            target="_blank"
+            isFullWidth
+          >
+            see more detailed portfolio
+          </Button>
+        </Tooltip>
+      </Grid>
     </Box>
   );
 };
