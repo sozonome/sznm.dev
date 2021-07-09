@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import { Flex } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 const MotionFlex = motion(Flex);
 

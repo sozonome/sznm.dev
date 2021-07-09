@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { Box, Flex, Text, useColorMode } from "@chakra-ui/react";
+import Link from "next/link";
 
 import Navigation from "./Navigation";
 import ThemeToggle from "./ThemeToggle";

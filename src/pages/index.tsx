@@ -1,7 +1,3 @@
-import { useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { GetStaticProps } from "next";
 import {
   Box,
   Heading,
@@ -10,6 +6,10 @@ import {
   useColorModeValue,
   Grid,
 } from "@chakra-ui/react";
+import { useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { GetStaticProps } from "next";
 
 import Card from "components/projects/Card";
 import BlogPostPreview from "components/blog/BlogPostPreview";
