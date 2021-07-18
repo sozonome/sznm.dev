@@ -10,7 +10,7 @@ type CardProps = {
 const Card = ({
   project: { title, icon, thumbnail, thumbnailDark, projectLink },
 }: CardProps) => {
-  const backgroundColor = useColorModeValue("gray.200", "gray.600");
+  const backgroundColor = useColorModeValue("gray.100", "gray.700");
   const dynamicThumbnail = useColorModeValue(
     thumbnail,
     thumbnailDark ? thumbnailDark : thumbnail
@@ -20,7 +20,8 @@ const Card = ({
   return (
     <Link href={projectLink} isExternal _hover={{ textDecoration: "none" }}>
       <Box
-        backgroundColor={backgroundColor}
+        borderColor={backgroundColor}
+        borderWidth={2}
         boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.1);"
         borderRadius={20}
         cursor={"pointer"}
@@ -46,8 +47,8 @@ const Card = ({
         {thumbnail && (
           <Box position="relative" height={[200, 250, 200]}>
             <Image
+              width={200}
               height={200}
-              width="full"
               layout="responsive"
               objectFit="cover"
               objectPosition="50% 0"

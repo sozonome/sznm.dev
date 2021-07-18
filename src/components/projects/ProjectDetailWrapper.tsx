@@ -19,7 +19,7 @@ const ProjectDetailWrapper = ({
   projectData: { title, icon, description, stacks },
 }: ProjectDetailWrapperProps) => {
   const { colorMode } = useColorMode();
-  const backgroundColor = useColorModeValue("gray.200", "gray.600");
+  const backgroundColor = useColorModeValue("gray.200", "gray.700");
   const descriptionTextColor = useColorModeValue("gray.500", "gray.400");
 
   return (
@@ -28,7 +28,8 @@ const ProjectDetailWrapper = ({
       height="100%"
       padding={8}
       borderRadius={24}
-      backgroundColor={backgroundColor}
+      borderWidth={2}
+      borderColor={backgroundColor}
     >
       <Flex alignItems="center" width="100%" height="100%" gridGap={8}>
         <Flex gridGap={6} wrap="wrap" flexBasis="85%" height="full">

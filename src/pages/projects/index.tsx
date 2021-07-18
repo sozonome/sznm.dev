@@ -71,7 +71,9 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
 
       <Grid gap={2} templateColumns={["1fr", "1fr", "repeat(2, 1fr)"]}>
         <Link href="/projects/other" passHref>
-          <Button isFullWidth>Other Projects</Button>
+          <Button variant="outline" isFullWidth>
+            Other Projects
+          </Button>
         </Link>
 
         <Tooltip
