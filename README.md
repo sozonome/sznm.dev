@@ -18,3 +18,4 @@ I create RSS feed feature in this site by combining methods from these three tut
 
 ### TODO
 - [ ] SEO Optimization
+- [ ] Migrate content to use CMS, paired with ISG
