@@ -19,7 +19,7 @@ const Header = () => {
           ? "rgba(247, 250, 252, 0.8)"
           : "rgba(26, 32, 44, 0.8)"
       }
-      style={{ backdropFilter: "blur(6px)" }}
+      className="sticky-header"
       width="full"
     >
       <Flex
