@@ -7,7 +7,7 @@
   filter: drop-shadow(0 0 12px #454a58);
 }
 
-.sticky-header {
+.blur-bg {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }

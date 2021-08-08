@@ -19,7 +19,7 @@ const Header = () => {
           ? "rgba(247, 250, 252, 0.8)"
           : "rgba(26, 32, 44, 0.8)"
       }
-      className="sticky-header"
+      className="blur-bg"
       width="full"
     >
       <Flex

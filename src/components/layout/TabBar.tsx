@@ -10,6 +10,7 @@ const TabBar = () => {
 
   return (
     <Flex
+      className="blur-bg"
       marginX={["5%", "3%", "2%", 0]}
       position="fixed"
       width={["90%", "94%", "82%", 800]}
@@ -17,7 +18,6 @@ const TabBar = () => {
       bottom={22}
       borderRadius={20}
       backgroundColor={backgroundColor}
-      style={{ backdropFilter: "blur(6px)" }}
       padding={22}
       textAlign="center"
       alignItems="center"
