@@ -1,0 +1,14 @@
+{
+  "conventionalCommits.scopes": [
+    "blog",
+    "components",
+    "content",
+    "helpers",
+    "layout",
+    "lib",
+    "pages",
+    "projects",
+    "static",
+    "theme"
+  ]
+}

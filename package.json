@@ -10,8 +10,9 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write src",
-    "pre-commit": "lint-staged",
+    "up-latest": "yarn upgrade-interactive --latest",
     "release": "standard-version",
+    "push-release": "git push --follow-tags origin main",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -36,12 +37,14 @@
     "twemoji": "^13.1.0"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^13.1.0",
     "@types/cors": "^2.8.12",
     "@types/node": "^15.14.7",
     "@types/react": "^17.0.18",
     "@types/react-syntax-highlighter": "^13.5.2",
     "@types/rss": "^0.0.28",
     "@types/twemoji": "^12.1.2",
+    "commitlint": "^13.1.0",
     "cors": "^2.8.5",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.0",
@@ -60,6 +63,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "eslint",
       "prettier --write"
     ]
   }
