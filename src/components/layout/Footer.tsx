@@ -1,10 +1,8 @@
 import { Box, Link, Text } from "@chakra-ui/react";
 
-import { responsiveWidthProps } from "styles/customTheme";
-
 const Footer = () => {
   return (
-    <Box as="footer" width="full" {...responsiveWidthProps}>
+    <Box as="footer" width="full" layerStyle="layoutBlock">
       <Text fontSize={["xs", "sm"]}>
         2020 - {new Date().getFullYear()} |{" "}
         <Link

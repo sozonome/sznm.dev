@@ -10,7 +10,7 @@ const TabBar = () => {
 
   return (
     <Flex
-      className="blur-bg"
+      layerStyle="blur-bg"
       marginX={["5%", "3%", "2%", 0]}
       position="fixed"
       width={["90%", "94%", "82%", 800]}

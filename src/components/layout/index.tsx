@@ -5,8 +5,6 @@ import Footer from "./Footer";
 import Meta from "./meta";
 import TabBar from "./TabBar";
 
-import { responsiveWidthProps } from "styles/customTheme";
-
 type LayoutProps = {
   children: any;
 };
@@ -32,7 +30,7 @@ const Layout = ({ children }: LayoutProps) => {
         zIndex={1}
         margin="0 auto"
       >
-        <Box as="main" {...responsiveWidthProps}>
+        <Box as="main" layerStyle="layoutBlock">
           {children}
         </Box>
         <Footer />

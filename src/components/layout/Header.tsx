@@ -4,8 +4,6 @@ import Link from "next/link";
 import Navigation from "./Navigation";
 import ThemeToggle from "./ThemeToggle";
 
-import { responsiveWidthProps } from "styles/customTheme";
-
 const Header = () => {
   const { colorMode } = useColorMode();
 
@@ -19,14 +17,14 @@ const Header = () => {
           ? "rgba(247, 250, 252, 0.8)"
           : "rgba(26, 32, 44, 0.8)"
       }
-      className="blur-bg"
+      layerStyle="blur-bg"
       width="full"
     >
       <Flex
+        layerStyle="layoutBlock"
         marginX="auto"
         maxWidth="800px"
         as="header"
-        {...responsiveWidthProps}
         alignItems="center"
       >
         <Link href="/" passHref>

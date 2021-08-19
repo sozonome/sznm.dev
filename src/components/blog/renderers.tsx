@@ -18,7 +18,7 @@ export const renderers = {
     return (
       <Box>
         <Flex alignItems="center">
-          {language && <Code colorScheme="gray">{language}</Code>}
+          {language && <Code>{language}</Code>}
           <Button
             marginLeft="auto"
             colorScheme="green"

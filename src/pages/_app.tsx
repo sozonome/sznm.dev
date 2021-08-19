@@ -8,7 +8,7 @@ import Layout from "components/layout";
 
 import { initGA, logPageView } from "lib/analytics";
 
-import customTheme from "styles/customTheme";
+import customTheme from "styles/theme";
 import "styles/global.css";
 
 const MyApp = ({ Component, pageProps }) => {
