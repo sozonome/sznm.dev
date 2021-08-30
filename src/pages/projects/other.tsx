@@ -4,7 +4,6 @@ import {
   Grid,
   Heading,
   Link as ChakraLink,
-  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
@@ -12,11 +11,9 @@ import Link from "next/link";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import ProjectDetailWrapper from "components/projects/ProjectDetailWrapper";
-
 import { getSortedProjectsData } from "helpers/projects";
-
-import { ProjectType } from "models/project";
 import { sznmOgImage } from "helpers/sznmOgImage";
+import { ProjectType } from "models/project";
 
 type ProjectsProps = {
   allProjectsData: Array<ProjectType>;

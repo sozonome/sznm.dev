@@ -1,12 +1,13 @@
 import { Box, useColorModeValue } from "@chakra-ui/react";
+import { ReactNode } from "react";
 
-import Header from "./Header";
 import Footer from "./Footer";
+import Header from "./Header";
 import Meta from "./meta";
 import TabBar from "./TabBar";
 
 type LayoutProps = {
-  children: any;
+  children: ReactNode;
 };
 
 const Layout = ({ children }: LayoutProps) => {

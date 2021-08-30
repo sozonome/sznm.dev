@@ -1,7 +1,7 @@
 import { IconButton } from "@chakra-ui/react";
-import { FaFeatherAlt, FaHome, FaRocket, FaUser } from "react-icons/fa";
 import { useRouter } from "next/router";
 import { IconType } from "react-icons";
+import { FaFeatherAlt, FaHome, FaRocket, FaUser } from "react-icons/fa";
 
 type NavItemProps = {
   href: string;

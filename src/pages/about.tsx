@@ -1,5 +1,5 @@
 import { Heading, Text, Link, Box, BoxProps } from "@chakra-ui/react";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import { IconBaseProps } from "react-icons";
 import {
   FaDev,
@@ -16,7 +16,6 @@ import { IconType } from "react-icons/lib";
 
 import MotionBox from "components/motion/MotionBox";
 import MotionFlex from "components/motion/MotionFlex";
-import { NextSeo } from "next-seo";
 
 const About = () => {
   return (

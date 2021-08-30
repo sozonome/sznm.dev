@@ -6,18 +6,17 @@ import {
   useColorModeValue,
   Grid,
 } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { GetStaticProps } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { GetStaticProps } from "next";
+import { useEffect } from "react";
 
-import Card from "components/projects/Card";
 import BlogPostPreview from "components/blog/BlogPostPreview";
-
-import { getSortedProjectsData } from "helpers/projects";
+import Card from "components/projects/Card";
 import { getSortedPostsData } from "helpers/posts";
-import { ProjectType } from "models/project";
+import { getSortedProjectsData } from "helpers/projects";
 import { BlogPostType } from "models/blog";
+import { ProjectType } from "models/project";
 
 type HomeProps = {
   allProjectsData: Array<ProjectType>;

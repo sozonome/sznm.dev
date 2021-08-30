@@ -6,15 +6,13 @@ import {
   Link as ChakraLink,
   Tooltip,
 } from "@chakra-ui/react";
-import Link from "next/link";
 import { NextSeo } from "next-seo";
+import Link from "next/link";
 
 import ProjectDetailWrapper from "components/projects/ProjectDetailWrapper";
-
 import { getSortedProjectsData } from "helpers/projects";
-
-import { ProjectType } from "models/project";
 import { sznmOgImage } from "helpers/sznmOgImage";
+import { ProjectType } from "models/project";
 
 type ProjectsProps = {
   allProjectsData: Array<ProjectType>;

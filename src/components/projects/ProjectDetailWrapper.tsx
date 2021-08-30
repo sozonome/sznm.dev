@@ -5,7 +5,6 @@ import {
   Flex,
   useColorMode,
   useColorModeValue,
-  Grid,
 } from "@chakra-ui/react";
 import Image from "next/image";
 

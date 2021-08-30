@@ -1,15 +1,12 @@
 import { Heading, Box, Text } from "@chakra-ui/react";
-import Head from "next/head";
 import fs from "fs";
+import { NextSeo } from "next-seo";
 
 import BlogPostPreview from "components/blog/BlogPostPreview";
-
-import { getSortedPostsData } from "helpers/posts";
 import generateRss from "helpers/generateRss";
-
-import { BlogPostType } from "models/blog";
-import { NextSeo } from "next-seo";
+import { getSortedPostsData } from "helpers/posts";
 import { sznmOgImage } from "helpers/sznmOgImage";
+import { BlogPostType } from "models/blog";
 
 type BlogPostsProps = {
   allPostsData: Array<BlogPostType>;

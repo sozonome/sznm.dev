@@ -3,7 +3,6 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 import { getSortedProjectsData } from "helpers/projects";
 import initMiddleware from "lib/init-middleware";
-
 import { ProjectType } from "models/project";
 
 const cors = initMiddleware(

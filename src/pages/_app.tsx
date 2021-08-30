@@ -1,16 +1,13 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import { useRouter } from "next/router";
 import { DefaultSeo } from "next-seo";
+import { useRouter } from "next/router";
 import { useEffect } from "react";
 import "@fontsource/recursive/latin.css";
 import "@fontsource/catamaran/latin.css";
 
 import defaultSEOConfig from "../../next-seo.config";
-
 import Layout from "components/layout";
-
 import { initGA, logPageView } from "lib/analytics";
-
 import customTheme from "styles/theme";
 import "styles/global.css";
 

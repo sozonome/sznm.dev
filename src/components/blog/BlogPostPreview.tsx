@@ -2,9 +2,7 @@ import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import Link from "next/link";
 
 import Twemoji from "components/Twemoji";
-
 import { dateFormatLong } from "helpers/dateFormat";
-
 import { BlogPostType } from "models/blog";
 
 type BlogPostPreviewProps = {

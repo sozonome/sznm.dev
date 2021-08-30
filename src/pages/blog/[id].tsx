@@ -4,15 +4,13 @@ import ReactMarkdown from "react-markdown";
 
 import { renderers } from "components/blog/renderers";
 import Twemoji from "components/Twemoji";
-
-import { getAllPostIds, getPostData } from "helpers/posts";
+import { baseUrl } from "constants/baseUrl";
 import { dateFormatLong } from "helpers/dateFormat";
-
+import { getAllPostIds, getPostData } from "helpers/posts";
+import { sznmOgImage } from "helpers/sznmOgImage";
 import { BlogPostType } from "models/blog";
 
 import styles from "./[id].module.scss";
-import { baseUrl } from "constants/baseUrl";
-import { sznmOgImage } from "helpers/sznmOgImage";
 
 type BlogPostProps = {
   postData: BlogPostType;
