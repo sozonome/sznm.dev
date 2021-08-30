@@ -15,8 +15,9 @@ const CommitLintConfiguration = {
         "lib",
         "pages",
         "projects",
+        "seo",
         "static",
-        "theme"
+        "theme",
       ],
     ],
     "scope-case": [2, "always", "kebab-case"],

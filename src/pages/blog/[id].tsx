@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
-import Head from "next/head";
+import { BlogJsonLd, NextSeo } from "next-seo";
 import ReactMarkdown from "react-markdown";
 
 import { renderers } from "components/blog/renderers";
@@ -11,25 +11,42 @@ import { dateFormatLong } from "helpers/dateFormat";
 import { BlogPostType } from "models/blog";
 
 import styles from "./[id].module.scss";
-import SocialMeta from "components/SocialMeta";
+import { baseUrl } from "constants/baseUrl";
+import { sznmOgImage } from "helpers/sznmOgImage";
 
 type BlogPostProps = {
   postData: BlogPostType;
 };
 
 const BlogPost = ({ postData }: BlogPostProps) => {
-  const ogImage = `https://og-image.sznm.dev/**${postData.title}**.png?theme=dark&md=1&fontSize=100px&images=https%3A%2F%2Fsznm.dev%2Favataaars.svg`;
+  const ogImage = sznmOgImage(postData.title);
+  const pageUrl = `${baseUrl}/blog/${postData.id}`;
 
   return (
     <Box>
-      {console.log({ postData, ogImage })}
-      <Head>
-        <title>{postData.title} | sozonome</title>
-      </Head>
-      <SocialMeta
+      <NextSeo
         title={`${postData.title} | sozonome`}
-        url={`https://sznm.dev/blog/${postData.id}`}
-        image={ogImage}
+        canonical={pageUrl}
+        openGraph={{
+          title: `${postData.title} | sozonome`,
+          url: pageUrl,
+          images: [
+            {
+              url: ogImage,
+              alt: `${postData.title} og-image`,
+            },
+          ],
+        }}
+      />
+
+      <BlogJsonLd
+        url={`${baseUrl}/blog/${postData.id}`}
+        title={`${postData.title} | sozonome`}
+        images={[]}
+        datePublished={new Date(postData.date).toISOString()}
+        dateModified={new Date(postData.date).toISOString()}
+        authorName="Agustinus Nathaniel"
+        description={`A blog post by Agustinus Nathaniel explaining about ${postData.title}`}
       />
 
       <Flex alignItems="center" marginBottom={16}>

@@ -7,7 +7,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import Link from "next/link";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
@@ -16,6 +16,7 @@ import ProjectDetailWrapper from "components/projects/ProjectDetailWrapper";
 import { getSortedProjectsData } from "helpers/projects";
 
 import { ProjectType } from "models/project";
+import { sznmOgImage } from "helpers/sznmOgImage";
 
 type ProjectsProps = {
   allProjectsData: Array<ProjectType>;
@@ -26,9 +27,19 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
 
   return (
     <Box>
-      <Head>
-        <title>Projects - Other | sozonome</title>
-      </Head>
+      <NextSeo
+        title="Projects - Other"
+        openGraph={{
+          title: "Projects | sozonome",
+          images: [
+            {
+              url: sznmOgImage("Projects"),
+              alt: "Other Projects | sozonome og-image",
+            },
+          ],
+        }}
+      />
+
       <Link href="/projects" passHref>
         <Button
           leftIcon={<AiOutlineArrowLeft />}

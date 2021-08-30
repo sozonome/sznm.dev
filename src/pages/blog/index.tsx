@@ -8,6 +8,8 @@ import { getSortedPostsData } from "helpers/posts";
 import generateRss from "helpers/generateRss";
 
 import { BlogPostType } from "models/blog";
+import { NextSeo } from "next-seo";
+import { sznmOgImage } from "helpers/sznmOgImage";
 
 type BlogPostsProps = {
   allPostsData: Array<BlogPostType>;
@@ -22,9 +24,18 @@ const BlogPosts = ({ allPostsData }: BlogPostsProps) => {
 
   return (
     <Box>
-      <Head>
-        <title>Blog Posts | sozonome</title>
-      </Head>
+      <NextSeo
+        title="Blog Posts"
+        openGraph={{
+          title: "Blog Posts | sozonome",
+          images: [
+            {
+              url: sznmOgImage("Blog Posts | sozonome"),
+              alt: "Blog Posts | sozonome og-image",
+            },
+          ],
+        }}
+      />
 
       <Box marginBottom={22}>
         <Heading as="h1" size="xl" marginBottom={2}>
