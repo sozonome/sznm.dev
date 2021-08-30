@@ -4,11 +4,10 @@ import {
   Grid,
   Heading,
   Link as ChakraLink,
-  Text,
   Tooltip,
 } from "@chakra-ui/react";
-import Head from "next/head";
 import Link from "next/link";
+import { NextSeo } from "next-seo";
 
 import ProjectDetailWrapper from "components/projects/ProjectDetailWrapper";
 
@@ -50,9 +49,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
 
   return (
     <Box>
-      <Head>
-        <title>Projects | sozonome</title>
-      </Head>
+      <NextSeo title="Projects" />
 
       <Box marginBottom={8}>
         <Heading as="h1" size="xl" marginBottom={2}>

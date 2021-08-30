@@ -7,7 +7,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import Link from "next/link";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
@@ -26,9 +26,8 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
 
   return (
     <Box>
-      <Head>
-        <title>Projects - Other | sozonome</title>
-      </Head>
+      <NextSeo title="Projects - Other" />
+
       <Link href="/projects" passHref>
         <Button
           leftIcon={<AiOutlineArrowLeft />}

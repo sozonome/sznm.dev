@@ -3,12 +3,7 @@ import Head from "next/head";
 const Meta = () => {
   return (
     <Head>
-      <title>Hello | sozonome</title>
       <link rel="icon" href="/avataaars.svg" />
-      <meta
-        name="description"
-        content="Agustinus Nathaniel's Dev Site | sozonome"
-      />
       <link
         rel="alternate"
         type="application/rss+xml"

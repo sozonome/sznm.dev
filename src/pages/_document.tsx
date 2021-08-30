@@ -1,7 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 export const APP_NAME = "sznm.dev";
-const APP_DESCRIPTION = "Agustinus Nathaniel's Dev Site";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -20,7 +19,6 @@ class MyDocument extends Document {
             content="default"
           />
           <meta name="apple-mobile-web-app-title" content={APP_NAME} />
-          <meta name="description" content={APP_DESCRIPTION} />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="theme-color" content="#444444" />
