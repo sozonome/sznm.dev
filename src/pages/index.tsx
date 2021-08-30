@@ -61,10 +61,11 @@ const ProjectsSection = ({ data }: { data: Array<ProjectType> }) => {
   useEffect(() => {
     data
       .filter((project) => project.highlight && project)
-      .map(({ id }) => {
+      .forEach(({ id }) => {
         router.prefetch("/projects/[id]", `/projects/${id}`);
       });
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data]);
 
   return (
     <Box as="section" marginBottom={16}>
