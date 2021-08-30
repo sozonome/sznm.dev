@@ -16,6 +16,7 @@ import ProjectDetailWrapper from "components/projects/ProjectDetailWrapper";
 import { getSortedProjectsData } from "helpers/projects";
 
 import { ProjectType } from "models/project";
+import { sznmOgImage } from "helpers/sznmOgImage";
 
 type ProjectsProps = {
   allProjectsData: Array<ProjectType>;
@@ -26,7 +27,18 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
 
   return (
     <Box>
-      <NextSeo title="Projects - Other" />
+      <NextSeo
+        title="Projects - Other"
+        openGraph={{
+          title: "Projects | sozonome",
+          images: [
+            {
+              url: sznmOgImage("Projects"),
+              alt: "Other Projects | sozonome og-image",
+            },
+          ],
+        }}
+      />
 
       <Link href="/projects" passHref>
         <Button
