@@ -1,8 +1,10 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
-import remark from "remark";
-import html from "remark-html";
+import { remark } from "remark";
+import remarkHtml from "remark-html";
+
+import { BlogPostType } from "models/blog";
 
 const postsDirectory = path.join(process.cwd(), "content/posts");
 
@@ -61,7 +63,7 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id) {
+export async function getPostData(id: string): Promise<BlogPostType> {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
@@ -70,15 +72,17 @@ export async function getPostData(id) {
 
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
-    .use(html)
+    .use(remarkHtml)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
+
+  const otherFields = matterResult.data as BlogPostType;
 
   // Combine the data with the id
   return {
     id,
     contentHtml,
     rawContent: matterResult.content,
-    ...matterResult.data,
+    ...otherFields,
   };
 }

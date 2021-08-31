@@ -6,6 +6,7 @@ import {
   Link as ChakraLink,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
 import { AiOutlineArrowLeft } from "react-icons/ai";
@@ -15,11 +16,11 @@ import { getSortedProjectsData } from "helpers/projects";
 import { sznmOgImage } from "helpers/sznmOgImage";
 import { ProjectType } from "models/project";
 
-type ProjectsProps = {
+type OtherProjectsProps = {
   allProjectsData: Array<ProjectType>;
 };
 
-const Projects = ({ allProjectsData }: ProjectsProps) => {
+const OtherProjects = ({ allProjectsData }: OtherProjectsProps) => {
   const buttonColor = useColorModeValue("gray.300", "gray.600");
 
   return (
@@ -83,7 +84,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps<OtherProjectsProps> = async () => {
   const allProjectsData = getSortedProjectsData();
   return {
     props: {
@@ -92,4 +93,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default Projects;
+export default OtherProjects;

@@ -1,22 +1,17 @@
-import {
-  Box,
-  Button,
-  Code,
-  Flex,
-  Heading,
-  HeadingProps,
-  Link as ChakraLink,
-} from "@chakra-ui/react";
-import { ElementType } from "react";
+import { Box, Button, Code, Flex, Link as ChakraLink } from "@chakra-ui/react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import { Options } from "react-markdown/lib/ast-to-react";
+import HeadingLink from "./HeadingLink";
 
-export const renderers = {
-  code: ({ language, value }) => {
-    return (
-      <Box>
+export const renderers: Options["components"] = {
+  code: ({ node, inline, className, children, ...props }) => {
+    /** https://github.com/remarkjs/react-markdown#use-custom-components-syntax-highlight */
+    const match = /language-(\w+)/.exec(className || "");
+    const language = match?.[1];
+    const childrenValue = String(children).replace(/\n$/, "");
+    return !inline && match ? (
+      <Box width="100%">
         <Flex alignItems="center">
           {language && <Code>{language}</Code>}
           <Button
@@ -26,7 +21,7 @@ export const renderers = {
             padding={0}
             fontSize={12}
             textTransform="lowercase"
-            onClick={() => navigator.clipboard.writeText(value)}
+            onClick={() => navigator.clipboard.writeText(childrenValue)}
           >
             Copy
           </Button>
@@ -36,9 +31,13 @@ export const renderers = {
           style={dracula}
           showLineNumbers={false}
         >
-          {value}
+          {childrenValue}
         </SyntaxHighlighter>
       </Box>
+    ) : (
+      <code className={className} {...props}>
+        {children}
+      </code>
     );
   },
   link: ({ href, node }) => {
@@ -48,78 +47,10 @@ export const renderers = {
       </ChakraLink>
     );
   },
-  heading: ({ node: { children }, level }) => {
-    let head: { as: ElementType; size: HeadingProps["size"] } = {
-      as: "h1",
-      size: "2xl",
-    };
-
-    switch (level) {
-      case 1:
-        head = {
-          as: "h1",
-          size: "2xl",
-        };
-        break;
-      case 2:
-        head = {
-          as: "h2",
-          size: "xl",
-        };
-        break;
-      case 3:
-        head = {
-          as: "h3",
-          size: "lg",
-        };
-        break;
-      case 4:
-        head = {
-          as: "h4",
-          size: "md",
-        };
-        break;
-      case 5:
-        head = {
-          as: "h5",
-          size: "sm",
-        };
-        break;
-      case 6:
-        head = {
-          as: "h6",
-          size: "xs",
-        };
-        break;
-      default:
-        head = {
-          as: "h1",
-          size: "2xl",
-        };
-    }
-    const router = useRouter();
-
-    return (
-      <Link
-        href={`${router.asPath.split("#")[0]}#${children[0].value
-          .split(" ")
-          .join("-")
-          .toLowerCase()}`}
-        passHref
-      >
-        <Box _hover={{ textDecoration: "underline", cursor: "pointer" }}>
-          <Heading
-            as={head.as}
-            size={head.size}
-            marginY={4 + (7 - level) * 0.5}
-            id={children[0].value.split(" ").join("-").toLowerCase()}
-            paddingTop={24}
-            marginTop={-24}
-          >
-            {children[0].value}
-          </Heading>
-        </Box>
-      </Link>
-    );
-  },
+  h1: ({ children }) => <HeadingLink as="h1">{String(children)}</HeadingLink>,
+  h2: ({ children }) => <HeadingLink as="h2">{String(children)}</HeadingLink>,
+  h3: ({ children }) => <HeadingLink as="h3">{String(children)}</HeadingLink>,
+  h4: ({ children }) => <HeadingLink as="h4">{String(children)}</HeadingLink>,
+  h5: ({ children }) => <HeadingLink as="h5">{String(children)}</HeadingLink>,
+  h6: ({ children }) => <HeadingLink as="h6">{String(children)}</HeadingLink>,
 };

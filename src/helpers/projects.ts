@@ -1,7 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
-import remark from "remark";
+import { remark } from "remark";
 import html from "remark-html";
 
 const projectsDirectory = path.join(process.cwd(), "content/projects");
