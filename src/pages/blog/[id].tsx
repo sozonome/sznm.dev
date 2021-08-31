@@ -1,6 +1,8 @@
 import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
+import { GetStaticProps } from "next";
 import { BlogJsonLd, NextSeo } from "next-seo";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 import { renderers } from "components/blog/renderers";
 import Twemoji from "components/Twemoji";
@@ -68,8 +70,8 @@ const BlogPost = ({ postData }: BlogPostProps) => {
 
       <ReactMarkdown
         className={styles.content}
-        renderers={renderers}
-        allowDangerousHtml
+        rehypePlugins={[rehypeRaw]}
+        components={renderers}
       >
         {postData.rawContent}
       </ReactMarkdown>
@@ -85,7 +87,9 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps<BlogPostProps> = async ({
+  params,
+}) => {
   const postData = await getPostData(params.id);
   return {
     props: { postData },

@@ -1,4 +1,4 @@
-import { Heading, Box, Text } from "@chakra-ui/react";
+import { Heading, Box, Text, Grid } from "@chakra-ui/react";
 import fs from "fs";
 import { NextSeo } from "next-seo";
 
@@ -41,7 +41,7 @@ const BlogPosts = ({ allPostsData }: BlogPostsProps) => {
         <Text>Just some writings</Text>
       </Box>
 
-      <Box>{blogPosts}</Box>
+      <Grid gap={16}>{blogPosts}</Grid>
     </Box>
   );
 };
