@@ -126,14 +126,14 @@ const RecentPostSection = ({
         Recent Posts
       </Heading>
 
-      <Box marginTop={22}>
+      <Grid marginY={12} gap={16}>
         {allPostsData
           .filter((post) => post.published === true)
           .slice(0, 2)
           .map((postData, index) => (
             <BlogPostPreview postData={postData} key={index} />
           ))}
-      </Box>
+      </Grid>
 
       <Link href="/blog" passHref>
         <Button

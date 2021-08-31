@@ -41,7 +41,9 @@ const BlogPosts = ({ allPostsData }: BlogPostsProps) => {
         <Text>Just some writings</Text>
       </Box>
 
-      <Grid gap={16}>{blogPosts}</Grid>
+      <Grid gap={16} marginY={12}>
+        {blogPosts}
+      </Grid>
     </Box>
   );
 };
