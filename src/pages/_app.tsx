@@ -1,5 +1,8 @@
 import { ChakraProvider } from "@chakra-ui/react";
+import { EmotionCache } from "@emotion/cache";
+import { CacheProvider } from "@emotion/react";
 import { DefaultSeo } from "next-seo";
+import { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import "@fontsource/recursive/latin.css";
@@ -8,9 +11,20 @@ import "@fontsource/catamaran/latin.css";
 import defaultSEOConfig from "../../next-seo.config";
 import Layout from "components/layout";
 import { initGA, logPageView } from "lib/analytics";
+import createEmotionCache from "styles/createEmotionCache";
 import customTheme from "styles/theme";
 
-const MyApp = ({ Component, pageProps }) => {
+const clientSideEmotionCache = createEmotionCache();
+
+interface MyAppProps extends AppProps {
+  emotionCache?: EmotionCache;
+}
+
+const MyApp = ({
+  Component,
+  pageProps,
+  emotionCache = clientSideEmotionCache,
+}: MyAppProps) => {
   const router = useRouter();
 
   useEffect(() => {
@@ -33,12 +47,14 @@ const MyApp = ({ Component, pageProps }) => {
   }, [router.events]);
 
   return (
-    <ChakraProvider theme={customTheme}>
-      <DefaultSeo {...defaultSEOConfig} />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ChakraProvider>
+    <CacheProvider value={emotionCache}>
+      <ChakraProvider theme={customTheme}>
+        <DefaultSeo {...defaultSEOConfig} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ChakraProvider>
+    </CacheProvider>
   );
 };
 
