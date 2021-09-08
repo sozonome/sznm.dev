@@ -38,7 +38,7 @@
     "react-syntax-highlighter": "^15.4.4",
     "rehype-raw": "^6.1.0",
     "remark": "^14.0.1",
-    "remark-html": "^14.0.0",
+    "remark-html": "^14.0.1",
     "rss": "^1.2.2",
     "sass": "^1.38.2",
     "twemoji": "^13.1.0"
