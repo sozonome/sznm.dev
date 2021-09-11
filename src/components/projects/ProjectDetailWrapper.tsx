@@ -43,10 +43,10 @@ const ProjectDetailWrapper = ({
 
           {stacks && (
             <Flex marginTop={11} alignItems="center" opacity="0.6">
-              {stacks.map((stack, index) => (
+              {stacks.map((stack) => (
                 <Box
                   marginRight={3}
-                  key={index}
+                  key={stack}
                   style={{ filter: "drop-shadow(0 0 12px rgb(98, 114, 164))" }}
                 >
                   <Image

@@ -1,6 +1,6 @@
 import { Heading, Text, Link, Box, BoxProps } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
-import { IconBaseProps } from "react-icons";
+import { IconBaseProps, IconType } from "react-icons";
 import {
   FaDev,
   FaEnvelope,
@@ -12,27 +12,9 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
-import { IconType } from "react-icons/lib";
 
 import MotionBox from "components/motion/MotionBox";
 import MotionFlex from "components/motion/MotionFlex";
-
-const About = () => {
-  return (
-    <Box>
-      <NextSeo
-        title="About"
-        openGraph={{
-          title: "About | sozonome",
-          description: "About sznm.dev page",
-        }}
-      />
-      <HeadSection />
-      <AboutContent />
-      <Links />
-    </Box>
-  );
-};
 
 const HeadSection = () => {
   return (
@@ -140,35 +122,52 @@ const Links = () => {
         gridGap={1}
         {...staggerAnimationProps}
       >
-        <MotionLinks link={`https://github.com/sozonome`} icon={FaGithub} />
+        <MotionLinks link="https://github.com/sozonome" icon={FaGithub} />
         <MotionLinks
-          link={`https://linkedin.com/in/agustinusnathaniel`}
+          link="https://linkedin.com/in/agustinusnathaniel"
           icon={FaLinkedin}
         />
-        <MotionLinks link={`https://twitter.com/sozonome`} icon={FaTwitter} />
+        <MotionLinks link="https://twitter.com/sozonome" icon={FaTwitter} />
         <MotionLinks
-          link={`https://www.instagram.com/sozonome`}
+          link="https://www.instagram.com/sozonome"
           icon={FaInstagram}
         />
         <MotionLinks
-          link={`https://youtube.com/channel/UCJnYMGIHtQ8yInuq4Pc2Ttg`}
+          link="https://youtube.com/channel/UCJnYMGIHtQ8yInuq4Pc2Ttg"
           icon={FaYoutube}
         />
-        <MotionLinks link={`https://dev.to/sozonome`} icon={FaDev} />
+        <MotionLinks link="https://dev.to/sozonome" icon={FaDev} />
         <MotionLinks
-          link={`https://medium.com/@agustinusnathaniel`}
+          link="https://medium.com/@agustinusnathaniel"
           icon={FaMedium}
         />
         <MotionLinks
-          link={`https://www.producthunt.com/@sozonome/made`}
+          link="https://www.producthunt.com/@sozonome/made"
           icon={FaProductHunt}
         />
         <MotionLinks
-          link={`mailto:hello@sznm.dev?cc=agustinusnathaniel228@gmail.com`}
+          link="mailto:hello@sznm.dev?cc=agustinusnathaniel228@gmail.com"
           icon={FaEnvelope}
         />
       </MotionFlex>
     </MotionBox>
+  );
+};
+
+const About = () => {
+  return (
+    <Box>
+      <NextSeo
+        title="About"
+        openGraph={{
+          title: "About | sozonome",
+          description: "About sznm.dev page",
+        }}
+      />
+      <HeadSection />
+      <AboutContent />
+      <Links />
+    </Box>
   );
 };
 

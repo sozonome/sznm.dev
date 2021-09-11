@@ -15,8 +15,8 @@ type BlogPostsProps = {
 const BlogPosts = ({ allPostsData }: BlogPostsProps) => {
   const blogPosts = allPostsData
     .filter((post) => post.published === true)
-    .map((postData, index) => (
-      <BlogPostPreview postData={postData} key={index} />
+    .map((postData) => (
+      <BlogPostPreview postData={postData} key={postData.title} />
     ));
 
   return (

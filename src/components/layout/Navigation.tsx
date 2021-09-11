@@ -16,7 +16,7 @@ const NavItem = ({ href, label, icon }: NavItemProps) => {
     <IconButton
       aria-label={label}
       variant="ghost"
-      flexBasis={"25%"}
+      flexBasis="25%"
       fontSize={["3xl", "md"]}
       padding={0}
       onClick={() => router.push(href)}
@@ -52,8 +52,8 @@ const navigations: NavItemProps[] = [
 const Navigation = () => {
   return (
     <>
-      {navigations.map((navigation, index) => (
-        <NavItem {...navigation} key={index} />
+      {navigations.map((navigation) => (
+        <NavItem {...navigation} key={navigation.label} />
       ))}
     </>
   );

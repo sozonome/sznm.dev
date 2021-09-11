@@ -8,6 +8,7 @@ type TwemojiProps = {
 const Twemoji = ({ emoji }: TwemojiProps) => {
   return (
     <span
+      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{
         __html: twemoji.parse(emoji, {
           folder: "svg",

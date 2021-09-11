@@ -13,7 +13,7 @@ const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
   return (
     <Box width="100%">
       <Link href={`/blog/${postData.id}`} passHref>
-        <Flex as="a" flexWrap={"wrap"} alignItems="center" width="100%">
+        <Flex as="a" flexWrap="wrap" alignItems="center" width="100%">
           <Flex justifyContent="center" alignItems="center" flexBasis={["10%"]}>
             <Box boxSize="60%">
               <Twemoji emoji={postData.thumbnail} />

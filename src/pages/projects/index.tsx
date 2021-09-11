@@ -23,7 +23,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
     .filter(
       (project) => project.featured && project.published !== false && project
     )
-    .map((projectData, index) => {
+    .map((projectData) => {
       if (
         projectData.playStoreLink ||
         projectData.projectLink ||
@@ -39,11 +39,13 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
             isExternal
             key={projectData.id}
           >
-            <ProjectDetailWrapper projectData={projectData} key={index} />
+            <ProjectDetailWrapper projectData={projectData} />
           </ChakraLink>
         );
       }
-      return <ProjectDetailWrapper projectData={projectData} key={index} />;
+      return (
+        <ProjectDetailWrapper projectData={projectData} key={projectData.id} />
+      );
     });
 
   return (

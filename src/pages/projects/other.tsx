@@ -63,7 +63,7 @@ const OtherProjects = ({ allProjectsData }: OtherProjectsProps) => {
             (project) =>
               !project.featured && project.published !== false && project
           )
-          .map((projectData, index) => {
+          .map((projectData) => {
             if (projectData.projectLink || projectData.repoLink) {
               return (
                 <ChakraLink
@@ -71,12 +71,15 @@ const OtherProjects = ({ allProjectsData }: OtherProjectsProps) => {
                   isExternal
                   key={projectData.id}
                 >
-                  <ProjectDetailWrapper projectData={projectData} key={index} />
+                  <ProjectDetailWrapper projectData={projectData} />
                 </ChakraLink>
               );
             }
             return (
-              <ProjectDetailWrapper projectData={projectData} key={index} />
+              <ProjectDetailWrapper
+                projectData={projectData}
+                key={projectData.id}
+              />
             );
           })}
       </Grid>

@@ -13,7 +13,7 @@ const Card = ({
   const backgroundColor = useColorModeValue("gray.100", "gray.700");
   const dynamicThumbnail = useColorModeValue(
     thumbnail,
-    thumbnailDark ? thumbnailDark : thumbnail
+    thumbnailDark || thumbnail
   );
   const thumbnailUrl = thumbnail ? dynamicThumbnail : null;
 
@@ -24,7 +24,7 @@ const Card = ({
         borderWidth={2}
         boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.1);"
         borderRadius={20}
-        cursor={"pointer"}
+        cursor="pointer"
         alignItems="center"
         overflow="hidden"
         justifyContent="center"

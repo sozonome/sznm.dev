@@ -25,9 +25,9 @@ enum OptionalBooleanFieldKeys {
 }
 type OptionalBooleanFieldsType = keyof typeof OptionalBooleanFieldKeys;
 
-export type ProjectType = { [key in MandatoryStringFieldsType]: string } &
-  { [key in OptionalStringFieldsType]?: string } &
-  { [key in OptionalBooleanFieldsType]?: boolean } & {
-    stacks?: string[];
-    contentHtml?: any;
-  };
+export type ProjectType = { [key in MandatoryStringFieldsType]: string } & {
+  [key in OptionalStringFieldsType]?: string;
+} & { [key in OptionalBooleanFieldsType]?: boolean } & {
+  stacks?: string[];
+  contentHtml?: any;
+};

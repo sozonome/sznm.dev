@@ -23,16 +23,6 @@ type HomeProps = {
   allPostsData: Array<BlogPostType>;
 };
 
-const Home = ({ allProjectsData, allPostsData }: HomeProps) => {
-  return (
-    <Box marginTop={-24}>
-      <HeroSection />
-      <ProjectsSection data={allProjectsData} />
-      <RecentPostSection allPostsData={allPostsData} />
-    </Box>
-  );
-};
-
 const HeroSection = () => {
   return (
     <Box height="90vh" alignItems="center" display="grid">
@@ -43,7 +33,7 @@ const HeroSection = () => {
         alignSelf={["none", "center"]}
       >
         <Heading as="h1" size="xl" paddingBottom={11}>
-          {"Hello! I'm Nathan."}
+          Hello! I&apos;m Nathan.
         </Heading>
         <Text fontSize={["md", "xl"]}>
           Digital crafter specializing in Frontend development.
@@ -88,8 +78,8 @@ const ProjectsSection = ({ data }: { data: Array<ProjectType> }) => {
               (unfilteredProject) =>
                 unfilteredProject.highlight && unfilteredProject
             )
-            .map((project, index) => (
-              <Card project={project} key={index} />
+            .map((project) => (
+              <Card project={project} key={project.id} />
             ))}
         </Grid>
 
@@ -130,8 +120,8 @@ const RecentPostSection = ({
         {allPostsData
           .filter((post) => post.published === true)
           .slice(0, 2)
-          .map((postData, index) => (
-            <BlogPostPreview postData={postData} key={index} />
+          .map((postData) => (
+            <BlogPostPreview postData={postData} key={postData.id} />
           ))}
       </Grid>
 
@@ -151,6 +141,16 @@ const RecentPostSection = ({
           see more
         </Button>
       </Link>
+    </Box>
+  );
+};
+
+const Home = ({ allProjectsData, allPostsData }: HomeProps) => {
+  return (
+    <Box marginTop={-24}>
+      <HeroSection />
+      <ProjectsSection data={allProjectsData} />
+      <RecentPostSection allPostsData={allPostsData} />
     </Box>
   );
 };
