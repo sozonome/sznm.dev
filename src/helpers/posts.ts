@@ -11,6 +11,7 @@ const postsDirectory = path.join(process.cwd(), "content/posts");
 export function getSortedPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const allPostsData: any = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, "");
@@ -29,7 +30,8 @@ export function getSortedPostsData() {
     };
   });
   // Sort posts by date
-  return allPostsData.sort((a, b) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return allPostsData.sort((a: any, b: any) => {
     if (a.date < b.date) {
       return 1;
     }
@@ -79,9 +81,9 @@ export async function getPostData(id: string): Promise<BlogPostType> {
 
   // Combine the data with the id
   return {
+    ...otherFields,
     id,
     contentHtml,
     rawContent: matterResult.content,
-    ...otherFields,
   };
 }

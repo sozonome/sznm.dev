@@ -3,4 +3,5 @@ module.exports = {
   experimental: {
     nftTracing: true,
   },
+  reactStrictMode: true,
 };

@@ -16,7 +16,7 @@ const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
         <Flex as="a" flexWrap="wrap" alignItems="center" width="100%">
           <Flex justifyContent="center" alignItems="center" flexBasis={["10%"]}>
             <Box boxSize="60%">
-              <Twemoji emoji={postData.thumbnail} />
+              <Twemoji emoji={postData.thumbnail ?? "📘"} />
             </Box>
           </Flex>
           <Box flexBasis={["90%"]} paddingLeft={[11, 22]}>

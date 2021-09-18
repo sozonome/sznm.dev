@@ -1,7 +1,9 @@
 import { Box, Button, Code, Flex, Link as ChakraLink } from "@chakra-ui/react";
+import { ReactNode } from "react";
+import { Options } from "react-markdown/lib/ast-to-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { Options } from "react-markdown/lib/ast-to-react";
+
 import HeadingLink from "./HeadingLink";
 
 export const renderers: Options["components"] = {
@@ -43,7 +45,7 @@ export const renderers: Options["components"] = {
   link: ({ href, node }) => {
     return (
       <ChakraLink href={href} isExternal wordBreak="break-word">
-        {node.children[0].value}
+        {node.children[0].value as ReactNode}
       </ChakraLink>
     );
   },
@@ -54,3 +56,5 @@ export const renderers: Options["components"] = {
   h5: ({ children }) => <HeadingLink as="h5">{String(children)}</HeadingLink>,
   h6: ({ children }) => <HeadingLink as="h6">{String(children)}</HeadingLink>,
 };
+
+export default renderers;

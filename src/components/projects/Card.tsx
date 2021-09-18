@@ -44,7 +44,7 @@ const Card = ({
           </Box>
         </Flex>
 
-        {thumbnail && (
+        {thumbnailUrl && (
           <Box position="relative" height={[200, 250, 200]}>
             <Image
               width={200}

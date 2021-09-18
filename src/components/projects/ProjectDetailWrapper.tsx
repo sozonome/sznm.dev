@@ -61,11 +61,13 @@ const ProjectDetailWrapper = ({
           )}
         </Flex>
 
-        <Box flexBasis="15%">
-          <Flex maxWidth={16} marginX="auto">
-            <Image width="100%" height="100%" src={icon} alt={title} />
-          </Flex>
-        </Box>
+        {icon && (
+          <Box flexBasis="15%">
+            <Flex maxWidth={16} marginX="auto">
+              <Image width="100%" height="100%" src={icon} alt={title} />
+            </Flex>
+          </Box>
+        )}
       </Flex>
     </Box>
   );

@@ -11,7 +11,7 @@ type HeadingLinkProps = {
 
 const HeadingLink = ({ children, as }: HeadingLinkProps) => {
   const router = useRouter();
-  const level = Number(as.split("h")[1]);
+  const level = Number((as ?? "h3").split("h")[1]);
 
   const size: Record<number, string> = {
     1: "2xl",

@@ -73,7 +73,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint",
+      "eslint --fix --max-warnings=0",
       "prettier -w"
     ],
     "src/**/*.{json,css,scss,md}": [

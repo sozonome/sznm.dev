@@ -1,6 +1,8 @@
 import { Box, Button, useColorModeValue } from "@chakra-ui/react";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { ParsedUrlQuery } from "querystring";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import ProjectDetailWrapper from "components/projects/ProjectDetailWrapper";
@@ -45,8 +47,10 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
-  const projectData = await getProjectData(params.id);
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const projectData = await getProjectData(
+    (params as ParsedUrlQuery).id as string
+  );
   return {
     props: { projectData },
   };

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable no-await-in-loop */
 import RSS from "rss";
 
 import { BlogPostType } from "models/blog";
@@ -23,21 +25,20 @@ const generateRss = async (posts: Array<BlogPostType>): Promise<string> => {
     feed_url: "https://sznm.dev/rss.xml",
   });
 
+  // eslint-disable-next-line no-restricted-syntax
   for (const post of posts) {
-    if (post.published !== true) {
-      continue;
+    if (post.published) {
+      const item: any = await generateRssItem(post);
+      feed.item({
+        title: item.title,
+        guid: `https://sznm.dev/blog/${item.id}`,
+        url: `https://sznm.dev/blog/${item.id}`,
+        date: item.date,
+        description: "",
+        author: "sozonome",
+        custom_elements: [{ "content:encoded": item.contentHtml }],
+      });
     }
-
-    const item: any = await generateRssItem(post);
-    feed.item({
-      title: item.title,
-      guid: `https://sznm.dev/blog/${item.id}`,
-      url: `https://sznm.dev/blog/${item.id}`,
-      date: item.date,
-      description: "",
-      author: "sozonome",
-      custom_elements: [{ "content:encoded": item.contentHtml }],
-    });
   }
 
   return feed.xml({ indent: true });

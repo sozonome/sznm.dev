@@ -29,5 +29,6 @@ export type ProjectType = { [key in MandatoryStringFieldsType]: string } & {
   [key in OptionalStringFieldsType]?: string;
 } & { [key in OptionalBooleanFieldsType]?: boolean } & {
   stacks?: string[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   contentHtml?: any;
 };

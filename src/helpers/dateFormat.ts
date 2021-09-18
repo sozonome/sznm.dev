@@ -20,3 +20,5 @@ export const dateFormatLong = (date: string, time = false) => {
     time ? options : optionsWithoutTime
   );
 };
+
+export default dateFormatLong;

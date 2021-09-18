@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 enum MandatoryFieldKeys {
   id,
   title,
@@ -9,8 +10,8 @@ enum MandatoryFieldKeys {
 type MandatoryFieldsType = keyof typeof MandatoryFieldKeys;
 
 enum OptionalFieldKeys {
-  description,
   thumbnail,
+  description,
 }
 type OptionalFieldsType = keyof typeof OptionalFieldKeys;
 

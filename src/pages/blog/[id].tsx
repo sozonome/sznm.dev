@@ -75,7 +75,7 @@ const BlogPost = ({ postData }: BlogPostProps) => {
 
         <Flex flexBasis={["20%"]}>
           <Box marginLeft="auto" width="60%">
-            <Twemoji emoji={postData.thumbnail} />
+            <Twemoji emoji={postData.thumbnail ?? "📘"} />
           </Box>
         </Flex>
       </Flex>
@@ -109,7 +109,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<BlogPostProps> = async ({
   params,
 }) => {
-  const postData = await getPostData(params.id as string);
+  const postData = await getPostData(params?.id as string);
 
   return {
     props: { postData },

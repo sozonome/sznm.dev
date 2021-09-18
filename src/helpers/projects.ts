@@ -9,6 +9,7 @@ const projectsDirectory = path.join(process.cwd(), "content/projects");
 export function getSortedProjectsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(projectsDirectory);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const allProjectsData: any = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, "");
@@ -27,7 +28,8 @@ export function getSortedProjectsData() {
     };
   });
   // Sort posts by date
-  return allProjectsData.sort((a, b) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return allProjectsData.sort((a: any, b: any) => {
     if (a.date < b.date) {
       return 1;
     }
@@ -47,7 +49,7 @@ export function getAllProjectIds() {
   });
 }
 
-export async function getProjectData(id) {
+export async function getProjectData(id: string) {
   const fullPath = path.join(projectsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
@@ -62,8 +64,8 @@ export async function getProjectData(id) {
 
   // Combine the data with the id
   return {
+    ...matterResult.data,
     id,
     contentHtml,
-    ...matterResult.data,
   };
 }
