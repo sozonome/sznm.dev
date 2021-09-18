@@ -37,7 +37,7 @@ const BlogPost = ({ postData }: BlogPostProps) => {
   return (
     <Box>
       <NextSeo
-        title={`${postData.title} | sozonome`}
+        title={postData.title}
         canonical={pageUrl}
         openGraph={{
           title: `${postData.title} | sozonome`,
