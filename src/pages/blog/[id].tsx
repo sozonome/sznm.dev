@@ -92,6 +92,7 @@ const BlogPost = ({ postData }: BlogPostProps) => {
         repo="sozonome/sznm.dev"
         theme={utteranceTheme}
         issueTerm="pathname"
+        label="📟 comments"
       />
     </Box>
   );
