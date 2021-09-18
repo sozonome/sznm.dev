@@ -6825,6 +6825,11 @@ util@^0.11.0:
   dependencies:
     inherits "2.0.3"
 
+utterances-react-component@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/utterances-react-component/-/utterances-react-component-1.0.0.tgz#18d1af7264ded1d07690bc68b1ed91c7cdef98ac"
+  integrity sha512-ouHYHpFtAzGBTm4imUK23dwbuSg7//XsR+lcZ3F9xFm7kBNb0FsKRHTfC+FKUQCWPdIbbgfFsygYWKsbdq1OVA==
+
 v8-compile-cache@^2.0.3:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"

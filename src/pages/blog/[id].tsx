@@ -1,8 +1,16 @@
-import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Link,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { GetStaticProps } from "next";
 import { BlogJsonLd, NextSeo } from "next-seo";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import { Utterances, UtterancesProps } from "utterances-react-component";
 
 import { renderers } from "components/blog/renderers";
 import Twemoji from "components/Twemoji";
@@ -21,6 +29,10 @@ type BlogPostProps = {
 const BlogPost = ({ postData }: BlogPostProps) => {
   const ogImage = sznmOgImage(postData.title);
   const pageUrl = `${baseUrl}/blog/${postData.id}`;
+  const utteranceTheme: UtterancesProps["theme"] = useColorModeValue(
+    "github-light",
+    "github-dark"
+  );
 
   return (
     <Box>
@@ -75,6 +87,12 @@ const BlogPost = ({ postData }: BlogPostProps) => {
       >
         {postData.rawContent}
       </ReactMarkdown>
+
+      <Utterances
+        repo="sozonome/sznm.dev"
+        theme={utteranceTheme}
+        issueTerm="pathname"
+      />
     </Box>
   );
 };
