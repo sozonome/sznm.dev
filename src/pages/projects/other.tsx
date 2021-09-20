@@ -12,6 +12,7 @@ import Link from "next/link";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import ProjectDetailWrapper from "components/projects/ProjectDetailWrapper";
+import { baseUrl } from "constants/baseUrl";
 import { getSortedProjectsData } from "helpers/projects";
 import { sznmOgImage } from "helpers/sznmOgImage";
 import { ProjectType } from "models/project";
@@ -27,6 +28,7 @@ const OtherProjects = ({ allProjectsData }: OtherProjectsProps) => {
     <Box>
       <NextSeo
         title="Projects - Other"
+        canonical={`${baseUrl}/other`}
         openGraph={{
           title: "Projects | sozonome",
           images: [

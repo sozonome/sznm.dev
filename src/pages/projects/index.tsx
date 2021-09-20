@@ -10,6 +10,7 @@ import { NextSeo } from "next-seo";
 import Link from "next/link";
 
 import ProjectDetailWrapper from "components/projects/ProjectDetailWrapper";
+import { baseUrl } from "constants/baseUrl";
 import { getSortedProjectsData } from "helpers/projects";
 import { sznmOgImage } from "helpers/sznmOgImage";
 import { ProjectType } from "models/project";
@@ -52,6 +53,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
     <Box>
       <NextSeo
         title="Projects"
+        canonical={`${baseUrl}/projects`}
         openGraph={{
           title: "Projects | sozonome",
           images: [

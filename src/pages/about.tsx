@@ -15,6 +15,7 @@ import {
 
 import MotionBox from "components/motion/MotionBox";
 import MotionFlex from "components/motion/MotionFlex";
+import { baseUrl } from "constants/baseUrl";
 
 const HeadSection = () => {
   return (
@@ -159,6 +160,7 @@ const About = () => {
     <Box>
       <NextSeo
         title="About"
+        canonical={`${baseUrl}/about`}
         openGraph={{
           title: "About | sozonome",
           description: "About sznm.dev page",
