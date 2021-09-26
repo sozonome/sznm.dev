@@ -14,7 +14,7 @@ const TabBar = () => {
       marginX={["5%", "3%", "2%", 0]}
       position="fixed"
       width={["90%", "94%", "82%", 800]}
-      height={["6rem", "8rem"]}
+      height={["4.5rem", "8rem"]}
       bottom={22}
       borderRadius={20}
       backgroundColor={backgroundColor}
