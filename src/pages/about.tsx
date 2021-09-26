@@ -40,16 +40,22 @@ const AboutContent = () => {
       animate="after"
     >
       <Heading size="lg">👋 Hi, how are you?</Heading>
+
       <Text {...textProps}>
-        {`I'm Nathan, currently working as a Frontend Engineer. Most of the time I
-        work with TypeScript and React. I make fun projects in my free time and
-        share it here. Whether to explore more around React and its frameworks
-        (Gatsby, Next.js), Ionic, trying out Svelte and Vue, or other
-        technologies.`}
+        I&apos;m Nathan, currently working as a Frontend Engineer. Most of the
+        time I work with React - TypeScript and Flutter - Dart (recently).
+        Sometimes I make fun projects and share it here.
       </Text>
+
+      <Text>
+        I like to be an early adopter, exploring useful and fun tech products
+        (surfing around ProductHunt), being familiar and try things out before
+        other people start to use it, while constantly seeks for underestimated
+        / underdogs stuff.
+      </Text>
+
       <Text {...textProps}>
-        I like exploring useful and fun tech products (surfing around
-        ProductHunt), traveling, and{" "}
+        Outside working, I like to travel and{" "}
         <Link href="https://instagram.com/agustinusnathaniel" isExternal>
           <Text as="span" fontWeight={500}>
             capture moments.
@@ -120,7 +126,8 @@ const Links = () => {
       <MotionFlex
         wrap="wrap"
         fontSize="4xl"
-        gridGap={1}
+        gridGap={4}
+        marginTop={4}
         {...staggerAnimationProps}
       >
         <MotionLinks link="https://github.com/sozonome" icon={FaGithub} />
