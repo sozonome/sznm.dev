@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/sozonome/sznm.dev/compare/v1.3.1...v1.4.0) (2021-09-26)
+
+
+### Features
+
+* **blog:** :sparkles: add comment features - utterances ([#33](https://github.com/sozonome/sznm.dev/issues/33)) ([0255063](https://github.com/sozonome/sznm.dev/commit/02550634a6886da0538b6fae0c21af9c9716f277))
+* **meta:** add social meta ([66cf9a7](https://github.com/sozonome/sznm.dev/commit/66cf9a721cb1f57e621407b6b96d91dc2529a99a))
+* **projects:** add portfolio link button ([95f8941](https://github.com/sozonome/sznm.dev/commit/95f894143bf82ea07a894065027d9e956bd03a83))
+* **seo:** :mag: setup next-seo and next-sitemap ([#29](https://github.com/sozonome/sznm.dev/issues/29)) ([2a22f61](https://github.com/sozonome/sznm.dev/commit/2a22f615161d6a673d56ec2574c51c6f3c05a7d3))
+
+
+### Bug Fixes
+
+* **theme:** :bug: fix typo ([a6b6453](https://github.com/sozonome/sznm.dev/commit/a6b6453332f9b8ec132a1dba91d43beaeac34160))
+* fix lint errors and warnings ([3bdd7f8](https://github.com/sozonome/sznm.dev/commit/3bdd7f8be4db6cceb38b7141d374820e71ea8296))
+
 ### [1.3.1](https://github.com/sozonome/sznm.dev/compare/v1.3.0...v1.3.1) (2021-03-30)
 
 
