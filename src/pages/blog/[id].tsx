@@ -35,7 +35,7 @@ const BlogPost = ({ postData }: BlogPostProps) => {
   );
 
   return (
-    <Box>
+    <Box as="article">
       <NextSeo
         title={postData.title}
         canonical={pageUrl}
@@ -63,7 +63,7 @@ const BlogPost = ({ postData }: BlogPostProps) => {
 
       <Flex alignItems="center" marginBottom={16}>
         <Box flexBasis={["80%"]}>
-          <Heading size="2xl" marginBottom={8}>
+          <Heading as="h1" size="2xl" marginBottom={8}>
             {postData.title}
           </Heading>
           <Link href="/about" isExternal>
