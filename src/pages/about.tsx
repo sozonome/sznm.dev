@@ -57,7 +57,7 @@ const AboutContent = () => {
       <Text {...textProps}>
         Outside working, I like to travel and{" "}
         <Link href="https://instagram.com/agustinusnathaniel" isExternal>
-          <Text as="span" fontWeight={500}>
+          <Text as="span" fontWeight="extrabold">
             capture moments.
           </Text>
         </Link>
