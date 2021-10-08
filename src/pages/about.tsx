@@ -47,13 +47,6 @@ const AboutContent = () => {
         Sometimes I make fun projects and share it here.
       </Text>
 
-      <Text>
-        I like to be an early adopter, exploring useful and fun tech products
-        (surfing around ProductHunt), being familiar and try things out before
-        other people start to use it, while constantly seeks for underestimated
-        / underdogs stuff.
-      </Text>
-
       <Text {...textProps}>
         Outside working, I like to travel and{" "}
         <Link href="https://instagram.com/agustinusnathaniel" isExternal>
