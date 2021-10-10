@@ -2,12 +2,12 @@
 title: Personal Site
 projectLink: https://agustinusnathaniel.com
 repoLink:
-description: My personal site. Built with GatsbyJS and TailwindCSS.
-date: "2020-04-10"
+description: My personal page. Built with Next.js and TailwindCSS.
+date: "2021-10-08"
 icon: "/app_icons/coconate.png"
 appStoreLink:
 playStoreLink:
 stacks: 
-  - gatsbyjs
-  - chakra-ui
+  - nextjs
+  - tailwindcss
 ---
