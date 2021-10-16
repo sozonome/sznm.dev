@@ -1,4 +1,4 @@
-import { Box, Flex, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, Spacer, Text, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
 
 import Navigation from "./Navigation";
@@ -33,8 +33,10 @@ const Header = () => {
           </Text>
         </Link>
 
-        <Flex marginLeft="auto" alignItems="center">
-          <Flex width="10rem" display={["none", "flex"]}>
+        <Spacer />
+
+        <Flex alignItems="center" gridGap={4}>
+          <Flex display={["none", "flex"]}>
             <Navigation />
           </Flex>
 

@@ -1,4 +1,4 @@
-import { IconButton } from "@chakra-ui/react";
+import { IconButton, Tooltip } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { IconType } from "react-icons";
 import { FaFeatherAlt, FaHome, FaRocket, FaUser } from "react-icons/fa";
@@ -13,16 +13,18 @@ const NavItem = ({ href, label, icon }: NavItemProps) => {
   const router = useRouter();
 
   return (
-    <IconButton
-      aria-label={label}
-      variant="ghost"
-      flexBasis="25%"
-      fontSize={["2xl", "md"]}
-      padding={0}
-      onClick={() => router.push(href)}
-    >
-      {icon({ style: { cursor: "pointer" } })}
-    </IconButton>
+    <Tooltip label={label}>
+      <IconButton
+        aria-label={label}
+        variant="ghost"
+        flexBasis="25%"
+        fontSize={["2xl", "md"]}
+        padding={0}
+        onClick={() => router.push(href)}
+      >
+        {icon({ style: { cursor: "pointer" } })}
+      </IconButton>
+    </Tooltip>
   );
 };
 
