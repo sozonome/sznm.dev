@@ -70,14 +70,5 @@
   },
   "bugs": {
     "url": "https://github.com/sozonome/sznm.dev/issues"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix --max-warnings=0",
-      "prettier -w"
-    ],
-    "src/**/*.{json,css,scss,md}": [
-      "prettier -w"
-    ]
   }
 }
