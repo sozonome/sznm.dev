@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/sozonome/sznm.dev/compare/v1.4.0...v1.5.0) (2021-10-16)
+
+
+### Features
+
+* **layout:** :speech_balloon: add additional links in footer ([0395f46](https://github.com/sozonome/sznm.dev/commit/0395f46c210435ad38d1e71d28a363484f889fbf))
+
+
+### Improvements
+
+* **layout:** :children_crossing: add header navigation and theme toggle tooltip ([d2b1520](https://github.com/sozonome/sznm.dev/commit/d2b1520327e280bbdcae78b71b993a7d719ef468))
+* **pages:** :recycle: refactor about page ([cc27e2c](https://github.com/sozonome/sznm.dev/commit/cc27e2c99cee8ce42ab947724fdb21eda87222cd))
+* **pages:** :recycle: refactor home page ([8feb50f](https://github.com/sozonome/sznm.dev/commit/8feb50f52f5f9c18cf8444d281b4bf295362b238))
+
 ## [1.4.0](https://github.com/sozonome/sznm.dev/compare/v1.3.1...v1.4.0) (2021-09-26)
 
 
