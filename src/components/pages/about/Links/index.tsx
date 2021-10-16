@@ -17,7 +17,6 @@ const Links = () => {
 
       <MotionFlex
         wrap="wrap"
-        fontSize="4xl"
         gridGap={4}
         marginTop={4}
         {...staggerAnimationProps}
