@@ -46,7 +46,7 @@ const Footer = () => {
         gap={{ base: 4, md: 6 }}
       >
         {links.map((link) => (
-          <FooterLink {...link} />
+          <FooterLink {...link} key={link.label} />
         ))}
       </Grid>
 

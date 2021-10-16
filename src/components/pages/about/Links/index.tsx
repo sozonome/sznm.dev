@@ -23,7 +23,7 @@ const Links = () => {
         {...staggerAnimationProps}
       >
         {socialLinks.map((link) => (
-          <MotionLink {...link} />
+          <MotionLink {...link} key={link.url} />
         ))}
       </MotionFlex>
     </MotionBox>
