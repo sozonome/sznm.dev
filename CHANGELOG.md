@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/sozonome/sznm.dev/compare/v1.5.0...v1.5.1) (2021-10-17)
+
+
+### Improvements
+
+* **pages:** :lipstick: reduce spacing of social links in about page ([bb3f077](https://github.com/sozonome/sznm.dev/commit/bb3f0775297cdfc594efb96e987112205867a767))
+* **pages:** :lipstick: revamp homepage accents ([b0ec6dc](https://github.com/sozonome/sznm.dev/commit/b0ec6dcdae9f4140def83de430afd17a4435d367))
+* add key to component list ([0f243d2](https://github.com/sozonome/sznm.dev/commit/0f243d27e159df1365d6f1d0c35d172ea8a39ff8))
+
 ## [1.5.0](https://github.com/sozonome/sznm.dev/compare/v1.4.0...v1.5.0) (2021-10-16)
 
 
