@@ -53,7 +53,7 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
             variant="ghost"
             fontFamily="heading"
           >
-            see more
+            view all projects
           </Button>
         </Link>
       </Box>
