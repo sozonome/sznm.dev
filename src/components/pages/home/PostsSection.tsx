@@ -16,7 +16,7 @@ const PostsSection = ({ data }: PostsSectionProps) => {
         Recent Posts
       </Heading>
 
-      <Grid marginY={12} gap={16}>
+      <Grid gap={8}>
         {data
           .filter((post) => post.published === true)
           .slice(0, 2)
@@ -26,8 +26,9 @@ const PostsSection = ({ data }: PostsSectionProps) => {
       </Grid>
 
       <Box>
-        <Link href="/projects" passHref>
+        <Link href="/blog" passHref>
           <Button
+            as="a"
             rightIcon={<FaArrowRight />}
             paddingX={0}
             variant="ghost"

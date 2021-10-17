@@ -47,6 +47,7 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
       <Box>
         <Link href="/projects" passHref>
           <Button
+            as="a"
             rightIcon={<FaArrowRight />}
             paddingX={0}
             variant="ghost"
