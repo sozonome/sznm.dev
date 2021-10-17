@@ -12,7 +12,7 @@ const links: Array<FooterLinkProps> = [
   },
   {
     label: "Templates",
-    url: "https://github.com/sozonome?tab=repositories&q=template,boilerplate",
+    url: "https://github.com/sozonome?tab=repositories&q=starter-template&type=&language=&sort=stargazers",
   },
   {
     label: "Timeline",
