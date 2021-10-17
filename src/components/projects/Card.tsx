@@ -1,4 +1,4 @@
-import { Box, Text, Flex, useColorModeValue, Link } from "@chakra-ui/react";
+import { Box, Link, Text, Stack, useColorModeValue } from "@chakra-ui/react";
 import Image from "next/image";
 
 import { ProjectType } from "models/project";
@@ -17,6 +17,11 @@ const Card = ({
   );
   const thumbnailUrl = thumbnail ? dynamicThumbnail : null;
 
+  const overlayBgGradient = useColorModeValue(
+    "linear(to-t, rgba(45, 55, 72, 0.6) 0%, rgba(203, 213, 224, 0.4) 80%, rgba(237, 242, 247, 0))",
+    "linear(to-t, rgba(0, 0, 0, 0.5) 0%, rgba(237, 242, 247, 0))"
+  );
+
   return (
     <Link href={projectLink} isExternal _hover={{ textDecoration: "none" }}>
       <Box
@@ -28,24 +33,10 @@ const Card = ({
         alignItems="center"
         overflow="hidden"
         justifyContent="center"
+        position="relative"
       >
-        <Flex alignItems="center" marginX="auto" width="80%" height={24}>
-          <Flex flexBasis={["35%", "30%"]}>
-            {icon && <Image src={icon} width={50} height={50} alt={title} />}
-          </Flex>
-          <Box flexBasis={["65%", "70%"]}>
-            <Text
-              fontWeight={600}
-              fontSize="lg"
-              fontFamily="Catamaran, sans-serif"
-            >
-              {title}
-            </Text>
-          </Box>
-        </Flex>
-
         {thumbnailUrl && (
-          <Box position="relative" height={[200, 250, 200]}>
+          <Box height={[200, 250, 200]}>
             <Image
               width={200}
               height={200}
@@ -57,6 +48,31 @@ const Card = ({
             />
           </Box>
         )}
+
+        <Stack
+          position="absolute"
+          justifyContent="flex-end"
+          bottom={0}
+          padding={6}
+          height="full"
+          spacing={4}
+          zIndex={20}
+          width="full"
+          bgGradient={overlayBgGradient}
+        >
+          <Stack direction="row" alignItems="center">
+            {icon && <Image src={icon} width={32} height={32} alt={title} />}
+            <Text
+              fontWeight="bold"
+              fontSize="lg"
+              fontFamily="Catamaran, sans-serif"
+              textShadow="md"
+              color="white"
+            >
+              {title}
+            </Text>
+          </Stack>
+        </Stack>
       </Box>
     </Link>
   );

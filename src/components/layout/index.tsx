@@ -1,4 +1,4 @@
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import { Box, Stack, useColorModeValue } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 import Footer from "./Footer";
@@ -25,18 +25,19 @@ const Layout = ({ children }: LayoutProps) => {
     >
       <Meta />
       <Header />
-      <Box
+      <Stack
         maxWidth={["100vw", "100vw", "85vw", "800px"]}
         position="relative"
         zIndex={1}
         margin="0 auto"
+        spacing={8}
       >
         <Box as="main" layerStyle="layoutBlock">
           {children}
         </Box>
         <Footer />
-        <TabBar />
-      </Box>
+      </Stack>
+      <TabBar />
     </Box>
   );
 };

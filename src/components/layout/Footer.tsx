@@ -1,4 +1,4 @@
-import { Box, Grid, Link, Stack, Text } from "@chakra-ui/react";
+import { Box, Divider, Grid, Link, Stack, Text } from "@chakra-ui/react";
 
 type FooterLinkProps = {
   label: string;
@@ -37,6 +37,8 @@ const FooterLink = ({ label, url }: FooterLinkProps) => {
 const Footer = () => {
   return (
     <Stack as="footer" width="full" layerStyle="layoutBlock" spacing={6}>
+      <Divider />
+
       <Grid
         display={{ base: "grid", md: "flex" }}
         templateColumns={{

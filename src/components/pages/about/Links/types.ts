@@ -1,3 +1,7 @@
 import { IconType } from "react-icons";
 
-export type MotionLinkProps = { url: string; icon: IconType };
+export type MotionLinkProps = {
+  platformName: string;
+  url: string;
+  icon: IconType;
+};

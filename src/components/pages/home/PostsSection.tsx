@@ -1,11 +1,6 @@
-import {
-  Box,
-  Heading,
-  Button,
-  useColorModeValue,
-  Grid,
-} from "@chakra-ui/react";
+import { Box, Button, Grid, Heading, Stack } from "@chakra-ui/react";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 import BlogPostPreview from "components/blog/BlogPostPreview";
 import { BlogPostType } from "models/blog";
@@ -15,11 +10,9 @@ export type PostsSectionProps = {
 };
 
 const PostsSection = ({ data }: PostsSectionProps) => {
-  const buttonBackgroundColor = useColorModeValue("gray.100", "gray.700");
-
   return (
-    <Box as="section">
-      <Heading size="xl" marginBottom={2}>
+    <Stack as="section" spacing={4}>
+      <Heading size="lg" marginBottom={2}>
         Recent Posts
       </Heading>
 
@@ -32,23 +25,19 @@ const PostsSection = ({ data }: PostsSectionProps) => {
           ))}
       </Grid>
 
-      <Link href="/blog" passHref>
-        <Button
-          isFullWidth
-          width="100%"
-          borderRadius={20}
-          height={55}
-          backgroundColor={buttonBackgroundColor}
-          _hover={{
-            backgroundColor: "gray.300",
-            color: "black",
-          }}
-          fontFamily="Catamaran, sans-serif"
-        >
-          see more
-        </Button>
-      </Link>
-    </Box>
+      <Box>
+        <Link href="/projects" passHref>
+          <Button
+            rightIcon={<FaArrowRight />}
+            paddingX={0}
+            variant="ghost"
+            fontFamily="heading"
+          >
+            see more
+          </Button>
+        </Link>
+      </Box>
+    </Stack>
   );
 };
 

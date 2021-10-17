@@ -8,6 +8,7 @@ icon: "/app_icons/pub-apis.svg"
 thumbnail: "/app_preview/public-apis.png"
 thumbnailDark: "/app_preview/public-apis-dark.png"
 featured: true
+highlight: true
 sznmApps: true
 appStoreLink:
 playStoreLink:

@@ -10,9 +10,11 @@ const TabBar = () => {
 
   return (
     <Flex
-      layerStyle="blur-bg"
-      marginX={["5%", "3%", "2%", 0]}
       position="fixed"
+      layerStyle="blur-bg"
+      zIndex={10}
+      display={["flex", "none"]}
+      marginX={["5%", "3%", "2%", 0]}
       width={["90%", "94%", "82%", 800]}
       height={["4.5rem", "8rem"]}
       bottom={22}
@@ -22,7 +24,6 @@ const TabBar = () => {
       textAlign="center"
       alignItems="center"
       fontSize={[35, 50]}
-      display={["flex", "none"]}
     >
       <Navigation />
     </Flex>

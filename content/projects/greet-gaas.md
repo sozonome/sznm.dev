@@ -7,7 +7,6 @@ icon: "/app_icons/greet-gaas.svg"
 thumbnail: "/app_preview/gaas.png"
 thumbnailDark: "/app_preview/gaas-dark.png"
 featured: true
-highlight: true
 sznmApps: true
 appStoreLink:
 playStoreLink:
