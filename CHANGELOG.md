@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/sozonome/sznm.dev/compare/v1.5.1...v1.6.0) (2021-10-20)
+
+
+### Features
+
+* **theme:** :lipstick: apply custom scrollbar ([f967221](https://github.com/sozonome/sznm.dev/commit/f967221e40c7d680eb25ca4944ede4f5def2b628))
+
+
+### Bug Fixes
+
+* **pages:** fix blog page link in home page ([a2cce06](https://github.com/sozonome/sznm.dev/commit/a2cce0646a9d6529e43538d02d8d49f61bc78ee0))
+
+
+### Improvements
+
+* **blog:** :package: porting from utterances to giscus ([#48](https://github.com/sozonome/sznm.dev/issues/48)) ([416d1e7](https://github.com/sozonome/sznm.dev/commit/416d1e7ad4dcf9076755d02875b9d56e5a626771))
+* **pages:** revise to use more descriptive link text in home page ([0e36a13](https://github.com/sozonome/sznm.dev/commit/0e36a136088bf793be597fe9009e12c56471f23b))
+
 ### [1.5.1](https://github.com/sozonome/sznm.dev/compare/v1.5.0...v1.5.1) (2021-10-17)
 
 
