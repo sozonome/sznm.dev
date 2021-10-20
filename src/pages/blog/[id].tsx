@@ -6,11 +6,11 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { Giscus, GiscusProps } from "@giscus/react";
 import { GetStaticProps } from "next";
 import { BlogJsonLd, NextSeo } from "next-seo";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-import { Utterances, UtterancesProps } from "utterances-react-component";
 
 import { renderers } from "components/blog/renderers";
 import Twemoji from "components/Twemoji";
@@ -29,10 +29,7 @@ type BlogPostProps = {
 const BlogPost = ({ postData }: BlogPostProps) => {
   const ogImage = sznmOgImage(postData.title);
   const pageUrl = `${baseUrl}/blog/${postData.id}`;
-  const utteranceTheme: UtterancesProps["theme"] = useColorModeValue(
-    "github-light",
-    "github-dark"
-  );
+  const giscusTheme: GiscusProps["theme"] = useColorModeValue("light", "dark");
 
   return (
     <Box as="article">
@@ -88,12 +85,18 @@ const BlogPost = ({ postData }: BlogPostProps) => {
         {postData.rawContent}
       </ReactMarkdown>
 
-      <Utterances
-        repo="sozonome/sznm.dev"
-        theme={utteranceTheme}
-        issueTerm="pathname"
-        label="📟 comments"
-      />
+      <Box marginY={12}>
+        <Giscus
+          repo="sozonome/sznm.dev"
+          repoId="MDEwOlJlcG9zaXRvcnkyNjY2Njk3MDg="
+          mapping="pathname"
+          category="Blog Post"
+          categoryId="DIC_kwDOD-UOjM4B_fhR"
+          reactionsEnabled="1"
+          theme={giscusTheme}
+          emitMetadata="0"
+        />
+      </Box>
     </Box>
   );
 };

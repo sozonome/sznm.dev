@@ -25,6 +25,7 @@
     "@emotion/styled": "^11.3.0",
     "@fontsource/catamaran": "^4.5.0",
     "@fontsource/recursive": "^4.5.0",
+    "@giscus/react": "^1.0.0",
     "chakra-ui-markdown-renderer": "^3.0.1",
     "cors": "^2.8.5",
     "framer-motion": "^4.1.17",
@@ -42,8 +43,7 @@
     "remark-html": "^15.0.0",
     "rss": "^1.2.2",
     "sass": "^1.43.2",
-    "twemoji": "^13.1.0",
-    "utterances-react-component": "^1.0.0"
+    "twemoji": "^13.1.0"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^13.2.0",
