@@ -2,7 +2,10 @@ import { DeepPartial, Theme } from "@chakra-ui/react";
 
 const styles: DeepPartial<Theme["styles"]> = {
   global: (props) => ({
-    // custom scrollbar
+    /**
+     * custom scrollbar
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar#browser_compatibility
+     */
     "::-webkit-scrollbar": {
       width: "0.75rem",
       height: "0.75rem",
@@ -14,6 +17,16 @@ const styles: DeepPartial<Theme["styles"]> = {
       "&:hover": {
         backgroundColor: props.colorMode === "light" ? "gray.500" : "gray.600",
       },
+    },
+    /**
+     * firefox scrollbar
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scrollbars#browser_compatibility
+     */
+    html: {
+      scrollbarWidth: "thin",
+      scrollbarColor: `${props.colorMode === "light" ? "#A0AEC0" : "#2D3748"} ${
+        props.colorMode === "light" ? "#CBD5E0" : "black"
+      }`,
     },
   }),
 };
