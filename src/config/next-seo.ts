@@ -1,5 +1,7 @@
-/** @type {import('next-seo').DefaultSeoProps} */
-const defaultSEOConfig = {
+import { DefaultSeoProps } from "next-seo";
+
+// https://github.com/garmeeh/next-seo#nextseo-options
+export const defaultSEOConfig: DefaultSeoProps = {
   title: "Agustinus Nathaniel - Digital Crafter",
   titleTemplate: "%s | sozonome",
   defaultTitle: "sozonome | Agustinus Nathaniel - Digital Crafter",
@@ -22,5 +24,3 @@ const defaultSEOConfig = {
     cardType: "summary_large_image",
   },
 };
-
-export default defaultSEOConfig;

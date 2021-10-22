@@ -8,8 +8,8 @@ import { useEffect } from "react";
 import "@fontsource/recursive/latin.css";
 import "@fontsource/catamaran/latin.css";
 
-import defaultSEOConfig from "../../next-seo.config";
 import Layout from "components/layout";
+import { defaultSEOConfig } from "config/next-seo";
 import { initGA, logPageView } from "lib/analytics";
 import createEmotionCache from "styles/createEmotionCache";
 import customTheme from "styles/theme";
