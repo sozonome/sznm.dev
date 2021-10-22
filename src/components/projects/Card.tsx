@@ -8,7 +8,15 @@ type CardProps = {
 };
 
 const Card = ({
-  project: { title, icon, thumbnail, thumbnailDark, projectLink },
+  project: {
+    title,
+    icon,
+    thumbnail,
+    thumbnailDark,
+    projectLink,
+    playStoreLink,
+    repoLink,
+  },
 }: CardProps) => {
   const backgroundColor = useColorModeValue("gray.100", "gray.700");
   const dynamicThumbnail = useColorModeValue(
@@ -22,8 +30,10 @@ const Card = ({
     "linear(to-t, rgba(0, 0, 0, 0.5) 0%, rgba(237, 242, 247, 0))"
   );
 
+  const link = playStoreLink ?? projectLink ?? repoLink;
+
   return (
-    <Link href={projectLink} isExternal _hover={{ textDecoration: "none" }}>
+    <Link href={link} isExternal _hover={{ textDecoration: "none" }}>
       <Box
         borderColor={backgroundColor}
         borderWidth={2}

@@ -33,8 +33,8 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
         return (
           <ChakraLink
             href={
-              projectData.playStoreLink ||
-              projectData.projectLink ||
+              projectData.playStoreLink ??
+              projectData.projectLink ??
               projectData.repoLink
             }
             isExternal
