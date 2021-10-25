@@ -4,16 +4,27 @@ import Link from "next/link";
 import Twemoji from "components/Twemoji";
 import { BlogPostType } from "models/blog";
 import { dateFormatLong } from "utils/dateFormat";
+import { trackEventToUmami } from "utils/trackEvent";
 
 type BlogPostPreviewProps = {
   postData: BlogPostType;
 };
 
 const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
+  const handleClickBlogPost = () => {
+    trackEventToUmami(`Blog Post: ${postData.title}`, "navigate");
+  };
+
   return (
     <Box width="100%">
       <Link href={`/blog/${postData.id}`} passHref>
-        <Flex as="a" flexWrap="wrap" alignItems="center" width="100%">
+        <Flex
+          as="a"
+          onClick={handleClickBlogPost}
+          flexWrap="wrap"
+          alignItems="center"
+          width="100%"
+        >
           <Flex justifyContent="center" alignItems="center" flexBasis={["10%"]}>
             <Box boxSize="60%">
               <Twemoji emoji={postData.thumbnail ?? "📘"} />
