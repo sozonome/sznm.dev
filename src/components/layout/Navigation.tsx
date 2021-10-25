@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import { IconType } from "react-icons";
 import { FaFeatherAlt, FaHome, FaRocket, FaUser } from "react-icons/fa";
 
+import { trackEventToUmami } from "utils/trackEvent";
+
 type NavItemProps = {
   href: string;
   label: string;
@@ -12,6 +14,11 @@ type NavItemProps = {
 const NavItem = ({ href, label, icon }: NavItemProps) => {
   const router = useRouter();
 
+  const handleClickNavigation = () => {
+    trackEventToUmami(`Nav Link: ${label}`, "navigate");
+    router.push(href);
+  };
+
   return (
     <Tooltip label={label}>
       <IconButton
@@ -20,7 +27,7 @@ const NavItem = ({ href, label, icon }: NavItemProps) => {
         flexBasis="25%"
         fontSize={["2xl", "md"]}
         padding={0}
-        onClick={() => router.push(href)}
+        onClick={handleClickNavigation}
       >
         {icon({ style: { cursor: "pointer" } })}
       </IconButton>
