@@ -1,10 +1,10 @@
 import { GetStaticProps } from "next";
 
 import Home, { HomeProps } from "components/pages/home";
-import { getSortedPostsData } from "helpers/posts";
-import { getSortedProjectsData } from "helpers/projects";
 import { BlogPostType } from "models/blog";
 import { ProjectType } from "models/project";
+import { getSortedPostsData } from "utils/posts";
+import { getSortedProjectsData } from "utils/projects";
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const allProjectsData: Array<ProjectType> = getSortedProjectsData();

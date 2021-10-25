@@ -15,10 +15,10 @@ import rehypeRaw from "rehype-raw";
 import { renderers } from "components/blog/renderers";
 import Twemoji from "components/Twemoji";
 import { baseUrl } from "constants/baseUrl";
-import { dateFormatLong } from "helpers/dateFormat";
-import { getAllPostIds, getPostData } from "helpers/posts";
-import { sznmOgImage } from "helpers/sznmOgImage";
 import { BlogPostType } from "models/blog";
+import { dateFormatLong } from "utils/dateFormat";
+import { getAllPostIds, getPostData } from "utils/posts";
+import { sznmOgImage } from "utils/sznmOgImage";
 
 import styles from "./[id].module.scss";
 

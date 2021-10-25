@@ -9,6 +9,7 @@ const CommitLintConfiguration = {
       2,
       "always",
       [
+        "analytics",
         "blog",
         "components",
         "content",

@@ -4,10 +4,10 @@ import { NextSeo } from "next-seo";
 
 import BlogPostPreview from "components/blog/BlogPostPreview";
 import { baseUrl } from "constants/baseUrl";
-import generateRss from "helpers/generateRss";
-import { getSortedPostsData } from "helpers/posts";
-import { sznmOgImage } from "helpers/sznmOgImage";
 import { BlogPostType } from "models/blog";
+import generateRss from "utils/generateRss";
+import { getSortedPostsData } from "utils/posts";
+import { sznmOgImage } from "utils/sznmOgImage";
 
 type BlogPostsProps = {
   allPostsData: Array<BlogPostType>;

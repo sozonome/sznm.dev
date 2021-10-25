@@ -26,6 +26,7 @@
     "@fontsource/catamaran": "^4.5.0",
     "@fontsource/recursive": "^4.5.0",
     "@giscus/react": "^1.0.0",
+    "@types/umami": "^0.1.0",
     "chakra-ui-markdown-renderer": "^3.0.1",
     "cors": "^2.8.5",
     "framer-motion": "^4.1.17",

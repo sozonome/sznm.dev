@@ -13,9 +13,10 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import ProjectDetailWrapper from "components/projects/ProjectDetailWrapper";
 import { baseUrl } from "constants/baseUrl";
-import { getSortedProjectsData } from "helpers/projects";
-import { sznmOgImage } from "helpers/sznmOgImage";
 import { ProjectType } from "models/project";
+import { getSortedProjectsData } from "utils/projects";
+import { sznmOgImage } from "utils/sznmOgImage";
+import { trackEventToUmami } from "utils/trackEvent";
 
 type OtherProjectsProps = {
   allProjectsData: Array<ProjectType>;
@@ -23,6 +24,14 @@ type OtherProjectsProps = {
 
 const OtherProjects = ({ allProjectsData }: OtherProjectsProps) => {
   const buttonColor = useColorModeValue("gray.300", "gray.600");
+
+  const handleBackToFeaturedProjects = () => {
+    trackEventToUmami("Other Projects: Back to Featured Projects", "navigate");
+  };
+
+  const handleClickProject = (name: string, url: string) => () => {
+    trackEventToUmami(`Other Projects: Open ${name} | ${url}`, "link");
+  };
 
   return (
     <Box>
@@ -46,6 +55,7 @@ const OtherProjects = ({ allProjectsData }: OtherProjectsProps) => {
           size="sm"
           backgroundColor={buttonColor}
           marginBottom={22}
+          onClick={handleBackToFeaturedProjects}
         >
           projects
         </Button>
@@ -66,10 +76,12 @@ const OtherProjects = ({ allProjectsData }: OtherProjectsProps) => {
               !project.featured && project.published !== false && project
           )
           .map((projectData) => {
-            if (projectData.projectLink || projectData.repoLink) {
+            const link = projectData.projectLink ?? projectData.repoLink;
+            if (link) {
               return (
                 <ChakraLink
-                  href={projectData.projectLink || projectData.repoLink}
+                  href={link}
+                  onClick={handleClickProject(projectData.title, link)}
                   isExternal
                   key={projectData.id}
                 >

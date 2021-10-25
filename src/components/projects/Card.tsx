@@ -2,6 +2,7 @@ import { Box, Link, Text, Stack, useColorModeValue } from "@chakra-ui/react";
 import Image from "next/image";
 
 import { ProjectType } from "models/project";
+import { trackEventToUmami } from "utils/trackEvent";
 
 type CardProps = {
   project: ProjectType;
@@ -32,8 +33,17 @@ const Card = ({
 
   const link = playStoreLink ?? projectLink ?? repoLink;
 
+  const handleClickProject = () => {
+    trackEventToUmami(`Project Card: open ${title} | ${link}`, "link");
+  };
+
   return (
-    <Link href={link} isExternal _hover={{ textDecoration: "none" }}>
+    <Link
+      href={link}
+      isExternal
+      onClick={handleClickProject}
+      _hover={{ textDecoration: "none" }}
+    >
       <Box
         borderColor={backgroundColor}
         borderWidth={2}
