@@ -6,8 +6,8 @@ import { ParsedUrlQuery } from "querystring";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import ProjectDetailWrapper from "components/projects/ProjectDetailWrapper";
-import { getAllProjectIds, getProjectData } from "helpers/projects";
 import { ProjectType } from "models/project";
+import { getAllProjectIds, getProjectData } from "utils/projects";
 
 type ProjectProps = {
   projectData: ProjectType;

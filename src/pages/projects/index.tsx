@@ -11,33 +11,36 @@ import Link from "next/link";
 
 import ProjectDetailWrapper from "components/projects/ProjectDetailWrapper";
 import { baseUrl } from "constants/baseUrl";
-import { getSortedProjectsData } from "helpers/projects";
-import { sznmOgImage } from "helpers/sznmOgImage";
 import { ProjectType } from "models/project";
+import { getSortedProjectsData } from "utils/projects";
+import { sznmOgImage } from "utils/sznmOgImage";
+import { trackEventToUmami } from "utils/trackEvent";
 
 type ProjectsProps = {
   allProjectsData: Array<ProjectType>;
 };
 
 const Projects = ({ allProjectsData }: ProjectsProps) => {
+  const handleClickProject = (name: string, url: string) => () => {
+    trackEventToUmami(`Featured Projects: Open ${name} | ${url}`, "link");
+  };
+
   const projects = allProjectsData
     .filter(
       (project) => project.featured && project.published !== false && project
     )
     .map((projectData) => {
-      if (
-        projectData.playStoreLink ||
-        projectData.projectLink ||
-        projectData.repoLink
-      ) {
+      const link =
+        projectData.playStoreLink ??
+        projectData.projectLink ??
+        projectData.repoLink;
+
+      if (link) {
         return (
           <ChakraLink
-            href={
-              projectData.playStoreLink ??
-              projectData.projectLink ??
-              projectData.repoLink
-            }
+            href={link}
             isExternal
+            onClick={handleClickProject(projectData.title, link)}
             key={projectData.id}
           >
             <ProjectDetailWrapper projectData={projectData} />
@@ -48,6 +51,17 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
         <ProjectDetailWrapper projectData={projectData} key={projectData.id} />
       );
     });
+
+  const handleClickOtherProjects = () => {
+    trackEventToUmami("Featured Projects: Click Other Projects", "navigate");
+  };
+
+  const handleClickPortfolioPage = () => {
+    trackEventToUmami(
+      "Featured Projects: Click See More detailed Porfolio",
+      "link"
+    );
+  };
 
   return (
     <Box>
@@ -82,7 +96,11 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
 
       <Grid gap={2} templateColumns={["1fr", "1fr", "repeat(2, 1fr)"]}>
         <Link href="/projects/other" passHref>
-          <Button variant="outline" isFullWidth>
+          <Button
+            variant="outline"
+            onClick={handleClickOtherProjects}
+            isFullWidth
+          >
             Other Projects
           </Button>
         </Link>
@@ -96,6 +114,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
             href="https://prtfl.sznm.dev"
             target="_blank"
             isFullWidth
+            onClick={handleClickPortfolioPage}
           >
             see more detailed portfolio
           </Button>

@@ -9,6 +9,7 @@ import Document, {
 } from "next/document";
 import * as React from "react";
 
+import { UMAMI_SRC, UMAMI_WEBSITE_ID } from "constants/umami";
 import createEmotionCache from "styles/createEmotionCache";
 
 export const APP_NAME = "sznm.dev";
@@ -71,6 +72,14 @@ class MyDocument extends Document {
           />
           <link rel="shortcut icon" href="/app-icon.png" /> */}
           <link rel="manifest" href="/manifest.json" />
+
+          {/* umami self-hosted analytics */}
+          <script
+            async
+            defer
+            data-website-id={UMAMI_WEBSITE_ID}
+            src={UMAMI_SRC}
+          />
         </Head>
         <body>
           <Main />

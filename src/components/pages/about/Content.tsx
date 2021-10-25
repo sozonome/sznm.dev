@@ -1,12 +1,17 @@
 import { BoxProps, Heading, Link, Text } from "@chakra-ui/react";
 
 import MotionBox from "components/motion/MotionBox";
+import { trackEventToUmami } from "utils/trackEvent";
 
 const textProps: BoxProps = {
   marginY: 4,
 };
 
 const Content = () => {
+  const handleClickInstagramLink = () => {
+    trackEventToUmami("About: Click Instagram Link", "link");
+  };
+
   return (
     <MotionBox
       variants={{
@@ -26,7 +31,11 @@ const Content = () => {
 
       <Text {...textProps}>
         Outside working, I like to travel and{" "}
-        <Link href="https://instagram.com/agustinusnathaniel" isExternal>
+        <Link
+          href="https://instagram.com/agustinusnathaniel"
+          isExternal
+          onClick={handleClickInstagramLink}
+        >
           <Text as="span" fontWeight="extrabold">
             capture moments.
           </Text>
