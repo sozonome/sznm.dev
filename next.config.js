@@ -1,9 +1,5 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  // experimental: {
-  //   // https://github.com/vercel/next.js/issues/26200#issuecomment-905551440
-  //   nftTracing: true,
-  // },
   reactStrictMode: true,
   swcMinify: true,
   webpack: (config, { dev, isServer }) => {
