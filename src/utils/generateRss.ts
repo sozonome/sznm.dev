@@ -18,7 +18,9 @@ const generateRssItem = async (post: BlogPostType) => {
   };
 };
 
-const generateRss = async (posts: Array<BlogPostType>): Promise<string> => {
+export const generateRss = async (
+  posts: Array<BlogPostType>
+): Promise<string> => {
   const feed = new RSS({
     title: "sozonome's blog",
     site_url: "https://sznm.dev",
@@ -43,5 +45,3 @@ const generateRss = async (posts: Array<BlogPostType>): Promise<string> => {
 
   return feed.xml({ indent: true });
 };
-
-export default generateRss;

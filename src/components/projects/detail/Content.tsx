@@ -1,22 +1,20 @@
 import {
   Box,
+  Flex,
   Heading,
   Text,
-  Flex,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
 import Image from "next/image";
 
-import { ProjectType } from "models/project";
+import { ProjectDetailWrapperProps } from "./types";
 
-type ProjectDetailWrapperProps = {
-  projectData: ProjectType;
-};
+type ProjectDetailContentProps = Pick<ProjectDetailWrapperProps, "projectData">;
 
-const ProjectDetailWrapper = ({
+const ProjectDetailContent = ({
   projectData: { title, icon, description, stacks },
-}: ProjectDetailWrapperProps) => {
+}: ProjectDetailContentProps) => {
   const { colorMode } = useColorMode();
   const backgroundColor = useColorModeValue("gray.200", "gray.700");
   const descriptionTextColor = useColorModeValue("gray.500", "gray.400");
@@ -73,4 +71,4 @@ const ProjectDetailWrapper = ({
   );
 };
 
-export default ProjectDetailWrapper;
+export default ProjectDetailContent;
