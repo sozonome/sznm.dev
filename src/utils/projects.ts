@@ -6,7 +6,7 @@ import html from "remark-html";
 
 const projectsDirectory = path.join(process.cwd(), "content/projects");
 
-export function getSortedProjectsData() {
+export const getSortedProjectsData = () => {
   // Get file names under /posts
   const fileNames = fs.readdirSync(projectsDirectory);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -35,7 +35,7 @@ export function getSortedProjectsData() {
     }
     return -1;
   });
-}
+};
 
 export function getAllProjectIds() {
   const fileNames = fs.readdirSync(projectsDirectory);

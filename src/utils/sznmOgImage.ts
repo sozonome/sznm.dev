@@ -18,5 +18,3 @@ export const sznmOgImage = (text: string, options?: SznmOgImageOptions) => {
 
   return `https://og-image.sznm.dev/**${text}**.png?theme=${finalOptions.theme}&md=1&fontSize=${finalOptions.fontSize}&images=${finalOptions.images}`;
 };
-
-export default sznmOgImage;
