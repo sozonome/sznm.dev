@@ -43,6 +43,6 @@ const BlogPost = ({ postData }: BlogPostProps) => {
   );
 };
 
-export { BlogPostProps };
+export type { BlogPostProps } from "./types";
 
 export default BlogPost;
