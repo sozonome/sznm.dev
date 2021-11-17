@@ -9,7 +9,6 @@ import Document, {
 } from "next/document";
 import * as React from "react";
 
-import { isDev } from "constants/env";
 import { UMAMI_SRC, UMAMI_WEBSITE_ID } from "constants/umami";
 import createEmotionCache from "styles/createEmotionCache";
 
@@ -75,14 +74,14 @@ class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
 
           {/* umami self-hosted analytics */}
-          {!isDev && (
-            <script
-              async
-              defer
-              data-website-id={UMAMI_WEBSITE_ID}
-              src={UMAMI_SRC}
-            />
-          )}
+
+          <script
+            async
+            defer
+            data-website-id={UMAMI_WEBSITE_ID}
+            src={UMAMI_SRC}
+            data-domains="sznm.dev"
+          />
         </Head>
         <body>
           <Main />
