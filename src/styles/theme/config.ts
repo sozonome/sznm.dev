@@ -1,7 +1,7 @@
-import { DeepPartial, Theme } from "@chakra-ui/react";
+import { ThemeConfig } from "@chakra-ui/react";
 
-const config: DeepPartial<Theme["config"]> = {
-  initialColorMode: "dark",
+const config: ThemeConfig = {
+  initialColorMode: "system",
 };
 
 export default config;
