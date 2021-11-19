@@ -1,3 +1,4 @@
+import { ColorModeScript } from "@chakra-ui/react";
 import createEmotionServer from "@emotion/server/create-instance";
 // eslint-disable-next-line @next/next/no-document-import-in-page
 import Document, {
@@ -11,6 +12,7 @@ import * as React from "react";
 
 import { UMAMI_SRC, UMAMI_WEBSITE_ID } from "constants/umami";
 import createEmotionCache from "styles/createEmotionCache";
+import customTheme from "styles/theme";
 
 export const APP_NAME = "sznm.dev";
 
@@ -84,6 +86,9 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
+          <ColorModeScript
+            initialColorMode={customTheme.config.initialColorMode}
+          />
           <Main />
           <NextScript />
         </body>
