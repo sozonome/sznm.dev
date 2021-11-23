@@ -15,9 +15,9 @@ const BlogPost = ({ postData }: BlogPostProps) => {
 
   return (
     <Box as="article">
-      <BlogPostMeta {...{ postData }} />
+      <BlogPostMeta postData={postData} />
 
-      <BlogPostHead {...{ postData }} />
+      <BlogPostHead postData={postData} />
 
       <ReactMarkdown
         className={styles.content}
