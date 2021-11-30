@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "analyze": "cross-env ANALYZE=true yarn build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "lint": "next lint",
@@ -47,6 +48,7 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^15.0.0",
+    "@next/bundle-analyzer": "^12.0.4",
     "@types/cors": "^2.8.12",
     "@types/node": "^16.11.9",
     "@types/react": "^17.0.35",
@@ -55,6 +57,7 @@
     "@types/twemoji": "^12.1.2",
     "@types/umami": "^0.1.0",
     "commitlint": "^15.0.0",
+    "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-config-next": "^12.0.4",
     "eslint-config-sznm": "^0.1.11",
