@@ -1,6 +1,5 @@
 import { Heading, Link } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import React from "react";
 
 import { convertToId, convertToIdLink } from "utils/convertToIdLink";
 
