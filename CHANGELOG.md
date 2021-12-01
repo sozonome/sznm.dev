@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/sozonome/sznm.dev/compare/v1.6.0...v1.7.0) (2021-12-01)
+
+
+### Features
+
+* **analytics:** ✨ add site analytics - umami ([#50](https://github.com/sozonome/sznm.dev/issues/50)) ([a12a6ea](https://github.com/sozonome/sznm.dev/commit/a12a6ea611319c440e011e9079b082b01118e447))
+
+
+### Improvements
+
+* remove unused import ([fb6834a](https://github.com/sozonome/sznm.dev/commit/fb6834a74f7651d96cedd41b15524d3213bd1aec))
+* **blog:** :recycle: avoid props object spreading ([95c1c46](https://github.com/sozonome/sznm.dev/commit/95c1c46fac1cb274227d9809ff65cbae71b58f4b))
+* **pages:** ♻️ modularized page components ([#53](https://github.com/sozonome/sznm.dev/issues/53)) ([7a9816b](https://github.com/sozonome/sznm.dev/commit/7a9816b27917a78b9abb2673626911a2a4963509))
+* **projects:** :art: revise project card link ([b6bca2b](https://github.com/sozonome/sznm.dev/commit/b6bca2bcce1c9d65efd75e5c4495275f22a9119b))
+* **theme:** :lipstick: color mode improvements ([#56](https://github.com/sozonome/sznm.dev/issues/56)) ([67928a2](https://github.com/sozonome/sznm.dev/commit/67928a2b0cb71339afd7a1f441f347eb44d8dcd1))
+* **theme:** :lipstick: custom scrollbar support for firefox ([76c3ce6](https://github.com/sozonome/sznm.dev/commit/76c3ce6895b6de5b0a0d4195378cf68cde269054))
+
 ## [1.6.0](https://github.com/sozonome/sznm.dev/compare/v1.5.1...v1.6.0) (2021-10-20)
 
 
