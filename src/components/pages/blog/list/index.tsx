@@ -3,12 +3,9 @@ import { NextSeo } from "next-seo";
 
 import BlogPostPreview from "components/blog/BlogPostPreview";
 import { baseUrl } from "constants/baseUrl";
-import { BlogPostType } from "models/blog";
 import { sznmOgImage } from "utils/sznmOgImage";
 
-export type BlogPostListProps = {
-  allPostsData: Array<BlogPostType>;
-};
+import { BlogPostListProps } from "./types";
 
 const BlogPostList = ({ allPostsData }: BlogPostListProps) => {
   const blogPosts = allPostsData.map((postData) => (
