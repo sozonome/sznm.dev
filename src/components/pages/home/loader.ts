@@ -7,7 +7,6 @@ import { getSortedProjectsData } from "utils/projects";
 
 import { HomeProps } from "./types";
 
-// eslint-disable-next-line import/prefer-default-export
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const allProjectsData: Array<ProjectType> = getSortedProjectsData();
   const allPostsData: Array<BlogPostType> = getSortedPostsData();

@@ -7,7 +7,6 @@ import { getSortedPostsData } from "utils/posts";
 
 import { BlogPostListProps } from "./types";
 
-// eslint-disable-next-line import/prefer-default-export
 export const getStaticProps: GetStaticProps<BlogPostListProps> = async () => {
   const allPostsData = getSortedPostsData().filter(
     (post: BlogPostType) => post.published === true

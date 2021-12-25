@@ -5,7 +5,6 @@ import { getSortedProjectsData } from "utils/projects";
 
 import { OtherProjectsProps } from "./types";
 
-// eslint-disable-next-line import/prefer-default-export
 export const getStaticProps: GetStaticProps<OtherProjectsProps> = async () => {
   const otherProjects = getSortedProjectsData().filter(
     (project: ProjectType) =>
