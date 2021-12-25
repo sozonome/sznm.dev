@@ -3,14 +3,10 @@ import { NextSeo } from "next-seo";
 
 import ProjectDetailWrapper from "components/projects/detail";
 import { baseUrl } from "constants/baseUrl";
-import { ProjectType } from "models/project";
 import { sznmOgImage } from "utils/sznmOgImage";
 
 import ProjectListBottomNav from "./BottomNav";
-
-export type ProjectListProps = {
-  featuredProjects: Array<ProjectType>;
-};
+import { ProjectListProps } from "./types";
 
 const ProjectList = ({ featuredProjects }: ProjectListProps) => {
   const projects = featuredProjects.map((projectData) => {

@@ -5,16 +5,9 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import ProjectDetailWrapper from "components/projects/detail";
 import { baseUrl } from "constants/baseUrl";
-import { ProjectType } from "models/project";
 import { sznmOgImage } from "utils/sznmOgImage";
 
-export type ProjectDetailParams = {
-  id: string;
-};
-
-export type ProjectDetailProps = {
-  projectData: ProjectType;
-};
+import { ProjectDetailProps } from "./types";
 
 const ProjectDetail = ({ projectData }: ProjectDetailProps) => {
   const buttonColor = useColorModeValue("gray.300", "gray.600");

@@ -11,13 +11,10 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import ProjectDetailWrapper from "components/projects/detail";
 import { baseUrl } from "constants/baseUrl";
-import { ProjectType } from "models/project";
 import { sznmOgImage } from "utils/sznmOgImage";
 import { trackEventToUmami } from "utils/trackEvent";
 
-export type OtherProjectsProps = {
-  otherProjects: Array<ProjectType>;
-};
+import { OtherProjectsProps } from "./types";
 
 const OtherProjects = ({ otherProjects }: OtherProjectsProps) => {
   const buttonColor = useColorModeValue("gray.300", "gray.600");
