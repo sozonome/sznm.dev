@@ -11,6 +11,10 @@ const links: Array<FooterLinkProps> = [
     url: "https://base.sznm.dev",
   },
   {
+    label: "Bookmarks",
+    url: "https://base.sznm.dev/bookmarks",
+  },
+  {
     label: "Templates",
     url: "https://github.com/sozonome?tab=repositories&q=starter-template&type=&language=&sort=stargazers",
   },
