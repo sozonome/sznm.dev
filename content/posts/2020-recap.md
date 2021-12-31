@@ -1,7 +1,7 @@
 ---
 title: 2020 Recap
 date: "2020-12-31"
-slug: "2020-recap"
+legacyID: "2020-12-31-2020-recap"
 thumbnail: "📘"
 published: true
 tags:

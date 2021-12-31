@@ -1,7 +1,7 @@
 ---
 title: Monitor and Measure Site Performance from Time to Time and Automatically using Speedlify
 date: "2020-11-07"
-slug: "monitor-and-measure-site-performance-with-speedlify"
+legacyID: "2020-11-07-monitor-and-measure-site-performance-with-speedlify"
 thumbnail: "🏎️"
 published: true
 tags:

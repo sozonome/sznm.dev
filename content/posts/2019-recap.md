@@ -1,7 +1,7 @@
 ---
 title: 2019 Recap
 date: "2019-12-31"
-slug: "2019-recap"
+legacyID: "2019-12-31-2019-recap"
 thumbnail: "📘"
 published: true
 tags:

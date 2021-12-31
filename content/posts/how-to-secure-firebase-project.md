@@ -1,7 +1,7 @@
 ---
 title: How to Secure Your Firebase Project
 date: "2021-05-13"
-slug: "how-to-secure-firebase-project"
+legacyID: "2021-05-13-how-to-secure-firebase-project"
 thumbnail: "🔒"
 published: true
 tags:
