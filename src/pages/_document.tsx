@@ -1,6 +1,5 @@
 import { ColorModeScript } from "@chakra-ui/react";
 import createEmotionServer from "@emotion/server/create-instance";
-// eslint-disable-next-line @next/next/no-document-import-in-page
 import Document, {
   Html,
   Head,

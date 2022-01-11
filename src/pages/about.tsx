@@ -1,1 +1,3 @@
-export { default } from "components/pages/about";
+import About from "components/pages/about";
+
+export default About;
