@@ -19,6 +19,7 @@ const ProjectListBottomNav = () => {
     <Grid gap={2} templateColumns={["1fr", "1fr", "repeat(2, 1fr)"]}>
       <Link href="/projects/other" passHref>
         <Button
+          as="a"
           variant="outline"
           onClick={handleClickOtherProjects}
           isFullWidth
