@@ -25,8 +25,8 @@ const Content = () => {
 
       <Text {...textProps}>
         I&apos;m Nathan, currently working as a Frontend Engineer. Most of the
-        time I work with React - TypeScript and Flutter - Dart (recently).
-        Sometimes I make fun projects and share it here.
+        time I work with React - TypeScript and Flutter - Dart. Sometimes I make
+        fun projects and share it here.
       </Text>
 
       <Text {...textProps}>
