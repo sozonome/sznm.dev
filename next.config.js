@@ -88,4 +88,7 @@ module.exports = withBundleAnalyzer({
 
     return config;
   },
+  eslint: {
+    dirs: ["src"],
+  },
 });
