@@ -9,9 +9,9 @@ import Document, {
 } from "next/document";
 import * as React from "react";
 
-import { UMAMI_SRC, UMAMI_WEBSITE_ID } from "constants/umami";
-import createEmotionCache from "styles/createEmotionCache";
-import customTheme from "styles/theme";
+import { UMAMI_SRC, UMAMI_WEBSITE_ID } from "lib/constants/umami";
+import createEmotionCache from "lib/styles/createEmotionCache";
+import customTheme from "lib/styles/theme";
 
 export const APP_NAME = "sznm.dev";
 

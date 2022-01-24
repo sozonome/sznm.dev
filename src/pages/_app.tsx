@@ -6,10 +6,10 @@ import { AppProps } from "next/app";
 import "@fontsource/recursive/latin.css";
 import "@fontsource/catamaran/latin.css";
 
-import Layout from "components/layout";
-import { defaultSEOConfig } from "config/next-seo";
-import createEmotionCache from "styles/createEmotionCache";
-import customTheme from "styles/theme";
+import Layout from "lib/components/layout";
+import { defaultSEOConfig } from "lib/config/next-seo";
+import createEmotionCache from "lib/styles/createEmotionCache";
+import customTheme from "lib/styles/theme";
 
 const clientSideEmotionCache = createEmotionCache();
 

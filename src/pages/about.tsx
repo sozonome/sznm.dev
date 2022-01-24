@@ -1,3 +1,3 @@
-import About from "components/pages/about";
+import About from "lib/pages/about";
 
 export default About;

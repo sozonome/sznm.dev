@@ -1,4 +1,4 @@
-import ProjectList from "components/pages/projects/list";
+import ProjectList from "lib/pages/projects/list";
 
-export { getStaticProps } from "components/pages/projects/list/loader";
+export { getStaticProps } from "lib/pages/projects/list/loader";
 export default ProjectList;

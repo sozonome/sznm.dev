@@ -1,4 +1,4 @@
-import BlogPostList from "components/pages/blog/list";
+import BlogPostList from "lib/pages/blog/list";
 
-export { getStaticProps } from "components/pages/blog/list/loader";
+export { getStaticProps } from "lib/pages/blog/list/loader";
 export default BlogPostList;
