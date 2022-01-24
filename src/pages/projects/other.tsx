@@ -1,4 +1,4 @@
-import OtherProjects from "components/pages/projects/list/other";
+import OtherProjects from "lib/pages/projects/list/other";
 
-export { getStaticProps } from "components/pages/projects/list/other/loader";
+export { getStaticProps } from "lib/pages/projects/list/other/loader";
 export default OtherProjects;
