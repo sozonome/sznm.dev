@@ -40,7 +40,7 @@ const FooterLink = ({ label, url }: FooterLinkProps) => {
 
 const Footer = () => {
   return (
-    <Stack as="footer" width="full" layerStyle="layoutBlock" spacing={6}>
+    <Stack as="footer" layerStyle="layoutBlock" spacing={6}>
       <Divider />
 
       <Grid

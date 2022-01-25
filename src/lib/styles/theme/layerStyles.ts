@@ -2,8 +2,19 @@ import { SystemStyleObjectRecord } from "@chakra-ui/react";
 
 const layerStyles: SystemStyleObjectRecord = {
   layoutBlock: {
-    paddingY: 22,
-    paddingX: [22, 22, 11, 0],
+    marginX: "auto",
+    width: "full",
+    maxWidth: {
+      base: "100vw",
+      md: "85vw",
+      lg: "800px",
+    },
+    paddingY: 4,
+    paddingX: {
+      base: 6,
+      md: 2,
+      lg: 0,
+    },
   },
   glow: {
     filter: "drop-shadow(0 0 12px #454a58)",

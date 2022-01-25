@@ -9,6 +9,7 @@ const Header = () => {
 
   return (
     <Box
+      as="header"
       position="fixed"
       top={0}
       zIndex={5}
@@ -20,13 +21,7 @@ const Header = () => {
       layerStyle="blur-bg"
       width="full"
     >
-      <Flex
-        layerStyle="layoutBlock"
-        marginX="auto"
-        maxWidth="800px"
-        as="header"
-        alignItems="center"
-      >
+      <Flex layerStyle="layoutBlock" alignItems="center">
         <Link href="/" passHref>
           <Text as="a" cursor="pointer" fontSize={["md", "xl"]}>
             sznm.dev

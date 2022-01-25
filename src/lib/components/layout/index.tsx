@@ -26,10 +26,10 @@ const Layout = ({ children }: LayoutProps) => {
       <Meta />
       <Header />
       <Stack
-        maxWidth={["100vw", "100vw", "85vw", "800px"]}
+        direction="column"
+        alignItems="center"
         position="relative"
         zIndex={1}
-        margin="0 auto"
         spacing={8}
       >
         <Box as="main" layerStyle="layoutBlock">
