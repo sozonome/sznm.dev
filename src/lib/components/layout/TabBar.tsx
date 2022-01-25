@@ -1,4 +1,4 @@
-import { Flex, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
 
 import Navigation from "./Navigation";
 
@@ -9,24 +9,21 @@ const TabBar = () => {
   );
 
   return (
-    <Flex
-      position="fixed"
-      layerStyle="blur-bg"
-      zIndex={10}
-      display={["flex", "none"]}
-      marginX={["5%", "3%", "2%", 0]}
-      width={["90%", "94%", "82%", 800]}
-      height={["4.5rem", "8rem"]}
-      bottom={22}
-      borderRadius={20}
-      backgroundColor={backgroundColor}
-      padding={22}
-      textAlign="center"
-      alignItems="center"
-      fontSize={[35, 50]}
-    >
-      <Navigation />
-    </Flex>
+    <Box position="fixed" bottom={22} zIndex={10} layerStyle="layoutBlock">
+      <Flex
+        layerStyle="blur-bg"
+        display={["flex", "none"]}
+        height={["4.5rem", "8rem"]}
+        borderRadius={20}
+        backgroundColor={backgroundColor}
+        padding={22}
+        textAlign="center"
+        alignItems="center"
+        fontSize={[35, 50]}
+      >
+        <Navigation />
+      </Flex>
+    </Box>
   );
 };
 
