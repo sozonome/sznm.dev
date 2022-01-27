@@ -1,6 +1,6 @@
 import { Box, Button, Code, Flex, Link as ChakraLink } from "@chakra-ui/react";
-import { ReactNode } from "react";
-import { Options } from "react-markdown/lib/ast-to-react";
+import type { ReactNode } from "react";
+import type { Options } from "react-markdown/lib/ast-to-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 

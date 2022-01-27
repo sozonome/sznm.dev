@@ -1,7 +1,7 @@
 import { Box, Link, Text, Stack, useColorModeValue } from "@chakra-ui/react";
 import Image from "next/image";
 
-import { ProjectType } from "lib/types/project";
+import type { ProjectType } from "lib/types/project";
 import { trackEventToUmami } from "lib/utils/trackEvent";
 
 type CardProps = {

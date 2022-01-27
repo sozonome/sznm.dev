@@ -1,11 +1,11 @@
 import fs from "fs";
-import { GetStaticProps } from "next";
+import type { GetStaticProps } from "next";
 
-import { BlogPostType } from "lib/types/blog";
+import type { BlogPostType } from "lib/types/blog";
 import { generateRss } from "lib/utils/generateRss";
 import { getSortedPostsData } from "lib/utils/posts";
 
-import { BlogPostListProps } from "./types";
+import type { BlogPostListProps } from "./types";
 
 export const getStaticProps: GetStaticProps<BlogPostListProps> = async () => {
   const allPostsData = getSortedPostsData().filter(

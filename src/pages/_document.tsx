@@ -1,12 +1,7 @@
 import { ColorModeScript } from "@chakra-ui/react";
 import createEmotionServer from "@emotion/server/create-instance";
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,
-} from "next/document";
+import type { DocumentContext } from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import * as React from "react";
 
 import { UMAMI_SRC, UMAMI_WEBSITE_ID } from "lib/constants/umami";

@@ -8,7 +8,7 @@ import { baseUrl } from "lib/constants/baseUrl";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 import { trackEventToUmami } from "lib/utils/trackEvent";
 
-import { OtherProjectsProps } from "./types";
+import type { OtherProjectsProps } from "./types";
 
 const OtherProjects = ({ otherProjects }: OtherProjectsProps) => {
   const handleBackToFeaturedProjects = () => {

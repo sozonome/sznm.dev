@@ -5,7 +5,7 @@ import * as React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 import Card from "lib/components/projects/Card";
-import { ProjectType } from "lib/types/project";
+import type { ProjectType } from "lib/types/project";
 import { trackEventToUmami } from "lib/utils/trackEvent";
 
 export type ProjectsSectionProps = { data: Array<ProjectType> };

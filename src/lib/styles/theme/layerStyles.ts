@@ -1,4 +1,4 @@
-import { SystemStyleObjectRecord } from "@chakra-ui/react";
+import type { SystemStyleObjectRecord } from "@chakra-ui/react";
 
 export const layerStyles: SystemStyleObjectRecord = {
   layoutBlock: {

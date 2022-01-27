@@ -2,7 +2,7 @@
 /* eslint-disable no-await-in-loop */
 import RSS from "rss";
 
-import { BlogPostType } from "lib/types/blog";
+import type { BlogPostType } from "lib/types/blog";
 
 import { getPostData } from "./posts";
 

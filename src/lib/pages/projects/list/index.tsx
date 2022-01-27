@@ -6,7 +6,7 @@ import { baseUrl } from "lib/constants/baseUrl";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 
 import ProjectListBottomNav from "./BottomNav";
-import { ProjectListProps } from "./types";
+import type { ProjectListProps } from "./types";
 
 const ProjectList = ({ featuredProjects }: ProjectListProps) => {
   const projects = featuredProjects.map((projectData) => {

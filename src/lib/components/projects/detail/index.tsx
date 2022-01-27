@@ -3,7 +3,7 @@ import { Link } from "@chakra-ui/react";
 import { trackEventToUmami } from "lib/utils/trackEvent";
 
 import ProjectDetailContent from "./Content";
-import { ProjectDetailWrapperProps } from "./types";
+import type { ProjectDetailWrapperProps } from "./types";
 
 const ProjectDetailWrapper = ({
   projectData,

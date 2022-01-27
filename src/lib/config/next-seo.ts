@@ -1,4 +1,4 @@
-import { DefaultSeoProps } from "next-seo";
+import type { DefaultSeoProps } from "next-seo";
 
 // https://github.com/garmeeh/next-seo#nextseo-options
 export const defaultSEOConfig: DefaultSeoProps = {

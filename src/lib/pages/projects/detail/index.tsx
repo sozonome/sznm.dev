@@ -7,7 +7,7 @@ import ProjectDetailWrapper from "lib/components/projects/detail";
 import { baseUrl } from "lib/constants/baseUrl";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 
-import { ProjectDetailProps } from "./types";
+import type { ProjectDetailProps } from "./types";
 
 const ProjectDetail = ({ projectData }: ProjectDetailProps) => {
   return (

@@ -1,4 +1,4 @@
-import { DeepPartial, Theme } from "@chakra-ui/react";
+import type { DeepPartial, Theme } from "@chakra-ui/react";
 
 import { Button } from "./button";
 import { Code } from "./code";

@@ -1,8 +1,8 @@
 import Cors from "cors";
-import { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 import initMiddleware from "lib/services/init-middleware";
-import { ProjectType } from "lib/types/project";
+import type { ProjectType } from "lib/types/project";
 import { getSortedProjectsData } from "lib/utils/projects";
 
 const cors = initMiddleware(

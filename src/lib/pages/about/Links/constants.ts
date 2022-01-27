@@ -10,7 +10,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
-import { MotionLinkProps } from "./types";
+import type { MotionLinkProps } from "./types";
 
 export const wrapperAnimationProps = {
   variants: {
