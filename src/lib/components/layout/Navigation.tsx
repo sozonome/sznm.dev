@@ -1,6 +1,6 @@
 import { IconButton } from "@chakra-ui/react";
 import Link from "next/link";
-import { IconType } from "react-icons";
+import type { IconType } from "react-icons";
 import { FaFeatherAlt, FaHome, FaRocket, FaUser } from "react-icons/fa";
 
 import { trackEventToUmami } from "lib/utils/trackEvent";

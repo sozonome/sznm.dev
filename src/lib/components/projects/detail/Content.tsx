@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 
-import { ProjectDetailWrapperProps } from "./types";
+import type { ProjectDetailWrapperProps } from "./types";
 
 type ProjectDetailContentProps = Pick<ProjectDetailWrapperProps, "projectData">;
 

@@ -1,10 +1,10 @@
-import { GetStaticProps } from "next";
-import { ParsedUrlQuery } from "querystring";
+import type { GetStaticProps } from "next";
+import type { ParsedUrlQuery } from "querystring";
 
-import { ProjectType } from "lib/types/project";
+import type { ProjectType } from "lib/types/project";
 import { getAllProjectIds, getProjectData } from "lib/utils/projects";
 
-import { ProjectDetailParams, ProjectDetailProps } from "./types";
+import type { ProjectDetailParams, ProjectDetailProps } from "./types";
 
 export const getStaticPaths = async () => {
   const paths = getAllProjectIds();

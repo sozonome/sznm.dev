@@ -1,4 +1,5 @@
-import { BoxProps, Heading, Link, Text } from "@chakra-ui/react";
+import type { BoxProps } from "@chakra-ui/react";
+import { Heading, Link, Text } from "@chakra-ui/react";
 
 import MotionBox from "lib/components/motion/MotionBox";
 import { trackEventToUmami } from "lib/utils/trackEvent";

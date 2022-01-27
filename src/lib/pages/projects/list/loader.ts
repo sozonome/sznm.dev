@@ -1,9 +1,9 @@
-import { GetStaticProps } from "next";
+import type { GetStaticProps } from "next";
 
-import { ProjectType } from "lib/types/project";
+import type { ProjectType } from "lib/types/project";
 import { getSortedProjectsData } from "lib/utils/projects";
 
-import { ProjectListProps } from "./types";
+import type { ProjectListProps } from "./types";
 
 export const getStaticProps: GetStaticProps<ProjectListProps> = async () => {
   const featuredProjects = getSortedProjectsData().filter(

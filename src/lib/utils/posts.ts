@@ -4,7 +4,7 @@ import path from "path";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
 
-import { BlogPostType } from "lib/types/blog";
+import type { BlogPostType } from "lib/types/blog";
 
 const postsDirectory = path.join(process.cwd(), "content/posts");
 

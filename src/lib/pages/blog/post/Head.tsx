@@ -3,7 +3,7 @@ import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
 import Twemoji from "lib/components/Twemoji";
 import { dateFormatLong } from "lib/utils/dateFormat";
 
-import { BlogPostProps } from "./types";
+import type { BlogPostProps } from "./types";
 
 type BlogPostHeadProps = Pick<BlogPostProps, "postData">;
 

@@ -1,4 +1,4 @@
-import { DeepPartial, SemanticValue, ThemeScale } from "@chakra-ui/react";
+import type { DeepPartial, SemanticValue, ThemeScale } from "@chakra-ui/react";
 
 export type TokenValue = string | number | SemanticValue<string>;
 

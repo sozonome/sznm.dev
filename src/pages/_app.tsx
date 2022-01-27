@@ -1,8 +1,8 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import { EmotionCache } from "@emotion/cache";
+import type { EmotionCache } from "@emotion/cache";
 import { CacheProvider } from "@emotion/react";
 import { DefaultSeo } from "next-seo";
-import { AppProps } from "next/app";
+import type { AppProps } from "next/app";
 import "@fontsource/recursive/latin.css";
 import "@fontsource/catamaran/latin.css";
 

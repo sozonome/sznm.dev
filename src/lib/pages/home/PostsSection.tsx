@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
 import BlogPostPreview from "lib/components/blog/BlogPostPreview";
-import { BlogPostType } from "lib/types/blog";
+import type { BlogPostType } from "lib/types/blog";
 import { trackEventToUmami } from "lib/utils/trackEvent";
 
 export type PostsSectionProps = {

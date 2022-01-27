@@ -3,7 +3,7 @@ import { BlogJsonLd, NextSeo } from "next-seo";
 import { baseUrl } from "lib/constants/baseUrl";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 
-import { BlogPostProps } from "./types";
+import type { BlogPostProps } from "./types";
 
 type BlogPostMetaProps = Pick<BlogPostProps, "postData">;
 

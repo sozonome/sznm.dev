@@ -2422,10 +2422,10 @@ eslint-config-prettier@^8.3.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.3.0.tgz#f7471b20b6fe8a9a9254cc684454202886a2dd7a"
   integrity sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==
 
-eslint-config-sznm@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-sznm/-/eslint-config-sznm-0.2.0.tgz#646c04697adad2a0ee56a56c4602bccbdf9f97d2"
-  integrity sha512-iJQRfJF8xfuIwLy60+g1A+aRzo9m0MpbCtwAN/641CT1X2y45r6XlB+nUTXemby86WYn4BR1RMaH6/ieVa9vbA==
+eslint-config-sznm@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-sznm/-/eslint-config-sznm-0.2.1.tgz#65bacd63831f3ef0c5efbff1903008f7b9e1513f"
+  integrity sha512-5FekwRhXZALRyqRk8JeVzNaQojq1ih1p6IrMtYDKPbJqQ3Xct4Y20rquB6I0aHPxkoUypzatSOzEH47lKjRx7g==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.9.0"
     "@typescript-eslint/parser" "^5.9.0"

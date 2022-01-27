@@ -4,7 +4,7 @@ import MotionBox from "lib/components/motion/MotionBox";
 import { trackEventToUmami } from "lib/utils/trackEvent";
 
 import { childAnimationProps } from "./constants";
-import { MotionLinkProps } from "./types";
+import type { MotionLinkProps } from "./types";
 
 const MotionLink = (props: MotionLinkProps) => {
   const { platformName, url, icon } = props;

@@ -2,7 +2,7 @@ import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import Link from "next/link";
 
 import Twemoji from "lib/components/Twemoji";
-import { BlogPostType } from "lib/types/blog";
+import type { BlogPostType } from "lib/types/blog";
 import { dateFormatLong } from "lib/utils/dateFormat";
 import { trackEventToUmami } from "lib/utils/trackEvent";
 

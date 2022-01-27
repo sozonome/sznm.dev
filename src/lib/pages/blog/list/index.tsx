@@ -5,7 +5,7 @@ import BlogPostPreview from "lib/components/blog/BlogPostPreview";
 import { baseUrl } from "lib/constants/baseUrl";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 
-import { BlogPostListProps } from "./types";
+import type { BlogPostListProps } from "./types";
 
 const BlogPostList = ({ allPostsData }: BlogPostListProps) => {
   const blogPosts = allPostsData.map((postData) => (
