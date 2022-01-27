@@ -19,7 +19,6 @@ const Card = ({
     repoLink,
   },
 }: CardProps) => {
-  const backgroundColor = useColorModeValue("gray.100", "gray.700");
   const dynamicThumbnail = useColorModeValue(
     thumbnail,
     thumbnailDark || thumbnail
@@ -45,7 +44,7 @@ const Card = ({
       _hover={{ textDecoration: "none" }}
     >
       <Box
-        borderColor={backgroundColor}
+        borderColor="cardBorder"
         borderWidth={2}
         boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.1);"
         borderRadius={20}

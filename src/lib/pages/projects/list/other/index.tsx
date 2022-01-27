@@ -1,10 +1,4 @@
-import {
-  Box,
-  Button,
-  Grid,
-  Heading,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Button, Grid, Heading } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
 import { AiOutlineArrowLeft } from "react-icons/ai";
@@ -17,8 +11,6 @@ import { trackEventToUmami } from "lib/utils/trackEvent";
 import { OtherProjectsProps } from "./types";
 
 const OtherProjects = ({ otherProjects }: OtherProjectsProps) => {
-  const buttonColor = useColorModeValue("gray.300", "gray.600");
-
   const handleBackToFeaturedProjects = () => {
     trackEventToUmami("Other Projects: Back to Featured Projects", "navigate");
   };
@@ -43,7 +35,7 @@ const OtherProjects = ({ otherProjects }: OtherProjectsProps) => {
         <Button
           leftIcon={<AiOutlineArrowLeft />}
           size="sm"
-          backgroundColor={buttonColor}
+          backgroundColor="buttonBackground"
           marginBottom={22}
           onClick={handleBackToFeaturedProjects}
         >

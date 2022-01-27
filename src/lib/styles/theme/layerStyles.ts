@@ -1,6 +1,6 @@
 import { SystemStyleObjectRecord } from "@chakra-ui/react";
 
-const layerStyles: SystemStyleObjectRecord = {
+export const layerStyles: SystemStyleObjectRecord = {
   layoutBlock: {
     marginX: "auto",
     width: "full",
@@ -25,5 +25,3 @@ const layerStyles: SystemStyleObjectRecord = {
     WebkitBackdropFilter: "blur(6px)",
   },
 };
-
-export default layerStyles;

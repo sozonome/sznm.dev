@@ -5,15 +5,12 @@ import {
   Text,
   Link as ChakraLink,
   Image,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import Link from "next/link";
 
 import MotionBox from "lib/components/motion/MotionBox";
 
 const Page404 = () => {
-  const buttonBackgroundColor = useColorModeValue("gray.300", "gray.500");
-
   return (
     <Box>
       <MotionBox
@@ -37,7 +34,7 @@ const Page404 = () => {
 
         <Box textAlign="center">
           <Link href="/" passHref>
-            <Button backgroundColor={buttonBackgroundColor}>
+            <Button backgroundColor="buttonBackground">
               Let&apos;s Head Back
             </Button>
           </Link>

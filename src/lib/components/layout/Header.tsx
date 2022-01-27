@@ -1,23 +1,17 @@
-import { Box, Flex, Spacer, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, Spacer, Text } from "@chakra-ui/react";
 import Link from "next/link";
 
 import Navigation from "./Navigation";
 import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
-  const { colorMode } = useColorMode();
-
   return (
     <Box
       as="header"
       position="fixed"
       top={0}
       zIndex={5}
-      backgroundColor={
-        colorMode === "light"
-          ? "rgba(247, 250, 252, 0.8)"
-          : "rgba(26, 32, 44, 0.8)"
-      }
+      backgroundColor="headerAlphaBackground"
       layerStyle="blur-bg"
       width="full"
     >

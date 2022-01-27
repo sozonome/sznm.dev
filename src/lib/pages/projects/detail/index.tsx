@@ -1,4 +1,4 @@
-import { Box, Button, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
 import { AiOutlineArrowLeft } from "react-icons/ai";
@@ -10,8 +10,6 @@ import { sznmOgImage } from "lib/utils/sznmOgImage";
 import { ProjectDetailProps } from "./types";
 
 const ProjectDetail = ({ projectData }: ProjectDetailProps) => {
-  const buttonColor = useColorModeValue("gray.300", "gray.600");
-
   return (
     <Box>
       <NextSeo
@@ -33,7 +31,7 @@ const ProjectDetail = ({ projectData }: ProjectDetailProps) => {
           <Button
             leftIcon={<AiOutlineArrowLeft />}
             size="sm"
-            backgroundColor={buttonColor}
+            backgroundColor="buttonBackground"
             marginBottom={22}
           >
             projects
