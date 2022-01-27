@@ -1,6 +1,6 @@
 import { DeepPartial, Theme } from "@chakra-ui/react";
 
-const styles: DeepPartial<Theme["styles"]> = {
+export const styles: DeepPartial<Theme["styles"]> = {
   global: (props) => ({
     /**
      * custom scrollbar
@@ -30,5 +30,3 @@ const styles: DeepPartial<Theme["styles"]> = {
     },
   }),
 };
-
-export default styles;

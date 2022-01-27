@@ -1,6 +1,6 @@
 import { DeepPartial, Theme } from "@chakra-ui/react";
 
-const Code: DeepPartial<Theme["components"]["Code"]> = {
+export const Code: DeepPartial<Theme["components"]["Code"]> = {
   baseStyle: {
     borderRadius: "0.25rem",
   },
@@ -9,5 +9,3 @@ const Code: DeepPartial<Theme["components"]["Code"]> = {
     variant: "solid",
   },
 };
-
-export default Code;

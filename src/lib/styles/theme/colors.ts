@@ -1,6 +1,6 @@
 import { DeepPartial, Theme } from "@chakra-ui/react";
 
-const colors: DeepPartial<Theme["colors"]> = {
+export const colors: DeepPartial<Theme["colors"]> = {
   orange: {
     // secondary
     600: "#ba4c00",
@@ -14,5 +14,3 @@ const colors: DeepPartial<Theme["colors"]> = {
     300: "#BFB7AF",
   },
 };
-
-export default colors;
