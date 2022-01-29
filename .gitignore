@@ -32,7 +32,7 @@ yarn-error.log*
 
 # sitemap
 robots.txt
-sitemap.xml
+sitemap*.xml
 
 # TS
 *.tsbuildinfo
