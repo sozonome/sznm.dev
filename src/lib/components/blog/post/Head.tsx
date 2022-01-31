@@ -1,11 +1,12 @@
 import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
 
 import Twemoji from "lib/components/Twemoji";
+import type { BlogPostType } from "lib/types/blog";
 import { dateFormatLong } from "lib/utils/dateFormat";
 
-import type { BlogPostProps } from "./types";
-
-type BlogPostHeadProps = Pick<BlogPostProps, "postData">;
+type BlogPostHeadProps = {
+  postData: BlogPostType;
+};
 
 const BlogPostHead = ({ postData }: BlogPostHeadProps) => {
   return (
