@@ -1,11 +1,12 @@
-import { BlogJsonLd, NextSeo } from "next-seo";
+import { ArticleJsonLd, NextSeo } from "next-seo";
 
 import { baseUrl } from "lib/constants/baseUrl";
+import type { BlogPostType } from "lib/types/blog";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 
-import type { BlogPostProps } from "./types";
-
-type BlogPostMetaProps = Pick<BlogPostProps, "postData">;
+type BlogPostMetaProps = {
+  postData: BlogPostType;
+};
 
 const BlogPostMeta = ({ postData }: BlogPostMetaProps) => {
   const ogImage = sznmOgImage(postData.title);
@@ -28,7 +29,8 @@ const BlogPostMeta = ({ postData }: BlogPostMetaProps) => {
         }}
       />
 
-      <BlogJsonLd
+      <ArticleJsonLd
+        type="Blog"
         url={`${baseUrl}/blog/${postData.id}`}
         title={`${postData.title} | sozonome`}
         images={[]}

@@ -4,11 +4,11 @@ import { Giscus } from "@giscus/react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
+import BlogPostHead from "lib/components/blog/post/Head";
+import BlogPostMeta from "lib/components/blog/post/Meta";
 import { renderers } from "lib/components/blog/renderers";
 
 import styles from "./BlogPost.module.scss";
-import BlogPostHead from "./Head";
-import BlogPostMeta from "./Meta";
 import type { BlogPostProps } from "./types";
 
 const BlogPost = ({ postData }: BlogPostProps) => {
