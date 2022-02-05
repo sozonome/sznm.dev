@@ -11,11 +11,11 @@ const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-inline' 'unsafe-eval' umami.sznm.dev;
   frame-src giscus.app;
-  style-src 'self' 'unsafe-inline';
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/;
   img-src * blob: data: *.freepik.com;
   media-src 'none';
   connect-src *;
-  font-src 'self';
+  font-src 'self' https://fonts.gstatic.com/;
 `;
 
 /**
