@@ -1,54 +1,30 @@
 import { ColorModeScript } from "@chakra-ui/react";
-import createEmotionServer from "@emotion/server/create-instance";
 import type { DocumentContext } from "next/document";
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import * as React from "react";
 
 import { UMAMI_SRC, UMAMI_WEBSITE_ID } from "lib/constants/umami";
-import createEmotionCache from "lib/styles/createEmotionCache";
 import customTheme from "lib/styles/theme";
 
 export const APP_NAME = "sznm.dev";
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const originalRenderPage = ctx.renderPage;
-    const cache = createEmotionCache();
-
-    const { extractCriticalToChunks } = createEmotionServer(cache);
-
-    ctx.renderPage = () =>
-      originalRenderPage({
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        enhanceApp: (App: any) => (props) =>
-          <App emotionCache={cache} {...props} />,
-      });
-
-    const initialProps = await Document.getInitialProps(ctx);
-
-    const emotionStyles = extractCriticalToChunks(initialProps.html);
-    const emotionStyleTags = emotionStyles.styles.map((style) => (
-      <style
-        data-emotion={`${style.key} ${style.ids.join(" ")}`}
-        key={style.key}
-        // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: style.css }}
-      />
-    ));
-
-    return {
-      ...initialProps,
-      styles: [
-        ...React.Children.toArray(initialProps.styles),
-        ...emotionStyleTags,
-      ],
-    };
+  static getInitialProps(ctx: DocumentContext) {
+    return Document.getInitialProps(ctx);
   }
 
   render() {
     return (
       <Html lang="en">
         <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap"
+            rel="stylesheet"
+          />
+
           <meta name="application-name" content={APP_NAME} />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
@@ -70,7 +46,6 @@ class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
 
           {/* umami self-hosted analytics */}
-
           <script
             async
             defer
@@ -81,7 +56,7 @@ class MyDocument extends Document {
         </Head>
         <body>
           <ColorModeScript
-            initialColorMode={customTheme.config.initialColorMode}
+            initialColorMode={customTheme.config?.initialColorMode}
           />
           <Main />
           <NextScript />
