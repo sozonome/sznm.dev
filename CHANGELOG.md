@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/sozonome/sznm.dev/compare/v1.7.0...v1.8.0) (2022-02-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **content:** no more date in blog post slug
+
+### Features
+
+* **layout:** :speech_balloon: add bookmarks link in footer ([4f2c9e8](https://github.com/sozonome/sznm.dev/commit/4f2c9e8df669451c95016491a64264fa37c1ea6b))
+* **layout:** ✨add spotify now playing ([#72](https://github.com/sozonome/sznm.dev/issues/72)) ([8319918](https://github.com/sozonome/sznm.dev/commit/83199187f7c7563adf813ab6c0755976359fc2e3))
+* :lock: add security headers ([#60](https://github.com/sozonome/sznm.dev/issues/60)) ([c15adc6](https://github.com/sozonome/sznm.dev/commit/c15adc61071bf5661891ef81da13b337bd1b1b00))
+
+
+### Bug Fixes
+
+* add giscus to csp ([3591546](https://github.com/sozonome/sznm.dev/commit/3591546d529ffcc199891ec061716213f9b052b2))
+
+
+### Chores
+
+* **content:** :boom: revise blog post slug ([a3b5a56](https://github.com/sozonome/sznm.dev/commit/a3b5a5691c80aac2f8575e052d9f4316db298218))
+
+
+### Improvements
+
+* **layout:** 💄 replace some styling with global layerStyle ([#67](https://github.com/sozonome/sznm.dev/issues/67)) ([b281681](https://github.com/sozonome/sznm.dev/commit/b2816813675d3286d2325976a07ecde4c15b515a))
+* **layout:** update footer ([f8c3d2e](https://github.com/sozonome/sznm.dev/commit/f8c3d2e69753545ee5ff4fbc8fdfa6a73efdb38d))
+* **pages:** :pencil2: update about page descriptions ([5a96551](https://github.com/sozonome/sznm.dev/commit/5a965519e37f867e5f2e287c2f19a0e0fe2bbdb0))
+* **theme:** :lipstick: add hover interactivity animations ([#73](https://github.com/sozonome/sznm.dev/issues/73)) ([a5657b1](https://github.com/sozonome/sznm.dev/commit/a5657b1f8314e48a737186970910fee63d09061e))
+* **theme:** 💄 use semanticTokens ([#68](https://github.com/sozonome/sznm.dev/issues/68)) ([47ad0d5](https://github.com/sozonome/sznm.dev/commit/47ad0d5b594b6622f77b9166ac1cccc8629504d0))
+* revise links to be anchor ([51d9afa](https://github.com/sozonome/sznm.dev/commit/51d9afa20fdbdbc624a447f273fb0d418cc8318b))
+
 ## [1.7.0](https://github.com/sozonome/sznm.dev/compare/v1.6.0...v1.7.0) (2021-12-01)
 
 
