@@ -1,5 +1,7 @@
 import { Box, Divider, Grid, Link, Stack, Text } from "@chakra-ui/react";
 
+import SpotifyListening from "lib/components/common/SpotifyListening";
+
 type FooterLinkProps = {
   label: string;
   url: string;
@@ -40,8 +42,10 @@ const FooterLink = ({ label, url }: FooterLinkProps) => {
 
 const Footer = () => {
   return (
-    <Stack as="footer" layerStyle="layoutBlock" spacing={6}>
+    <Stack as="footer" layerStyle="layoutBlock" spacing={8}>
       <Divider />
+
+      <SpotifyListening />
 
       <Grid
         display={{ base: "grid", md: "flex" }}
