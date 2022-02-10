@@ -16,7 +16,13 @@ const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
   };
 
   return (
-    <Box width="100%">
+    <Box
+      width="100%"
+      transition="0.2s ease-out"
+      _hover={{
+        transform: "scale(1.03, 1.03)",
+      }}
+    >
       <Link href={`/blog/${postData.id}`} passHref>
         <Flex
           as="a"

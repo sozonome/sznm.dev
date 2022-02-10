@@ -25,6 +25,9 @@ const ProjectDetailWrapper = ({
         isExternal
         onClick={handleClickProject}
         key={projectData.id}
+        _hover={{
+          textDecoration: "none",
+        }}
       >
         <ProjectDetailContent projectData={projectData} />
       </Link>
