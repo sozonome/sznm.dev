@@ -41,7 +41,9 @@ const Card = ({
       href={link}
       isExternal
       onClick={handleClickProject}
-      _hover={{ textDecoration: "none" }}
+      _hover={{
+        textDecoration: "none",
+      }}
     >
       <Box
         borderColor="cardBorder"
@@ -53,6 +55,11 @@ const Card = ({
         overflow="hidden"
         justifyContent="center"
         position="relative"
+        transition="0.2s ease-out"
+        _hover={{
+          transform: "translateY(-2px) scale(1.02, 1.02)",
+          shadow: "xl",
+        }}
       >
         {thumbnailUrl && (
           <Box height={[200, 250, 200]}>

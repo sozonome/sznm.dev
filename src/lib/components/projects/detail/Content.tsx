@@ -16,7 +16,7 @@ const ProjectDetailContent = ({
   projectData: { title, icon, description, stacks },
 }: ProjectDetailContentProps) => {
   const { colorMode } = useColorMode();
-  const backgroundColor = useColorModeValue("gray.200", "gray.700");
+  const borderColor = useColorModeValue("gray.200", "gray.700");
   const descriptionTextColor = useColorModeValue("gray.500", "gray.400");
 
   return (
@@ -26,7 +26,14 @@ const ProjectDetailContent = ({
       padding={8}
       borderRadius={24}
       borderWidth={2}
-      borderColor={backgroundColor}
+      borderColor={borderColor}
+      transition="0.2s ease-out"
+      _hover={{
+        transform: "scale(1.03, 1.03)",
+        shadow: "lg",
+        borderColor: descriptionTextColor,
+        borderWidth: 4,
+      }}
     >
       <Flex alignItems="center" width="100%" height="100%" gridGap={8}>
         <Flex gridGap={6} wrap="wrap" flexBasis="85%" height="full">
