@@ -19,6 +19,7 @@ const CommitLintConfiguration = {
         "pages",
         "projects",
         "seo",
+        "services",
         "static",
         "theme",
       ],
