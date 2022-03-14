@@ -43,7 +43,7 @@
     "rss": "^1.2.2",
     "sass": "^1.49.9",
     "swr": "^1.2.2",
-    "twemoji": "^13.1.1"
+    "twemoji": "13.1.0"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^16.2.1",
