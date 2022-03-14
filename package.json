@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^1.8.6",
-    "@emotion/react": "^11.8.1",
+    "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "@giscus/react": "^1.1.2",
     "chakra-ui-markdown-renderer": "^4.0.0",
@@ -43,21 +43,21 @@
     "rss": "^1.2.2",
     "sass": "^1.49.9",
     "swr": "^1.2.2",
-    "twemoji": "^13.1.0"
+    "twemoji": "13.1.0"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^16.2.1",
     "@next/bundle-analyzer": "^12.1.0",
     "@types/cors": "^2.8.12",
     "@types/node": "^17.0.21",
-    "@types/react": "^17.0.39",
+    "@types/react": "^17.0.40",
     "@types/react-syntax-highlighter": "^13.5.2",
     "@types/rss": "^0.0.29",
     "@types/twemoji": "^12.1.2",
     "@types/umami": "^0.1.0",
     "commitlint": "^16.2.1",
     "cross-env": "^7.0.3",
-    "eslint": "^8.10.0",
+    "eslint": "^8.11.0",
     "eslint-config-next": "^12.1.0",
     "eslint-config-sznm": "^0.2.1",
     "husky": "^7.0.4",
