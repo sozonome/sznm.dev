@@ -23,7 +23,10 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
   }, [data]);
 
   const handleClickViewAllProjects = () => {
-    trackEventToUmami("Home: View All Projects", "navigate");
+    trackEventToUmami({
+      eventValue: "Home: View All Projects",
+      eventType: "navigate",
+    });
   };
 
   return (

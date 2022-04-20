@@ -13,7 +13,6 @@ const CommitLintConfiguration = {
         "blog",
         "components",
         "content",
-        "helpers",
         "layout",
         "lib",
         "pages",
@@ -22,6 +21,7 @@ const CommitLintConfiguration = {
         "services",
         "static",
         "theme",
+        "utils",
       ],
     ],
     // https://commitlint.js.org/#/reference-rules?id=scope-case

@@ -12,7 +12,10 @@ export type PostsSectionProps = {
 
 const PostsSection = ({ data }: PostsSectionProps) => {
   const handleClickViewAllPosts = () => {
-    trackEventToUmami("Home: View All Posts", "navigate");
+    trackEventToUmami({
+      eventValue: "Home: View All Posts",
+      eventType: "navigate",
+    });
   };
 
   return (

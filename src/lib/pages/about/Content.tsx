@@ -10,7 +10,10 @@ const textProps: BoxProps = {
 
 const Content = () => {
   const handleClickInstagramLink = () => {
-    trackEventToUmami("About: Click Instagram Link", "link");
+    trackEventToUmami({
+      eventValue: "About: Click Instagram Link",
+      eventType: "link",
+    });
   };
 
   return (

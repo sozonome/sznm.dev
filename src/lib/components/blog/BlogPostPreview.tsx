@@ -12,7 +12,10 @@ type BlogPostPreviewProps = {
 
 const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
   const handleClickBlogPost = () => {
-    trackEventToUmami(`Blog Post: ${postData.title}`, "navigate");
+    trackEventToUmami({
+      eventValue: `Blog Post: ${postData.title}`,
+      eventType: "navigate",
+    });
   };
 
   return (

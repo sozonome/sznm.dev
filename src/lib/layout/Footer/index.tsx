@@ -8,7 +8,10 @@ import FooterLink from "./FooterLink";
 
 const Footer = () => {
   const handleClickFooterLink = (label: string) => () => {
-    trackEventToUmami(`Footer Link: ${label}`, "link");
+    trackEventToUmami({
+      eventValue: `Footer Link: ${label}`,
+      eventType: "link",
+    });
   };
 
   return (
