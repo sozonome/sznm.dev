@@ -5,14 +5,17 @@ import { trackEventToUmami } from "lib/utils/trackEvent";
 
 const ProjectListBottomNav = () => {
   const handleClickOtherProjects = () => {
-    trackEventToUmami("Featured Projects: Click Other Projects", "navigate");
+    trackEventToUmami({
+      eventValue: "Featured Projects: Click Other Projects",
+      eventType: "navigate",
+    });
   };
 
   const handleClickPortfolioPage = () => {
-    trackEventToUmami(
-      "Featured Projects: Click See More detailed Porfolio",
-      "link"
-    );
+    trackEventToUmami({
+      eventValue: "Featured Projects: Click See More detailed Porfolio",
+      eventType: "link",
+    });
   };
 
   return (

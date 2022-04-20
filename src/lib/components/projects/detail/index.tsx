@@ -15,7 +15,10 @@ const ProjectDetailWrapper = ({
     projectData.repoLink;
 
   const handleClickProject = () => {
-    trackEventToUmami(`${source}: Open ${projectData.title} | ${link}`, "link");
+    trackEventToUmami({
+      eventValue: `${source}: Open ${projectData.title} | ${link}`,
+      eventType: "link",
+    });
   };
 
   if (link) {

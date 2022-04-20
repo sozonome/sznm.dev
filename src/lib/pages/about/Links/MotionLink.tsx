@@ -10,10 +10,10 @@ const MotionLink = (props: MotionLinkProps) => {
   const { platformName, url, icon } = props;
 
   const handleClickLink = () => {
-    trackEventToUmami(
-      `About: Click Social Link - ${platformName} | ${url}`,
-      "link"
-    );
+    trackEventToUmami({
+      eventValue: `About: Click Social Link - ${platformName} | ${url}`,
+      eventType: "link",
+    });
   };
 
   return (

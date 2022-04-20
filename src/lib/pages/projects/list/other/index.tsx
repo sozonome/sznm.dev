@@ -12,7 +12,10 @@ import type { OtherProjectsProps } from "./types";
 
 const OtherProjects = ({ otherProjects }: OtherProjectsProps) => {
   const handleBackToFeaturedProjects = () => {
-    trackEventToUmami("Other Projects: Back to Featured Projects", "navigate");
+    trackEventToUmami({
+      eventValue: "Other Projects: Back to Featured Projects",
+      eventType: "navigate",
+    });
   };
 
   return (

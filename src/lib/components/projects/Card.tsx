@@ -33,7 +33,10 @@ const Card = ({
   const link = playStoreLink ?? projectLink ?? repoLink;
 
   const handleClickProject = () => {
-    trackEventToUmami(`Project Card: open ${title} | ${link}`, "link");
+    trackEventToUmami({
+      eventValue: `Project Card: open ${title} | ${link}`,
+      eventType: "link",
+    });
   };
 
   return (

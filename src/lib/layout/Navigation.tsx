@@ -13,7 +13,10 @@ type NavItemProps = {
 
 const NavItem = ({ href, label, icon }: NavItemProps) => {
   const handleClickNavigation = () => {
-    trackEventToUmami(`Nav Link: ${label}`, "navigate");
+    trackEventToUmami({
+      eventValue: `Nav Link: ${label}`,
+      eventType: "navigate",
+    });
   };
 
   return (
