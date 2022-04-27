@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/sozonome/sznm.dev/compare/v1.8.0...v1.9.0) (2022-04-27)
+
+
+### Features
+
+* add footer link - status and analytics ([#79](https://github.com/sozonome/sznm.dev/issues/79)) ([2614655](https://github.com/sozonome/sznm.dev/commit/26146557d7eaf0335e35e352472fb5876989307f))
+
+
+### Bug Fixes
+
+* **services:** 🐛 add error handling in spotify api route ([#74](https://github.com/sozonome/sznm.dev/issues/74)) ([f267512](https://github.com/sozonome/sznm.dev/commit/f2675122030c124d090cc92d4c51490731e8d42f))
+
+
+### Improvements
+
+* **utils:** revise arguments into single object for trackEventToUmami ([#83](https://github.com/sozonome/sznm.dev/issues/83)) ([034b18d](https://github.com/sozonome/sznm.dev/commit/034b18d9bb9140ea6e4f19a791a7f152161ae2b6))
+
 ## [1.8.0](https://github.com/sozonome/sznm.dev/compare/v1.7.0...v1.8.0) (2022-02-10)
 
 

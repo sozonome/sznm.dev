@@ -2,7 +2,7 @@
   "name": "sznm.dev",
   "private": true,
   "description": "Agustinus Nathaniel's dev site",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "author": "sozonome",
   "scripts": {
     "dev": "next dev",
@@ -16,7 +16,7 @@
     "format": "prettier --write src",
     "up": "yarn upgrade-interactive",
     "up-latest": "yarn up --latest",
-    "release": "standard-version",
+    "release": "cross-env HUSKY=0 standard-version",
     "push-release": "git push --follow-tags origin main",
     "prepare": "husky install"
   },
