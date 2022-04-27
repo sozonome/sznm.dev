@@ -1,6 +1,6 @@
 import { Box, useColorModeValue } from "@chakra-ui/react";
 import type { GiscusProps } from "@giscus/react";
-import { Giscus } from "@giscus/react";
+import Giscus from "@giscus/react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
