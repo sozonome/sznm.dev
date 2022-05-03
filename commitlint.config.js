@@ -15,6 +15,7 @@ const CommitLintConfiguration = {
         "content",
         "layout",
         "lib",
+        "monitoring",
         "pages",
         "projects",
         "seo",
