@@ -2,7 +2,6 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-import { addUrlClick } from "lib/services/notion/link-shortener/addUrlClick";
 import { getUrl } from "lib/services/notion/link-shortener/getUrl";
 
 const middleware = async (req: NextRequest) => {
@@ -14,7 +13,13 @@ const middleware = async (req: NextRequest) => {
 
   const entry = await getUrl(slug);
   if (entry.url) {
-    await addUrlClick(entry);
+    await fetch(`${req.nextUrl.origin}/api/notion/shortener/add-click`, {
+      method: "POST",
+      body: JSON.stringify(entry),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     return NextResponse.redirect(entry.url);
   }
 };
