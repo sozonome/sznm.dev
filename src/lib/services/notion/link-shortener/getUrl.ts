@@ -16,7 +16,7 @@ export const getUrl = async (slug: string) => {
   const entry = result[0];
   return {
     id: entry?.id,
-    url: (entry?.properties.url as PropertyValueUrl)?.url,
-    count: (entry.properties.count as PropertyValueNumber)?.number,
+    url: (entry?.properties.url as PropertyValueUrl)?.url ?? "",
+    clicks: (entry?.properties.clicks as PropertyValueNumber)?.number ?? 0,
   };
 };
