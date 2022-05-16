@@ -63,7 +63,6 @@ const securityHeaders = [
 /** @type {import('next').NextConfig} */
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
-  swcMinify: true,
   headers: async () => {
     return [
       {
