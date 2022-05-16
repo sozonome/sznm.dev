@@ -6,7 +6,7 @@ import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import HeadingLink from "./HeadingLink";
 
 export const renderers: Options["components"] = {
-  code: ({ node, inline, className, children, ...props }) => {
+  code: ({ inline, className, children, ...props }) => {
     /** https://github.com/remarkjs/react-markdown#use-custom-components-syntax-highlight */
     const match = /language-(\w+)/.exec(className || "");
     const language = match?.[1];
