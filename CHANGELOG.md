@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/sozonome/sznm.dev/compare/v1.8.0...v1.10.0) (2022-05-16)
+
+
+### Features
+
+* ✨ add url shortener path ([#87](https://github.com/sozonome/sznm.dev/issues/87)) ([5fb07ec](https://github.com/sozonome/sznm.dev/commit/5fb07ec7ec023a162d165e51794ec285ad9bf41c))
+* add footer link - status and analytics ([#79](https://github.com/sozonome/sznm.dev/issues/79)) ([2614655](https://github.com/sozonome/sznm.dev/commit/26146557d7eaf0335e35e352472fb5876989307f))
+* **monitoring:** setup axiom ingest ([d201579](https://github.com/sozonome/sznm.dev/commit/d2015792a59b523114fe822a2ae957f54fe3e954))
+
+
+### Bug Fixes
+
+* **services:** 🐛 add error handling in spotify api route ([#74](https://github.com/sozonome/sznm.dev/issues/74)) ([f267512](https://github.com/sozonome/sznm.dev/commit/f2675122030c124d090cc92d4c51490731e8d42f))
+
+
+### Improvements
+
+* **components:** remove unused parameter in code renderer ([d870687](https://github.com/sozonome/sznm.dev/commit/d87068701abecd1f22c8d0625eb5466127e19104))
+* **utils:** revise arguments into single object for trackEventToUmami ([#83](https://github.com/sozonome/sznm.dev/issues/83)) ([034b18d](https://github.com/sozonome/sznm.dev/commit/034b18d9bb9140ea6e4f19a791a7f152161ae2b6))
+
 ## [1.9.0](https://github.com/sozonome/sznm.dev/compare/v1.8.0...v1.9.0) (2022-04-27)
 
 
