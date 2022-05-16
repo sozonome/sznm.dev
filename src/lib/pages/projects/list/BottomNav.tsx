@@ -25,7 +25,7 @@ const ProjectListBottomNav = () => {
           as="a"
           variant="outline"
           onClick={handleClickOtherProjects}
-          isFullWidth
+          width="full"
         >
           Other Projects
         </Button>
@@ -39,7 +39,7 @@ const ProjectListBottomNav = () => {
           as="a"
           href="https://prtfl.sznm.dev"
           target="_blank"
-          isFullWidth
+          width="full"
           onClick={handleClickPortfolioPage}
         >
           see more detailed portfolio
