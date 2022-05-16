@@ -1,6 +1,6 @@
 import { Box, Heading, Text, Link } from "@chakra-ui/react";
 
-const kapturaluminaprivacyterms = () => {
+const KapturaLuminaPrivacyTerms = () => {
   return (
     <Box as="article">
       <Box>
@@ -62,4 +62,4 @@ const kapturaluminaprivacyterms = () => {
   );
 };
 
-export default kapturaluminaprivacyterms;
+export default KapturaLuminaPrivacyTerms;
