@@ -1,6 +1,6 @@
 import { Box, Heading, Text, Link } from "@chakra-ui/react";
 
-const ragambudayaprivacyterms = () => {
+const RagamBudayaPrivacyTerms = () => {
   return (
     <Box>
       <Box>
@@ -62,4 +62,4 @@ const ragambudayaprivacyterms = () => {
   );
 };
 
-export default ragambudayaprivacyterms;
+export default RagamBudayaPrivacyTerms;

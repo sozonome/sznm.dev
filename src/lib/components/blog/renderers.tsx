@@ -1,5 +1,4 @@
 import { Box, Button, Code, Flex, Link as ChakraLink } from "@chakra-ui/react";
-import type { ReactNode } from "react";
 import type { Options } from "react-markdown/lib/ast-to-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -42,10 +41,10 @@ export const renderers: Options["components"] = {
       </code>
     );
   },
-  link: ({ href, node }) => {
+  a: ({ href, children }) => {
     return (
       <ChakraLink href={href} isExternal wordBreak="break-word">
-        {node.children[0].value as ReactNode}
+        {children}
       </ChakraLink>
     );
   },
