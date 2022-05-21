@@ -165,7 +165,7 @@ Now you have a dedicated page to monitor your site performance from time-to-time
 
 It's important to note that the more URL you add to your speedlify configurations, the build time needed will be increased. The free version of Netlify have a maximum 15 minutes build time for every build process and 300 minutes build time quota for every month.
 
-I work around it by limiting my measurement to be done maximum once every 23 hours and limiting the total URLs from all category to be around 5 until 10, and automatically trigger the build every day on weekdays only at 10PM. With those configurations, every build would spend around 4 until 7 minutes (<15 minutes), so I won't hit the monthly build time quota limit (4.5 _ 5 _ 7 ~= 160 minutes -> <300 minutes).
+I work around it by limiting my measurement to be done maximum once every 23 hours and limiting the total URLs from all category to be around 5 until 10, and automatically trigger the build every day on weekdays only at 10PM. With those configurations, every build would spend around 4 until 7 minutes (<15 minutes), so I won't hit the monthly build time quota limit (4.5 x 5 x 7 ~= 160 minutes -> <300 minutes).
 
 ## Thank You!
 
