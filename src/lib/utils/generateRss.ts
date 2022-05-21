@@ -1,26 +1,22 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-await-in-loop */
+import type { Blog } from "contentlayer/generated";
+import { allBlogs } from "contentlayer/generated";
 import RSS from "rss";
 
-import type { BlogPostType } from "lib/types/blog";
-
-import { getPostData } from "./posts";
-
-const generateRssItem = async (post: BlogPostType) => {
-  const postData: any = await getPostData(post.id);
+const generateRssItem = async (post: Blog) => {
+  const postData = allBlogs.find(({ id }) => id === post.id) as Blog;
 
   return {
     title: postData.title,
     id: postData.id,
     date: new Date(postData.date).toUTCString(),
     description: postData.description ? postData.description : "",
-    contentHtml: postData.contentHtml,
+    contentHtml: postData.body.html,
   };
 };
 
-export const generateRss = async (
-  posts: Array<BlogPostType>
-): Promise<string> => {
+export const generateRss = async (posts: Array<Blog>): Promise<string> => {
   const feed = new RSS({
     title: "sozonome's blog",
     site_url: "https://sznm.dev",

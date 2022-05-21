@@ -1,7 +1,6 @@
-import type { BlogPostType } from "lib/types/blog";
-import type { ProjectType } from "lib/types/project";
+import type { Blog, Project } from "contentlayer/generated";
 
 export type HomeProps = {
-  allProjectsData: Array<ProjectType>;
-  allPostsData: Array<BlogPostType>;
+  allProjectsData: Array<Project>;
+  allPostsData: Array<Blog>;
 };

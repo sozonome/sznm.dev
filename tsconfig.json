@@ -18,6 +18,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": "src",
+    "paths": {
+      "contentlayer/generated": ["../.contentlayer/generated"]
+    },
     "incremental": true
   },
   "include": [
@@ -25,7 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     "next.config.js",
-    "src"
+    "src",
+    ".contentlayer/generated"
   ],
   "exclude": [
     "node_modules"

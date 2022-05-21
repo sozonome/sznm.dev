@@ -1,11 +1,11 @@
 import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
+import type { Blog } from "contentlayer/generated";
 
 import Twemoji from "lib/components/Twemoji";
-import type { BlogPostType } from "lib/types/blog";
 import { dateFormatLong } from "lib/utils/dateFormat";
 
 type BlogPostHeadProps = {
-  postData: BlogPostType;
+  postData: Blog;
 };
 
 const BlogPostHead = ({ postData }: BlogPostHeadProps) => {
@@ -19,7 +19,9 @@ const BlogPostHead = ({ postData }: BlogPostHeadProps) => {
           <Text>Agustinus Nathaniel</Text>
         </Link>
 
-        <Text>{dateFormatLong(postData.date)}</Text>
+        <Text fontSize="sm">
+          {dateFormatLong(postData.date)} - {postData.readTime?.text}
+        </Text>
       </Box>
 
       <Flex flexBasis={["20%"]}>

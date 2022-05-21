@@ -1,5 +1,5 @@
-import type { BlogPostType } from "lib/types/blog";
+import type { Blog } from "contentlayer/generated";
 
 export type BlogPostProps = {
-  postData: BlogPostType;
+  postData: Blog;
 };

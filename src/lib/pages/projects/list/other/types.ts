@@ -1,5 +1,5 @@
-import type { ProjectType } from "lib/types/project";
+import type { Project } from "contentlayer/generated";
 
 export type OtherProjectsProps = {
-  otherProjects: Array<ProjectType>;
+  otherProjects: Array<Project>;
 };

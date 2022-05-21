@@ -1,6 +1,6 @@
-import type { ProjectType } from "lib/types/project";
+import type { Project } from "contentlayer/generated";
 
 export type ProjectDetailWrapperProps = {
-  projectData: ProjectType;
+  projectData: Project;
   source: string;
 };

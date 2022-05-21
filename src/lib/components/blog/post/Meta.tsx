@@ -1,11 +1,11 @@
+import type { Blog } from "contentlayer/generated";
 import { ArticleJsonLd, NextSeo } from "next-seo";
 
 import { baseUrl } from "lib/constants/baseUrl";
-import type { BlogPostType } from "lib/types/blog";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 
 type BlogPostMetaProps = {
-  postData: BlogPostType;
+  postData: Blog;
 };
 
 const BlogPostMeta = ({ postData }: BlogPostMetaProps) => {

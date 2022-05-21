@@ -1,9 +1,9 @@
+import type { Project } from "contentlayer/generated";
+import { allProjects } from "contentlayer/generated";
 import Cors from "cors";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import initMiddleware from "lib/services/init-middleware";
-import type { ProjectType } from "lib/types/project";
-import { getSortedProjectsData } from "lib/utils/projects";
 
 const cors = initMiddleware(
   Cors({
@@ -12,11 +12,13 @@ const cors = initMiddleware(
 );
 
 const projects = async (req: NextApiRequest, res: NextApiResponse) => {
-  const allProjectsData: Array<ProjectType> = getSortedProjectsData();
+  const allProjectsData: Array<Project> = allProjects.filter(
+    (project) => project.published !== false && project
+  );
 
   const sznmAppsProjects = allProjectsData
     .filter((project) => project.sznmApps === true)
-    .sort((a: ProjectType, b: ProjectType) => {
+    .sort((a: Project, b: Project) => {
       if (a.title.toLowerCase() < b.title.toLowerCase()) {
         return -1;
       }
