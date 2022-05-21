@@ -25,7 +25,7 @@ const BlogPost = ({ postData }: BlogPostProps) => {
         rehypePlugins={[rehypeRaw]}
         components={renderers}
       >
-        {postData.rawContent}
+        {postData.body.raw}
       </ReactMarkdown>
 
       <Box marginY={12}>

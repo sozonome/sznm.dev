@@ -1,14 +1,14 @@
 import { Box, Button, Grid, Heading, Stack } from "@chakra-ui/react";
+import type { Project } from "contentlayer/generated";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 import Card from "lib/components/projects/Card";
-import type { ProjectType } from "lib/types/project";
 import { trackEventToUmami } from "lib/utils/trackEvent";
 
-export type ProjectsSectionProps = { data: Array<ProjectType> };
+export type ProjectsSectionProps = { data: Array<Project> };
 
 const ProjectsSection = ({ data }: ProjectsSectionProps) => {
   const router = useRouter();

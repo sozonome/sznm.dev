@@ -1,13 +1,13 @@
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
+import type { Blog } from "contentlayer/generated";
 import Link from "next/link";
 
 import Twemoji from "lib/components/Twemoji";
-import type { BlogPostType } from "lib/types/blog";
 import { dateFormatLong } from "lib/utils/dateFormat";
 import { trackEventToUmami } from "lib/utils/trackEvent";
 
 type BlogPostPreviewProps = {
-  postData: BlogPostType;
+  postData: Blog;
 };
 
 const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
@@ -43,7 +43,9 @@ const BlogPostPreview = ({ postData }: BlogPostPreviewProps) => {
             <Heading size="lg" marginBottom={2}>
               {postData.title}
             </Heading>
-            <Text>{dateFormatLong(postData.date)}</Text>
+            <Text fontSize="sm">
+              {dateFormatLong(postData.date)} - {postData.readTime?.text}
+            </Text>
           </Box>
         </Flex>
       </Link>

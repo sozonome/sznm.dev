@@ -5,7 +5,10 @@ legacyID: "2020-11-07-monitor-and-measure-site-performance-with-speedlify"
 thumbnail: "🏎️"
 published: true
 tags:
+	- performance
+  - monitoring
 ---
+
 ## TL;DR
 
 Want to measure and monitor your site performance from time to time and automatically? Deploy [Speedlify](https://speedlify.dev) through [Netlify](https://www.netlify.com/) and use [Github Actions](https://github.com/features/actions) (cron schedule) or Zapier to automatically trigger build every desired time.
@@ -20,19 +23,19 @@ You can directly visit [this page](https://github.com/zachleat/speedlify/#deploy
 
 ### This article won't cover...
 
-SEO or visitor related metrics like Google Analytics. The site performance mentioned in this article is [Lighthouse](https://developers.google.com/web/tools/lighthouse) based performance measurement. 
+SEO or visitor related metrics like Google Analytics. The site performance mentioned in this article is [Lighthouse](https://developers.google.com/web/tools/lighthouse) based performance measurement.
 
 ---
 
 ## Measuring Site Performance
 
-Nowadays there are so many ways to measure site performance beside running lighthouse in your local machine (Chrome Dev Tools). Even recently [Vercel](https://vercel.com), PaaS for frontend deployment released a feature called [Analytics](https://vercel.com/docs/analytics/overview.amp). This feature can show your [Next.js](https://nextjs.org/analytics) or [Gatsby](https://vercel.com/blog/gatsby-analytics) site performance automatically from time-to-time without having to configure anything (*almost zero-config*). But this feature is limited to be applicable for one project if your vercel account is a free version. 
+Nowadays there are so many ways to measure site performance beside running lighthouse in your local machine (Chrome Dev Tools). Even recently [Vercel](https://vercel.com), PaaS for frontend deployment released a feature called [Analytics](https://vercel.com/docs/analytics/overview.amp). This feature can show your [Next.js](https://nextjs.org/analytics) or [Gatsby](https://vercel.com/blog/gatsby-analytics) site performance automatically from time-to-time without having to configure anything (_almost zero-config_). But this feature is limited to be applicable for one project if your vercel account is a free version.
 
-What if we have more than one project / site to be measured from time-to-time without spending extra cost? Well, this is where [Speedlify](https://speedlify.dev) comes in, a template for site performance monitor created by [Zach Leatherman](https://github.com/zachleat). Speedlify built using a static site generator framework called [11ty(eleventy)](https://www.11ty.dev/). 
+What if we have more than one project / site to be measured from time-to-time without spending extra cost? Well, this is where [Speedlify](https://speedlify.dev) comes in, a template for site performance monitor created by [Zach Leatherman](https://github.com/zachleat). Speedlify built using a static site generator framework called [11ty(eleventy)](https://www.11ty.dev/).
 
 I've tried to deploy my own speedlify [here](https://audit.sznm.dev).
 
-*fun fact: I found Speedlify when I was just randomly exploring 11ty docs page (not really important, just intermezzo 😄)* 
+_fun fact: I found Speedlify when I was just randomly exploring 11ty docs page (not really important, just intermezzo 😄)_
 
 Well, let's get our hands dirty!
 
@@ -76,22 +79,22 @@ Just delete all default files in `_data/sites`. Create a file `[CATEGORY_NAME].j
 ```js
 // _data/sites/[CATEGORY_NAME].js
 module.exports = {
-	name: "Category Name", // optional, falls back to object key
-	description: "Category Description",
-	options: {
-		frequency: 60 * 23, // 23 hours
+  name: "Category Name", // optional, falls back to object key
+  description: "Category Description",
+  options: {
+    frequency: 60 * 23, // 23 hours
 
-		// Use "run" if the sites don’t share assets on the same origin
-		//           and we can reset chrome with each run instead of
-		//           each site in every run (it’s faster)
-		// Use "site" if sites are all on the same origin and share assets.
-		freshChrome: "run",
-	},
-	urls: [
-		"https://[YOUR_SITE_URL]/",
-		"https://[YOUR_SITE_URL]/",
-		// etc
-	]
+    // Use "run" if the sites don’t share assets on the same origin
+    //           and we can reset chrome with each run instead of
+    //           each site in every run (it’s faster)
+    // Use "site" if sites are all on the same origin and share assets.
+    freshChrome: "run",
+  },
+  urls: [
+    "https://[YOUR_SITE_URL]/",
+    "https://[YOUR_SITE_URL]/",
+    // etc
+  ],
 };
 ```
 
@@ -143,7 +146,7 @@ on:
   schedule:
     # if you want to define your own build trigger schedule, just change the cron schedule value below
     # use https://crontab.guru/ if you are having some difficulties on how to define the cron values
-    - cron: '0 22 * * MON-FRI'
+    - cron: "0 22 * * MON-FRI"
     # every day on weekdays 22:00.
 jobs:
   build:
@@ -152,7 +155,7 @@ jobs:
     steps:
       - name: Curl request
         run: curl -X POST -d {} YOUR_BUILD_HOOK_URL
-``` 
+```
 
 Commit your changes and run `git push`. If it's configured correctly, it will be shown in "Actions" tab at your github repository.
 
@@ -162,9 +165,10 @@ Now you have a dedicated page to monitor your site performance from time-to-time
 
 It's important to note that the more URL you add to your speedlify configurations, the build time needed will be increased. The free version of Netlify have a maximum 15 minutes build time for every build process and 300 minutes build time quota for every month.
 
-I work around it by limiting my measurement to be done maximum once every 23 hours and limiting the total URLs from all category to be around 5 until 10, and automatically trigger the build every day on weekdays only at 10PM. With those configurations, every build would spend around 4 until 7 minutes (<15 minutes), so I won't hit the monthly build time quota limit (4.5 * 5 * 7 ~= 160 minutes -> <300 minutes).
+I work around it by limiting my measurement to be done maximum once every 23 hours and limiting the total URLs from all category to be around 5 until 10, and automatically trigger the build every day on weekdays only at 10PM. With those configurations, every build would spend around 4 until 7 minutes (<15 minutes), so I won't hit the monthly build time quota limit (4.5 x 5 x 7 ~= 160 minutes -> <300 minutes).
 
 ## Thank You!
+
 For reading this article. I hope you found this useful.
 
 ## References
@@ -177,5 +181,6 @@ For reading this article. I hope you found this useful.
 ## Some Alternatives
 
 (some exhaustive list of other tools to measure your website performance)
+
 - [https://web.dev/measure/](https://web.dev/measure/)
 - [https://www.lightest.app/](https://web.dev/measure/)

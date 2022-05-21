@@ -5,6 +5,8 @@ legacyID: "2021-05-13-how-to-secure-firebase-project"
 thumbnail: "🔒"
 published: true
 tags:
+  - security
+  - firebase
 ---
 
 > disclaimer: This is not by any means to be the best practice guide of using firebase in every project. Every project has its own needs and specifications. This guide may not be suitable with your needs.
@@ -16,11 +18,11 @@ Do you develop apps using Firebase? If so, we should know that our firebase conf
 Every firebase project is a GCP (Google Cloud Platform) project, so we can go to Google Cloud console to configure further our firebase project. We can restrict the API key even though it is exposed. Just follow these steps:
 
 1. Go to [https://console.cloud.google.com/apis](https://console.cloud.google.com/apis),
-  ![Credentials Tab](https://sznm.dev/images/2021-05-13-how-to-secure-firebase-project/GCP-01.png)
+   ![Credentials Tab](https://sznm.dev/images/2021-05-13-how-to-secure-firebase-project/GCP-01.png)
 2. Select the desired firebase project,
 3. Go to `Credentials` menu,
 4. Look for `API Keys` section, select the API key which has `...(auto created by Firebase)`,
-  ![API Key Restrictions Tab](https://sznm.dev/images/2021-05-13-how-to-secure-firebase-project/GCP-02.png)
+   ![API Key Restrictions Tab](https://sznm.dev/images/2021-05-13-how-to-secure-firebase-project/GCP-02.png)
 5. You will be directed to a page called `Restrict and rename API key`, go to `Application restrictions` section, select `HTTP referrers (web sites)`, add your production web client domain in `Website restrictions` section. Don't add `localhost` if you intend to use the firebase project for production.
 6. Hit the `save` button to apply changes.
 

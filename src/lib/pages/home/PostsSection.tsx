@@ -1,13 +1,13 @@
 import { Box, Button, Grid, Heading, Stack } from "@chakra-ui/react";
+import type { Blog } from "contentlayer/generated";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
 import BlogPostPreview from "lib/components/blog/BlogPostPreview";
-import type { BlogPostType } from "lib/types/blog";
 import { trackEventToUmami } from "lib/utils/trackEvent";
 
 export type PostsSectionProps = {
-  data: Array<BlogPostType>;
+  data: Array<Blog>;
 };
 
 const PostsSection = ({ data }: PostsSectionProps) => {

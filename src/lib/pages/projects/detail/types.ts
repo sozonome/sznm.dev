@@ -1,9 +1,9 @@
-import type { ProjectType } from "lib/types/project";
+import type { Project } from "contentlayer/generated";
 
 export type ProjectDetailParams = {
   id: string;
 };
 
 export type ProjectDetailProps = {
-  projectData: ProjectType;
+  projectData: Project;
 };

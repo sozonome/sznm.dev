@@ -4,16 +4,18 @@ date: "2020-05-02"
 legacyID: "2020-05-02-self-challenge"
 thumbnail: "🏆"
 published: true
-tags: 
+tags:
   - Gatsby
   - Vercel
   - Evergreen
   - TailwindCSS
 ---
+
 Recently I challenged myself to make a web app as soon as possible in two days. Managed to make two. One is a simple Food Recipe App and the other is COVID-19 Data App.
 Turned out it was so fun.
 
 ## 1. Le Cook
+
 Fun food recipe catalog app powered by [RecipePuppy](https://recipepuppy.com) API....
 
 [https://le-cook.now.sh/](https://le-cook.now.sh/)
@@ -22,8 +24,9 @@ Fun food recipe catalog app powered by [RecipePuppy](https://recipepuppy.com) AP
 ![Le Cook (2)](https://sznm.dev/images/2020-05-02-self-challenge/le-cook_2.jpg)
 ![Le Cook (3)](https://sznm.dev/images/2020-05-02-self-challenge/le-cook_3.jpg)
 
-## 2. COVID-19 Data 
-presenting COVID-19 statistics powered by [@mathdroid](https://github.com/mathdroid/covid-19-api/)'s covid-19-api. 
+## 2. COVID-19 Data
+
+presenting COVID-19 statistics powered by [@mathdroid](https://github.com/mathdroid/covid-19-api/)'s covid-19-api.
 I made a vanilla JS version of this app several days ago and I decided to re-develop it using Gatsby (React).
 
 [https://covid19data.now.sh/](https://covid19data.now.sh/)
@@ -44,4 +47,4 @@ When developing COVID-19 Data app, I realized Evergreen UI have no opinionated w
 I decided to deploy it using [Vercel](https://vercel.com) and I'm so shocked by how fast it is compared to [Netlify](https://netlify.com). I'm considering to migrate to Vercel from Netlify for my previous projects, including this site.
 
 I posted my recent projects [here](https://sznm.dev/projects).
-You can access the project and the project's GitHub repository link from this [page](https://sznm.dev/projects). 
+You can access the project and the project's GitHub repository link from this [page](https://sznm.dev/projects).
