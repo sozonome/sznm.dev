@@ -29,10 +29,9 @@ const ProjectDetailContent = ({
       borderColor={borderColor}
       transition="0.2s ease-out"
       _hover={{
-        transform: "scale(1.03, 1.03)",
         shadow: "lg",
         borderColor: descriptionTextColor,
-        borderWidth: 4,
+        borderWidth: 2,
       }}
     >
       <Flex alignItems="center" width="100%" height="100%" gridGap={8}>
