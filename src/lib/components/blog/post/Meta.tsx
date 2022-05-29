@@ -9,7 +9,10 @@ type BlogPostMetaProps = {
 };
 
 const BlogPostMeta = ({ postData }: BlogPostMetaProps) => {
-  const ogImage = sznmOgImage({ heading: postData.title });
+  const ogImage = sznmOgImage({
+    heading: postData.title,
+    text: "Blog Post | https://sznm.dev",
+  });
   const pageUrl = `${baseUrl}/blog/${postData.id}`;
 
   return (
