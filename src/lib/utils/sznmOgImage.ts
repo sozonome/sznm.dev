@@ -1,20 +1,16 @@
-type SznmOgImageOptions = Partial<{
-  theme: string;
-  fontSize: string;
-  images: string;
-}>;
+import pickBy from "lodash-es/pickBy";
 
-export const sznmOgImage = (text: string, options?: SznmOgImageOptions) => {
-  const defaultOptions: SznmOgImageOptions = {
-    theme: "dark",
-    fontSize: "100px",
-    images: "https://sznm.dev/avataaars.svg",
-  };
+import { baseUrl } from "lib/constants/baseUrl";
 
-  const finalOptions: SznmOgImageOptions = {
-    ...defaultOptions,
-    ...options,
-  };
+type OgImageOption = {
+  heading?: string;
+  text?: string;
+};
 
-  return `https://og-image.sznm.dev/**${text}**.png?theme=${finalOptions.theme}&md=1&fontSize=${finalOptions.fontSize}&images=${finalOptions.images}`;
+export const sznmOgImage = (options: OgImageOption) => {
+  const purgedOptions = pickBy(options);
+  const urlParams = new URLSearchParams(purgedOptions).toString();
+  const params = urlParams ? `?${urlParams}` : "";
+
+  return `${baseUrl}/api/generate${params}`;
 };

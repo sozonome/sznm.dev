@@ -42,7 +42,10 @@ const BlogPostList = ({ allPostsData }: BlogPostListProps) => {
           title: "Blog Posts | sozonome",
           images: [
             {
-              url: sznmOgImage("Blog Posts | sozonome"),
+              url: sznmOgImage({
+                heading: "Blog Posts | sozonome",
+                text: "https://sznm.dev",
+              }),
               alt: "Blog Posts | sozonome og-image",
             },
           ],

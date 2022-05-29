@@ -19,7 +19,10 @@ const ProjectDetail = ({ projectData }: ProjectDetailProps) => {
           title: `${projectData.title} | sozonome`,
           images: [
             {
-              url: sznmOgImage(projectData.title),
+              url: sznmOgImage({
+                heading: projectData.title,
+                text: "https://sznm.dev",
+              }),
               alt: `${projectData.title} | sozonome og-image`,
             },
           ],
