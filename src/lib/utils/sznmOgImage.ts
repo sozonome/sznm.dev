@@ -1,7 +1,5 @@
 import pickBy from "lodash-es/pickBy";
 
-import { baseUrl } from "lib/constants/baseUrl";
-
 type OgImageOption = {
   heading?: string;
   text?: string;
@@ -12,5 +10,5 @@ export const sznmOgImage = (options: OgImageOption) => {
   const urlParams = new URLSearchParams(purgedOptions).toString();
   const params = urlParams ? `?${urlParams}` : "";
 
-  return `${baseUrl}/api/generate${params}`;
+  return `https://og.sznm.dev/api/generate${params}`;
 };
