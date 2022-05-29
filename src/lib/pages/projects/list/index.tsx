@@ -28,7 +28,10 @@ const ProjectList = ({ featuredProjects }: ProjectListProps) => {
           title: "Projects | sozonome",
           images: [
             {
-              url: sznmOgImage("Projects"),
+              url: sznmOgImage({
+                heading: "Projects",
+                text: "https://sznm.dev",
+              }),
               alt: "Projects | sozonome og-image",
             },
           ],

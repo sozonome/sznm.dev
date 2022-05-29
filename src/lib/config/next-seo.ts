@@ -13,7 +13,7 @@ export const defaultSEOConfig: DefaultSeoProps = {
     description: "Agustinus Nathaniel's Dev Site",
     images: [
       {
-        url: "https://og-image.sznm.dev/**sznm**.dev.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fsznm.dev%2Favataaars.svg&widths=250",
+        url: "https://og.sznm.dev/api/generate?heading=sozonome&text=https://sznm.dev",
         alt: "sznm.dev og-image",
       },
     ],
