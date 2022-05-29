@@ -29,7 +29,7 @@ const BlogPostList = ({ allPostsData }: BlogPostListProps) => {
     () =>
       debounce((event: React.ChangeEvent<HTMLInputElement>) => {
         setKeyword(event.target.value);
-      }, 200),
+      }, 150),
     []
   );
 
