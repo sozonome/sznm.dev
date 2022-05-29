@@ -43,7 +43,7 @@ const Blog = defineDocumentType(() => ({
     id: {
       type: "string",
       // eslint-disable-next-line no-underscore-dangle
-      resolve: (post) => post._raw.sourceFileName.replace(/\.md[x]$/, ""),
+      resolve: (post) => post._raw.sourceFileName.replace(/\.md$|\.mdx$/, ""),
     },
   },
 }));
@@ -72,7 +72,7 @@ const Project = defineDocumentType(() => ({
     id: {
       type: "string",
       // eslint-disable-next-line no-underscore-dangle
-      resolve: (post) => post._raw.sourceFileName.replace(/\.md[x]$/, ""),
+      resolve: (post) => post._raw.sourceFileName.replace(/\.md$|\.mdx$/, ""),
     },
   },
 }));
