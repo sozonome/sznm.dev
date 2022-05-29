@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/sozonome/sznm.dev/compare/v1.10.0...v1.11.0) (2022-05-29)
+
+
+### Features
+
+* **blog:** ✨ add search box ([#91](https://github.com/sozonome/sznm.dev/issues/91)) ([a2eb7eb](https://github.com/sozonome/sznm.dev/commit/a2eb7ebcb9fc7b017565d587bd42de8d7138187d))
+
+
+### Bug Fixes
+
+* **content:** revise content id regex ([#93](https://github.com/sozonome/sznm.dev/issues/93)) ([75c4723](https://github.com/sozonome/sznm.dev/commit/75c4723b12470a13b9012d6ffaa707713102eb29))
+* disable swcMinify ([#89](https://github.com/sozonome/sznm.dev/issues/89)) ([5cc729c](https://github.com/sozonome/sznm.dev/commit/5cc729cd7bbad70e65be812c54f2cf4ed4837538))
+
+
+### Improvements
+
+* **components:** :lipstick: remove scalings and non-mono color ([98ed64c](https://github.com/sozonome/sznm.dev/commit/98ed64c2a1fce64e2f1f333eedb107be2addd51d))
+* **content:** switch to contentlayer & add read time ([#90](https://github.com/sozonome/sznm.dev/issues/90)) ([93e2d39](https://github.com/sozonome/sznm.dev/commit/93e2d39eeb0f906016b9afc3846d63859c22392b))
+* revise og image ([#92](https://github.com/sozonome/sznm.dev/issues/92)) ([5108358](https://github.com/sozonome/sznm.dev/commit/510835894f13ca06a8d6ccd7e6e8b433fe58b57e))
+
 ## [1.10.0](https://github.com/sozonome/sznm.dev/compare/v1.8.0...v1.10.0) (2022-05-16)
 
 
