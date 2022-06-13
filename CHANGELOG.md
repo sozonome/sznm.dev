@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.1](https://github.com/sozonome/sznm.dev/compare/v1.11.0...v1.11.1) (2022-06-13)
+
+
+### Improvements
+
+* **blog:** add og img text for blog post meta ([f7a0448](https://github.com/sozonome/sznm.dev/commit/f7a0448d5247c149b9ad5011dfbc3e2163776918))
+
 ## [1.11.0](https://github.com/sozonome/sznm.dev/compare/v1.10.0...v1.11.0) (2022-05-29)
 
 
