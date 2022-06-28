@@ -1,17 +1,19 @@
+/* eslint-disable import/prefer-default-export */
 /* eslint-disable consistent-return */
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-import { getUrl } from "lib/services/notion/link-shortener/getUrl";
-
-const middleware = async (req: NextRequest) => {
+export const middleware = async (req: NextRequest) => {
   const slug = req.nextUrl.pathname.split("/")[2];
 
   if (!slug) {
     return NextResponse.rewrite(`${req.nextUrl.origin}/404`);
   }
 
-  const entry = await getUrl(slug);
+  const entry = await fetch(
+    `${req.nextUrl.origin}/api/notion/shortener/get-url?slug=${slug}`
+  ).then((res) => res.json());
+
   if (entry.url) {
     await fetch(`${req.nextUrl.origin}/api/notion/shortener/add-click`, {
       method: "POST",
@@ -24,4 +26,6 @@ const middleware = async (req: NextRequest) => {
   }
 };
 
-export default middleware;
+export const config = {
+  matcher: ["/s/:path*"],
+};
