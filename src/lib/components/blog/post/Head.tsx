@@ -10,9 +10,13 @@ type BlogPostHeadProps = {
 
 const BlogPostHead = ({ postData }: BlogPostHeadProps) => {
   return (
-    <Flex alignItems="center" marginBottom={16}>
+    <Flex alignItems="center" marginBottom={24}>
       <Box flexBasis={["80%"]}>
-        <Heading as="h1" size="2xl" marginBottom={8}>
+        <Heading
+          as="h1"
+          size={{ base: "2xl", sm: "3xl", md: "4xl" }}
+          marginBottom={8}
+        >
           {postData.title}
         </Heading>
         <Link href="/about" isExternal>
