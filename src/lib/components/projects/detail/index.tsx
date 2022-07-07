@@ -27,7 +27,6 @@ const ProjectDetailWrapper = ({
         href={link}
         isExternal
         onClick={handleClickProject}
-        key={projectData.id}
         _hover={{
           textDecoration: "none",
         }}
@@ -37,9 +36,7 @@ const ProjectDetailWrapper = ({
     );
   }
 
-  return (
-    <ProjectDetailContent projectData={projectData} key={projectData.id} />
-  );
+  return <ProjectDetailContent projectData={projectData} />;
 };
 
 export default ProjectDetailWrapper;

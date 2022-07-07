@@ -2,12 +2,12 @@ import { Text } from "@chakra-ui/react";
 
 import MotionBox from "lib/components/motion/MotionBox";
 import MotionFlex from "lib/components/motion/MotionFlex";
-
 import {
-  socialLinks,
   staggerAnimationProps,
   wrapperAnimationProps,
-} from "./constants";
+} from "lib/constants/animation";
+
+import { socialLinks } from "./constants";
 import MotionLink from "./MotionLink";
 
 const Links = () => {
@@ -16,7 +16,7 @@ const Links = () => {
       <Text fontStyle="italic">1.01 ^365 = 37.7</Text>
 
       <MotionFlex
-        wrap="wrap"
+        flexWrap="wrap"
         gridGap={4}
         marginTop={4}
         {...staggerAnimationProps}
