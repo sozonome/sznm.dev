@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/sozonome/sznm.dev/compare/v1.11.1...v1.12.0) (2022-07-07)
+
+
+### Features
+
+* re-enable animation ([#99](https://github.com/sozonome/sznm.dev/issues/99)) ([0dee1a4](https://github.com/sozonome/sznm.dev/commit/0dee1a4a2bb290ab82ec59a91ba0cd85f2f09d43))
+* **theme:** 💄 update font ([#97](https://github.com/sozonome/sznm.dev/issues/97)) ([66d3929](https://github.com/sozonome/sznm.dev/commit/66d39292dc0338042e680bf15685a35464590fc5))
+
 ### [1.11.1](https://github.com/sozonome/sznm.dev/compare/v1.11.0...v1.11.1) (2022-06-13)
 
 
