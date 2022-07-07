@@ -1,21 +1,26 @@
-import { Box, Grid, Heading } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 
+import MotionBox from "lib/components/motion/MotionBox";
+import MotionGrid from "lib/components/motion/MotionGrid";
 import ProjectDetailWrapper from "lib/components/projects/detail";
 import { baseUrl } from "lib/constants/baseUrl";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 
 import ProjectListBottomNav from "./BottomNav";
+import { childAnimationProps, staggerAnimationProps } from "./constants";
 import type { ProjectListProps } from "./types";
 
 const ProjectList = ({ featuredProjects }: ProjectListProps) => {
   const projects = featuredProjects.map((projectData) => {
     return (
-      <ProjectDetailWrapper
-        projectData={projectData}
-        source="Featured Projects"
-        key={projectData.id}
-      />
+      <MotionBox {...childAnimationProps} key={projectData.id}>
+        <ProjectDetailWrapper
+          projectData={projectData}
+          source="Featured Projects"
+          key={projectData.id}
+        />
+      </MotionBox>
     );
   });
 
@@ -44,9 +49,9 @@ const ProjectList = ({ featuredProjects }: ProjectListProps) => {
         </Heading>
       </Box>
 
-      <Grid gap={6} marginBottom={8}>
+      <MotionGrid {...staggerAnimationProps} gap={6} marginBottom={8}>
         {projects}
-      </Grid>
+      </MotionGrid>
 
       <ProjectListBottomNav />
     </>

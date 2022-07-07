@@ -16,7 +16,7 @@ const Links = () => {
       <Text fontStyle="italic">1.01 ^365 = 37.7</Text>
 
       <MotionFlex
-        wrap="wrap"
+        flexWrap="wrap"
         gridGap={4}
         marginTop={4}
         {...staggerAnimationProps}

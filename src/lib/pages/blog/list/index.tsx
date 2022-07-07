@@ -13,9 +13,11 @@ import * as React from "react";
 import { FaSearch } from "react-icons/fa";
 
 import BlogPostPreview from "lib/components/blog/BlogPostPreview";
+import MotionGrid from "lib/components/motion/MotionGrid";
 import { baseUrl } from "lib/constants/baseUrl";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 
+import { childAnimationProps, staggerAnimationProps } from "./constants";
 import type { BlogPostListProps } from "./types";
 
 const BlogPostList = ({ allPostsData }: BlogPostListProps) => {
@@ -72,12 +74,16 @@ const BlogPostList = ({ allPostsData }: BlogPostListProps) => {
         </InputRightElement>
       </InputGroup>
 
-      <Grid gap={16} marginY={12}>
+      <MotionGrid {...staggerAnimationProps} gap={16} marginY={12}>
         {!filteredPosts.length && <Text>No posts found.</Text>}
         {filteredPosts.map((postData) => (
-          <BlogPostPreview postData={postData} key={postData.title} />
+          <BlogPostPreview
+            wrapperProps={childAnimationProps}
+            postData={postData}
+            key={postData.title}
+          />
         ))}
-      </Grid>
+      </MotionGrid>
     </Box>
   );
 };

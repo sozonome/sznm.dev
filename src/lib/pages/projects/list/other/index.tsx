@@ -1,10 +1,16 @@
-import { Box, Button, Grid, Heading } from "@chakra-ui/react";
+import { Box, Button, Heading } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
+import MotionBox from "lib/components/motion/MotionBox";
+import MotionGrid from "lib/components/motion/MotionGrid";
 import ProjectDetailWrapper from "lib/components/projects/detail";
 import { baseUrl } from "lib/constants/baseUrl";
+import {
+  childAnimationProps,
+  staggerAnimationProps,
+} from "lib/pages/projects/list/constants";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 import { trackEventToUmami } from "lib/utils/trackEvent";
 
@@ -55,18 +61,20 @@ const OtherProjects = ({ otherProjects }: OtherProjectsProps) => {
         </Heading>
       </Box>
 
-      <Grid
+      <MotionGrid
+        {...staggerAnimationProps}
         gap={8}
-        templateColumns={["repeat(1)", "repeat(1)", "repeat(2, 1fr)"]}
+        gridTemplateColumns={["repeat(1)", "repeat(1)", "repeat(2, 1fr)"]}
       >
         {otherProjects.map((projectData) => (
-          <ProjectDetailWrapper
-            projectData={projectData}
-            source="Other Projects"
-            key={projectData.id}
-          />
+          <MotionBox {...childAnimationProps} key={projectData.id}>
+            <ProjectDetailWrapper
+              projectData={projectData}
+              source="Other Projects"
+            />
+          </MotionBox>
         ))}
-      </Grid>
+      </MotionGrid>
     </>
   );
 };
