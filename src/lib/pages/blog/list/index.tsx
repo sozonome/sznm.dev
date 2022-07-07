@@ -14,10 +14,13 @@ import { FaSearch } from "react-icons/fa";
 
 import BlogPostPreview from "lib/components/blog/BlogPostPreview";
 import MotionGrid from "lib/components/motion/MotionGrid";
+import {
+  childAnimationProps,
+  staggerAnimationProps,
+} from "lib/constants/animation";
 import { baseUrl } from "lib/constants/baseUrl";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 
-import { childAnimationProps, staggerAnimationProps } from "./constants";
 import type { BlogPostListProps } from "./types";
 
 const BlogPostList = ({ allPostsData }: BlogPostListProps) => {

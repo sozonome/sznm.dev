@@ -4,11 +4,14 @@ import { NextSeo } from "next-seo";
 import MotionBox from "lib/components/motion/MotionBox";
 import MotionGrid from "lib/components/motion/MotionGrid";
 import ProjectDetailWrapper from "lib/components/projects/detail";
+import {
+  childAnimationProps,
+  staggerAnimationProps,
+} from "lib/constants/animation";
 import { baseUrl } from "lib/constants/baseUrl";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 
 import ProjectListBottomNav from "./BottomNav";
-import { childAnimationProps, staggerAnimationProps } from "./constants";
 import type { ProjectListProps } from "./types";
 
 const ProjectList = ({ featuredProjects }: ProjectListProps) => {

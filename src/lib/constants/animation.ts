@@ -1,3 +1,12 @@
+export const wrapperAnimationProps = {
+  variants: {
+    before: { y: 0, opacity: 0, transition: { type: "spring" } },
+    after: { y: 20, opacity: 1, transition: { type: "spring" } },
+  },
+  initial: "before",
+  animate: "after",
+};
+
 export const staggerAnimationProps = {
   variants: {
     before: {},

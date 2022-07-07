@@ -6,11 +6,11 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import MotionBox from "lib/components/motion/MotionBox";
 import MotionGrid from "lib/components/motion/MotionGrid";
 import ProjectDetailWrapper from "lib/components/projects/detail";
-import { baseUrl } from "lib/constants/baseUrl";
 import {
   childAnimationProps,
   staggerAnimationProps,
-} from "lib/pages/projects/list/constants";
+} from "lib/constants/animation";
+import { baseUrl } from "lib/constants/baseUrl";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 import { trackEventToUmami } from "lib/utils/trackEvent";
 
