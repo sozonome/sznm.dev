@@ -17,7 +17,6 @@ const Footer = () => {
   return (
     <Stack as="footer" layerStyle="layoutBlock" spacing={8}>
       <Divider />
-
       <SpotifyListening />
 
       <Grid
@@ -36,7 +35,6 @@ const Footer = () => {
           />
         ))}
       </Grid>
-
       <Text fontSize={["xs", "sm"]}>
         &copy; 2020 - {new Date().getFullYear()}{" "}
         <Link

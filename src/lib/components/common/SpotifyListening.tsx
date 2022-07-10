@@ -29,13 +29,13 @@ const SpotifyListening = () => {
         as={Link}
         href={data.trackUrl}
         target="_blank"
-        fontFamily="Catamaran, sans-serif"
         borderRadius={12}
         maxWidth={300}
         marginX="auto"
         alignItems="center"
         gridGap={2}
         height={20}
+        fontFamily="heading"
       >
         <Icon as={FaSpotify} color="green.400" fontSize="2xl" />
         <Image src={data.albumArtUrl} width={16} borderRadius={8} />
