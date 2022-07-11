@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.12.1](https://github.com/sozonome/sznm.dev/compare/v1.12.0...v1.12.1) (2022-07-11)
+
+
+### Improvements
+
+* disable animation in homepage and revise spotify listening font ([ad7885a](https://github.com/sozonome/sznm.dev/commit/ad7885a488b42635419f924e9df4036c6a7a93e5))
+* increase shortener redirect speed ([#101](https://github.com/sozonome/sznm.dev/issues/101)) ([dfd074c](https://github.com/sozonome/sznm.dev/commit/dfd074c4556d66a2f657843f3f39c54f4cd0b33a))
+* **projects:** handle card group hover ([7ed539e](https://github.com/sozonome/sznm.dev/commit/7ed539e550c89e32eecfa61299104b3a53ae604b))
+
 ## [1.12.0](https://github.com/sozonome/sznm.dev/compare/v1.11.1...v1.12.0) (2022-07-07)
 
 
