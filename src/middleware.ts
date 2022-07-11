@@ -1,9 +1,9 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable consistent-return */
-import type { NextFetchEvent, NextRequest } from "next/server";
+import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-export const middleware = async (req: NextRequest, event: NextFetchEvent) => {
+export const middleware = async (req: NextRequest) => {
   const slug = req.nextUrl.pathname.split("/")[2];
 
   if (!slug) {
@@ -15,15 +15,13 @@ export const middleware = async (req: NextRequest, event: NextFetchEvent) => {
   ).then((res) => res.json());
 
   if (entry.url) {
-    event.waitUntil(
-      fetch(`${req.nextUrl.origin}/api/notion/shortener/add-click`, {
-        method: "POST",
-        body: JSON.stringify(entry),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-    );
+    await fetch(`${req.nextUrl.origin}/api/notion/shortener/add-click`, {
+      method: "POST",
+      body: JSON.stringify(entry),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     return NextResponse.redirect(entry.url);
   }
 };
