@@ -17,7 +17,7 @@ export const middleware = async (req: NextRequest) => {
   if (entry.url) {
     await fetch(`${req.nextUrl.origin}/api/notion/shortener/add-click`, {
       method: "POST",
-      body: JSON.stringify(entry),
+      body: JSON.stringify({ slug }),
       headers: {
         "Content-Type": "application/json",
       },
