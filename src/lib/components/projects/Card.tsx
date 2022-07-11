@@ -48,6 +48,7 @@ const Card = ({
       _hover={{
         textDecoration: "none",
       }}
+      role="group"
     >
       <Box
         borderColor="cardBorder"
@@ -66,7 +67,19 @@ const Card = ({
         }}
       >
         {thumbnailUrl && (
-          <Box height={[200, 250, 200]}>
+          <Box
+            height={[200, 250, 200]}
+            sx={{
+              img: {
+                transition: "0.4s cubic-bezier(0.15, 0.0, 0.85, 1.0)",
+              },
+            }}
+            _groupHover={{
+              img: {
+                transform: "scale(1.25)",
+              },
+            }}
+          >
             <Image
               width={200}
               height={200}
@@ -95,7 +108,7 @@ const Card = ({
             <Text
               fontWeight="bold"
               fontSize="lg"
-              fontFamily="Catamaran, sans-serif"
+              fontFamily="heading"
               textShadow="md"
               color="white"
             >
