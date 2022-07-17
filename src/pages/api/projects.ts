@@ -40,6 +40,7 @@ const projects = async (req: NextApiRequest, res: NextApiResponse) => {
   await cors(req, res);
 
   res.statusCode = 200;
+  res.setHeader("Cache-Control", "s-maxage=600");
   res.json(projectList);
 };
 
