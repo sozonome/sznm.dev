@@ -71,12 +71,14 @@ const Card = ({
             height={[200, 250, 200]}
             sx={{
               img: {
-                transition: "0.4s cubic-bezier(0.15, 0.0, 0.85, 1.0)",
+                transition: "0.2s cubic-bezier(0.15, 0.0, 0.85, 1.0)",
+                filter: "blur(0.25rem)",
               },
             }}
             _groupHover={{
               img: {
-                transform: "scale(1.25)",
+                transform: "scale(1.05)",
+                filter: "blur(0)",
               },
             }}
           >

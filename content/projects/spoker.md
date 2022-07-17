@@ -1,6 +1,6 @@
 ---
 title: spoker
-projectLink: https://spoker.sznm.dev/intro
+projectLink: https://spoker.dev/intro
 # repoLink: https://github.com/sozonome/spoker
 description: My take on scrum poker.
 date: "2021-02-28"
