@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.12.2](https://github.com/sozonome/sznm.dev/compare/v1.12.1...v1.12.2) (2022-07-19)
+
+
+### Improvements
+
+* **api:** add stale while revalidate cache control ([#104](https://github.com/sozonome/sznm.dev/issues/104)) ([5f9b4f3](https://github.com/sozonome/sznm.dev/commit/5f9b4f3d96c264decbd6df2e871b8d8ce30c99ed))
+* **api:** set cache control header for /api/projects ([#103](https://github.com/sozonome/sznm.dev/issues/103)) ([f6ccab7](https://github.com/sozonome/sznm.dev/commit/f6ccab7dc360330e30245486fb5b2a24c382bb4d))
+* **projects:** adjust hover style of project card highlight ([#102](https://github.com/sozonome/sznm.dev/issues/102)) ([084dc2c](https://github.com/sozonome/sznm.dev/commit/084dc2c0eb42ce446ed3e0743d4f73808e91cbcb))
+
 ### [1.12.1](https://github.com/sozonome/sznm.dev/compare/v1.12.0...v1.12.1) (2022-07-11)
 
 
