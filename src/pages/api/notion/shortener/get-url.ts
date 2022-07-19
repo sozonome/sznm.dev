@@ -13,7 +13,10 @@ const getLongUrl = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const entry = await getUrl(slug as string);
   if (entry.url) {
-    res.setHeader("Cache-Control", "s-maxage=300");
+    res.setHeader(
+      "Cache-Control",
+      "s-maxage=60, stale-while-revalidate=2678400"
+    );
     return res.status(200).json(entry);
   }
   return res.status(400).json({ message: "Bad Request" });
