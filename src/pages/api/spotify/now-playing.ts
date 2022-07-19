@@ -8,6 +8,7 @@ const nowPlaying = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(400);
   }
 
+  res.setHeader("Cache-Control", "s-maxage=1, stale-while-revalidate=59");
   try {
     const response = await getNowPlaying();
 
@@ -23,7 +24,6 @@ const nowPlaying = async (req: NextApiRequest, res: NextApiResponse) => {
       albumArtUrl: response.item.album.images[0].url,
       trackUrl: response.item.external_urls.spotify,
     };
-
     return res.status(200).json(data);
   } catch {
     return res.status(200).json({ isPlaying: false });
