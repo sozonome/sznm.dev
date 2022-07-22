@@ -21,6 +21,7 @@ const CommitLintConfiguration = {
         "projects",
         "seo",
         "services",
+        "snippets",
         "static",
         "theme",
         "utils",
