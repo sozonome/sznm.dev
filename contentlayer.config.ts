@@ -77,9 +77,29 @@ const Project = defineDocumentType(() => ({
   },
 }));
 
+const Snippet = defineDocumentType(() => ({
+  name: "Snippet",
+  filePathPattern: "snippets/*.md",
+  fields: {
+    title: { type: "string", required: true },
+    description: { type: "string", required: true },
+    published: { type: "boolean" },
+    date: { type: "string" },
+    stacks: { type: "list", of: { type: "string" } },
+  },
+  computedFields: {
+    id: {
+      type: "string",
+      resolve: (snippet) =>
+        // eslint-disable-next-line no-underscore-dangle
+        snippet._raw.sourceFileName.replace(/\.md$|\.mdx$/, ""),
+    },
+  },
+}));
+
 const contentLayerConfig = makeSource({
   contentDirPath: "content",
-  documentTypes: [Blog, Project],
+  documentTypes: [Blog, Project, Snippet],
   markdown: {
     remarkPlugins: [remarkHtml],
     rehypePlugins: [rehypeRaw],

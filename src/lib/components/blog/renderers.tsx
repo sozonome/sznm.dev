@@ -55,5 +55,3 @@ export const renderers: Options["components"] = {
   h5: ({ children }) => <HeadingLink as="h5">{String(children)}</HeadingLink>,
   h6: ({ children }) => <HeadingLink as="h6">{String(children)}</HeadingLink>,
 };
-
-export default renderers;

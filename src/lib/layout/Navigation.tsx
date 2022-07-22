@@ -1,7 +1,7 @@
 import { IconButton } from "@chakra-ui/react";
 import Link from "next/link";
 import type { IconType } from "react-icons";
-import { FaFeatherAlt, FaHome, FaRocket, FaUser } from "react-icons/fa";
+import { FaCode, FaFeatherAlt, FaHome, FaRocket, FaUser } from "react-icons/fa";
 
 import { trackEventToUmami } from "lib/utils/trackEvent";
 
@@ -26,7 +26,7 @@ const NavItem = ({ href, label, icon }: NavItemProps) => {
         aria-label={label}
         variant="ghost"
         flexBasis="25%"
-        fontSize={["2xl", "md"]}
+        fontSize={["xl", "md"]}
         padding={0}
         onClick={handleClickNavigation}
       >
@@ -51,6 +51,11 @@ const navigations: NavItemProps[] = [
     href: "/blog",
     label: "Blog",
     icon: FaFeatherAlt,
+  },
+  {
+    href: "/snippets",
+    label: "Snippets",
+    icon: FaCode,
   },
   {
     href: "/about",
