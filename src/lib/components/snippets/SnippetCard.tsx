@@ -1,4 +1,4 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Flex, Grid, Heading, Text } from "@chakra-ui/react";
 import type { Snippet } from "contentlayer/generated";
 import Link from "next/link";
 
@@ -12,14 +12,31 @@ const SnippetCard = ({ data }: SnippetCardProps) => {
       <Flex
         direction="column"
         as="a"
-        gap={2}
+        gap={4}
         padding={8}
         height="full"
         borderWidth={2}
         borderRadius={24}
       >
-        <Heading size="md">{data.title}</Heading>
-        <Text fontSize="sm">{data.description}</Text>
+        <Grid gap={2}>
+          <Heading size="md">{data.title}</Heading>
+          <Text fontSize="sm">{data.description}</Text>
+        </Grid>
+
+        <Flex gap={2}>
+          {data.stacks?.map((stack) => (
+            <Text
+              borderWidth={1}
+              paddingY={0.5}
+              paddingX={2}
+              borderRadius={12}
+              fontSize="xs"
+              color="teal.500"
+            >
+              {stack}
+            </Text>
+          ))}
+        </Flex>
       </Flex>
     </Link>
   );

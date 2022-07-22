@@ -1,0 +1,26 @@
+.content {
+  p {
+    margin: 0.5rem 0 2rem;
+  }
+  a {
+    font-weight: 550;
+    text-decoration: underline;
+  }
+  img {
+    border-radius: 1rem;
+    margin: 1rem 0;
+  }
+  ul,
+  ol {
+    margin: 0 1.5rem;
+    li {
+      margin: 0.6rem 0;
+    }
+  }
+  code {
+    background-color: rgb(200, 200, 200);
+    border-radius: 0.25rem;
+    padding: 0 0.25rem;
+    color: black;
+  }
+}
