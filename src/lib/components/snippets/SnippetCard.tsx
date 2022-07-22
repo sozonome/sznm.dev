@@ -32,6 +32,7 @@ const SnippetCard = ({ data }: SnippetCardProps) => {
               borderRadius={12}
               fontSize="xs"
               color="teal.500"
+              key={stack}
             >
               {stack}
             </Text>

@@ -26,7 +26,7 @@ const SnippetList = ({ snippets }: SnippetListProps) => {
         gridTemplateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
       >
         {snippets.map((item) => (
-          <MotionBox {...childAnimationProps}>
+          <MotionBox {...childAnimationProps} key={item.id}>
             <SnippetCard data={item} />
           </MotionBox>
         ))}
