@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.1](https://github.com/sozonome/sznm.dev/compare/v1.13.0...v1.13.1) (2022-07-24)
+
+
+### Bug Fixes
+
+* **markdown:** change heading link to use scroll margin top ([#107](https://github.com/sozonome/sznm.dev/issues/107)) ([8400993](https://github.com/sozonome/sznm.dev/commit/8400993821dd79fb923cd64d53df3f9fe18b43e7))
+
+
+### Improvements
+
+* **snippets:** add meta to snippet list ([fcfde4f](https://github.com/sozonome/sznm.dev/commit/fcfde4fe51387a186c9c5ca16d66a2eb1ecb1941))
+
 ## [1.13.0](https://github.com/sozonome/sznm.dev/compare/v1.12.2...v1.13.0) (2022-07-22)
 
 
