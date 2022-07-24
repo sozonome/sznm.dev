@@ -32,8 +32,8 @@ const HeadingLink = ({ children, as }: HeadingLinkProps) => {
         marginY={4 + (7 - level) * 0.5}
         id={convertToId(String(children))}
         textDecoration="none"
-        paddingTop={28}
-        marginTop={-24}
+        marginTop={6}
+        scrollMarginTop={24}
         _hover={{
           textDecoration: "underline",
           cursor: "pointer",
