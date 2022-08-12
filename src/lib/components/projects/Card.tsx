@@ -51,7 +51,7 @@ const Card = ({
       role="group"
     >
       <Box
-        borderColor="cardBorder"
+        borderColor="elevatedCardBorder"
         borderWidth={2}
         boxShadow="0px 0px 32px 2px rgba(38, 46, 51, 0.1);"
         borderRadius={20}

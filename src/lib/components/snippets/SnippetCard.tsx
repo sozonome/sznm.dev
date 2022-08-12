@@ -26,11 +26,20 @@ const SnippetCard = ({ data }: SnippetCardProps) => {
         height="full"
         borderWidth={2}
         borderRadius={24}
+        borderColor="cardBorder"
         onClick={handleClickSnippet}
+        transition="0.2s ease-out"
+        _hover={{
+          shadow: "lg",
+          borderColor: "cardHoverBorder",
+          borderWidth: 2,
+        }}
       >
         <Grid gap={2}>
           <Heading size="md">{data.title}</Heading>
-          <Text fontSize="sm">{data.description}</Text>
+          <Text fontSize="sm" color="description">
+            {data.description}
+          </Text>
         </Grid>
 
         <Flex gap={2}>
