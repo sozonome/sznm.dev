@@ -31,4 +31,3 @@ stacks:
 ## References
 
 - [https://stackoverflow.com/questions/65042380/how-to-add-webkit-scrollbar-pseudo-element-in-chakra-ui-element-react](https://stackoverflow.com/questions/65042380/how-to-add-webkit-scrollbar-pseudo-element-in-chakra-ui-element-react)
-- [https://react.geist-ui.dev/en-us/components/tabs](https://react.geist-ui.dev/en-us/components/tabs)

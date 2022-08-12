@@ -61,7 +61,7 @@ const BlogPostList = ({ allPostsData }: BlogPostListProps) => {
         <Heading as="h1" size="xl">
           Blog Posts
         </Heading>
-        <Text>Just some writings</Text>
+        <Text color="description">Just some writings</Text>
       </Grid>
 
       <InputGroup>
