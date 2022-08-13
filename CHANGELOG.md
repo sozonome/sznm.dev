@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.14.0](https://github.com/sozonome/sznm.dev/compare/v1.13.1...v1.14.0) (2022-08-13)
+
+
+### Features
+
+* **cmd:** ✨ add command center ([#111](https://github.com/sozonome/sznm.dev/issues/111)) ([24a1f36](https://github.com/sozonome/sznm.dev/commit/24a1f369418fc8921a0e0d6c85ad55d49b743459))
+
+
+### Improvements
+
+* prevent layout shift when body become scrollable ([#110](https://github.com/sozonome/sznm.dev/issues/110)) ([ee3ac5f](https://github.com/sozonome/sznm.dev/commit/ee3ac5fd6b02b09f7eefd60cf03d0b5e712fa1f9))
+* **snippets:** 💄 add hover style for snippet card ([#109](https://github.com/sozonome/sznm.dev/issues/109)) ([484f9dd](https://github.com/sozonome/sznm.dev/commit/484f9dd9f70bc47bad25548203cad72d2d85ce5d))
+
 ### [1.13.1](https://github.com/sozonome/sznm.dev/compare/v1.13.0...v1.13.1) (2022-07-24)
 
 
