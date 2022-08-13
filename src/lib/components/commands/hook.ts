@@ -19,6 +19,10 @@ export const useCommandCenter = () => {
           onClose();
           return;
         }
+        trackEvent({
+          eventValue: "open cmd center with cmd+k",
+          eventType: "cmd",
+        });
         onOpen();
       }
     };
