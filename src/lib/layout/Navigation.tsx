@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { IconType } from "react-icons";
 import { FaCode, FaFeatherAlt, FaHome, FaRocket, FaUser } from "react-icons/fa";
 
-import { trackEventToUmami } from "lib/utils/trackEvent";
+import { trackEvent } from "lib/utils/trackEvent";
 
 type NavItemProps = {
   href: string;
@@ -13,7 +13,7 @@ type NavItemProps = {
 
 const NavItem = ({ href, label, icon }: NavItemProps) => {
   const handleClickNavigation = () => {
-    trackEventToUmami({
+    trackEvent({
       eventValue: `Nav Link: ${label}`,
       eventType: "navigate",
     });

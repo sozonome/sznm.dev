@@ -1,6 +1,6 @@
 import { Link } from "@chakra-ui/react";
 
-import { trackEventToUmami } from "lib/utils/trackEvent";
+import { trackEvent } from "lib/utils/trackEvent";
 
 import ProjectDetailContent from "./Content";
 import type { ProjectDetailWrapperProps } from "./types";
@@ -15,7 +15,7 @@ const ProjectDetailWrapper = ({
     projectData.repoLink;
 
   const handleClickProject = () => {
-    trackEventToUmami({
+    trackEvent({
       eventValue: `${source}: Open ${projectData.title} | ${link}`,
       eventType: "link",
     });

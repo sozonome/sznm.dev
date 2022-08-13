@@ -6,7 +6,7 @@ import type { MotionBoxProps } from "lib/components/motion/MotionBox";
 import MotionBox from "lib/components/motion/MotionBox";
 import Twemoji from "lib/components/Twemoji";
 import { dateFormatLong } from "lib/utils/dateFormat";
-import { trackEventToUmami } from "lib/utils/trackEvent";
+import { trackEvent } from "lib/utils/trackEvent";
 
 type BlogPostPreviewProps = {
   postData: Blog;
@@ -15,7 +15,7 @@ type BlogPostPreviewProps = {
 
 const BlogPostPreview = ({ postData, wrapperProps }: BlogPostPreviewProps) => {
   const handleClickBlogPost = () => {
-    trackEventToUmami({
+    trackEvent({
       eventValue: `Blog Post: ${postData.title}`,
       eventType: "navigate",
     });

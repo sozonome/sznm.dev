@@ -27,6 +27,7 @@
     "@giscus/react": "^2.2.0",
     "@notionhq/client": "^1.0.4",
     "chakra-ui-markdown-renderer": "^4.1.0",
+    "cmdk": "^0.1.18",
     "contentlayer": "^0.2.6",
     "cors": "^2.8.5",
     "date-fns": "^2.29.1",

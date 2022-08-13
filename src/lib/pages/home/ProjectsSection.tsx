@@ -6,7 +6,7 @@ import * as React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 import Card from "lib/components/projects/Card";
-import { trackEventToUmami } from "lib/utils/trackEvent";
+import { trackEvent } from "lib/utils/trackEvent";
 
 export type ProjectsSectionProps = { data: Array<Project> };
 
@@ -23,7 +23,7 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
   }, [data]);
 
   const handleClickViewAllProjects = () => {
-    trackEventToUmami({
+    trackEvent({
       eventValue: "Home: View All Projects",
       eventType: "navigate",
     });

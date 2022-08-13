@@ -4,6 +4,7 @@ import type { AppProps, NextWebVitalsMetric } from "next/app";
 import { Chakra } from "lib/components/Chakra";
 import { defaultSEOConfig } from "lib/config/next-seo";
 import Layout from "lib/layout";
+import "lib/styles/global.css";
 
 export const reportWebVitals = (metric: NextWebVitalsMetric) => {
   const url = process.env.NEXT_PUBLIC_AXIOM_INGEST_ENDPOINT;
