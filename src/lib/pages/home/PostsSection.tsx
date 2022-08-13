@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
 import BlogPostPreview from "lib/components/blog/BlogPostPreview";
-import { trackEventToUmami } from "lib/utils/trackEvent";
+import { trackEvent } from "lib/utils/trackEvent";
 
 export type PostsSectionProps = {
   data: Array<Blog>;
@@ -12,7 +12,7 @@ export type PostsSectionProps = {
 
 const PostsSection = ({ data }: PostsSectionProps) => {
   const handleClickViewAllPosts = () => {
-    trackEventToUmami({
+    trackEvent({
       eventValue: "Home: View All Posts",
       eventType: "navigate",
     });

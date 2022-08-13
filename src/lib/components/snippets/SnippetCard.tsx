@@ -2,7 +2,7 @@ import { Flex, Grid, Heading, Text } from "@chakra-ui/react";
 import type { Snippet } from "contentlayer/generated";
 import Link from "next/link";
 
-import { trackEventToUmami } from "lib/utils/trackEvent";
+import { trackEvent } from "lib/utils/trackEvent";
 
 type SnippetCardProps = {
   data: Snippet;
@@ -10,7 +10,7 @@ type SnippetCardProps = {
 
 const SnippetCard = ({ data }: SnippetCardProps) => {
   const handleClickSnippet = () => {
-    trackEventToUmami({
+    trackEvent({
       eventValue: `Snippet: ${data.title}`,
       eventType: "navigate",
     });

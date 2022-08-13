@@ -12,13 +12,13 @@ import {
 } from "lib/constants/animation";
 import { baseUrl } from "lib/constants/baseUrl";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
-import { trackEventToUmami } from "lib/utils/trackEvent";
+import { trackEvent } from "lib/utils/trackEvent";
 
 import type { OtherProjectsProps } from "./types";
 
 const OtherProjects = ({ otherProjects }: OtherProjectsProps) => {
   const handleBackToFeaturedProjects = () => {
-    trackEventToUmami({
+    trackEvent({
       eventValue: "Other Projects: Back to Featured Projects",
       eventType: "navigate",
     });

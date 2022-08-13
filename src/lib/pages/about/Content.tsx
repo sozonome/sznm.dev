@@ -2,7 +2,7 @@ import type { BoxProps } from "@chakra-ui/react";
 import { Heading, Link, Text } from "@chakra-ui/react";
 
 import MotionBox from "lib/components/motion/MotionBox";
-import { trackEventToUmami } from "lib/utils/trackEvent";
+import { trackEvent } from "lib/utils/trackEvent";
 
 const textProps: BoxProps = {
   marginY: 4,
@@ -10,7 +10,7 @@ const textProps: BoxProps = {
 
 const Content = () => {
   const handleClickInstagramLink = () => {
-    trackEventToUmami({
+    trackEvent({
       eventValue: "About: Click Instagram Link",
       eventType: "link",
     });

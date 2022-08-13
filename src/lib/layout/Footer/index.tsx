@@ -1,14 +1,14 @@
 import { Divider, Grid, Link, Stack, Text } from "@chakra-ui/react";
 
 import SpotifyListening from "lib/components/common/SpotifyListening";
-import { trackEventToUmami } from "lib/utils/trackEvent";
+import { trackEvent } from "lib/utils/trackEvent";
 
 import { links } from "./constants";
 import FooterLink from "./FooterLink";
 
 const Footer = () => {
   const handleClickFooterLink = (label: string) => () => {
-    trackEventToUmami({
+    trackEvent({
       eventValue: `Footer Link: ${label}`,
       eventType: "link",
     });

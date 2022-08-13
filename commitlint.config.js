@@ -14,6 +14,7 @@ const CommitLintConfiguration = {
         "blog",
         "components",
         "content",
+        "cmd",
         "layout",
         "lib",
         "markdown",

@@ -1,18 +1,18 @@
 import { Button, Grid, Tooltip } from "@chakra-ui/react";
 import Link from "next/link";
 
-import { trackEventToUmami } from "lib/utils/trackEvent";
+import { trackEvent } from "lib/utils/trackEvent";
 
 const ProjectListBottomNav = () => {
   const handleClickOtherProjects = () => {
-    trackEventToUmami({
+    trackEvent({
       eventValue: "Featured Projects: Click Other Projects",
       eventType: "navigate",
     });
   };
 
   const handleClickPortfolioPage = () => {
-    trackEventToUmami({
+    trackEvent({
       eventValue: "Featured Projects: Click See More detailed Porfolio",
       eventType: "link",
     });
