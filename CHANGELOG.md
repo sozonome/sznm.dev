@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.1](https://github.com/sozonome/sznm.dev/compare/v1.14.0...v1.14.1) (2022-08-13)
+
+
+### Improvements
+
+* add tracking for cmd+k ([f83de72](https://github.com/sozonome/sznm.dev/commit/f83de72b6296bf5485d3dc5b97d692e4eba6c19b))
+
 ## [1.14.0](https://github.com/sozonome/sznm.dev/compare/v1.13.1...v1.14.0) (2022-08-13)
 
 
