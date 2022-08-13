@@ -24,6 +24,10 @@ const navigationMenus: CommandGroup = {
       id: "blog",
     },
     {
+      name: "Snippets",
+      id: "snippets",
+    },
+    {
       name: "About",
       id: "about",
     },
