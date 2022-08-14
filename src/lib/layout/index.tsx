@@ -1,6 +1,8 @@
 import { Box, Stack } from "@chakra-ui/react";
 import type { ReactNode } from "react";
 
+import { useCommandCenter } from "lib/components/commands/hook";
+
 import Footer from "./Footer";
 import Header from "./Header";
 import Meta from "./meta";
@@ -11,6 +13,8 @@ type LayoutProps = {
 };
 
 const Layout = ({ children }: LayoutProps) => {
+  useCommandCenter();
+
   return (
     <Box
       backgroundColor="background"

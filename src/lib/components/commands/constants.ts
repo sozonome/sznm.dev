@@ -1,9 +1,9 @@
 import { allBlogs, allSnippets } from "contentlayer/generated";
 
-import type { CommandGroup } from "./types";
+import type { CommandCollection } from "./types";
 import { CommandType } from "./types";
 
-const navigationMenus: CommandGroup = {
+const navigationMenus: CommandCollection = {
   heading: "Main Navigation",
   type: CommandType.navigation,
   items: [
@@ -34,7 +34,7 @@ const navigationMenus: CommandGroup = {
   ],
 };
 
-const blogPosts: CommandGroup = {
+const blogPosts: CommandCollection = {
   heading: "Blog Posts",
   pathPrefix: "blog",
   type: CommandType.navigation,
@@ -44,7 +44,7 @@ const blogPosts: CommandGroup = {
   })),
 };
 
-const snippets: CommandGroup = {
+const snippets: CommandCollection = {
   heading: "Snippets",
   pathPrefix: "snippets",
   type: CommandType.navigation,
@@ -54,7 +54,7 @@ const snippets: CommandGroup = {
   })),
 };
 
-const themeCommand: CommandGroup = {
+const themeCommand: CommandCollection = {
   heading: "System",
   type: CommandType.theme,
   items: [
@@ -65,7 +65,7 @@ const themeCommand: CommandGroup = {
   ],
 };
 
-export const commands: Array<CommandGroup> = [
+export const commands: Array<CommandCollection> = [
   themeCommand,
   navigationMenus,
   blogPosts,

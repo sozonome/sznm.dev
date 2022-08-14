@@ -3,21 +3,23 @@ import Link from "next/link";
 import { RiCommandFill } from "react-icons/ri";
 
 import CommandMenu from "lib/components/commands";
-import { useCommandCenter } from "lib/components/commands/hook";
+import { useCmdMenu } from "lib/store/cmd";
 import { trackEvent } from "lib/utils/trackEvent";
 
 import Navigation from "./Navigation";
 import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
-  const { isOpen, onClose, onSelectItem, onOpen } = useCommandCenter();
+  const { openCmdMenu } = useCmdMenu((state) => ({
+    openCmdMenu: state.openCmdMenu,
+  }));
 
   const handleOpenCommandCenter = () => {
     trackEvent({
       eventValue: "open cmd center",
       eventType: "cta",
     });
-    onOpen();
+    openCmdMenu();
   };
 
   return (
@@ -58,11 +60,7 @@ const Header = () => {
         </Flex>
       </Box>
 
-      <CommandMenu
-        isOpen={isOpen}
-        onClose={onClose}
-        onSelectItem={onSelectItem}
-      />
+      <CommandMenu />
     </>
   );
 };

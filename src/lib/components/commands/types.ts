@@ -3,14 +3,14 @@ export enum CommandType {
   theme,
 }
 
-export type CommandGroup = {
+export type CommandCollection = {
   heading: string;
   type: CommandType;
   pathPrefix?: string;
-  items: Array<CommandItem>;
+  items: Array<CommandEntry>;
 };
 
-export type CommandItem = {
+export type CommandEntry = {
   name: string;
   id: string;
 };
