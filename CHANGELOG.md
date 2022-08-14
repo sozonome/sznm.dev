@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.2](https://github.com/sozonome/sznm.dev/compare/v1.14.1...v1.14.2) (2022-08-14)
+
+
+### Improvements
+
+* **analytics:** adjust with umami new trackEvent model ([3fb63ed](https://github.com/sozonome/sznm.dev/commit/3fb63ed0164d6f4f7c29e7c4f0f66dde39a3d3fa))
+* **cmd:** optimize store and hook ([#113](https://github.com/sozonome/sznm.dev/issues/113)) ([e002e23](https://github.com/sozonome/sznm.dev/commit/e002e23d5c87c59114d8a3989ada59498144b7ac))
+* **cmd:** use store for cmd state management and separate into components ([#112](https://github.com/sozonome/sznm.dev/issues/112)) ([4ca4db0](https://github.com/sozonome/sznm.dev/commit/4ca4db05cad37742b912bfcb9c1987239af69165))
+
 ### [1.14.1](https://github.com/sozonome/sznm.dev/compare/v1.14.0...v1.14.1) (2022-08-13)
 
 
