@@ -10,16 +10,17 @@ import CommandItem from "./components/CommandItem";
 import CommandList from "./components/CommandList";
 import CommandWrapper from "./components/CommandWrapper";
 import { commands } from "./constants";
+import { useCommandCenterAction } from "./hook";
 
 const CommandMenu = () => {
-  const { isOpen, closeCmdMenu, onSelectItem } = useCmdMenu(
+  const { isOpen, closeCmdMenu } = useCmdMenu(
     (state) => ({
       isOpen: state.isOpen,
       closeCmdMenu: state.closeCmdMenu,
-      onSelectItem: state.onSelectItem,
     }),
     shallow
   );
+  const { onSelectItem } = useCommandCenterAction();
 
   return (
     <CommandWrapper isOpen={isOpen} onClose={closeCmdMenu}>

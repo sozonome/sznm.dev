@@ -1,4 +1,4 @@
-import { useColorMode, useDisclosure } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import * as React from "react";
 import shallow from "zustand/shallow";
@@ -10,71 +10,56 @@ import type { CommandCollection, CommandEntry } from "./types";
 import { CommandType } from "./types";
 
 export const useCommandCenter = () => {
-  const router = useRouter();
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const { toggleColorMode } = useColorMode();
+  const isOpen = useCmdMenu((state) => state.isOpen);
 
-  const { setIsOpen, setOpenCmdMenu, setCloseCmdMenu, setOnSelectItem } =
-    useCmdMenu(
-      (state) => ({
-        setIsOpen: state.setIsOpen,
-        setOpenCmdMenu: state.setOpenCmdMenu,
-        setCloseCmdMenu: state.setCloseCmdMenu,
-        setOnSelectItem: state.setOnSelectItem,
-      }),
-      shallow
-    );
+  const { openCmdMenu, closeCmdMenu } = useCmdMenu(
+    (state) => ({
+      openCmdMenu: state.openCmdMenu,
+      closeCmdMenu: state.closeCmdMenu,
+    }),
+    shallow
+  );
 
   React.useEffect(() => {
     const down = (ev: KeyboardEvent) => {
       if (ev.key === "k" && ev.metaKey) {
         if (isOpen) {
-          onClose();
+          closeCmdMenu();
           return;
         }
         trackEvent({
           eventValue: "open cmd center with cmd+k",
           eventType: "cmd",
         });
-        onOpen();
+        openCmdMenu();
       }
     };
 
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
-  }, [isOpen, onClose, onOpen]);
+  }, [closeCmdMenu, isOpen, openCmdMenu]);
+};
 
-  const onSelectItem = React.useCallback(
-    (group: CommandCollection, item: CommandEntry) => {
-      trackEvent({
-        eventValue: `${group.heading}: ${item.name}`,
-        eventType: "cmd",
-      });
+export const useCommandCenterAction = () => {
+  const router = useRouter();
+  const { toggleColorMode } = useColorMode();
 
-      if (group.type === CommandType.theme) {
-        toggleColorMode();
-        return;
-      }
-      const prefix = group.pathPrefix ? `${group.pathPrefix}/` : "";
-      onClose();
-      router.push(`/${prefix}${item.id}`);
-    },
-    [onClose, router, toggleColorMode]
-  );
+  const closeCmdMenu = useCmdMenu((state) => state.closeCmdMenu);
 
-  React.useEffect(() => {
-    setIsOpen(isOpen);
-  }, [isOpen, setIsOpen]);
+  const onSelectItem = (group: CommandCollection, item: CommandEntry) => {
+    trackEvent({
+      eventValue: `${group.heading}: ${item.name}`,
+      eventType: "cmd",
+    });
 
-  React.useEffect(() => {
-    setOpenCmdMenu(onOpen);
-  }, [onOpen, setOpenCmdMenu]);
+    if (group.type === CommandType.theme) {
+      toggleColorMode();
+      return;
+    }
+    const prefix = group.pathPrefix ? `${group.pathPrefix}/` : "";
+    closeCmdMenu();
+    router.push(`/${prefix}${item.id}`);
+  };
 
-  React.useEffect(() => {
-    setCloseCmdMenu(onClose);
-  }, [onClose, setCloseCmdMenu]);
-
-  React.useEffect(() => {
-    setOnSelectItem(onSelectItem);
-  }, [onSelectItem, setOnSelectItem]);
+  return { onSelectItem };
 };
