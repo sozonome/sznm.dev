@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { IconType } from "react-icons";
 import { FaCode, FaFeatherAlt, FaHome, FaRocket, FaUser } from "react-icons/fa";
 
+import { EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
 import { trackEvent } from "lib/utils/trackEvent";
 
 type NavItemProps = {
@@ -14,8 +15,8 @@ type NavItemProps = {
 const NavItem = ({ href, label, icon }: NavItemProps) => {
   const handleClickNavigation = () => {
     trackEvent({
-      eventValue: `Nav Link: ${label}`,
-      eventType: "navigate",
+      eventName: `Nav Link: ${label}`,
+      eventData: { type: EVENT_TYPE_NAVIGATE },
     });
   };
 

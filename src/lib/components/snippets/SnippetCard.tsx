@@ -2,6 +2,7 @@ import { Flex, Grid, Heading, Text } from "@chakra-ui/react";
 import type { Snippet } from "contentlayer/generated";
 import Link from "next/link";
 
+import { EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
 import { trackEvent } from "lib/utils/trackEvent";
 
 type SnippetCardProps = {
@@ -11,8 +12,8 @@ type SnippetCardProps = {
 const SnippetCard = ({ data }: SnippetCardProps) => {
   const handleClickSnippet = () => {
     trackEvent({
-      eventValue: `Snippet: ${data.title}`,
-      eventType: "navigate",
+      eventName: `Snippet: ${data.title}`,
+      eventData: { type: EVENT_TYPE_NAVIGATE },
     });
   };
 

@@ -2,6 +2,7 @@ import type { BoxProps } from "@chakra-ui/react";
 import { Heading, Link, Text } from "@chakra-ui/react";
 
 import MotionBox from "lib/components/motion/MotionBox";
+import { EVENT_TYPE_LINK } from "lib/constants/tracking";
 import { trackEvent } from "lib/utils/trackEvent";
 
 const textProps: BoxProps = {
@@ -11,8 +12,8 @@ const textProps: BoxProps = {
 const Content = () => {
   const handleClickInstagramLink = () => {
     trackEvent({
-      eventValue: "About: Click Instagram Link",
-      eventType: "link",
+      eventName: "About: Click Instagram Link",
+      eventData: { type: EVENT_TYPE_LINK },
     });
   };
 

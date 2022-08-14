@@ -11,6 +11,7 @@ import {
   staggerAnimationProps,
 } from "lib/constants/animation";
 import { baseUrl } from "lib/constants/baseUrl";
+import { EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 import { trackEvent } from "lib/utils/trackEvent";
 
@@ -19,8 +20,8 @@ import type { OtherProjectsProps } from "./types";
 const OtherProjects = ({ otherProjects }: OtherProjectsProps) => {
   const handleBackToFeaturedProjects = () => {
     trackEvent({
-      eventValue: "Other Projects: Back to Featured Projects",
-      eventType: "navigate",
+      eventName: "Other Projects: Back to Featured Projects",
+      eventData: { type: EVENT_TYPE_NAVIGATE },
     });
   };
 

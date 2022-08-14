@@ -2,6 +2,7 @@ import { Box, Link, Text, Stack, useColorModeValue } from "@chakra-ui/react";
 import type { Project } from "contentlayer/generated";
 import Image from "next/image";
 
+import { EVENT_TYPE_LINK } from "lib/constants/tracking";
 import { trackEvent } from "lib/utils/trackEvent";
 
 type CardProps = {
@@ -35,8 +36,8 @@ const Card = ({
 
   const handleClickProject = () => {
     trackEvent({
-      eventValue: `Project Card: open ${title} | ${link}`,
-      eventType: "link",
+      eventName: `Project Card: open ${title} | ${link}`,
+      eventData: { type: EVENT_TYPE_LINK },
     });
   };
 

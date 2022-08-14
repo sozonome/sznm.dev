@@ -6,6 +6,7 @@ import * as React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 import Card from "lib/components/projects/Card";
+import { EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
 import { trackEvent } from "lib/utils/trackEvent";
 
 export type ProjectsSectionProps = { data: Array<Project> };
@@ -24,8 +25,8 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
 
   const handleClickViewAllProjects = () => {
     trackEvent({
-      eventValue: "Home: View All Projects",
-      eventType: "navigate",
+      eventName: "Home: View All Projects",
+      eventData: { type: EVENT_TYPE_NAVIGATE },
     });
   };
 

@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { MotionBoxProps } from "lib/components/motion/MotionBox";
 import MotionBox from "lib/components/motion/MotionBox";
 import Twemoji from "lib/components/Twemoji";
+import { EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
 import { dateFormatLong } from "lib/utils/dateFormat";
 import { trackEvent } from "lib/utils/trackEvent";
 
@@ -16,8 +17,8 @@ type BlogPostPreviewProps = {
 const BlogPostPreview = ({ postData, wrapperProps }: BlogPostPreviewProps) => {
   const handleClickBlogPost = () => {
     trackEvent({
-      eventValue: `Blog Post: ${postData.title}`,
-      eventType: "navigate",
+      eventName: `Blog Post: ${postData.title}`,
+      eventData: { type: EVENT_TYPE_NAVIGATE },
     });
   };
 

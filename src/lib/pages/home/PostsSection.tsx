@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
 import BlogPostPreview from "lib/components/blog/BlogPostPreview";
+import { EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
 import { trackEvent } from "lib/utils/trackEvent";
 
 export type PostsSectionProps = {
@@ -13,8 +14,8 @@ export type PostsSectionProps = {
 const PostsSection = ({ data }: PostsSectionProps) => {
   const handleClickViewAllPosts = () => {
     trackEvent({
-      eventValue: "Home: View All Posts",
-      eventType: "navigate",
+      eventName: "Home: View All Posts",
+      eventData: { type: EVENT_TYPE_NAVIGATE },
     });
   };
 

@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import * as React from "react";
 import shallow from "zustand/shallow";
 
+import { EVENT_TYPE_CMD } from "lib/constants/tracking";
 import { useCmdMenu } from "lib/store/cmd";
 import { trackEvent } from "lib/utils/trackEvent";
 
@@ -28,8 +29,8 @@ export const useCommandCenter = () => {
           return;
         }
         trackEvent({
-          eventValue: "open cmd center with cmd+k",
-          eventType: "cmd",
+          eventName: "open cmd center with cmd+k",
+          eventData: { type: EVENT_TYPE_CMD },
         });
         openCmdMenu();
       }
@@ -48,8 +49,8 @@ export const useCommandCenterAction = () => {
 
   const onSelectItem = (group: CommandCollection, item: CommandEntry) => {
     trackEvent({
-      eventValue: `${group.heading}: ${item.name}`,
-      eventType: "cmd",
+      eventName: `${group.heading}: ${item.name}`,
+      eventData: { type: EVENT_TYPE_CMD },
     });
 
     if (group.type === CommandType.theme) {

@@ -1,20 +1,21 @@
 import { Button, Grid, Tooltip } from "@chakra-ui/react";
 import Link from "next/link";
 
+import { EVENT_TYPE_LINK, EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
 import { trackEvent } from "lib/utils/trackEvent";
 
 const ProjectListBottomNav = () => {
   const handleClickOtherProjects = () => {
     trackEvent({
-      eventValue: "Featured Projects: Click Other Projects",
-      eventType: "navigate",
+      eventName: "Featured Projects: Click Other Projects",
+      eventData: { type: EVENT_TYPE_NAVIGATE },
     });
   };
 
   const handleClickPortfolioPage = () => {
     trackEvent({
-      eventValue: "Featured Projects: Click See More detailed Porfolio",
-      eventType: "link",
+      eventName: "Featured Projects: Click See More detailed Porfolio",
+      eventData: { type: EVENT_TYPE_LINK },
     });
   };
 

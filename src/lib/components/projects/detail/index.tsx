@@ -1,5 +1,6 @@
 import { Link } from "@chakra-ui/react";
 
+import { EVENT_TYPE_LINK } from "lib/constants/tracking";
 import { trackEvent } from "lib/utils/trackEvent";
 
 import ProjectDetailContent from "./Content";
@@ -16,8 +17,8 @@ const ProjectDetailWrapper = ({
 
   const handleClickProject = () => {
     trackEvent({
-      eventValue: `${source}: Open ${projectData.title} | ${link}`,
-      eventType: "link",
+      eventName: `${source}: Open ${projectData.title} | ${link}`,
+      eventData: { type: EVENT_TYPE_LINK },
     });
   };
 

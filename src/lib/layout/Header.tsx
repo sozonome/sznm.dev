@@ -3,6 +3,7 @@ import Link from "next/link";
 import { RiCommandFill } from "react-icons/ri";
 
 import CommandMenu from "lib/components/commands";
+import { EVENT_TYPE_CTA } from "lib/constants/tracking";
 import { useCmdMenu } from "lib/store/cmd";
 import { trackEvent } from "lib/utils/trackEvent";
 
@@ -16,8 +17,8 @@ const Header = () => {
 
   const handleOpenCommandCenter = () => {
     trackEvent({
-      eventValue: "open cmd center",
-      eventType: "cta",
+      eventName: "open cmd center",
+      eventData: { type: EVENT_TYPE_CTA },
     });
     openCmdMenu();
   };

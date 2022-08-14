@@ -2,6 +2,7 @@ import { Icon, Link, Tooltip } from "@chakra-ui/react";
 
 import MotionBox from "lib/components/motion/MotionBox";
 import { childAnimationProps } from "lib/constants/animation";
+import { EVENT_TYPE_LINK } from "lib/constants/tracking";
 import { trackEvent } from "lib/utils/trackEvent";
 
 import type { MotionLinkProps } from "./types";
@@ -11,8 +12,8 @@ const MotionLink = (props: MotionLinkProps) => {
 
   const handleClickLink = () => {
     trackEvent({
-      eventValue: `About: Click Social Link - ${platformName} | ${url}`,
-      eventType: "link",
+      eventName: `About: Click Social Link - ${platformName} | ${url}`,
+      eventData: { type: EVENT_TYPE_LINK },
     });
   };
 
