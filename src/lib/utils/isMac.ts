@@ -1,3 +1,5 @@
+import parser from "ua-parser-js";
+
 export const isMac =
   typeof navigator === "object" &&
-  /Mac|iPod|iPhone|iPad/.test(navigator.platform);
+  /Mac|iOS/.test(parser(navigator.userAgent).os.name ?? "");
