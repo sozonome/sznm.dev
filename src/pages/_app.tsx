@@ -1,5 +1,6 @@
 import { DefaultSeo } from "next-seo";
 import type { AppProps, NextWebVitalsMetric } from "next/app";
+import NextNProgress from "nextjs-progressbar";
 
 import { Chakra } from "lib/components/Chakra";
 import { defaultSEOConfig } from "lib/config/next-seo";
@@ -29,6 +30,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <Chakra>
       <DefaultSeo {...defaultSEOConfig} />
       <Layout>
+        <NextNProgress color="#4A5568" />
         <Component {...pageProps} />
       </Layout>
     </Chakra>

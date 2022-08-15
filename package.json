@@ -36,6 +36,7 @@
     "next": "12.2.5",
     "next-contentlayer": "^0.2.7",
     "next-seo": "^5.5.0",
+    "nextjs-progressbar": "^0.0.14",
     "preact": "^10.10.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
