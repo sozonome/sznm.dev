@@ -5,6 +5,7 @@ import shallow from "zustand/shallow";
 
 import { EVENT_TYPE_CMD } from "lib/constants/tracking";
 import { useCmdMenu } from "lib/store/cmd";
+import { isMac } from "lib/utils/isMac";
 import { trackEvent } from "lib/utils/trackEvent";
 
 import type { CommandCollection, CommandEntry } from "./types";
@@ -23,7 +24,7 @@ export const useCommandCenter = () => {
 
   React.useEffect(() => {
     const down = (ev: KeyboardEvent) => {
-      if (ev.key === "k" && ev.metaKey) {
+      if (ev.key === "k" && (isMac ? ev.metaKey : ev.ctrlKey)) {
         if (isOpen) {
           closeCmdMenu();
           return;
