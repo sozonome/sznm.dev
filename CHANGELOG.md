@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.15.0](https://github.com/sozonome/sznm.dev/compare/v1.14.2...v1.15.0) (2022-08-15)
+
+
+### Features
+
+* **layout:** add progress bar indicator for route change ([#115](https://github.com/sozonome/sznm.dev/issues/115)) ([00aa657](https://github.com/sozonome/sznm.dev/commit/00aa657944097d8d8672cc364fc28a6ad13091d0))
+
 ### [1.14.2](https://github.com/sozonome/sznm.dev/compare/v1.14.1...v1.14.2) (2022-08-14)
 
 
