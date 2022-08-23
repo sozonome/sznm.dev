@@ -12,7 +12,7 @@ import { NextSeo } from "next-seo";
 import * as React from "react";
 import { FaSearch } from "react-icons/fa";
 
-import BlogPostPreview from "lib/components/blog/BlogPostPreview";
+import BlogPostCard from "lib/components/blog/BlogPostCard";
 import MotionGrid from "lib/components/motion/MotionGrid";
 import {
   childAnimationProps,
@@ -77,10 +77,15 @@ const BlogPostList = ({ allPostsData }: BlogPostListProps) => {
         </InputRightElement>
       </InputGroup>
 
-      <MotionGrid {...staggerAnimationProps} gap={16} marginY={12}>
+      <MotionGrid
+        gap={16}
+        marginY={12}
+        gridTemplateColumns={{ md: "repeat(2, 1fr)" }}
+        {...staggerAnimationProps}
+      >
         {!filteredPosts.length && <Text>No posts found.</Text>}
         {filteredPosts.map((postData) => (
-          <BlogPostPreview
+          <BlogPostCard
             wrapperProps={childAnimationProps}
             postData={postData}
             key={postData.title}

@@ -7,6 +7,7 @@ import rehypeRaw from "rehype-raw";
 import BlogPostHead from "lib/components/blog/post/Head";
 import BlogPostMeta from "lib/components/blog/post/Meta";
 import { renderers } from "lib/components/blog/renderers";
+import { unsplashImg } from "lib/utils/unsplashImg";
 
 import styles from "./BlogPost.module.scss";
 import type { BlogPostProps } from "./types";
@@ -26,7 +27,7 @@ const BlogPost = ({ postData }: BlogPostProps) => {
         borderRadius={{ base: 12, md: 24 }}
       >
         <Image
-          src={postData.cover}
+          src={unsplashImg(postData.cover, 800)}
           fit="cover"
           borderRadius={{ base: 12, md: 24 }}
         />
