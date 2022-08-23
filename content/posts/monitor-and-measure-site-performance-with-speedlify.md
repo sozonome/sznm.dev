@@ -1,6 +1,7 @@
 ---
 title: Monitor and Measure Site Performance from Time to Time and Automatically using Speedlify
 date: "2020-11-07"
+cover: https://images.unsplash.com/photo-1567916190725-372c28edc554?auto=format&q=80
 legacyID: "2020-11-07-monitor-and-measure-site-performance-with-speedlify"
 thumbnail: "🏎️"
 published: true

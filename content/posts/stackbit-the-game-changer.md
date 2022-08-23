@@ -1,6 +1,7 @@
 ---
 title: Stackbit, the Game Changer
 date: "2020-03-22"
+cover: https://images.unsplash.com/photo-1580541832626-2a7131ee809f?auto=format&q=80
 published: true
 thumbnail: "🌐"
 legacyID: "2020-03-22-stackbit-the-game-changer"

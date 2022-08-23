@@ -1,4 +1,4 @@
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import { AspectRatio, Box, Image, useColorModeValue } from "@chakra-ui/react";
 import type { GiscusProps } from "@giscus/react";
 import Giscus from "@giscus/react";
 import ReactMarkdown from "react-markdown";
@@ -17,6 +17,20 @@ const BlogPost = ({ postData }: BlogPostProps) => {
   return (
     <Box as="article">
       <BlogPostMeta postData={postData} />
+
+      <AspectRatio
+        width="full"
+        ratio={3 / 1}
+        marginBottom={8}
+        boxShadow="lg"
+        borderRadius={{ base: 12, md: 24 }}
+      >
+        <Image
+          src={postData.cover}
+          fit="cover"
+          borderRadius={{ base: 12, md: 24 }}
+        />
+      </AspectRatio>
 
       <BlogPostHead postData={postData} />
 

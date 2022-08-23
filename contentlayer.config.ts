@@ -23,12 +23,12 @@ const Blog = defineDocumentType(() => ({
   fields: {
     title: { type: "string", required: true },
     date: { type: "string", required: true },
+    cover: { type: "string", required: true },
     thumbnail: { type: "string" },
     description: { type: "string" },
     legacyID: { type: "string" },
     published: { type: "boolean", required: true },
     tags: { type: "list", of: { type: "string" } },
-    cover_image: { type: "string" },
     readTime: {
       type: "nested",
       of: ReadTime,
