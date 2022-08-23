@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.16.0](https://github.com/sozonome/sznm.dev/compare/v1.15.0...v1.16.0) (2022-08-23)
+
+
+### Features
+
+* **blog:** ✨ add cover image ([#118](https://github.com/sozonome/sznm.dev/issues/118)) ([fd2983f](https://github.com/sozonome/sznm.dev/commit/fd2983f8b5e93da12e85c8753437d1b0603b6616))
+
 ## [1.15.0](https://github.com/sozonome/sznm.dev/compare/v1.14.2...v1.15.0) (2022-08-15)
 
 
