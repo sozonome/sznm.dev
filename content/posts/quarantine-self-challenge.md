@@ -1,6 +1,7 @@
 ---
 title: May 2020 Quarantine Self Challenge
 date: "2020-05-02"
+cover: https://images.unsplash.com/photo-1497074367201-25b8d28279e2?auto=format&q=80
 legacyID: "2020-05-02-self-challenge"
 thumbnail: "🏆"
 published: true

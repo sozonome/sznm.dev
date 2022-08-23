@@ -1,6 +1,7 @@
 ---
 title: 2019 Recap
 date: "2019-12-31"
+cover: https://images.unsplash.com/photo-1549978907-5493b27b19c7?auto=format&q=80
 legacyID: "2019-12-31-2019-recap"
 thumbnail: "📘"
 published: true

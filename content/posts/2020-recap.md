@@ -1,6 +1,7 @@
 ---
 title: 2020 Recap
 date: "2020-12-31"
+cover: https://images.unsplash.com/photo-1600066975936-ecc81000c8b6?auto=format&q=80
 legacyID: "2020-12-31-2020-recap"
 thumbnail: "📘"
 published: true

@@ -1,6 +1,7 @@
 ---
 title: How to Secure Your Firebase Project
 date: "2021-05-13"
+cover: https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&q=80
 legacyID: "2021-05-13-how-to-secure-firebase-project"
 thumbnail: "🔒"
 published: true
