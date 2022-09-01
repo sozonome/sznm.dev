@@ -1,4 +1,4 @@
-export const unsplashImg = (src: string, width = 400) => {
+export const unsplashImg = (src: string, width = 1080) => {
   const url = new URL(src);
   url.searchParams.append("width", width.toString());
 

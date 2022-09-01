@@ -5,11 +5,13 @@ import type { GetStaticProps } from "next";
 import type { ProjectDetailParams, ProjectDetailProps } from "./types";
 
 export const getStaticPaths = async () => {
-  const paths = allProjects.map((project) => ({
-    params: {
-      id: project.id,
-    },
-  }));
+  const paths = allProjects
+    .filter((project) => project.published !== false)
+    .map((project) => ({
+      params: {
+        id: project.id,
+      },
+    }));
   return {
     paths,
     fallback: false,

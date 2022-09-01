@@ -33,6 +33,7 @@ const Blog = defineDocumentType(() => ({
       type: "nested",
       of: ReadTime,
     },
+    cover_image: { type: "string" },
   },
   computedFields: {
     readTime: {

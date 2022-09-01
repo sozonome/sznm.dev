@@ -1,7 +1,7 @@
 ---
 title: Custom Scrollbar
 description: define your own custom scroll bar
-published: false
+published: true
 date: 2022-07-22
 stacks:
   - css

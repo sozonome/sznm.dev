@@ -26,12 +26,9 @@ const PostsSection = ({ data }: PostsSectionProps) => {
       </Heading>
 
       <Grid gap={8}>
-        {data
-          .filter((post) => post.published === true)
-          .slice(0, 2)
-          .map((postData) => (
-            <BlogPostPreview postData={postData} key={postData.id} />
-          ))}
+        {data.slice(0, 2).map((postData) => (
+          <BlogPostPreview postData={postData} key={postData.id} />
+        ))}
       </Grid>
 
       <Box>
