@@ -27,7 +27,7 @@ const BlogPost = ({ postData }: BlogPostProps) => {
         borderRadius={{ base: 12, md: 24 }}
       >
         <Image
-          src={unsplashImg(postData.cover, 800)}
+          src={unsplashImg(postData.cover, 2160)}
           fit="cover"
           borderRadius={{ base: 12, md: 24 }}
         />

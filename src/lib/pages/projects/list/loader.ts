@@ -7,9 +7,7 @@ import type { ProjectListProps } from "./types";
 export const getStaticProps: GetStaticProps<ProjectListProps> = async () => {
   const featuredProjects = allProjects
     .sort((a, b) => compareDesc(new Date(a.date ?? ""), new Date(b.date ?? "")))
-    .filter(
-      (project) => project.featured && project.published !== false && project
-    );
+    .filter((project) => project.featured && project.published !== false);
 
   return {
     props: {

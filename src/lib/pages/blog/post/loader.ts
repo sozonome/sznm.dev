@@ -5,11 +5,13 @@ import type { GetStaticProps } from "next";
 import type { BlogPostProps } from "lib/pages/blog/post";
 
 export const getStaticPaths = async () => {
-  const paths = allBlogs.map((blog) => ({
-    params: {
-      id: blog.id,
-    },
-  }));
+  const paths = allBlogs
+    .filter((post) => post.published !== false)
+    .map((blog) => ({
+      params: {
+        id: blog.id,
+      },
+    }));
   return {
     paths,
     fallback: false,
