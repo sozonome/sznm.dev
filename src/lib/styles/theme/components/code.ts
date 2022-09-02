@@ -1,6 +1,6 @@
-import type { DeepPartial, Theme } from "@chakra-ui/react";
+import type { ComponentStyleConfig } from "@chakra-ui/react";
 
-export const Code: DeepPartial<Theme["components"]["Code"]> = {
+export const Code: ComponentStyleConfig = {
   baseStyle: {
     borderRadius: "0.25rem",
   },
