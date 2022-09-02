@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.1](https://github.com/sozonome/sznm.dev/compare/v1.16.0...v1.16.1) (2022-09-02)
+
+
+### Improvements
+
+* **content:** adjust loader to check published ([#121](https://github.com/sozonome/sznm.dev/issues/121)) ([eb8ca44](https://github.com/sozonome/sznm.dev/commit/eb8ca44ca6e5ba31fc52ce88ed5a67f2c2c5a97e))
+* **layout:** dynamic import layout components ([#123](https://github.com/sozonome/sznm.dev/issues/123)) ([858b2b3](https://github.com/sozonome/sznm.dev/commit/858b2b3755c42506438b44e48f7372857cd4e557))
+* **services:** replace embed shortener with external shortener ([#124](https://github.com/sozonome/sznm.dev/issues/124)) ([8e05e41](https://github.com/sozonome/sznm.dev/commit/8e05e4192f52bb2d4e890747ec05671765dc5316))
+* **theme:** revise theming type ([#122](https://github.com/sozonome/sznm.dev/issues/122)) ([50feae3](https://github.com/sozonome/sznm.dev/commit/50feae31e107b02ce4679b3f7cd63ae6906e50ec))
+
 ## [1.16.0](https://github.com/sozonome/sznm.dev/compare/v1.15.0...v1.16.0) (2022-08-23)
 
 
