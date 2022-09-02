@@ -1,16 +1,8 @@
-import {
-  Heading,
-  Box,
-  Text,
-  Grid,
-  Input,
-  InputGroup,
-  InputRightElement,
-} from "@chakra-ui/react";
+import { Heading, Box, Text, Grid } from "@chakra-ui/react";
 import debounce from "lodash-es/debounce";
 import { NextSeo } from "next-seo";
+import dynamic from "next/dynamic";
 import * as React from "react";
-import { FaSearch } from "react-icons/fa";
 
 import BlogPostCard from "lib/components/blog/BlogPostCard";
 import MotionGrid from "lib/components/motion/MotionGrid";
@@ -22,6 +14,13 @@ import { baseUrl } from "lib/constants/baseUrl";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 
 import type { BlogPostListProps } from "./types";
+
+const BlogPostSearch = dynamic(
+  () => import("lib/components/blog/BlogPostSearch"),
+  {
+    ssr: false,
+  }
+);
 
 const BlogPostList = ({ allPostsData }: BlogPostListProps) => {
   const [keyword, setKeyword] = React.useState<string>("");
@@ -64,18 +63,7 @@ const BlogPostList = ({ allPostsData }: BlogPostListProps) => {
         <Text color="description">Just some writings</Text>
       </Grid>
 
-      <InputGroup>
-        <Input
-          variant="filled"
-          type="text"
-          defaultValue={keyword}
-          onChange={handleChangeKeyword()}
-          placeholder="Search posts"
-        />
-        <InputRightElement>
-          <FaSearch />
-        </InputRightElement>
-      </InputGroup>
+      <BlogPostSearch keyword={keyword} onChange={handleChangeKeyword()} />
 
       <MotionGrid
         gap={16}
