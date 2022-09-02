@@ -55,8 +55,8 @@
     "zustand": "^4.1.1"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.1.0",
-    "@commitlint/cz-commitlint": "^17.1.1",
+    "@commitlint/config-conventional": "17.0.3",
+    "@commitlint/cz-commitlint": "17.0.3",
     "@next/bundle-analyzer": "^12.2.5",
     "@notion-stuff/v4-types": "^6.0.0",
     "@types/cors": "^2.8.12",
@@ -69,7 +69,7 @@
     "@types/ua-parser-js": "^0.7.36",
     "@types/umami": "^0.1.0",
     "commitizen": "^4.2.5",
-    "commitlint": "^17.1.1",
+    "commitlint": "17.0.3",
     "cross-env": "^7.0.3",
     "eslint": "^8.23.0",
     "eslint-config-next": "^12.2.5",
