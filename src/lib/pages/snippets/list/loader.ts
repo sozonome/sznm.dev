@@ -1,10 +1,11 @@
-import { allSnippets } from "contentlayer/generated";
 import type { GetStaticProps } from "next";
+
+import { sortedSnippets } from "lib/constants/snippet";
 
 import type { SnippetListProps } from "./types";
 
 export const getStaticProps: GetStaticProps<SnippetListProps> = () => {
-  const snippets = allSnippets.filter((snippet) => snippet.published !== false);
+  const snippets = sortedSnippets;
 
   return {
     props: {

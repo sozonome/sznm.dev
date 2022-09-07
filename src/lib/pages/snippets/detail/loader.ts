@@ -1,15 +1,11 @@
-import type { Snippet } from "contentlayer/generated";
-import { allSnippets } from "contentlayer/generated";
 import type { GetStaticProps } from "next";
+
+import { snippetIdParams, sortedSnippets } from "lib/constants/snippet";
 
 import type { SnippetDetailParams, SnippetDetailProps } from "./types";
 
 export const getStaticPaths = async () => {
-  const paths = allSnippets.map((project) => ({
-    params: {
-      id: project.id,
-    },
-  }));
+  const paths = snippetIdParams;
   return {
     paths,
     fallback: false,
@@ -20,9 +16,13 @@ export const getStaticProps: GetStaticProps<
   SnippetDetailProps,
   SnippetDetailParams
 > = async ({ params }) => {
-  const data = allSnippets.find(
-    ({ id }) => id === (params?.id as string)
-  ) as Snippet;
+  const data = sortedSnippets.find(({ id }) => id === (params?.id as string));
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: { data },
