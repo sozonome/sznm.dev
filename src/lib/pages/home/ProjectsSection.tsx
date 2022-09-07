@@ -43,14 +43,9 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
         templateColumns={["repeat(1)", "repeat(1)", "repeat(2, 1fr)"]}
         marginY={8}
       >
-        {data
-          .filter(
-            (unfilteredProject) =>
-              unfilteredProject.highlight && unfilteredProject
-          )
-          .map((project) => (
-            <Card project={project} key={project.id} />
-          ))}
+        {data.map((project) => (
+          <Card project={project} key={project.id} />
+        ))}
       </Grid>
 
       <Box>

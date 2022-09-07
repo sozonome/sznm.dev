@@ -1,23 +1,17 @@
-import { allBlogs, allProjects } from "contentlayer/generated";
-import { compareDesc } from "date-fns";
 import type { GetStaticProps } from "next";
+
+import { sortedBlogPosts } from "lib/constants/blog";
+import { highlightedProjects } from "lib/constants/project";
 
 import type { HomeProps } from "./types";
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const allProjectsData = allProjects
-    .filter((project) => project.published !== false)
-    .sort((a, b) =>
-      compareDesc(new Date(a.date ?? ""), new Date(b.date ?? ""))
-    );
-  const allPostsData = allBlogs
-    .filter((post) => post.published)
-    .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
+  const recentPosts = sortedBlogPosts.slice(0, 2);
 
   return {
     props: {
-      allProjectsData,
-      allPostsData,
+      highlightedProjects,
+      recentPosts,
     },
   };
 };

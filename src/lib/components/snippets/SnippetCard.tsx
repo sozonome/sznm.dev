@@ -30,6 +30,7 @@ const SnippetCard = ({ data }: SnippetCardProps) => {
         borderColor="cardBorder"
         onClick={handleClickSnippet}
         transition="0.2s ease-out"
+        role="group"
         _hover={{
           shadow: "lg",
           borderColor: "cardHoverBorder",
@@ -50,8 +51,12 @@ const SnippetCard = ({ data }: SnippetCardProps) => {
               paddingY={0.5}
               paddingX={2}
               borderRadius={12}
+              transition="0.2s ease-out"
+              _groupHover={{
+                color: "teal.400",
+              }}
               fontSize="xs"
-              color="teal.500"
+              color="teal"
               key={stack}
             >
               {stack}

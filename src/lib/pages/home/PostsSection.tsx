@@ -26,7 +26,7 @@ const PostsSection = ({ data }: PostsSectionProps) => {
       </Heading>
 
       <Grid gap={8}>
-        {data.slice(0, 2).map((postData) => (
+        {data.map((postData) => (
           <BlogPostPreview postData={postData} key={postData.id} />
         ))}
       </Grid>
