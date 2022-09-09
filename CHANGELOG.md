@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.2](https://github.com/sozonome/sznm.dev/compare/v1.16.1...v1.16.2) (2022-09-09)
+
+
+### Improvements
+
+* **content:** extract reusables ([#125](https://github.com/sozonome/sznm.dev/issues/125)) ([d859f62](https://github.com/sozonome/sznm.dev/commit/d859f621dd5f9baf7df338a5d68cf724dddbf2bf))
+
 ### [1.16.1](https://github.com/sozonome/sznm.dev/compare/v1.16.0...v1.16.1) (2022-09-02)
 
 
