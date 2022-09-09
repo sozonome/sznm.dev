@@ -1,16 +1,18 @@
 import { Box, Heading, Text, Link, Button } from "@chakra-ui/react";
-import Image from "next/image";
+import Image from "next/future/image";
 import { FaGooglePlay } from "react-icons/fa";
 
 const KapturaLumina = () => {
   return (
     <Box as="article">
-      <Image
-        src="/app_icons/icon_kapturalumina.png"
-        width={110}
-        height={110}
-        alt="kapturalumina icon"
-      />
+      <Box width={110}>
+        <Image
+          src="/app_icons/icon_kapturalumina.png"
+          width={220}
+          height={220}
+          alt="kapturalumina icon"
+        />
+      </Box>
       <Box marginY={22}>
         <Heading as="h1" size="2xl">
           KapturaLumina

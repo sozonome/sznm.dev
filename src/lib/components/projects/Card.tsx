@@ -1,6 +1,6 @@
 import { Box, Link, Text, Stack, useColorModeValue } from "@chakra-ui/react";
 import type { Project } from "contentlayer/generated";
-import Image from "next/image";
+import Image from "next/future/image";
 
 import { EVENT_TYPE_LINK } from "lib/constants/tracking";
 import { trackEvent } from "lib/utils/trackEvent";
@@ -84,11 +84,12 @@ const Card = ({
             }}
           >
             <Image
-              width={200}
+              width={1000}
               height={200}
-              layout="responsive"
-              objectFit="cover"
-              objectPosition="50% 0"
+              style={{
+                objectFit: "cover",
+                objectPosition: "50% 0",
+              }}
               src={thumbnailUrl}
               alt={`${title}-thumbnail`}
             />

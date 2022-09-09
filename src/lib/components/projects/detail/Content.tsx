@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, Text, useColorMode } from "@chakra-ui/react";
-import Image from "next/image";
+import Image from "next/future/image";
 
 import type { ProjectDetailWrapperProps } from "./types";
 
@@ -59,7 +59,7 @@ const ProjectDetailContent = ({
         {icon && (
           <Box flexBasis="15%">
             <Flex maxWidth={16} marginX="auto">
-              <Image width="100%" height="100%" src={icon} alt={title} />
+              <Image width={128} height={128} src={icon} alt={title} />
             </Flex>
           </Box>
         )}
