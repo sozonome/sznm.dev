@@ -4,8 +4,6 @@ import type { ReactNode } from "react";
 
 import { useCommandCenter } from "lib/components/commands/hook";
 
-import Meta from "./meta";
-
 const Header = dynamic(() => import("./Header"));
 const Footer = dynamic(() => import("./Footer"));
 const TabBar = dynamic(() => import("./TabBar"));
@@ -26,7 +24,6 @@ const Layout = ({ children }: LayoutProps) => {
       paddingTop={24}
       transition="0.4s ease-out"
     >
-      <Meta />
       <Header />
       <Stack
         direction="column"
