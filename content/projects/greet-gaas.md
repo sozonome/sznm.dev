@@ -8,8 +8,6 @@ thumbnail: "/app_preview/gaas.png"
 thumbnailDark: "/app_preview/gaas-dark.png"
 featured: true
 sznmApps: true
-appStoreLink:
-playStoreLink:
 stacks:
   - nextjs
   - chakra-ui

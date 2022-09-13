@@ -9,7 +9,6 @@ thumbnail: "/app_preview/kapturalumina.png"
 thumbnailDark: "/app_preview/kapturalumina-dark.png"
 highlight: true
 featured: true
-appStoreLink: 
 playStoreLink: https://play.google.com/store/apps/details?id=dev.sznm.kapturalumina
 stacks:
   - ionic

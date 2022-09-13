@@ -10,8 +10,6 @@ thumbnail: "/app_preview/spoker.png"
 highlight: true
 featured: true
 sznmApps: true
-appStoreLink:
-playStoreLink:
 stacks: 
   - nextjs
   - chakra-ui

@@ -10,8 +10,6 @@ thumbnailDark: "/app_preview/public-apis-dark.png"
 featured: true
 highlight: true
 sznmApps: true
-appStoreLink:
-playStoreLink:
 stacks: 
   - nextjs
   - chakra-ui

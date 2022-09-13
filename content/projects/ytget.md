@@ -6,8 +6,6 @@ date: "2020-12-07"
 icon: "/app_icons/ytget.svg"
 featured: true
 published: false
-appStoreLink:
-playStoreLink:
 stacks:
   - nextjs
   - chakra-ui
