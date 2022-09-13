@@ -9,6 +9,10 @@
     "build": "next build",
     "analyze": "cross-env ANALYZE=true yarn build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "test": "vitest",
+    "test:ui": "yarn test --ui",
+    "test:run": "yarn test run",
+    "test:coverage": "yarn test:run --coverage",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "eslint src --fix && yarn format",
@@ -65,6 +69,7 @@
     "@types/twemoji": "^13.1.2",
     "@types/ua-parser-js": "^0.7.36",
     "@types/umami": "^0.1.0",
+    "@vitest/coverage-c8": "^0.23.2",
     "commitizen": "^4.2.5",
     "commitlint": "17.1.2",
     "cross-env": "^7.0.3",
@@ -76,7 +81,8 @@
     "next-sitemap": "^3.1.22",
     "prettier": "^2.7.1",
     "standard-version": "^9.5.0",
-    "typescript": "^4.8.3"
+    "typescript": "^4.8.3",
+    "vitest": "^0.23.2"
   },
   "repository": {
     "type": "git",
