@@ -77,19 +77,6 @@ module.exports = withBundleAnalyzer(
         },
       ];
     },
-    // temporarily disabled until preact compat for react 18 is ready
-    // webpack: (config, { dev, isServer }) => {
-    //   // Replace React with Preact only in client production build
-    //   if (!dev && !isServer) {
-    //     Object.assign(config.resolve.alias, {
-    //       react: "preact/compat",
-    //       "react-dom/test-utils": "preact/test-utils",
-    //       "react-dom": "preact/compat",
-    //     });
-    //   }
-
-    //   return config;
-    // },
     eslint: {
       dirs: ["src"],
     },
