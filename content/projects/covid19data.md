@@ -9,8 +9,6 @@ thumbnail: "/app_preview/covid19.png"
 thumbnailDark: "/app_preview/covid19-dark.png"
 featured: true
 sznmApps: true
-appStoreLink:
-playStoreLink:
 stacks:
   - nextjs
   - chakra-ui
