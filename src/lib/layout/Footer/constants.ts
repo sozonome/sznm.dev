@@ -18,15 +18,7 @@ export const links: Array<Pick<FooterLinkProps, "label" | "url">> = [
     url: "https://poly.sznm.dev",
   },
   {
-    label: "Status",
-    url: "https://my-space.sznm.dev/apps-status",
-  },
-  {
     label: "Analytics",
     url: "https://umami.sznm.dev/share/Zl0vE0h0/sznm.dev",
-  },
-  {
-    label: "Misc",
-    url: "https://my-space.sznm.dev",
   },
 ];
