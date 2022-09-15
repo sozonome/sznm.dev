@@ -16,3 +16,8 @@ my **[personal dev site](https://sznm.dev)** built using [Next.js](https://nextj
 ##### Notes
 
 > Check / review the [license here](https://github.com/sozonome/sznm.dev/blob/main/LICENSE)
+
+## Links
+
+- [References](./references.md)
+- [Specifications](./specifications.md)
