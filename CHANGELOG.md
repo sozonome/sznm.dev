@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.3](https://github.com/sozonome/sznm.dev/compare/v1.16.2...v1.16.3) (2022-09-15)
+
+
+### Bug Fixes
+
+* **content:** remove null fields ([#129](https://github.com/sozonome/sznm.dev/issues/129)) ([c94bcbe](https://github.com/sozonome/sznm.dev/commit/c94bcbe696a7337b5827d3931a9b70b19b08d6a1))
+
+
+### Improvements
+
+* adjust meta tag head ([#128](https://github.com/sozonome/sznm.dev/issues/128)) ([71f08ca](https://github.com/sozonome/sznm.dev/commit/71f08ca9424d61d9b8223647d1535a2640def7f7))
+* **layout:** remove some links from footer ([#132](https://github.com/sozonome/sznm.dev/issues/132)) ([a9f93e9](https://github.com/sozonome/sznm.dev/commit/a9f93e9420fab6498f256f62c3c1d31fd62fbef5))
+
 ### [1.16.2](https://github.com/sozonome/sznm.dev/compare/v1.16.1...v1.16.2) (2022-09-09)
 
 

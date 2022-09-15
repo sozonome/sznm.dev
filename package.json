@@ -2,7 +2,7 @@
   "name": "sznm.dev",
   "private": true,
   "description": "Agustinus Nathaniel's dev site",
-  "version": "1.16.2",
+  "version": "1.16.3",
   "author": "sozonome",
   "scripts": {
     "dev": "next dev",
