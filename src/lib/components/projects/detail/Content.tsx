@@ -1,4 +1,11 @@
-import { Box, Flex, Heading, Text, useColorMode } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  useColorMode,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Image from "next/future/image";
 
 import type { ProjectDetailWrapperProps } from "./types";
@@ -9,6 +16,7 @@ const ProjectDetailContent = ({
   projectData: { title, icon, description, stacks },
 }: ProjectDetailContentProps) => {
   const { colorMode } = useColorMode();
+  const backgroundColor = useColorModeValue("", "gray.700");
 
   return (
     <Box
@@ -23,6 +31,7 @@ const ProjectDetailContent = ({
         shadow: "lg",
         borderColor: "cardHoverBorder",
         borderWidth: 2,
+        backgroundColor,
       }}
     >
       <Flex alignItems="center" width="100%" height="100%" gridGap={8}>

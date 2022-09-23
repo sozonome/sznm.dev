@@ -1,4 +1,4 @@
-import { Flex, Grid, Heading, Text } from "@chakra-ui/react";
+import { Flex, Grid, Heading, Text, useColorModeValue } from "@chakra-ui/react";
 import type { Snippet } from "contentlayer/generated";
 import Link from "next/link";
 
@@ -10,6 +10,8 @@ type SnippetCardProps = {
 };
 
 const SnippetCard = ({ data }: SnippetCardProps) => {
+  const backgroundColor = useColorModeValue("", "gray.700");
+
   const handleClickSnippet = () => {
     trackEvent({
       eventName: `Snippet: ${data.title}`,
@@ -35,6 +37,7 @@ const SnippetCard = ({ data }: SnippetCardProps) => {
           shadow: "lg",
           borderColor: "cardHoverBorder",
           borderWidth: 2,
+          backgroundColor,
         }}
       >
         <Grid gap={2}>
