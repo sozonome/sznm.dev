@@ -1,12 +1,10 @@
-import Head from "next/head";
-
 import { UMAMI_SRC, UMAMI_WEBSITE_ID } from "lib/constants/umami";
 
 const APP_NAME = "sznm.dev";
 
-const Meta = () => {
+const DocumentMeta = () => {
   return (
-    <Head>
+    <>
       <link rel="icon" href="/avataaars.svg" />
       <link
         rel="alternate"
@@ -33,8 +31,8 @@ const Meta = () => {
         src={UMAMI_SRC}
         data-domains="sznm.dev"
       />
-    </Head>
+    </>
   );
 };
 
-export default Meta;
+export default DocumentMeta;
