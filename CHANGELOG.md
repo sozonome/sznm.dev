@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.4](https://github.com/sozonome/sznm.dev/compare/v1.16.3...v1.16.4) (2022-10-16)
+
+
+### Bug Fixes
+
+* **analytics:** fix meta not showing up in document head ([#135](https://github.com/sozonome/sznm.dev/issues/135)) ([0247fe8](https://github.com/sozonome/sznm.dev/commit/0247fe82d0a44ec867c53a50649e4f3bc333d9bc))
+
+
+### Improvements
+
+* adjust card hover bg color in dark mode ([#133](https://github.com/sozonome/sznm.dev/issues/133)) ([5848434](https://github.com/sozonome/sznm.dev/commit/584843486c737fc6b1fd12bbe9b582a3305a5606))
+
 ### [1.16.3](https://github.com/sozonome/sznm.dev/compare/v1.16.2...v1.16.3) (2022-09-15)
 
 
