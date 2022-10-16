@@ -2,7 +2,7 @@ import { ColorModeScript } from "@chakra-ui/react";
 import type { DocumentContext } from "next/document";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-import Meta from "lib/components/Meta";
+import DocumentMeta from "lib/components/DocumentMeta";
 import customTheme from "lib/styles/theme";
 
 class MyDocument extends Document {
@@ -23,7 +23,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <Meta />
+          <DocumentMeta />
         </Head>
         <body>
           <ColorModeScript
