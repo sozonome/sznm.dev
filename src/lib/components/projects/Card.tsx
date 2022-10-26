@@ -1,6 +1,6 @@
 import { Box, Link, Text, Stack, useColorModeValue } from "@chakra-ui/react";
 import type { Project } from "contentlayer/generated";
-import Image from "next/future/image";
+import Image from "next/image";
 
 import { EVENT_TYPE_LINK } from "lib/constants/tracking";
 import { trackEvent } from "lib/utils/trackEvent";
