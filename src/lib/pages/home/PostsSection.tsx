@@ -32,18 +32,17 @@ const PostsSection = ({ data }: PostsSectionProps) => {
       </Grid>
 
       <Box>
-        <Link href="/blog" passHref>
-          <Button
-            as="a"
-            rightIcon={<FaArrowRight />}
-            paddingX={0}
-            variant="ghost"
-            fontFamily="heading"
-            onClick={handleClickViewAllPosts}
-          >
-            view all posts
-          </Button>
-        </Link>
+        <Button
+          as={Link}
+          href="/blog"
+          rightIcon={<FaArrowRight />}
+          paddingX={0}
+          variant="ghost"
+          fontFamily="heading"
+          onClick={handleClickViewAllPosts}
+        >
+          view all posts
+        </Button>
       </Box>
     </Stack>
   );

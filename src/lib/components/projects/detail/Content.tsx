@@ -6,7 +6,7 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Image from "next/future/image";
+import Image from "next/image";
 
 import type { ProjectDetailWrapperProps } from "./types";
 

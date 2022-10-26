@@ -32,7 +32,7 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
 
   return (
     <Stack as="section" marginBottom={16} spacing={4}>
-      <Link href="/projects" passHref>
+      <Link href="/projects">
         <Heading as="h1" size="lg" cursor="pointer" marginBottom={2}>
           Projects
         </Heading>
@@ -49,18 +49,17 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
       </Grid>
 
       <Box>
-        <Link href="/projects" passHref>
-          <Button
-            as="a"
-            rightIcon={<FaArrowRight />}
-            paddingX={0}
-            variant="ghost"
-            fontFamily="heading"
-            onClick={handleClickViewAllProjects}
-          >
-            view all projects
-          </Button>
-        </Link>
+        <Button
+          as={Link}
+          href="/projects"
+          rightIcon={<FaArrowRight />}
+          paddingX={0}
+          variant="ghost"
+          fontFamily="heading"
+          onClick={handleClickViewAllProjects}
+        >
+          view all projects
+        </Button>
       </Box>
     </Stack>
   );

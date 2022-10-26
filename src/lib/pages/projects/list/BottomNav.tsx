@@ -21,16 +21,15 @@ const ProjectListBottomNav = () => {
 
   return (
     <Grid gap={2} templateColumns={["1fr", "1fr", "repeat(2, 1fr)"]}>
-      <Link href="/projects/other" passHref>
-        <Button
-          as="a"
-          variant="outline"
-          onClick={handleClickOtherProjects}
-          width="full"
-        >
-          Other Projects
-        </Button>
-      </Link>
+      <Button
+        as={Link}
+        href="/projects/other"
+        variant="outline"
+        onClick={handleClickOtherProjects}
+        width="full"
+      >
+        Other Projects
+      </Button>
 
       <Tooltip
         label="to view the detailed portfolio page, you must ask for the password through contacting me first, as I build the portfolio page for the one who really have interest to work with me"

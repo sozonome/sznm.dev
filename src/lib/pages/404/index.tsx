@@ -33,11 +33,9 @@ const Page404 = () => {
         </Heading>
 
         <Box textAlign="center">
-          <Link href="/" passHref>
-            <Button backgroundColor="buttonBackground">
-              Let&apos;s Head Back
-            </Button>
-          </Link>
+          <Button as={Link} href="/" backgroundColor="buttonBackground">
+            Let&apos;s Head Back
+          </Button>
         </Box>
       </Box>
     </Box>

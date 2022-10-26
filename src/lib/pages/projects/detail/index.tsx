@@ -30,16 +30,16 @@ const ProjectDetail = ({ projectData }: ProjectDetailProps) => {
       />
 
       <Box as="article">
-        <Link href="/projects" passHref>
-          <Button
-            leftIcon={<AiOutlineArrowLeft />}
-            size="sm"
-            backgroundColor="buttonBackground"
-            marginBottom={22}
-          >
-            projects
-          </Button>
-        </Link>
+        <Button
+          as={Link}
+          href="/projects"
+          leftIcon={<AiOutlineArrowLeft />}
+          size="sm"
+          backgroundColor="buttonBackground"
+          marginBottom={22}
+        >
+          projects
+        </Button>
 
         <ProjectDetailWrapper
           source="Project Detail"

@@ -32,43 +32,45 @@ const BlogPostCard = ({ postData, wrapperProps }: BlogPostCardProps) => {
           transform: "scale(1.03, 1.03)",
         }}
       >
-        <Link href={`/blog/${postData.id}`} passHref>
-          <Box as="a" onClick={handleClickBlogPost}>
-            <AspectRatio
-              width="full"
-              ratio={3 / 1}
-              marginBottom={4}
-              boxShadow="lg"
-              borderRadius={{ base: 12, md: 24 }}
-            >
-              <Image
-                src={unsplashImg(postData.cover)}
-                fit="cover"
-                borderRadius={12}
-              />
-            </AspectRatio>
+        <Box
+          as={Link}
+          href={`/blog/${postData.id}`}
+          onClick={handleClickBlogPost}
+        >
+          <AspectRatio
+            width="full"
+            ratio={3 / 1}
+            marginBottom={4}
+            boxShadow="lg"
+            borderRadius={{ base: 12, md: 24 }}
+          >
+            <Image
+              src={unsplashImg(postData.cover)}
+              fit="cover"
+              borderRadius={12}
+            />
+          </AspectRatio>
 
-            <Flex flexWrap="wrap" alignItems="center" width="100%">
-              <Flex
-                justifyContent="center"
-                alignItems="center"
-                flexBasis={["10%"]}
-              >
-                <Box boxSize="60%">
-                  <Twemoji emoji={postData.thumbnail ?? "📘"} />
-                </Box>
-              </Flex>
-              <Box flexBasis={["90%"]} paddingLeft={[11, 22]}>
-                <Heading size="md" marginBottom={2}>
-                  {postData.title}
-                </Heading>
-                <Text fontSize="xs" color="description">
-                  {dateFormatLong(postData.date)} - {postData.readTime?.text}
-                </Text>
+          <Flex flexWrap="wrap" alignItems="center" width="100%">
+            <Flex
+              justifyContent="center"
+              alignItems="center"
+              flexBasis={["10%"]}
+            >
+              <Box boxSize="60%">
+                <Twemoji emoji={postData.thumbnail ?? "📘"} />
               </Box>
             </Flex>
-          </Box>
-        </Link>
+            <Box flexBasis={["90%"]} paddingLeft={[11, 22]}>
+              <Heading size="md" marginBottom={2}>
+                {postData.title}
+              </Heading>
+              <Text fontSize="xs" color="description">
+                {dateFormatLong(postData.date)} - {postData.readTime?.text}
+              </Text>
+            </Box>
+          </Flex>
+        </Box>
       </Box>
     </MotionBox>
   );
