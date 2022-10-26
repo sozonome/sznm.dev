@@ -35,11 +35,9 @@ const Header = () => {
         width="full"
       >
         <Flex layerStyle="layoutBlock" alignItems="center">
-          <Link href="/" passHref>
-            <Text as="a" cursor="pointer" fontSize={["md", "xl"]}>
-              sznm.dev
-            </Text>
-          </Link>
+          <Text as={Link} href="/" cursor="pointer" fontSize={["md", "xl"]}>
+            sznm.dev
+          </Text>
 
           <Spacer />
 

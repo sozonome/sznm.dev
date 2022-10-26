@@ -44,17 +44,17 @@ const OtherProjects = ({ otherProjects }: OtherProjectsProps) => {
         }}
       />
 
-      <Link href="/projects" passHref>
-        <Button
-          leftIcon={<AiOutlineArrowLeft />}
-          size="sm"
-          backgroundColor="buttonBackground"
-          marginBottom={22}
-          onClick={handleBackToFeaturedProjects}
-        >
-          projects
-        </Button>
-      </Link>
+      <Button
+        as={Link}
+        href="/projects"
+        leftIcon={<AiOutlineArrowLeft />}
+        size="sm"
+        backgroundColor="buttonBackground"
+        marginBottom={22}
+        onClick={handleBackToFeaturedProjects}
+      >
+        projects
+      </Button>
 
       <Box marginBottom={22}>
         <Heading as="h1" size="xl" marginBottom={2}>

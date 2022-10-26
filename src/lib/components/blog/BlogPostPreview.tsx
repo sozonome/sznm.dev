@@ -31,33 +31,28 @@ const BlogPostPreview = ({ postData, wrapperProps }: BlogPostPreviewProps) => {
           transform: "scale(1.03, 1.03)",
         }}
       >
-        <Link href={`/blog/${postData.id}`} passHref>
-          <Flex
-            as="a"
-            onClick={handleClickBlogPost}
-            flexWrap="wrap"
-            alignItems="center"
-            width="100%"
-          >
-            <Flex
-              justifyContent="center"
-              alignItems="center"
-              flexBasis={["10%"]}
-            >
-              <Box boxSize="60%">
-                <Twemoji emoji={postData.thumbnail ?? "📘"} />
-              </Box>
-            </Flex>
-            <Box flexBasis={["90%"]} paddingLeft={[11, 22]}>
-              <Heading size="lg" marginBottom={2}>
-                {postData.title}
-              </Heading>
-              <Text fontSize="sm">
-                {dateFormatLong(postData.date)} - {postData.readTime?.text}
-              </Text>
+        <Flex
+          as={Link}
+          href={`/blog/${postData.id}`}
+          onClick={handleClickBlogPost}
+          flexWrap="wrap"
+          alignItems="center"
+          width="100%"
+        >
+          <Flex justifyContent="center" alignItems="center" flexBasis={["10%"]}>
+            <Box boxSize="60%">
+              <Twemoji emoji={postData.thumbnail ?? "📘"} />
             </Box>
           </Flex>
-        </Link>
+          <Box flexBasis={["90%"]} paddingLeft={[11, 22]}>
+            <Heading size="lg" marginBottom={2}>
+              {postData.title}
+            </Heading>
+            <Text fontSize="sm">
+              {dateFormatLong(postData.date)} - {postData.readTime?.text}
+            </Text>
+          </Box>
+        </Flex>
       </Box>
     </MotionBox>
   );

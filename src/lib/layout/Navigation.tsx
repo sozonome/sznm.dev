@@ -21,19 +21,18 @@ const NavItem = ({ href, label, icon }: NavItemProps) => {
   };
 
   return (
-    <Link href={href} passHref>
-      <IconButton
-        as="a"
-        aria-label={label}
-        variant="ghost"
-        flexBasis="25%"
-        fontSize={["xl", "md"]}
-        padding={0}
-        onClick={handleClickNavigation}
-      >
-        {icon({ style: { cursor: "pointer" } })}
-      </IconButton>
-    </Link>
+    <IconButton
+      as={Link}
+      href={href}
+      aria-label={label}
+      variant="ghost"
+      flexBasis="25%"
+      fontSize={["xl", "md"]}
+      padding={0}
+      onClick={handleClickNavigation}
+    >
+      {icon({ style: { cursor: "pointer" } })}
+    </IconButton>
   );
 };
 
