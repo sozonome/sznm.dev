@@ -1,4 +1,4 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Grid, Heading } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 
 import MotionBox from "lib/components/motion/MotionBox";
@@ -15,7 +15,14 @@ import ProjectListBottomNav from "./BottomNav";
 import type { ProjectListProps } from "./types";
 
 const ProjectList = ({ featuredProjects }: ProjectListProps) => {
-  const projects = featuredProjects.map((projectData) => {
+  const highlightedProjects = featuredProjects.filter(
+    (project) => project.highlight
+  );
+  const nonHighlightedFeaturedProjects = featuredProjects.filter(
+    (project) => !project.highlight
+  );
+
+  const highlightedProjectCards = highlightedProjects.map((projectData) => {
     return (
       <MotionBox {...childAnimationProps} key={projectData.id}>
         <ProjectDetailWrapper
@@ -26,6 +33,20 @@ const ProjectList = ({ featuredProjects }: ProjectListProps) => {
       </MotionBox>
     );
   });
+
+  const nonHighlightedProjectCards = nonHighlightedFeaturedProjects.map(
+    (projectData) => {
+      return (
+        <MotionBox {...childAnimationProps} key={projectData.id}>
+          <ProjectDetailWrapper
+            projectData={projectData}
+            source="Featured Projects"
+            key={projectData.id}
+          />
+        </MotionBox>
+      );
+    }
+  );
 
   return (
     <>
@@ -52,9 +73,19 @@ const ProjectList = ({ featuredProjects }: ProjectListProps) => {
         </Heading>
       </Box>
 
-      <MotionGrid {...staggerAnimationProps} gap={6} marginBottom={8}>
-        {projects}
-      </MotionGrid>
+      <Grid gap={6} marginBottom={8}>
+        <MotionGrid {...staggerAnimationProps} gap={6}>
+          {highlightedProjectCards}
+        </MotionGrid>
+
+        <MotionGrid
+          {...staggerAnimationProps}
+          gap={6}
+          gridTemplateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+        >
+          {nonHighlightedProjectCards}
+        </MotionGrid>
+      </Grid>
 
       <ProjectListBottomNav />
     </>

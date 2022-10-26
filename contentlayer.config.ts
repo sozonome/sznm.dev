@@ -56,7 +56,9 @@ const Project = defineDocumentType(() => ({
     title: { type: "string", required: true },
     description: { type: "string", required: true },
     published: { type: "boolean" },
+    /** will be shown at home */
     highlight: { type: "boolean" },
+    /** shown at project list frontpage */
     featured: { type: "boolean" },
     sznmApps: { type: "boolean" },
     stacks: { type: "list", of: { type: "string" } },
