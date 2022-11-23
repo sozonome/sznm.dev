@@ -29,6 +29,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@giscus/react": "^2.2.3",
+    "@vercel/analytics": "^0.1.5",
     "chakra-ui-markdown-renderer": "^4.1.0",
     "cmdk": "^0.1.20",
     "contentlayer": "^0.2.9",

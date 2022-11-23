@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { DefaultSeo } from "next-seo";
 import type { AppProps, NextWebVitalsMetric } from "next/app";
 import NextNProgress from "nextjs-progressbar";
@@ -27,13 +28,16 @@ export const reportWebVitals = (metric: NextWebVitalsMetric) => {
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <Chakra>
-      <DefaultSeo {...defaultSEOConfig} />
-      <Layout>
-        <NextNProgress color="#4A5568" />
-        <Component {...pageProps} />
-      </Layout>
-    </Chakra>
+    <>
+      <Chakra>
+        <DefaultSeo {...defaultSEOConfig} />
+        <Layout>
+          <NextNProgress color="#4A5568" />
+          <Component {...pageProps} />
+        </Layout>
+      </Chakra>
+      <Analytics />
+    </>
   );
 };
 
