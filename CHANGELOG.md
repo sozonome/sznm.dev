@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.17.0](https://github.com/sozonome/sznm.dev/compare/v1.16.4...v1.17.0) (2022-11-23)
+
+
+### Features
+
+* **projects:** adjust project list grid ([#138](https://github.com/sozonome/sznm.dev/issues/138)) ([0a32ad0](https://github.com/sozonome/sznm.dev/commit/0a32ad0780207aa9aa3d994eefd25d70a3238ece))
+
 ### [1.16.4](https://github.com/sozonome/sznm.dev/compare/v1.16.3...v1.16.4) (2022-10-16)
 
 
