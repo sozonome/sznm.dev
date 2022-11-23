@@ -13,7 +13,9 @@ import MotionLink from "./MotionLink";
 const Links = () => {
   return (
     <MotionBox marginY={4} {...wrapperAnimationProps}>
-      <Text fontStyle="italic">1.01 ^365 = 37.7</Text>
+      <Text fontStyle="italic" color="gray">
+        1.01 ^365 = 37.7
+      </Text>
 
       <MotionFlex
         flexWrap="wrap"
