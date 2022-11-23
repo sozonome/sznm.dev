@@ -1,5 +1,5 @@
 import type { BoxProps } from "@chakra-ui/react";
-import { Heading, Link, Text } from "@chakra-ui/react";
+import { useColorModeValue, Heading, Link, Text } from "@chakra-ui/react";
 
 import MotionBox from "lib/components/motion/MotionBox";
 import { EVENT_TYPE_LINK } from "lib/constants/tracking";
@@ -10,6 +10,7 @@ const textProps: BoxProps = {
 };
 
 const Content = () => {
+  const textColor = useColorModeValue("gray.600", "gray.300");
   const handleClickInstagramLink = () => {
     trackEvent({
       eventName: "About: Click Instagram Link",
@@ -28,13 +29,13 @@ const Content = () => {
     >
       <Heading size="lg">👋 Hi, how are you?</Heading>
 
-      <Text {...textProps}>
+      <Text {...{ ...textProps, textColor }}>
         I&apos;m Nathan, currently working as a Frontend Engineer. Most of the
         time I work with React - TypeScript and Flutter - Dart. Sometimes I make
         fun projects and share it here.
       </Text>
 
-      <Text {...textProps}>
+      <Text {...{ ...textProps, textColor }}>
         Outside working, I like to travel and{" "}
         <Link
           href="https://instagram.com/agustinusnathaniel"

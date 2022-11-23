@@ -1,4 +1,4 @@
-import { Box, Flex, IconButton, Spacer, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, IconButton, Spacer } from "@chakra-ui/react";
 import Link from "next/link";
 import { RiCommandFill } from "react-icons/ri";
 
@@ -35,9 +35,11 @@ const Header = () => {
         width="full"
       >
         <Flex layerStyle="layoutBlock" alignItems="center">
-          <Text as={Link} href="/" cursor="pointer" fontSize={["md", "xl"]}>
-            sznm.dev
-          </Text>
+          <Link href="/">
+            <Heading size="md" fontWeight="medium" fontSize={["md", "xl"]}>
+              sznm.dev
+            </Heading>
+          </Link>
 
           <Spacer />
 
