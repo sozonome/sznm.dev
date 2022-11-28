@@ -1,9 +1,18 @@
-import { Box, Button, Code, Flex, Link as ChakraLink } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Code,
+  createStandaloneToast,
+  Flex,
+  Link as ChakraLink,
+} from "@chakra-ui/react";
 import type { Options } from "react-markdown/lib/ast-to-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 import HeadingLink from "./HeadingLink";
+
+const { toast } = createStandaloneToast();
 
 export const renderers: Options["components"] = {
   code: ({ inline, className, children, ...props }) => {
@@ -11,6 +20,20 @@ export const renderers: Options["components"] = {
     const match = /language-(\w+)/.exec(className || "");
     const language = match?.[1];
     const childrenValue = String(children).replace(/\n$/, "");
+    const toastId = childrenValue.substring(0, 10);
+    const handleClickCopy = () => {
+      navigator.clipboard.writeText(childrenValue);
+      if (!toast.isActive(toastId)) {
+        toast({
+          id: toastId,
+          status: "success",
+          position: "top-right",
+          title: "Copied",
+          isClosable: true,
+        });
+      }
+    };
+
     return !inline && match ? (
       <Box width="100%">
         <Flex alignItems="center">
@@ -22,7 +45,7 @@ export const renderers: Options["components"] = {
             padding={0}
             fontSize={12}
             textTransform="lowercase"
-            onClick={() => navigator.clipboard.writeText(childrenValue)}
+            onClick={handleClickCopy}
           >
             Copy
           </Button>
