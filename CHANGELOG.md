@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.18.0](https://github.com/sozonome/sznm.dev/compare/v1.16.4...v1.18.0) (2022-11-28)
+
+
+### Features
+
+* add social share buttons ([#143](https://github.com/sozonome/sznm.dev/issues/143)) ([f5e0480](https://github.com/sozonome/sznm.dev/commit/f5e0480449acffa31efd28ec189867ecb436da18))
+* **projects:** adjust project list grid ([#138](https://github.com/sozonome/sznm.dev/issues/138)) ([0a32ad0](https://github.com/sozonome/sznm.dev/commit/0a32ad0780207aa9aa3d994eefd25d70a3238ece))
+
+
+### Improvements
+
+* **layout:** adjust header title ([#140](https://github.com/sozonome/sznm.dev/issues/140)) ([d03f08f](https://github.com/sozonome/sznm.dev/commit/d03f08f4625de9f85396104a883d784fc48e20ef))
+
 ## [1.17.0](https://github.com/sozonome/sznm.dev/compare/v1.16.4...v1.17.0) (2022-11-23)
 
 
