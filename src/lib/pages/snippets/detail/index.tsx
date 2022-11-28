@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
 import { renderers } from "lib/components/blog/renderers";
+import ShareButtons from "lib/components/shared/ShareButtons";
 import SnippetDetailHead from "lib/components/snippets/detail/Head";
 import SnippetDetailMeta from "lib/components/snippets/detail/Meta";
 
@@ -18,6 +19,7 @@ const SnippetDetail = ({ data }: SnippetDetailProps) => {
     <Box as="article">
       <SnippetDetailMeta data={data} />
       <SnippetDetailHead data={data} />
+      <ShareButtons title={`Check out this snippet: ${data.title}`} />
       <Spacer height={16} />
       <ReactMarkdown
         className={styles.content}
@@ -26,6 +28,8 @@ const SnippetDetail = ({ data }: SnippetDetailProps) => {
       >
         {data.body.raw}
       </ReactMarkdown>
+
+      <ShareButtons title={`Check out this snippet: ${data.title}`} />
 
       <Box marginY={12}>
         <Giscus

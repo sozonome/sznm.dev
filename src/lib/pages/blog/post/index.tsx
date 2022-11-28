@@ -7,6 +7,7 @@ import rehypeRaw from "rehype-raw";
 import BlogPostHead from "lib/components/blog/post/Head";
 import BlogPostMeta from "lib/components/blog/post/Meta";
 import { renderers } from "lib/components/blog/renderers";
+import ShareButtons from "lib/components/shared/ShareButtons";
 import { unsplashImg } from "lib/utils/unsplashImg";
 
 import styles from "./BlogPost.module.scss";
@@ -42,6 +43,8 @@ const BlogPost = ({ postData }: BlogPostProps) => {
       >
         {postData.body.raw}
       </ReactMarkdown>
+
+      <ShareButtons title={`Check out this blog post: ${postData.title}`} />
 
       <Box marginY={12}>
         <Giscus
