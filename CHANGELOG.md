@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.18.1](https://github.com/sozonome/sznm.dev/compare/v1.18.0...v1.18.1) (2022-12-06)
+
+
+### Improvements
+
+* **components:** adjust share buttons ([#146](https://github.com/sozonome/sznm.dev/issues/146)) ([3fdd497](https://github.com/sozonome/sznm.dev/commit/3fdd497d93be493c7f94c8acd4ab3af6f03807dd))
+* rename olamonde to wussh ([d3f402a](https://github.com/sozonome/sznm.dev/commit/d3f402ae3d49a1aa1287f0839e164dbd841d6a4d))
+* **theme:** enable transition on change theme ([#145](https://github.com/sozonome/sznm.dev/issues/145)) ([74eccc6](https://github.com/sozonome/sznm.dev/commit/74eccc6bb12bfdb8856c34274b56306bf06a04aa))
+
 ## [1.18.0](https://github.com/sozonome/sznm.dev/compare/v1.16.4...v1.18.0) (2022-11-28)
 
 
