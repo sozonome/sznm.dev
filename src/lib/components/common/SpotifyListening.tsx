@@ -19,15 +19,14 @@ const SpotifyListening = () => {
     return <Skeleton maxWidth={300} height={20} borderRadius={12} />;
   }
 
-  if (!data || !data?.isPlaying) {
-    return null;
-  }
-
   return (
-    <Tooltip label="Song I'm currently listening to">
+    <Tooltip
+      label="Song I'm currently listening to"
+      isDisabled={!data?.isPlaying}
+    >
       <Flex
-        as={Link}
-        href={data.trackUrl}
+        as={data?.trackUrl ? Link : undefined}
+        href={data?.trackUrl}
         target="_blank"
         borderRadius={12}
         maxWidth={300}
@@ -38,14 +37,22 @@ const SpotifyListening = () => {
         fontFamily="heading"
       >
         <Icon as={FaSpotify} color="green.400" fontSize="2xl" />
-        <Image src={data.albumArtUrl} width={16} borderRadius={8} />
+        {data?.albumArtUrl && (
+          <Image src={data.albumArtUrl} width={16} borderRadius={8} />
+        )}
         <Box>
-          <Text fontWeight="extrabold" fontSize="sm">
-            {data.trackTitle}
+          <Text
+            fontWeight="extrabold"
+            fontSize="sm"
+            color={data?.isPlaying ? undefined : "gray"}
+          >
+            {data?.trackTitle ?? "Not Playing"}
           </Text>
-          <Text fontSize="xs" color="gray.500">
-            {data.artist}
-          </Text>
+          {data?.artist && (
+            <Text fontSize="xs" color="gray.500">
+              {data.artist}
+            </Text>
+          )}
         </Box>
       </Flex>
     </Tooltip>
