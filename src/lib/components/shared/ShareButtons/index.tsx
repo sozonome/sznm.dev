@@ -1,62 +1,15 @@
 import { HStack, IconButton, useToast } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import * as React from "react";
-import {
-  FaFacebook,
-  FaLink,
-  FaTelegram,
-  FaTwitter,
-  FaWhatsapp,
-} from "react-icons/fa";
 
 import { baseUrl } from "lib/constants/baseUrl";
 import { extendUrl } from "lib/utils/extendUrl";
 
+import { socialMap } from "./constants";
+
 type ShareButtonsProps = {
   title?: string;
 };
-
-const socialMap = (obj: { title?: string; url: string }) => [
-  {
-    icon: <FaFacebook />,
-    baseSocialUrl: "https://www.facebook.com/sharer/sharer.php",
-    params: {
-      u: obj.url,
-      quote: obj.title,
-    },
-  },
-  {
-    icon: <FaTwitter />,
-    baseSocialUrl: "https://twitter.com/share",
-    params: {
-      url: obj.url,
-      text: obj.title,
-      via: "sozonome",
-    },
-  },
-  {
-    icon: <FaTelegram />,
-    baseSocialUrl: "https://telegram.me/share/url",
-    params: {
-      url: obj.url,
-      text: obj.title,
-    },
-  },
-  {
-    icon: <FaWhatsapp />,
-    baseSocialUrl: "https://web.whatsapp.com/send",
-    params: {
-      // eslint-disable-next-line sonarjs/no-nested-template-literals
-      text: `${obj.title ? `${obj.title}: ` : ""}${obj.url}`,
-    },
-  },
-  {
-    icon: <FaLink />,
-    baseSocialUrl: obj.url,
-    params: {},
-    isCopy: true,
-  },
-];
 
 const toastId = "copied-link";
 
@@ -97,9 +50,9 @@ const ShareButtons = ({ title }: ShareButtonsProps) => {
   return (
     <HStack marginY={2}>
       {socialMap({ title, url: link }).map(
-        ({ icon, baseSocialUrl, params, isCopy }) => (
+        ({ name, icon, baseSocialUrl, params, isCopy }) => (
           <IconButton
-            aria-label=""
+            aria-label={name}
             icon={icon}
             onClick={handleClick({ baseSocialUrl, params, isCopy })}
           />
