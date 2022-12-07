@@ -26,7 +26,7 @@ const nowPlaying = async (req: NextRequest) => {
       status: 200,
       headers: {
         ...defaultHeader,
-        "cache-control": "s-maxage=1, stale-while-revalidate=20",
+        "cache-control": "s-maxage=1, stale-while-revalidate=10",
       },
     });
   } catch {
