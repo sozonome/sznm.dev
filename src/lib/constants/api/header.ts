@@ -1,3 +1,3 @@
 export const defaultHeader: HeadersInit = {
-  "Content-Type": "application/json",
+  "content-type": "application/json",
 };

@@ -19,8 +19,8 @@ const projects = async () => {
     status: 200,
     headers: {
       ...defaultHeader,
-      "Access-Control-Allow-Origin": "*",
-      "Cache-Control": "s-maxage=600, stale-while-revalidate=2678400",
+      "access-control-allow-origin": "*",
+      "cache-control": "s-maxage=600, stale-while-revalidate=2678400",
     },
   });
 };
