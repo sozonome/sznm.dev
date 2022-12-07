@@ -17,4 +17,4 @@ export const getNowPlaying = async () => {
 };
 
 export const useNowPlayingData = () =>
-  useSpotifySWR<GetNowPlayingTransformed>("/api/spotify/now-playing");
+  useSpotifySWR<GetNowPlayingTransformed>("/api/now-playing");

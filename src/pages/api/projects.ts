@@ -1,33 +1,11 @@
-import type { Project } from "contentlayer/generated";
-import { allProjects } from "contentlayer/generated";
-import Cors from "cors";
-import type { NextApiRequest, NextApiResponse } from "next";
+import { defaultHeader } from "lib/constants/api/header";
+import { sznmAppsProjects } from "lib/constants/project";
 
-import initMiddleware from "lib/services/init-middleware";
+export const config = {
+  runtime: "experimental-edge",
+};
 
-const cors = initMiddleware(
-  Cors({
-    methods: ["GET"],
-  })
-);
-
-const projects = async (req: NextApiRequest, res: NextApiResponse) => {
-  const allProjectsData: Array<Project> = allProjects.filter(
-    (project) => project.published !== false && project
-  );
-
-  const sznmAppsProjects = allProjectsData
-    .filter((project) => project.sznmApps === true)
-    .sort((a: Project, b: Project) => {
-      if (a.title.toLowerCase() < b.title.toLowerCase()) {
-        return -1;
-      }
-      if (a.title.toLowerCase() > b.title.toLowerCase()) {
-        return 1;
-      }
-      return 0;
-    });
-
+const projects = async () => {
   const projectList = sznmAppsProjects.map(
     ({ title, description, projectLink, icon }) => ({
       name: title,
@@ -37,14 +15,14 @@ const projects = async (req: NextApiRequest, res: NextApiResponse) => {
     })
   );
 
-  await cors(req, res);
-
-  res.statusCode = 200;
-  res.setHeader(
-    "Cache-Control",
-    "s-maxage=600, stale-while-revalidate=2678400"
-  );
-  res.json(projectList);
+  return new Response(JSON.stringify(projectList), {
+    status: 200,
+    headers: {
+      ...defaultHeader,
+      "Access-Control-Allow-Origin": "*",
+      "Cache-Control": "s-maxage=600, stale-while-revalidate=2678400",
+    },
+  });
 };
 
 export default projects;
