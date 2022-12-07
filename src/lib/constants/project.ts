@@ -13,6 +13,18 @@ export const highlightedProjects = sortedProjects.filter(
   (project) => project.highlight
 );
 
+export const sznmAppsProjects = sortedProjects
+  .filter((project) => project.sznmApps)
+  .sort((a, b) => {
+    if (a.title.toLowerCase() < b.title.toLowerCase()) {
+      return -1;
+    }
+    if (a.title.toLowerCase() > b.title.toLowerCase()) {
+      return 1;
+    }
+    return 0;
+  });
+
 export const projectIdParams = sortedProjects.map((project) => ({
   params: {
     id: project.id,

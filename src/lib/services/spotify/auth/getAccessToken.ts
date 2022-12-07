@@ -9,9 +9,7 @@ import type { GetAccessTokenResponse } from "./types";
 
 const SPOTIFY_TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
-const basic = Buffer.from(
-  `${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`
-).toString("base64");
+const basic = btoa(`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`);
 
 const basicHeaders = {
   Authorization: `Basic ${basic}`,
