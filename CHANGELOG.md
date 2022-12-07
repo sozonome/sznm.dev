@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.18.2](https://github.com/sozonome/sznm.dev/compare/v1.18.1...v1.18.2) (2022-12-07)
+
+
+### Improvements
+
+* **api:** edge API route ([#148](https://github.com/sozonome/sznm.dev/issues/148)) ([f090a01](https://github.com/sozonome/sznm.dev/commit/f090a017a695bc3d3664bf8aa3a75b53cd176e64))
+* **layout:** adjust spotify listening component ([#147](https://github.com/sozonome/sznm.dev/issues/147)) ([543f466](https://github.com/sozonome/sznm.dev/commit/543f46698ed2faa9dada7828cb366a43fa986c3f))
+
 ### [1.18.1](https://github.com/sozonome/sznm.dev/compare/v1.18.0...v1.18.1) (2022-12-06)
 
 
