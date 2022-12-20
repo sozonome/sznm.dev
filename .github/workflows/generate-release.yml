@@ -1,5 +1,0 @@
-on:
-  workflow_dispatch:
-
-- name: Standard Version
-  uses: qzb/standard-version-action@v1.0.5
