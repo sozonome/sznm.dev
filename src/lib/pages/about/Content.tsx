@@ -1,5 +1,6 @@
 import type { BoxProps } from "@chakra-ui/react";
 import { useColorModeValue, Heading, Link, Text } from "@chakra-ui/react";
+import * as React from "react";
 
 import MotionBox from "lib/components/motion/MotionBox";
 import { EVENT_TYPE_LINK } from "lib/constants/tracking";
@@ -11,12 +12,12 @@ const textProps: BoxProps = {
 
 const Content = () => {
   const textColor = useColorModeValue("gray.600", "gray.300");
-  const handleClickInstagramLink = () => {
+  const handleClickInstagramLink = React.useCallback(() => {
     trackEvent({
       eventName: "About: Click Instagram Link",
       eventData: { type: EVENT_TYPE_LINK },
     });
-  };
+  }, []);
 
   return (
     <MotionBox

@@ -1,4 +1,5 @@
 import { Divider, Center } from "@chakra-ui/react";
+import * as React from "react";
 import shallow from "zustand/shallow";
 
 import { useCmdMenu } from "lib/store/cmd";
@@ -11,6 +12,7 @@ import CommandList from "./components/CommandList";
 import CommandWrapper from "./components/CommandWrapper";
 import { commands } from "./constants";
 import { useCommandCenterAction } from "./hook";
+import type { CommandCollection, CommandEntry } from "./types";
 
 const CommandMenu = () => {
   const { isOpen, closeCmdMenu } = useCmdMenu(
@@ -21,6 +23,12 @@ const CommandMenu = () => {
     shallow
   );
   const { onSelectItem } = useCommandCenterAction();
+
+  const handleSelect = React.useCallback(
+    (commandGroup: CommandCollection, item: CommandEntry) => () =>
+      onSelectItem(commandGroup, item),
+    [onSelectItem]
+  );
 
   return (
     <CommandWrapper isOpen={isOpen} onClose={closeCmdMenu}>
@@ -38,7 +46,7 @@ const CommandMenu = () => {
             {commandGroup.items.map((item) => (
               <CommandItem
                 data={item}
-                onSelect={() => onSelectItem(commandGroup, item)}
+                onSelect={handleSelect(commandGroup, item)}
                 key={item.id}
               />
             ))}

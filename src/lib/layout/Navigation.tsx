@@ -1,5 +1,6 @@
 import { IconButton } from "@chakra-ui/react";
 import Link from "next/link";
+import React from "react";
 import type { IconType } from "react-icons";
 import { FaCode, FaFeatherAlt, FaHome, FaRocket, FaUser } from "react-icons/fa";
 
@@ -13,12 +14,12 @@ type NavItemProps = {
 };
 
 const NavItem = ({ href, label, icon }: NavItemProps) => {
-  const handleClickNavigation = () => {
+  const handleClickNavigation = React.useCallback(() => {
     trackEvent({
       eventName: `Nav Link: ${label}`,
       eventData: { type: EVENT_TYPE_NAVIGATE },
     });
-  };
+  }, [label]);
 
   return (
     <IconButton

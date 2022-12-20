@@ -1,6 +1,7 @@
 import { Flex, Grid, Heading, Text, useColorModeValue } from "@chakra-ui/react";
 import type { Snippet } from "contentlayer/generated";
 import Link from "next/link";
+import * as React from "react";
 
 import { EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
 import { trackEvent } from "lib/utils/trackEvent";
@@ -12,12 +13,12 @@ type SnippetCardProps = {
 const SnippetCard = ({ data }: SnippetCardProps) => {
   const backgroundColor = useColorModeValue("", "gray.700");
 
-  const handleClickSnippet = () => {
+  const handleClickSnippet = React.useCallback(() => {
     trackEvent({
       eventName: `Snippet: ${data.title}`,
       eventData: { type: EVENT_TYPE_NAVIGATE },
     });
-  };
+  }, [data.title]);
 
   return (
     <Flex

@@ -23,12 +23,12 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
-  const handleClickViewAllProjects = () => {
+  const handleClickViewAllProjects = React.useCallback(() => {
     trackEvent({
       eventName: "Home: View All Projects",
       eventData: { type: EVENT_TYPE_NAVIGATE },
     });
-  };
+  }, []);
 
   return (
     <Stack as="section" marginBottom={16} spacing={4}>

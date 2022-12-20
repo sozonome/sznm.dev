@@ -6,6 +6,7 @@ import {
   Flex,
   Link as ChakraLink,
 } from "@chakra-ui/react";
+import * as React from "react";
 import type { Options } from "react-markdown/lib/ast-to-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -21,7 +22,8 @@ export const renderers: Options["components"] = {
     const language = match?.[1];
     const childrenValue = String(children).replace(/\n$/, "");
     const toastId = childrenValue.substring(0, 10);
-    const handleClickCopy = () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const handleClickCopy = React.useCallback(() => {
       navigator.clipboard.writeText(childrenValue);
       if (!toast.isActive(toastId)) {
         toast({
@@ -32,7 +34,7 @@ export const renderers: Options["components"] = {
           isClosable: true,
         });
       }
-    };
+    }, [childrenValue, toastId]);
 
     return !inline && match ? (
       <Box width="100%">
