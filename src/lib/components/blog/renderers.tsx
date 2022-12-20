@@ -6,7 +6,6 @@ import {
   Flex,
   Link as ChakraLink,
 } from "@chakra-ui/react";
-import * as React from "react";
 import type { Options } from "react-markdown/lib/ast-to-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -15,26 +14,27 @@ import HeadingLink from "./HeadingLink";
 
 const { toast } = createStandaloneToast();
 
+const handleClickCopy = (childrenValue: string) => () => {
+  const toastId = childrenValue.substring(0, 10);
+
+  navigator.clipboard.writeText(childrenValue);
+  if (!toast.isActive(toastId)) {
+    toast({
+      id: toastId,
+      status: "success",
+      position: "top-right",
+      title: "Copied",
+      isClosable: true,
+    });
+  }
+};
+
 export const renderers: Options["components"] = {
   code: ({ inline, className, children, ...props }) => {
     /** https://github.com/remarkjs/react-markdown#use-custom-components-syntax-highlight */
     const match = /language-(\w+)/.exec(className || "");
     const language = match?.[1];
     const childrenValue = String(children).replace(/\n$/, "");
-    const toastId = childrenValue.substring(0, 10);
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const handleClickCopy = React.useCallback(() => {
-      navigator.clipboard.writeText(childrenValue);
-      if (!toast.isActive(toastId)) {
-        toast({
-          id: toastId,
-          status: "success",
-          position: "top-right",
-          title: "Copied",
-          isClosable: true,
-        });
-      }
-    }, [childrenValue, toastId]);
 
     return !inline && match ? (
       <Box width="100%">
@@ -47,7 +47,7 @@ export const renderers: Options["components"] = {
             padding={0}
             fontSize={12}
             textTransform="lowercase"
-            onClick={handleClickCopy}
+            onClick={handleClickCopy(childrenValue)}
           >
             Copy
           </Button>
