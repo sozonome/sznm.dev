@@ -13,6 +13,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
+          
+      - name: Configure committer
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
 
       - run: npx standard-version
         env:
