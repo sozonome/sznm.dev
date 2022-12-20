@@ -1,10 +1,16 @@
 on:
   workflow_dispatch:
 
-name: bump-version
 jobs:
-  bump-version:
+  release:
     runs-on: ubuntu-latest
     steps:
-      - name: Bump version
-        uses: qzb/standard-version-action@v1.0.5
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - run: npx standard-version
