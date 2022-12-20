@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.18.3](https://github.com/sozonome/sznm.dev/compare/v1.18.2...v1.18.3) (2022-12-20)
+
+
+### Improvements
+
+* **api:** adjust now-playing swr duration ([#149](https://github.com/sozonome/sznm.dev/issues/149)) ([5d98bfe](https://github.com/sozonome/sznm.dev/commit/5d98bfe75964b9155f8a97c97db70256d25c376f))
+* convert to useCallback ([#153](https://github.com/sozonome/sznm.dev/issues/153)) ([7926b61](https://github.com/sozonome/sznm.dev/commit/7926b61e2ad863242e55478e3cb31b23e19129fb))
+* resolve code smell ([#152](https://github.com/sozonome/sznm.dev/issues/152)) ([981c536](https://github.com/sozonome/sznm.dev/commit/981c536ecf595f5d21854c7baf5835f3ffbd7150))
+
 ### [1.18.2](https://github.com/sozonome/sznm.dev/compare/v1.18.1...v1.18.2) (2022-12-07)
 
 
