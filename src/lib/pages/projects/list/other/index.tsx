@@ -1,6 +1,7 @@
 import { Box, Button, Heading } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
+import React from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import MotionBox from "lib/components/motion/MotionBox";
@@ -18,12 +19,12 @@ import { trackEvent } from "lib/utils/trackEvent";
 import type { OtherProjectsProps } from "./types";
 
 const OtherProjects = ({ otherProjects }: OtherProjectsProps) => {
-  const handleBackToFeaturedProjects = () => {
+  const handleBackToFeaturedProjects = React.useCallback(() => {
     trackEvent({
       eventName: "Other Projects: Back to Featured Projects",
       eventData: { type: EVENT_TYPE_NAVIGATE },
     });
-  };
+  }, []);
 
   return (
     <>
