@@ -1,6 +1,7 @@
 on:
   workflow_dispatch:
 
+name: bump-version
 jobs:
   release:
     runs-on: ubuntu-latest
