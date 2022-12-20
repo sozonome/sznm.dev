@@ -22,30 +22,32 @@ const ShareButtons = ({ title }: ShareButtonsProps) => {
     [router.asPath]
   );
 
-  const handleClick =
+  const handleClick = React.useCallback(
     (obj: {
-      baseSocialUrl: string;
-      params: Record<string, unknown>;
-      isCopy?: boolean;
-    }) =>
-    () => {
-      const shareLink = extendUrl(obj.baseSocialUrl, obj.params);
-      if (obj.isCopy) {
-        navigator.clipboard.writeText(shareLink);
-        if (!toast.isActive(toastId)) {
-          toast({
-            id: toastId,
-            title: "Link Copied!",
-            position: "top-right",
-            status: "success",
-            isClosable: true,
-            description: shareLink,
-          });
+        baseSocialUrl: string;
+        params: Record<string, unknown>;
+        isCopy?: boolean;
+      }) =>
+      () => {
+        const shareLink = extendUrl(obj.baseSocialUrl, obj.params);
+        if (obj.isCopy) {
+          navigator.clipboard.writeText(shareLink);
+          if (!toast.isActive(toastId)) {
+            toast({
+              id: toastId,
+              title: "Link Copied!",
+              position: "top-right",
+              status: "success",
+              isClosable: true,
+              description: shareLink,
+            });
+          }
+          return;
         }
-        return;
-      }
-      window.open(shareLink);
-    };
+        window.open(shareLink);
+      },
+    [toast]
+  );
 
   return (
     <HStack marginY={2}>
@@ -53,6 +55,7 @@ const ShareButtons = ({ title }: ShareButtonsProps) => {
         ({ name, icon, baseSocialUrl, params, isCopy }) => (
           <IconButton
             aria-label={name}
+            key={name}
             icon={icon}
             onClick={handleClick({ baseSocialUrl, params, isCopy })}
           />

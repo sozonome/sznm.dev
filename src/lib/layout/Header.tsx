@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, IconButton, Spacer } from "@chakra-ui/react";
 import Link from "next/link";
+import * as React from "react";
 import { RiCommandFill } from "react-icons/ri";
 
 import CommandMenu from "lib/components/commands";
@@ -15,13 +16,13 @@ const Header = () => {
     openCmdMenu: state.openCmdMenu,
   }));
 
-  const handleOpenCommandCenter = () => {
+  const handleOpenCommandCenter = React.useCallback(() => {
     trackEvent({
       eventName: "open cmd center",
       eventData: { type: EVENT_TYPE_CTA },
     });
     openCmdMenu();
-  };
+  }, [openCmdMenu]);
 
   return (
     <>

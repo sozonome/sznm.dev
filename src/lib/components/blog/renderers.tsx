@@ -14,25 +14,27 @@ import HeadingLink from "./HeadingLink";
 
 const { toast } = createStandaloneToast();
 
+const handleClickCopy = (childrenValue: string) => () => {
+  const toastId = childrenValue.substring(0, 10);
+
+  navigator.clipboard.writeText(childrenValue);
+  if (!toast.isActive(toastId)) {
+    toast({
+      id: toastId,
+      status: "success",
+      position: "top-right",
+      title: "Copied",
+      isClosable: true,
+    });
+  }
+};
+
 export const renderers: Options["components"] = {
   code: ({ inline, className, children, ...props }) => {
     /** https://github.com/remarkjs/react-markdown#use-custom-components-syntax-highlight */
     const match = /language-(\w+)/.exec(className || "");
     const language = match?.[1];
     const childrenValue = String(children).replace(/\n$/, "");
-    const toastId = childrenValue.substring(0, 10);
-    const handleClickCopy = () => {
-      navigator.clipboard.writeText(childrenValue);
-      if (!toast.isActive(toastId)) {
-        toast({
-          id: toastId,
-          status: "success",
-          position: "top-right",
-          title: "Copied",
-          isClosable: true,
-        });
-      }
-    };
 
     return !inline && match ? (
       <Box width="100%">
@@ -45,7 +47,7 @@ export const renderers: Options["components"] = {
             padding={0}
             fontSize={12}
             textTransform="lowercase"
-            onClick={handleClickCopy}
+            onClick={handleClickCopy(childrenValue)}
           >
             Copy
           </Button>

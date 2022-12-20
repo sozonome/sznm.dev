@@ -1,4 +1,5 @@
 import { Link } from "@chakra-ui/react";
+import * as React from "react";
 
 import { EVENT_TYPE_LINK } from "lib/constants/tracking";
 import { trackEvent } from "lib/utils/trackEvent";
@@ -15,12 +16,12 @@ const ProjectDetailWrapper = ({
     projectData.projectLink ??
     projectData.repoLink;
 
-  const handleClickProject = () => {
+  const handleClickProject = React.useCallback(() => {
     trackEvent({
       eventName: `${source}: Open ${projectData.title} | ${link}`,
       eventData: { type: EVENT_TYPE_LINK },
     });
-  };
+  }, [link, projectData.title, source]);
 
   if (link) {
     return (

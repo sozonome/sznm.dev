@@ -1,6 +1,7 @@
 import { Box, Heading, Text, Flex, AspectRatio, Image } from "@chakra-ui/react";
 import type { Blog } from "contentlayer/generated";
 import Link from "next/link";
+import * as React from "react";
 
 import type { MotionBoxProps } from "lib/components/motion/MotionBox";
 import MotionBox from "lib/components/motion/MotionBox";
@@ -16,12 +17,12 @@ type BlogPostCardProps = {
 };
 
 const BlogPostCard = ({ postData, wrapperProps }: BlogPostCardProps) => {
-  const handleClickBlogPost = () => {
+  const handleClickBlogPost = React.useCallback(() => {
     trackEvent({
       eventName: `Blog Post: ${postData.title}`,
       eventData: { type: EVENT_TYPE_NAVIGATE },
     });
-  };
+  }, [postData.title]);
 
   return (
     <MotionBox {...wrapperProps}>
