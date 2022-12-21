@@ -11,26 +11,35 @@ stacks:
 ## Fetcher Utility
 
 > install [axios](https://axios-http.com/)
+
 ```bash
 yarn add axios
 ```
 
 > add fetcher utility for GET
+
 ```ts
 import axios from "axios";
 
-export const fetcher = <ResType>(url: string, params?: any) =>
+type FetcherArgs = {
+  url: string;
+  params?: any;
+};
+
+export const fetcher = <ResType>({ url, params }: FetcherArgs) =>
   axios.get<ResType>(url, { params }).then((res) => res.data);
 ```
 
 ## Data Hook with SWR
 
 > install [SWR](https://swr.vercel.app)
+
 ```bash
 yarn add swr
 ```
 
 > add swr hook utility
+
 ```ts
 import useSWR from "swr";
 
@@ -48,7 +57,7 @@ export const useAppSWR = <ResType, ErrorType = any>({
   isReady = true,
 }: UseAppSWRArgs<ResType>) => {
   const { data, error, mutate } = useSWR<ResType, ErrorType>(
-    isReady ? [url, params] : null,
+    isReady ? { url, params } : null,
     fetcher,
     {
       fallbackData,
@@ -65,15 +74,18 @@ export const useAppSWR = <ResType, ErrorType = any>({
 ```
 
 > add data hook
+
 ```ts
 // useMovieData.ts
-export const useMovieData = (params?: any) => useAppSWR({
-  url: 'https://some-api-url.com/api/movies',
-  params,
-});
+export const useMovieData = (params?: any) =>
+  useAppSWR({
+    url: "https://some-api-url.com/api/movies",
+    params,
+  });
 ```
 
 > call the data hook in the component
+
 ```tsx
 // SomeComponent.tsx
 
@@ -81,13 +93,15 @@ const SomeComponent = () => {
   const { data, isLoading } = useMovieData();
 
   if (isLoading) {
-    return <p>Loading...</p>
+    return <p>Loading...</p>;
   }
 
   return (
     <div>
-      {data.results.map(item => <p>{item.title}</p>)}
+      {data.results.map((item) => (
+        <p>{item.title}</p>
+      ))}
     </div>
-  )
-}
+  );
+};
 ```
