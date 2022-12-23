@@ -80,5 +80,6 @@ module.exports = withBundleAnalyzer(
     eslint: {
       dirs: ["src"],
     },
+    transpilePackages: ["lodash-es"],
   })
 );
