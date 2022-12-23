@@ -2,7 +2,7 @@ import { defaultHeader } from "lib/constants/api/header";
 import { sznmAppsProjects } from "lib/constants/project";
 
 export const config = {
-  runtime: "experimental-edge",
+  runtime: "edge",
 };
 
 const projects = async () => {

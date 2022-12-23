@@ -4,7 +4,7 @@ import { defaultHeader } from "lib/constants/api/header";
 import { getNowPlaying } from "lib/services/spotify/user/now-playing";
 
 export const config = {
-  runtime: "experimental-edge",
+  runtime: "edge",
 };
 
 const nowPlaying = async (req: NextRequest) => {
