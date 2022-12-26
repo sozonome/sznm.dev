@@ -27,6 +27,11 @@ const SpotifyListening = () => {
       <Flex
         as={data?.trackUrl ? Link : undefined}
         href={data?.trackUrl}
+        aria-label={
+          data?.trackUrl
+            ? `Listen to ${data?.trackTitle} by ${data?.artist}`
+            : undefined
+        }
         target="_blank"
         borderRadius={12}
         maxWidth={300}
@@ -41,18 +46,10 @@ const SpotifyListening = () => {
           <Image src={data.albumArtUrl} width={16} borderRadius={8} />
         )}
         <Box>
-          <Text
-            fontWeight="extrabold"
-            fontSize="sm"
-            color={data?.isPlaying ? undefined : "gray"}
-          >
+          <Text fontWeight="extrabold" fontSize="sm">
             {data?.trackTitle ?? "Not Playing"}
           </Text>
-          {data?.artist && (
-            <Text fontSize="xs" color="gray.500">
-              {data.artist}
-            </Text>
-          )}
+          {data?.artist && <Text fontSize="xs">{data.artist}</Text>}
         </Box>
       </Flex>
     </Tooltip>

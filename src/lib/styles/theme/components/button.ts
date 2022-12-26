@@ -9,4 +9,9 @@ export const Button: ComponentStyleConfig = {
       shadow: "sm",
     },
   },
+  variants: {
+    outline: {
+      borderWidth: 2,
+    },
+  },
 };

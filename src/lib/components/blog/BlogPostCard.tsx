@@ -36,6 +36,7 @@ const BlogPostCard = ({ postData, wrapperProps }: BlogPostCardProps) => {
         <Box
           as={Link}
           href={`/blog/${postData.id}`}
+          aria-label={`Open ${postData.title}`}
           onClick={handleClickBlogPost}
         >
           <AspectRatio

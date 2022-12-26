@@ -35,6 +35,7 @@ const BlogPostPreview = ({ postData, wrapperProps }: BlogPostPreviewProps) => {
         <Flex
           as={Link}
           href={`/blog/${postData.id}`}
+          aria-label={`Open ${postData.title}`}
           onClick={handleClickBlogPost}
           flexWrap="wrap"
           alignItems="center"

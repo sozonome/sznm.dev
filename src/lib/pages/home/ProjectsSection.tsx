@@ -53,8 +53,8 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
           as={Link}
           href="/projects"
           rightIcon={<FaArrowRight />}
-          paddingX={0}
-          variant="ghost"
+          size="lg"
+          variant="outline"
           fontFamily="heading"
           onClick={handleClickViewAllProjects}
         >
