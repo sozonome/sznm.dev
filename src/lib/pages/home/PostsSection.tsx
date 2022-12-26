@@ -37,9 +37,9 @@ const PostsSection = ({ data }: PostsSectionProps) => {
           as={Link}
           href="/blog"
           rightIcon={<FaArrowRight />}
-          paddingX={0}
-          variant="ghost"
+          size="lg"
           fontFamily="heading"
+          variant="outline"
           onClick={handleClickViewAllPosts}
         >
           view all posts

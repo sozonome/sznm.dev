@@ -21,12 +21,20 @@ const ProjectListBottomNav = () => {
   }, []);
 
   return (
-    <Grid gap={2} templateColumns={["1fr", "1fr", "repeat(2, 1fr)"]}>
+    <Grid
+      gap={{
+        base: 4,
+        md: 6,
+      }}
+      templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+      fontFamily="heading"
+    >
       <Button
         as={Link}
         href="/projects/other"
         variant="outline"
         onClick={handleClickOtherProjects}
+        size="lg"
         width="full"
       >
         Other Projects
@@ -41,6 +49,7 @@ const ProjectListBottomNav = () => {
           href="https://prtfl.sznm.dev"
           target="_blank"
           width="full"
+          size="lg"
           onClick={handleClickPortfolioPage}
         >
           see more detailed portfolio
