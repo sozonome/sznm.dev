@@ -36,7 +36,7 @@ const Footer = () => {
           />
         ))}
       </Grid>
-      <Text fontSize={["xs", "sm"]} color="gray">
+      <Text fontSize={["xs", "sm"]}>
         &copy; 2020 - {new Date().getFullYear()}{" "}
         <Link
           href="https://agustinusnathaniel.com"

@@ -18,12 +18,10 @@ const BlogPostHead = ({ postData }: BlogPostHeadProps) => {
             {postData.title}
           </Heading>
           <Link href="/about" isExternal>
-            <Text color="gray" fontSize="sm">
-              Agustinus Nathaniel
-            </Text>
+            <Text fontSize="sm">Agustinus Nathaniel</Text>
           </Link>
 
-          <Text fontSize="xs" color="gray">
+          <Text fontSize="xs">
             {dateFormatLong(postData.date)} - {postData.readTime?.text}
           </Text>
         </Box>

@@ -11,7 +11,7 @@ const SnippetDetailHead = ({ data }: SnippetDetailHeadProps) => {
       <Heading as="h1" size={{ base: "2xl", sm: "3xl", md: "4xl" }}>
         {data.title}
       </Heading>
-      <Text color="gray.500">{data.description}</Text>
+      <Text>{data.description}</Text>
     </Grid>
   );
 };
