@@ -1,10 +1,10 @@
 import { Heading, Box, Text, Grid } from "@chakra-ui/react";
 import debounce from "lodash-es/debounce";
 import { NextSeo } from "next-seo";
-import dynamic from "next/dynamic";
 import * as React from "react";
 
 import BlogPostCard from "lib/components/blog/BlogPostCard";
+import BlogPostSearch from "lib/components/blog/BlogPostSearch";
 import MotionGrid from "lib/components/motion/MotionGrid";
 import {
   childAnimationProps,
@@ -14,13 +14,6 @@ import { baseUrl } from "lib/constants/baseUrl";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 
 import type { BlogPostListProps } from "./types";
-
-const BlogPostSearch = dynamic(
-  () => import("lib/components/blog/BlogPostSearch"),
-  {
-    ssr: false,
-  }
-);
 
 const BlogPostList = ({ allPostsData }: BlogPostListProps) => {
   const [keyword, setKeyword] = React.useState<string>("");
