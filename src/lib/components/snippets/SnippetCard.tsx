@@ -25,6 +25,7 @@ const SnippetCard = ({ data }: SnippetCardProps) => {
       direction="column"
       as={Link}
       href={`/snippets/${data.id}`}
+      aria-label={`Open ${data.title} snippet`}
       gap={4}
       padding={8}
       height="full"

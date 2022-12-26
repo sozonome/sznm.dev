@@ -45,6 +45,7 @@ const Card = ({
   return (
     <Link
       href={link}
+      aria-label={`Link to ${title}`}
       isExternal
       onClick={handleClickProject}
       _hover={{
