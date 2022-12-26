@@ -66,7 +66,7 @@ const BlogPostCard = ({ postData, wrapperProps }: BlogPostCardProps) => {
               <Heading size="md" marginBottom={2}>
                 {postData.title}
               </Heading>
-              <Text fontSize="xs" color="description">
+              <Text fontSize="xs">
                 {dateFormatLong(postData.date)} - {postData.readTime?.text}
               </Text>
             </Box>

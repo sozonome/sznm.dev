@@ -3,7 +3,7 @@ import { Command } from "cmdk";
 
 const CommandEmpty = () => {
   return (
-    <Text as={Command.Empty} textAlign="center" color="description">
+    <Text as={Command.Empty} textAlign="center">
       No results found.
     </Text>
   );

@@ -43,9 +43,7 @@ const SnippetCard = ({ data }: SnippetCardProps) => {
     >
       <Grid gap={2}>
         <Heading size="md">{data.title}</Heading>
-        <Text fontSize="sm" color="description">
-          {data.description}
-        </Text>
+        <Text fontSize="sm">{data.description}</Text>
       </Grid>
 
       <Flex gap={2}>

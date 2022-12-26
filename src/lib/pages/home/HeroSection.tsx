@@ -12,7 +12,7 @@ const HeroSection = () => {
         <Heading as="h1" size="xl" paddingBottom={11}>
           Hello! I&apos;m Nathan.
         </Heading>
-        <Text fontSize={{ base: "md", md: "xl" }} color="description">
+        <Text fontSize={{ base: "md", md: "xl" }}>
           Digital crafter specializing in Frontend development.
         </Text>
       </Box>
