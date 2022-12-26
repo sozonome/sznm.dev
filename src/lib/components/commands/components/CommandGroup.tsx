@@ -13,12 +13,7 @@ const CommandGroup = ({ children, data }: CommandGroupProps) => {
     <Box
       as={Command.Group}
       heading={
-        <Heading
-          fontSize="xs"
-          color="description"
-          paddingX={2}
-          userSelect="none"
-        >
+        <Heading fontSize="xs" paddingX={2} userSelect="none">
           {data.heading}
         </Heading>
       }
