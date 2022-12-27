@@ -22,8 +22,8 @@ export const useCommandCenter = () => {
     shallow
   );
 
-  React.useEffect(() => {
-    const down = (ev: KeyboardEvent) => {
+  const handleKeydownTrigger = React.useCallback(
+    (ev: KeyboardEvent) => {
       if (ev.key === "k" && (isMac ? ev.metaKey : ev.ctrlKey)) {
         if (isOpen) {
           closeCmdMenu();
@@ -35,11 +35,14 @@ export const useCommandCenter = () => {
         });
         openCmdMenu();
       }
-    };
+    },
+    [closeCmdMenu, isOpen, openCmdMenu]
+  );
 
-    document.addEventListener("keydown", down);
-    return () => document.removeEventListener("keydown", down);
-  }, [closeCmdMenu, isOpen, openCmdMenu]);
+  React.useEffect(() => {
+    document.addEventListener("keydown", handleKeydownTrigger);
+    return () => document.removeEventListener("keydown", handleKeydownTrigger);
+  }, [handleKeydownTrigger]);
 };
 
 export const useCommandCenterAction = () => {
