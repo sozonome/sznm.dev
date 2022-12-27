@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.18.4](https://github.com/sozonome/sznm.dev/compare/v1.18.3...v1.18.4) (2022-12-27)
+
+
+### Improvements
+
+* a11y - add aria label & increase tap area ([#160](https://github.com/sozonome/sznm.dev/issues/160)) ([05980ed](https://github.com/sozonome/sznm.dev/commit/05980ed6cdc5e5b9da5ca26e2e07ace9663f32f2))
+* adjust useCommandCenter hook ([#161](https://github.com/sozonome/sznm.dev/issues/161)) ([90175c4](https://github.com/sozonome/sznm.dev/commit/90175c484fe7c0ba5d899d7cf3c919129835bef8))
+* increase color contrast ([172f52f](https://github.com/sozonome/sznm.dev/commit/172f52f9c2cae785137b204387443239b1ec0caf))
+* remove low contrast color ([#159](https://github.com/sozonome/sznm.dev/issues/159)) ([28c2281](https://github.com/sozonome/sznm.dev/commit/28c22817e92a8133ec58216495683acaead610dd))
+
 ### [1.18.3](https://github.com/sozonome/sznm.dev/compare/v1.18.2...v1.18.3) (2022-12-20)
 
 
