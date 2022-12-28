@@ -22,7 +22,7 @@ export const socialMap = (obj: { title?: string; url: string }) => {
     {
       name: "twitter",
       icon: <FaTwitter />,
-      baseSocialUrl: "https://twitter.com/share",
+      baseSocialUrl: "https://twitter.com/intent/tweet",
       params: {
         url: obj.url,
         text: obj.title,
