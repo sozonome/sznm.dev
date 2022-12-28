@@ -2,6 +2,7 @@ import { Box, Heading, Text, Flex, AspectRatio, Image } from "@chakra-ui/react";
 import type { Blog } from "contentlayer/generated";
 import Link from "next/link";
 import * as React from "react";
+import Balancer from "react-wrap-balancer";
 
 import type { MotionBoxProps } from "lib/components/motion/MotionBox";
 import MotionBox from "lib/components/motion/MotionBox";
@@ -65,7 +66,7 @@ const BlogPostCard = ({ postData, wrapperProps }: BlogPostCardProps) => {
             </Flex>
             <Box flexBasis={["90%"]} paddingLeft={[11, 22]}>
               <Heading size="md" marginBottom={2}>
-                {postData.title}
+                <Balancer>{postData.title}</Balancer>
               </Heading>
               <Text fontSize="xs">
                 {dateFormatLong(postData.date)} - {postData.readTime?.text}
