@@ -1,5 +1,6 @@
 import { Box, Flex, Grid, Heading, Link, Text } from "@chakra-ui/react";
 import type { Blog } from "contentlayer/generated";
+import Balancer from "react-wrap-balancer";
 
 import ShareButtons from "lib/components/shared/ShareButtons";
 import Twemoji from "lib/components/Twemoji";
@@ -14,8 +15,8 @@ const BlogPostHead = ({ postData }: BlogPostHeadProps) => {
     <Grid gap={2} marginBottom={12}>
       <Flex alignItems="center">
         <Box flexBasis={["80%"]}>
-          <Heading as="h1" size="3xl" marginBottom={8}>
-            {postData.title}
+          <Heading as="h1" size="2xl" marginBottom={8}>
+            <Balancer>{postData.title}</Balancer>
           </Heading>
           <Link href="/about" isExternal>
             <Text fontSize="sm">Agustinus Nathaniel</Text>

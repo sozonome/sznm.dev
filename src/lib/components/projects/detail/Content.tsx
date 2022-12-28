@@ -7,6 +7,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import Balancer from "react-wrap-balancer";
 
 import type { ProjectDetailWrapperProps } from "./types";
 
@@ -38,7 +39,7 @@ const ProjectDetailContent = ({
         <Flex gridGap={6} wrap="wrap" flexBasis="85%" height="full">
           <Box alignSelf="flex-start" width="full">
             <Heading size="md" marginBottom={2}>
-              {title}
+              <Balancer>{title}</Balancer>
             </Heading>
             <Text fontSize="sm">{description}</Text>
           </Box>

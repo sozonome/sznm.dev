@@ -1,5 +1,6 @@
 import { Grid, Heading, Text } from "@chakra-ui/react";
 import type { Snippet } from "contentlayer/generated";
+import Balancer from "react-wrap-balancer";
 
 type SnippetDetailHeadProps = {
   data: Snippet;
@@ -8,8 +9,8 @@ type SnippetDetailHeadProps = {
 const SnippetDetailHead = ({ data }: SnippetDetailHeadProps) => {
   return (
     <Grid gap={2}>
-      <Heading as="h1" size={{ base: "2xl", sm: "3xl", md: "4xl" }}>
-        {data.title}
+      <Heading as="h1" size="3xl">
+        <Balancer>{data.title}</Balancer>
       </Heading>
       <Text>{data.description}</Text>
     </Grid>
