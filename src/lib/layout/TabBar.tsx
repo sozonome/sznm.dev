@@ -7,8 +7,8 @@ const TabBar = () => {
     <Box position="fixed" bottom={22} zIndex={10} layerStyle="layoutBlock">
       <Flex
         layerStyle="blur-bg"
-        display={["flex", "none"]}
-        height={["4.5rem", "8rem"]}
+        display={{ base: "flex", sm: "none" }}
+        height={{ base: "4.5rem", sm: "8rem" }}
         borderRadius={20}
         backgroundColor="tabBarAlphaBackground"
         padding={22}
