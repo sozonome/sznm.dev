@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Heading, Stack } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import type { Project } from "contentlayer/generated";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -31,24 +31,18 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
   }, []);
 
   return (
-    <Stack as="section" marginBottom={16} spacing={4}>
+    <section className="mb-16 flex flex-col gap-4">
       <Link href="/projects">
-        <Heading as="h1" size="lg" cursor="pointer" marginBottom={2}>
-          Projects
-        </Heading>
+        <h2 className="text-3xl font-bold cursor-pointer mb-2">Projects</h2>
       </Link>
 
-      <Grid
-        gap={8}
-        templateColumns={["repeat(1)", "repeat(1)", "repeat(2, 1fr)"]}
-        marginY={8}
-      >
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 my-8">
         {data.map((project) => (
           <Card project={project} key={project.id} />
         ))}
-      </Grid>
+      </div>
 
-      <Box>
+      <div>
         <Button
           as={Link}
           href="/projects"
@@ -60,8 +54,8 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
         >
           view all projects
         </Button>
-      </Box>
-    </Stack>
+      </div>
+    </section>
   );
 };
 

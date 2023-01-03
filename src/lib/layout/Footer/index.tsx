@@ -1,4 +1,4 @@
-import { Divider, Grid, Link, Stack, Text } from "@chakra-ui/react";
+import { Divider, Grid, Link, Text } from "@chakra-ui/react";
 
 import SpotifyListening from "lib/components/common/SpotifyListening";
 import { EVENT_TYPE_LINK } from "lib/constants/tracking";
@@ -16,7 +16,7 @@ const Footer = () => {
   };
 
   return (
-    <Stack as="footer" layerStyle="layoutBlock" spacing={8}>
+    <footer className="flex flex-col layout-block gap-8">
       <Divider />
       <SpotifyListening />
 
@@ -46,7 +46,7 @@ const Footer = () => {
           Agustinus Nathaniel
         </Link>
       </Text>
-    </Stack>
+    </footer>
   );
 };
 

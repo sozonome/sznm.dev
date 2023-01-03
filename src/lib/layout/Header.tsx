@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, IconButton, Spacer } from "@chakra-ui/react";
+import { IconButton } from "@chakra-ui/react";
 import Link from "next/link";
 import * as React from "react";
 import { RiCommandFill } from "react-icons/ri";
@@ -26,30 +26,22 @@ const Header = () => {
 
   return (
     <>
-      <Box
-        as="header"
-        position="fixed"
-        top={0}
-        zIndex={5}
-        backgroundColor="headerAlphaBackground"
-        layerStyle="blur-bg"
-        width="full"
-      >
-        <Flex layerStyle="layoutBlock" alignItems="center">
+      <header className="fixed top-0 z-[5] blur-bg w-full alpha-bg dark:alpha-bg-dark">
+        <div className="flex layout-block items-center">
           <Link href="/">
-            <Heading size="md" fontWeight="medium" fontSize={["md", "xl"]}>
+            <h1 className="text-md font-medium sm:text-xl font-heading">
               sznm.dev
-            </Heading>
+            </h1>
           </Link>
 
-          <Spacer />
+          <div className="flex-1 justify-self-stretch" />
 
-          <Flex alignItems="center" gap={4}>
-            <Flex display={["none", "flex"]}>
+          <div className="flex items-center gap-4">
+            <div className="hidden sm:flex">
               <Navigation />
-            </Flex>
+            </div>
 
-            <Flex gap={2}>
+            <div className="flex gap-2">
               <IconButton
                 aria-label="command-center"
                 icon={<RiCommandFill />}
@@ -57,10 +49,10 @@ const Header = () => {
                 onClick={handleOpenCommandCenter}
               />
               <ThemeToggle />
-            </Flex>
-          </Flex>
-        </Flex>
-      </Box>
+            </div>
+          </div>
+        </div>
+      </header>
 
       <CommandMenu />
     </>

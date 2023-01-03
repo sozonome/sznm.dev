@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Heading, Stack } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import type { Blog } from "contentlayer/generated";
 import Link from "next/link";
 import * as React from "react";
@@ -21,18 +21,16 @@ const PostsSection = ({ data }: PostsSectionProps) => {
   }, []);
 
   return (
-    <Stack as="section" spacing={4}>
-      <Heading size="lg" marginBottom={2}>
-        Recent Posts
-      </Heading>
+    <section className="flex flex-col gap-4">
+      <h2 className="text-2xl mb-2">Recent Posts</h2>
 
-      <Grid gap={8}>
+      <div className="grid gap-8">
         {data.map((postData) => (
           <BlogPostPreview postData={postData} key={postData.id} />
         ))}
-      </Grid>
+      </div>
 
-      <Box>
+      <div>
         <Button
           as={Link}
           href="/blog"
@@ -44,8 +42,8 @@ const PostsSection = ({ data }: PostsSectionProps) => {
         >
           view all posts
         </Button>
-      </Box>
-    </Stack>
+      </div>
+    </section>
   );
 };
 
