@@ -9,7 +9,6 @@ import { isMac } from "lib/utils/isMac";
 import { trackEvent } from "lib/utils/trackEvent";
 
 import type { CommandCollection, CommandEntry } from "./types";
-import { CommandType } from "./types";
 
 export const useCommandCenter = () => {
   const isOpen = useCmdMenu((state) => state.isOpen);
@@ -57,7 +56,7 @@ export const useCommandCenterAction = () => {
       eventData: { type: EVENT_TYPE_CMD },
     });
 
-    if (group.type === CommandType.theme) {
+    if (group.type === "theme") {
       toggleColorMode();
       return;
     }

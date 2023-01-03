@@ -1,7 +1,5 @@
-export enum CommandType {
-  navigation,
-  theme,
-}
+const commandTypes = ["nagivation", "theme"] as const;
+export type CommandType = typeof commandTypes[number];
 
 export type CommandCollection = {
   heading: string;
