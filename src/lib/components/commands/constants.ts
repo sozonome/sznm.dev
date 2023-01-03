@@ -1,11 +1,10 @@
 import { allBlogs, allSnippets } from "contentlayer/generated";
 
 import type { CommandCollection } from "./types";
-import { CommandType } from "./types";
 
 const navigationMenus: CommandCollection = {
   heading: "Main Navigation",
-  type: CommandType.navigation,
+  type: "nagivation",
   items: [
     {
       name: "Home",
@@ -37,7 +36,7 @@ const navigationMenus: CommandCollection = {
 const blogPosts: CommandCollection = {
   heading: "Blog Posts",
   pathPrefix: "blog",
-  type: CommandType.navigation,
+  type: "nagivation",
   items: allBlogs.map((blogPost) => ({
     name: blogPost.title,
     id: blogPost.id,
@@ -47,7 +46,7 @@ const blogPosts: CommandCollection = {
 const snippets: CommandCollection = {
   heading: "Snippets",
   pathPrefix: "snippets",
-  type: CommandType.navigation,
+  type: "nagivation",
   items: allSnippets.map((snippet) => ({
     name: snippet.title,
     id: snippet.id,
@@ -56,7 +55,7 @@ const snippets: CommandCollection = {
 
 const themeCommand: CommandCollection = {
   heading: "System",
-  type: CommandType.theme,
+  type: "theme",
   items: [
     {
       name: "Toggle Theme",
