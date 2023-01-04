@@ -19,13 +19,11 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
 
-      - run: npx standard-version
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Bump version
+        id: release
+        uses: ltv/standard-version-action@v2
 
-      # Commit and push the changes
-      - name: Commit and push
-        uses: stefanzweifel/git-auto-commit-action@v3
-        with:
-          commit_message: "Release version ${{ github.event.before }}"
-          push: true
+      - run: |
+          echo "Released version: $VERSION"
+        env:
+          VERSION: ${{ steps.release.output.version }}
