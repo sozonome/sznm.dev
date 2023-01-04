@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          
+
       - name: Configure committer
         run: |
           git config user.name "GitHub Actions Bot"
@@ -21,4 +21,11 @@ jobs:
 
       - run: npx standard-version
         env:
-            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      # Commit and push the changes
+      - name: Commit and push
+        uses: stefanzweifel/git-auto-commit-action@v3
+        with:
+          push: true
+          push_options: '--follow-tags'
