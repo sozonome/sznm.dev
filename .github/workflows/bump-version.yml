@@ -26,3 +26,7 @@ jobs:
       # Commit and push the changes
       - name: Push tags
         run: git push --follow-tags origin main
+
+      - run: npx changelogithub
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
