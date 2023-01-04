@@ -19,11 +19,10 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
 
-      - name: Bump version
-        id: release
-        uses: qzb/standard-version-action@v1.0.5
-
-      - run: |
-          echo "Released version: $VERSION"
+      - run: npx standard-version
         env:
-          VERSION: ${{ steps.release.output.version }}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      # Commit and push the changes
+      - name: Push tags
+        run: git push --follow-tags origin main
