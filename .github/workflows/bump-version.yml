@@ -21,7 +21,7 @@ jobs:
 
       - name: Bump version
         id: release
-        uses: ltv/standard-version-action
+        uses: ltv/standard-version-action@v2.8
 
       - run: |
           echo "Released version: $VERSION"
