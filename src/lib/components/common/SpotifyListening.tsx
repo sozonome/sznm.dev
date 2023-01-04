@@ -35,7 +35,6 @@ const SpotifyListening = () => {
         target="_blank"
         borderRadius={12}
         maxWidth={300}
-        marginX="auto"
         alignItems="center"
         gridGap={2}
         height={20}

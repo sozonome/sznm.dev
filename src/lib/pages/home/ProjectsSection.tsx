@@ -1,9 +1,7 @@
-import { Button } from "@chakra-ui/react";
 import type { Project } from "contentlayer/generated";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
-import { FaArrowRight } from "react-icons/fa";
 
 import Card from "lib/components/projects/Card";
 import { EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
@@ -43,17 +41,13 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
       </div>
 
       <div>
-        <Button
-          as={Link}
+        <Link
           href="/projects"
-          rightIcon={<FaArrowRight />}
-          size="lg"
-          variant="outline"
-          fontFamily="heading"
+          className="text-lg font-bold hover:underline"
           onClick={handleClickViewAllProjects}
         >
           view all projects
-        </Button>
+        </Link>
       </div>
     </section>
   );

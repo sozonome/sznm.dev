@@ -1,8 +1,6 @@
-import { Button } from "@chakra-ui/react";
 import type { Blog } from "contentlayer/generated";
 import Link from "next/link";
 import * as React from "react";
-import { FaArrowRight } from "react-icons/fa";
 
 import BlogPostPreview from "lib/components/blog/BlogPostPreview";
 import { EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
@@ -31,17 +29,13 @@ const PostsSection = ({ data }: PostsSectionProps) => {
       </div>
 
       <div>
-        <Button
-          as={Link}
+        <Link
           href="/blog"
-          rightIcon={<FaArrowRight />}
-          size="lg"
-          fontFamily="heading"
-          variant="outline"
+          className="text-lg font-bold hover:underline"
           onClick={handleClickViewAllPosts}
         >
           view all posts
-        </Button>
+        </Link>
       </div>
     </section>
   );
