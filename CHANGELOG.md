@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.19.0](https://github.com/sozonome/sznm.dev/compare/v1.18.4...v1.19.0) (2023-01-04)
+
+
+### Features
+
+* remove twemoji ([#165](https://github.com/sozonome/sznm.dev/issues/165)) ([3aac57f](https://github.com/sozonome/sznm.dev/commit/3aac57fe64804a157c17c46eb6f5476bb8b96124))
+
+
+### Bug Fixes
+
+* **components:** revise twitter share link ([#163](https://github.com/sozonome/sznm.dev/issues/163)) ([b05419a](https://github.com/sozonome/sznm.dev/commit/b05419ac1149d0295567389bb0e38c4143b7cd7c))
+
+
+### Improvements
+
+* adjust title size and implement react-wrap-balancer ([#162](https://github.com/sozonome/sznm.dev/issues/162)) ([094d07b](https://github.com/sozonome/sznm.dev/commit/094d07be06d676087fa91f7eaf8d2c69f36fb8ed))
+* convert enum to array ([0dc124c](https://github.com/sozonome/sznm.dev/commit/0dc124c7eaecccc931f098797340016f6c691a15))
+
 ### [1.18.4](https://github.com/sozonome/sznm.dev/compare/v1.18.3...v1.18.4) (2022-12-27)
 
 
