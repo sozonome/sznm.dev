@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .layout-block {
+    @apply mx-auto w-full max-w-[100vw] md:max-w-[85vw] lg:max-w-[800px] py-4 px-6 md:px-2 lg:px-0;
+  }
+
+  .blur-bg {
+    @apply backdrop-blur-[6px];
+  }
+}
+
+@layer utilities {
+  .alpha-bg {
+    background-color: rgba(247, 250, 252, 0.8);
+  }
+  .alpha-bg-dark {
+    background-color: rgba(26, 32, 44, 0.8);
+  }
+}

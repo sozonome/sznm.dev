@@ -1,22 +1,21 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import clsx from "clsx";
 
 const HeroSection = () => {
   return (
-    <Box height="90vh" alignItems="center" display="grid">
-      <Box
-        verticalAlign="center"
-        width={["100%", "80%", "60%"]}
-        marginTop={[8, 0]}
-        alignSelf={["none", "center"]}
+    <div className="h-[90vh] grid items-center">
+      <div
+        className={clsx(
+          "align-middle w-full md:w-3/5 mt-8 self-[none] sm:self-center",
+          "sm:w-4/5 sm:mt-0 sm:self-center",
+          "md:w-3/5"
+        )}
       >
-        <Heading as="h1" size="xl" paddingBottom={11}>
-          Hello! I&apos;m Nathan.
-        </Heading>
-        <Text fontSize={{ base: "md", md: "xl" }}>
+        <h1 className="text-4xl font-bold pb-3">Hello! I&apos;m Nathan.</h1>
+        <p className="text-md md:text-xl">
           Digital crafter specializing in Frontend development.
-        </Text>
-      </Box>
-    </Box>
+        </p>
+      </div>
+    </div>
   );
 };
 

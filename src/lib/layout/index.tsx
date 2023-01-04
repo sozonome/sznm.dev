@@ -1,4 +1,3 @@
-import { Box, Stack } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import type { ReactNode } from "react";
 
@@ -16,29 +15,14 @@ const Layout = ({ children }: LayoutProps) => {
   useCommandCenter();
 
   return (
-    <Box
-      backgroundColor="background"
-      color="text"
-      minHeight="100vh"
-      paddingBottom={[160, 16]}
-      paddingTop={24}
-      transition="0.4s ease-out"
-    >
+    <div className="min-h-[100vh] pb-[160px] sm:pb-16 pt-24 transition ease-out delay-[0.4s] bg-gray-50 dark:bg-gray-800">
       <Header />
-      <Stack
-        direction="column"
-        alignItems="center"
-        position="relative"
-        zIndex={1}
-        spacing={8}
-      >
-        <Box as="main" layerStyle="layoutBlock">
-          {children}
-        </Box>
+      <div className="flex flex-col items-center relative z-[1] gap-8">
+        <main className="layout-block">{children}</main>
         <Footer />
-      </Stack>
+      </div>
       <TabBar />
-    </Box>
+    </div>
   );
 };
 
