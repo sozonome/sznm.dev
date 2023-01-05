@@ -1,10 +1,13 @@
-name: Release
-
 on:
-  push:
-    tags:
-      - "v*"
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Target branch'
+        default: 'main'
+        required: true
+        type: string
 
+name: Release
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -17,6 +20,18 @@ jobs:
         with:
           node-version: 16.x
 
-      - run: npx changelogithub
+      - name: Configure committer
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+      - name: Bump version and generate changelog
+        run: npx standard-version
+
+      - name: Push commit and tags
+        run: git push --follow-tags origin ${{ inputs.branch }}
+
+      - name: Publish release note
+        run: npx changelogithub
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
