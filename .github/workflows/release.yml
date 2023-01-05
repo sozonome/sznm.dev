@@ -1,11 +1,5 @@
 on:
   workflow_dispatch:
-    inputs:
-      branch:
-        description: 'Target branch'
-        default: 'main'
-        required: true
-        type: string
 
 name: Release
 jobs:
@@ -29,7 +23,7 @@ jobs:
         run: npx standard-version
 
       - name: Push commit and tags
-        run: git push --follow-tags origin ${{ inputs.branch }}
+        run: git push --follow-tags
 
       - name: Publish release note
         run: npx changelogithub
