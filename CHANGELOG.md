@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.19.2](https://github.com/sozonome/sznm.dev/compare/v1.19.1...v1.19.2) (2023-01-09)
+
+
+### Improvements
+
+* **cmd:** adjust command menu UI ([#171](https://github.com/sozonome/sznm.dev/issues/171)) ([996ad6e](https://github.com/sozonome/sznm.dev/commit/996ad6e61f195e84fdafc19899a3dc1be04c6cb3))
+
 ### [1.19.1](https://github.com/sozonome/sznm.dev/compare/v1.19.0...v1.19.1) (2023-01-04)
 
 ## [1.19.0](https://github.com/sozonome/sznm.dev/compare/v1.18.4...v1.19.0) (2023-01-04)
