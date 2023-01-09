@@ -39,3 +39,6 @@ sitemap*.xml
 
 # Contentlayer
 .contentlayer
+
+# Turbo
+.turbo

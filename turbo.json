@@ -1,0 +1,24 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "outputs": [".next/**"],
+      "env": [
+        "NEXT_PUBLIC_GA_ID",
+        "NEXT_PUBLIC_UMAMI_WEBSITE_ID",
+        "NEXT_PUBLIC_UMAMI_SRC",
+        "SPOTIFY_CLIENT_ID",
+        "SPOTIFY_CLIENT_SECRET",
+        "SPOTIFY_REFRESH_TOKEN",
+        "SHORTENER_HOST_NAME"
+      ]
+    },
+    "lint": {
+      "outputs": [],
+      "inputs": [".eslintrc.*", "src/**"]
+    },
+    "type-check": {
+      "outputs": ["*.tsbuildinfo"]
+    }
+  }
+}

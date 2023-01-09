@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:turbo": "npx turbo build",
     "analyze": "cross-env ANALYZE=true yarn build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "test": "vitest",
@@ -16,7 +17,9 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "eslint src --fix && yarn format",
+    "lint:turbo": "npx turbo lint",
     "type-check": "tsc --noEmit",
+    "type-check:turbo": "npx turbo type-check",
     "format": "prettier --write src",
     "up": "yarn upgrade-interactive",
     "up-latest": "yarn up --latest",
