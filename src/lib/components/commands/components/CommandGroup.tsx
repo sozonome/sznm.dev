@@ -12,8 +12,15 @@ const CommandGroup = ({ children, data }: CommandGroupProps) => {
   return (
     <Box
       as={Command.Group}
+      marginBottom={4}
       heading={
-        <Heading fontSize="xs" paddingX={2} userSelect="none">
+        <Heading
+          fontSize="xs"
+          letterSpacing={2}
+          textTransform="uppercase"
+          paddingX={2}
+          userSelect="none"
+        >
           {data.heading}
         </Heading>
       }

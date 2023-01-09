@@ -12,6 +12,7 @@ const CommandItem = ({ data, onSelect }: CommandItemProps) => {
   return (
     <Flex
       as={Command.Item}
+      marginLeft={6}
       onSelect={onSelect}
       minHeight={12}
       cursor="pointer"
@@ -36,7 +37,9 @@ const CommandItem = ({ data, onSelect }: CommandItemProps) => {
         },
       }}
     >
-      <Text fontSize="sm">{data.name}</Text>
+      <Text fontSize="sm" fontFamily="body">
+        {data.name}
+      </Text>
     </Flex>
   );
 };
