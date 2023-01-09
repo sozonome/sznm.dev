@@ -14,6 +14,7 @@ const CommandList = ({ children }: CommandListProps) => {
       overflow="auto"
       overscrollBehavior="contain"
       transition="100ms ease"
+      paddingTop={6}
       paddingBottom={12}
       sx={{
         scrollPaddingBlockEnd: 12,

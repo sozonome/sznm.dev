@@ -19,6 +19,7 @@ const CommandWrapper = ({ isOpen, onClose, children }: CommandWrapperProps) => {
       modalContentProps={{
         backgroundColor: "transparent",
         borderRadius: 24,
+        layerStyle: "blur-bg",
         marginX: { base: 6, md: 0 },
       }}
       modalBodyProps={{
