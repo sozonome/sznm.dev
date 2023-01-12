@@ -24,6 +24,9 @@ export const useCommandCenter = () => {
   const handleKeydownTrigger = React.useCallback(
     (ev: KeyboardEvent) => {
       if (ev.key === "k" && (isMac ? ev.metaKey : ev.ctrlKey)) {
+        ev.preventDefault();
+        ev.stopPropagation();
+
         if (isOpen) {
           closeCmdMenu();
           return;
