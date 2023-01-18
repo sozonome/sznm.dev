@@ -1,7 +1,7 @@
 import { useColorMode } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import * as React from "react";
-import shallow from "zustand/shallow";
+import { shallow } from "zustand/shallow";
 
 import { EVENT_TYPE_CMD } from "lib/constants/tracking";
 import { useCmdMenu } from "lib/store/cmd";

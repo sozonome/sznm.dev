@@ -1,6 +1,6 @@
 import { Divider, Center } from "@chakra-ui/react";
 import * as React from "react";
-import shallow from "zustand/shallow";
+import { shallow } from "zustand/shallow";
 
 import { useCmdMenu } from "lib/store/cmd";
 
