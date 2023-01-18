@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.19.3](https://github.com/sozonome/sznm.dev/compare/v1.19.2...v1.19.3) (2023-01-18)
+
+
+### Improvements
+
+* add prevent default for cmdk trigger ([#172](https://github.com/sozonome/sznm.dev/issues/172)) ([e0dc66e](https://github.com/sozonome/sznm.dev/commit/e0dc66ef58141f002348db08c8d5183b8422f645))
+
 ### [1.19.2](https://github.com/sozonome/sznm.dev/compare/v1.19.1...v1.19.2) (2023-01-09)
 
 
