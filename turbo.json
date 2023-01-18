@@ -2,7 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "outputs": [".next/**"],
+      "outputs": [".next/**", "public/**"],
       "env": [
         "NEXT_PUBLIC_GA_ID",
         "NEXT_PUBLIC_UMAMI_WEBSITE_ID",
