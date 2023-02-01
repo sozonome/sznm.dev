@@ -83,19 +83,21 @@ module.exports = withBundleAnalyzer(
       dirs: ["src"],
     },
     transpilePackages: ["lodash-es"],
-    rewrites: () => [
-      {
-        source: "/portfolio/:path*",
-        destination: `${portfolioZoneUrl}/portfolio/:path*`,
-      },
-      {
-        source: "/api/portfolio/:path*",
-        destination: `${portfolioZoneUrl}/api/portfolio/:path*`,
-      },
-      {
-        source: "/assets/portfolio/:path*",
-        destination: `${portfolioZoneUrl}/assets/portfolio/:path*`,
-      },
-    ],
+    rewrites: () => ({
+      beforeFiles: [
+        {
+          source: "/portfolio/:path*",
+          destination: `${portfolioZoneUrl}/portfolio/:path*`,
+        },
+        {
+          source: "/api/portfolio/:path*",
+          destination: `${portfolioZoneUrl}/api/portfolio/:path*`,
+        },
+        {
+          source: "/assets/portfolio/:path*",
+          destination: `${portfolioZoneUrl}/assets/portfolio/:path*`,
+        },
+      ]
+    }),
   })
 );
