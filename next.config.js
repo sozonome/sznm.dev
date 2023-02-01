@@ -9,14 +9,14 @@ const { withContentlayer } = require("next-contentlayer");
  * - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
  */
 const ContentSecurityPolicy = `
-  default-src 'self';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' umami.sznm.dev cdn.vercel-insights.com vercel.live;
+  default-src 'self' *.sznm.dev;
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' umami.sznm.dev cdn.vercel-insights.com vercel.live *.sznm.dev;
   frame-src giscus.app vercel.live;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ *.sznm.dev;
   img-src * blob: data: *.freepik.com;
   media-src 'none';
   connect-src *;
-  font-src 'self' https://fonts.gstatic.com/;
+  font-src 'self' https://fonts.gstatic.com/ *.sznm.dev;
 `;
 
 /**
@@ -61,6 +61,8 @@ const securityHeaders = [
   },
 ];
 
+const portfolioZoneUrl = process.env.PORTFOLIO_ZONE_URL ?? "";
+
 /** @type {import('next').NextConfig} */
 module.exports = withBundleAnalyzer(
   withContentlayer({
@@ -81,5 +83,19 @@ module.exports = withBundleAnalyzer(
       dirs: ["src"],
     },
     transpilePackages: ["lodash-es"],
+    rewrites: () => [
+      {
+        source: "/portfolio/:path*",
+        destination: `${portfolioZoneUrl}/portfolio/:path*`,
+      },
+      {
+        source: "/api/portfolio/:path*",
+        destination: `${portfolioZoneUrl}/api/portfolio/:path*`,
+      },
+      {
+        source: "/assets/portfolio/:path*",
+        destination: `${portfolioZoneUrl}/assets/portfolio/:path*`,
+      },
+    ],
   })
 );
