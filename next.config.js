@@ -86,6 +86,10 @@ module.exports = withBundleAnalyzer(
     rewrites: () => ({
       beforeFiles: [
         {
+          source: "/portfolio",
+          destination: `${portfolioZoneUrl}/portfolio`,
+        },
+        {
           source: "/portfolio/:path*",
           destination: `${portfolioZoneUrl}/portfolio/:path*`,
         },
@@ -97,7 +101,7 @@ module.exports = withBundleAnalyzer(
           source: "/assets/portfolio/:path*",
           destination: `${portfolioZoneUrl}/assets/portfolio/:path*`,
         },
-      ]
+      ],
     }),
   })
 );
