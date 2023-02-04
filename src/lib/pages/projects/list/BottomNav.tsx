@@ -45,9 +45,8 @@ const ProjectListBottomNav = () => {
         aria-label="portfolio view tooltip"
       >
         <Button
-          as="a"
-          href="https://prtfl.sznm.dev"
-          target="_blank"
+          as={Link}
+          href="/portfolio"
           width="full"
           size="lg"
           onClick={handleClickPortfolioPage}

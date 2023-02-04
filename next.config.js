@@ -83,6 +83,9 @@ module.exports = withBundleAnalyzer(
       dirs: ["src"],
     },
     transpilePackages: ["lodash-es"],
+    experimental: {
+      scrollRestoration: true,
+    },
     rewrites: () => ({
       beforeFiles: [
         {
