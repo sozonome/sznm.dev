@@ -1,6 +1,6 @@
 import { Box, Button, Heading } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
@@ -13,18 +13,21 @@ import {
 } from "lib/constants/animation";
 import { baseUrl } from "lib/constants/baseUrl";
 import { EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
+import { handleRouteBack } from "lib/utils/handleRouteBack";
 import { sznmOgImage } from "lib/utils/sznmOgImage";
 import { trackEvent } from "lib/utils/trackEvent";
 
 import type { OtherProjectsProps } from "./types";
 
 const OtherProjects = ({ otherProjects }: OtherProjectsProps) => {
+  const router = useRouter();
   const handleBackToFeaturedProjects = React.useCallback(() => {
     trackEvent({
       eventName: "Other Projects: Back to Featured Projects",
       eventData: { type: EVENT_TYPE_NAVIGATE },
     });
-  }, []);
+    handleRouteBack({ router, to: "/projects" });
+  }, [router]);
 
   return (
     <>
@@ -46,8 +49,6 @@ const OtherProjects = ({ otherProjects }: OtherProjectsProps) => {
       />
 
       <Button
-        as={Link}
-        href="/projects"
         leftIcon={<AiOutlineArrowLeft />}
         size="sm"
         backgroundColor="buttonBackground"
