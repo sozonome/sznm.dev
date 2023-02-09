@@ -37,7 +37,7 @@
     "cmdk": "^0.1.22",
     "contentlayer": "^0.3.0",
     "date-fns": "^2.29.3",
-    "framer-motion": "^8.5.4",
+    "framer-motion": "^9.0.2",
     "lodash-es": "^4.17.21",
     "next": "13.1.6",
     "next-contentlayer": "^0.3.0",
