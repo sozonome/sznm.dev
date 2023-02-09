@@ -1,8 +1,8 @@
-import type { GetStaticProps } from "next";
+import type { GetStaticProps } from 'next';
 
-import { snippetIdParams, sortedSnippets } from "lib/constants/snippet";
+import { snippetIdParams, sortedSnippets } from '~/lib/constants/snippet';
 
-import type { SnippetDetailParams, SnippetDetailProps } from "./types";
+import type { SnippetDetailParams, SnippetDetailProps } from './types';
 
 export const getStaticPaths = async () => {
   const paths = snippetIdParams;

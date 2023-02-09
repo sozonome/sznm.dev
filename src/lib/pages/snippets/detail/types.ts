@@ -1,4 +1,4 @@
-import type { Snippet } from "contentlayer/generated";
+import type { Snippet } from 'contentlayer/generated';
 
 export type SnippetDetailParams = {
   id: string;

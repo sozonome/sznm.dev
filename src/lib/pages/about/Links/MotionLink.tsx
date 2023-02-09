@@ -1,12 +1,12 @@
-import { Icon, Link, Tooltip } from "@chakra-ui/react";
-import * as React from "react";
+import { Icon, Link, Tooltip } from '@chakra-ui/react';
+import * as React from 'react';
 
-import MotionBox from "lib/components/motion/MotionBox";
-import { childAnimationProps } from "lib/constants/animation";
-import { EVENT_TYPE_LINK } from "lib/constants/tracking";
-import { trackEvent } from "lib/utils/trackEvent";
+import MotionBox from '~/lib/components/motion/MotionBox';
+import { childAnimationProps } from '~/lib/constants/animation';
+import { EVENT_TYPE_LINK } from '~/lib/constants/tracking';
+import { trackEvent } from '~/lib/utils/trackEvent';
 
-import type { MotionLinkProps } from "./types";
+import type { MotionLinkProps } from './types';
 
 const MotionLink = (props: MotionLinkProps) => {
   const { platformName, url, icon } = props;

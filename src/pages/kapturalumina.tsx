@@ -1,6 +1,6 @@
-import { Box, Heading, Text, Link, Button } from "@chakra-ui/react";
-import Image from "next/image";
-import { FaGooglePlay } from "react-icons/fa";
+import { Box, Heading, Text, Link, Button } from '@chakra-ui/react';
+import Image from 'next/image';
+import { FaGooglePlay } from 'react-icons/fa';
 
 const KapturaLumina = () => {
   return (

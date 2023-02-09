@@ -5,19 +5,19 @@ import {
   Text,
   Link as ChakraLink,
   Image,
-} from "@chakra-ui/react";
-import Link from "next/link";
+} from '@chakra-ui/react';
+import Link from 'next/link';
 
-import MotionBox from "lib/components/motion/MotionBox";
+import MotionBox from '~/lib/components/motion/MotionBox';
 
 const Page404 = () => {
   return (
     <Box>
       <MotionBox
-        width={["100%", "70%", "60%", "60%"]}
+        width={['100%', '70%', '60%', '60%']}
         margin="0 auto"
         animate={{ y: 20 }}
-        transition={{ repeat: Infinity, duration: 2, repeatType: "reverse" }}
+        transition={{ repeat: Infinity, duration: 2, repeatType: 'reverse' }}
       >
         <Image src="/404 Error-rafiki.svg" alt="Error404" />
       </MotionBox>

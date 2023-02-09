@@ -1,10 +1,10 @@
-import { Box, Link, Text, Stack, useColorModeValue } from "@chakra-ui/react";
-import type { Project } from "contentlayer/generated";
-import Image from "next/image";
-import * as React from "react";
+import { Box, Link, Text, Stack, useColorModeValue } from '@chakra-ui/react';
+import Image from 'next/image';
+import * as React from 'react';
 
-import { EVENT_TYPE_LINK } from "lib/constants/tracking";
-import { trackEvent } from "lib/utils/trackEvent";
+import type { Project } from 'contentlayer/generated';
+import { EVENT_TYPE_LINK } from '~/lib/constants/tracking';
+import { trackEvent } from '~/lib/utils/trackEvent';
 
 type CardProps = {
   project: Project;
@@ -25,12 +25,12 @@ const Card = ({
     thumbnail,
     thumbnailDark || thumbnail
   );
-  const borderHighlight = useColorModeValue("gray", "white");
+  const borderHighlight = useColorModeValue('gray', 'white');
   const thumbnailUrl = thumbnail ? dynamicThumbnail : null;
 
   const overlayBgGradient = useColorModeValue(
-    "linear(to-t, rgba(45, 55, 72, 0.6) 0%, rgba(203, 213, 224, 0.4) 80%, rgba(237, 242, 247, 0))",
-    "linear(to-t, rgba(0, 0, 0, 0.5) 0%, rgba(237, 242, 247, 0))"
+    'linear(to-t, rgba(45, 55, 72, 0.6) 0%, rgba(203, 213, 224, 0.4) 80%, rgba(237, 242, 247, 0))',
+    'linear(to-t, rgba(0, 0, 0, 0.5) 0%, rgba(237, 242, 247, 0))'
   );
 
   const link = playStoreLink ?? projectLink ?? repoLink;
@@ -49,7 +49,7 @@ const Card = ({
       isExternal
       onClick={handleClickProject}
       _hover={{
-        textDecoration: "none",
+        textDecoration: 'none',
       }}
       role="group"
     >
@@ -65,7 +65,7 @@ const Card = ({
         position="relative"
         transition="0.2s ease-out"
         _hover={{
-          shadow: "xl",
+          shadow: 'xl',
           borderColor: borderHighlight,
         }}
       >
@@ -74,14 +74,14 @@ const Card = ({
             height={[200, 250, 200]}
             sx={{
               img: {
-                transition: "0.2s cubic-bezier(0.15, 0.0, 0.85, 1.0)",
-                filter: "blur(0.25rem)",
+                transition: '0.2s cubic-bezier(0.15, 0.0, 0.85, 1.0)',
+                filter: 'blur(0.25rem)',
               },
             }}
             _groupHover={{
               img: {
-                transform: "scale(1.05)",
-                filter: "blur(0)",
+                transform: 'scale(1.05)',
+                filter: 'blur(0)',
               },
             }}
           >
@@ -89,8 +89,8 @@ const Card = ({
               width={1000}
               height={200}
               style={{
-                objectFit: "cover",
-                objectPosition: "50% 0",
+                objectFit: 'cover',
+                objectPosition: '50% 0',
               }}
               src={thumbnailUrl}
               alt={`${title}-thumbnail`}

@@ -1,13 +1,13 @@
-import { Box, Button, Grid, Heading, Stack } from "@chakra-ui/react";
-import type { Project } from "contentlayer/generated";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import * as React from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { Box, Button, Grid, Heading, Stack } from '@chakra-ui/react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import * as React from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 
-import Card from "lib/components/projects/Card";
-import { EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
-import { trackEvent } from "lib/utils/trackEvent";
+import type { Project } from 'contentlayer/generated';
+import Card from '~/lib/components/projects/Card';
+import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
+import { trackEvent } from '~/lib/utils/trackEvent';
 
 export type ProjectsSectionProps = { data: Array<Project> };
 
@@ -18,14 +18,14 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
     data
       .filter((project) => project.highlight && project)
       .forEach(({ id }) => {
-        router.prefetch("/projects/[id]", `/projects/${id}`);
+        router.prefetch('/projects/[id]', `/projects/${id}`);
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
   const handleClickViewAllProjects = React.useCallback(() => {
     trackEvent({
-      eventName: "Home: View All Projects",
+      eventName: 'Home: View All Projects',
       eventData: { type: EVENT_TYPE_NAVIGATE },
     });
   }, []);
@@ -40,7 +40,7 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
 
       <Grid
         gap={8}
-        templateColumns={["repeat(1)", "repeat(1)", "repeat(2, 1fr)"]}
+        templateColumns={['repeat(1)', 'repeat(1)', 'repeat(2, 1fr)']}
         marginY={8}
       >
         {data.map((project) => (

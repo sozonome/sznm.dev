@@ -1,12 +1,12 @@
-import type { ComponentStyleConfig } from "@chakra-ui/react";
+import type { ComponentStyleConfig } from '@chakra-ui/react';
 
 export const Button: ComponentStyleConfig = {
   baseStyle: {
-    borderRadius: "1rem",
+    borderRadius: '1rem',
     _hover: {
-      borderColor: "gray",
+      borderColor: 'gray',
       borderWidth: 2,
-      shadow: "sm",
+      shadow: 'sm',
     },
   },
   variants: {

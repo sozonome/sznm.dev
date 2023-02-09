@@ -1,42 +1,42 @@
-import { allBlogs, allSnippets } from "contentlayer/generated";
+import { allBlogs, allSnippets } from 'contentlayer/generated';
 
-import type { CommandCollection } from "./types";
+import type { CommandCollection } from './types';
 
 const navigationMenus: CommandCollection = {
-  heading: "Main Navigation",
-  type: "nagivation",
+  heading: 'Main Navigation',
+  type: 'nagivation',
   items: [
     {
-      name: "Home",
-      id: "",
+      name: 'Home',
+      id: '',
     },
     {
-      name: "Projects",
-      id: "projects",
+      name: 'Projects',
+      id: 'projects',
     },
     {
-      name: "Other Projects",
-      id: "projects/other",
+      name: 'Other Projects',
+      id: 'projects/other',
     },
     {
-      name: "Blog",
-      id: "blog",
+      name: 'Blog',
+      id: 'blog',
     },
     {
-      name: "Snippets",
-      id: "snippets",
+      name: 'Snippets',
+      id: 'snippets',
     },
     {
-      name: "About",
-      id: "about",
+      name: 'About',
+      id: 'about',
     },
   ],
 };
 
 const blogPosts: CommandCollection = {
-  heading: "Blog Posts",
-  pathPrefix: "blog",
-  type: "nagivation",
+  heading: 'Blog Posts',
+  pathPrefix: 'blog',
+  type: 'nagivation',
   items: allBlogs.map((blogPost) => ({
     name: blogPost.title,
     id: blogPost.id,
@@ -44,9 +44,9 @@ const blogPosts: CommandCollection = {
 };
 
 const snippets: CommandCollection = {
-  heading: "Snippets",
-  pathPrefix: "snippets",
-  type: "nagivation",
+  heading: 'Snippets',
+  pathPrefix: 'snippets',
+  type: 'nagivation',
   items: allSnippets.map((snippet) => ({
     name: snippet.title,
     id: snippet.id,
@@ -54,12 +54,12 @@ const snippets: CommandCollection = {
 };
 
 const themeCommand: CommandCollection = {
-  heading: "System",
-  type: "theme",
+  heading: 'System',
+  type: 'theme',
   items: [
     {
-      name: "Toggle Theme",
-      id: "",
+      name: 'Toggle Theme',
+      id: '',
     },
   ],
 };

@@ -1,4 +1,4 @@
-const commandTypes = ["nagivation", "theme"] as const;
+const commandTypes = ['nagivation', 'theme'] as const;
 export type CommandType = (typeof commandTypes)[number];
 
 export type CommandCollection = {

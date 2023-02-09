@@ -1,6 +1,6 @@
-import cloneDeepWith from "lodash-es/cloneDeepWith";
-import isPlainObject from "lodash-es/isPlainObject";
-import pickBy from "lodash-es/pickBy";
+import cloneDeepWith from 'lodash-es/cloneDeepWith';
+import isPlainObject from 'lodash-es/isPlainObject';
+import pickBy from 'lodash-es/pickBy';
 
 export const extendUrl = (baseUrl: string, params: Record<string, unknown>) => {
   const purgedParams = pickBy(params);

@@ -1,6 +1,6 @@
-import { UMAMI_SRC, UMAMI_WEBSITE_ID } from "lib/constants/umami";
+import { UMAMI_SRC, UMAMI_WEBSITE_ID } from '~/lib/constants/umami';
 
-const APP_NAME = "sznm.dev";
+const APP_NAME = 'sznm.dev';
 
 const DocumentMeta = () => {
   return (

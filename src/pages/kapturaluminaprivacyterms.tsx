@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Link } from "@chakra-ui/react";
+import { Box, Heading, Text, Link } from '@chakra-ui/react';
 
 const KapturaLuminaPrivacyTerms = () => {
   return (

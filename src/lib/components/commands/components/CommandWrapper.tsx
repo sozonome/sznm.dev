@@ -1,7 +1,7 @@
-import { Box } from "@chakra-ui/react";
-import { Command } from "cmdk";
+import { Box } from '@chakra-ui/react';
+import { Command } from 'cmdk';
 
-import ModalWrapper from "lib/components/shared/ModalWrapper";
+import ModalWrapper from '~/lib/components/shared/ModalWrapper';
 
 type CommandWrapperProps = {
   isOpen: boolean;
@@ -17,16 +17,16 @@ const CommandWrapper = ({ isOpen, onClose, children }: CommandWrapperProps) => {
       closeOnOverlayClick
       withCloseButton={false}
       modalContentProps={{
-        backgroundColor: "transparent",
+        backgroundColor: 'transparent',
         borderRadius: 24,
-        layerStyle: "blur-bg",
+        layerStyle: 'blur-bg',
         marginX: { base: 6, md: 0 },
       }}
       modalBodyProps={{
         padding: 0,
-        fontFamily: "heading",
-        backgroundColor: "headerAlphaBackground",
-        layerStyle: "blur-bg",
+        fontFamily: 'heading',
+        backgroundColor: 'headerAlphaBackground',
+        layerStyle: 'blur-bg',
         borderRadius: 24,
       }}
       body={

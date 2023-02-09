@@ -1,22 +1,22 @@
-import { Heading, Box, Text, Grid } from "@chakra-ui/react";
-import debounce from "lodash-es/debounce";
-import { NextSeo } from "next-seo";
-import * as React from "react";
+import { Heading, Box, Text, Grid } from '@chakra-ui/react';
+import debounce from 'lodash-es/debounce';
+import { NextSeo } from 'next-seo';
+import * as React from 'react';
 
-import BlogPostCard from "lib/components/blog/BlogPostCard";
-import BlogPostSearch from "lib/components/blog/BlogPostSearch";
-import MotionGrid from "lib/components/motion/MotionGrid";
+import BlogPostCard from '~/lib/components/blog/BlogPostCard';
+import BlogPostSearch from '~/lib/components/blog/BlogPostSearch';
+import MotionGrid from '~/lib/components/motion/MotionGrid';
 import {
   childAnimationProps,
   staggerAnimationProps,
-} from "lib/constants/animation";
-import { baseUrl } from "lib/constants/baseUrl";
-import { sznmOgImage } from "lib/utils/sznmOgImage";
+} from '~/lib/constants/animation';
+import { baseUrl } from '~/lib/constants/baseUrl';
+import { sznmOgImage } from '~/lib/utils/sznmOgImage';
 
-import type { BlogPostListProps } from "./types";
+import type { BlogPostListProps } from './types';
 
 const BlogPostList = ({ allPostsData }: BlogPostListProps) => {
-  const [keyword, setKeyword] = React.useState<string>("");
+  const [keyword, setKeyword] = React.useState<string>('');
 
   const filteredPosts = allPostsData.filter((post) =>
     post.title.toLowerCase().includes(keyword.toLowerCase())
@@ -36,14 +36,14 @@ const BlogPostList = ({ allPostsData }: BlogPostListProps) => {
         title="Blog Posts"
         canonical={`${baseUrl}/blog`}
         openGraph={{
-          title: "Blog Posts | sozonome",
+          title: 'Blog Posts | sozonome',
           images: [
             {
               url: sznmOgImage({
-                heading: "Blog Posts | sozonome",
-                text: "https://sznm.dev",
+                heading: 'Blog Posts | sozonome',
+                text: 'https://sznm.dev',
               }),
-              alt: "Blog Posts | sozonome og-image",
+              alt: 'Blog Posts | sozonome og-image',
             },
           ],
         }}
@@ -61,7 +61,7 @@ const BlogPostList = ({ allPostsData }: BlogPostListProps) => {
       <MotionGrid
         gap={16}
         marginY={12}
-        gridTemplateColumns={{ md: "repeat(2, 1fr)" }}
+        gridTemplateColumns={{ md: 'repeat(2, 1fr)' }}
         {...staggerAnimationProps}
       >
         {!filteredPosts.length && <Text>No posts found.</Text>}

@@ -1,7 +1,7 @@
-import { Flex, Text } from "@chakra-ui/react";
-import { Command } from "cmdk";
+import { Flex, Text } from '@chakra-ui/react';
+import { Command } from 'cmdk';
 
-import type { CommandEntry } from "lib/components/commands/types";
+import type { CommandEntry } from '~/lib/components/commands/types';
 
 type CommandItemProps = {
   data: CommandEntry;
@@ -23,16 +23,16 @@ const CommandItem = ({ data, onSelect }: CommandItemProps) => {
       userSelect="none"
       transition="all 150ms ease"
       sx={{
-        contentVisibility: "auto",
+        contentVisibility: 'auto',
         '&[aria-selected="true"]': {
-          color: "white",
-          backgroundColor: "selectedCommandItemBackground",
+          color: 'white',
+          backgroundColor: 'selectedCommandItemBackground',
         },
         '&[aria-disabled="true"]': {
-          color: "gray",
-          cursor: "not-allowed",
+          color: 'gray',
+          cursor: 'not-allowed',
         },
-        "&:first-of-type": {
+        '&:first-of-type': {
           marginTop: 2,
         },
       }}

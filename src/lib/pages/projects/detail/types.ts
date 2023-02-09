@@ -1,4 +1,4 @@
-import type { Project } from "contentlayer/generated";
+import type { Project } from 'contentlayer/generated';
 
 export type ProjectDetailParams = {
   id: string;

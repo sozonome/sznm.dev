@@ -1,13 +1,13 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
-import type { Blog } from "contentlayer/generated";
-import Link from "next/link";
-import * as React from "react";
+import { Box, Heading, Text } from '@chakra-ui/react';
+import Link from 'next/link';
+import * as React from 'react';
 
-import type { MotionBoxProps } from "lib/components/motion/MotionBox";
-import MotionBox from "lib/components/motion/MotionBox";
-import { EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
-import { dateFormatLong } from "lib/utils/dateFormat";
-import { trackEvent } from "lib/utils/trackEvent";
+import type { Blog } from 'contentlayer/generated';
+import type { MotionBoxProps } from '~/lib/components/motion/MotionBox';
+import MotionBox from '~/lib/components/motion/MotionBox';
+import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
+import { dateFormatLong } from '~/lib/utils/dateFormat';
+import { trackEvent } from '~/lib/utils/trackEvent';
 
 type BlogPostPreviewProps = {
   postData: Blog;
@@ -28,7 +28,7 @@ const BlogPostPreview = ({ postData, wrapperProps }: BlogPostPreviewProps) => {
         width="100%"
         transition="0.2s ease-out"
         _hover={{
-          transform: "scale(1.03, 1.03)",
+          transform: 'scale(1.03, 1.03)',
         }}
       >
         <Box
