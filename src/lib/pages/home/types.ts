@@ -1,4 +1,4 @@
-import type { Blog, Project } from "contentlayer/generated";
+import type { Blog, Project } from 'contentlayer/generated';
 
 export type HomeProps = {
   highlightedProjects: Array<Project>;

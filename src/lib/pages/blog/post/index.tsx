@@ -1,20 +1,20 @@
-import { AspectRatio, Box, Image, useColorModeValue } from "@chakra-ui/react";
-import type { GiscusProps } from "@giscus/react";
-import Giscus from "@giscus/react";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
+import { AspectRatio, Box, Image, useColorModeValue } from '@chakra-ui/react';
+import type { GiscusProps } from '@giscus/react';
+import Giscus from '@giscus/react';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 
-import BlogPostHead from "lib/components/blog/post/Head";
-import BlogPostMeta from "lib/components/blog/post/Meta";
-import { renderers } from "lib/components/blog/renderers";
-import ShareButtons from "lib/components/shared/ShareButtons";
-import { unsplashImg } from "lib/utils/unsplashImg";
+import BlogPostHead from '~/lib/components/blog/post/Head';
+import BlogPostMeta from '~/lib/components/blog/post/Meta';
+import { renderers } from '~/lib/components/blog/renderers';
+import ShareButtons from '~/lib/components/shared/ShareButtons';
+import { unsplashImg } from '~/lib/utils/unsplashImg';
 
-import styles from "./BlogPost.module.scss";
-import type { BlogPostProps } from "./types";
+import styles from './BlogPost.module.scss';
+import type { BlogPostProps } from './types';
 
 const BlogPost = ({ postData }: BlogPostProps) => {
-  const giscusTheme: GiscusProps["theme"] = useColorModeValue("light", "dark");
+  const giscusTheme: GiscusProps['theme'] = useColorModeValue('light', 'dark');
 
   return (
     <Box as="article">
@@ -62,6 +62,6 @@ const BlogPost = ({ postData }: BlogPostProps) => {
   );
 };
 
-export type { BlogPostProps } from "./types";
+export type { BlogPostProps } from './types';
 
 export default BlogPost;

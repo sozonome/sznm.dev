@@ -1,6 +1,6 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
-import type { CommandMenuStore } from "./types";
+import type { CommandMenuStore } from './types';
 
 export const useCmdMenu = create<CommandMenuStore>((set) => ({
   isOpen: false,

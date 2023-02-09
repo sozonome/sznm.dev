@@ -1,9 +1,9 @@
-import { Box, Grid, Heading, Link, Text } from "@chakra-ui/react";
-import type { Blog } from "contentlayer/generated";
-import Balancer from "react-wrap-balancer";
+import { Box, Grid, Heading, Link, Text } from '@chakra-ui/react';
+import Balancer from 'react-wrap-balancer';
 
-import ShareButtons from "lib/components/shared/ShareButtons";
-import { dateFormatLong } from "lib/utils/dateFormat";
+import type { Blog } from 'contentlayer/generated';
+import ShareButtons from '~/lib/components/shared/ShareButtons';
+import { dateFormatLong } from '~/lib/utils/dateFormat';
 
 type BlogPostHeadProps = {
   postData: Blog;
@@ -12,7 +12,7 @@ type BlogPostHeadProps = {
 const BlogPostHead = ({ postData }: BlogPostHeadProps) => {
   return (
     <Grid gap={2} marginBottom={12}>
-      <Box flexBasis={["80%"]}>
+      <Box flexBasis={['80%']}>
         <Heading as="h1" size="2xl" marginBottom={8}>
           <Balancer>{postData.title}</Balancer>
         </Heading>

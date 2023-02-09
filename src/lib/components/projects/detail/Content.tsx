@@ -5,19 +5,19 @@ import {
   Text,
   useColorMode,
   useColorModeValue,
-} from "@chakra-ui/react";
-import Image from "next/image";
-import Balancer from "react-wrap-balancer";
+} from '@chakra-ui/react';
+import Image from 'next/image';
+import Balancer from 'react-wrap-balancer';
 
-import type { ProjectDetailWrapperProps } from "./types";
+import type { ProjectDetailWrapperProps } from './types';
 
-type ProjectDetailContentProps = Pick<ProjectDetailWrapperProps, "projectData">;
+type ProjectDetailContentProps = Pick<ProjectDetailWrapperProps, 'projectData'>;
 
 const ProjectDetailContent = ({
   projectData: { title, icon, description, stacks },
 }: ProjectDetailContentProps) => {
   const { colorMode } = useColorMode();
-  const backgroundColor = useColorModeValue("", "gray.700");
+  const backgroundColor = useColorModeValue('', 'gray.700');
 
   return (
     <Box
@@ -29,8 +29,8 @@ const ProjectDetailContent = ({
       borderColor="cardBorder"
       transition="0.2s ease-out"
       _hover={{
-        shadow: "lg",
-        borderColor: "cardHoverBorder",
+        shadow: 'lg',
+        borderColor: 'cardHoverBorder',
         borderWidth: 2,
         backgroundColor,
       }}
@@ -50,7 +50,7 @@ const ProjectDetailContent = ({
                 <Box
                   marginRight={3}
                   key={stack}
-                  style={{ filter: "drop-shadow(0 0 12px rgb(98, 114, 164))" }}
+                  style={{ filter: 'drop-shadow(0 0 12px rgb(98, 114, 164))' }}
                 >
                   <Image
                     width={25}

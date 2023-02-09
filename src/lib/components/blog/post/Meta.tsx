@@ -1,8 +1,8 @@
-import type { Blog } from "contentlayer/generated";
-import { ArticleJsonLd, NextSeo } from "next-seo";
+import { ArticleJsonLd, NextSeo } from 'next-seo';
 
-import { baseUrl } from "lib/constants/baseUrl";
-import { sznmOgImage } from "lib/utils/sznmOgImage";
+import type { Blog } from 'contentlayer/generated';
+import { baseUrl } from '~/lib/constants/baseUrl';
+import { sznmOgImage } from '~/lib/utils/sznmOgImage';
 
 type BlogPostMetaProps = {
   postData: Blog;
@@ -11,7 +11,7 @@ type BlogPostMetaProps = {
 const BlogPostMeta = ({ postData }: BlogPostMetaProps) => {
   const ogImage = sznmOgImage({
     heading: postData.title,
-    text: "Blog Post | https://sznm.dev",
+    text: 'Blog Post | https://sznm.dev',
   });
   const pageUrl = `${baseUrl}/blog/${postData.id}`;
 

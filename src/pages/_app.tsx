@@ -1,12 +1,12 @@
-import { Analytics } from "@vercel/analytics/react";
-import { DefaultSeo } from "next-seo";
-import type { AppProps, NextWebVitalsMetric } from "next/app";
-import NextNProgress from "nextjs-progressbar";
+import { Analytics } from '@vercel/analytics/react';
+import type { AppProps, NextWebVitalsMetric } from 'next/app';
+import { DefaultSeo } from 'next-seo';
+import NextNProgress from 'nextjs-progressbar';
 
-import { Chakra } from "lib/components/Chakra";
-import { defaultSEOConfig } from "lib/config/next-seo";
-import Layout from "lib/layout";
-import "lib/styles/global.css";
+import { Chakra } from '~/lib/components/Chakra';
+import { defaultSEOConfig } from '~/lib/config/next-seo';
+import Layout from '~/lib/layout';
+import '~/lib/styles/global.css';
 
 export const reportWebVitals = (metric: NextWebVitalsMetric) => {
   const url = process.env.NEXT_PUBLIC_AXIOM_INGEST_ENDPOINT;
@@ -22,7 +22,7 @@ export const reportWebVitals = (metric: NextWebVitalsMetric) => {
   if (navigator.sendBeacon) {
     navigator.sendBeacon(url, body);
   } else {
-    fetch(url, { body, method: "POST", keepalive: true });
+    fetch(url, { body, method: 'POST', keepalive: true });
   }
 };
 

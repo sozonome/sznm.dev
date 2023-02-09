@@ -1,17 +1,17 @@
-import { Flex, Grid, Heading, Text, useColorModeValue } from "@chakra-ui/react";
-import type { Snippet } from "contentlayer/generated";
-import Link from "next/link";
-import * as React from "react";
+import { Flex, Grid, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import Link from 'next/link';
+import * as React from 'react';
 
-import { EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
-import { trackEvent } from "lib/utils/trackEvent";
+import type { Snippet } from 'contentlayer/generated';
+import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
+import { trackEvent } from '~/lib/utils/trackEvent';
 
 type SnippetCardProps = {
   data: Snippet;
 };
 
 const SnippetCard = ({ data }: SnippetCardProps) => {
-  const backgroundColor = useColorModeValue("", "gray.700");
+  const backgroundColor = useColorModeValue('', 'gray.700');
 
   const handleClickSnippet = React.useCallback(() => {
     trackEvent({
@@ -36,8 +36,8 @@ const SnippetCard = ({ data }: SnippetCardProps) => {
       transition="0.2s ease-out"
       role="group"
       _hover={{
-        shadow: "lg",
-        borderColor: "cardHoverBorder",
+        shadow: 'lg',
+        borderColor: 'cardHoverBorder',
         borderWidth: 2,
         backgroundColor,
       }}
@@ -56,7 +56,7 @@ const SnippetCard = ({ data }: SnippetCardProps) => {
             borderRadius={12}
             transition="0.2s ease-out"
             _groupHover={{
-              color: "teal.400",
+              color: 'teal.400',
             }}
             fontSize="xs"
             color="teal"

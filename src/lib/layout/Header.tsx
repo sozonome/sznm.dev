@@ -1,15 +1,15 @@
-import { Box, Flex, Heading, IconButton, Spacer } from "@chakra-ui/react";
-import Link from "next/link";
-import * as React from "react";
-import { RiCommandFill } from "react-icons/ri";
+import { Box, Flex, Heading, IconButton, Spacer } from '@chakra-ui/react';
+import Link from 'next/link';
+import * as React from 'react';
+import { RiCommandFill } from 'react-icons/ri';
 
-import CommandMenu from "lib/components/commands";
-import { EVENT_TYPE_CTA } from "lib/constants/tracking";
-import { useCmdMenu } from "lib/store/cmd";
-import { trackEvent } from "lib/utils/trackEvent";
+import CommandMenu from '~/lib/components/commands';
+import { EVENT_TYPE_CTA } from '~/lib/constants/tracking';
+import { useCmdMenu } from '~/lib/store/cmd';
+import { trackEvent } from '~/lib/utils/trackEvent';
 
-import Navigation from "./Navigation";
-import ThemeToggle from "./ThemeToggle";
+import Navigation from './Navigation';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const { openCmdMenu } = useCmdMenu((state) => ({
@@ -18,7 +18,7 @@ const Header = () => {
 
   const handleOpenCommandCenter = React.useCallback(() => {
     trackEvent({
-      eventName: "open cmd center",
+      eventName: 'open cmd center',
       eventData: { type: EVENT_TYPE_CTA },
     });
     openCmdMenu();
@@ -37,7 +37,7 @@ const Header = () => {
       >
         <Flex layerStyle="layoutBlock" alignItems="center">
           <Link href="/">
-            <Heading size="md" fontWeight="medium" fontSize={["md", "xl"]}>
+            <Heading size="md" fontWeight="medium" fontSize={['md', 'xl']}>
               sznm.dev
             </Heading>
           </Link>
@@ -45,7 +45,7 @@ const Header = () => {
           <Spacer />
 
           <Flex alignItems="center" gap={4}>
-            <Flex display={["none", "flex"]}>
+            <Flex display={['none', 'flex']}>
               <Navigation />
             </Flex>
 

@@ -1,19 +1,19 @@
-import { Box, Spacer, useColorModeValue } from "@chakra-ui/react";
-import type { GiscusProps } from "@giscus/react";
-import Giscus from "@giscus/react";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
+import { Box, Spacer, useColorModeValue } from '@chakra-ui/react';
+import type { GiscusProps } from '@giscus/react';
+import Giscus from '@giscus/react';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 
-import { renderers } from "lib/components/blog/renderers";
-import ShareButtons from "lib/components/shared/ShareButtons";
-import SnippetDetailHead from "lib/components/snippets/detail/Head";
-import SnippetDetailMeta from "lib/components/snippets/detail/Meta";
+import { renderers } from '~/lib/components/blog/renderers';
+import ShareButtons from '~/lib/components/shared/ShareButtons';
+import SnippetDetailHead from '~/lib/components/snippets/detail/Head';
+import SnippetDetailMeta from '~/lib/components/snippets/detail/Meta';
 
-import styles from "./Snippet.module.scss";
-import type { SnippetDetailProps } from "./types";
+import styles from './Snippet.module.scss';
+import type { SnippetDetailProps } from './types';
 
 const SnippetDetail = ({ data }: SnippetDetailProps) => {
-  const giscusTheme: GiscusProps["theme"] = useColorModeValue("light", "dark");
+  const giscusTheme: GiscusProps['theme'] = useColorModeValue('light', 'dark');
 
   return (
     <Box as="article">

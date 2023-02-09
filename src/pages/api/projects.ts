@@ -1,8 +1,8 @@
-import { defaultHeader } from "lib/constants/api/header";
-import { sznmAppsProjects } from "lib/constants/project";
+import { defaultHeader } from '~/lib/constants/api/header';
+import { sznmAppsProjects } from '~/lib/constants/project';
 
 export const config = {
-  runtime: "edge",
+  runtime: 'edge',
 };
 
 const projects = async () => {
@@ -19,8 +19,8 @@ const projects = async () => {
     status: 200,
     headers: {
       ...defaultHeader,
-      "access-control-allow-origin": "*",
-      "cache-control": "s-maxage=600, stale-while-revalidate=2678400",
+      'access-control-allow-origin': '*',
+      'cache-control': 's-maxage=600, stale-while-revalidate=2678400',
     },
   });
 };

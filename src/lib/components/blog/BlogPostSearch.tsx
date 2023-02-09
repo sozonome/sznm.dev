@@ -1,5 +1,5 @@
-import { InputGroup, Input, InputRightElement } from "@chakra-ui/react";
-import { FaSearch } from "react-icons/fa";
+import { InputGroup, Input, InputRightElement } from '@chakra-ui/react';
+import { FaSearch } from 'react-icons/fa';
 
 type BlogPostSearchProps = {
   keyword: string;

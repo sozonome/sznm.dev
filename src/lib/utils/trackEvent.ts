@@ -19,7 +19,7 @@ export const trackEvent = ({
   url,
   websiteId,
 }: TrackEventArgs) => {
-  if (window.umami && typeof window.umami.trackEvent === "function") {
+  if (window.umami && typeof window.umami.trackEvent === 'function') {
     window.umami.trackEvent(
       eventName,
       eventData as unknown as string,

@@ -1,10 +1,10 @@
-import { NextSeo } from "next-seo";
+import { NextSeo } from 'next-seo';
 
-import { baseUrl } from "lib/constants/baseUrl";
+import { baseUrl } from '~/lib/constants/baseUrl';
 
-import Content from "./Content";
-import HeadSection from "./HeadSection";
-import Links from "./Links";
+import Content from './Content';
+import HeadSection from './HeadSection';
+import Links from './Links';
 
 const About = () => {
   return (
@@ -13,8 +13,8 @@ const About = () => {
         title="About"
         canonical={`${baseUrl}/about`}
         openGraph={{
-          title: "About | sozonome",
-          description: "About sznm.dev page",
+          title: 'About | sozonome',
+          description: 'About sznm.dev page',
         }}
       />
 

@@ -1,6 +1,7 @@
-import { Grid, Heading, Text } from "@chakra-ui/react";
-import type { Snippet } from "contentlayer/generated";
-import Balancer from "react-wrap-balancer";
+import { Grid, Heading, Text } from '@chakra-ui/react';
+import Balancer from 'react-wrap-balancer';
+
+import type { Snippet } from 'contentlayer/generated';
 
 type SnippetDetailHeadProps = {
   data: Snippet;

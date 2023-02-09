@@ -1,11 +1,11 @@
-import { Divider, Grid, Link, Stack, Text } from "@chakra-ui/react";
+import { Divider, Grid, Link, Stack, Text } from '@chakra-ui/react';
 
-import SpotifyListening from "lib/components/common/SpotifyListening";
-import { EVENT_TYPE_LINK } from "lib/constants/tracking";
-import { trackEvent } from "lib/utils/trackEvent";
+import SpotifyListening from '~/lib/components/common/SpotifyListening';
+import { EVENT_TYPE_LINK } from '~/lib/constants/tracking';
+import { trackEvent } from '~/lib/utils/trackEvent';
 
-import { links } from "./constants";
-import FooterLink from "./FooterLink";
+import { links } from './constants';
+import FooterLink from './FooterLink';
 
 const Footer = () => {
   const handleClickFooterLink = (label: string) => () => {
@@ -21,9 +21,9 @@ const Footer = () => {
       <SpotifyListening />
 
       <Grid
-        display={{ base: "grid", md: "flex" }}
+        display={{ base: 'grid', md: 'flex' }}
         templateColumns={{
-          base: "repeat(2, 1fr)",
+          base: 'repeat(2, 1fr)',
           md: `repeat(${links.length <= 4 ? links.length : 4}, 1fr)`,
         }}
         gap={{ base: 4, md: 6 }}
@@ -36,8 +36,8 @@ const Footer = () => {
           />
         ))}
       </Grid>
-      <Text fontSize={["xs", "sm"]}>
-        &copy; 2020 - {new Date().getFullYear()}{" "}
+      <Text fontSize={['xs', 'sm']}>
+        &copy; 2020 - {new Date().getFullYear()}{' '}
         <Link
           href="https://agustinusnathaniel.com"
           target="_blank"

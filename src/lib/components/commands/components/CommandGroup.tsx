@@ -1,7 +1,7 @@
-import { Box, Heading } from "@chakra-ui/react";
-import { Command } from "cmdk";
+import { Box, Heading } from '@chakra-ui/react';
+import { Command } from 'cmdk';
 
-import type { CommandCollection } from "lib/components/commands/types";
+import type { CommandCollection } from '~/lib/components/commands/types';
 
 type CommandGroupProps = {
   children: React.ReactNode;

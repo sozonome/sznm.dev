@@ -1,4 +1,4 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading } from '@chakra-ui/react';
 
 const HeadSection = () => {
   return (

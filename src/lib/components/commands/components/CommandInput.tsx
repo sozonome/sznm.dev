@@ -1,5 +1,5 @@
-import { Box } from "@chakra-ui/react";
-import { Command } from "cmdk";
+import { Box } from '@chakra-ui/react';
+import { Command } from 'cmdk';
 
 const CommandInput = () => {
   return (

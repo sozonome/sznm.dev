@@ -1,8 +1,8 @@
-import type { Snippet } from "contentlayer/generated";
-import { NextSeo } from "next-seo";
+import { NextSeo } from 'next-seo';
 
-import { baseUrl } from "lib/constants/baseUrl";
-import { sznmOgImage } from "lib/utils/sznmOgImage";
+import type { Snippet } from 'contentlayer/generated';
+import { baseUrl } from '~/lib/constants/baseUrl';
+import { sznmOgImage } from '~/lib/utils/sznmOgImage';
 
 type SnippetDetailMetaProps = {
   data: Snippet;
@@ -11,7 +11,7 @@ type SnippetDetailMetaProps = {
 const SnippetDetailMeta = ({ data }: SnippetDetailMetaProps) => {
   const ogImage = sznmOgImage({
     heading: data.title,
-    text: "Snippets | https://sznm.dev",
+    text: 'Snippets | https://sznm.dev',
   });
   const pageUrl = `${baseUrl}/snippets/${data.id}`;
 

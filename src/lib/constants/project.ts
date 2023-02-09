@@ -1,9 +1,10 @@
-import { allProjects } from "contentlayer/generated";
-import { compareDesc } from "date-fns";
+import { compareDesc } from 'date-fns';
+
+import { allProjects } from 'contentlayer/generated';
 
 export const sortedProjects = allProjects
   .filter((project) => project.published !== false)
-  .sort((a, b) => compareDesc(new Date(a.date ?? ""), new Date(b.date ?? "")));
+  .sort((a, b) => compareDesc(new Date(a.date ?? ''), new Date(b.date ?? '')));
 
 export const featuredProjects = sortedProjects.filter(
   (project) => project.featured

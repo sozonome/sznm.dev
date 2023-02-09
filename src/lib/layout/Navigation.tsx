@@ -1,11 +1,11 @@
-import { IconButton } from "@chakra-ui/react";
-import Link from "next/link";
-import React from "react";
-import type { IconType } from "react-icons";
-import { FaCode, FaFeatherAlt, FaHome, FaRocket, FaUser } from "react-icons/fa";
+import { IconButton } from '@chakra-ui/react';
+import Link from 'next/link';
+import React from 'react';
+import type { IconType } from 'react-icons';
+import { FaCode, FaFeatherAlt, FaHome, FaRocket, FaUser } from 'react-icons/fa';
 
-import { EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
-import { trackEvent } from "lib/utils/trackEvent";
+import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
+import { trackEvent } from '~/lib/utils/trackEvent';
 
 type NavItemProps = {
   href: string;
@@ -28,39 +28,39 @@ const NavItem = ({ href, label, icon }: NavItemProps) => {
       aria-label={label}
       variant="ghost"
       flexBasis="25%"
-      fontSize={["xl", "md"]}
+      fontSize={['xl', 'md']}
       padding={0}
       onClick={handleClickNavigation}
     >
-      {icon({ style: { cursor: "pointer" } })}
+      {icon({ style: { cursor: 'pointer' } })}
     </IconButton>
   );
 };
 
 const navigations: NavItemProps[] = [
   {
-    href: "/",
-    label: "Home",
+    href: '/',
+    label: 'Home',
     icon: FaHome,
   },
   {
-    href: "/projects",
-    label: "Projects",
+    href: '/projects',
+    label: 'Projects',
     icon: FaRocket,
   },
   {
-    href: "/blog",
-    label: "Blog",
+    href: '/blog',
+    label: 'Blog',
     icon: FaFeatherAlt,
   },
   {
-    href: "/snippets",
-    label: "Snippets",
+    href: '/snippets',
+    label: 'Snippets',
     icon: FaCode,
   },
   {
-    href: "/about",
-    label: "About",
+    href: '/about',
+    label: 'About',
     icon: FaUser,
   },
 ];

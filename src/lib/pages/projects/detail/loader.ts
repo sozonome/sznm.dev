@@ -1,8 +1,8 @@
-import type { GetStaticProps } from "next";
+import type { GetStaticProps } from 'next';
 
-import { projectIdParams, sortedProjects } from "lib/constants/project";
+import { projectIdParams, sortedProjects } from '~/lib/constants/project';
 
-import type { ProjectDetailParams, ProjectDetailProps } from "./types";
+import type { ProjectDetailParams, ProjectDetailProps } from './types';
 
 export const getStaticPaths = async () => {
   const paths = projectIdParams;

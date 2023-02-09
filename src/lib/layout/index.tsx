@@ -1,12 +1,12 @@
-import { Box, Stack } from "@chakra-ui/react";
-import dynamic from "next/dynamic";
-import type { ReactNode } from "react";
+import { Box, Stack } from '@chakra-ui/react';
+import dynamic from 'next/dynamic';
+import type { ReactNode } from 'react';
 
-import { useCommandCenter } from "lib/components/commands/hook";
+import { useCommandCenter } from '~/lib/components/commands/hook';
 
-const Header = dynamic(() => import("./Header"));
-const Footer = dynamic(() => import("./Footer"));
-const TabBar = dynamic(() => import("./TabBar"));
+const Header = dynamic(() => import('./Header'));
+const Footer = dynamic(() => import('./Footer'));
+const TabBar = dynamic(() => import('./TabBar'));
 
 type LayoutProps = {
   children: ReactNode;

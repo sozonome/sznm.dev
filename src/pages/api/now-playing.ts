@@ -1,14 +1,14 @@
-import type { NextRequest } from "next/server";
+import type { NextRequest } from 'next/server';
 
-import { defaultHeader } from "lib/constants/api/header";
-import { getNowPlaying } from "lib/services/spotify/user/now-playing";
+import { defaultHeader } from '~/lib/constants/api/header';
+import { getNowPlaying } from '~/lib/services/spotify/user/now-playing';
 
 export const config = {
-  runtime: "edge",
+  runtime: 'edge',
 };
 
 const nowPlaying = async (req: NextRequest) => {
-  if (req.method !== "GET") {
+  if (req.method !== 'GET') {
     return new Response(undefined, { status: 400 });
   }
 
@@ -26,7 +26,7 @@ const nowPlaying = async (req: NextRequest) => {
       status: 200,
       headers: {
         ...defaultHeader,
-        "cache-control": "s-maxage=1, stale-while-revalidate=10",
+        'cache-control': 's-maxage=1, stale-while-revalidate=10',
       },
     });
   } catch {

@@ -1,13 +1,13 @@
-import type { SystemStyleObjectRecord } from "@chakra-ui/react";
+import type { SystemStyleObjectRecord } from '@chakra-ui/react';
 
 export const layerStyles: SystemStyleObjectRecord = {
   layoutBlock: {
-    marginX: "auto",
-    width: "full",
+    marginX: 'auto',
+    width: 'full',
     maxWidth: {
-      base: "100vw",
-      md: "85vw",
-      lg: "800px",
+      base: '100vw',
+      md: '85vw',
+      lg: '800px',
     },
     paddingY: 4,
     paddingX: {
@@ -17,11 +17,11 @@ export const layerStyles: SystemStyleObjectRecord = {
     },
   },
   glow: {
-    filter: "drop-shadow(0 0 12px #454a58)",
+    filter: 'drop-shadow(0 0 12px #454a58)',
   },
-  "blur-bg": {
+  'blur-bg': {
     // https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#browser_compatibility
-    backdropFilter: "blur(6px)",
-    WebkitBackdropFilter: "blur(6px)",
+    backdropFilter: 'blur(6px)',
+    WebkitBackdropFilter: 'blur(6px)',
   },
 };

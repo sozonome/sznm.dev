@@ -1,5 +1,5 @@
-import { Text } from "@chakra-ui/react";
-import { Command } from "cmdk";
+import { Text } from '@chakra-ui/react';
+import { Command } from 'cmdk';
 
 const CommandEmpty = () => {
   return (

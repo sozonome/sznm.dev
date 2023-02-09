@@ -5,12 +5,12 @@ import {
   createStandaloneToast,
   Flex,
   Link as ChakraLink,
-} from "@chakra-ui/react";
-import type { Options } from "react-markdown/lib/ast-to-react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
+} from '@chakra-ui/react';
+import type { Options } from 'react-markdown/lib/ast-to-react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
-import HeadingLink from "./HeadingLink";
+import HeadingLink from './HeadingLink';
 
 const { toast } = createStandaloneToast();
 
@@ -21,20 +21,20 @@ const handleClickCopy = (childrenValue: string) => () => {
   if (!toast.isActive(toastId)) {
     toast({
       id: toastId,
-      status: "success",
-      position: "top-right",
-      title: "Copied",
+      status: 'success',
+      position: 'top-right',
+      title: 'Copied',
       isClosable: true,
     });
   }
 };
 
-export const renderers: Options["components"] = {
+export const renderers: Options['components'] = {
   code: ({ inline, className, children, ...props }) => {
     /** https://github.com/remarkjs/react-markdown#use-custom-components-syntax-highlight */
-    const match = /language-(\w+)/.exec(className || "");
+    const match = /language-(\w+)/.exec(className || '');
     const language = match?.[1];
-    const childrenValue = String(children).replace(/\n$/, "");
+    const childrenValue = String(children).replace(/\n$/, '');
 
     return !inline && match ? (
       <Box width="100%">

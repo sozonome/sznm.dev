@@ -1,17 +1,17 @@
-import { HStack, IconButton, useToast } from "@chakra-ui/react";
-import { useRouter } from "next/router";
-import * as React from "react";
+import { HStack, IconButton, useToast } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
+import * as React from 'react';
 
-import { baseUrl } from "lib/constants/baseUrl";
-import { extendUrl } from "lib/utils/extendUrl";
+import { baseUrl } from '~/lib/constants/baseUrl';
+import { extendUrl } from '~/lib/utils/extendUrl';
 
-import { socialMap } from "./constants";
+import { socialMap } from './constants';
 
 type ShareButtonsProps = {
   title?: string;
 };
 
-const toastId = "copied-link";
+const toastId = 'copied-link';
 
 const ShareButtons = ({ title }: ShareButtonsProps) => {
   const router = useRouter();
@@ -35,9 +35,9 @@ const ShareButtons = ({ title }: ShareButtonsProps) => {
           if (!toast.isActive(toastId)) {
             toast({
               id: toastId,
-              title: "Link Copied!",
-              position: "top-right",
-              status: "success",
+              title: 'Link Copied!',
+              position: 'top-right',
+              status: 'success',
               isClosable: true,
               description: shareLink,
             });

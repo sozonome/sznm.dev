@@ -1,21 +1,21 @@
-import { Button, Grid, Tooltip } from "@chakra-ui/react";
-import Link from "next/link";
-import * as React from "react";
+import { Button, Grid, Tooltip } from '@chakra-ui/react';
+import Link from 'next/link';
+import * as React from 'react';
 
-import { EVENT_TYPE_LINK, EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
-import { trackEvent } from "lib/utils/trackEvent";
+import { EVENT_TYPE_LINK, EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
+import { trackEvent } from '~/lib/utils/trackEvent';
 
 const ProjectListBottomNav = () => {
   const handleClickOtherProjects = React.useCallback(() => {
     trackEvent({
-      eventName: "Featured Projects: Click Other Projects",
+      eventName: 'Featured Projects: Click Other Projects',
       eventData: { type: EVENT_TYPE_NAVIGATE },
     });
   }, []);
 
   const handleClickPortfolioPage = React.useCallback(() => {
     trackEvent({
-      eventName: "Featured Projects: Click See More detailed Porfolio",
+      eventName: 'Featured Projects: Click See More detailed Porfolio',
       eventData: { type: EVENT_TYPE_LINK },
     });
   }, []);
@@ -26,7 +26,7 @@ const ProjectListBottomNav = () => {
         base: 4,
         md: 6,
       }}
-      templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+      templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
       fontFamily="heading"
     >
       <Button

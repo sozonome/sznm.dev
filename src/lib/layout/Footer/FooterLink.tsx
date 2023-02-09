@@ -1,6 +1,6 @@
-import { Link } from "@chakra-ui/react";
+import { Link } from '@chakra-ui/react';
 
-import type { FooterLinkProps } from "./types";
+import type { FooterLinkProps } from './types';
 
 const FooterLink = ({ label, url, onClick }: FooterLinkProps) => {
   return (

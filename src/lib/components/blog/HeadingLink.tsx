@@ -1,30 +1,30 @@
-import { Heading, Link } from "@chakra-ui/react";
-import { useRouter } from "next/router";
+import { Heading, Link } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 
-import { convertToId, convertToIdLink } from "lib/utils/convertToIdLink";
+import { convertToId, convertToIdLink } from '~/lib/utils/convertToIdLink';
 
 type HeadingLinkProps = {
   children: string;
-  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 };
 
 const HeadingLink = ({ children, as }: HeadingLinkProps) => {
   const router = useRouter();
-  const level = Number((as ?? "h3").split("h")[1]);
+  const level = Number((as ?? 'h3').split('h')[1]);
 
   const size: Record<number, string> = {
-    1: "xl",
-    2: "lg",
-    3: "md",
-    4: "sm",
-    5: "sm",
-    6: "sm",
+    1: 'xl',
+    2: 'lg',
+    3: 'md',
+    4: 'sm',
+    5: 'sm',
+    6: 'sm',
   };
 
   return (
     <Link
       href={convertToIdLink(router.asPath, String(children))}
-      style={{ textDecoration: "none", marginTop: 16 }}
+      style={{ textDecoration: 'none', marginTop: 16 }}
     >
       <Heading
         as={as}
@@ -35,8 +35,8 @@ const HeadingLink = ({ children, as }: HeadingLinkProps) => {
         marginTop={6}
         scrollMarginTop={24}
         _hover={{
-          textDecoration: "underline",
-          cursor: "pointer",
+          textDecoration: 'underline',
+          cursor: 'pointer',
         }}
       >
         {children}

@@ -1,12 +1,12 @@
-import { Box, Button, Grid, Heading, Stack } from "@chakra-ui/react";
-import type { Blog } from "contentlayer/generated";
-import Link from "next/link";
-import * as React from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { Box, Button, Grid, Heading, Stack } from '@chakra-ui/react';
+import Link from 'next/link';
+import * as React from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 
-import BlogPostPreview from "lib/components/blog/BlogPostPreview";
-import { EVENT_TYPE_NAVIGATE } from "lib/constants/tracking";
-import { trackEvent } from "lib/utils/trackEvent";
+import type { Blog } from 'contentlayer/generated';
+import BlogPostPreview from '~/lib/components/blog/BlogPostPreview';
+import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
+import { trackEvent } from '~/lib/utils/trackEvent';
 
 export type PostsSectionProps = {
   data: Array<Blog>;
@@ -15,7 +15,7 @@ export type PostsSectionProps = {
 const PostsSection = ({ data }: PostsSectionProps) => {
   const handleClickViewAllPosts = React.useCallback(() => {
     trackEvent({
-      eventName: "Home: View All Posts",
+      eventName: 'Home: View All Posts',
       eventData: { type: EVENT_TYPE_NAVIGATE },
     });
   }, []);

@@ -1,11 +1,11 @@
-import { Link } from "@chakra-ui/react";
-import * as React from "react";
+import { Link } from '@chakra-ui/react';
+import * as React from 'react';
 
-import { EVENT_TYPE_LINK } from "lib/constants/tracking";
-import { trackEvent } from "lib/utils/trackEvent";
+import { EVENT_TYPE_LINK } from '~/lib/constants/tracking';
+import { trackEvent } from '~/lib/utils/trackEvent';
 
-import ProjectDetailContent from "./Content";
-import type { ProjectDetailWrapperProps } from "./types";
+import ProjectDetailContent from './Content';
+import type { ProjectDetailWrapperProps } from './types';
 
 const ProjectDetailWrapper = ({
   projectData,
@@ -30,7 +30,7 @@ const ProjectDetailWrapper = ({
         isExternal
         onClick={handleClickProject}
         _hover={{
-          textDecoration: "none",
+          textDecoration: 'none',
         }}
       >
         <ProjectDetailContent projectData={projectData} />

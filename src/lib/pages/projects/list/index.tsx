@@ -1,18 +1,18 @@
-import { Box, Grid, Heading } from "@chakra-ui/react";
-import { NextSeo } from "next-seo";
+import { Box, Grid, Heading } from '@chakra-ui/react';
+import { NextSeo } from 'next-seo';
 
-import MotionBox from "lib/components/motion/MotionBox";
-import MotionGrid from "lib/components/motion/MotionGrid";
-import ProjectDetailWrapper from "lib/components/projects/detail";
+import MotionBox from '~/lib/components/motion/MotionBox';
+import MotionGrid from '~/lib/components/motion/MotionGrid';
+import ProjectDetailWrapper from '~/lib/components/projects/detail';
 import {
   childAnimationProps,
   staggerAnimationProps,
-} from "lib/constants/animation";
-import { baseUrl } from "lib/constants/baseUrl";
-import { sznmOgImage } from "lib/utils/sznmOgImage";
+} from '~/lib/constants/animation';
+import { baseUrl } from '~/lib/constants/baseUrl';
+import { sznmOgImage } from '~/lib/utils/sznmOgImage';
 
-import ProjectListBottomNav from "./BottomNav";
-import type { ProjectListProps } from "./types";
+import ProjectListBottomNav from './BottomNav';
+import type { ProjectListProps } from './types';
 
 const ProjectList = ({ featuredProjects }: ProjectListProps) => {
   const highlightedProjects = featuredProjects.filter(
@@ -54,14 +54,14 @@ const ProjectList = ({ featuredProjects }: ProjectListProps) => {
         title="Projects"
         canonical={`${baseUrl}/projects`}
         openGraph={{
-          title: "Projects | sozonome",
+          title: 'Projects | sozonome',
           images: [
             {
               url: sznmOgImage({
-                heading: "Projects",
-                text: "https://sznm.dev",
+                heading: 'Projects',
+                text: 'https://sznm.dev',
               }),
-              alt: "Projects | sozonome og-image",
+              alt: 'Projects | sozonome og-image',
             },
           ],
         }}
@@ -81,7 +81,7 @@ const ProjectList = ({ featuredProjects }: ProjectListProps) => {
         <MotionGrid
           {...staggerAnimationProps}
           gap={6}
-          gridTemplateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+          gridTemplateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
         >
           {nonHighlightedProjectCards}
         </MotionGrid>
