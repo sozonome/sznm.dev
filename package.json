@@ -57,7 +57,7 @@
     "sass": "^1.58.0",
     "swr": "^2.0.3",
     "ua-parser-js": "^1.0.33",
-    "zustand": "^4.3.2"
+    "zustand": "^4.3.3"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "17.4.2",
@@ -65,7 +65,7 @@
     "@next/bundle-analyzer": "^13.1.6",
     "@types/lodash-es": "^4.17.6",
     "@types/node": "^18.13.0",
-    "@types/react": "^18.0.27",
+    "@types/react": "^18.0.28",
     "@types/react-syntax-highlighter": "^15.5.6",
     "@types/rss": "^0.0.30",
     "@types/ua-parser-js": "^0.7.36",
@@ -74,7 +74,7 @@
     "commitizen": "^4.3.0",
     "commitlint": "17.4.2",
     "cross-env": "^7.0.3",
-    "eslint": "^8.33.0",
+    "eslint": "^8.34.0",
     "eslint-config-next": "^13.1.6",
     "eslint-config-sznm": "^1.1.0",
     "husky": "^8.0.3",
