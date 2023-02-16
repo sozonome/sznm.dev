@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.20.0](https://github.com/sozonome/sznm.dev/compare/v1.19.3...v1.20.0) (2023-02-16)
+
+
+### Features
+
+* add handle route back ([#180](https://github.com/sozonome/sznm.dev/issues/180)) ([8d9edb8](https://github.com/sozonome/sznm.dev/commit/8d9edb8f89800f1b7f4b3707adf0ab7dcbd27d87))
+
+
+### Bug Fixes
+
+* fix rewrite config ([#179](https://github.com/sozonome/sznm.dev/issues/179)) ([8420b50](https://github.com/sozonome/sznm.dev/commit/8420b50b499789c5c01b5631089e5a7e361cbe3e))
+
 ### [1.19.3](https://github.com/sozonome/sznm.dev/compare/v1.19.2...v1.19.3) (2023-01-18)
 
 
