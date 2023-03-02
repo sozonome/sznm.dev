@@ -31,6 +31,7 @@ const NavItem = ({ href, label, icon }: NavItemProps) => {
       fontSize={['xl', 'md']}
       padding={0}
       onClick={handleClickNavigation}
+      color="unset"
     >
       {icon({ style: { cursor: 'pointer' } })}
     </IconButton>
