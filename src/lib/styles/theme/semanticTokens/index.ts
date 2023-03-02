@@ -20,27 +20,27 @@ export const semanticTokens: SemanticTokenType = {
       _dark: 'gray.800',
     },
     headerAlphaBackground: {
-      default: 'rgba(247, 250, 252, 0.8)',
-      _dark: 'rgba(26, 32, 44, 0.8)',
+      default: 'rgba(232, 233, 233, 0.8)',
+      _dark: 'rgba(10, 12, 12, 0.8)',
     },
     tabBarAlphaBackground: {
-      default: 'rgba(237, 242, 247, 0.8)',
-      _dark: 'rgba(45, 55, 72, 0.8)',
+      default: 'rgba(209, 210, 210, 0.8)',
+      _dark: 'rgba(14, 19, 18, 0.8)',
     },
     elevatedCardBorder: {
       default: 'gray.100',
       _dark: 'gray.700',
     },
     cardBorder: {
-      default: 'gray.300',
-      _dark: 'gray.700',
+      default: 'gray.200',
+      _dark: 'gray.500',
     },
     cardHoverBorder: {
       default: 'gray.500',
       _dark: 'gray.400',
     },
     buttonBackground: {
-      default: 'gray.300',
+      default: 'gray.100',
       _dark: 'gray.500',
     },
     selectedCommandItemBackground: {

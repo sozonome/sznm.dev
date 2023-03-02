@@ -1,4 +1,4 @@
-import { Box, Heading, Text } from '@chakra-ui/react';
+import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import Link from 'next/link';
 import * as React from 'react';
 
@@ -15,6 +15,7 @@ type BlogPostPreviewProps = {
 };
 
 const BlogPostPreview = ({ postData, wrapperProps }: BlogPostPreviewProps) => {
+  const hoverColor = useColorModeValue('gray.300', 'gray.50');
   const handleClickBlogPost = React.useCallback(() => {
     trackEvent({
       eventName: `Blog Post: ${postData.title}`,
@@ -26,9 +27,10 @@ const BlogPostPreview = ({ postData, wrapperProps }: BlogPostPreviewProps) => {
     <MotionBox {...wrapperProps}>
       <Box
         width="100%"
-        transition="0.2s ease-out"
+        transition="0.4s ease-out"
         _hover={{
-          transform: 'scale(1.03, 1.03)',
+          color: hoverColor,
+          textDecoration: 'underline',
         }}
       >
         <Box
