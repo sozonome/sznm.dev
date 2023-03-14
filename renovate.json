@@ -8,5 +8,5 @@
   ],
   "stabilityDays": 2,
   "timezone": "Asia/Jakarta",
-  "schedule": ["0 0 * * 1"]
+  "schedule": ["* 0 * * 1"]
 }
