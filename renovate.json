@@ -7,6 +7,6 @@
     }
   ],
   "stabilityDays": 2,
-  "timezone": "ID",
-  "schedule": ["0 0 * * MON"]
+  "timezone": "Asia/Jakarta",
+  "schedule": ["0 0 * * 1"]
 }
