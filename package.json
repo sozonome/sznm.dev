@@ -34,7 +34,7 @@
     "@giscus/react": "^2.2.8",
     "@vercel/analytics": "^0.1.11",
     "chakra-ui-markdown-renderer": "^4.1.0",
-    "cmdk": "^0.1.22",
+    "cmdk": "^0.2.0",
     "contentlayer": "^0.3.0",
     "date-fns": "^2.29.3",
     "framer-motion": "^9.1.7",
@@ -70,7 +70,7 @@
     "@types/rss": "^0.0.30",
     "@types/ua-parser-js": "^0.7.36",
     "@types/umami": "^0.1.0",
-    "@vitest/coverage-c8": "^0.28.5",
+    "@vitest/coverage-c8": "^0.29.0",
     "commitizen": "^4.3.0",
     "commitlint": "17.4.2",
     "cross-env": "^7.0.3",
@@ -83,7 +83,7 @@
     "prettier": "2.8.4",
     "standard-version": "^9.5.0",
     "typescript": "^4.9.5",
-    "vitest": "^0.28.5"
+    "vitest": "^0.29.0"
   },
   "repository": {
     "type": "git",
