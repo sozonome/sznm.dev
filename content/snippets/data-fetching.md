@@ -13,7 +13,7 @@ stacks:
 > install [axios](https://axios-http.com/)
 
 ```bash
-yarn add axios
+pnpm add axios
 ```
 
 > add fetcher utility for GET
@@ -35,7 +35,7 @@ export const fetcher = <ResType>({ url, params }: FetcherArgs) =>
 > install [SWR](https://swr.vercel.app)
 
 ```bash
-yarn add swr
+pnpm add swr
 ```
 
 > add swr hook utility
