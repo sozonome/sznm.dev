@@ -1,6 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ]
+  "extends": ["config:base", "group:all"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "digest"]
+    }
+  ],
+  "stabilityDays": 2,
+  "timezone": "ID",
+  "schedule": ["0 0 * * MON"]
 }
