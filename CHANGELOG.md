@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.20.1](https://github.com/sozonome/sznm.dev/compare/v1.20.0...v1.20.1) (2023-03-14)
+
+
+### Bug Fixes
+
+* revert back root portfolio path rewrite ([d0adb28](https://github.com/sozonome/sznm.dev/commit/d0adb28201b5dba12400711f64392bda9def5d1e))
+
+
+### Improvements
+
+* adjust navigation item color ([437053e](https://github.com/sozonome/sznm.dev/commit/437053e126f066e42a788a9e251c991822e1c125))
+* adjust selectedCommandItemBackground ([9dc042a](https://github.com/sozonome/sznm.dev/commit/9dc042a9a57376a940cb6c052179af09f398d82f))
+* **theme:** customize gray color palette ([dad5b20](https://github.com/sozonome/sznm.dev/commit/dad5b209f8cffd333666fee8e7bdfd610c9b398f))
+
 ## [1.20.0](https://github.com/sozonome/sznm.dev/compare/v1.19.3...v1.20.0) (2023-02-16)
 
 
