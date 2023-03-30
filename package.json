@@ -94,6 +94,7 @@
     "url": "https://github.com/sozonome/sznm.dev/issues"
   },
   "engines": {
-    "node": ">=16.8.x"
+    "node": ">=16.8.x",
+    "pnpm": ">=8"
   }
 }
