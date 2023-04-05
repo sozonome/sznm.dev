@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.20.2](https://github.com/sozonome/sznm.dev/compare/v1.20.1...v1.20.2) (2023-04-05)
+
+
+### Improvements
+
+* move api route file ([#190](https://github.com/sozonome/sznm.dev/issues/190)) ([bb8d700](https://github.com/sozonome/sznm.dev/commit/bb8d70036caf47f6224f1966162e0eb862133ade))
+* update about social links ([578d42d](https://github.com/sozonome/sznm.dev/commit/578d42db66ce25963812918ae7427548693df2e3))
+* update templates link ([66b1760](https://github.com/sozonome/sznm.dev/commit/66b176058580e97309447b451adfa5f37735d204))
+
 ### [1.20.1](https://github.com/sozonome/sznm.dev/compare/v1.20.0...v1.20.1) (2023-03-14)
 
 
