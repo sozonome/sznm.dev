@@ -50,7 +50,7 @@ export const socialLinks: Array<MotionLinkProps> = [
   },
   {
     platformName: 'ProductHunt',
-    url: 'https://www.producthunt.com/@sozonome/made',
+    url: 'https://www.producthunt.com/@sozonome',
     icon: FaProductHunt,
   },
   {
