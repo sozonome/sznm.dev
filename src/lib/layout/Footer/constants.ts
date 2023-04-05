@@ -11,7 +11,7 @@ export const links: Array<Pick<FooterLinkProps, 'label' | 'url'>> = [
   },
   {
     label: 'Templates',
-    url: 'https://github.com/sozonome?tab=repositories&q=starter-template&type=&language=&sort=stargazers',
+    url: 'https://github.com/sozonome?tab=repositories&type=template&language=&sort=stargazers',
   },
   {
     label: 'Timeline',
