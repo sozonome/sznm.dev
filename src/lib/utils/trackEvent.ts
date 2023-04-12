@@ -1,6 +1,6 @@
 type TrackEventArgs = {
   eventName: string;
-  eventData: Record<string, unknown>;
+  eventData: Record<string, string | number>;
   url?: string;
   websiteId?: string;
 };
@@ -20,11 +20,6 @@ export const trackEvent = ({
   websiteId,
 }: TrackEventArgs) => {
   if (window.umami && typeof window.umami.trackEvent === 'function') {
-    window.umami.trackEvent(
-      eventName,
-      eventData as unknown as string,
-      url,
-      websiteId
-    );
+    window.umami.trackEvent(eventName, eventData, url, websiteId);
   }
 };
