@@ -11,7 +11,7 @@ const nowPlaying = async (req: NextRequest) => {
   try {
     const response = await getNowPlaying();
 
-    if (!response || !response.isPlaying) {
+    if (!response?.isPlaying) {
       return new Response(JSON.stringify({ isPlaying: false }), {
         status: 200,
         headers: defaultHeader,

@@ -8,7 +8,7 @@ import { defaultSEOConfig } from '~/lib/config/next-seo';
 import Layout from '~/lib/layout';
 import '~/lib/styles/global.css';
 
-export const reportWebVitals = (metric: NextWebVitalsMetric) => {
+export const reportWebVitals = async (metric: NextWebVitalsMetric) => {
   const url = process.env.NEXT_PUBLIC_AXIOM_INGEST_ENDPOINT;
   if (!url) {
     return;
@@ -22,7 +22,7 @@ export const reportWebVitals = (metric: NextWebVitalsMetric) => {
   if (navigator.sendBeacon) {
     navigator.sendBeacon(url, body);
   } else {
-    fetch(url, { body, method: 'POST', keepalive: true });
+    await fetch(url, { body, method: 'POST', keepalive: true });
   }
 };
 

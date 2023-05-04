@@ -14,10 +14,10 @@ import HeadingLink from './HeadingLink';
 
 const { toast } = createStandaloneToast();
 
-const handleClickCopy = (childrenValue: string) => () => {
+const handleClickCopy = (childrenValue: string) => async () => {
   const toastId = childrenValue.substring(0, 10);
 
-  navigator.clipboard.writeText(childrenValue);
+  await navigator.clipboard.writeText(childrenValue);
   if (!toast.isActive(toastId)) {
     toast({
       id: toastId,
