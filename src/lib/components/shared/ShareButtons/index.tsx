@@ -28,10 +28,10 @@ const ShareButtons = ({ title }: ShareButtonsProps) => {
         params: Record<string, unknown>;
         isCopy?: boolean;
       }) =>
-      () => {
+      async () => {
         const shareLink = extendUrl(obj.baseSocialUrl, obj.params);
         if (obj.isCopy) {
-          navigator.clipboard.writeText(shareLink);
+          await navigator.clipboard.writeText(shareLink);
           if (!toast.isActive(toastId)) {
             toast({
               id: toastId,
