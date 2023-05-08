@@ -71,7 +71,7 @@
     "@types/rss": "^0.0.30",
     "@types/ua-parser-js": "^0.7.36",
     "@types/umami": "^0.1.1",
-    "@vitest/coverage-c8": "^0.30.1",
+    "@vitest/coverage-c8": "^0.31.0",
     "commitizen": "^4.3.0",
     "commitlint": "17.5.1",
     "cross-env": "^7.0.3",
@@ -84,7 +84,7 @@
     "prettier": "2.8.7",
     "standard-version": "^9.5.0",
     "typescript": "^4.9.5",
-    "vitest": "^0.30.1"
+    "vitest": "^0.31.0"
   },
   "repository": {
     "type": "git",
