@@ -62,8 +62,8 @@ dependencies:
     specifier: ^15.5.0
     version: 15.5.0(react@18.2.0)
   react-wrap-balancer:
-    specifier: ^0.4.0
-    version: 0.4.0(react@18.2.0)
+    specifier: ^0.5.0
+    version: 0.5.0(react@18.2.0)
   reading-time:
     specifier: ^1.5.0
     version: 1.5.0
@@ -7971,10 +7971,10 @@ packages:
       refractor: 3.6.0
     dev: false
 
-  /react-wrap-balancer@0.4.0(react@18.2.0):
-    resolution: {integrity: sha512-MUsROihHd7bFHCo9kCOifKDYBEZPgKTyGvfa8RcwRQKtT2cL7Um9Cc8A7GvuT8t3np7LAGsEkzdEyJdKrr5lVQ==}
+  /react-wrap-balancer@0.5.0(react@18.2.0):
+    resolution: {integrity: sha512-5vwe5QDczQ9zwAtv3iEVj8hdMbNwQtM/QlSNLJfDUzRE9noPtxevb+Kon916Mu2RUorCrAtashQ1F9BVBjdeZg==}
     peerDependencies:
-      react: ^18.0.0
+      react: '>=16.8.0 || ^17.0.0 || ^18'
     dependencies:
       react: 18.2.0
     dev: false
