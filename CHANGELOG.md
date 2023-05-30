@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.20.3](https://github.com/sozonome/sznm.dev/compare/v1.20.2...v1.20.3) (2023-05-30)
+
+
+### Bug Fixes
+
+* use await for promisables and optional chain expression ([#195](https://github.com/sozonome/sznm.dev/issues/195)) ([5596b97](https://github.com/sozonome/sznm.dev/commit/5596b97bc65be61c1d9d4dda56969a2142ee9053))
+
+
+### Improvements
+
+* **analytics:** adjust trackers ([#198](https://github.com/sozonome/sznm.dev/issues/198)) ([9803dfc](https://github.com/sozonome/sznm.dev/commit/9803dfc5cbe62ebf9f0360f961ce361061b8b680))
+
 ### [1.20.2](https://github.com/sozonome/sznm.dev/compare/v1.20.1...v1.20.2) (2023-04-05)
 
 
