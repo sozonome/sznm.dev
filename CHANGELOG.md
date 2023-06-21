@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.20.4](https://github.com/sozonome/sznm.dev/compare/v1.20.3...v1.20.4) (2023-06-21)
+
+
+### Improvements
+
+* adjust codeblock for light theme ([e784470](https://github.com/sozonome/sznm.dev/commit/e7844702c7b02ead819ac81cc306207ad6078b46))
+
 ### [1.20.3](https://github.com/sozonome/sznm.dev/compare/v1.20.2...v1.20.3) (2023-05-30)
 
 
