@@ -1,71 +1,11 @@
-import {
-  Box,
-  Button,
-  Code,
-  createStandaloneToast,
-  Flex,
-  Link as ChakraLink,
-} from '@chakra-ui/react';
+import { Link as ChakraLink } from '@chakra-ui/react';
 import type { Options } from 'react-markdown/lib/ast-to-react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
+import CodeBlock from './CodeBlock';
 import HeadingLink from './HeadingLink';
 
-const { toast } = createStandaloneToast();
-
-const handleClickCopy = (childrenValue: string) => async () => {
-  const toastId = childrenValue.substring(0, 10);
-
-  await navigator.clipboard.writeText(childrenValue);
-  if (!toast.isActive(toastId)) {
-    toast({
-      id: toastId,
-      status: 'success',
-      position: 'top-right',
-      title: 'Copied',
-      isClosable: true,
-    });
-  }
-};
-
 export const renderers: Options['components'] = {
-  code: ({ inline, className, children, ...props }) => {
-    /** https://github.com/remarkjs/react-markdown#use-custom-components-syntax-highlight */
-    const match = /language-(\w+)/.exec(className || '');
-    const language = match?.[1];
-    const childrenValue = String(children).replace(/\n$/, '');
-
-    return !inline && match ? (
-      <Box width="100%">
-        <Flex alignItems="center">
-          {language && <Code>{language}</Code>}
-          <Button
-            marginLeft="auto"
-            colorScheme="green"
-            height={6}
-            padding={0}
-            fontSize={12}
-            textTransform="lowercase"
-            onClick={handleClickCopy(childrenValue)}
-          >
-            Copy
-          </Button>
-        </Flex>
-        <SyntaxHighlighter
-          language={language}
-          style={dracula}
-          showLineNumbers={false}
-        >
-          {childrenValue}
-        </SyntaxHighlighter>
-      </Box>
-    ) : (
-      <code className={className} {...props}>
-        {children}
-      </code>
-    );
-  },
+  code: CodeBlock,
   a: ({ href, children }) => {
     return (
       <ChakraLink href={href} isExternal wordBreak="break-word">
