@@ -7,7 +7,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "next dev",
-    "build": "next build",
+    "build": "contentlayer build && next build",
     "build:turbo": "npx turbo build",
     "analyze": "cross-env ANALYZE=true pnpm build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
