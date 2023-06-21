@@ -10,6 +10,7 @@ thumbnail: "/app_preview/spoker.png"
 highlight: true
 featured: true
 sznmApps: true
+projectType: 'apps'
 stacks: 
   - nextjs
   - chakra-ui

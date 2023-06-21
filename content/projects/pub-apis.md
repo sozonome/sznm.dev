@@ -9,6 +9,7 @@ thumbnail: "/app_preview/public-apis.png"
 thumbnailDark: "/app_preview/public-apis-dark.png"
 featured: true
 sznmApps: true
+projectType: 'apps'
 stacks: 
   - nextjs
   - chakra-ui

@@ -1,5 +1,5 @@
-import type { Project } from 'contentlayer/generated';
+import type { splitProjectByTypes } from '~/lib/utils/projects';
 
 export type OtherProjectsProps = {
-  otherProjects: Array<Project>;
+  categorizedProjects: ReturnType<typeof splitProjectByTypes>;
 };

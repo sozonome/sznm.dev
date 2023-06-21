@@ -70,6 +70,7 @@ const Project = defineDocumentType(() => ({
     icon: { type: 'string' },
     thumbnail: { type: 'string' },
     thumbnailDark: { type: 'string' },
+    projectType: { type: 'string' },
   },
   computedFields: {
     id: {

@@ -18,6 +18,7 @@ const Footer = () => {
   return (
     <Stack as="footer" layerStyle="layoutBlock" spacing={8}>
       <Divider />
+
       <SpotifyListening />
 
       <Grid

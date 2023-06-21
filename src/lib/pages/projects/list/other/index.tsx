@@ -1,9 +1,10 @@
-import { Box, Button, Heading } from '@chakra-ui/react';
+import { Box, Button, Grid, Heading } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import React from 'react';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
+import type { Project } from 'contentlayer/generated';
 import MotionBox from '~/lib/components/motion/MotionBox';
 import MotionGrid from '~/lib/components/motion/MotionGrid';
 import ProjectDetailWrapper from '~/lib/components/projects/detail';
@@ -19,7 +20,37 @@ import { trackEvent } from '~/lib/utils/trackEvent';
 
 import type { OtherProjectsProps } from './types';
 
-const OtherProjects = ({ otherProjects }: OtherProjectsProps) => {
+const renderProjectList = ({
+  projects,
+  category,
+}: {
+  projects: Array<Project>;
+  category: string;
+}) => {
+  return (
+    <Grid gap={4}>
+      <Heading as="h3" size="lg" fontWeight="bold">
+        {category}
+      </Heading>
+      <MotionGrid
+        {...staggerAnimationProps}
+        gap={8}
+        gridTemplateColumns={['repeat(1)', 'repeat(1)', 'repeat(2, 1fr)']}
+      >
+        {projects.map((projectData) => (
+          <MotionBox {...childAnimationProps} key={projectData.id}>
+            <ProjectDetailWrapper
+              projectData={projectData}
+              source="Other Projects"
+            />
+          </MotionBox>
+        ))}
+      </MotionGrid>
+    </Grid>
+  );
+};
+
+const OtherProjects = ({ categorizedProjects }: OtherProjectsProps) => {
   const router = useRouter();
   const handleBackToFeaturedProjects = React.useCallback(() => {
     trackEvent({
@@ -64,20 +95,28 @@ const OtherProjects = ({ otherProjects }: OtherProjectsProps) => {
         </Heading>
       </Box>
 
-      <MotionGrid
-        {...staggerAnimationProps}
-        gap={8}
-        gridTemplateColumns={['repeat(1)', 'repeat(1)', 'repeat(2, 1fr)']}
-      >
-        {otherProjects.map((projectData) => (
-          <MotionBox {...childAnimationProps} key={projectData.id}>
-            <ProjectDetailWrapper
-              projectData={projectData}
-              source="Other Projects"
-            />
-          </MotionBox>
-        ))}
-      </MotionGrid>
+      <Grid gap={8}>
+        {renderProjectList({
+          projects: categorizedProjects.libs,
+          category: 'Libs',
+        })}
+        {renderProjectList({
+          projects: categorizedProjects.apps,
+          category: 'Apps',
+        })}
+        {renderProjectList({
+          projects: categorizedProjects.sites,
+          category: 'Sites',
+        })}
+        {renderProjectList({
+          projects: categorizedProjects.templates,
+          category: 'Templates',
+        })}
+        {renderProjectList({
+          projects: categorizedProjects.docs,
+          category: 'Docs',
+        })}
+      </Grid>
     </>
   );
 };

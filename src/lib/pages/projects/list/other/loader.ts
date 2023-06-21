@@ -1,20 +1,20 @@
-import { compareDesc } from 'date-fns';
 import type { GetStaticProps } from 'next';
 
-import { allProjects } from 'contentlayer/generated';
+import { sortedProjects } from '~/lib/constants/project';
+import { splitProjectByTypes } from '~/lib/utils/projects';
 
 import type { OtherProjectsProps } from './types';
 
 export const getStaticProps: GetStaticProps<OtherProjectsProps> = async () => {
-  const otherProjects = allProjects
-    .sort((a, b) => compareDesc(new Date(a.date ?? ''), new Date(b.date ?? '')))
-    .filter(
-      (project) => !project.featured && project.published !== false && project
-    );
+  const otherProjects = sortedProjects.filter(
+    (project) => !project.featured && project
+  );
+
+  const categorizedProjects = splitProjectByTypes(otherProjects);
 
   return {
     props: {
-      otherProjects,
+      categorizedProjects,
     },
   };
 };

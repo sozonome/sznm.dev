@@ -6,6 +6,7 @@ date: "2020-12-29"
 icon: "/app_icons/popcorn.png"
 sznmApps: true
 featured: true
+projectType: 'sites'
 stacks:
   - nextjs
   - chakra-ui

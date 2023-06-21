@@ -6,6 +6,7 @@ description: Home of my starter templates
 date: "2022-05-19"
 icon: "/app_icons/nextarter-chakra.svg"
 featured: true
+projectType: 'sites'
 stacks: 
   - nextjs
   - chakra-ui
