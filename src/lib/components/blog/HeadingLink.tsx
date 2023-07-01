@@ -1,5 +1,5 @@
 import { Heading, Link } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
 import { convertToId, convertToIdLink } from '~/lib/utils/convertToIdLink';
 
@@ -9,7 +9,7 @@ type HeadingLinkProps = {
 };
 
 const HeadingLink = ({ children, as }: HeadingLinkProps) => {
-  const router = useRouter();
+  const pathname = usePathname();
   const level = Number((as ?? 'h3').split('h')[1]);
 
   const size: Record<number, string> = {
@@ -23,7 +23,7 @@ const HeadingLink = ({ children, as }: HeadingLinkProps) => {
 
   return (
     <Link
-      href={convertToIdLink(router.asPath, String(children))}
+      href={convertToIdLink(pathname ?? '', String(children))}
       style={{ textDecoration: 'none', marginTop: 16 }}
     >
       <Heading

@@ -1,5 +1,5 @@
 import { HStack, IconButton, useToast } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import * as React from 'react';
 
 import { baseUrl } from '~/lib/constants/baseUrl';
@@ -14,13 +14,10 @@ type ShareButtonsProps = {
 const toastId = 'copied-link';
 
 const ShareButtons = ({ title }: ShareButtonsProps) => {
-  const router = useRouter();
+  const pathname = usePathname();
   const toast = useToast();
 
-  const link = React.useMemo(
-    () => `${baseUrl}${router.asPath}`,
-    [router.asPath]
-  );
+  const link = React.useMemo(() => `${baseUrl}${pathname}`, [pathname]);
 
   const handleClick = React.useCallback(
     (obj: {
