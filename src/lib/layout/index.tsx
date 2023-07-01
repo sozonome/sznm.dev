@@ -1,3 +1,5 @@
+'use client';
+
 import { Box, Stack } from '@chakra-ui/react';
 import dynamic from 'next/dynamic';
 import type { ReactNode } from 'react';
