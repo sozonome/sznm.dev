@@ -1,9 +1,43 @@
 import type { Metadata } from 'next';
 
 import Providers from '~/app/providers';
+import { baseUrl } from '~/lib/constants/baseUrl';
 import Layout from '~/lib/layout';
 
+const creator = 'Agustinus Nathaniel';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
+  alternates: {
+    types: {
+      'application/rss+xml': `${baseUrl}/rss.xml`,
+    },
+  },
+  applicationName: 'sznm.dev',
+  authors: { name: 'sozonome' },
+  creator,
+  publisher: creator,
+  generator: 'Next.js',
+  keywords: [
+    'sozonome',
+    'agustinusnathaniel',
+    'Agustinus Nathaniel',
+    'sznm',
+    'sznm.dev',
+  ],
+  referrer: 'origin-when-cross-origin',
+  colorScheme: 'dark light',
+  icons: {
+    icon: '/avataaars.svg',
+  },
+  appleWebApp: {
+    title: 'sznm.dev',
+    statusBarStyle: 'default',
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  manifest: '/manifest.json',
   title: {
     default: 'Agustinus Nathaniel - Digital Crafter | sozonome',
     template: '%s | sozonome',

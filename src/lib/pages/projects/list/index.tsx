@@ -1,5 +1,6 @@
+'use client';
+
 import { Box, Grid, Heading } from '@chakra-ui/react';
-import { NextSeo } from 'next-seo';
 
 import MotionBox from '~/lib/components/motion/MotionBox';
 import MotionGrid from '~/lib/components/motion/MotionGrid';
@@ -8,13 +9,11 @@ import {
   childAnimationProps,
   staggerAnimationProps,
 } from '~/lib/constants/animation';
-import { baseUrl } from '~/lib/constants/baseUrl';
-import { sznmOgImage } from '~/lib/utils/sznmOgImage';
+import { featuredProjects } from '~/lib/constants/project';
 
 import ProjectListBottomNav from './BottomNav';
-import type { ProjectListProps } from './types';
 
-const ProjectList = ({ featuredProjects }: ProjectListProps) => {
+const ProjectList = () => {
   const highlightedProjects = featuredProjects.filter(
     (project) => project.highlight
   );
@@ -50,23 +49,6 @@ const ProjectList = ({ featuredProjects }: ProjectListProps) => {
 
   return (
     <>
-      <NextSeo
-        title="Projects"
-        canonical={`${baseUrl}/projects`}
-        openGraph={{
-          title: 'Projects | sozonome',
-          images: [
-            {
-              url: sznmOgImage({
-                heading: 'Projects',
-                text: 'https://sznm.dev',
-              }),
-              alt: 'Projects | sozonome og-image',
-            },
-          ],
-        }}
-      />
-
       <Box marginBottom={8}>
         <Heading as="h1" size="xl" marginBottom={2}>
           Projects

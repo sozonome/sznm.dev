@@ -1,3 +1,5 @@
+import Script from 'next/script';
+
 import { UMAMI_SRC, UMAMI_WEBSITE_ID } from '~/lib/constants/umami';
 
 const APP_NAME = 'sznm.dev';
@@ -24,7 +26,7 @@ const DocumentMeta = () => {
       <link rel="manifest" href="/manifest.json" />
 
       {/* umami self-hosted analytics */}
-      <script
+      <Script
         async
         defer
         data-website-id={UMAMI_WEBSITE_ID}

@@ -27,7 +27,5 @@ export const sznmAppsProjects = sortedProjects
   });
 
 export const projectIdParams = sortedProjects.map((project) => ({
-  params: {
-    id: project.id,
-  },
+  id: project.id,
 }));

@@ -5,7 +5,7 @@ import {
 } from 'contentlayer/source-files';
 import readingTime from 'reading-time';
 import rehypeRaw from 'rehype-raw';
-import remarkHtml from 'remark-html';
+import remarkGfm from 'remark-gfm';
 
 const ReadTime = defineNestedType(() => ({
   name: 'ReadTime',
@@ -105,7 +105,7 @@ const contentLayerConfig = makeSource({
   contentDirPath: 'content',
   documentTypes: [Blog, Project, Snippet],
   markdown: {
-    remarkPlugins: [remarkHtml],
+    remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeRaw],
   },
 });

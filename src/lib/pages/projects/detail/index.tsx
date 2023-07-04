@@ -1,34 +1,26 @@
+'use client';
+
 import { Box, Button } from '@chakra-ui/react';
 import Link from 'next/link';
-import { NextSeo } from 'next-seo';
+import { notFound } from 'next/navigation';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 import ProjectDetailWrapper from '~/lib/components/projects/detail';
-import { baseUrl } from '~/lib/constants/baseUrl';
-import { sznmOgImage } from '~/lib/utils/sznmOgImage';
+import { sortedProjects } from '~/lib/constants/project';
 
 import type { ProjectDetailProps } from './types';
 
-const ProjectDetail = ({ projectData }: ProjectDetailProps) => {
+const ProjectDetail = ({ params }: ProjectDetailProps) => {
+  const projectData = sortedProjects.find(
+    ({ id }) => id === (params.id as string)
+  );
+
+  if (!projectData) {
+    return notFound();
+  }
+
   return (
     <Box>
-      <NextSeo
-        title={projectData.title}
-        canonical={`${baseUrl}/projects/${projectData.id}`}
-        openGraph={{
-          title: `${projectData.title} | sozonome`,
-          images: [
-            {
-              url: sznmOgImage({
-                heading: projectData.title,
-                text: 'https://sznm.dev',
-              }),
-              alt: `${projectData.title} | sozonome og-image`,
-            },
-          ],
-        }}
-      />
-
       <Box as="article">
         <Button
           as={Link}

@@ -9,9 +9,9 @@ import HeroSection from './HeroSection';
 import PostsSection from './PostsSection';
 import ProjectsSection from './ProjectsSection';
 
-const Home = () => {
-  const recentPosts = sortedBlogPosts.slice(0, 2);
+const recentPosts = sortedBlogPosts.slice(0, 2);
 
+const Home = () => {
   return (
     <Box marginTop={-24}>
       <HeroSection />

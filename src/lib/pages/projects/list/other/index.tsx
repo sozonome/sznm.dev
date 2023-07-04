@@ -1,6 +1,7 @@
+'use client';
+
 import { Box, Button, Grid, Heading } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
-import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
@@ -12,13 +13,11 @@ import {
   childAnimationProps,
   staggerAnimationProps,
 } from '~/lib/constants/animation';
-import { baseUrl } from '~/lib/constants/baseUrl';
+import { sortedProjects } from '~/lib/constants/project';
 import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
 import { handleRouteBack } from '~/lib/utils/handleRouteBack';
-import { sznmOgImage } from '~/lib/utils/sznmOgImage';
+import { splitProjectByTypes } from '~/lib/utils/projects';
 import { trackEvent } from '~/lib/utils/trackEvent';
-
-import type { OtherProjectsProps } from './types';
 
 const renderProjectList = ({
   projects,
@@ -50,7 +49,12 @@ const renderProjectList = ({
   );
 };
 
-const OtherProjects = ({ categorizedProjects }: OtherProjectsProps) => {
+const otherProjects = sortedProjects.filter(
+  (project) => !project.featured && project
+);
+const categorizedProjects = splitProjectByTypes(otherProjects);
+
+const OtherProjects = () => {
   const router = useRouter();
   const handleBackToFeaturedProjects = React.useCallback(() => {
     trackEvent({
@@ -62,23 +66,6 @@ const OtherProjects = ({ categorizedProjects }: OtherProjectsProps) => {
 
   return (
     <>
-      <NextSeo
-        title="Projects - Other"
-        canonical={`${baseUrl}/projects/other`}
-        openGraph={{
-          title: 'Other Projects | sozonome',
-          images: [
-            {
-              url: sznmOgImage({
-                heading: 'Other Projects',
-                text: 'https://sznm.dev',
-              }),
-              alt: 'Other Projects | sozonome og-image',
-            },
-          ],
-        }}
-      />
-
       <Button
         leftIcon={<AiOutlineArrowLeft />}
         size="sm"
