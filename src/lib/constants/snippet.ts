@@ -7,7 +7,5 @@ export const sortedSnippets = allSnippets
   .sort((a, b) => compareDesc(new Date(a.date ?? ''), new Date(b.date ?? '')));
 
 export const snippetIdParams = sortedSnippets.map((snippet) => ({
-  params: {
-    id: snippet.id,
-  },
+  id: snippet.id,
 }));

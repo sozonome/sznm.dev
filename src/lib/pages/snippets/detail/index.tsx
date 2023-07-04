@@ -1,23 +1,31 @@
+'use client';
+
 import { Box, Spacer, useColorModeValue } from '@chakra-ui/react';
 import type { GiscusProps } from '@giscus/react';
 import Giscus from '@giscus/react';
+import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 
 import { renderers } from '~/lib/components/blog/renderers';
 import ShareButtons from '~/lib/components/shared/ShareButtons';
 import SnippetDetailHead from '~/lib/components/snippets/detail/Head';
-import SnippetDetailMeta from '~/lib/components/snippets/detail/Meta';
+import { sortedSnippets } from '~/lib/constants/snippet';
 
 import styles from './Snippet.module.scss';
 import type { SnippetDetailProps } from './types';
 
-const SnippetDetail = ({ data }: SnippetDetailProps) => {
+const SnippetDetail = ({ params }: SnippetDetailProps) => {
+  const data = sortedSnippets.find(({ id }) => id === (params?.id as string));
+
   const giscusTheme: GiscusProps['theme'] = useColorModeValue('light', 'dark');
+
+  if (!data) {
+    return notFound();
+  }
 
   return (
     <Box as="article">
-      <SnippetDetailMeta data={data} />
       <SnippetDetailHead data={data} />
       <ShareButtons title={`Check out this snippet: ${data.title}`} />
       <Spacer height={16} />

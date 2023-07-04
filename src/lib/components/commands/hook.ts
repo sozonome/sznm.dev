@@ -1,5 +1,5 @@
 import { useColorMode } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import * as React from 'react';
 import { shallow } from 'zustand/shallow';
 

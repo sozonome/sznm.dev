@@ -1,7 +1,8 @@
 import {
   createStandaloneToast,
   ChakraProvider,
-  localStorageManager,
+  cookieStorageManager,
+  ColorModeScript,
 } from '@chakra-ui/react';
 
 import customTheme from '~/lib/styles/theme';
@@ -15,12 +16,17 @@ const { ToastContainer } = createStandaloneToast({ theme: customTheme });
 export const Chakra = ({ children }: ChakraProps) => {
   return (
     <>
+      <ColorModeScript
+        initialColorMode={customTheme.config?.initialColorMode}
+        type="cookie"
+      />
       <ChakraProvider
-        colorModeManager={localStorageManager}
+        colorModeManager={cookieStorageManager}
         theme={customTheme}
       >
         {children}
       </ChakraProvider>
+
       <ToastContainer />
     </>
   );

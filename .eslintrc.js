@@ -2,9 +2,17 @@
 module.exports = {
   extends: [
     // https://github.com/sozonome/eslint-config-sznm#readme
-    "sznm/react",
+    'sznm/react',
     // https://github.com/sozonome/eslint-config-sznm#-nextjs-projects
-    "plugin:react/jsx-runtime",
-    "plugin:@next/next/recommended",
+    'plugin:react/jsx-runtime',
+    'plugin:@next/next/recommended',
+  ],
+  overrides: [
+    {
+      files: [`*route*`],
+      rules: {
+        'import/prefer-default-export': 'off',
+      },
+    },
   ],
 };

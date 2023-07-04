@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 import { FaSpotify } from 'react-icons/fa';
 
-import { useNowPlayingData } from '~/lib/services/spotify/user/now-playing';
+import { useNowPlayingData } from '~/lib/services/spotify/user/now-playing/hooks';
 
 const SpotifyListening = () => {
   const { data, isLoading } = useNowPlayingData();

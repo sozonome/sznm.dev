@@ -1,5 +1,6 @@
+'use client';
+
 import { Grid, Heading, Text } from '@chakra-ui/react';
-import { NextSeo } from 'next-seo';
 
 import MotionBox from '~/lib/components/motion/MotionBox';
 import MotionGrid from '~/lib/components/motion/MotionGrid';
@@ -8,31 +9,13 @@ import {
   childAnimationProps,
   staggerAnimationProps,
 } from '~/lib/constants/animation';
-import { baseUrl } from '~/lib/constants/baseUrl';
-import { sznmOgImage } from '~/lib/utils/sznmOgImage';
+import { sortedSnippets } from '~/lib/constants/snippet';
 
-import type { SnippetListProps } from './types';
+const snippets = sortedSnippets;
 
-const SnippetList = ({ snippets }: SnippetListProps) => {
+const SnippetList = () => {
   return (
     <Grid gap={12}>
-      <NextSeo
-        title="Snippets"
-        canonical={`${baseUrl}/snippets`}
-        openGraph={{
-          title: 'Snippets | sozonome',
-          images: [
-            {
-              url: sznmOgImage({
-                heading: 'Snippets | sozonome',
-                text: 'https://sznm.dev',
-              }),
-              alt: 'Snippets | sozonome og-image',
-            },
-          ],
-        }}
-      />
-
       <Grid gap={2}>
         <Heading>Snippets</Heading>
         <Text>

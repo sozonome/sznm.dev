@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Heading, Stack } from '@chakra-ui/react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import * as React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 
@@ -18,7 +18,7 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
     data
       .filter((project) => project.highlight && project)
       .forEach(({ id }) => {
-        router.prefetch('/projects/[id]', `/projects/${id}`);
+        router.prefetch(`/projects/${id}`);
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);

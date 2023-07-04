@@ -17,7 +17,7 @@ const generateRssItem = async (post: Blog) => {
   };
 };
 
-export const generateRss = async (posts: Array<Blog>): Promise<string> => {
+export const generateBlogRss = async (posts: Array<Blog>): Promise<string> => {
   const feed = new RSS({
     title: "sozonome's blog",
     site_url: 'https://sznm.dev',
