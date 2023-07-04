@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 
 import Providers from '~/app/providers';
 import { baseUrl } from '~/lib/constants/baseUrl';
+import { UMAMI_SRC, UMAMI_WEBSITE_ID } from '~/lib/constants/umami';
 import Layout from '~/lib/layout';
 
 const creator = 'Agustinus Nathaniel';
@@ -72,6 +74,15 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         <Providers>
           <Layout>{children}</Layout>
         </Providers>
+
+        {/* umami self-hosted analytics */}
+        <Script
+          async
+          defer
+          data-website-id={UMAMI_WEBSITE_ID}
+          src={UMAMI_SRC}
+          data-domains="sznm.dev"
+        />
       </body>
     </html>
   );
