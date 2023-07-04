@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.20.5](https://github.com/sozonome/sznm.dev/compare/v1.20.4...v1.20.5) (2023-07-04)
+
+
+### Bug Fixes
+
+* update build script to build contentlayer ([fd65da9](https://github.com/sozonome/sznm.dev/commit/fd65da95fbb2719297e83074fedbbba45385873b))
+
+
+### Improvements
+
+* **app:** migrate to app router ([#201](https://github.com/sozonome/sznm.dev/issues/201)) ([5a2900c](https://github.com/sozonome/sznm.dev/commit/5a2900cdb139e2999880ea6eb3e255a254ce2b4b))
+
 ### [1.20.4](https://github.com/sozonome/sznm.dev/compare/v1.20.3...v1.20.4) (2023-06-21)
 
 
