@@ -21,10 +21,10 @@ const ShareButtons = ({ title }: ShareButtonsProps) => {
 
   const handleClick = React.useCallback(
     (obj: {
-        baseSocialUrl: string;
-        params: Record<string, unknown>;
-        isCopy?: boolean;
-      }) =>
+      baseSocialUrl: string;
+      params: Record<string, unknown>;
+      isCopy?: boolean;
+    }) =>
       async () => {
         const shareLink = extendUrl(obj.baseSocialUrl, obj.params);
         if (obj.isCopy) {
