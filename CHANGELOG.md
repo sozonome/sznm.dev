@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.20.6](https://github.com/sozonome/sznm.dev/compare/v1.20.5...v1.20.6) (2023-07-17)
+
+
+### Bug Fixes
+
+* export missing generateMetadata for snippet detail page ([25c9517](https://github.com/sozonome/sznm.dev/commit/25c951732a1e24adbbcc90df76198f257ebbe5ac))
+
+
+### Improvements
+
+* add missing umami script ([15e3345](https://github.com/sozonome/sznm.dev/commit/15e3345a4a51eaf2596b9c9090791feaeea6f378))
+
 ### [1.20.5](https://github.com/sozonome/sznm.dev/compare/v1.20.4...v1.20.5) (2023-07-04)
 
 
