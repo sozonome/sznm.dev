@@ -7,12 +7,4 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:@next/next/recommended',
   ],
-  overrides: [
-    {
-      files: [`*route*`],
-      rules: {
-        'import/prefer-default-export': 'off',
-      },
-    },
-  ],
 };
