@@ -1,3 +1,5 @@
+'use client';
+
 import type { BoxProps } from '@chakra-ui/react';
 import { useColorModeValue, Heading, Link, Text } from '@chakra-ui/react';
 import * as React from 'react';

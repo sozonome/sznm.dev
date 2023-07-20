@@ -1,5 +1,3 @@
-'use client';
-
 import Content from './Content';
 import HeadSection from './HeadSection';
 import Links from './Links';
