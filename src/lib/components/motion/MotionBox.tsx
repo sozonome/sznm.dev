@@ -1,3 +1,5 @@
+'use client';
+
 import type { HTMLChakraProps } from '@chakra-ui/react';
 import { Box } from '@chakra-ui/react';
 import type { HTMLMotionProps } from 'framer-motion';

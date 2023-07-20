@@ -1,3 +1,5 @@
+'use client';
+
 import { Link } from '@chakra-ui/react';
 import * as React from 'react';
 

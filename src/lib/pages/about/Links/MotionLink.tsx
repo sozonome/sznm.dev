@@ -1,3 +1,5 @@
+'use client';
+
 import { Icon, Link, Tooltip } from '@chakra-ui/react';
 import * as React from 'react';
 
