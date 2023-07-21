@@ -87,6 +87,15 @@ module.exports = withBundleAnalyzer(
     experimental: {
       scrollRestoration: true,
     },
+    redirects: () => {
+      return [
+        {
+          source: '/snippets/:id',
+          destination: '/notes/:id',
+          permanent: false,
+        },
+      ];
+    },
     rewrites: () => ({
       beforeFiles: [
         {
