@@ -2,22 +2,23 @@ import { Grid, Heading, Text } from '@chakra-ui/react';
 
 import MotionBox from '~/lib/components/motion/MotionBox';
 import MotionGrid from '~/lib/components/motion/MotionGrid';
-import SnippetCard from '~/lib/components/snippets/SnippetCard';
+import NoteCard from '~/lib/components/notes/NoteCard';
 import {
   childAnimationProps,
   staggerAnimationProps,
 } from '~/lib/constants/animation';
-import { sortedSnippets } from '~/lib/constants/snippet';
+import { sortedNotes } from '~/lib/constants/note';
 
-const snippets = sortedSnippets;
+const notes = sortedNotes;
 
-const SnippetList = () => {
+const NoteList = () => {
   return (
     <Grid gap={12}>
       <Grid gap={2}>
-        <Heading>Snippets</Heading>
+        <Heading>Notes</Heading>
         <Text>
-          A collection of my personal snippets I use throughout my projects
+          A collection of my personal brief notes, or snippets I use throughout
+          my projects.
         </Text>
       </Grid>
 
@@ -26,9 +27,9 @@ const SnippetList = () => {
         gap={6}
         gridTemplateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
       >
-        {snippets.map((item) => (
+        {notes.map((item) => (
           <MotionBox {...childAnimationProps} key={item.id}>
-            <SnippetCard data={item} />
+            <NoteCard data={item} />
           </MotionBox>
         ))}
       </MotionGrid>
@@ -36,4 +37,4 @@ const SnippetList = () => {
   );
 };
 
-export default SnippetList;
+export default NoteList;

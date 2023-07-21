@@ -1,13 +1,13 @@
 import { Grid, Heading, Text } from '@chakra-ui/react';
 import Balancer from 'react-wrap-balancer';
 
-import type { Snippet } from 'contentlayer/generated';
+import type { Note } from 'contentlayer/generated';
 
-type SnippetDetailHeadProps = {
-  data: Snippet;
+type NoteDetailHeadProps = {
+  data: Note;
 };
 
-const SnippetDetailHead = ({ data }: SnippetDetailHeadProps) => {
+const NoteDetailHead = ({ data }: NoteDetailHeadProps) => {
   return (
     <Grid gap={2}>
       <Heading as="h1" size="3xl">
@@ -18,4 +18,4 @@ const SnippetDetailHead = ({ data }: SnippetDetailHeadProps) => {
   );
 };
 
-export default SnippetDetailHead;
+export default NoteDetailHead;

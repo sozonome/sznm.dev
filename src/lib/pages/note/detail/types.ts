@@ -1,4 +1,4 @@
-export type SnippetDetailProps = {
+export type NoteDetailProps = {
   params: {
     id: string;
   };

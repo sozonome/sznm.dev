@@ -1,5 +1,5 @@
 import type { DeepPartial, Theme } from '@chakra-ui/react';
-import { Outfit as FontHeading, Recursive as FontBody } from 'next/font/google';
+import { Outfit as FontHeading, Geologica as FontBody } from 'next/font/google';
 
 export const fontHeading = FontHeading({
   subsets: ['latin'],
@@ -9,6 +9,7 @@ export const fontHeading = FontHeading({
 export const fontBody = FontBody({
   subsets: ['latin'],
   variable: '--font-body',
+  display: 'swap',
 });
 
 export const fonts: DeepPartial<Theme['fonts']> = {

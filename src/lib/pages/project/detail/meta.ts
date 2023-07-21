@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { sortedProjects } from '~/lib/constants/project';
-import type { ProjectDetailProps } from '~/lib/pages/projects/detail/types';
+import type { ProjectDetailProps } from '~/lib/pages/project/detail/types';
 import { sznmOgImage } from '~/lib/utils/sznmOgImage';
 
 export const generateMetadata = ({

@@ -2,7 +2,13 @@ import { IconButton } from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
 import type { IconType } from 'react-icons';
-import { FaCode, FaFeatherAlt, FaHome, FaRocket, FaUser } from 'react-icons/fa';
+import {
+  FaStickyNote,
+  FaFeatherAlt,
+  FaHome,
+  FaRocket,
+  FaUser,
+} from 'react-icons/fa';
 
 import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
 import { trackEvent } from '~/lib/utils/trackEvent';
@@ -55,9 +61,9 @@ const navigations: NavItemProps[] = [
     icon: FaFeatherAlt,
   },
   {
-    href: '/snippets',
-    label: 'Snippets',
-    icon: FaCode,
+    href: '/notes',
+    label: 'Note',
+    icon: FaStickyNote,
   },
   {
     href: '/about',

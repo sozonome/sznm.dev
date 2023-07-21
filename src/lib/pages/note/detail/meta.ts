@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
-import { sortedSnippets } from '~/lib/constants/snippet';
-import type { SnippetDetailProps } from '~/lib/pages/snippets/detail/types';
+import { sortedNotes } from '~/lib/constants/note';
+import type { NoteDetailProps } from '~/lib/pages/note/detail/types';
 import { sznmOgImage } from '~/lib/utils/sznmOgImage';
 
 export const generateMetadata = ({
   params,
-}: SnippetDetailProps): Metadata | undefined => {
-  const data = sortedSnippets.find(({ id }) => id === (params?.id as string));
+}: NoteDetailProps): Metadata | undefined => {
+  const data = sortedNotes.find(({ id }) => id === (params?.id as string));
 
   if (!data) {
     return undefined;
@@ -15,13 +15,13 @@ export const generateMetadata = ({
 
   const ogImage = sznmOgImage({
     heading: data.title,
-    text: 'Snippets | https://sznm.dev',
+    text: 'Notes | https://sznm.dev',
   });
 
   return {
     title: data.title,
     alternates: {
-      canonical: `/snippets/${data.id}`,
+      canonical: `/notes/${data.id}`,
     },
     openGraph: {
       title: `sozonome | ${data.title}`,

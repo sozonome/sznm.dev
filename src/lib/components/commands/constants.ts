@@ -1,4 +1,4 @@
-import { allBlogs, allSnippets } from 'contentlayer/generated';
+import { allBlogs, allNotes } from 'contentlayer/generated';
 
 import type { CommandCollection } from './types';
 
@@ -23,8 +23,8 @@ const navigationMenus: CommandCollection = {
       id: 'blog',
     },
     {
-      name: 'Snippets',
-      id: 'snippets',
+      name: 'Note',
+      id: 'note',
     },
     {
       name: 'About',
@@ -43,13 +43,13 @@ const blogPosts: CommandCollection = {
   })),
 };
 
-const snippets: CommandCollection = {
-  heading: 'Snippets',
-  pathPrefix: 'snippets',
+const notes: CommandCollection = {
+  heading: 'Notes',
+  pathPrefix: 'notes',
   type: 'nagivation',
-  items: allSnippets.map((snippet) => ({
-    name: snippet.title,
-    id: snippet.id,
+  items: allNotes.map((note) => ({
+    name: note.title,
+    id: note.id,
   })),
 };
 
@@ -68,5 +68,5 @@ export const commands: Array<CommandCollection> = [
   themeCommand,
   navigationMenus,
   blogPosts,
-  snippets,
+  notes,
 ];

@@ -4,20 +4,20 @@ import { Flex, Grid, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import Link from 'next/link';
 import * as React from 'react';
 
-import type { Snippet } from 'contentlayer/generated';
+import type { Note } from 'contentlayer/generated';
 import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
 import { trackEvent } from '~/lib/utils/trackEvent';
 
-type SnippetCardProps = {
-  data: Snippet;
+type NoteCardProps = {
+  data: Note;
 };
 
-const SnippetCard = ({ data }: SnippetCardProps) => {
+const NoteCard = ({ data }: NoteCardProps) => {
   const backgroundColor = useColorModeValue('', 'gray.700');
 
-  const handleClickSnippet = React.useCallback(() => {
+  const handleClickNote = React.useCallback(() => {
     trackEvent({
-      eventName: `Snippet: ${data.title}`,
+      eventName: `Note: ${data.title}`,
       eventData: { type: EVENT_TYPE_NAVIGATE },
     });
   }, [data.title]);
@@ -26,15 +26,15 @@ const SnippetCard = ({ data }: SnippetCardProps) => {
     <Flex
       direction="column"
       as={Link}
-      href={`/snippets/${data.id}`}
-      aria-label={`Open ${data.title} snippet`}
+      href={`/notes/${data.id}`}
+      aria-label={`Open ${data.title} note`}
       gap={4}
       padding={8}
       height="full"
       borderWidth={2}
       borderRadius={24}
       borderColor="cardBorder"
-      onClick={handleClickSnippet}
+      onClick={handleClickNote}
       transition="0.2s ease-out"
       role="group"
       _hover={{
@@ -72,4 +72,4 @@ const SnippetCard = ({ data }: SnippetCardProps) => {
   );
 };
 
-export default SnippetCard;
+export default NoteCard;
