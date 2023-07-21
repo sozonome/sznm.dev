@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.20.7](https://github.com/sozonome/sznm.dev/compare/v1.20.6...v1.20.7) (2023-07-21)
+
+
+### Improvements
+
+* rename snippets to notes, change body font to Geologica ([#205](https://github.com/sozonome/sznm.dev/issues/205)) ([b92950c](https://github.com/sozonome/sznm.dev/commit/b92950c989f5994e3923243d9adb080c11822fb4))
+
 ### [1.20.6](https://github.com/sozonome/sznm.dev/compare/v1.20.5...v1.20.6) (2023-07-17)
 
 
