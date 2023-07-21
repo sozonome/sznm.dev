@@ -17,8 +17,8 @@ const NoteList = () => {
       <Grid gap={2}>
         <Heading>Notes</Heading>
         <Text>
-          A collection of my personal brief notes, or notes I use throughout my
-          projects.
+          A collection of my personal brief notes, or snippets I use throughout
+          my projects.
         </Text>
       </Grid>
 

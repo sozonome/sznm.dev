@@ -9,6 +9,7 @@ export const fontHeading = FontHeading({
 export const fontBody = FontBody({
   subsets: ['latin'],
   variable: '--font-body',
+  display: 'swap',
 });
 
 export const fonts: DeepPartial<Theme['fonts']> = {
