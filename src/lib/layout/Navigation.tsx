@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import type { IconType } from 'react-icons';
 import {
-  FaBookmark,
+  FaStickyNote,
   FaFeatherAlt,
   FaHome,
   FaRocket,
@@ -63,7 +63,7 @@ const navigations: NavItemProps[] = [
   {
     href: '/notes',
     label: 'Note',
-    icon: FaBookmark,
+    icon: FaStickyNote,
   },
   {
     href: '/about',
