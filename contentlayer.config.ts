@@ -81,9 +81,9 @@ const Project = defineDocumentType(() => ({
   },
 }));
 
-const Snippet = defineDocumentType(() => ({
-  name: 'Snippet',
-  filePathPattern: 'snippets/*.md',
+const Note = defineDocumentType(() => ({
+  name: 'Note',
+  filePathPattern: 'notes/*.md',
   fields: {
     title: { type: 'string', required: true },
     description: { type: 'string', required: true },
@@ -94,16 +94,16 @@ const Snippet = defineDocumentType(() => ({
   computedFields: {
     id: {
       type: 'string',
-      resolve: (snippet) =>
+      resolve: (note) =>
         // eslint-disable-next-line no-underscore-dangle
-        snippet._raw.sourceFileName.replace(/\.md$|\.mdx$/, ''),
+        note._raw.sourceFileName.replace(/\.md$|\.mdx$/, ''),
     },
   },
 }));
 
 const contentLayerConfig = makeSource({
   contentDirPath: 'content',
-  documentTypes: [Blog, Project, Snippet],
+  documentTypes: [Blog, Project, Note],
   markdown: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeRaw],

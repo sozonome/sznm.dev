@@ -8,15 +8,15 @@ import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 
 import { renderers } from '~/lib/components/blog/renderers';
+import NoteDetailHead from '~/lib/components/notes/detail/Head';
 import ShareButtons from '~/lib/components/shared/ShareButtons';
-import SnippetDetailHead from '~/lib/components/snippets/detail/Head';
-import { sortedSnippets } from '~/lib/constants/snippet';
+import { sortedNotes } from '~/lib/constants/note';
 
-import styles from './Snippet.module.scss';
-import type { SnippetDetailProps } from './types';
+import styles from './styles.module.scss';
+import type { NoteDetailProps } from './types';
 
-const SnippetDetail = ({ params }: SnippetDetailProps) => {
-  const data = sortedSnippets.find(({ id }) => id === (params?.id as string));
+const NoteDetail = ({ params }: NoteDetailProps) => {
+  const data = sortedNotes.find(({ id }) => id === (params?.id as string));
 
   const giscusTheme: GiscusProps['theme'] = useColorModeValue('light', 'dark');
 
@@ -26,8 +26,8 @@ const SnippetDetail = ({ params }: SnippetDetailProps) => {
 
   return (
     <Box as="article">
-      <SnippetDetailHead data={data} />
-      <ShareButtons title={`Check out this snippet: ${data.title}`} />
+      <NoteDetailHead data={data} />
+      <ShareButtons title={`Check out this note: ${data.title}`} />
       <Spacer height={16} />
       <ReactMarkdown
         className={styles.content}
@@ -37,14 +37,14 @@ const SnippetDetail = ({ params }: SnippetDetailProps) => {
         {data.body.raw}
       </ReactMarkdown>
 
-      <ShareButtons title={`Check out this snippet: ${data.title}`} />
+      <ShareButtons title={`Check out this note: ${data.title}`} />
 
       <Box marginY={12}>
         <Giscus
           repo="sozonome/sznm.dev"
           repoId="MDEwOlJlcG9zaXRvcnkyNjY2Njk3MDg="
           mapping="pathname"
-          category="Snippets"
+          category="Notes"
           categoryId="DIC_kwDOD-UOjM4CQX_7"
           reactionsEnabled="1"
           theme={giscusTheme}
@@ -55,4 +55,4 @@ const SnippetDetail = ({ params }: SnippetDetailProps) => {
   );
 };
 
-export default SnippetDetail;
+export default NoteDetail;

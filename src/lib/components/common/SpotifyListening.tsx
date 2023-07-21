@@ -50,7 +50,7 @@ const SpotifyListening = () => {
           />
         )}
         <Box>
-          <Text fontWeight="extrabold" fontSize="sm">
+          <Text fontWeight="bold" fontSize="sm">
             {data?.trackTitle ?? 'Not Playing'}
           </Text>
           {data?.artist && <Text fontSize="xs">{data.artist}</Text>}

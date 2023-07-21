@@ -3,18 +3,18 @@ import type { Metadata } from 'next';
 import { sznmOgImage } from '~/lib/utils/sznmOgImage';
 
 export const metadata: Metadata = {
-  title: 'Snippets',
+  title: 'Notes',
   alternates: {
-    canonical: '/snippets',
+    canonical: '/notes',
   },
   openGraph: {
-    title: 'Snippets | sozonome',
+    title: 'Notes | sozonome',
     images: {
       url: sznmOgImage({
-        heading: 'Snippets | sozonome',
+        heading: 'Notes | sozonome',
         text: 'https://sznm.dev',
       }),
-      alt: 'Snippets | sozonome og-image',
+      alt: 'Notes | sozonome og-image',
     },
   },
 };
