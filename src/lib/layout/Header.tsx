@@ -55,6 +55,7 @@ const Header = () => {
                 icon={<RiCommandFill />}
                 backgroundColor="transparent"
                 onClick={handleOpenCommandCenter}
+                color="unset"
               />
               <ThemeToggle />
             </Flex>

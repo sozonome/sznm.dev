@@ -35,8 +35,8 @@ const NoteCard = ({ data }: NoteCardProps) => {
       borderRadius={24}
       borderColor="cardBorder"
       onClick={handleClickNote}
-      transition="0.2s ease-out"
       role="group"
+      transition="0.2s ease-out"
       _hover={{
         shadow: 'lg',
         borderColor: 'cardHoverBorder',

@@ -29,6 +29,7 @@ const ThemeToggle = () => {
         icon={toggleIcon}
         onClick={handleClickToggle}
         backgroundColor="transparent"
+        color="unset"
       />
     </Tooltip>
   );

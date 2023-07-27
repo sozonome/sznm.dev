@@ -1,12 +1,9 @@
 'use client';
 
 import type { BoxProps } from '@chakra-ui/react';
-import { useColorModeValue, Heading, Link, Text } from '@chakra-ui/react';
-import * as React from 'react';
+import { useColorModeValue, Heading, Text } from '@chakra-ui/react';
 
 import MotionBox from '~/lib/components/motion/MotionBox';
-import { EVENT_TYPE_LINK } from '~/lib/constants/tracking';
-import { trackEvent } from '~/lib/utils/trackEvent';
 
 const textProps: BoxProps = {
   marginY: 4,
@@ -14,12 +11,6 @@ const textProps: BoxProps = {
 
 const Content = () => {
   const textColor = useColorModeValue('gray.600', 'gray.300');
-  const handleClickInstagramLink = React.useCallback(() => {
-    trackEvent({
-      eventName: 'About: Click Instagram Link',
-      eventData: { type: EVENT_TYPE_LINK },
-    });
-  }, []);
 
   return (
     <MotionBox
@@ -33,22 +24,20 @@ const Content = () => {
       <Heading size="lg">👋 Hi, how are you?</Heading>
 
       <Text {...{ ...textProps, textColor }}>
-        I&apos;m Nathan, currently working as a Frontend Engineer. Most of the
-        time I work with React - TypeScript and Flutter - Dart. Sometimes I make
-        fun projects and share it here.
+        I&apos;m Nathan, an experienced Digital Crafter with a strong passion
+        for crafting customer-centric tech solutions.
       </Text>
 
       <Text {...{ ...textProps, textColor }}>
-        Outside working, I like to travel and{' '}
-        <Link
-          href="https://instagram.com/agustinusnathaniel"
-          isExternal
-          onClick={handleClickInstagramLink}
-        >
-          <Text as="span" fontWeight="extrabold">
-            capture moments.
-          </Text>
-        </Link>
+        My expertise lies in working with various technologies, including React
+        (TypeScript, Next.js) and Flutter (Dart). Throughout my career, I have
+        honed skills in developing tech products that delight users and drive
+        business success.
+      </Text>
+
+      <Text {...{ ...textProps, textColor }}>
+        Sometimes I share fun and exciting projects through this site. I&apos;m
+        passionate about design and leading high-performing teams to success.
       </Text>
     </MotionBox>
   );

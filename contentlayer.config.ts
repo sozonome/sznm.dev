@@ -101,9 +101,28 @@ const Note = defineDocumentType(() => ({
   },
 }));
 
+const Testimony = defineDocumentType(() => ({
+  name: 'Testimony',
+  filePathPattern: 'testimonies/*.md',
+  fields: {
+    name: { type: 'string', required: true },
+    title: { type: 'string', required: true },
+    year: { type: 'string', required: true },
+    linkedin: { type: 'string' },
+  },
+  computedFields: {
+    id: {
+      type: 'string',
+      resolve: (testimony) =>
+        // eslint-disable-next-line no-underscore-dangle
+        testimony._raw.sourceFileName.replace(/\.md$|\.mdx$/, ''),
+    },
+  },
+}));
+
 const contentLayerConfig = makeSource({
   contentDirPath: 'content',
-  documentTypes: [Blog, Project, Note],
+  documentTypes: [Blog, Project, Note, Testimony],
   markdown: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeRaw],
