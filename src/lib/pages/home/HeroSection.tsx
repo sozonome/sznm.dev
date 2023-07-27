@@ -13,7 +13,7 @@ const HeroSection = () => {
           Hello! I&apos;m Nathan.
         </Heading>
         <Text fontSize={{ base: 'md', md: 'xl' }}>
-          Digital crafter specializing in Frontend development.
+          Digital Crafter passionate in building user-centric solutions.
         </Text>
       </Box>
     </Box>
