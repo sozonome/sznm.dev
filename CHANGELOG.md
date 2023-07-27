@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.21.0](https://github.com/sozonome/sznm.dev/compare/v1.20.7...v1.21.0) (2023-07-27)
+
+
+### Features
+
+* **pages:** update home tagline and about content ([#206](https://github.com/sozonome/sznm.dev/issues/206)) ([8c67f9d](https://github.com/sozonome/sznm.dev/commit/8c67f9d97bb7b12a6070e4f1093e1dbdf5f4a594))
+
 ### [1.20.7](https://github.com/sozonome/sznm.dev/compare/v1.20.6...v1.20.7) (2023-07-21)
 
 
