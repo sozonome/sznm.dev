@@ -3,7 +3,7 @@ title: Overflow Scroll without Scrollbar
 description: for sleek overflow scroll in mobile viewport
 published: true
 date: 2022-07-22
-stacks:
+tags:
   - css
   - chakra-ui
 ---

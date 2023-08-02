@@ -50,7 +50,7 @@ const NoteCard = ({ data }: NoteCardProps) => {
       </Grid>
 
       <Flex gap={2}>
-        {data.stacks?.map((stack) => (
+        {data.tags?.map((tag) => (
           <Text
             borderWidth={1}
             paddingY={0.5}
@@ -62,9 +62,9 @@ const NoteCard = ({ data }: NoteCardProps) => {
             }}
             fontSize="xs"
             color="teal"
-            key={stack}
+            key={tag}
           >
-            {stack}
+            {tag}
           </Text>
         ))}
       </Flex>

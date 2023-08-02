@@ -1,4 +1,11 @@
-import { Link as ChakraLink } from '@chakra-ui/react';
+import {
+  Link as ChakraLink,
+  Table,
+  Tbody,
+  Td,
+  Thead,
+  Tr,
+} from '@chakra-ui/react';
 import type { Options } from 'react-markdown/lib/ast-to-react';
 
 import CodeBlock from './CodeBlock';
@@ -19,4 +26,9 @@ export const renderers: Options['components'] = {
   h4: ({ children }) => <HeadingLink as="h4">{String(children)}</HeadingLink>,
   h5: ({ children }) => <HeadingLink as="h5">{String(children)}</HeadingLink>,
   h6: ({ children }) => <HeadingLink as="h6">{String(children)}</HeadingLink>,
+  table: Table,
+  thead: Thead,
+  tbody: Tbody,
+  tr: Tr,
+  td: Td,
 };
