@@ -4,15 +4,12 @@ import { Box, Spacer, useColorModeValue } from '@chakra-ui/react';
 import type { GiscusProps } from '@giscus/react';
 import Giscus from '@giscus/react';
 import { notFound } from 'next/navigation';
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
 
-import { renderers } from '~/lib/components/blog/renderers';
 import NoteDetailHead from '~/lib/components/notes/detail/Head';
+import MarkdownContent from '~/lib/components/shared/MarkdownContent';
 import ShareButtons from '~/lib/components/shared/ShareButtons';
 import { sortedNotes } from '~/lib/constants/note';
 
-import styles from './styles.module.scss';
 import type { NoteDetailProps } from './types';
 
 const NoteDetail = ({ params }: NoteDetailProps) => {
@@ -28,14 +25,9 @@ const NoteDetail = ({ params }: NoteDetailProps) => {
     <Box as="article">
       <NoteDetailHead data={data} />
       <ShareButtons title={`Check out this note: ${data.title}`} />
-      <Spacer height={16} />
-      <ReactMarkdown
-        className={styles.content}
-        rehypePlugins={[rehypeRaw]}
-        components={renderers}
-      >
-        {data.body.raw}
-      </ReactMarkdown>
+      <Spacer height={8} />
+      <MarkdownContent rawContent={data.body.raw} />
+      <Spacer height={8} />
 
       <ShareButtons title={`Check out this note: ${data.title}`} />
 

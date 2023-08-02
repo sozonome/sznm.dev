@@ -89,7 +89,7 @@ const Note = defineDocumentType(() => ({
     description: { type: 'string', required: true },
     published: { type: 'boolean' },
     date: { type: 'string' },
-    stacks: { type: 'list', of: { type: 'string' } },
+    tags: { type: 'list', of: { type: 'string' } },
   },
   computedFields: {
     id: {

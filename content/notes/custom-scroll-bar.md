@@ -3,7 +3,7 @@ title: Custom Scrollbar
 description: define your own custom scroll bar
 published: true
 date: 2022-07-22
-stacks:
+tags:
   - css
   - chakra-ui
 ---

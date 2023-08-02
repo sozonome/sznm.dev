@@ -11,7 +11,7 @@ const { withContentlayer } = require('next-contentlayer');
 const ContentSecurityPolicy = `
   default-src 'self' *.sznm.dev;
   script-src 'self' 'unsafe-inline' 'unsafe-eval' umami.sznm.dev cdn.vercel-insights.com vercel.live *.sznm.dev;
-  frame-src giscus.app vercel.live;
+  frame-src giscus.app vercel.live www.youtube.com;
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ *.sznm.dev;
   img-src * blob: data: *.freepik.com;
   media-src 'none';

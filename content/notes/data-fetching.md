@@ -3,7 +3,7 @@ title: Data Fetching
 description: Fetch data with ease
 published: true
 date: 2022-10-24
-stacks:
+tags:
   - http-client
   - data-fetching
 ---
