@@ -35,7 +35,7 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
   return (
     <Stack as="section" marginBottom={16} spacing={4}>
       <Link href="/projects">
-        <Heading as="h1" size="lg" cursor="pointer" marginBottom={2}>
+        <Heading size="lg" cursor="pointer" marginBottom={2}>
           Projects
         </Heading>
       </Link>
