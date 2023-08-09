@@ -61,6 +61,7 @@
     "zustand": "^4.3.9"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.7",
     "@commitlint/config-conventional": "17.6.7",
     "@commitlint/cz-commitlint": "17.6.7",
     "@next/bundle-analyzer": "^13.4.12",
@@ -72,7 +73,6 @@
     "@types/ua-parser-js": "^0.7.36",
     "@vitest/coverage-c8": "^0.33.0",
     "commitizen": "^4.3.0",
-    "commitlint": "17.6.7",
     "cross-env": "^7.0.3",
     "eslint": "^8.45.0",
     "eslint-config-next": "13.4.12",
