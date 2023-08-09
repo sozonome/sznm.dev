@@ -43,6 +43,7 @@ const Footer = () => {
           href="https://agustinusnathaniel.com"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="agustinusnathaniel.com"
         >
           Agustinus Nathaniel
         </Link>

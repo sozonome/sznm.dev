@@ -10,6 +10,7 @@ const FooterLink = ({ label, url, onClick }: FooterLinkProps) => {
       fontWeight="semibold"
       fontFamily="heading"
       onClick={onClick}
+      aria-label={label}
     >
       {label}
     </Link>
