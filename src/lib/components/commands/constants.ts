@@ -1,4 +1,5 @@
-import { allBlogs, allNotes } from 'contentlayer/generated';
+import { sortedBlogPosts } from '~/lib/constants/blog';
+import { sortedNotes } from '~/lib/constants/note';
 
 import type { CommandCollection } from './types';
 
@@ -37,7 +38,7 @@ const blogPosts: CommandCollection = {
   heading: 'Blog Posts',
   pathPrefix: 'blog',
   type: 'nagivation',
-  items: allBlogs.map((blogPost) => ({
+  items: sortedBlogPosts.map((blogPost) => ({
     name: blogPost.title,
     id: blogPost.id,
   })),
@@ -47,7 +48,7 @@ const notes: CommandCollection = {
   heading: 'Notes',
   pathPrefix: 'notes',
   type: 'nagivation',
-  items: allNotes.map((note) => ({
+  items: sortedNotes.map((note) => ({
     name: note.title,
     id: note.id,
   })),
