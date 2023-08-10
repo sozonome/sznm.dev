@@ -1,12 +1,10 @@
 import type { DeepPartial, SemanticValue, ThemeScale } from '@chakra-ui/react';
 
-export type TokenValue = string | number | SemanticValue<string>;
+type TokenValue = string | number | SemanticValue<string>;
 
-export type ThemeTokenValues = Record<string, TokenValue>;
+type ThemeTokenValues = Record<string, TokenValue>;
 
-export type SemanticTokenType = DeepPartial<
-  Record<ThemeScale, ThemeTokenValues>
->;
+type SemanticTokenType = DeepPartial<Record<ThemeScale, ThemeTokenValues>>;
 
 export const semanticTokens: SemanticTokenType = {
   colors: {

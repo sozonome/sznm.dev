@@ -11,7 +11,7 @@ import Card from '~/lib/components/projects/Card';
 import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
 import { trackEvent } from '~/lib/utils/trackEvent';
 
-export type ProjectsSectionProps = { data: Array<Project> };
+type ProjectsSectionProps = { data: Array<Project> };
 
 const ProjectsSection = ({ data }: ProjectsSectionProps) => {
   const router = useRouter();

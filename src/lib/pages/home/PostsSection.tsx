@@ -10,7 +10,7 @@ import BlogPostPreview from '~/lib/components/blog/BlogPostPreview';
 import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
 import { trackEvent } from '~/lib/utils/trackEvent';
 
-export type PostsSectionProps = {
+type PostsSectionProps = {
   data: Array<Blog>;
 };
 

@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react';
 import type * as React from 'react';
 
-export type ModalWrapperProps = Pick<
+type ModalWrapperProps = Pick<
   ModalProps,
   'isOpen' | 'onClose' | 'size' | 'closeOnOverlayClick'
 > & {

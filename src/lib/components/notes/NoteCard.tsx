@@ -37,6 +37,7 @@ const NoteCard = ({ data }: NoteCardProps) => {
       onClick={handleClickNote}
       role="group"
       transition="0.2s ease-out"
+      justifyContent="space-between"
       _hover={{
         shadow: 'lg',
         borderColor: 'cardHoverBorder',
