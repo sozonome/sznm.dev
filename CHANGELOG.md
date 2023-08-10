@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.22.0](https://github.com/sozonome/sznm.dev/compare/v1.21.0...v1.22.0) (2023-08-10)
+
+
+### Features
+
+* **markdown:** extend markdown renderers ([#207](https://github.com/sozonome/sznm.dev/issues/207)) ([b43f8e2](https://github.com/sozonome/sznm.dev/commit/b43f8e22bd2572e3cddb44d41d7bfb1d2623fd3f))
+
+
+### Bug Fixes
+
+* **cmd:** show only published notes/blogs ([b9c4820](https://github.com/sozonome/sznm.dev/commit/b9c4820da6f5c30cc36bd578436778f410cbaa76))
+
+
+### Improvements
+
+* add aria-label for footer link ([0d257f0](https://github.com/sozonome/sznm.dev/commit/0d257f05135934c1b2ca637be0f43e0ab1e836f9))
+* remove additional h1 in home page ([235f9cc](https://github.com/sozonome/sznm.dev/commit/235f9cc4556f3f7fb685d45018718e1d1f50161d))
+
 ## [1.21.0](https://github.com/sozonome/sznm.dev/compare/v1.20.7...v1.21.0) (2023-07-27)
 
 
