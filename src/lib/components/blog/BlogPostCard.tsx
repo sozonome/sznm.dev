@@ -29,7 +29,9 @@ const BlogPostCard = ({ postData, wrapperProps }: BlogPostCardProps) => {
       <Grid
         as={Link}
         href={`/blog/${postData.id}`}
-        aria-label={`Open ${postData.title}`}
+        aria-label={`Open ${postData.title} ${dateFormatLong(
+          postData.date
+        )} - ${postData.readTime?.text}`}
         onClick={handleClickBlogPost}
         width="100%"
         gap={4}

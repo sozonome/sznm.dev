@@ -38,7 +38,9 @@ const BlogPostPreview = ({ postData, wrapperProps }: BlogPostPreviewProps) => {
         <Box
           as={Link}
           href={`/blog/${postData.id}`}
-          aria-label={`Open ${postData.title}`}
+          aria-label={`Open ${postData.title} ${dateFormatLong(
+            postData.date
+          )} - ${postData.readTime?.text}`}
           onClick={handleClickBlogPost}
           flexWrap="wrap"
           alignItems="center"

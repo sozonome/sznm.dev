@@ -70,7 +70,7 @@ type RootLayoutProps = {
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning>
         <Providers>
           <Layout>{children}</Layout>
         </Providers>
