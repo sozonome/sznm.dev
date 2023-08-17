@@ -24,8 +24,8 @@ const navigationMenus: CommandCollection = {
       id: 'blog',
     },
     {
-      name: 'Note',
-      id: 'note',
+      name: 'Notes',
+      id: 'notes',
     },
     {
       name: 'About',
