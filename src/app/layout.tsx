@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import NextTopLoader from 'nextjs-toploader';
 
 import Providers from '~/app/providers';
 import { baseUrl } from '~/lib/constants/baseUrl';
@@ -71,6 +72,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en">
       <body suppressHydrationWarning>
+        <NextTopLoader color="#747978" showSpinner={false} />
         <Providers>
           <Layout>{children}</Layout>
         </Providers>
