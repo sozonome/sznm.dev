@@ -43,7 +43,7 @@ export const semanticTokens: SemanticTokenType = {
     },
     selectedCommandItemBackground: {
       default: 'gray.300',
-      _dark: 'gray.500',
+      _dark: 'gray.400',
     },
   },
 };
