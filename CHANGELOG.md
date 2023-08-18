@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.23.0](https://github.com/sozonome/sznm.dev/compare/v1.22.0...v1.23.0) (2023-08-18)
+
+
+### Features
+
+* **layout:** top-loader is back 😎 ([6b007b9](https://github.com/sozonome/sznm.dev/commit/6b007b9a41671ebe3d06591c914f460b20c19fe7))
+
+
+### Bug Fixes
+
+* **cmd:** update notes pathname ([f8351f5](https://github.com/sozonome/sznm.dev/commit/f8351f5b0f80733f15bef77bc8e232305ed8a875))
+
+
+### Improvements
+
+* **accessibility:** adjust blog post card aria-label ([142390c](https://github.com/sozonome/sznm.dev/commit/142390c65c8c27c2bcaac836490340f622716d6c))
+* **cmd:** adjust dark mode command item highlight color ([48ca9a9](https://github.com/sozonome/sznm.dev/commit/48ca9a9d0977ff9a8240c490288ca0387b882a51))
+
 ## [1.22.0](https://github.com/sozonome/sznm.dev/compare/v1.21.0...v1.22.0) (2023-08-10)
 
 
