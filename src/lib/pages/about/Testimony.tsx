@@ -63,6 +63,7 @@ const Testimony = () => {
                   justifyContent="space-between"
                   gap={4}
                   padding={6}
+                  key={testimony.id}
                 >
                   <Text fontSize="sm">{testimony.body.raw}</Text>
 

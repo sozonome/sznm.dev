@@ -7,7 +7,7 @@ import { sznmOgImage } from '~/lib/utils/sznmOgImage';
 export const generateMetadata = ({
   params,
 }: NoteDetailProps): Metadata | undefined => {
-  const data = sortedNotes.find(({ id }) => id === (params?.id as string));
+  const data = sortedNotes.find(({ id }) => id === params?.id);
 
   if (!data) {
     return undefined;

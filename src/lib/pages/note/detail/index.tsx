@@ -13,7 +13,7 @@ import { sortedNotes } from '~/lib/constants/note';
 import type { NoteDetailProps } from './types';
 
 const NoteDetail = ({ params }: NoteDetailProps) => {
-  const data = sortedNotes.find(({ id }) => id === (params?.id as string));
+  const data = sortedNotes.find(({ id }) => id === params?.id);
 
   const giscusTheme: GiscusProps['theme'] = useColorModeValue('light', 'dark');
 
