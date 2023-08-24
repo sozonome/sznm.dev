@@ -7,9 +7,7 @@ import { sznmOgImage } from '~/lib/utils/sznmOgImage';
 export const generateMetadata = ({
   params,
 }: ProjectDetailProps): Metadata | undefined => {
-  const projectData = sortedProjects.find(
-    ({ id }) => id === (params.id as string)
-  );
+  const projectData = sortedProjects.find(({ id }) => id === params.id);
 
   if (!projectData) {
     return undefined;

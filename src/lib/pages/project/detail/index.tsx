@@ -9,9 +9,7 @@ import { sortedProjects } from '~/lib/constants/project';
 import type { ProjectDetailProps } from './types';
 
 const ProjectDetail = ({ params }: ProjectDetailProps) => {
-  const projectData = sortedProjects.find(
-    ({ id }) => id === (params.id as string)
-  );
+  const projectData = sortedProjects.find(({ id }) => id === params.id);
 
   if (!projectData) {
     return notFound();
