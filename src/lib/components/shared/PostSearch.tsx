@@ -1,12 +1,17 @@
 import { InputGroup, Input, InputRightElement } from '@chakra-ui/react';
 import { FaSearch } from 'react-icons/fa';
 
-type BlogPostSearchProps = {
+type PostSearchProps = {
   keyword: string;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
+  placeholder?: string;
 };
 
-const BlogPostSearch = ({ keyword, onChange }: BlogPostSearchProps) => {
+const PostSearch = ({
+  keyword,
+  onChange,
+  placeholder = 'Search',
+}: PostSearchProps) => {
   return (
     <InputGroup>
       <Input
@@ -14,7 +19,7 @@ const BlogPostSearch = ({ keyword, onChange }: BlogPostSearchProps) => {
         type="text"
         defaultValue={keyword}
         onChange={onChange}
-        placeholder="Search posts"
+        placeholder={placeholder}
       />
       <InputRightElement>
         <FaSearch />
@@ -23,4 +28,4 @@ const BlogPostSearch = ({ keyword, onChange }: BlogPostSearchProps) => {
   );
 };
 
-export default BlogPostSearch;
+export default PostSearch;

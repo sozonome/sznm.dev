@@ -5,8 +5,8 @@ import debounce from 'lodash-es/debounce';
 import * as React from 'react';
 
 import BlogPostCard from '~/lib/components/blog/BlogPostCard';
-import BlogPostSearch from '~/lib/components/blog/BlogPostSearch';
 import MotionGrid from '~/lib/components/motion/MotionGrid';
+import PostSearch from '~/lib/components/shared/PostSearch';
 import {
   childAnimationProps,
   staggerAnimationProps,
@@ -20,11 +20,11 @@ const BlogPostList = () => {
     post.title.toLowerCase().includes(keyword.toLowerCase())
   );
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleChangeKeyword = React.useCallback(
-    () =>
-      debounce((event: React.ChangeEvent<HTMLInputElement>) => {
-        setKeyword(event.target.value);
-      }, 150),
+    debounce((event: React.ChangeEvent<HTMLInputElement>) => {
+      setKeyword(event.target.value);
+    }, 150),
     []
   );
 
@@ -37,7 +37,11 @@ const BlogPostList = () => {
         <Text>Just some writings</Text>
       </Grid>
 
-      <BlogPostSearch keyword={keyword} onChange={handleChangeKeyword()} />
+      <PostSearch
+        keyword={keyword}
+        onChange={handleChangeKeyword}
+        placeholder="Search Post"
+      />
 
       <MotionGrid
         gap={16}
