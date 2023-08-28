@@ -87,8 +87,8 @@ const Note = defineDocumentType(() => ({
   fields: {
     title: { type: 'string', required: true },
     description: { type: 'string', required: true },
+    date: { type: 'string', required: true },
     published: { type: 'boolean' },
-    date: { type: 'string' },
     tags: { type: 'list', of: { type: 'string' } },
   },
   computedFields: {
