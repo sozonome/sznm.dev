@@ -10,6 +10,10 @@ export const links: Array<Pick<FooterLinkProps, 'label' | 'url'>> = [
     url: 'https://base.sznm.dev/bookmarks',
   },
   {
+    label: 'T.I.L.',
+    url: '/til',
+  },
+  {
     label: 'Templates',
     url: 'https://github.com/sozonome?tab=repositories&type=template&language=&sort=stargazers',
   },

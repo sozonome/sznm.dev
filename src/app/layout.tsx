@@ -6,6 +6,7 @@ import Providers from '~/app/providers';
 import { baseUrl } from '~/lib/constants/baseUrl';
 import { UMAMI_SRC, UMAMI_WEBSITE_ID } from '~/lib/constants/umami';
 import Layout from '~/lib/layout';
+import '~/lib/styles/global.css';
 
 const creator = 'Agustinus Nathaniel';
 

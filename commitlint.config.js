@@ -28,6 +28,7 @@ const CommitLintConfiguration = {
         'services',
         'static',
         'theme',
+        'til',
         'utils',
       ],
     ],
