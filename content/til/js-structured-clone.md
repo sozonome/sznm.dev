@@ -8,6 +8,6 @@ tags:
   - function
 ---
 
-JavaScript has built-in function called `sctructuredClone` which able to deep clone objects.
+JavaScript has built-in function called [sctructuredClone](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone) which able to deep clone objects.
 
 References: https://www.builder.io/blog/structured-clone

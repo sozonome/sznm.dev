@@ -40,8 +40,6 @@ const TodayILearnPage = () => {
                 </Text>
               </Grid>
 
-              {til.body.raw}
-
               <MarkdownContent rawContent={til.body.raw} />
             </Stack>
             {index !== sortedTodayILearns.length - 1 ? (
