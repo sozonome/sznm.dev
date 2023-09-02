@@ -101,6 +101,26 @@ const Note = defineDocumentType(() => ({
   },
 }));
 
+const TodayILearn = defineDocumentType(() => ({
+  name: 'TodayILearn',
+  filePathPattern: 'til/*.md',
+  fields: {
+    title: { type: 'string', required: true },
+    description: { type: 'string' },
+    published: { type: 'boolean' },
+    date: { type: 'string', required: true },
+    tags: { type: 'list', of: { type: 'string' } },
+  },
+  computedFields: {
+    id: {
+      type: 'string',
+      resolve: (til) =>
+        // eslint-disable-next-line no-underscore-dangle
+        til._raw.sourceFileName.replace(/\.md$|\.mdx$/, ''),
+    },
+  },
+}));
+
 const Testimony = defineDocumentType(() => ({
   name: 'Testimony',
   filePathPattern: 'testimonies/*.md',
@@ -122,7 +142,7 @@ const Testimony = defineDocumentType(() => ({
 
 const contentLayerConfig = makeSource({
   contentDirPath: 'content',
-  documentTypes: [Blog, Project, Note, Testimony],
+  documentTypes: [Blog, Project, Note, TodayILearn, Testimony],
   markdown: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeRaw],
