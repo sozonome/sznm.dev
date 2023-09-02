@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.25.0](https://github.com/sozonome/sznm.dev/compare/v1.24.0...v1.25.0) (2023-09-02)
+
+
+### Features
+
+* **til:** add TIL page ([#208](https://github.com/sozonome/sznm.dev/issues/208)) ([274a031](https://github.com/sozonome/sznm.dev/commit/274a03161e548242a8694cd1529a036c69a90956))
+
+
+### Improvements
+
+* adjust key and remove unnecessary assertion ([c9261f4](https://github.com/sozonome/sznm.dev/commit/c9261f40f1eb69e485b9c2700a5b8f46ef763cff))
+* remove unnecessary assertion ([a9d48b6](https://github.com/sozonome/sznm.dev/commit/a9d48b6fb6c3dc2566a8b36a7b9de7a4e4efdfb2))
+
 ## [1.24.0](https://github.com/sozonome/sznm.dev/compare/v1.23.0...v1.24.0) (2023-08-24)
 
 
