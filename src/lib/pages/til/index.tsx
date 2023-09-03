@@ -25,7 +25,7 @@ const TodayILearnPage = () => {
             >
               <Grid
                 gap={{ base: 1, md: 2 }}
-                minWidth={240}
+                width={240}
                 position={{ md: 'sticky' }}
                 top={24}
                 marginTop={2}
