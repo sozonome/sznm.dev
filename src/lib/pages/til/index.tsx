@@ -1,7 +1,6 @@
-import { Divider, Grid, Heading, Stack, Text } from '@chakra-ui/react';
+import { Divider, Grid, Heading, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 
-import MotionBox from '~/lib/components/motion/MotionBox';
 import MotionGrid from '~/lib/components/motion/MotionGrid';
 import MarkdownContent from '~/lib/components/shared/MarkdownContent';
 import {
@@ -14,18 +13,17 @@ import { dateFormatLong } from '~/lib/utils/dateFormat';
 const TodayILearnPage = () => {
   return (
     <Grid gap={8} scrollBehavior="smooth">
-      <Heading>Today I Learn</Heading>
+      <Heading>Today I Learned</Heading>
       <MotionGrid {...staggerAnimationProps} gap={12}>
         {sortedTodayILearns.map((til, index) => (
-          <MotionBox {...childAnimationProps} key={til.id}>
-            <Stack
-              direction={{ base: 'column', md: 'row' }}
-              spacing={4}
+          <MotionGrid {...childAnimationProps} gap={12}>
+            <Grid
+              gridTemplateColumns={{ base: '1fr', md: '1fr 2fr' }}
+              gap={8}
               alignItems="start"
             >
               <Grid
                 gap={{ base: 1, md: 2 }}
-                width={240}
                 position={{ md: 'sticky' }}
                 top={24}
                 marginTop={2}
@@ -46,11 +44,11 @@ const TodayILearnPage = () => {
               </Grid>
 
               <MarkdownContent rawContent={til.body.raw} />
-            </Stack>
+            </Grid>
             {index !== sortedTodayILearns.length - 1 ? (
               <Divider color="gray" />
             ) : null}
-          </MotionBox>
+          </MotionGrid>
         ))}
       </MotionGrid>
     </Grid>

@@ -1,7 +1,8 @@
 'use client';
 
-import { Grid, Heading, Text } from '@chakra-ui/react';
+import { Button, Flex, Grid, Heading, Text } from '@chakra-ui/react';
 import debounce from 'lodash-es/debounce';
+import Link from 'next/link';
 import React from 'react';
 
 import MotionBox from '~/lib/components/motion/MotionBox';
@@ -51,6 +52,11 @@ const NoteList = () => {
           A collection of my personal brief notes, tips, short form posts, or
           snippets I use throughout my projects.
         </Text>
+        <Flex>
+          <Button as={Link} href="/til" size="sm" variant="outline">
+            T.I.L.
+          </Button>
+        </Flex>
       </Grid>
 
       <PostSearch

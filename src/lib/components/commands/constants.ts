@@ -28,6 +28,10 @@ const navigationMenus: CommandCollection = {
       id: 'notes',
     },
     {
+      name: 'T.I.L. (Today I Learned)',
+      id: 'til',
+    },
+    {
       name: 'About',
       id: 'about',
     },
