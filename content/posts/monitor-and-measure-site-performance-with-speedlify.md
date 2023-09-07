@@ -113,13 +113,13 @@ Commit your changes and run `git push` to apply changes to your github repositor
 
 Open your Netlify dashboard ([https://app.netlify.com/](https://app.netlify.com/)), click "New site from Git". Point it to your Speedlify repository.
 
-![Click New site from Git](https://sznm.dev/images/2020-11-07-monitor-and-measure-site-performance-with-speedlify/add-site-netlify.png)
+![Click New site from Git](/images/2020-11-07-monitor-and-measure-site-performance-with-speedlify/add-site-netlify.png)
 
 Confirm the build configurations until "Deploy Site" button is shown and click that button. Netlify build will do the build and deployment process. If the build and deployment process are successful, you can preview your deployment.
 
 The measurement page will look like this:
 
-![Measurement page](https://sznm.dev/images/2020-11-07-monitor-and-measure-site-performance-with-speedlify/preview.png)
+![Measurement page](/images/2020-11-07-monitor-and-measure-site-performance-with-speedlify/preview.png)
 
 ### #5: Configure Github Actions to Automatically Trigger Build Every Desired Time
 
@@ -127,14 +127,14 @@ To do measurement from time-to-time, we will utilize Netlify build hooks and Git
 
 We will need build hook link (webhooks) to trigger build in Netlify. To get that link, open your speedlify project in your Netlify dashboard, then open "Site settings". Open "Build & Deploy".
 
-![Open Build and Deploy settings](https://sznm.dev/images/2020-11-07-monitor-and-measure-site-performance-with-speedlify/build-and-deploy-setting.png)
+![Open Build and Deploy settings](/images/2020-11-07-monitor-and-measure-site-performance-with-speedlify/build-and-deploy-setting.png)
 
 Then point to "Build hooks", click "Add build hook".
-![Add Build Hook](https://sznm.dev/images/2020-11-07-monitor-and-measure-site-performance-with-speedlify/add-build-hook.png)
+![Add Build Hook](/images/2020-11-07-monitor-and-measure-site-performance-with-speedlify/add-build-hook.png)
 
 We will get the build hooks URL, copy that link.
 
-![Alt Text](https://sznm.dev/images/2020-11-07-monitor-and-measure-site-performance-with-speedlify/build-hook-link.png)
+![Alt Text](/images/2020-11-07-monitor-and-measure-site-performance-with-speedlify/build-hook-link.png)
 
 Now we can configure Github Actions to automatically trigger build to Netlify. Go back to your speedlify local folder, add a file named `.github/workflows/main.yml` and paste the copied build hooks URL into this file:
 
