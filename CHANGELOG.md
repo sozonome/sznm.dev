@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.25.1](https://github.com/sozonome/sznm.dev/compare/v1.25.0...v1.25.1) (2023-09-08)
+
+
+### Improvements
+
+* **til:** add animation when initial load page ([ed062aa](https://github.com/sozonome/sznm.dev/commit/ed062aa8a7940bbbe6567ebe89aba41db406c2d4))
+* **til:** adjust consistent width ([b6a2aef](https://github.com/sozonome/sznm.dev/commit/b6a2aef6b5bdf2392a1afa31947f3413f53d9838))
+* **til:** adjust layout and add entry points ([8ab7827](https://github.com/sozonome/sznm.dev/commit/8ab7827bd0ed29e889c7fb8a7ab35536e228c4d8))
+
 ## [1.25.0](https://github.com/sozonome/sznm.dev/compare/v1.24.0...v1.25.0) (2023-09-02)
 
 

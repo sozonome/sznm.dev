@@ -2,7 +2,7 @@
   "name": "sznm.dev",
   "private": true,
   "description": "Agustinus Nathaniel's dev site",
-  "version": "1.25.0",
+  "version": "1.25.1",
   "author": "sozonome",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
