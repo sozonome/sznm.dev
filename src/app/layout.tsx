@@ -4,7 +4,7 @@ import NextTopLoader from 'nextjs-toploader';
 
 import Providers from '~/app/providers';
 import { baseUrl } from '~/lib/constants/baseUrl';
-import { UMAMI_SRC, UMAMI_WEBSITE_ID } from '~/lib/constants/umami';
+import { env } from '~/lib/constants/env';
 import Layout from '~/lib/layout';
 import '~/lib/styles/global.css';
 
@@ -82,8 +82,8 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         <Script
           async
           defer
-          data-website-id={UMAMI_WEBSITE_ID}
-          src={UMAMI_SRC}
+          data-website-id={env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+          src={env.NEXT_PUBLIC_UMAMI_SRC}
           data-domains="sznm.dev"
         />
       </body>

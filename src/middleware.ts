@@ -3,7 +3,7 @@
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
-import { SHORTENER_HOST_NAME } from '~/lib/constants/env';
+import { env } from '~/lib/constants/env';
 
 export const middleware = async (req: NextRequest) => {
   const slug = req.nextUrl.pathname.split('/')[2];
@@ -12,7 +12,7 @@ export const middleware = async (req: NextRequest) => {
     return NextResponse.rewrite(`${req.nextUrl.origin}/404`);
   }
 
-  return NextResponse.redirect(`${SHORTENER_HOST_NAME}/${slug}`);
+  return NextResponse.redirect(`${env.SHORTENER_HOST_NAME}/${slug}`);
 };
 
 export const config = {

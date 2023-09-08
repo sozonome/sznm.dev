@@ -38,7 +38,7 @@
     "additional.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "next.config.js",
+    "next.config.mjs",
     "src",
     ".contentlayer/generated",
     ".next/types/**/*.ts"
