@@ -10,6 +10,6 @@ datasource db {
 
 model Views {
   id    Int     @id @default(autoincrement())
-  slug  String? @db.VarChar(255)
+  slug  String? @unique(map: "unique_slug") @db.VarChar(255)
   count Int?    @default(0)
 }

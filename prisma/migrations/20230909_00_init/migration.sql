@@ -7,3 +7,6 @@ CREATE TABLE "Views" (
     CONSTRAINT "Views_pkey" PRIMARY KEY ("id")
 );
 
+-- CreateIndex
+CREATE UNIQUE INDEX "unique_slug" ON "Views"("slug");
+
