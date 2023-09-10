@@ -16,7 +16,7 @@ const BlogPost = ({ params }: BlogPostProps) => {
   const postData = sortedBlogPosts.find(({ id }) => id === params.id);
 
   if (!postData) {
-    return notFound();
+    notFound();
   }
 
   return (

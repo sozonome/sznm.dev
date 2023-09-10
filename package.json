@@ -6,6 +6,7 @@
   "author": "sozonome",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "postinstall": "prisma generate",
     "dev": "next dev",
     "build": "contentlayer build && next build",
     "build:turbo": "npx turbo build",
@@ -26,6 +27,7 @@
     "up-latest": "pnpm up-interactive -L",
     "release": "cross-env HUSKY=0 standard-version",
     "push-release": "git push --follow-tags origin main",
+    "db:studio": "npx prisma studio",
     "prepare": "husky install"
   },
   "dependencies": {
