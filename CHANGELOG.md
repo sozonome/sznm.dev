@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.26.0](https://github.com/sozonome/sznm.dev/compare/v1.25.1...v1.26.0) (2023-09-10)
+
+
+### Features
+
+* add view counter for contents pages ([#215](https://github.com/sozonome/sznm.dev/issues/215)) ([fcece58](https://github.com/sozonome/sznm.dev/commit/fcece580d0c28e7917e39c9bf4ec750b809cd911))
+
+
+### Bug Fixes
+
+* adjust allviewcount key for notes ([666de9e](https://github.com/sozonome/sznm.dev/commit/666de9e056449703c781c802159838ef27fc9e0f))
+* adjust notes counter slug ([d1eac33](https://github.com/sozonome/sznm.dev/commit/d1eac333662cf4c8cce587bd5c50f18fafe3d4bf))
+* update turbo env deps for build pipeline ([c59e601](https://github.com/sozonome/sznm.dev/commit/c59e60156be48c1ef9c55c22d381988bbfe4460f))
+
 ### [1.25.1](https://github.com/sozonome/sznm.dev/compare/v1.25.0...v1.25.1) (2023-09-08)
 
 
