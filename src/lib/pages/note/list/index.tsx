@@ -5,7 +5,7 @@ import NoteListWrapper from '~/lib/pages/note/list/components/NoteListWrapper';
 import { getAllViewCount } from '~/lib/services/db/views';
 
 const NoteList = async () => {
-  const noteViewCounts = await getAllViewCount('/note/');
+  const noteViewCounts = await getAllViewCount('/notes/');
 
   return (
     <Grid gap={12}>
