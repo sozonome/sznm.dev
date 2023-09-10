@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Views {
+  id    Int     @id @default(autoincrement())
+  slug  String? @unique(map: "unique_slug") @db.VarChar(255)
+  count Int?    @default(0)
+}

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   referrer: 'origin-when-cross-origin',
   colorScheme: 'dark light',
   icons: {
-    icon: '/avataaars.svg',
+    icon: '/favicon.ico',
   },
   appleWebApp: {
     title: 'sznm.dev',

@@ -1,3 +1,5 @@
+'use client';
+
 import { HStack, IconButton, useToast } from '@chakra-ui/react';
 import { usePathname } from 'next/navigation';
 import * as React from 'react';
