@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation';
 
 import BlogPostHead from '~/lib/components/blog/post/Head';
 import BlogPostMeta from '~/lib/components/blog/post/Meta';
-import DetailViewCounts from '~/lib/components/shared/DetailViewCounts';
 import GiscusWrapper from '~/lib/components/shared/GiscusWrapper';
 import MarkdownContent from '~/lib/components/shared/MarkdownContent';
 import ShareButtons from '~/lib/components/shared/ShareButtons';
@@ -22,7 +21,6 @@ const BlogPost = ({ params }: BlogPostProps) => {
   return (
     <Box as="article">
       <BlogPostMeta postData={postData} />
-
       <AspectRatio
         width="full"
         ratio={3 / 1}
@@ -36,14 +34,9 @@ const BlogPost = ({ params }: BlogPostProps) => {
           borderRadius={{ base: 12, md: 24 }}
         />
       </AspectRatio>
-
       <BlogPostHead postData={postData} />
-      <DetailViewCounts slug={`/blog/${params.id}`} />
-
       <MarkdownContent rawContent={postData.body.raw} />
-
       <ShareButtons title={`Check out this blog post: ${postData.title}`} />
-
       <Box marginY={12}>
         <GiscusWrapper category="Blog Post" categoryId="DIC_kwDOD-UOjM4B_fhR" />
       </Box>

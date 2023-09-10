@@ -6,7 +6,9 @@ import Balancer from 'react-wrap-balancer';
 import type { Blog } from 'contentlayer/generated';
 import type { MotionBoxProps } from '~/lib/components/motion/MotionBox';
 import MotionBox from '~/lib/components/motion/MotionBox';
+import ViewCounter from '~/lib/components/shared/ViewCounter';
 import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
+import type { ViewCounts } from '~/lib/services/db/views';
 import { dateFormatLong } from '~/lib/utils/dateFormat';
 import { trackEvent } from '~/lib/utils/trackEvent';
 import { unsplashImg } from '~/lib/utils/unsplashImg';
@@ -14,15 +16,23 @@ import { unsplashImg } from '~/lib/utils/unsplashImg';
 type BlogPostCardProps = {
   postData: Blog;
   wrapperProps?: MotionBoxProps;
+  blogViewCounts: ViewCounts;
 };
 
-const BlogPostCard = ({ postData, wrapperProps }: BlogPostCardProps) => {
+const BlogPostCard = ({
+  postData,
+  wrapperProps,
+  blogViewCounts,
+}: BlogPostCardProps) => {
   const handleClickBlogPost = React.useCallback(() => {
     trackEvent({
       eventName: `Blog Post: ${postData.title}`,
       eventData: { type: EVENT_TYPE_NAVIGATE },
     });
   }, [postData.title]);
+
+  const viewCount =
+    blogViewCounts.find((item) => item.slug?.includes(postData.id))?.count ?? 0;
 
   return (
     <MotionBox {...wrapperProps}>
@@ -59,6 +69,12 @@ const BlogPostCard = ({ postData, wrapperProps }: BlogPostCardProps) => {
           </Heading>
           <Text fontSize="xs">
             {dateFormatLong(postData.date)} - {postData.readTime?.text}
+            {' | '}
+            <ViewCounter
+              slug={`/blog/${postData.id}`}
+              count={viewCount}
+              as="span"
+            />
           </Text>
         </Box>
       </Grid>

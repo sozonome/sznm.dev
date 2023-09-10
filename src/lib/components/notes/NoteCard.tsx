@@ -5,15 +5,21 @@ import Link from 'next/link';
 import * as React from 'react';
 
 import type { Note } from 'contentlayer/generated';
+import ViewCounter from '~/lib/components/shared/ViewCounter';
 import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
+import type { ViewCounts } from '~/lib/services/db/views';
 import { trackEvent } from '~/lib/utils/trackEvent';
 
 type NoteCardProps = {
   data: Note;
+  noteViewCounts: ViewCounts;
 };
 
-const NoteCard = ({ data }: NoteCardProps) => {
+const NoteCard = ({ data, noteViewCounts }: NoteCardProps) => {
   const backgroundColor = useColorModeValue('', 'gray.700');
+
+  const viewCount =
+    noteViewCounts.find((item) => item.slug?.includes(data.id))?.count ?? 0;
 
   const handleClickNote = React.useCallback(() => {
     trackEvent({
@@ -50,25 +56,33 @@ const NoteCard = ({ data }: NoteCardProps) => {
         <Text fontSize="sm">{data.description}</Text>
       </Grid>
 
-      <Flex gap={2}>
-        {data.tags?.map((tag) => (
-          <Text
-            borderWidth={1}
-            paddingY={0.5}
-            paddingX={2}
-            borderRadius={12}
-            transition="0.2s ease-out"
-            _groupHover={{
-              color: 'teal.400',
-            }}
-            fontSize="xs"
-            color="teal"
-            key={tag}
-          >
-            {tag}
-          </Text>
-        ))}
-      </Flex>
+      <Grid gap={2}>
+        <Flex gap={2}>
+          {data.tags?.map((tag) => (
+            <Text
+              borderWidth={1}
+              paddingY={0.5}
+              paddingX={2}
+              borderRadius={12}
+              transition="0.2s ease-out"
+              _groupHover={{
+                color: 'teal.400',
+              }}
+              fontSize="xs"
+              color="teal"
+              key={tag}
+            >
+              {tag}
+            </Text>
+          ))}
+        </Flex>
+
+        <ViewCounter
+          slug={`/note/${data.id}`}
+          count={viewCount}
+          fontSize="xs"
+        />
+      </Grid>
     </Flex>
   );
 };
