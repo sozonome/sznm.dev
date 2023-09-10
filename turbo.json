@@ -11,7 +11,9 @@
         "SPOTIFY_REFRESH_TOKEN",
         "SHORTENER_HOST_NAME",
         "PORTFOLIO_ZONE_URL",
-        "PORTFOLIO_BUILD_ID"
+        "PORTFOLIO_BUILD_ID",
+        "DATABASE_URL",
+        "DIRECT_URL"
       ]
     },
     "lint": {
