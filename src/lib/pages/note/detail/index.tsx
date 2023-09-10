@@ -21,7 +21,7 @@ const NoteDetail = ({ params }: NoteDetailProps) => {
     <Box as="article">
       <NoteDetailHead data={data} />
       <ShareButtons title={`Check out this note: ${data.title}`} />
-      <DetailViewCounts slug={`/note/${params.id}`} />
+      <DetailViewCounts slug={`/notes/${params.id}`} />
       <Spacer height={8} />
       <MarkdownContent rawContent={data.body.raw} />
       <Spacer height={8} />

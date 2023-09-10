@@ -78,7 +78,7 @@ const NoteCard = ({ data, noteViewCounts }: NoteCardProps) => {
         </Flex>
 
         <ViewCounter
-          slug={`/note/${data.id}`}
+          slug={`/notes/${data.id}`}
           count={viewCount}
           fontSize="xs"
         />
