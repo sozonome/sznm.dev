@@ -26,3 +26,5 @@ Some things to check
 - VPN
 - Outstanding Bills
 - False / Incorrect ENV values
+- Reinstall node_modules
+- Rebuild .next
