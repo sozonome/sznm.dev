@@ -18,10 +18,8 @@ export const semanticTokens: SemanticTokenType = {
       _dark: 'gray.800',
     },
     headerAlphaBackground: {
-      // gray.50 0.8
-      default: 'rgba(249, 250, 250, 0.8)',
-      // gray.800 0.8
-      _dark: 'rgba(26, 32, 42, 0.8)',
+      default: 'rgba(232, 233, 233, 0.8)',
+      _dark: 'rgba(10, 12, 12, 0.8)',
     },
     tabBarAlphaBackground: {
       default: 'rgba(209, 210, 210, 0.8)',
@@ -32,12 +30,12 @@ export const semanticTokens: SemanticTokenType = {
       _dark: 'gray.700',
     },
     cardBorder: {
-      default: 'gray.300',
-      _dark: 'gray.700',
+      default: 'gray.200',
+      _dark: 'gray.500',
     },
     cardHoverBorder: {
-      default: 'gray.600',
-      _dark: 'gray.600',
+      default: 'gray.500',
+      _dark: 'gray.400',
     },
     buttonBackground: {
       default: 'gray.100',

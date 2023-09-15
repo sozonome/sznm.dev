@@ -27,8 +27,8 @@ export const styles: DeepPartial<Theme['styles']> = {
      */
     html: {
       scrollbarWidth: 'thin',
-      scrollbarColor: `${props.colorMode === 'light' ? '#e5e8eb' : '#2D3748'} ${
-        props.colorMode === 'light' ? '#a5adb8' : 'black'
+      scrollbarColor: `${props.colorMode === 'light' ? '#A0AEC0' : '#2D3748'} ${
+        props.colorMode === 'light' ? '#CBD5E0' : 'black'
       }`,
     },
   }),
