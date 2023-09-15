@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.26.1](https://github.com/sozonome/sznm.dev/compare/v1.26.0...v1.26.1) (2023-09-15)
+
+
+### Improvements
+
+* **theme:** adjust cmd selected background color ([93f5841](https://github.com/sozonome/sznm.dev/commit/93f58417f0e6f3f74d5c84eb612939e2058011b4))
+* **theme:** adjust gray color palette ([954a428](https://github.com/sozonome/sznm.dev/commit/954a4289494a1442b0703ea0a8cb905f4a955126))
+
 ## [1.26.0](https://github.com/sozonome/sznm.dev/compare/v1.25.1...v1.26.0) (2023-09-10)
 
 
