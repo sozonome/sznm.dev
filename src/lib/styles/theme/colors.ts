@@ -13,19 +13,21 @@ export const colors: DeepPartial<Theme['colors']> = {
     500: '#9F9287',
     300: '#BFB7AF',
   },
-  // https://tailcolor.com/palettes/181f1e
+  // History:
+  // v2: https://tailcolor.com/palettes/181f1e
+  // v3: https://palette.saas-ui.dev/ gray #212121
   // colors converter:
   // - https://www.w3schools.com/colors/colors_hexadecimal.asp
   gray: {
-    50: '#e8e9e9',
-    100: '#d1d2d2',
-    200: '#a3a5a5',
-    300: '#747978',
-    400: '#464c4b',
-    500: '#181f1e',
-    600: '#131918',
-    700: '#0e1312',
-    800: '#0a0c0c',
-    900: '#050606',
+    '50': '#f9fafa',
+    '100': '#f0f1f3',
+    '200': '#e5e8eb',
+    '300': '#d0d4da',
+    '400': '#a5adb8',
+    '500': '#748091',
+    '600': '#45566c',
+    '700': '#2c3747',
+    '800': '#1a202a',
+    '900': '#141a21',
   },
 };
