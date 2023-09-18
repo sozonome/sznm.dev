@@ -28,3 +28,4 @@ Some things to check
 - False / Incorrect ENV values
 - Reinstall node_modules
 - Rebuild .next
+- Compare package.json, make sure all required packages is installed
