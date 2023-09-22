@@ -25,3 +25,5 @@ Mostly Sans Serif and Variable Fonts.
 - [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible)
 - [Instrument Serif](https://fonts.google.com/specimen/Instrument+Serif)
 - [Gantari](https://fonts.google.com/specimen/Gantari)
+- [Noto Sans](https://fonts.google.com/specimen/Noto+Sans)
+- [Poppins](https://fonts.google.com/specimen/Poppins)
