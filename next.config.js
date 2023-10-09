@@ -2,6 +2,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 const { withContentlayer } = require('next-contentlayer');
+const million = require('million/compiler');
 
 /**
  * @docs
@@ -65,65 +66,68 @@ const portfolioZoneUrl = process.env.PORTFOLIO_ZONE_URL ?? '';
 const portfolioDataPrefix = `/_next/data/${process.env.PORTFOLIO_BUILD_ID}`;
 
 /** @type {import('next').NextConfig} */
-module.exports = withBundleAnalyzer(
-  withContentlayer({
-    reactStrictMode: true,
-    headers: async () => {
-      return [
-        {
-          source: '/',
-          headers: securityHeaders,
-        },
-        {
-          source: '/:path*',
-          headers: securityHeaders,
-        },
-      ];
-    },
-    eslint: {
-      dirs: ['src'],
-    },
-    transpilePackages: ['lodash-es'],
-    experimental: {
-      scrollRestoration: true,
-      serverActions: true,
-    },
-    redirects: () => {
-      return [
-        {
-          source: '/snippets/:id',
-          destination: '/notes/:id',
-          permanent: false,
-        },
-      ];
-    },
-    rewrites: () => ({
-      beforeFiles: [
-        {
-          source: '/portfolio',
-          destination: `${portfolioZoneUrl}/portfolio`,
-        },
-        {
-          source: '/portfolio/:path*',
-          destination: `${portfolioZoneUrl}/portfolio/:path*`,
-        },
-        {
-          source: `${portfolioDataPrefix}/portfolio.json`,
-          destination: `${portfolioZoneUrl}${portfolioDataPrefix}/portfolio.json`,
-        },
-        {
-          source: `${portfolioDataPrefix}/portfolio/:path*`,
-          destination: `${portfolioZoneUrl}${portfolioDataPrefix}/portfolio/:path*`,
-        },
-        {
-          source: '/api/portfolio/:path*',
-          destination: `${portfolioZoneUrl}/api/portfolio/:path*`,
-        },
-        {
-          source: '/assets/portfolio/:path*',
-          destination: `${portfolioZoneUrl}/assets/portfolio/:path*`,
-        },
-      ],
-    }),
-  })
+module.exports = million.next(
+  withBundleAnalyzer(
+    withContentlayer({
+      reactStrictMode: true,
+      headers: async () => {
+        return [
+          {
+            source: '/',
+            headers: securityHeaders,
+          },
+          {
+            source: '/:path*',
+            headers: securityHeaders,
+          },
+        ];
+      },
+      eslint: {
+        dirs: ['src'],
+      },
+      transpilePackages: ['lodash-es'],
+      experimental: {
+        scrollRestoration: true,
+        serverActions: true,
+      },
+      redirects: () => {
+        return [
+          {
+            source: '/snippets/:id',
+            destination: '/notes/:id',
+            permanent: false,
+          },
+        ];
+      },
+      rewrites: () => ({
+        beforeFiles: [
+          {
+            source: '/portfolio',
+            destination: `${portfolioZoneUrl}/portfolio`,
+          },
+          {
+            source: '/portfolio/:path*',
+            destination: `${portfolioZoneUrl}/portfolio/:path*`,
+          },
+          {
+            source: `${portfolioDataPrefix}/portfolio.json`,
+            destination: `${portfolioZoneUrl}${portfolioDataPrefix}/portfolio.json`,
+          },
+          {
+            source: `${portfolioDataPrefix}/portfolio/:path*`,
+            destination: `${portfolioZoneUrl}${portfolioDataPrefix}/portfolio/:path*`,
+          },
+          {
+            source: '/api/portfolio/:path*',
+            destination: `${portfolioZoneUrl}/api/portfolio/:path*`,
+          },
+          {
+            source: '/assets/portfolio/:path*',
+            destination: `${portfolioZoneUrl}/assets/portfolio/:path*`,
+          },
+        ],
+      }),
+    })
+  ),
+  { auto: true }
 );
