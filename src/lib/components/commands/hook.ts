@@ -1,7 +1,6 @@
 import { useColorMode } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
 import * as React from 'react';
-import { shallow } from 'zustand/shallow';
 
 import { EVENT_TYPE_CMD } from '~/lib/constants/tracking';
 import { useCmdMenu } from '~/lib/store/cmd';
@@ -13,13 +12,10 @@ import type { CommandCollection, CommandEntry } from './types';
 export const useCommandCenter = () => {
   const isOpen = useCmdMenu((state) => state.isOpen);
 
-  const { openCmdMenu, closeCmdMenu } = useCmdMenu(
-    (state) => ({
-      openCmdMenu: state.openCmdMenu,
-      closeCmdMenu: state.closeCmdMenu,
-    }),
-    shallow
-  );
+  const { openCmdMenu, closeCmdMenu } = useCmdMenu((state) => ({
+    openCmdMenu: state.openCmdMenu,
+    closeCmdMenu: state.closeCmdMenu,
+  }));
 
   const handleKeydownTrigger = React.useCallback(
     (ev: KeyboardEvent) => {
