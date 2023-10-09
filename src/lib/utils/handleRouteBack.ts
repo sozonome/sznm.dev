@@ -1,10 +1,11 @@
-import type { AppRouterInstance } from 'next/dist/shared/lib/app-router-context';
+import type { useRouter as useAppRouter } from 'next/navigation';
+import type { useRouter as usePageRouter } from 'next/router';
 
 const replaceStrategies = ['push', 'replace'] as const;
 type ReplaceStrategy = (typeof replaceStrategies)[number];
 
 interface HandleRouteBackParams {
-  router: AppRouterInstance;
+  router: ReturnType<typeof useAppRouter> | ReturnType<typeof usePageRouter>;
   to: string;
   replaceStrategy?: ReplaceStrategy;
 }
