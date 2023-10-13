@@ -19,7 +19,7 @@ pnpm add axios
 > add fetcher utility for GET
 
 ```ts
-import axios from "axios";
+import axios from 'axios';
 
 type FetcherArgs = {
   url: string;
@@ -41,7 +41,7 @@ pnpm add swr
 > add swr hook utility
 
 ```ts
-import useSWR from "swr";
+import useSWR from 'swr';
 
 type UseAppSWRArgs<ResType> = {
   url: string;
@@ -79,7 +79,7 @@ export const useAppSWR = <ResType, ErrorType = any>({
 // useMovieData.ts
 export const useMovieData = (params?: any) =>
   useAppSWR({
-    url: "https://some-api-url.com/api/movies",
+    url: 'https://some-api-url.com/api/movies',
     params,
   });
 ```
@@ -99,7 +99,7 @@ const SomeComponent = () => {
   return (
     <div>
       {data.results.map((item) => (
-        <p>{item.title}</p>
+        <p key={item.id}>{item.title}</p>
       ))}
     </div>
   );
