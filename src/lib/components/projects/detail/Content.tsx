@@ -41,7 +41,9 @@ const ProjectDetailContent = ({
             <Heading size="md" marginBottom={2}>
               <Balancer>{title}</Balancer>
             </Heading>
-            <Text fontSize="sm">{description}</Text>
+            <Text fontSize="sm">
+              <Balancer>{description}</Balancer>
+            </Text>
           </Box>
 
           {stacks && (

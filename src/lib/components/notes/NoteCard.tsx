@@ -3,6 +3,7 @@
 import { Flex, Grid, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import Link from 'next/link';
 import * as React from 'react';
+import Balancer from 'react-wrap-balancer';
 
 import type { Note } from 'contentlayer/generated';
 import ViewCounter from '~/lib/components/shared/ViewCounter';
@@ -52,8 +53,12 @@ const NoteCard = ({ data, noteViewCounts }: NoteCardProps) => {
       }}
     >
       <Grid gap={2}>
-        <Heading size="md">{data.title}</Heading>
-        <Text fontSize="sm">{data.description}</Text>
+        <Heading size="md">
+          <Balancer>{data.title}</Balancer>
+        </Heading>
+        <Text fontSize="sm">
+          <Balancer>{data.description}</Balancer>
+        </Text>
       </Grid>
 
       <Grid gap={2}>

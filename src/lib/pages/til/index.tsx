@@ -1,5 +1,6 @@
 import { Divider, Grid, Heading, Text } from '@chakra-ui/react';
 import Link from 'next/link';
+import Balancer from 'react-wrap-balancer';
 
 import MotionGrid from '~/lib/components/motion/MotionGrid';
 import MarkdownContent from '~/lib/components/shared/MarkdownContent';
@@ -16,7 +17,7 @@ const TodayILearnPage = () => {
       <Heading>Today I Learned</Heading>
       <MotionGrid {...staggerAnimationProps} gap={12}>
         {sortedTodayILearns.map((til, index) => (
-          <MotionGrid {...childAnimationProps} gap={12}>
+          <MotionGrid {...childAnimationProps} gap={12} key={til.id}>
             <Grid
               gridTemplateColumns={{ base: '1fr', md: '1fr 2fr' }}
               gap={8}
@@ -30,12 +31,12 @@ const TodayILearnPage = () => {
               >
                 <Link href={`#${til.id}`}>
                   <Heading size="md" id={til.id} scrollMarginTop={24}>
-                    {til.title}
+                    <Balancer>{til.title}</Balancer>
                   </Heading>
                 </Link>
                 {til.description ? (
                   <Text fontSize="sm" color="gray">
-                    {til.description}
+                    <Balancer>{til.description}</Balancer>
                   </Text>
                 ) : null}
                 <Text fontSize="xs" color="gray">
