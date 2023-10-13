@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.26.2](https://github.com/sozonome/sznm.dev/compare/v1.26.1...v1.26.2) (2023-10-13)
+
+
+### Improvements
+
+* adjust types ([b6fc9ab](https://github.com/sozonome/sznm.dev/commit/b6fc9abb645fe47bed8634b9ba80c04f3703e6c3))
+* **content:** format ([7e90341](https://github.com/sozonome/sznm.dev/commit/7e9034168ce90bb6547a555d98a329008747e5f3))
+* **theme:** adjust theme color ([5dee79e](https://github.com/sozonome/sznm.dev/commit/5dee79eebeb3b179ceff17f92d19c8cf8039725d))
+
 ### [1.26.1](https://github.com/sozonome/sznm.dev/compare/v1.26.0...v1.26.1) (2023-09-15)
 
 
