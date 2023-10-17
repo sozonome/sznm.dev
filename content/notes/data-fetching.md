@@ -6,6 +6,8 @@ date: 2022-10-24
 tags:
   - http-client
   - data-fetching
+  - swr
+  - react
 ---
 
 ## Fetcher Utility
