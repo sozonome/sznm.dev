@@ -21,7 +21,7 @@ pnpm i -D eslint-plugin-no-relative-import-paths
 Add it to eslint config:
 
 ```js
-// eslint.config.js
+// .eslintrc.js
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   plugins: ['no-relative-import-paths'], // add to plugins
