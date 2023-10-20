@@ -1,10 +1,5 @@
-import {
-  FaFacebook,
-  FaLink,
-  FaTelegram,
-  FaTwitter,
-  FaWhatsapp,
-} from 'react-icons/fa';
+import { FaFacebook, FaLink, FaTelegram, FaWhatsapp } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export const socialMap = (obj: { title?: string; url: string }) => {
   const title = obj.title ? `${obj.title}: ` : '';
@@ -20,9 +15,9 @@ export const socialMap = (obj: { title?: string; url: string }) => {
       },
     },
     {
-      name: 'twitter',
-      icon: <FaTwitter />,
-      baseSocialUrl: 'https://twitter.com/intent/tweet',
+      name: 'x-twitter',
+      icon: <FaXTwitter />,
+      baseSocialUrl: 'https://x.com/intent/tweet',
       params: {
         url: obj.url,
         text: obj.title,

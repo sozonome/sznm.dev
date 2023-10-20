@@ -6,9 +6,9 @@ import {
   FaLinkedin,
   FaMedium,
   FaProductHunt,
-  FaTwitter,
   FaYoutube,
 } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 import type { MotionLinkProps } from './types';
 
@@ -24,9 +24,9 @@ export const socialLinks: Array<MotionLinkProps> = [
     icon: FaLinkedin,
   },
   {
-    platformName: 'Twitter',
-    url: 'https://twitter.com/sozonome',
-    icon: FaTwitter,
+    platformName: 'X-Twitter',
+    url: 'https://x.com/sozonome',
+    icon: FaXTwitter,
   },
   {
     platformName: 'Instagram',
