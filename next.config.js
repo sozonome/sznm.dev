@@ -88,7 +88,6 @@ module.exports = million.next(
       transpilePackages: ['lodash-es'],
       experimental: {
         scrollRestoration: true,
-        serverActions: true,
       },
       redirects: () => {
         return [
