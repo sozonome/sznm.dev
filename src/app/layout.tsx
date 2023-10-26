@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import NextTopLoader from 'nextjs-toploader';
 
@@ -30,7 +30,6 @@ export const metadata: Metadata = {
     'sznm.dev',
   ],
   referrer: 'origin-when-cross-origin',
-  colorScheme: 'dark light',
   icons: {
     icon: '/favicon.ico',
   },
@@ -63,6 +62,10 @@ export const metadata: Metadata = {
     creator: '@sozonome',
     card: 'summary_large_image',
   },
+};
+
+export const viewport: Viewport = {
+  colorScheme: 'dark light',
 };
 
 type RootLayoutProps = {
