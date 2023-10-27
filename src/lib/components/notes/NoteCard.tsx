@@ -62,7 +62,7 @@ const NoteCard = ({ data, noteViewCounts }: NoteCardProps) => {
       </Grid>
 
       <Grid gap={2}>
-        <Flex gap={2}>
+        <Flex gap={2} wrap="wrap">
           {data.tags?.map((tag) => (
             <Text
               borderWidth={1}
