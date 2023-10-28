@@ -1,9 +1,9 @@
 ---
 title: Monitor and Measure Site Performance from Time to Time and Automatically using Speedlify
-date: "2020-11-07"
+date: '2020-11-07'
 cover: https://images.unsplash.com/photo-1567916190725-372c28edc554?auto=format&q=80
-legacyID: "2020-11-07-monitor-and-measure-site-performance-with-speedlify"
-thumbnail: "🏎️"
+legacyID: '2020-11-07-monitor-and-measure-site-performance-with-speedlify'
+thumbnail: '🏎️'
 published: true
 tags:
   - performance
@@ -66,7 +66,7 @@ After the import process is done, clone your speedlify repo into your local mach
 git clone https://github.com/[YOUR_GITHUB_USERNAME]/speedlify/
 ```
 
-```
+```bash
 cd speedlify
 ```
 
@@ -80,8 +80,8 @@ Just delete all default files in `_data/sites`. Create a file `[CATEGORY_NAME].j
 ```js
 // _data/sites/[CATEGORY_NAME].js
 module.exports = {
-  name: "Category Name", // optional, falls back to object key
-  description: "Category Description",
+  name: 'Category Name', // optional, falls back to object key
+  description: 'Category Description',
   options: {
     frequency: 60 * 23, // 23 hours
 
@@ -89,11 +89,11 @@ module.exports = {
     //           and we can reset chrome with each run instead of
     //           each site in every run (it’s faster)
     // Use "site" if sites are all on the same origin and share assets.
-    freshChrome: "run",
+    freshChrome: 'run',
   },
   urls: [
-    "https://[YOUR_SITE_URL]/",
-    "https://[YOUR_SITE_URL]/",
+    'https://[YOUR_SITE_URL]/',
+    'https://[YOUR_SITE_URL]/',
     // etc
   ],
 };
@@ -147,7 +147,7 @@ on:
   schedule:
     # if you want to define your own build trigger schedule, just change the cron schedule value below
     # use https://crontab.guru/ if you are having some difficulties on how to define the cron values
-    - cron: "0 22 * * MON-FRI"
+    - cron: '0 22 * * MON-FRI'
     # every day on weekdays 22:00.
 jobs:
   build:
