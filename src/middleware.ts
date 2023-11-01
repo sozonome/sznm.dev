@@ -13,7 +13,7 @@ export const middleware = async (req: NextRequest) => {
     return NextResponse.redirect(env.MM_URL);
   }
 
-  if (!req.nextUrl.pathname.startsWith('/s')) {
+  if (!req.nextUrl.pathname.startsWith('/s/')) {
     return NextResponse.next();
   }
 
@@ -28,8 +28,8 @@ export const middleware = async (req: NextRequest) => {
 
 export const config = {
   matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico|manifest.json|robots.txt).*)',
     ...funPaths.map((item) => `/${item}:path*`),
     '/s/:path*',
-    '/((?!api|_next/static|favicon.ico|manifest.json|robots.txt).*)',
   ],
 };

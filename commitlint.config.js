@@ -20,6 +20,7 @@ const CommitLintConfiguration = {
         'layout',
         'lib',
         'markdown',
+        'middleware',
         'monitoring',
         'notes',
         'pages',
