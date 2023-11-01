@@ -67,7 +67,7 @@ const BlogPostCard = ({
           <Heading size="md" marginBottom={2}>
             <Balancer>{postData.title}</Balancer>
           </Heading>
-          <Text fontSize="xs">
+          <Text fontSize="xs" color="gray">
             {dateFormatLong(postData.date)} - {postData.readTime?.text}
             {' | '}
             <ViewCounter

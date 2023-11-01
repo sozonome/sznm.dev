@@ -1,4 +1,4 @@
-import { AspectRatio, Box, Image } from '@chakra-ui/react';
+import { AspectRatio, Box, Grid, Image } from '@chakra-ui/react';
 import { notFound } from 'next/navigation';
 
 import BlogPostHead from '~/lib/components/blog/post/Head';
@@ -36,10 +36,10 @@ const BlogPost = ({ params }: BlogPostProps) => {
       </AspectRatio>
       <BlogPostHead postData={postData} />
       <MarkdownContent rawContent={postData.body.raw} />
-      <ShareButtons title={`Check out this blog post: ${postData.title}`} />
-      <Box marginY={12}>
+      <Grid marginY={12} gap={8}>
+        <ShareButtons title={`Check out this blog post: ${postData.title}`} />
         <GiscusWrapper category="Blog Post" categoryId="DIC_kwDOD-UOjM4B_fhR" />
-      </Box>
+      </Grid>
     </Box>
   );
 };

@@ -25,7 +25,7 @@ There are two ways to achieve resolving correct SSH key for each git account. Th
 
 ### Option 1: GitConfig Setup
 
-```file
+```gitconfig
 // .gitconfig
 
 [user]
@@ -39,7 +39,7 @@ There are two ways to achieve resolving correct SSH key for each git account. Th
 	helper = manager
 ```
 
-```file
+```gitconfig
 // .gitconfig_work
 
 [user]
@@ -56,7 +56,7 @@ This configuration will match the current working repository folder location.
 
 You need to configure the SSH config file to use the correct SSH key for each Git account. You can edit the SSH config file by running the command `nano ~/.ssh/config` in the terminal. Add the following lines to the config file:
 
-```file
+```config
 # First account
 Host github.com-first
   HostName github.com
@@ -72,7 +72,7 @@ Host github.com-second
 
 You can also use folder matching for the configuration file. For example, if you have multiple Git accounts for work, you can use the following configuration:
 
-```file
+```config
 # Work account
 Host work.github.com
   HostName github.com

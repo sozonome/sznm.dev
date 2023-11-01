@@ -1,4 +1,4 @@
-import { Box, Spacer } from '@chakra-ui/react';
+import { Box, Grid, Spacer } from '@chakra-ui/react';
 import { notFound } from 'next/navigation';
 
 import NoteDetailHead from '~/lib/components/notes/detail/Head';
@@ -19,9 +19,11 @@ const NoteDetail = ({ params }: NoteDetailProps) => {
 
   return (
     <Box as="article">
-      <NoteDetailHead data={data} />
-      <ShareButtons title={`Check out this note: ${data.title}`} />
-      <DetailViewCounts slug={`/notes/${params.id}`} />
+      <Grid gap={8}>
+        <NoteDetailHead data={data} />
+        <DetailViewCounts slug={`/notes/${params.id}`} />
+        <ShareButtons title={`Check out this note: ${data.title}`} />
+      </Grid>
       <Spacer height={8} />
       <MarkdownContent rawContent={data.body.raw} />
       <Spacer height={8} />
