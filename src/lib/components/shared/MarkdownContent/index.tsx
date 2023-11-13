@@ -1,7 +1,6 @@
 'use client';
 
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
-import rehypeRaw from 'rehype-raw';
+import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 import { renderers } from '~/lib/components/blog/renderers';
@@ -16,7 +15,6 @@ const MarkdownContent = ({ rawContent }: MarkdownContentProps) => {
   return (
     <ReactMarkdown
       className={styles.content}
-      rehypePlugins={[rehypeRaw]}
       remarkPlugins={[remarkGfm]}
       components={renderers}
     >

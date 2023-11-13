@@ -6,12 +6,12 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react';
-import type { Options } from 'react-markdown/lib/ast-to-react';
+import type { Components } from 'react-markdown/lib';
 
 import CodeBlock from './CodeBlock';
 import HeadingLink from './HeadingLink';
 
-export const renderers: Options['components'] = {
+export const renderers: Components = {
   code: CodeBlock,
   a: ({ href, children }) => {
     return (

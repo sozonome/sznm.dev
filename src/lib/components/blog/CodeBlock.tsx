@@ -6,7 +6,6 @@ import {
   Flex,
   useColorModeValue,
 } from '@chakra-ui/react';
-import type { CodeProps } from 'react-markdown/lib/ast-to-react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {
   dracula,
@@ -30,14 +29,18 @@ const handleClickCopy = (childrenValue: string) => async () => {
   }
 };
 
-const CodeBlock = ({ inline, className, children, ...props }: CodeProps) => {
+const CodeBlock = ({
+  className,
+  children,
+  ...props
+}: React.HTMLAttributes<HTMLElement>) => {
   /** https://github.com/remarkjs/react-markdown#use-custom-components-syntax-highlight */
   const match = /language-(\w+)/.exec(className || '');
   const language = match?.[1];
   const childrenValue = String(children).replace(/\n$/, '');
   const themes = useColorModeValue(oneLight, dracula);
 
-  return !inline && match ? (
+  return match ? (
     <Box width="100%">
       <Flex alignItems="center">
         {language && <Code>{language}</Code>}

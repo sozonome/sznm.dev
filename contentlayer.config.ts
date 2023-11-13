@@ -4,7 +4,6 @@ import {
   makeSource,
 } from 'contentlayer/source-files';
 import readingTime from 'reading-time';
-import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 
 const ReadTime = defineNestedType(() => ({
@@ -145,7 +144,6 @@ const contentLayerConfig = makeSource({
   documentTypes: [Blog, Project, Note, TodayILearn, Testimony],
   markdown: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeRaw],
   },
 });
 
