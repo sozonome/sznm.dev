@@ -1,4 +1,4 @@
-import { Divider, Grid, Heading, Text } from '@chakra-ui/react';
+import { Box, Divider, Grid, Heading, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
 
@@ -19,13 +19,13 @@ const TodayILearnPage = () => {
         {sortedTodayILearns.map((til, index) => (
           <MotionGrid {...childAnimationProps} gap={12} key={til.id}>
             <Grid
-              gridTemplateColumns={{ base: '1fr', md: '1fr 2fr' }}
+              gridTemplateColumns={{ base: '1fr', lg: '1fr 2fr' }}
               gap={8}
               alignItems="start"
             >
               <Grid
                 gap={{ base: 1, md: 2 }}
-                position={{ md: 'sticky' }}
+                position={{ lg: 'sticky' }}
                 top={24}
                 marginTop={2}
               >
@@ -44,7 +44,9 @@ const TodayILearnPage = () => {
                 </Text>
               </Grid>
 
-              <MarkdownContent rawContent={til.body.raw} />
+              <Box maxWidth={{ lg: 512 }}>
+                <MarkdownContent rawContent={til.body.raw} />
+              </Box>
             </Grid>
             {index !== sortedTodayILearns.length - 1 ? (
               <Divider color="gray" />

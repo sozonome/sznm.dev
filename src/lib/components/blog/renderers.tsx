@@ -6,7 +6,7 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react';
-import type { Components } from 'react-markdown/lib';
+import type { Components } from 'react-markdown';
 
 import CodeBlock from './CodeBlock';
 import HeadingLink from './HeadingLink';
