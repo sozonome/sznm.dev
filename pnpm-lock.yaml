@@ -148,6 +148,9 @@ devDependencies:
   eslint-config-sznm:
     specifier: ^2.0.2
     version: 2.0.2(eslint@8.52.0)(prettier@3.0.3)(typescript@5.2.2)
+  eslint-plugin-no-relative-import-paths:
+    specifier: ^1.5.3
+    version: 1.5.3
   husky:
     specifier: ^8.0.3
     version: 8.0.3
@@ -5972,6 +5975,10 @@ packages:
       object.entries: 1.1.7
       object.fromentries: 2.0.7
       semver: 6.3.1
+    dev: true
+
+  /eslint-plugin-no-relative-import-paths@1.5.3:
+    resolution: {integrity: sha512-z7c7Km1U0zdLyPziWeRKSsN2mPaGaBHDjfXn98B8XjRIhFi2bPqduRYcxWih1kI5al5tQtiChXVmspLkB0wNsQ==}
     dev: true
 
   /eslint-plugin-prettier@5.0.0(eslint-config-prettier@8.8.0)(eslint@8.52.0)(prettier@3.0.3):
