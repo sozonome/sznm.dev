@@ -1,0 +1,13 @@
+name: Cache Purge
+on: [deployment_status]
+
+jobs:
+  cache-purge:
+    if: ${{ github.event.deployment_status.state == 'success' && github.event.deployment_status.environment  == 'Production' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cache Purge
+        uses: jakejarvis/cloudflare-purge-action@master
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
