@@ -1,15 +1,20 @@
 .content {
+  max-width: calc(100vw - 3rem);
+
   p {
     margin: 0.5rem 0 1rem;
   }
+
   a {
     font-weight: 550;
     text-decoration: underline;
   }
+
   img {
     border-radius: 1rem;
     margin: 1rem 0;
   }
+
   ul,
   ol {
     margin: 0 1.5rem;
@@ -17,6 +22,7 @@
       margin: 0.25rem 0;
     }
   }
+
   code {
     background-color: rgb(200, 200, 200);
     border-radius: 0.25rem;
