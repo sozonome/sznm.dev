@@ -4,10 +4,11 @@ import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
 import { env } from '~/lib/constants/env';
-import { funPaths } from '~/lib/constants/paths';
+
+const funPath = 'why-i';
 
 export const middleware = async (req: NextRequest) => {
-  const isFunPath = !!funPaths.find((item) => req.nextUrl.href.includes(item));
+  const isFunPath = !!req.nextUrl.href.includes(funPath);
 
   if (isFunPath) {
     return NextResponse.redirect(env.MM_URL);
@@ -29,7 +30,7 @@ export const middleware = async (req: NextRequest) => {
 export const config = {
   matcher: [
     '/((?!api|_next/static|_next/image|favicon.ico|manifest.json|robots.txt).*)',
-    ...funPaths.map((item) => `/${item}:path*`),
+    `/why-i:path*`,
     '/s/:path*',
   ],
 };
