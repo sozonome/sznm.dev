@@ -30,9 +30,6 @@ export const metadata: Metadata = {
     'sznm.dev',
   ],
   referrer: 'origin-when-cross-origin',
-  icons: {
-    icon: '/favicon.ico',
-  },
   appleWebApp: {
     title: 'sznm.dev',
     statusBarStyle: 'default',
@@ -40,7 +37,6 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
-  manifest: '/manifest.json',
   title: {
     default: 'Agustinus Nathaniel - Digital Crafter | sozonome',
     template: '%s | sozonome',
