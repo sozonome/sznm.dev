@@ -9,7 +9,6 @@ const manifest = (): MetadataRoute.Manifest => ({
   theme_color: '#444444',
   dir: 'ltr',
   display: 'standalone',
-  orientation: 'natural',
   prefer_related_applications: false,
   icons: [
     {
