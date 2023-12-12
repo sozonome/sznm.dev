@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import NextTopLoader from 'nextjs-toploader';
@@ -89,6 +90,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
           src={env.NEXT_PUBLIC_UMAMI_SRC}
           data-domains="sznm.dev"
         />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -38,6 +38,7 @@
     "@giscus/react": "^2.3.0",
     "@prisma/client": "^5.5.2",
     "@t3-oss/env-nextjs": "^0.7.1",
+    "@vercel/speed-insights": "^1.0.1",
     "cmdk": "^0.2.0",
     "contentlayer": "^0.3.4",
     "date-fns": "^2.30.0",
