@@ -128,8 +128,8 @@ devDependencies:
     specifier: ^15.5.9
     version: 15.5.9
   '@types/rss':
-    specifier: ^0.0.31
-    version: 0.0.31
+    specifier: ^0.0.32
+    version: 0.0.32
   '@types/ua-parser-js':
     specifier: ^0.7.38
     version: 0.7.38
@@ -3537,8 +3537,8 @@ packages:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
     dev: false
 
-  /@types/rss@0.0.31:
-    resolution: {integrity: sha512-iW6iqXCU1+t61uMkwIQQ4/TOq4QelIo9SfRJ717niStG5Z09B0pWhHkKujo2a0jsjHlga3yhGiemukLPYdl6iQ==}
+  /@types/rss@0.0.32:
+    resolution: {integrity: sha512-2oKNqKyUY4RSdvl5eZR1n2Q9yvw3XTe3mQHsFPn9alaNBxfPnbXBtGP8R0SV8pK1PrVnLul0zx7izbm5/gF5Qw==}
     dev: true
 
   /@types/scheduler@0.16.5:
