@@ -56,6 +56,7 @@
     "react-syntax-highlighter": "^15.5.0",
     "react-wrap-balancer": "^1.1.0",
     "reading-time": "^1.5.0",
+    "rehype-raw": "6.1.1",
     "remark-gfm": "^3.0.1",
     "rss": "^1.2.2",
     "sass": "^1.69.5",
