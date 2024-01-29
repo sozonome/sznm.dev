@@ -37,7 +37,7 @@
     "@emotion/styled": "^11.11.0",
     "@giscus/react": "^2.3.0",
     "@prisma/client": "^5.5.2",
-    "@t3-oss/env-nextjs": "^0.7.1",
+    "@t3-oss/env-nextjs": "^0.8.0",
     "@vercel/speed-insights": "^1.0.1",
     "cmdk": "^0.2.0",
     "contentlayer": "^0.3.4",
