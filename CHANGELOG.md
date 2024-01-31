@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.27.0](https://github.com/sozonome/sznm.dev/compare/v1.26.2...v1.27.0) (2024-01-31)
+
+
+### Features
+
+* add CTA in hero section ([c852c0d](https://github.com/sozonome/sznm.dev/commit/c852c0dab6dd44da6f424549f5d37d8d9d03c431))
+* add serious path ([6f3682d](https://github.com/sozonome/sznm.dev/commit/6f3682df785902fea7bb5fbae78161d92dc7d763))
+
+
+### Bug Fixes
+
+* **blog:** re-install rehype-raw ([3dce8bf](https://github.com/sozonome/sznm.dev/commit/3dce8bf619ac95a6f5680c3101679c5544940fba))
+* **deps:** update all dependencies ([#225](https://github.com/sozonome/sznm.dev/issues/225)) ([e60491d](https://github.com/sozonome/sznm.dev/commit/e60491db697c1ab2844971605500202d316719f0))
+* **deps:** update all dependencies ([#227](https://github.com/sozonome/sznm.dev/issues/227)) ([c0c00ff](https://github.com/sozonome/sznm.dev/commit/c0c00ffa340c202dfc9937f2ed26c03c43526660))
+* **middleware:** adjust false startsWith checking ([42413f6](https://github.com/sozonome/sznm.dev/commit/42413f69543d522323678bcb6d74049bc579c7a1))
+* **til:** adjust content style ([c66efd9](https://github.com/sozonome/sznm.dev/commit/c66efd9db6a1b8c011932e1e2de0adc79c0f7d96))
+
+
+### Improvements
+
+* **components:** add flex wrap for note card tags ([25e5311](https://github.com/sozonome/sznm.dev/commit/25e531174fad602f31a07981722d157a9bc0563d))
+* **components:** adjust twitter icon to x-twitter ([bf89b09](https://github.com/sozonome/sznm.dev/commit/bf89b09ad5b2f0a597246994506e5da7b2b4bf0b))
+* **content:** adjust spacing and heading size ([2c08390](https://github.com/sozonome/sznm.dev/commit/2c08390e2f8f20fc4cd122f0e45f3d28893db1a9))
+* **layout:** remove initial year ([845d9ef](https://github.com/sozonome/sznm.dev/commit/845d9ef42126cc11cb7d7bf095e3cc83c1c49569))
+* simplify middleware ([9cc0cdd](https://github.com/sozonome/sznm.dev/commit/9cc0cdd38f6c547981124d600a6917d1086f9000))
+
 ### [1.26.2](https://github.com/sozonome/sznm.dev/compare/v1.26.1...v1.26.2) (2023-10-13)
 
 
