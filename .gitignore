@@ -41,8 +41,5 @@ sitemap*.xml
 # TS
 *.tsbuildinfo
 
-# Contentlayer
-.contentlayer
-
 # Turbo
 .turbo

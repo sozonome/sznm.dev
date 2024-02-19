@@ -1,10 +1,8 @@
-import { sortedBlogPosts } from '~/lib/constants/blog';
+import { getAllPosts } from '~/lib/services/content/post';
 import { generateBlogRss } from '~/lib/utils/generateRss';
 
 export const GET = async () => {
-  const allPostsData = sortedBlogPosts;
-
-  const rssFeed = await generateBlogRss(allPostsData);
+  const rssFeed = await generateBlogRss(getAllPosts());
 
   return new Response(rssFeed, {
     headers: {

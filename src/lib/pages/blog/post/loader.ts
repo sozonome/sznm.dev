@@ -1,5 +1,5 @@
-import { blogPostIdParams } from '~/lib/constants/blog';
+import { getPostSlugs } from '~/lib/services/content/post';
 
 export const generateStaticParams = () => {
-  return blogPostIdParams;
+  return getPostSlugs().map((item) => ({ id: item }));
 };

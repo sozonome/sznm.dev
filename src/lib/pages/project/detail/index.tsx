@@ -4,12 +4,12 @@ import { notFound } from 'next/navigation';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 import ProjectDetailWrapper from '~/lib/components/projects/detail';
-import { sortedProjects } from '~/lib/constants/project';
+import { getProjectBySlug } from '~/lib/services/content/project';
 
 import type { ProjectDetailProps } from './types';
 
 const ProjectDetail = ({ params }: ProjectDetailProps) => {
-  const projectData = sortedProjects.find(({ id }) => id === params.id);
+  const projectData = getProjectBySlug(params.id);
 
   if (!projectData) {
     return notFound();

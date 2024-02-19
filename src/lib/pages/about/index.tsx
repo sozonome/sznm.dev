@@ -1,3 +1,5 @@
+import { getAllTestimonies } from '~/lib/services/content/testimony';
+
 import Content from './Content';
 import HeadSection from './HeadSection';
 import Links from './Links';
@@ -9,7 +11,7 @@ const About = () => {
       <HeadSection />
       <Content />
       <Links />
-      <Testimony />
+      <Testimony testimonies={getAllTestimonies()} />
     </>
   );
 };

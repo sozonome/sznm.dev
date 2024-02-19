@@ -1,20 +1,14 @@
-import { compareDesc } from 'date-fns';
+import { getAllProjects } from '~/lib/services/content/project';
 
-import { allProjects } from 'contentlayer/generated';
-
-export const sortedProjects = allProjects
-  .filter((project) => project.published !== false)
-  .sort((a, b) => compareDesc(new Date(a.date ?? ''), new Date(b.date ?? '')));
-
-export const featuredProjects = sortedProjects.filter(
+export const featuredProjects = getAllProjects().filter(
   (project) => project.featured
 );
 
-export const highlightedProjects = sortedProjects.filter(
+export const highlightedProjects = getAllProjects().filter(
   (project) => project.highlight
 );
 
-export const sznmAppsProjects = sortedProjects
+export const sznmAppsProjects = getAllProjects()
   .filter((project) => project.sznmApps)
   .sort((a, b) => {
     if (a.title.toLowerCase() < b.title.toLowerCase()) {
@@ -25,7 +19,3 @@ export const sznmAppsProjects = sortedProjects
     }
     return 0;
   });
-
-export const projectIdParams = sortedProjects.map((project) => ({
-  id: project.id,
-}));

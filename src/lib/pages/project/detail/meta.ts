@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
-import { sortedProjects } from '~/lib/constants/project';
 import type { ProjectDetailProps } from '~/lib/pages/project/detail/types';
+import { getProjectBySlug } from '~/lib/services/content/project';
 import { sznmOgImage } from '~/lib/utils/sznmOgImage';
 
 export const generateMetadata = ({
   params,
 }: ProjectDetailProps): Metadata | undefined => {
-  const projectData = sortedProjects.find(({ id }) => id === params.id);
+  const projectData = getProjectBySlug(params.id);
 
   if (!projectData) {
     return undefined;
@@ -16,7 +16,7 @@ export const generateMetadata = ({
   return {
     title: projectData.title,
     alternates: {
-      canonical: `/projects/${projectData.id}`,
+      canonical: `/projects/${projectData.slug}`,
     },
     openGraph: {
       title: `${projectData.title} | sozonome`,

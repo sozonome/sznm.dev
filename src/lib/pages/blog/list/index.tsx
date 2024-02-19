@@ -1,9 +1,11 @@
 import { Heading, Box, Text, Grid } from '@chakra-ui/react';
 
 import BlogPostListWrapper from '~/lib/pages/blog/list/components/BlogPostListWrapper';
+import { getAllPosts } from '~/lib/services/content/post';
 import { getAllViewCount } from '~/lib/services/db/views';
 
 const BlogPostList = async () => {
+  const blogPosts = getAllPosts();
   const blogPostViewCounts = await getAllViewCount('/blog/');
 
   return (
@@ -15,7 +17,10 @@ const BlogPostList = async () => {
         <Text>Just some writings</Text>
       </Grid>
 
-      <BlogPostListWrapper blogViewCounts={blogPostViewCounts} />
+      <BlogPostListWrapper
+        blogPosts={blogPosts}
+        blogViewCounts={blogPostViewCounts}
+      />
     </Box>
   );
 };

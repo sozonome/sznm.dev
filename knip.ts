@@ -1,12 +1,7 @@
 import type { KnipConfig } from 'knip';
 
 const config: KnipConfig = {
-  entry: [
-    'src/app/layout.tsx',
-    'src/middleware.ts',
-    'contentlayer.*',
-    'vitest.*',
-  ],
+  entry: ['src/app/layout.tsx', 'src/middleware.ts', 'vitest.*'],
   project: ['src/**/*.{ts,tsx,js,jsx}'],
 };
 

@@ -1,5 +1,5 @@
-import { projectIdParams } from '~/lib/constants/project';
+import { getProjectSlugs } from '~/lib/services/content/project';
 
 export const generateStaticParams = () => {
-  return projectIdParams;
+  return getProjectSlugs().map((item) => ({ id: item }));
 };

@@ -2,9 +2,11 @@ import { Button, Flex, Grid, Heading, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 
 import NoteListWrapper from '~/lib/pages/note/list/components/NoteListWrapper';
+import { getAllNotes } from '~/lib/services/content/note';
 import { getAllViewCount } from '~/lib/services/db/views';
 
 const NoteList = async () => {
+  const notes = getAllNotes();
   const noteViewCounts = await getAllViewCount('/notes/');
 
   return (
@@ -22,7 +24,7 @@ const NoteList = async () => {
         </Flex>
       </Grid>
 
-      <NoteListWrapper noteViewCounts={noteViewCounts} />
+      <NoteListWrapper notes={notes} noteViewCounts={noteViewCounts} />
     </Grid>
   );
 };

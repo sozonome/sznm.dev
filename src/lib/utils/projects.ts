@@ -1,4 +1,4 @@
-import type { Project } from 'contentlayer/generated';
+import type { Project } from '~/lib/types/project';
 
 export const splitProjectByTypes = (projects: Array<Project>) => {
   const apps = projects.filter((entry) => entry.projectType === 'apps');

@@ -8,7 +8,7 @@ import {
   childAnimationProps,
   staggerAnimationProps,
 } from '~/lib/constants/animation';
-import { sortedTodayILearns } from '~/lib/constants/til';
+import { getAllTils } from '~/lib/services/content/til';
 import { dateFormatLong } from '~/lib/utils/dateFormat';
 
 const TodayILearnPage = () => {
@@ -16,8 +16,8 @@ const TodayILearnPage = () => {
     <Grid gap={8} scrollBehavior="smooth">
       <Heading>Today I Learned</Heading>
       <MotionGrid {...staggerAnimationProps} gap={12}>
-        {sortedTodayILearns.map((til, index) => (
-          <MotionGrid {...childAnimationProps} gap={12} key={til.id}>
+        {getAllTils().map((til, index) => (
+          <MotionGrid {...childAnimationProps} gap={12} key={til.slug}>
             <Grid
               gridTemplateColumns={{ base: '1fr', lg: '1fr 2fr' }}
               gap={8}
@@ -29,8 +29,8 @@ const TodayILearnPage = () => {
                 top={24}
                 marginTop={2}
               >
-                <Link href={`#${til.id}`}>
-                  <Heading size="md" id={til.id} scrollMarginTop={24}>
+                <Link href={`#${til.slug}`}>
+                  <Heading size="md" id={til.slug} scrollMarginTop={24}>
                     <Balancer>{til.title}</Balancer>
                   </Heading>
                 </Link>
@@ -45,10 +45,10 @@ const TodayILearnPage = () => {
               </Grid>
 
               <Box maxWidth={{ lg: 512 }}>
-                <MarkdownContent rawContent={til.body.raw} />
+                <MarkdownContent rawContent={til.content} />
               </Box>
             </Grid>
-            {index !== sortedTodayILearns.length - 1 ? (
+            {index !== getAllTils().length - 1 ? (
               <Divider color="gray" />
             ) : null}
           </MotionGrid>

@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
-import { sortedNotes } from '~/lib/constants/note';
 import type { NoteDetailProps } from '~/lib/pages/note/detail/types';
+import { getNoteBySlug } from '~/lib/services/content/note';
 import { sznmOgImage } from '~/lib/utils/sznmOgImage';
 
 export const generateMetadata = ({
   params,
 }: NoteDetailProps): Metadata | undefined => {
-  const data = sortedNotes.find(({ id }) => id === params?.id);
+  const data = getNoteBySlug(params?.id);
 
   if (!data) {
     return undefined;
@@ -21,7 +21,7 @@ export const generateMetadata = ({
   return {
     title: data.title,
     alternates: {
-      canonical: `/notes/${data.id}`,
+      canonical: `/notes/${data.slug}`,
     },
     openGraph: {
       title: `sozonome | ${data.title}`,
