@@ -6,7 +6,7 @@ import { getPostBySlug } from '~/lib/services/content/post';
 import type { Post } from '~/lib/types/post';
 
 const generateRssItem = async (post: Post) => {
-  const postData = getPostBySlug(post.slug) as Post;
+  const postData = getPostBySlug(post.slug);
 
   return {
     title: postData.title,
