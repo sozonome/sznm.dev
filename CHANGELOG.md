@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.27.1](https://github.com/sozonome/sznm.dev/compare/v1.27.0...v1.27.1) (2024-02-19)
+
+
+### Improvements
+
+* replace contentlayer ([#228](https://github.com/sozonome/sznm.dev/issues/228)) ([6d15293](https://github.com/sozonome/sznm.dev/commit/6d1529366e74773f5d45016f87235427705ea596))
+
 ## [1.27.0](https://github.com/sozonome/sznm.dev/compare/v1.26.2...v1.27.0) (2024-01-31)
 
 
