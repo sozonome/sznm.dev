@@ -5,10 +5,10 @@ import Link from 'next/link';
 import * as React from 'react';
 import Balancer from 'react-wrap-balancer';
 
-import type { Note } from 'contentlayer/generated';
 import ViewCounter from '~/lib/components/shared/ViewCounter';
 import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
 import type { ViewCounts } from '~/lib/services/db/views';
+import type { Note } from '~/lib/types/note';
 import { trackEvent } from '~/lib/utils/trackEvent';
 
 type NoteCardProps = {
@@ -20,7 +20,7 @@ const NoteCard = ({ data, noteViewCounts }: NoteCardProps) => {
   const backgroundColor = useColorModeValue('', 'gray.700');
 
   const viewCount =
-    noteViewCounts.find((item) => item.slug?.includes(data.id))?.count ?? 0;
+    noteViewCounts.find((item) => item.slug?.includes(data.slug))?.count ?? 0;
 
   const handleClickNote = React.useCallback(() => {
     trackEvent({
@@ -33,7 +33,7 @@ const NoteCard = ({ data, noteViewCounts }: NoteCardProps) => {
     <Flex
       direction="column"
       as={Link}
-      href={`/notes/${data.id}`}
+      href={`/notes/${data.slug}`}
       aria-label={`Open ${data.title} note`}
       gap={4}
       padding={8}
@@ -83,7 +83,7 @@ const NoteCard = ({ data, noteViewCounts }: NoteCardProps) => {
         </Flex>
 
         <ViewCounter
-          slug={`/notes/${data.id}`}
+          slug={`/notes/${data.slug}`}
           count={viewCount}
           fontSize="xs"
         />

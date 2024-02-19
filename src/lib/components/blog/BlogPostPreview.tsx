@@ -4,15 +4,15 @@ import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import Link from 'next/link';
 import * as React from 'react';
 
-import type { Blog } from 'contentlayer/generated';
 import type { MotionBoxProps } from '~/lib/components/motion/MotionBox';
 import MotionBox from '~/lib/components/motion/MotionBox';
 import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
+import type { Post } from '~/lib/types/post';
 import { dateFormatLong } from '~/lib/utils/dateFormat';
 import { trackEvent } from '~/lib/utils/trackEvent';
 
 type BlogPostPreviewProps = {
-  postData: Blog;
+  postData: Post;
   wrapperProps?: MotionBoxProps;
 };
 
@@ -37,7 +37,7 @@ const BlogPostPreview = ({ postData, wrapperProps }: BlogPostPreviewProps) => {
       >
         <Box
           as={Link}
-          href={`/blog/${postData.id}`}
+          href={`/blog/${postData.slug}`}
           aria-label={`Open ${postData.title} ${dateFormatLong(
             postData.date
           )} - ${postData.readTime?.text}`}

@@ -6,9 +6,9 @@ import { useRouter } from 'next/navigation';
 import * as React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 
-import type { Project } from 'contentlayer/generated';
 import Card from '~/lib/components/projects/Card';
 import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
+import type { Project } from '~/lib/types/project';
 import { trackEvent } from '~/lib/utils/trackEvent';
 
 type ProjectsSectionProps = { data: Array<Project> };
@@ -19,8 +19,8 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
   React.useEffect(() => {
     data
       .filter((project) => project.highlight && project)
-      .forEach(({ id }) => {
-        router.prefetch(`/projects/${id}`);
+      .forEach(({ slug }) => {
+        router.prefetch(`/projects/${slug}`);
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
@@ -46,7 +46,7 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
         marginY={8}
       >
         {data.map((project) => (
-          <Card project={project} key={project.id} />
+          <Card project={project} key={project.slug} />
         ))}
       </Grid>
 

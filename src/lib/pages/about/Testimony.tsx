@@ -21,9 +21,13 @@ import {
   staggerAnimationProps,
   wrapperAnimationProps,
 } from '~/lib/constants/animation';
-import { sortedTestimonies } from '~/lib/constants/testimony';
+import type { Testimony } from '~/lib/types/testimony';
 
-const Testimony = () => {
+type TestimonyProps = {
+  testimonies: Array<Testimony>;
+};
+
+const TestimonySection = ({ testimonies }: TestimonyProps) => {
   const textColor = useColorModeValue('gray.600', 'gray.300');
 
   return (
@@ -47,7 +51,7 @@ const Testimony = () => {
               gap={6}
               gridTemplateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
             >
-              {sortedTestimonies.map((testimony) => (
+              {testimonies.map((testimony) => (
                 <Box
                   borderWidth={2}
                   borderRadius={24}
@@ -63,9 +67,9 @@ const Testimony = () => {
                   justifyContent="space-between"
                   gap={4}
                   padding={6}
-                  key={testimony.id}
+                  key={testimony.slug}
                 >
-                  <Text fontSize="sm">{testimony.body.raw}</Text>
+                  <Text fontSize="sm">{testimony.content}</Text>
 
                   <Flex gap={2} alignItems="center">
                     <Box>
@@ -96,4 +100,4 @@ const Testimony = () => {
   );
 };
 
-export default Testimony;
+export default TestimonySection;

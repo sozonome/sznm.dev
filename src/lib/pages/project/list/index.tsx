@@ -21,11 +21,11 @@ const ProjectList = () => {
 
   const highlightedProjectCards = highlightedProjects.map((projectData) => {
     return (
-      <MotionBox {...childAnimationProps} key={projectData.id}>
+      <MotionBox {...childAnimationProps} key={projectData.slug}>
         <ProjectDetailWrapper
           projectData={projectData}
           source="Featured Projects"
-          key={projectData.id}
+          key={projectData.slug}
         />
       </MotionBox>
     );
@@ -34,11 +34,11 @@ const ProjectList = () => {
   const nonHighlightedProjectCards = nonHighlightedFeaturedProjects.map(
     (projectData) => {
       return (
-        <MotionBox {...childAnimationProps} key={projectData.id}>
+        <MotionBox {...childAnimationProps} key={projectData.slug}>
           <ProjectDetailWrapper
             projectData={projectData}
             source="Featured Projects"
-            key={projectData.id}
+            key={projectData.slug}
           />
         </MotionBox>
       );

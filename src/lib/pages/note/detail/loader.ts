@@ -1,3 +1,4 @@
-import { noteIdParams } from '~/lib/constants/note';
+import { getNoteSlugs } from '~/lib/services/content/note';
 
-export const generateStaticParams = () => noteIdParams;
+export const generateStaticParams = () =>
+  getNoteSlugs().map((item) => ({ id: item }));

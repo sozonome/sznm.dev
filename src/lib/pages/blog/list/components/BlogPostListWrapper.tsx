@@ -11,17 +11,21 @@ import {
   childAnimationProps,
   staggerAnimationProps,
 } from '~/lib/constants/animation';
-import { sortedBlogPosts } from '~/lib/constants/blog';
 import type { ViewCounts } from '~/lib/services/db/views';
+import type { Post } from '~/lib/types/post';
 
 type BlogPostListWrapperProps = {
+  blogPosts: Array<Post>;
   blogViewCounts: ViewCounts;
 };
 
-const BlogPostListWrapper = ({ blogViewCounts }: BlogPostListWrapperProps) => {
+const BlogPostListWrapper = ({
+  blogPosts,
+  blogViewCounts,
+}: BlogPostListWrapperProps) => {
   const [keyword, setKeyword] = React.useState<string>('');
 
-  const filteredPosts = sortedBlogPosts.filter((post) =>
+  const filteredPosts = blogPosts.filter((post) =>
     post.title.toLowerCase().includes(keyword.toLowerCase())
   );
 

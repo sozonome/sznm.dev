@@ -11,16 +11,15 @@ import {
   childAnimationProps,
   staggerAnimationProps,
 } from '~/lib/constants/animation';
-import { sortedNotes } from '~/lib/constants/note';
 import type { ViewCounts } from '~/lib/services/db/views';
-
-const notes = sortedNotes;
+import type { Note } from '~/lib/types/note';
 
 type NoteListWrapperProps = {
+  notes: Array<Note>;
   noteViewCounts: ViewCounts;
 };
 
-const NoteListWrapper = ({ noteViewCounts }: NoteListWrapperProps) => {
+const NoteListWrapper = ({ notes, noteViewCounts }: NoteListWrapperProps) => {
   const [keyword, setKeyword] = React.useState<string>('');
 
   const filteredNotes = notes.filter((note) => {
@@ -60,7 +59,7 @@ const NoteListWrapper = ({ noteViewCounts }: NoteListWrapperProps) => {
         gridTemplateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
       >
         {filteredNotes.map((item) => (
-          <MotionBox {...childAnimationProps} key={item.id}>
+          <MotionBox {...childAnimationProps} key={item.slug}>
             <NoteCard data={item} noteViewCounts={noteViewCounts} />
           </MotionBox>
         ))}

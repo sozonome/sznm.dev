@@ -3,18 +3,18 @@ import Link from 'next/link';
 import * as React from 'react';
 import Balancer from 'react-wrap-balancer';
 
-import type { Blog } from 'contentlayer/generated';
 import type { MotionBoxProps } from '~/lib/components/motion/MotionBox';
 import MotionBox from '~/lib/components/motion/MotionBox';
 import ViewCounter from '~/lib/components/shared/ViewCounter';
 import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
 import type { ViewCounts } from '~/lib/services/db/views';
+import type { Post } from '~/lib/types/post';
 import { dateFormatLong } from '~/lib/utils/dateFormat';
 import { trackEvent } from '~/lib/utils/trackEvent';
 import { unsplashImg } from '~/lib/utils/unsplashImg';
 
 type BlogPostCardProps = {
-  postData: Blog;
+  postData: Post;
   wrapperProps?: MotionBoxProps;
   blogViewCounts: ViewCounts;
 };
@@ -32,13 +32,14 @@ const BlogPostCard = ({
   }, [postData.title]);
 
   const viewCount =
-    blogViewCounts.find((item) => item.slug?.includes(postData.id))?.count ?? 0;
+    blogViewCounts.find((item) => item.slug?.includes(postData.slug))?.count ??
+    0;
 
   return (
     <MotionBox {...wrapperProps}>
       <Grid
         as={Link}
-        href={`/blog/${postData.id}`}
+        href={`/blog/${postData.slug}`}
         aria-label={`Open ${postData.title} ${dateFormatLong(
           postData.date
         )} - ${postData.readTime?.text}`}
@@ -71,7 +72,7 @@ const BlogPostCard = ({
             {dateFormatLong(postData.date)} - {postData.readTime?.text}
             {' | '}
             <ViewCounter
-              slug={`/blog/${postData.id}`}
+              slug={`/blog/${postData.slug}`}
               count={viewCount}
               as="span"
             />

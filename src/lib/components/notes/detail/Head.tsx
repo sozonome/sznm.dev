@@ -1,7 +1,7 @@
 import { Grid, Heading, Text } from '@chakra-ui/react';
 import Balancer from 'react-wrap-balancer';
 
-import type { Note } from 'contentlayer/generated';
+import type { Note } from '~/lib/types/note';
 
 type NoteDetailHeadProps = {
   data: Note;

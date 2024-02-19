@@ -1,20 +1,20 @@
 import type { Metadata } from 'next';
 
 import { baseUrl } from '~/lib/constants/baseUrl';
-import { sortedBlogPosts } from '~/lib/constants/blog';
 import type { BlogPostProps } from '~/lib/pages/blog/post/types';
+import { getPostBySlug } from '~/lib/services/content/post';
 import { sznmOgImage } from '~/lib/utils/sznmOgImage';
 
 export const generateMetadata = ({
   params,
 }: BlogPostProps): Metadata | undefined => {
-  const postData = sortedBlogPosts.find(({ id }) => id === params.id);
+  const postData = getPostBySlug(params.id);
 
   if (!postData) {
     return undefined;
   }
 
-  const pageUrl = `${baseUrl}/blog/${postData.id}`;
+  const pageUrl = `${baseUrl}/blog/${postData.slug}`;
   const ogImage = sznmOgImage({
     heading: postData.title,
     text: 'Blog Post | https://sznm.dev',

@@ -1,10 +1,10 @@
 import { ArticleJsonLd } from 'next-seo';
 
-import type { Blog } from 'contentlayer/generated';
 import { baseUrl } from '~/lib/constants/baseUrl';
+import type { Post } from '~/lib/types/post';
 
 type BlogPostMetaProps = {
-  postData: Blog;
+  postData: Post;
 };
 
 const BlogPostMeta = ({ postData }: BlogPostMetaProps) => {
@@ -12,7 +12,7 @@ const BlogPostMeta = ({ postData }: BlogPostMetaProps) => {
     <ArticleJsonLd
       useAppDir
       type="Blog"
-      url={`${baseUrl}/blog/${postData.id}`}
+      url={`${baseUrl}/blog/${postData.slug}`}
       title={`${postData.title} | sozonome`}
       images={[]}
       datePublished={new Date(postData.date).toISOString()}

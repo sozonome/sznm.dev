@@ -6,12 +6,12 @@ import DetailViewCounts from '~/lib/components/shared/DetailViewCounts';
 import GiscusWrapper from '~/lib/components/shared/GiscusWrapper';
 import MarkdownContent from '~/lib/components/shared/MarkdownContent';
 import ShareButtons from '~/lib/components/shared/ShareButtons';
-import { sortedNotes } from '~/lib/constants/note';
+import { getNoteBySlug } from '~/lib/services/content/note';
 
 import type { NoteDetailProps } from './types';
 
 const NoteDetail = ({ params }: NoteDetailProps) => {
-  const data = sortedNotes.find(({ id }) => id === params?.id);
+  const data = getNoteBySlug(params.id);
 
   if (!data) {
     notFound();
@@ -25,7 +25,7 @@ const NoteDetail = ({ params }: NoteDetailProps) => {
         <ShareButtons title={`Check out this note: ${data.title}`} />
       </Grid>
       <Spacer height={8} />
-      <MarkdownContent rawContent={data.body.raw} />
+      <MarkdownContent rawContent={data.content} />
       <Spacer height={8} />
 
       <ShareButtons title={`Check out this note: ${data.title}`} />
