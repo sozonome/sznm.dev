@@ -5,7 +5,8 @@ import { getViewCount } from '~/lib/services/db/views';
 type DetailViewCountsProps = Pick<ViewCounterProps, 'slug' | 'fontSize' | 'as'>;
 
 const DetailViewCounts = async (props: DetailViewCountsProps) => {
-  const viewCount = await getViewCount(props.slug);
+  const { slug } = props;
+  const viewCount = await getViewCount(slug);
 
   return <ViewCounter {...props} count={viewCount} trackView />;
 };
