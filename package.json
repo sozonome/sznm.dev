@@ -83,7 +83,7 @@
     "eslint-config-sznm": "^2.0.3",
     "eslint-plugin-no-relative-import-paths": "^1.5.3",
     "husky": "^9.0.11",
-    "knip": "^5.1.1",
+    "knip": "^5.1.2",
     "lint-staged": "^15.2.2",
     "next-sitemap": "^4.2.3",
     "prettier": "^3.2.5",
