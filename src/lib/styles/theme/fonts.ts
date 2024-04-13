@@ -1,5 +1,8 @@
 import type { DeepPartial, Theme } from '@chakra-ui/react';
-import { Outfit as FontHeading, Geologica as FontBody } from 'next/font/google';
+import {
+  Outfit as FontHeading,
+  Rethink_Sans as FontBody,
+} from 'next/font/google';
 
 const fontHeading = FontHeading({
   subsets: ['latin'],
