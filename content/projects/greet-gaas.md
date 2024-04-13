@@ -6,7 +6,6 @@ date: '2021-01-01'
 icon: '/app_icons/greet-gaas.svg'
 thumbnail: '/app_preview/gaas.png'
 thumbnailDark: '/app_preview/gaas-dark.png'
-featured: true
 sznmApps: true
 projectType: 'apps'
 stacks:

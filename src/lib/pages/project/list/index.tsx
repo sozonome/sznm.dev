@@ -12,14 +12,7 @@ import { featuredProjects } from '~/lib/constants/project';
 import ProjectListBottomNav from './BottomNav';
 
 const ProjectList = () => {
-  const highlightedProjects = featuredProjects.filter(
-    (project) => project.highlight
-  );
-  const nonHighlightedFeaturedProjects = featuredProjects.filter(
-    (project) => !project.highlight
-  );
-
-  const highlightedProjectCards = highlightedProjects.map((projectData) => {
+  const featuredProjectCards = featuredProjects.map((projectData) => {
     return (
       <MotionBox {...childAnimationProps} key={projectData.slug}>
         <ProjectDetailWrapper
@@ -31,20 +24,6 @@ const ProjectList = () => {
     );
   });
 
-  const nonHighlightedProjectCards = nonHighlightedFeaturedProjects.map(
-    (projectData) => {
-      return (
-        <MotionBox {...childAnimationProps} key={projectData.slug}>
-          <ProjectDetailWrapper
-            projectData={projectData}
-            source="Featured Projects"
-            key={projectData.slug}
-          />
-        </MotionBox>
-      );
-    }
-  );
-
   return (
     <>
       <Box marginBottom={8}>
@@ -55,15 +34,7 @@ const ProjectList = () => {
 
       <Grid gap={6} marginBottom={8}>
         <MotionGrid {...staggerAnimationProps} gap={6}>
-          {highlightedProjectCards}
-        </MotionGrid>
-
-        <MotionGrid
-          {...staggerAnimationProps}
-          gap={6}
-          gridTemplateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
-        >
-          {nonHighlightedProjectCards}
+          {featuredProjectCards}
         </MotionGrid>
       </Grid>
 

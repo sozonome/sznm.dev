@@ -19,7 +19,7 @@ const Content = () => {
       <VStack spacing={4} marginTop={4}>
         <Text>
           I&apos;m Nathan, an experienced Digital Crafter with a strong passion
-          for crafting customer-centric tech solutions.
+          for crafting user-centric tech solutions.
         </Text>
 
         <Text>

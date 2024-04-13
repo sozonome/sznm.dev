@@ -16,7 +16,7 @@ const HeroSection = () => {
           Hello! I&apos;m Nathan.
         </Heading>
         <Text fontSize={{ base: 'md', md: 'xl' }}>
-          Digital Crafter passionate in building user-centric solutions.
+          Driving Business Growth with User-Centric Products.
         </Text>
         <Flex alignItems="center" gap={2}>
           <Button as={Link} href="/projects">
