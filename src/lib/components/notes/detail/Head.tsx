@@ -10,7 +10,7 @@ type NoteDetailHeadProps = {
 const NoteDetailHead = ({ data }: NoteDetailHeadProps) => {
   return (
     <Grid gap={8}>
-      <Heading as="h1" size="3xl">
+      <Heading as="h1" size="xl">
         <Balancer>{data.title}</Balancer>
       </Heading>
       <Text color="gray">{data.description}</Text>

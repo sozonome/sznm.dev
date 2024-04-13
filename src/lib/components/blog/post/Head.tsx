@@ -14,7 +14,7 @@ const BlogPostHead = ({ postData }: BlogPostHeadProps) => {
   return (
     <Grid gap={12} marginBottom={12}>
       <Grid gap={8}>
-        <Heading as="h1" size="3xl">
+        <Heading as="h1" size="xl">
           <Balancer>{postData.title}</Balancer>
         </Heading>
 

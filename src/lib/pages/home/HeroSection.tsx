@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const HeroSection = () => {
   return (
-    <Grid height="90vh" alignItems="center">
+    <Grid height="70vh" alignItems="center">
       <Flex
         flexDirection="column"
         verticalAlign="center"
