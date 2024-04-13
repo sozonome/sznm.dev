@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.27.2](https://github.com/sozonome/sznm.dev/compare/v1.27.1...v1.27.2) (2024-04-13)
+
+
+### Improvements
+
+* adjust alignment and sizes ([1cf43b3](https://github.com/sozonome/sznm.dev/commit/1cf43b3f7ab4e826afcfc3159798fbe827390f84))
+* adjust fonts ([5d3d4be](https://github.com/sozonome/sznm.dev/commit/5d3d4becdbcb400745bf6ef78654435631110f31))
+* **blog:** adjust shown projects ([5d9af34](https://github.com/sozonome/sznm.dev/commit/5d9af343bd69451d32e4103315ba21ba8bf524fb))
+
 ### [1.27.1](https://github.com/sozonome/sznm.dev/compare/v1.27.0...v1.27.1) (2024-02-19)
 
 
