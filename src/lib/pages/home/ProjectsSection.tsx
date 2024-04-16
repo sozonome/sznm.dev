@@ -16,13 +16,14 @@ type ProjectsSectionProps = { data: Array<Project> };
 const ProjectsSection = ({ data }: ProjectsSectionProps) => {
   const router = useRouter();
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   React.useEffect(() => {
+    // biome-ignore lint/complexity/noForEach: <explanation>
     data
       .filter((project) => project.highlight && project)
       .forEach(({ slug }) => {
         router.prefetch(`/projects/${slug}`);
       });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
   const handleClickViewAllProjects = React.useCallback(() => {

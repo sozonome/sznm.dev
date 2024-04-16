@@ -34,7 +34,7 @@ export const useCommandCenter = () => {
         openCmdMenu();
       }
     },
-    [closeCmdMenu, isOpen, openCmdMenu]
+    [closeCmdMenu, isOpen, openCmdMenu],
   );
 
   React.useEffect(() => {

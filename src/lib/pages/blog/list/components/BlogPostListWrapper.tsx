@@ -26,7 +26,7 @@ const BlogPostListWrapper = ({
   const [keyword, setKeyword] = React.useState<string>('');
 
   const filteredPosts = blogPosts.filter((post) =>
-    post.title.toLowerCase().includes(keyword.toLowerCase())
+    post.title.toLowerCase().includes(keyword.toLowerCase()),
   );
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -34,7 +34,7 @@ const BlogPostListWrapper = ({
     debounce((event: React.ChangeEvent<HTMLInputElement>) => {
       setKeyword(event.target.value);
     }, 150),
-    []
+    [],
   );
 
   return (

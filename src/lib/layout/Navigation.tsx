@@ -3,10 +3,10 @@ import Link from 'next/link';
 import React from 'react';
 import type { IconType } from 'react-icons';
 import {
-  FaStickyNote,
   FaFeatherAlt,
   FaHome,
   FaRocket,
+  FaStickyNote,
   FaUser,
 } from 'react-icons/fa';
 

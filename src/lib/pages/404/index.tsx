@@ -1,10 +1,10 @@
 import {
   Box,
   Button,
-  Heading,
-  Text,
   Link as ChakraLink,
+  Heading,
   Image,
+  Text,
 } from '@chakra-ui/react';
 import Link from 'next/link';
 
@@ -17,7 +17,11 @@ const Page404 = () => {
         width={['100%', '70%', '60%', '60%']}
         margin="0 auto"
         animate={{ y: 20 }}
-        transition={{ repeat: Infinity, duration: 2, repeatType: 'reverse' }}
+        transition={{
+          repeat: Number.POSITIVE_INFINITY,
+          duration: 2,
+          repeatType: 'reverse',
+        }}
       >
         <Image src="/404 Error-rafiki.svg" alt="Error404" />
       </MotionBox>

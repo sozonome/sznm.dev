@@ -4,7 +4,8 @@ import { fetcher } from '~/lib/utils/fetcher';
 import type { GetNowPlayingResponse } from './types';
 import { nowPlayingDataSelector } from './utils';
 
-const SPOTIFY_NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
+const SPOTIFY_NOW_PLAYING_ENDPOINT =
+  'https://api.spotify.com/v1/me/player/currently-playing';
 
 export const fetchNowPlaying = async () => {
   const { access_token: accessToken } = await getAccessToken();
@@ -14,7 +15,7 @@ export const fetchNowPlaying = async () => {
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },
-    }
+    },
   );
 
   return nowPlayingDataSelector(data);

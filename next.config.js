@@ -125,5 +125,5 @@ module.exports = million.next(
       ],
     }),
   }),
-  { auto: true }
+  { auto: true },
 );

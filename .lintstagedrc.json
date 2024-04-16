@@ -1,5 +1,5 @@
 {
-  "src/**/*.{js,jsx,ts,tsx}": ["eslint --fix --max-warnings=0", "prettier -w"],
-  "src/**/*.{json,css,scss,md}": ["prettier -w"],
-  "content/**/*.{md}": ["prettier -w"]
+	"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+		"biome check --apply --no-errors-on-unmatched"
+	]
 }

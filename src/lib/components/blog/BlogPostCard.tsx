@@ -1,4 +1,4 @@
-import { Box, Heading, Text, AspectRatio, Image, Grid } from '@chakra-ui/react';
+import { AspectRatio, Box, Grid, Heading, Image, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import * as React from 'react';
 import Balancer from 'react-wrap-balancer';
@@ -41,7 +41,7 @@ const BlogPostCard = ({
         as={Link}
         href={`/blog/${postData.slug}`}
         aria-label={`Open ${postData.title} ${dateFormatLong(
-          postData.date
+          postData.date,
         )} - ${postData.readTime?.text}`}
         onClick={handleClickBlogPost}
         width="100%"

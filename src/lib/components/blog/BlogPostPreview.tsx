@@ -39,7 +39,7 @@ const BlogPostPreview = ({ postData, wrapperProps }: BlogPostPreviewProps) => {
           as={Link}
           href={`/blog/${postData.slug}`}
           aria-label={`Open ${postData.title} ${dateFormatLong(
-            postData.date
+            postData.date,
           )} - ${postData.readTime?.text}`}
           onClick={handleClickBlogPost}
           flexWrap="wrap"

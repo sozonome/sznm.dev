@@ -9,5 +9,5 @@ export const useCmdMenu = createWithEqualityFn<CommandMenuStore>(
     openCmdMenu: () => set({ isOpen: true }),
     closeCmdMenu: () => set({ isOpen: false }),
   }),
-  shallow
+  shallow,
 );

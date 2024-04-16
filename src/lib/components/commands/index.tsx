@@ -1,4 +1,4 @@
-import { Divider, Center } from '@chakra-ui/react';
+import { Center, Divider } from '@chakra-ui/react';
 import * as React from 'react';
 
 import { useCmdMenu } from '~/lib/store/cmd';
@@ -23,7 +23,7 @@ const CommandMenu = () => {
   const handleSelect = React.useCallback(
     (commandGroup: CommandCollection, item: CommandEntry) => () =>
       onSelectItem(commandGroup, item),
-    [onSelectItem]
+    [onSelectItem],
   );
 
   return (

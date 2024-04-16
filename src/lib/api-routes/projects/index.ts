@@ -8,7 +8,7 @@ const getProjectsAPIRoute = async () => {
       description,
       url: projectLink,
       icon: `https://sznm.dev${icon}`,
-    })
+    }),
   );
 
   return new Response(JSON.stringify(projectList), {

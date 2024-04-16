@@ -17,6 +17,6 @@ export const dateFormatLong = (date: string | Date, time = false) => {
 
   return convertedDate.toLocaleDateString(
     'default',
-    time ? options : optionsWithoutTime
+    time ? options : optionsWithoutTime,
   );
 };

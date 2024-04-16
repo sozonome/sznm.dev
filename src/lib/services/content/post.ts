@@ -1,6 +1,6 @@
-import fs from 'fs';
+import fs from 'node:fs';
+import { join } from 'node:path';
 import matter from 'gray-matter';
-import { join } from 'path';
 import readingTime from 'reading-time';
 
 import type { Post } from '~/lib/types/post';

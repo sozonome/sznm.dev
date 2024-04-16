@@ -1,11 +1,11 @@
 import { getAllProjects } from '~/lib/services/content/project';
 
 export const featuredProjects = getAllProjects().filter(
-  (project) => project.featured
+  (project) => project.featured,
 );
 
 export const highlightedProjects = getAllProjects().filter(
-  (project) => project.highlight
+  (project) => project.highlight,
 );
 
 export const sznmAppsProjects = getAllProjects()

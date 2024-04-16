@@ -9,8 +9,8 @@ import {
   wrapperAnimationProps,
 } from '~/lib/constants/animation';
 
-import { socialLinks } from './constants';
 import MotionLink from './MotionLink';
+import { socialLinks } from './constants';
 
 const Links = () => {
   return (

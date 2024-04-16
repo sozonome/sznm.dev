@@ -30,6 +30,7 @@ const NoteListWrapper = ({ notes, noteViewCounts }: NoteListWrapperProps) => {
     const query = keyword.toLowerCase();
 
     let found = false;
+    // biome-ignore lint/complexity/noForEach: <explanation>
     comparator.forEach((key) => {
       if (key.includes(query)) {
         found = true;
@@ -43,7 +44,7 @@ const NoteListWrapper = ({ notes, noteViewCounts }: NoteListWrapperProps) => {
     debounce((event: React.ChangeEvent<HTMLInputElement>) => {
       setKeyword(event.target.value);
     }, 150),
-    []
+    [],
   );
   return (
     <>

@@ -1,7 +1,7 @@
 import type { GetNowPlayingResponse, GetNowPlayingTransformed } from './types';
 
 export const nowPlayingDataSelector = (
-  response: GetNowPlayingResponse
+  response: GetNowPlayingResponse,
 ): GetNowPlayingTransformed => {
   return {
     isPlaying: response.is_playing,

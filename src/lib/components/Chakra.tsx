@@ -1,8 +1,8 @@
 import {
-  createStandaloneToast,
   ChakraProvider,
-  cookieStorageManager,
   ColorModeScript,
+  cookieStorageManager,
+  createStandaloneToast,
 } from '@chakra-ui/react';
 
 import customTheme from '~/lib/styles/theme';

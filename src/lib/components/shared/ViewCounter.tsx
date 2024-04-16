@@ -19,11 +19,11 @@ const ViewCounter = ({
   fontSize,
   as,
 }: ViewCounterProps) => {
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   React.useEffect(() => {
     if (trackView) {
       incrementViews(slug);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Heading, Text, Link, Button } from '@chakra-ui/react';
+import { Box, Button, Heading, Link, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { FaGooglePlay } from 'react-icons/fa';
 

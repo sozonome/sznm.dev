@@ -30,7 +30,7 @@ export const middleware = async (req: NextRequest) => {
 export const config = {
   matcher: [
     '/((?!api|_next/static|_next/image|favicon.ico|manifest.json|robots.txt).*)',
-    `/why-i:path*`,
+    '/why-i:path*',
     '/s/:path*',
   ],
 };

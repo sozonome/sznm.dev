@@ -1,7 +1,7 @@
-import fs from 'fs';
+import fs from 'node:fs';
+import { join } from 'node:path';
 import matter from 'gray-matter';
 import { sortBy } from 'lodash-es';
-import { join } from 'path';
 
 import type { Testimony } from '~/lib/types/testimony';
 
@@ -24,6 +24,6 @@ export const getAllTestimonies = () => {
   const slugs = getTestimonySlugs();
   return sortBy(
     slugs.map((slug) => getTestimonyBySlug(slug)),
-    ['year', 'name']
+    ['year', 'name'],
   ).reverse();
 };

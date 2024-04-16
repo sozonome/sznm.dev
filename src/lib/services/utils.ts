@@ -14,7 +14,7 @@ export const useGetAPI = <ResType>({
     fetcher,
     {
       fallbackData,
-    }
+    },
   );
 
   return {

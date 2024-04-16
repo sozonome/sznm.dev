@@ -45,7 +45,7 @@ const ShareButtons = ({ title }: ShareButtonsProps) => {
         }
         window.open(shareLink);
       },
-    [toast]
+    [toast],
   );
 
   return (
@@ -58,7 +58,7 @@ const ShareButtons = ({ title }: ShareButtonsProps) => {
             icon={icon}
             onClick={handleClick({ baseSocialUrl, params, isCopy })}
           />
-        )
+        ),
       )}
     </HStack>
   );

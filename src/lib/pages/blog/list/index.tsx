@@ -1,4 +1,4 @@
-import { Heading, Box, Text, Grid } from '@chakra-ui/react';
+import { Box, Grid, Heading, Text } from '@chakra-ui/react';
 
 import BlogPostListWrapper from '~/lib/pages/blog/list/components/BlogPostListWrapper';
 import { getAllPosts } from '~/lib/services/content/post';

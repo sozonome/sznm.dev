@@ -4,8 +4,8 @@ import SpotifyListening from '~/lib/components/common/SpotifyListening';
 import { EVENT_TYPE_LINK } from '~/lib/constants/tracking';
 import { trackEvent } from '~/lib/utils/trackEvent';
 
-import { links } from './constants';
 import FooterLink from './FooterLink';
+import { links } from './constants';
 
 const Footer = () => {
   const handleClickFooterLink = (label: string) => () => {

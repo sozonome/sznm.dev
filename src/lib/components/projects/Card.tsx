@@ -1,4 +1,4 @@
-import { Box, Link, Text, Stack, useColorModeValue } from '@chakra-ui/react';
+import { Box, Link, Stack, Text, useColorModeValue } from '@chakra-ui/react';
 import Image from 'next/image';
 import * as React from 'react';
 
@@ -23,14 +23,14 @@ const Card = ({
 }: CardProps) => {
   const dynamicThumbnail = useColorModeValue(
     thumbnail,
-    thumbnailDark || thumbnail
+    thumbnailDark || thumbnail,
   );
   const borderHighlight = useColorModeValue('gray', 'white');
   const thumbnailUrl = thumbnail ? dynamicThumbnail : null;
 
   const overlayBgGradient = useColorModeValue(
     'linear(to-t, rgba(45, 55, 72, 0.6) 0%, rgba(203, 213, 224, 0.4) 80%, rgba(237, 242, 247, 0))',
-    'linear(to-t, rgba(0, 0, 0, 0.5) 0%, rgba(237, 242, 247, 0))'
+    'linear(to-t, rgba(0, 0, 0, 0.5) 0%, rgba(237, 242, 247, 0))',
   );
 
   const link = playStoreLink ?? projectLink ?? repoLink;

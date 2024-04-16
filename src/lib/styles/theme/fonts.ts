@@ -1,7 +1,7 @@
 import type { DeepPartial, Theme } from '@chakra-ui/react';
 import {
-  Outfit as FontHeading,
   Rethink_Sans as FontBody,
+  Outfit as FontHeading,
 } from 'next/font/google';
 
 const fontHeading = FontHeading({
