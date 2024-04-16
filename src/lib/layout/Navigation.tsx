@@ -44,7 +44,7 @@ const NavItem = ({ href, label, icon }: NavItemProps) => {
   );
 };
 
-const navigations: NavItemProps[] = [
+const navigations: Array<NavItemProps> = [
   {
     href: '/',
     label: 'Home',

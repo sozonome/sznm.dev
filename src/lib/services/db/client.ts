@@ -8,6 +8,8 @@ declare global {
 // biome-ignore lint/suspicious/noRedeclare: <explanation>
 const prisma = global.prisma || new PrismaClient();
 
-if (process.env.NODE_ENV === 'development') global.prisma = prisma;
+if (process.env.NODE_ENV === 'development') {
+  global.prisma = prisma;
+}
 
 export default prisma;
