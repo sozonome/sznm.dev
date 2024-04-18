@@ -1,8 +1,5 @@
 import type { DeepPartial, Theme } from '@chakra-ui/react';
-import {
-  Rethink_Sans as FontBody,
-  Outfit as FontHeading,
-} from 'next/font/google';
+import { Gabarito as FontBody, Outfit as FontHeading } from 'next/font/google';
 
 const fontHeading = FontHeading({
   subsets: ['latin'],
