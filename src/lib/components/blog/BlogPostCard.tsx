@@ -61,6 +61,7 @@ const BlogPostCard = ({
             src={unsplashImg(postData.cover)}
             fit="cover"
             borderRadius={12}
+            alt={`${postData.title} Blog Post Image Cover`}
           />
         </AspectRatio>
 

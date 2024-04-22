@@ -16,7 +16,6 @@ type ProjectsSectionProps = { data: Array<Project> };
 const ProjectsSection = ({ data }: ProjectsSectionProps) => {
   const router = useRouter();
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   React.useEffect(() => {
     // biome-ignore lint/complexity/noForEach: <explanation>
     data
@@ -24,7 +23,7 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
       .forEach(({ slug }) => {
         router.prefetch(`/projects/${slug}`);
       });
-  }, [data]);
+  }, [data, router]);
 
   const handleClickViewAllProjects = React.useCallback(() => {
     trackEvent({

@@ -32,6 +32,7 @@ const BlogPost = ({ params }: BlogPostProps) => {
           src={unsplashImg(postData.cover, 2160)}
           fit="cover"
           borderRadius={{ base: 12, md: 24 }}
+          alt={`${postData.title} Blog Post Image Cover`}
         />
       </AspectRatio>
       <BlogPostHead postData={postData} />
