@@ -12,7 +12,7 @@ tags:
 Expo has different behavior on how it loads env variables on dev server, EAS Build, and EAS Updates
 
 - On dev server and EAS Updates, by default it will load `.env`
-- On EAS Build (unless we upload `.env` to EAS Build), it's recommended to define it in `eas.json`
+- On EAS Build (unless we upload `.env` to EAS Build or exclude .env* from .gitignore), it's recommended to define it in `eas.json`
 - To make sure EAS Updates load the desired env:
   1. Define `NODE_ENV` and `.env.${ENVIRONMENT_NAME}`. For example we want to use `.env.production`:
   2. Add `--clear-cache` to make sure it load the most fresh value
