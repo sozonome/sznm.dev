@@ -12,7 +12,7 @@ export const env = createEnv({
     SHORTENER_HOST_NAME: requiredString,
     PORTFOLIO_ZONE_URL: requiredUrl,
     PORTFOLIO_BUILD_ID: requiredString,
-    MM_URL: requiredString,
+    MM_URL: requiredUrl,
   },
   client: {
     NEXT_PUBLIC_UMAMI_WEBSITE_ID: requiredString,
