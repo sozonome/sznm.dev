@@ -99,7 +99,8 @@
     "url": "https://github.com/sozonome/sznm.dev/issues"
   },
   "engines": {
-    "node": ">=18.x",
-    "pnpm": ">=8"
-  }
+    "node": ">=20.14.x",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@9.1.2"
 }
