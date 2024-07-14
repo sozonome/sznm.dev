@@ -63,40 +63,41 @@ const posts = defineCollection({
   }),
 });
 
-const notes = defineCollection({
+type NoteCollectionDefinitionParams = {
+  name: string;
+  directory: string;
+};
+
+const noteCollectionDefinition = ({
+  name,
+  directory,
+}: NoteCollectionDefinitionParams) =>
+  defineCollection({
+    name,
+    directory,
+    include: '**/*.md',
+    schema: (z) => ({
+      title: z.string(),
+      description: z.string(),
+      published: z.boolean(),
+      date: z.string(),
+      tags: z.array(z.string()),
+      id: z.string().optional(),
+    }),
+    transform: (doc) => ({
+      ...doc,
+      id: doc._meta.fileName.replace(/\.md$|\.mdx$/, ''),
+    }),
+  });
+
+const notes = noteCollectionDefinition({
   name: 'notes',
   directory: 'content/notes',
-  include: '**/*.md',
-  schema: (z) => ({
-    title: z.string(),
-    description: z.string(),
-    published: z.boolean(),
-    date: z.string(),
-    tags: z.array(z.string()),
-    id: z.string().optional(),
-  }),
-  transform: (doc) => ({
-    ...doc,
-    id: doc._meta.fileName.replace(/\.md$|\.mdx$/, ''),
-  }),
 });
 
-const todayILearns = defineCollection({
+const todayILearns = noteCollectionDefinition({
   name: 'todayILearns',
   directory: 'content/til',
-  include: '**/*.md',
-  schema: (z) => ({
-    title: z.string(),
-    description: z.string(),
-    published: z.boolean(),
-    date: z.string(),
-    tags: z.array(z.string()),
-    id: z.string().optional(),
-  }),
-  transform: (doc) => ({
-    ...doc,
-    id: doc._meta.fileName.replace(/\.md$|\.mdx$/, ''),
-  }),
 });
 
 const testimonies = defineCollection({
@@ -108,7 +109,7 @@ const testimonies = defineCollection({
     title: z.string(),
     year: z.string(),
     linkedin: z.string().optional(),
-    id: z.string().optional()
+    id: z.string().optional(),
   }),
   transform: (doc) => ({
     ...doc,
