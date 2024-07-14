@@ -8,13 +8,13 @@ const projects = defineCollection({
   schema: (z) => ({
     title: z.string(),
     description: z.string(),
-    published: z.boolean(),
+    published: z.boolean().catch(true),
     /** will be shown at home */
-    highlight: z.boolean(),
+    highlight: z.boolean().optional(),
     /** shown at project list frontpage */
-    featured: z.boolean(),
-    sznmApps: z.boolean(),
-    stacks: z.array(z.string()),
+    featured: z.boolean().optional(),
+    sznmApps: z.boolean().optional(),
+    stacks: z.array(z.string()).optional(),
     date: z.string(),
     projectLink: z.string().optional(),
     repoLink: z.string().optional(),
@@ -43,7 +43,7 @@ const posts = defineCollection({
     thumbnail: z.string().optional(),
     description: z.string().optional(),
     legacyID: z.string().optional(),
-    published: z.boolean(),
+    published: z.boolean().catch(true),
     tags: z.array(z.string()),
     readTime: z
       .object({
@@ -79,7 +79,7 @@ const noteCollectionDefinition = ({
     schema: (z) => ({
       title: z.string(),
       description: z.string(),
-      published: z.boolean(),
+      published: z.boolean().catch(true),
       date: z.string(),
       tags: z.array(z.string()),
       id: z.string().optional(),
