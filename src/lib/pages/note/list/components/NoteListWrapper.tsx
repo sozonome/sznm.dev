@@ -3,6 +3,7 @@
 import debounce from 'lodash-es/debounce';
 import React from 'react';
 
+import type { Note } from 'content-collections';
 import MotionBox from '~/lib/components/motion/MotionBox';
 import MotionGrid from '~/lib/components/motion/MotionGrid';
 import NoteCard from '~/lib/components/notes/NoteCard';
@@ -12,7 +13,6 @@ import {
   staggerAnimationProps,
 } from '~/lib/constants/animation';
 import type { ViewCounts } from '~/lib/services/db/views';
-import type { Note } from '~/lib/types/note';
 
 type NoteListWrapperProps = {
   notes: Array<Note>;
@@ -60,7 +60,7 @@ const NoteListWrapper = ({ notes, noteViewCounts }: NoteListWrapperProps) => {
         gridTemplateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
       >
         {filteredNotes.map((item) => (
-          <MotionBox {...childAnimationProps} key={item.slug}>
+          <MotionBox {...childAnimationProps} key={item.id}>
             <NoteCard data={item} noteViewCounts={noteViewCounts} />
           </MotionBox>
         ))}

@@ -14,11 +14,11 @@ import ProjectListBottomNav from './BottomNav';
 const ProjectList = () => {
   const featuredProjectCards = featuredProjects.map((projectData) => {
     return (
-      <MotionBox {...childAnimationProps} key={projectData.slug}>
+      <MotionBox {...childAnimationProps} key={projectData.id}>
         <ProjectDetailWrapper
           projectData={projectData}
           source="Featured Projects"
-          key={projectData.slug}
+          key={projectData.id}
         />
       </MotionBox>
     );

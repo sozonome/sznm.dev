@@ -3,12 +3,12 @@ import Link from 'next/link';
 import * as React from 'react';
 import Balancer from 'react-wrap-balancer';
 
+import type { Post } from 'content-collections';
 import type { MotionBoxProps } from '~/lib/components/motion/MotionBox';
 import MotionBox from '~/lib/components/motion/MotionBox';
 import ViewCounter from '~/lib/components/shared/ViewCounter';
 import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
 import type { ViewCounts } from '~/lib/services/db/views';
-import type { Post } from '~/lib/types/post';
 import { dateFormatLong } from '~/lib/utils/dateFormat';
 import { trackEvent } from '~/lib/utils/trackEvent';
 import { unsplashImg } from '~/lib/utils/unsplashImg';
@@ -32,14 +32,13 @@ const BlogPostCard = ({
   }, [postData.title]);
 
   const viewCount =
-    blogViewCounts.find((item) => item.slug?.includes(postData.slug))?.count ??
-    0;
+    blogViewCounts.find((item) => item.slug?.includes(postData.id))?.count ?? 0;
 
   return (
     <MotionBox {...wrapperProps}>
       <Grid
         as={Link}
-        href={`/blog/${postData.slug}`}
+        href={`/blog/${postData.id}`}
         aria-label={`Open ${postData.title} ${dateFormatLong(
           postData.date,
         )} - ${postData.readTime?.text}`}
@@ -73,7 +72,7 @@ const BlogPostCard = ({
             {dateFormatLong(postData.date)} - {postData.readTime?.text}
             {' | '}
             <ViewCounter
-              slug={`/blog/${postData.slug}`}
+              slug={`/blog/${postData.id}`}
               count={viewCount}
               as="span"
             />

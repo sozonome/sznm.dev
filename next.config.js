@@ -1,6 +1,7 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
+const { withContentCollections } = require('@content-collections/next');
 const million = require('million/compiler');
 
 /**
@@ -65,65 +66,68 @@ const portfolioZoneUrl = process.env.PORTFOLIO_ZONE_URL ?? '';
 const portfolioDataPrefix = `/_next/data/${process.env.PORTFOLIO_BUILD_ID}`;
 
 /** @type {import('next').NextConfig} */
-module.exports = million.next(
-  withBundleAnalyzer({
-    reactStrictMode: true,
-    headers: async () => {
-      return [
-        {
-          source: '/',
-          headers: securityHeaders,
-        },
-        {
-          source: '/:path*',
-          headers: securityHeaders,
-        },
-      ];
-    },
-    eslint: {
-      dirs: ['src'],
-    },
-    transpilePackages: ['lodash-es'],
-    experimental: {
-      scrollRestoration: true,
-    },
-    redirects: () => {
-      return [
-        {
-          source: '/snippets/:id',
-          destination: '/notes/:id',
-          permanent: false,
-        },
-      ];
-    },
-    rewrites: () => ({
-      beforeFiles: [
-        {
-          source: '/portfolio',
-          destination: `${portfolioZoneUrl}/portfolio`,
-        },
-        {
-          source: '/portfolio/:path*',
-          destination: `${portfolioZoneUrl}/portfolio/:path*`,
-        },
-        {
-          source: `${portfolioDataPrefix}/portfolio.json`,
-          destination: `${portfolioZoneUrl}${portfolioDataPrefix}/portfolio.json`,
-        },
-        {
-          source: `${portfolioDataPrefix}/portfolio/:path*`,
-          destination: `${portfolioZoneUrl}${portfolioDataPrefix}/portfolio/:path*`,
-        },
-        {
-          source: '/api/portfolio/:path*',
-          destination: `${portfolioZoneUrl}/api/portfolio/:path*`,
-        },
-        {
-          source: '/assets/portfolio/:path*',
-          destination: `${portfolioZoneUrl}/assets/portfolio/:path*`,
-        },
-      ],
-    }),
+const nextConfig = {
+  reactStrictMode: true,
+  headers: async () => {
+    return [
+      {
+        source: '/',
+        headers: securityHeaders,
+      },
+      {
+        source: '/:path*',
+        headers: securityHeaders,
+      },
+    ];
+  },
+  eslint: {
+    dirs: ['src'],
+  },
+  transpilePackages: ['lodash-es'],
+  experimental: {
+    scrollRestoration: true,
+  },
+  redirects: () => {
+    return [
+      {
+        source: '/snippets/:id',
+        destination: '/notes/:id',
+        permanent: false,
+      },
+    ];
+  },
+  rewrites: () => ({
+    beforeFiles: [
+      {
+        source: '/portfolio',
+        destination: `${portfolioZoneUrl}/portfolio`,
+      },
+      {
+        source: '/portfolio/:path*',
+        destination: `${portfolioZoneUrl}/portfolio/:path*`,
+      },
+      {
+        source: `${portfolioDataPrefix}/portfolio.json`,
+        destination: `${portfolioZoneUrl}${portfolioDataPrefix}/portfolio.json`,
+      },
+      {
+        source: `${portfolioDataPrefix}/portfolio/:path*`,
+        destination: `${portfolioZoneUrl}${portfolioDataPrefix}/portfolio/:path*`,
+      },
+      {
+        source: '/api/portfolio/:path*',
+        destination: `${portfolioZoneUrl}/api/portfolio/:path*`,
+      },
+      {
+        source: '/assets/portfolio/:path*',
+        destination: `${portfolioZoneUrl}/assets/portfolio/:path*`,
+      },
+    ],
   }),
+};
+
+/** @type {import('next').NextConfig} */
+module.exports = million.next(
+  withBundleAnalyzer(withContentCollections(nextConfig)),
   { auto: true },
 );

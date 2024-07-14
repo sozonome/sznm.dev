@@ -6,9 +6,9 @@ import { useRouter } from 'next/navigation';
 import * as React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 
+import type { Project } from 'content-collections';
 import Card from '~/lib/components/projects/Card';
 import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
-import type { Project } from '~/lib/types/project';
 import { trackEvent } from '~/lib/utils/trackEvent';
 
 type ProjectsSectionProps = { data: Array<Project> };
@@ -20,8 +20,8 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
     // biome-ignore lint/complexity/noForEach: <explanation>
     data
       .filter((project) => project.highlight && project)
-      .forEach(({ slug }) => {
-        router.prefetch(`/projects/${slug}`);
+      .forEach(({ id }) => {
+        router.prefetch(`/projects/${id}`);
       });
   }, [data, router]);
 
@@ -46,7 +46,7 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
         marginY={8}
       >
         {data.map((project) => (
-          <Card project={project} key={project.slug} />
+          <Card project={project} key={project.id} />
         ))}
       </Grid>
 

@@ -1,15 +1,15 @@
 /* eslint-disable no-await-in-loop */
 import RSS from 'rss';
 
+import type { Post } from 'content-collections';
 import { getPostBySlug } from '~/lib/services/content/post';
-import type { Post } from '~/lib/types/post';
 
 const generateRssItem = async (post: Post) => {
-  const postData = getPostBySlug(post.slug);
+  const postData = getPostBySlug(post.id);
 
   return {
     title: postData.title,
-    slug: postData.slug,
+    slug: postData.id,
     date: new Date(postData.date).toUTCString(),
     description: postData.description ? postData.description : '',
     contentHtml: postData.content,

@@ -1,6 +1,7 @@
 'use client';
 
 import { Text } from '@chakra-ui/react';
+import type { Post } from 'content-collections';
 import debounce from 'lodash-es/debounce';
 import * as React from 'react';
 
@@ -12,7 +13,6 @@ import {
   staggerAnimationProps,
 } from '~/lib/constants/animation';
 import type { ViewCounts } from '~/lib/services/db/views';
-import type { Post } from '~/lib/types/post';
 
 type BlogPostListWrapperProps = {
   blogPosts: Array<Post>;

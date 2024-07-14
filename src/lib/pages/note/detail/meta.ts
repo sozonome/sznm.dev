@@ -21,7 +21,7 @@ export const generateMetadata = ({
   return {
     title: data.title,
     alternates: {
-      canonical: `/notes/${data.slug}`,
+      canonical: `/notes/${data.id}`,
     },
     openGraph: {
       title: `sozonome | ${data.title}`,

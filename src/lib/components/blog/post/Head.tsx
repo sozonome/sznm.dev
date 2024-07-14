@@ -1,9 +1,9 @@
 import { Box, Grid, Heading, Text } from '@chakra-ui/react';
 import Balancer from 'react-wrap-balancer';
 
+import type { Post } from 'content-collections';
 import DetailViewCounts from '~/lib/components/shared/DetailViewCounts';
 import ShareButtons from '~/lib/components/shared/ShareButtons';
-import type { Post } from '~/lib/types/post';
 import { dateFormatLong } from '~/lib/utils/dateFormat';
 
 type BlogPostHeadProps = {
@@ -22,7 +22,7 @@ const BlogPostHead = ({ postData }: BlogPostHeadProps) => {
           <Text fontSize="sm" color="gray">
             {dateFormatLong(postData.date)} - {postData.readTime?.text}
             {' | '}
-            <DetailViewCounts slug={`/blog/${postData.slug}`} as="span" />
+            <DetailViewCounts slug={`/blog/${postData.id}`} as="span" />
           </Text>
         </Box>
       </Grid>

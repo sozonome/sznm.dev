@@ -43,3 +43,6 @@ sitemap*.xml
 
 # Turbo
 .turbo
+
+# Contents
+.content-collections

@@ -14,7 +14,7 @@ export const generateMetadata = ({
     return undefined;
   }
 
-  const pageUrl = `${baseUrl}/blog/${postData.slug}`;
+  const pageUrl = `${baseUrl}/blog/${postData.id}`;
   const ogImage = sznmOgImage({
     heading: postData.title,
     text: 'Blog Post | https://sznm.dev',

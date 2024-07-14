@@ -1,4 +1,4 @@
-import type { Project } from '~/lib/types/project';
+import type { Project } from 'content-collections';
 
 export const splitProjectByTypes = (projects: Array<Project>) => {
   const filteredProjects = projects.filter(

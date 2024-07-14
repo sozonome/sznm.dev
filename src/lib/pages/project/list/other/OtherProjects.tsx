@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import React from 'react';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
+import type { Project } from 'content-collections';
 import MotionBox from '~/lib/components/motion/MotionBox';
 import MotionGrid from '~/lib/components/motion/MotionGrid';
 import ProjectDetailWrapper from '~/lib/components/projects/detail';
@@ -13,7 +14,6 @@ import {
   staggerAnimationProps,
 } from '~/lib/constants/animation';
 import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
-import type { Project } from '~/lib/types/project';
 import { handleRouteBack } from '~/lib/utils/handleRouteBack';
 import type { splitProjectByTypes } from '~/lib/utils/projects';
 import { trackEvent } from '~/lib/utils/trackEvent';
@@ -36,7 +36,7 @@ const renderProjectList = ({
         gridTemplateColumns={['repeat(1)', 'repeat(1)', 'repeat(2, 1fr)']}
       >
         {projects.map((projectData) => (
-          <MotionBox {...childAnimationProps} key={projectData.slug}>
+          <MotionBox {...childAnimationProps} key={projectData.id}>
             <ProjectDetailWrapper
               projectData={projectData}
               source="Other Projects"
