@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.27.3](https://github.com/sozonome/sznm.dev/compare/v1.27.2...v1.27.3) (2024-07-14)
+
+
+### Improvements
+
+* **content:** migrate to content-collections ([#235](https://github.com/sozonome/sznm.dev/issues/235)) ([ceec54c](https://github.com/sozonome/sznm.dev/commit/ceec54c275636dcd0c100de3924db66ecdc79ba9))
+* revert back to Gabarito for body font ([dd9a137](https://github.com/sozonome/sznm.dev/commit/dd9a13732fa46fa8ec7413e82cf41c6e4526e0b6))
+* update notes ([bb629ee](https://github.com/sozonome/sznm.dev/commit/bb629eea33a8bc91802fab5a5b2263d60231d409))
+
 ### [1.27.2](https://github.com/sozonome/sznm.dev/compare/v1.27.1...v1.27.2) (2024-04-13)
 
 
