@@ -2,8 +2,8 @@ import { Box, Link, Stack, Text, useColorModeValue } from '@chakra-ui/react';
 import Image from 'next/image';
 import * as React from 'react';
 
+import type { Project } from 'content-collections';
 import { EVENT_TYPE_LINK } from '~/lib/constants/tracking';
-import type { Project } from '~/lib/types/project';
 import { trackEvent } from '~/lib/utils/trackEvent';
 
 type CardProps = {

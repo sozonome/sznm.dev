@@ -15,7 +15,8 @@
     "jsx": "preserve",
     "baseUrl": "src",
     "paths": {
-      "~/*": ["./*"]
+      "~/*": ["./*"],
+      "content-collections": ["../.content-collections/generated"]
     },
     "incremental": true,
     "plugins": [

@@ -17,7 +17,7 @@ const TodayILearnPage = () => {
       <Heading>Today I Learned</Heading>
       <MotionGrid {...staggerAnimationProps} gap={12}>
         {getAllTils().map((til, index) => (
-          <MotionGrid {...childAnimationProps} gap={12} key={til.slug}>
+          <MotionGrid {...childAnimationProps} gap={12} key={til.id}>
             <Grid
               gridTemplateColumns={{ base: '1fr', lg: '1fr 2fr' }}
               gap={8}
@@ -29,8 +29,8 @@ const TodayILearnPage = () => {
                 top={24}
                 marginTop={2}
               >
-                <Link href={`#${til.slug}`}>
-                  <Heading size="md" id={til.slug} scrollMarginTop={24}>
+                <Link href={`#${til.id}`}>
+                  <Heading size="md" id={til.id} scrollMarginTop={24}>
                     <Balancer>{til.title}</Balancer>
                   </Heading>
                 </Link>

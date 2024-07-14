@@ -5,9 +5,9 @@ import Link from 'next/link';
 import * as React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 
+import type { Post } from 'content-collections';
 import BlogPostPreview from '~/lib/components/blog/BlogPostPreview';
 import { EVENT_TYPE_NAVIGATE } from '~/lib/constants/tracking';
-import type { Post } from '~/lib/types/post';
 import { trackEvent } from '~/lib/utils/trackEvent';
 
 type PostsSectionProps = {
@@ -30,7 +30,7 @@ const PostsSection = ({ data }: PostsSectionProps) => {
 
       <Grid gap={8}>
         {data.map((postData) => (
-          <BlogPostPreview postData={postData} key={postData.slug} />
+          <BlogPostPreview postData={postData} key={postData.id} />
         ))}
       </Grid>
 

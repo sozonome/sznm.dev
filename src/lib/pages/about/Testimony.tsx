@@ -15,13 +15,13 @@ import {
 } from '@chakra-ui/react';
 import { FaLinkedin } from 'react-icons/fa';
 
+import type { Testimony } from 'content-collections';
 import MotionBox from '~/lib/components/motion/MotionBox';
 import MotionGrid from '~/lib/components/motion/MotionGrid';
 import {
   staggerAnimationProps,
   wrapperAnimationProps,
 } from '~/lib/constants/animation';
-import type { Testimony } from '~/lib/types/testimony';
 
 type TestimonyProps = {
   testimonies: Array<Testimony>;
@@ -67,7 +67,7 @@ const TestimonySection = ({ testimonies }: TestimonyProps) => {
                   justifyContent="space-between"
                   gap={4}
                   padding={6}
-                  key={testimony.slug}
+                  key={testimony.id}
                 >
                   <Text fontSize="sm">{testimony.content}</Text>
 

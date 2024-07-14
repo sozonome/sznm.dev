@@ -16,7 +16,7 @@ export const generateMetadata = ({
   return {
     title: projectData.title,
     alternates: {
-      canonical: `/projects/${projectData.slug}`,
+      canonical: `/projects/${projectData.id}`,
     },
     openGraph: {
       title: `${projectData.title} | sozonome`,
