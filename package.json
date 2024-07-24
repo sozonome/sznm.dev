@@ -9,7 +9,7 @@
     "postinstall": "prisma generate",
     "dev": "next dev",
     "build": "next build",
-    "turbo": "pnpm dlx turbo@2.0.4",
+    "turbo": "pnpm dlx turbo@2.0.9",
     "build:turbo": "pnpm turbo build",
     "lint:next": "next lint",
     "lint:biome": "pnpm biome lint ./src",

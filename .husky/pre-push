@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-pnpm check:turbo --output-logs=hash-only
+pnpm check:turbo
