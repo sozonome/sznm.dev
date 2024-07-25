@@ -1,8 +1,4 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
 const { withContentCollections } = require('@content-collections/next');
-const million = require('million/compiler');
 
 /**
  * @docs
@@ -69,7 +65,7 @@ const portfolioDataPrefix = `/_next/data/${process.env.PORTFOLIO_BUILD_ID}`;
 const nextConfig = {
   reactStrictMode: true,
   // https://nextjs.org/docs/app/building-your-application/configuring/content-security-policy#without-nonces
-  headers: async () => {
+  headers() {
     return [
       {
         source: '/(.*)',
@@ -124,7 +120,4 @@ const nextConfig = {
 };
 
 /** @type {import('next').NextConfig} */
-module.exports = million.next(
-  withBundleAnalyzer(withContentCollections(nextConfig)),
-  { auto: true },
-);
+module.exports = withContentCollections(nextConfig);
