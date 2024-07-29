@@ -1,12 +1,18 @@
-// https://commitlint.js.org/#/reference-configuration
+/**
+ * https://commitlint.js.org/reference/rules-configuration.html
+ * https://commitlint.js.org/reference/rules.html
+ */
 
-/** @type {import('@commitlint/types').UserConfig} */
-const CommitLintConfiguration = {
+import { RuleConfigSeverity, type UserConfig } from '@commitlint/types';
+
+const commitLintConfiguration: UserConfig = {
   extends: ['@commitlint/config-conventional'],
   rules: {
-    // https://commitlint.js.org/#/reference-rules?id=scope-enum
+    //https://commitlint.js.org/reference/rules.html#scope-case
+    'scope-case': [RuleConfigSeverity.Error, 'always', 'kebab-case'],
+    // https://commitlint.js.org/reference/rules.html#scope-enum
     'scope-enum': [
-      2,
+      RuleConfigSeverity.Error,
       'always',
       [
         'accessibility',
@@ -33,9 +39,7 @@ const CommitLintConfiguration = {
         'utils',
       ],
     ],
-    // https://commitlint.js.org/#/reference-rules?id=scope-case
-    'scope-case': [2, 'always', 'kebab-case'],
   },
 };
 
-module.exports = CommitLintConfiguration;
+export default commitLintConfiguration;

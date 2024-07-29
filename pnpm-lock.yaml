@@ -111,6 +111,9 @@ importers:
       '@commitlint/cz-commitlint':
         specifier: 19.2.0
         version: 19.2.0(@types/node@20.14.12)(commitizen@4.3.0(@types/node@20.14.12)(typescript@5.5.4))(inquirer@10.1.2)(typescript@5.5.4)
+      '@commitlint/types':
+        specifier: ^19.0.3
+        version: 19.0.3
       '@content-collections/core':
         specifier: ^0.6.3
         version: 0.6.3(typescript@5.5.4)
