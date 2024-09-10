@@ -1,0 +1,27 @@
+import { Box } from '@chakra-ui/react';
+import { Command } from 'cmdk';
+
+type CommandListProps = {
+  children: React.ReactNode;
+};
+
+export const CommandList = ({ children }: CommandListProps) => {
+  return (
+    <Box
+      as={Command.List}
+      paddingX={2}
+      height={400}
+      overflow="auto"
+      overscrollBehavior="contain"
+      transition="100ms ease"
+      paddingTop={6}
+      paddingBottom={12}
+      sx={{
+        scrollPaddingBlockEnd: 12,
+        '[cmdk-list-sizer]': { display: 'grid', gap: 6 },
+      }}
+    >
+      {children}
+    </Box>
+  );
+};

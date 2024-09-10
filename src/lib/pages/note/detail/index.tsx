@@ -1,12 +1,13 @@
 import { Box, Grid, Spacer } from '@chakra-ui/react';
 import { notFound } from 'next/navigation';
 
-import NoteDetailHead from '~/lib/components/notes/detail/Head';
-import DetailViewCounts from '~/lib/components/shared/DetailViewCounts';
-import GiscusWrapper from '~/lib/components/shared/GiscusWrapper';
-import MarkdownContent from '~/lib/components/shared/MarkdownContent';
-import ShareButtons from '~/lib/components/shared/ShareButtons';
+import { DetailViewCounts } from '~/lib/components/detail-view-counts';
+import { GiscusWrapper } from '~/lib/components/giscus-wrapper';
+import { MarkdownContent } from '~/lib/components/markdown-content';
+import { ShareButtons } from '~/lib/components/share-buttons';
 import { getNoteBySlug } from '~/lib/services/content/note';
+
+import { NoteDetailHead } from './note-detail-head';
 
 import type { NoteDetailProps } from './types';
 

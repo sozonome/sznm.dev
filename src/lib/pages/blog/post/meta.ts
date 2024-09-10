@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
-import { baseUrl } from '~/lib/constants/baseUrl';
+import { baseUrl } from '~/lib/constants/base-url';
 import type { BlogPostProps } from '~/lib/pages/blog/post/types';
 import { getPostBySlug } from '~/lib/services/content/post';
-import { sznmOgImage } from '~/lib/utils/sznmOgImage';
+import { sznmOgImage } from '~/lib/utils/sznm-og-image';
 
 export const generateMetadata = ({
   params,

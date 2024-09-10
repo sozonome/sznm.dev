@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import type { NoteDetailProps } from '~/lib/pages/note/detail/types';
 import { getNoteBySlug } from '~/lib/services/content/note';
-import { sznmOgImage } from '~/lib/utils/sznmOgImage';
+import { sznmOgImage } from '~/lib/utils/sznm-og-image';
 
 export const generateMetadata = ({
   params,

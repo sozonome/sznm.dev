@@ -2,14 +2,14 @@ import { Box, Divider, Grid, Heading, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
 
-import MotionGrid from '~/lib/components/motion/MotionGrid';
-import MarkdownContent from '~/lib/components/shared/MarkdownContent';
+import { MarkdownContent } from '~/lib/components/markdown-content';
+import { MotionGrid } from '~/lib/components/motion/motion-grid';
 import {
   childAnimationProps,
   staggerAnimationProps,
 } from '~/lib/constants/animation';
 import { getAllTils } from '~/lib/services/content/til';
-import { dateFormatLong } from '~/lib/utils/dateFormat';
+import { dateFormatLong } from '~/lib/utils/date-format';
 
 const TodayILearnPage = () => {
   return (

@@ -11,8 +11,8 @@ export const getViewCount = async (slug: string) => {
   return currentViews?.count ?? 0;
 };
 
-export const getAllViewCount = async (slugContain?: string) => {
-  return prisma.views.findMany({
+export const getAllViewCount = (slugContain?: string) =>
+  prisma.views.findMany({
     where: {
       slug: slugContain
         ? {
@@ -21,6 +21,5 @@ export const getAllViewCount = async (slugContain?: string) => {
         : undefined,
     },
   });
-};
 
 export type ViewCounts = Awaited<ReturnType<typeof getAllViewCount>>;

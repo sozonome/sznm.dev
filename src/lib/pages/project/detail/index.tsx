@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
-import ProjectDetailWrapper from '~/lib/components/projects/detail';
+import { ProjectDetailWrapper } from '~/lib/pages/project/components/project-detail-wrapper';
 import { getProjectBySlug } from '~/lib/services/content/project';
 
 import type { ProjectDetailProps } from './types';

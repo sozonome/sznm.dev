@@ -3,10 +3,10 @@ import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import NextTopLoader from 'nextjs-toploader';
 
-import Providers from '~/app/providers';
-import { baseUrl } from '~/lib/constants/baseUrl';
+import { Providers } from '~/app/providers';
+import { baseUrl } from '~/lib/constants/base-url';
 import { env } from '~/lib/constants/env';
-import Layout from '~/lib/layout';
+import { Layout } from '~/lib/layout';
 import '~/lib/styles/global.css';
 
 const creator = 'Agustinus Nathaniel';
