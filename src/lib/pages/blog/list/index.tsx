@@ -1,8 +1,9 @@
 import { Box, Grid, Heading, Text } from '@chakra-ui/react';
 
-import BlogPostListWrapper from '~/lib/pages/blog/list/components/BlogPostListWrapper';
 import { getAllPosts } from '~/lib/services/content/post';
 import { getAllViewCount } from '~/lib/services/db/views';
+
+import { BlogPostListWrapper } from './components/blog-post-list-wrapper';
 
 const BlogPostList = async () => {
   const blogPosts = getAllPosts();

@@ -1,17 +1,17 @@
 import { getAllTestimonies } from '~/lib/services/content/testimony';
 
-import Content from './Content';
-import HeadSection from './HeadSection';
-import Links from './Links';
-import Testimony from './Testimony';
+import { AboutContent } from './about-content';
+import { HeadSection } from './head-section';
+import { SocialLinks } from './social-links';
+import { TestimonySection } from './testimony-section';
 
 const About = () => {
   return (
     <>
       <HeadSection />
-      <Content />
-      <Links />
-      <Testimony testimonies={getAllTestimonies()} />
+      <AboutContent />
+      <SocialLinks />
+      <TestimonySection testimonies={getAllTestimonies()} />
     </>
   );
 };

@@ -7,7 +7,7 @@ import { env } from '~/lib/constants/env';
 
 const funPath = 'why-i';
 
-export const middleware = async (req: NextRequest) => {
+export const middleware = (req: NextRequest) => {
   const isFunPath = !!req.nextUrl.href.includes(funPath);
 
   if (isFunPath) {

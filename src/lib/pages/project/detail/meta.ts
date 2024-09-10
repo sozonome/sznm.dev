@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import type { ProjectDetailProps } from '~/lib/pages/project/detail/types';
 import { getProjectBySlug } from '~/lib/services/content/project';
-import { sznmOgImage } from '~/lib/utils/sznmOgImage';
+import { sznmOgImage } from '~/lib/utils/sznm-og-image';
 
 export const generateMetadata = ({
   params,

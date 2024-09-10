@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.7.0/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
   "organizeImports": {
     "enabled": true
   },
@@ -10,21 +10,32 @@
     "enabled": true,
     "rules": {
       "recommended": true,
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "error",
+        "useSimplifiedLogicExpression": "error",
+        "noVoid": "warn"
+      },
       "correctness": {
         "noUnusedImports": "error",
         "noUnusedVariables": "error",
         "useHookAtTopLevel": "error"
       },
-      "suspicious": {
-        "noConsoleLog": "error",
-        "noEmptyBlockStatements": "error"
+      "nursery": {
+        "noConsole": "error",
+        "noDuplicateElseIf": "error",
+        "noDuplicateJsonKeys": "error",
+        "noUnusedFunctionParameters": "error",
+        "noUselessStringConcat": "error",
+        "noUselessUndefinedInitialization": "error",
+        "useDefaultSwitchClause": "error",
+        "useSemanticElements": "error",
+        "useTopLevelRegex": "error"
       },
-      "complexity": {
-        "useSimplifiedLogicExpression": "error",
-        "noExcessiveCognitiveComplexity": "error",
-        "noVoid": "warn"
+      "performance": {
+        "noBarrelFile": "error"
       },
       "style": {
+        "noDefaultExport": "error",
         "useBlockStatements": "error",
         "useCollapsedElseIf": "error",
         "useConsistentArrayType": {
@@ -33,11 +44,17 @@
             "syntax": "generic"
           }
         },
-        "useSingleCaseStatement": "error"
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "filenameCases": ["kebab-case"]
+          }
+        }
       },
-      "nursery": {
-        "noDuplicateElseIf": "error",
-        "noDuplicateJsonKeys": "error"
+      "suspicious": {
+        "noConsoleLog": "error",
+        "noEmptyBlockStatements": "error",
+        "useAwait": "error"
       }
     }
   },
@@ -45,5 +62,27 @@
     "formatter": {
       "quoteStyle": "single"
     }
-  }
+  },
+  "overrides": [
+    {
+      "include": ["src/lib/pages/**/index.*", "src/app/**/*", "*.ts"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": ["src/app/**/*"],
+      "linter": {
+        "rules": {
+          "performance": {
+            "noBarrelFile": "off"
+          }
+        }
+      }
+    }
+  ]
 }

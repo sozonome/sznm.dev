@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { sznmOgImage } from '~/lib/utils/sznmOgImage';
+import { sznmOgImage } from '~/lib/utils/sznm-og-image';
 
 export const metadata: Metadata = {
   title: 'Notes',

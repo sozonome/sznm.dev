@@ -1,13 +1,14 @@
 import { AspectRatio, Box, Grid, Image } from '@chakra-ui/react';
 import { notFound } from 'next/navigation';
 
-import BlogPostHead from '~/lib/components/blog/post/Head';
-import BlogPostMeta from '~/lib/components/blog/post/Meta';
-import GiscusWrapper from '~/lib/components/shared/GiscusWrapper';
-import MarkdownContent from '~/lib/components/shared/MarkdownContent';
-import ShareButtons from '~/lib/components/shared/ShareButtons';
+import { GiscusWrapper } from '~/lib/components/giscus-wrapper';
+import { MarkdownContent } from '~/lib/components/markdown-content';
+import { ShareButtons } from '~/lib/components/share-buttons';
 import { getPostBySlug } from '~/lib/services/content/post';
-import { unsplashImg } from '~/lib/utils/unsplashImg';
+import { unsplashImg } from '~/lib/utils/unsplash-img';
+
+import { BlogPostHead } from './components/blog-post-head';
+import { BlogPostMeta } from './components/blog-post-meta';
 
 import type { BlogPostProps } from './types';
 

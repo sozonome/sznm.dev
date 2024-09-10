@@ -1,15 +1,15 @@
 import { Box, Grid, Heading } from '@chakra-ui/react';
 
-import MotionBox from '~/lib/components/motion/MotionBox';
-import MotionGrid from '~/lib/components/motion/MotionGrid';
-import ProjectDetailWrapper from '~/lib/components/projects/detail';
+import { MotionBox } from '~/lib/components/motion/motion-box';
+import { MotionGrid } from '~/lib/components/motion/motion-grid';
 import {
   childAnimationProps,
   staggerAnimationProps,
 } from '~/lib/constants/animation';
 import { featuredProjects } from '~/lib/constants/project';
+import { ProjectDetailWrapper } from '~/lib/pages/project/components/project-detail-wrapper';
 
-import ProjectListBottomNav from './BottomNav';
+import { ProjectListBottomNav } from './bottom-nav';
 
 const ProjectList = () => {
   const featuredProjectCards = featuredProjects.map((projectData) => {

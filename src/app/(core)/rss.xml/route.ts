@@ -1,5 +1,5 @@
 import { getAllPosts } from '~/lib/services/content/post';
-import { generateBlogRss } from '~/lib/utils/generateRss';
+import { generateBlogRss } from '~/lib/utils/generate-rss';
 
 export const GET = async () => {
   const rssFeed = await generateBlogRss(getAllPosts());

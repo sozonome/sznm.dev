@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react';
 import Link from 'next/link';
 
-import MotionBox from '~/lib/components/motion/MotionBox';
+import { MotionBox } from '~/lib/components/motion/motion-box';
 
 const Page404 = () => {
   return (

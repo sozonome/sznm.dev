@@ -1,4 +1,4 @@
-import { getAccessToken } from '~/lib/services/spotify/auth/getAccessToken';
+import { getAccessToken } from '~/lib/services/spotify/auth/get-access-token';
 import { fetcher } from '~/lib/utils/fetcher';
 
 import type { GetNowPlayingResponse } from './types';
