@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.27.4](https://github.com/sozonome/sznm.dev/compare/v1.27.3...v1.27.4) (2024-09-10)
+
+
+### Bug Fixes
+
+* remove withBundleAnalyzer and million which somehow strip/prevent custom headers ([0ec9d22](https://github.com/sozonome/sznm.dev/commit/0ec9d22d3a3560c03397d4ade8d4167796f7dc6e))
+
+
+### Improvements
+
+* fix security headers ([e5de6db](https://github.com/sozonome/sznm.dev/commit/e5de6db5fa9ed11b452191049fa06ecf6e1d72fe))
+
 ### [1.27.3](https://github.com/sozonome/sznm.dev/compare/v1.27.2...v1.27.3) (2024-07-14)
 
 
