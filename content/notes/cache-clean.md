@@ -2,7 +2,7 @@
 title: Cache Cleaning
 description: Some cache I usually clean regularly
 published: true
-date: 2024-09-10
+date: 2024-09-16
 tags:
   - pnpm
   - yarn
