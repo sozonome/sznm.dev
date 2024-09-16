@@ -11,7 +11,7 @@ tags:
 ```json
 // biome.json
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.9.1/schema.json",
   "organizeImports": {
     "enabled": true
   },
@@ -22,34 +22,34 @@ tags:
     "enabled": true,
     "rules": {
       "recommended": true,
+      "a11y": {
+        "useSemanticElements": "error"
+      },
       "complexity": {
         "noExcessiveCognitiveComplexity": "error",
+        "noUselessStringConcat": "error",
+        "noUselessUndefinedInitialization": "error",
         "useSimplifiedLogicExpression": "error",
         "noVoid": "warn"
       },
       "correctness": {
         "noUnusedImports": "error",
         "noUnusedVariables": "error",
+        "noUnusedFunctionParameters": "error",
         "useHookAtTopLevel": "error"
       },
       "nursery": {
-        "noConsole": "error",
-        "noDuplicateElseIf": "error",
-        "noDuplicateJsonKeys": "error",
-        "noUnusedFunctionParameters": "error",
-        "noUselessStringConcat": "error",
-        "noUselessUndefinedInitialization": "error",
-        "useDefaultSwitchClause": "error",
-        "useSemanticElements": "error",
-        "useTopLevelRegex": "error"
+        "noDuplicateElseIf": "error"
       },
       "performance": {
-        "noBarrelFile": "error"
+        "noBarrelFile": "error",
+        "useTopLevelRegex": "error"
       },
       "style": {
         "noDefaultExport": "error",
         "useBlockStatements": "error",
         "useCollapsedElseIf": "error",
+        "useDefaultSwitchClause": "error",
         "useConsistentArrayType": {
           "level": "error",
           "options": {
@@ -64,6 +64,7 @@ tags:
         }
       },
       "suspicious": {
+        "noConsole": "error",
         "noConsoleLog": "error",
         "noEmptyBlockStatements": "error",
         "useAwait": "error"
@@ -77,21 +78,11 @@ tags:
   },
   "overrides": [
     {
-      "include": ["src/lib/views/**/index.*", "src/lib/views/**/index.*", "src/app/**/*", "*.ts"],
+      "include": ["src/lib/pages/**/*", "*.ts"],
       "linter": {
         "rules": {
           "style": {
             "noDefaultExport": "off"
-          }
-        }
-      }
-    },
-    {
-      "include": ["src/app/**/*"],
-      "linter": {
-        "rules": {
-          "performance": {
-            "noBarrelFile": "off"
           }
         }
       }
