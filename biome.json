@@ -3,6 +3,10 @@
   "organizeImports": {
     "enabled": true
   },
+  "files": {
+    "include": ["src", "*.config.ts"],
+    "ignore": [".next", "node_modules", ".turbo", ".vscode"]
+  },
   "formatter": {
     "indentStyle": "space"
   },
