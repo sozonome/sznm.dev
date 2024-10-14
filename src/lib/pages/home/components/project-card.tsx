@@ -51,6 +51,7 @@ export const ProjectCard = ({
       _hover={{
         textDecoration: 'none',
       }}
+      // biome-ignore lint/a11y/useSemanticElements: <explanation>
       role="group"
     >
       <Box

@@ -42,6 +42,7 @@ export const NoteCard = ({ data, noteViewCounts }: NoteCardProps) => {
       borderRadius={24}
       borderColor="cardBorder"
       onClick={handleClickNote}
+      // biome-ignore lint/a11y/useSemanticElements: <explanation>
       role="group"
       transition="0.2s ease-out"
       justifyContent="space-between"
