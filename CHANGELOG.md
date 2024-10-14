@@ -1,6 +1,13 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [1.27.5](https://github.com/sozonome/sznm.dev/compare/v1.27.4...v1.27.5) (2024-10-14)
+
+
+### Improvements
+
+* update date ([72f31e9](https://github.com/sozonome/sznm.dev/commit/72f31e9fbeaa5f00cb2dd652dafa6843cdf16fc0))
 
 ### [1.27.4](https://github.com/sozonome/sznm.dev/compare/v1.27.3...v1.27.4) (2024-09-10)
 
