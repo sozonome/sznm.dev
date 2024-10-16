@@ -1,7 +1,7 @@
 import { Center, Divider } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { useCmdMenu } from '~/lib/store/cmd';
+import { useCmdMenuAction, useCmdMenuState } from '~/lib/store/cmd';
 
 import { CommandEmpty } from './components/command-empty';
 import { CommandGroup } from './components/command-group';
@@ -14,10 +14,8 @@ import { useCommandCenterAction } from './hook';
 import type { CommandCollection, CommandEntry } from './types';
 
 export const CommandMenu = () => {
-  const { isOpen, closeCmdMenu } = useCmdMenu((state) => ({
-    isOpen: state.isOpen,
-    closeCmdMenu: state.closeCmdMenu,
-  }));
+  const { isOpen } = useCmdMenuState();
+  const { closeCmdMenu } = useCmdMenuAction();
   const { onSelectItem } = useCommandCenterAction();
 
   const handleSelect = React.useCallback(

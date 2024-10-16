@@ -4,7 +4,7 @@ import * as React from 'react';
 import { RiCommandFill } from 'react-icons/ri';
 
 import { EVENT_TYPE_CTA } from '~/lib/constants/tracking';
-import { useCmdMenu } from '~/lib/store/cmd';
+import { useCmdMenuAction } from '~/lib/store/cmd';
 import { trackEvent } from '~/lib/utils/track-event';
 
 import { CommandMenu } from './command-menu';
@@ -12,9 +12,7 @@ import { Navigation } from './navigation';
 import { ThemeToggle } from './theme-toggle';
 
 export const Header = () => {
-  const { openCmdMenu } = useCmdMenu((state) => ({
-    openCmdMenu: state.openCmdMenu,
-  }));
+  const { openCmdMenu } = useCmdMenuAction();
 
   const handleOpenCommandCenter = React.useCallback(() => {
     trackEvent({

@@ -3,19 +3,16 @@ import { useRouter } from 'next/navigation';
 import * as React from 'react';
 
 import { EVENT_TYPE_CMD } from '~/lib/constants/tracking';
-import { useCmdMenu } from '~/lib/store/cmd';
+import { useCmdMenuAction, useCmdMenuState } from '~/lib/store/cmd';
 import { isMac } from '~/lib/utils/is-mac';
 import { trackEvent } from '~/lib/utils/track-event';
 
 import type { CommandCollection, CommandEntry } from './types';
 
 export const useCommandCenter = () => {
-  const isOpen = useCmdMenu((state) => state.isOpen);
+  const { isOpen } = useCmdMenuState();
 
-  const { openCmdMenu, closeCmdMenu } = useCmdMenu((state) => ({
-    openCmdMenu: state.openCmdMenu,
-    closeCmdMenu: state.closeCmdMenu,
-  }));
+  const { openCmdMenu, closeCmdMenu } = useCmdMenuAction();
 
   const handleKeydownTrigger = React.useCallback(
     (ev: KeyboardEvent) => {
@@ -47,7 +44,7 @@ export const useCommandCenterAction = () => {
   const router = useRouter();
   const { toggleColorMode } = useColorMode();
 
-  const closeCmdMenu = useCmdMenu((state) => state.closeCmdMenu);
+  const { closeCmdMenu } = useCmdMenuAction();
 
   const onSelectItem = (group: CommandCollection, item: CommandEntry) => {
     trackEvent({
