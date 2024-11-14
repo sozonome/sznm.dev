@@ -9,7 +9,7 @@ import {
   wrapperAnimationProps,
 } from '~/lib/constants/animation';
 
-import { socialLinks } from './constants';
+import { mainLinks, publishingLinks } from './constants';
 import { MotionLink } from './motion-link';
 
 export const SocialLinks = () => {
@@ -23,7 +23,29 @@ export const SocialLinks = () => {
         marginTop={4}
         {...staggerAnimationProps}
       >
+        {mainLinks.map((link) => (
+          <MotionLink {...link} key={link.url} />
+        ))}
+      </MotionFlex>
+
+      {/* <MotionFlex
+        flexWrap="wrap"
+        gridGap={4}
+        marginTop={4}
+        {...staggerAnimationProps}
+      >
         {socialLinks.map((link) => (
+          <MotionLink {...link} key={link.url} />
+        ))}
+      </MotionFlex> */}
+
+      <MotionFlex
+        flexWrap="wrap"
+        gridGap={4}
+        marginTop={4}
+        {...staggerAnimationProps}
+      >
+        {publishingLinks.map((link) => (
           <MotionLink {...link} key={link.url} />
         ))}
       </MotionFlex>

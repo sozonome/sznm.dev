@@ -1,18 +1,16 @@
+import { BsSubstack } from 'react-icons/bs';
 import {
   FaDev,
   FaEnvelope,
   FaGithub,
-  FaInstagram,
   FaLinkedin,
   FaMedium,
-  FaProductHunt,
-  FaYoutube,
 } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaBluesky, FaXTwitter } from 'react-icons/fa6';
 
 import type { MotionLinkProps } from './types';
 
-export const socialLinks: Array<MotionLinkProps> = [
+export const mainLinks: Array<MotionLinkProps> = [
   {
     platformName: 'GitHub',
     url: 'https://github.com/sozonome',
@@ -29,15 +27,41 @@ export const socialLinks: Array<MotionLinkProps> = [
     icon: FaXTwitter,
   },
   {
-    platformName: 'Instagram',
-    url: 'https://instagram.com/sozonome',
-    icon: FaInstagram,
+    platformName: 'BlueSky',
+    url: 'https://bsky.app/profile/sznm.dev',
+    icon: FaBluesky,
   },
   {
-    platformName: 'YouTube',
-    url: 'https://youtube.com/channel/UCJnYMGIHtQ8yInuq4Pc2Ttg',
-    icon: FaYoutube,
+    platformName: 'e-mail',
+    url: 'mailto:hello@sznm.dev?cc=agustinusnathaniel228@gmail.com',
+    icon: FaEnvelope,
   },
+];
+
+export const socialLinks: Array<MotionLinkProps> = [
+  // {
+  //   platformName: 'Instagram',
+  //   url: 'https://instagram.com/sozonome',
+  //   icon: FaInstagram,
+  // },
+  // {
+  //   platformName: 'YouTube',
+  //   url: 'https://youtube.com/channel/UCJnYMGIHtQ8yInuq4Pc2Ttg',
+  //   icon: FaYoutube,
+  // },
+  // {
+  //   platformName: 'Mastodon',
+  //   url: 'https://mastodon.social/@sozonome',
+  //   icon: FaMastodon,
+  // },
+  // {
+  //   platformName: 'ProductHunt',
+  //   url: 'https://www.producthunt.com/@sozonome',
+  //   icon: FaProductHunt,
+  // },
+];
+
+export const publishingLinks: Array<MotionLinkProps> = [
   {
     platformName: 'dev.to',
     url: 'https://dev.to/sozonome',
@@ -49,13 +73,8 @@ export const socialLinks: Array<MotionLinkProps> = [
     icon: FaMedium,
   },
   {
-    platformName: 'ProductHunt',
-    url: 'https://www.producthunt.com/@sozonome',
-    icon: FaProductHunt,
-  },
-  {
-    platformName: 'e-mail',
-    url: 'mailto:hello@sznm.dev?cc=agustinusnathaniel228@gmail.com',
-    icon: FaEnvelope,
+    platformName: 'Substack',
+    url: 'https://sozonome.substack.com/',
+    icon: BsSubstack,
   },
 ];
