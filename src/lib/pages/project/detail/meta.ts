@@ -19,13 +19,13 @@ export const generateMetadata = ({
       canonical: `/projects/${projectData.id}`,
     },
     openGraph: {
-      title: `${projectData.title} | sozonome`,
+      title: `${projectData.title} | Agustinus Nathaniel`,
       images: {
         url: sznmOgImage({
           heading: projectData.title,
-          text: 'https://sznm.dev',
+          text: 'https://agustinusnathaniel.com',
         }),
-        alt: `${projectData.title} | sozonome og-image`,
+        alt: `${projectData.title} | Agustinus Nathaniel og-image`,
       },
     },
   };

@@ -4,4 +4,4 @@ on:
 name: Release
 jobs:
   release:
-    uses: sozonome/workflows/.github/workflows/release.yml@main
+    uses: agustinusnathaniel/workflows/.github/workflows/release.yml@main

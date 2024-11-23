@@ -3,7 +3,7 @@
   "private": true,
   "description": "Agustinus Nathaniel's dev site",
   "version": "1.27.5",
-  "author": "sozonome",
+  "author": "agustinusnathaniel",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "postinstall": "prisma generate",
@@ -97,10 +97,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sozonome/sznm.dev"
+    "url": "https://github.com/agustinusnathaniel/sznm.dev"
   },
   "bugs": {
-    "url": "https://github.com/sozonome/sznm.dev/issues"
+    "url": "https://github.com/agustinusnathaniel/sznm.dev/issues"
   },
   "engines": {
     "node": ">=20.14.x",

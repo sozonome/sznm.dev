@@ -1,1 +1,1 @@
-export const baseUrl = 'https://sznm.dev';
+export const baseUrl = 'https://agustinusnathaniel.com';

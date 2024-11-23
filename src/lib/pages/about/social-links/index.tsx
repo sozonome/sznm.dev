@@ -9,7 +9,7 @@ import {
   wrapperAnimationProps,
 } from '~/lib/constants/animation';
 
-import { mainLinks, publishingLinks } from './constants';
+import { mainLinks, publishingLinks, socialLinks } from './constants';
 import { MotionLink } from './motion-link';
 
 export const SocialLinks = () => {
@@ -28,7 +28,7 @@ export const SocialLinks = () => {
         ))}
       </MotionFlex>
 
-      {/* <MotionFlex
+      <MotionFlex
         flexWrap="wrap"
         gridGap={4}
         marginTop={4}
@@ -37,7 +37,7 @@ export const SocialLinks = () => {
         {socialLinks.map((link) => (
           <MotionLink {...link} key={link.url} />
         ))}
-      </MotionFlex> */}
+      </MotionFlex>
 
       <MotionFlex
         flexWrap="wrap"

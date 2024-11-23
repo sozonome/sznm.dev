@@ -9,7 +9,7 @@ tags:
   - recap
 ---
 
-I think most would say 2020 is a roller coaster year. Even though, 2020 is one of a hella ride and worth for me to be remembered. I've made a quick recap in **[2019](https://sznm.dev/blog/2019-recap)** before. So let's review what I've been up to in 2020.
+I think most would say 2020 is a roller coaster year. Even though, 2020 is one of a hella ride and worth for me to be remembered. I've made a quick recap in **[2019](https://agustinusnathaniel.com/blog/2019-recap)** before. So let's review what I've been up to in 2020.
 
 ## What I Learned and Discovered Throughout the Year
 
@@ -92,6 +92,6 @@ An [app](https://publicapis.sznm.dev) to find public API for you next projects. 
 
 All in all, I'm glad I can get through 2020 pretty well enough. I never imagined I'd graduate in time, especially when the pandemic situation started to happen and my thesis proposals got rejected several times. Hoping to grow more in 2021 and crafting greater stuffs. Thank you for reading and I hope you are doing well 😄.
 
-If you're interested in another version of my review of my journey in 2020, I also published it at [twitter](https://twitter.com/sozonome/status/1345261139358142467) (focused around the projects I made throughout the year).
+If you're interested in another version of my review of my journey in 2020, I also published it at [twitter](https://twitter.com/agstnsnathaniel/status/1345261139358142467) (focused around the projects I made throughout the year).
 
-My previous recap: **[2019](https://sznm.dev/blog/2019-recap)**.
+My previous recap: **[2019](https://agustinusnathaniel.com/blog/2019-recap)**.

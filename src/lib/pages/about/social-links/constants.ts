@@ -1,19 +1,22 @@
 import { BsSubstack } from 'react-icons/bs';
 import {
+  FaBluesky,
   FaDev,
   FaEnvelope,
   FaGithub,
+  FaInstagram,
   FaLinkedin,
   FaMedium,
-} from 'react-icons/fa';
-import { FaBluesky, FaXTwitter } from 'react-icons/fa6';
+  FaXTwitter,
+  FaYoutube,
+} from 'react-icons/fa6';
 
 import type { MotionLinkProps } from './types';
 
 export const mainLinks: Array<MotionLinkProps> = [
   {
     platformName: 'GitHub',
-    url: 'https://github.com/sozonome',
+    url: 'https://github.com/agustinusnathaniel',
     icon: FaGithub,
   },
   {
@@ -23,12 +26,12 @@ export const mainLinks: Array<MotionLinkProps> = [
   },
   {
     platformName: 'X-Twitter',
-    url: 'https://x.com/sozonome',
+    url: 'https://x.com/agstnsnathaniel',
     icon: FaXTwitter,
   },
   {
     platformName: 'BlueSky',
-    url: 'https://bsky.app/profile/sznm.dev',
+    url: 'https://bsky.app/profile/agustinusnathaniel.com',
     icon: FaBluesky,
   },
   {
@@ -39,24 +42,19 @@ export const mainLinks: Array<MotionLinkProps> = [
 ];
 
 export const socialLinks: Array<MotionLinkProps> = [
-  // {
-  //   platformName: 'Instagram',
-  //   url: 'https://instagram.com/sozonome',
-  //   icon: FaInstagram,
-  // },
-  // {
-  //   platformName: 'YouTube',
-  //   url: 'https://youtube.com/channel/UCJnYMGIHtQ8yInuq4Pc2Ttg',
-  //   icon: FaYoutube,
-  // },
-  // {
-  //   platformName: 'Mastodon',
-  //   url: 'https://mastodon.social/@sozonome',
-  //   icon: FaMastodon,
-  // },
+  {
+    platformName: 'Instagram',
+    url: 'https://instagram.com/agustinusnathaniel',
+    icon: FaInstagram,
+  },
+  {
+    platformName: 'YouTube',
+    url: 'https://youtube.com/channel/@agustinusnathaniel',
+    icon: FaYoutube,
+  },
   // {
   //   platformName: 'ProductHunt',
-  //   url: 'https://www.producthunt.com/@sozonome',
+  //   url: 'https://www.producthunt.com/@agustinusnathaniel',
   //   icon: FaProductHunt,
   // },
 ];
@@ -64,7 +62,7 @@ export const socialLinks: Array<MotionLinkProps> = [
 export const publishingLinks: Array<MotionLinkProps> = [
   {
     platformName: 'dev.to',
-    url: 'https://dev.to/sozonome',
+    url: 'https://dev.to/agustinusnathaniel',
     icon: FaDev,
   },
   {
@@ -74,7 +72,7 @@ export const publishingLinks: Array<MotionLinkProps> = [
   },
   {
     platformName: 'Substack',
-    url: 'https://sozonome.substack.com/',
+    url: 'https://agustinusnathaniel.substack.com/',
     icon: BsSubstack,
   },
 ];

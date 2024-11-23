@@ -17,7 +17,7 @@ export const generateMetadata = ({
   const pageUrl = `${baseUrl}/blog/${postData.id}`;
   const ogImage = sznmOgImage({
     heading: postData.title,
-    text: 'Blog Post | https://sznm.dev',
+    text: 'Blog Post | https://agustinusnathaniel.com',
   });
 
   return {
@@ -26,7 +26,7 @@ export const generateMetadata = ({
       canonical: pageUrl,
     },
     openGraph: {
-      title: `${postData.title} | sozonome`,
+      title: `${postData.title} | Agustinus Nathaniel`,
       images: {
         url: ogImage,
         alt: `${postData.title} og image`,

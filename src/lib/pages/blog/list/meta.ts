@@ -8,13 +8,13 @@ export const metadata: Metadata = {
     canonical: '/blog',
   },
   openGraph: {
-    title: 'Blog Posts | sozonome',
+    title: 'Blog Posts | Agustinus Nathaniel',
     images: {
       url: sznmOgImage({
-        heading: 'Blog Posts | sozonome',
-        text: 'https://sznm.dev/blog',
+        heading: 'Blog Posts | Agustinus Nathaniel',
+        text: 'https://agustinusnathaniel.com/blog',
       }),
-      alt: 'Blog Posts | sozonome og-image',
+      alt: 'Blog Posts | Agustinus Nathaniel og-image',
     },
   },
 };

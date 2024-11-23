@@ -7,7 +7,7 @@ const getProjectsAPIRoute = async () => {
       name: title,
       description,
       url: projectLink,
-      icon: `https://sznm.dev${icon}`,
+      icon: `https://agustinusnathaniel.com${icon}`,
     }),
   );
 

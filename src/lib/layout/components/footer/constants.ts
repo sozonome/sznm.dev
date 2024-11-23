@@ -15,7 +15,7 @@ export const links: Array<Pick<FooterLinkProps, 'label' | 'url'>> = [
   },
   {
     label: 'Templates',
-    url: 'https://github.com/sozonome?tab=repositories&type=template&language=&sort=stargazers',
+    url: 'https://github.com/agustinusnathaniel?tab=repositories&type=template&language=&sort=stargazers',
   },
   {
     label: 'Timeline',
@@ -23,6 +23,6 @@ export const links: Array<Pick<FooterLinkProps, 'label' | 'url'>> = [
   },
   {
     label: 'Analytics',
-    url: 'https://umami.sznm.dev/share/Zl0vE0h0/sznm.dev',
+    url: 'https://umami.sznm.dev/share/Zl0vE0h0/agustinusnathaniel.com',
   },
 ];

@@ -1,7 +1,7 @@
 ---
 title: COVID-19 Data
 projectLink: https://covid19.sznm.dev
-repoLink: https://github.com/sozonome/covid-19-data
+repoLink: https://github.com/agustinusnathaniel/covid-19-data
 description: Monitor covid-19 stats.
 date: "2020-05-02"
 icon: "/app_icons/covid-19-data.svg"

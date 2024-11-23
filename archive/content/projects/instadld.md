@@ -1,6 +1,6 @@
 ---
 title: InstaDLD
-repoLink: https://github.com/sozonome/instadl
+repoLink: https://github.com/agustinusnathaniel/instadl
 description: "[Archived - no longer functional] Instagram Post media downloader. Support multipost download."
 date: "2020-11-22"
 icon: "/app_icons/instadld.svg"
