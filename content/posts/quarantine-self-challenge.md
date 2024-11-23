@@ -47,5 +47,5 @@ When developing COVID-19 Data app, I realized Evergreen UI have no opinionated w
 
 I decided to deploy it using [Vercel](https://vercel.com) and I'm so shocked by how fast it is compared to [Netlify](https://netlify.com). I'm considering to migrate to Vercel from Netlify for my previous projects, including this site.
 
-I posted my recent projects [here](https://sznm.dev/projects).
-You can access the project and the project's GitHub repository link from this [page](https://sznm.dev/projects).
+I posted my recent projects [here](https://agustinusnathaniel.com/projects).
+You can access the project and the project's GitHub repository link from this [page](https://agustinusnathaniel.com/projects).

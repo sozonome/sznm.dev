@@ -15,7 +15,7 @@ export const generateMetadata = ({
 
   const ogImage = sznmOgImage({
     heading: data.title,
-    text: 'Notes | https://sznm.dev',
+    text: 'Notes | https://agustinusnathaniel.com',
   });
 
   return {
@@ -24,7 +24,7 @@ export const generateMetadata = ({
       canonical: `/notes/${data.id}`,
     },
     openGraph: {
-      title: `sozonome | ${data.title}`,
+      title: `Agustinus Nathaniel | ${data.title}`,
       images: {
         url: ogImage,
         alt: `${data.title} og-image`,

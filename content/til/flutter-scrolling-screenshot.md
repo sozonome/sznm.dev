@@ -10,4 +10,4 @@ tags:
 
 Try to take screenshot inside the app when opening a long vertical pages (list pages etc). If there are no scroll option when taking the screenshot, highly possible its built using flutter.
 
-https://twitter.com/sozonome/status/1475856375863398402
+https://twitter.com/agstnsnathaniel/status/1475856375863398402

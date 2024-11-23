@@ -21,7 +21,7 @@ export const socialMap = (obj: { title?: string; url: string }) => {
       params: {
         url: obj.url,
         text: obj.title,
-        via: 'sozonome',
+        via: 'agstnsnathaniel',
       },
     },
     {

@@ -1,7 +1,7 @@
 ---
 title: Leeboor
 projectLink: https://leeboor.sznm.dev
-repoLink: https://github.com/sozonome/leeboor
+repoLink: https://github.com/agustinusnathaniel/leeboor
 description: National Holiday Info
 date: "2023-09-19"
 icon: "/app_icons/calendar.png"

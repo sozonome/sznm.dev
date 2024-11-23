@@ -6,14 +6,14 @@ const { withContentCollections } = require('@content-collections/next');
  * - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
  */
 const ContentSecurityPolicy = `
-  default-src 'self' *.sznm.dev;
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' umami.sznm.dev cdn.vercel-insights.com vercel.live *.sznm.dev;
+  default-src 'self' *.sznm.dev *.agustinusnathaniel.com;
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' umami.sznm.dev cdn.vercel-insights.com vercel.live *.sznm.dev *.agustinusnathaniel.com;
   frame-src giscus.app vercel.live www.youtube.com;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ *.sznm.dev;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ *.sznm.dev *.agustinusnathaniel.com;
   img-src * blob: data: *.freepik.com;
   media-src 'none';
   connect-src *;
-  font-src 'self' https://fonts.gstatic.com/ *.sznm.dev;
+  font-src 'self' https://fonts.gstatic.com/ *.sznm.dev *.agustinusnathaniel.com;
 `;
 
 /**

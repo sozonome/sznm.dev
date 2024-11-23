@@ -13,7 +13,7 @@ export const BlogPostMeta = ({ postData }: BlogPostMetaProps) => {
       useAppDir
       type="Blog"
       url={`${baseUrl}/blog/${postData.id}`}
-      title={`${postData.title} | sozonome`}
+      title={`${postData.title} | Agustinus Nathaniel`}
       images={[]}
       datePublished={new Date(postData.date).toISOString()}
       dateModified={new Date(postData.date).toISOString()}
