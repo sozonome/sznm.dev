@@ -11,7 +11,7 @@ export const GiscusWrapper = ({ category, categoryId }: GiscusWrapperProps) => {
 
   return (
     <Giscus
-      repo="agustinusnathaniel/sznm.dev"
+      repo="agustinusnathaniel/agustinusnathaniel.com"
       repoId="MDEwOlJlcG9zaXRvcnkyNjY2Njk3MDg="
       mapping="pathname"
       category={category}

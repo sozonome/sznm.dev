@@ -97,10 +97,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/agustinusnathaniel/sznm.dev"
+    "url": "https://github.com/agustinusnathaniel/agustinusnathaniel.com"
   },
   "bugs": {
-    "url": "https://github.com/agustinusnathaniel/sznm.dev/issues"
+    "url": "https://github.com/agustinusnathaniel/agustinusnathaniel.com/issues"
   },
   "engines": {
     "node": ">=20.14.x",
