@@ -49,7 +49,7 @@ export const socialLinks: Array<MotionLinkProps> = [
   },
   {
     platformName: 'YouTube',
-    url: 'https://youtube.com/channel/@agustinusnathaniel',
+    url: 'https://youtube.com/@agustinusnathaniel',
     icon: FaYoutube,
   },
   // {
