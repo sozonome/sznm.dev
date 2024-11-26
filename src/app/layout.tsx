@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   ],
   referrer: 'origin-when-cross-origin',
   appleWebApp: {
-    title: 'sznm.dev',
+    title: 'agustinusnathaniel.com',
     statusBarStyle: 'default',
   },
   formatDetection: {
@@ -86,7 +86,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
           defer
           data-website-id={env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
           src={env.NEXT_PUBLIC_UMAMI_SRC}
-          data-domains="sznm.dev"
+          data-domains="agustinusnathaniel.com"
         />
         <SpeedInsights />
       </body>
