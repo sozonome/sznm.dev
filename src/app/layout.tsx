@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import NextTopLoader from 'nextjs-toploader';
 
-import { Providers } from '~/app/providers';
+import { Provider } from '~/lib/components/ui/provider';
 import { baseUrl } from '~/lib/constants/base-url';
 import { env } from '~/lib/constants/env';
 import { Layout } from '~/lib/layout';
@@ -76,9 +76,9 @@ const RootLayout = ({ children }: RootLayoutProps) => {
     <html lang="en">
       <body suppressHydrationWarning>
         <NextTopLoader color="#747978" showSpinner={false} />
-        <Providers>
+        <Provider>
           <Layout>{children}</Layout>
-        </Providers>
+        </Provider>
 
         {/* umami self-hosted analytics */}
         <Script

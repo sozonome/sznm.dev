@@ -1,4 +1,4 @@
-import { Divider, Grid, Link, Stack, Text } from '@chakra-ui/react';
+import { Grid, Link, Separator, Text, VStack } from '@chakra-ui/react';
 
 import { EVENT_TYPE_LINK } from '~/lib/constants/tracking';
 import { trackEvent } from '~/lib/utils/track-event';
@@ -16,8 +16,8 @@ export const Footer = () => {
   };
 
   return (
-    <Stack as="footer" layerStyle="layoutBlock" spacing={8}>
-      <Divider />
+    <VStack as="footer" layerStyle="layoutBlock" gap={8}>
+      <Separator />
 
       <SpotifyListening />
 
@@ -48,6 +48,6 @@ export const Footer = () => {
           Agustinus Nathaniel
         </Link>
       </Text>
-    </Stack>
+    </VStack>
   );
 };

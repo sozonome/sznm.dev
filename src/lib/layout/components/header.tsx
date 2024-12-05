@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, IconButton, Spacer } from '@chakra-ui/react';
+import { Box, Flex, Heading, Spacer } from '@chakra-ui/react';
 import Link from 'next/link';
 import * as React from 'react';
 import { RiCommandFill } from 'react-icons/ri';
@@ -7,6 +7,7 @@ import { EVENT_TYPE_CTA } from '~/lib/constants/tracking';
 import { useCmdMenuAction } from '~/lib/store/cmd';
 import { trackEvent } from '~/lib/utils/track-event';
 
+import { Button } from '~/lib/components/ui/button';
 import { CommandMenu } from './command-menu';
 import { Navigation } from './navigation';
 import { ThemeToggle } from './theme-toggle';
@@ -48,13 +49,14 @@ export const Header = () => {
             </Flex>
 
             <Flex gap={2}>
-              <IconButton
+              <Button
                 aria-label="command-center"
-                icon={<RiCommandFill />}
                 backgroundColor="transparent"
                 onClick={handleOpenCommandCenter}
                 color="unset"
-              />
+              >
+                <RiCommandFill />
+              </Button>
               <ThemeToggle />
             </Flex>
           </Flex>

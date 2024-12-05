@@ -1,8 +1,9 @@
-import { Box, Link, Stack, Text, useColorModeValue } from '@chakra-ui/react';
+import { Box, Link, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import * as React from 'react';
 
 import type { Project } from 'content-collections';
+import { useTheme } from 'next-themes';
 import { EVENT_TYPE_LINK } from '~/lib/constants/tracking';
 import { trackEvent } from '~/lib/utils/track-event';
 
@@ -21,11 +22,10 @@ export const ProjectCard = ({
     repoLink,
   },
 }: CardProps) => {
-  const dynamicThumbnail = useColorModeValue(
-    thumbnail,
-    thumbnailDark || thumbnail,
-  );
-  const borderHighlight = useColorModeValue('gray', 'white');
+  const { theme } = useTheme();
+  const dynamicThumbnail =
+    theme === 'light' ? thumbnail : thumbnailDark || thumbnail;
+  const borderHighlight = theme === 'light' ? 'gray' : 'white';
   const thumbnailUrl = thumbnail ? dynamicThumbnail : null;
 
   const overlayBgGradient = useColorModeValue(
@@ -46,7 +46,7 @@ export const ProjectCard = ({
     <Link
       href={link}
       aria-label={`Link to ${title}`}
-      isExternal
+      target="_blank"
       onClick={handleClickProject}
       _hover={{
         textDecoration: 'none',
